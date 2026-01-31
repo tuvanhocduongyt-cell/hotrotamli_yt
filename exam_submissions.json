@@ -1,0 +1,349 @@
+[
+  {
+    "exam_id": "20260111163814",
+    "student": "hs001",
+    "submitted_at": "2026-01-12 16:27:10",
+    "answers": {
+      "mc_0": "A",
+      "mc_1": "B",
+      "mc_2": "A",
+      "mc_3": "A",
+      "mc_4": "A",
+      "mc_5": "B",
+      "mc_6": "D",
+      "mc_7": "C",
+      "mc_8": "C",
+      "mc_9": "D",
+      "tf_0": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "tf_1": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "tf_2": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "tf_3": [
+        false,
+        true,
+        false,
+        true
+      ]
+    },
+    "score": 2.75,
+    "type": "multiple_choice",
+    "ai_graded": true,
+    "essay_ai_feedback": null,
+    "teacher_adjusted": false,
+    "teacher_score": null,
+    "teacher_comment": null
+  },
+  {
+    "exam_id": "20260112132918",
+    "student": "hs001",
+    "submitted_at": "2026-01-12 16:27:55",
+    "essay_answer": "Chào bạn, mình xin tóm tắt ngắn gọn về nguyên nhân và tính chất của Chiến tranh thế giới thứ nhất (1914–1918) để bạn dễ nắm bắt nhé:\r\n\r\n1. Nguyên nhân bùng nổ\r\nNguyên nhân của cuộc chiến này thường được chia thành hai cấp độ:\r\n\r\nNguyên nhân sâu xa:\r\n\r\nSự phát triển không đều: Vào cuối thế kỷ XIX – đầu thế kỷ XX, sự phát triển kinh tế và chính trị không đồng đều làm thay đổi so sánh lực lượng giữa các nước đế quốc.\r\n\r\nMâu thuẫn về thuộc địa: Các nước đế quốc \"trẻ\" (Đức, Mỹ, Nhật) có tiềm lực kinh tế mạnh nhưng ít thuộc địa, mâu thuẫn gay gắt với các nước đế quốc \"già\" (Anh, Pháp) vốn có nhiều thuộc địa.\r\n\r\nSự hình thành hai khối quân sự đối đầu: Khối Liên minh (Đức, Áo-Hung, Italia) và khối Hiệp ước (Anh, Pháp, Nga) ráo riết chạy đua vũ trang, chuẩn bị chia lại thế giới.\r\n\r\nNguyên nhân trực tiếp (Duyên cớ):\r\n\r\nNgày 28/6/1914, Thái tử Áo-Hung bị một phần tử khủng bố người Xéc-bi ám sát tại Xa-ra-vô (Bô-xni-a). Giới quân phiệt Đức, Áo-Hung đã lấy cớ này để phát động chiến tranh.\r\n\r\n2. Tính chất của chiến tranh\r\nChiến tranh thế giới thứ nhất được đánh giá là một cuộc chiến tranh đế quốc phi nghĩa đối với cả hai phe tham chiến vì những lý do sau:\r\n\r\nMục đích: Cuộc chiến nổ ra không phải để bảo vệ độc lập dân tộc hay vì lợi ích của nhân dân, mà nhằm mục đích tranh giành thuộc địa, phân chia lại thị trường và áp đặt sự thống trị toàn cầu của các nước đế quốc.\r\n\r\nHậu quả: Gây ra thảm họa khủng khiếp cho nhân loại (khoảng 10 triệu người chết, 20 triệu người bị thương), phá hủy hàng nghìn thành phố, làng mạc và gây thiệt hại vật chất cực lớn trong khi chỉ mang lại lợi nhuận cho giai cấp tư sản cầm quyền.",
+    "image_path": null,
+    "score": 2.0,
+    "type": "essay",
+    "ai_graded": true,
+    "ai_feedback": {
+      "score": 10,
+      "strengths": "Bài làm trình bày rất rõ ràng, mạch lạc, có cấu trúc logic (chia thành nguyên nhân sâu xa, trực tiếp và tính chất). Nội dung đầy đủ, bám sát và đáp ứng xuất sắc tất cả các tiêu chí chấm điểm. Kiến thức chính xác, không có sai sót về mặt lịch sử. Học sinh còn đưa ra được những dẫn chứng cụ thể như tên các khối quân sự, các nước tiêu biểu, số liệu thương vong (10 triệu người chết, 20 triệu người bị thương), làm tăng tính thuyết phục và thể hiện sự nắm vững kiến thức. Cách diễn đạt rõ ràng, dễ hiểu và có sự giải thích sâu sắc hơn về nguyên nhân sâu xa cũng như mục đích, hậu quả của chiến tranh.",
+      "weaknesses": "Bài làm không có điểm yếu đáng kể nào về nội dung hay độ chính xác của kiến thức so với yêu cầu của đề bài và tiêu chí chấm điểm. Học sinh đã hoàn thành xuất sắc yêu cầu.",
+      "missing_knowledge": "Không có kiến thức nào bị thiếu so với đề bài và tiêu chí chấm. Học sinh đã trình bày đầy đủ và chính xác tất cả các điểm cần thiết.",
+      "improvement_areas": "Cần lưu ý về văn phong khi làm bài thi luận. Mặc dù không ảnh hưởng đến nội dung và điểm số, việc mở đầu bằng câu 'Chào bạn, mình xin tóm tắt ngắn gọn...' là văn phong giao tiếp, không phù hợp với bài thi học thuật.",
+      "suggestions": "Về nội dung, em đã làm rất tốt và không cần bổ sung thêm kiến thức. Về hình thức và văn phong, em nên loại bỏ những câu mở đầu mang tính giao tiếp khi làm bài thi luận. Thay vào đó, hãy đi thẳng vào vấn đề một cách trực tiếp và trang trọng hơn, ví dụ: 'Chiến tranh thế giới thứ nhất (1914-1918) bùng nổ do nhiều nguyên nhân sâu xa và trực tiếp, đồng thời mang tính chất đế quốc phi nghĩa và gây ra hậu quả nghiêm trọng...' để phù hợp với văn phong học thuật."
+    },
+    "teacher_adjusted": true,
+    "teacher_score": 2.0,
+    "teacher_comment": "dùng AI làm bài",
+    "original_ai_score": 10,
+    "adjusted_at": "2026-01-12 16:29:11"
+  },
+  {
+    "exam_id": "20260112133757",
+    "student": "hs001",
+    "submitted_at": "2026-01-12 17:03:35",
+    "answers": {
+      "mc_0": "A",
+      "mc_1": "A",
+      "mc_2": "A",
+      "mc_3": "A",
+      "mc_4": "D",
+      "mc_5": "B",
+      "mc_6": "C",
+      "mc_7": "B",
+      "mc_8": "A",
+      "mc_9": "B",
+      "mc_10": "C",
+      "mc_11": "B",
+      "mc_12": "C",
+      "mc_13": "C",
+      "mc_14": "A",
+      "mc_15": "B",
+      "mc_16": "B",
+      "mc_17": "B",
+      "mc_18": "C",
+      "mc_19": "B",
+      "tf_0": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "tf_1": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "essay": [
+        {
+          "text": "Cách mạng tháng Mười Nga năm 1917 là một trong những sự kiện lịch sử quan trọng nhất của thế kỷ XX, đánh dấu sự ra đời của nhà nước xã hội chủ nghĩa đầu tiên trên thế giới. Dưới đây là phân tích chi tiết:\r\n1. Nguyên nhân bùng nổ\r\nCuộc cách mạng nổ ra từ sự hội tụ của nhiều mâu thuẫn gay gắt trong lòng xã hội Nga:\r\nVề chính trị: Sau Cách mạng tháng Hai năm 1917, chế độ quân chủ chuyên chế bị lật đổ nhưng ở Nga xuất hiện tình trạng hai chính quyền song song tồn tại: Chính phủ lâm thời (của giai cấp tư sản) và các Xô viết đại biểu công nhân, binh lính (của giai cấp vô sản). Hai chính quyền này đối lập nhau về quyền lợi.\r\nVề kinh tế - xã hội: Nước Nga kiệt quệ vì tham gia Chiến tranh thế giới thứ nhất. Nạn đói xảy ra khắp nơi, kinh tế đình đốn. Quần chúng nhân dân (công nhân, nông dân) bị bóc lột nặng nề và mong muốn thoát khỏi cuộc chiến tranh phi nghĩa.\r\nSự lãnh đạo của Đảng Bolshevik: Đứng đầu là V.I. Lênin, Đảng Bolshevik đã đề ra đường lối đúng đắn (Luận cương tháng Tư), chuyển từ cách mạng dân chủ tư sản sang cách mạng xã hội chủ nghĩa, giải quyết vấn đề \"Hòa bình, Ruộng đất và Bánh mì\".\r\n\r\n2. Diễn biến chính (theo lịch Nga cũ)\r\nDiễn biến cuộc khởi nghĩa diễn ra nhanh chóng và quyết liệt tại thủ đô Petrograd:\r\nĐêm 24/10 (6/11): Khởi nghĩa bắt đầu. Các đơn vị tự vệ đỏ chiếm được các vị trí then chốt ở thủ đô (nhà ga, bưu điện, ngân hàng...).\r\nĐêm 25/10 (7/11): Quân cách mạng tấn công Cung điện Mùa Đông, bắt giữ các bộ trưởng của Chính phủ lâm thời. Khởi nghĩa giành thắng lợi hoàn toàn ở Petrograd.\r\nNgay trong đêm 25/10: Đại hội Xô viết toàn Nga lần thứ hai khai mạc, tuyên bố thành lập chính quyền Xô viết do Lênin đứng đầu.\r\nĐầu năm 1918: Cách mạng giành thắng lợi trên phạm vi toàn nước Nga rộng lớn.\r\n3. Ý nghĩa lịch sử\r\nCuộc cách mạng đã tạo ra những thay đổi căn bản cho cả nước Nga và thế giới:\r\nĐối với nước Nga:\r\nLật đổ ách áp bức: Xóa bỏ chế độ bóc lột của tư sản và địa chủ, giải phóng các dân tộc trong đế quốc Nga.\r\nĐổi đời cho nhân dân: Đưa người lao động từ thân phận nô lệ lên địa vị làm chủ đất nước, làm chủ vận mệnh của mình.\r\nMở ra kỷ nguyên mới: Kỷ nguyên độc lập, tự do và xây dựng chủ nghĩa xã hội.\r\nĐối với thế giới:\r\nLàm thay đổi cục diện thế giới: Phá vỡ mắt xích yếu nhất trong hệ thống đế quốc chủ nghĩa, cổ vũ mạnh mẽ phong trào cách mạng của giai cấp công nhân quốc tế.\r\nThúc đẩy phong trào giải phóng dân tộc: Mở ra con đường cứu nước mới cho các dân tộc bị áp bức ở Á, Phi và Mỹ Latinh (trong đó có Việt Nam).\r\nĐể lại bài học kinh nghiệm: Về sự lãnh đạo của Đảng cộng sản, về liên minh công nông và nghệ thuật khởi nghĩa vũ trang.",
+          "image_path": null
+        },
+        {
+          "text": "Cuộc Duy tân Minh Trị (bắt đầu từ năm 1868) là một chuỗi các cải cách toàn diện trên mọi lĩnh vực, giúp Nhật Bản lột xác từ một nước phong kiến lạc hậu trở thành một cường quốc hiện đại.\r\nDưới đây là các nội dung cải cách chủ yếu và nhận xét về vai trò của nó:\r\n1. Những cải cách chủ yếu\r\nCuộc cải cách được thực hiện đồng bộ trên 4 lĩnh vực chính:\r\nVề Chính trị:\r\nThủ tiêu chế độ Mạc phủ, lập chính phủ mới theo mô hình phương Tây.\r\nBan hành Hiến pháp năm 1889, thiết lập chế độ Quân chủ lập hiến (quyền lực tối cao vẫn thuộc về Thiên hoàng).\r\nVề Kinh tế:\r\nThống nhất tiền tệ và thị trường toàn quốc; cho phép mua bán ruộng đất và tự do kinh doanh.\r\nXây dựng cơ sở hạ tầng (đường sắt, cầu cống, thông tin liên lạc).\r\nĐẩy mạnh phát triển kinh tế tư bản chủ nghĩa ở cả thành thị và nông thôn.\r\nVề Quân sự:\r\nTổ chức và huấn luyện quân đội theo kiểu phương Tây; thực hiện chế độ nghĩa vụ quân sự thay cho chế độ trưng binh cũ của võ sĩ (Samurai).\r\nChú trọng đóng tàu chiến, sản xuất vũ khí và mời chuyên gia quân sự nước ngoài.\r\nVề Giáo dục:\r\nThi hành chính sách giáo dục bắt buộc.\r\n\r\nĐổi mới nội dung giảng dạy, chú trọng khoa học - kỹ thuật; cử những học sinh ưu tú đi du học ở phương Tây.\r\n2. Nhận xét về vai trò của Duy tân Minh Trị\r\nDuy tân Minh Trị không chỉ là một cuộc cải cách đơn thuần mà có ý nghĩa như một cuộc Cách mạng tư sản không triệt để. Vai trò của nó đối với sự phát triển của Nhật Bản được thể hiện qua các điểm sau:\r\nĐập tan xiềng xích phong kiến: Nó đã xóa bỏ tình trạng cát cứ, thủ tiêu những rào cản của chế độ phong kiến, tạo điều kiện cho chủ nghĩa tư bản phát triển mạnh mẽ.\r\nBảo vệ độc lập dân tộc: Đây là vai trò quan trọng nhất. Nhờ cải cách, Nhật Bản từ một nước đứng trước nguy cơ bị thực dân phương Tây xâm lược đã vươn lên giữ vững độc lập, chủ quyền.\r\nĐưa Nhật Bản thành cường quốc: Chỉ trong vài thập kỷ, Nhật Bản đã thoát khỏi tình trạng lạc hậu để trở thành nước tư bản công nghiệp duy nhất ở châu Á, đủ sức cạnh tranh với các cường quốc Âu - Mỹ và chuyển sang giai đoạn đế quốc chủ nghĩa.\r\nẢnh hưởng khu vực: Thành công của Nhật Bản đã trở thành tấm gương và nguồn cổ vũ cho phong trào yêu nước, canh tân tại nhiều nước châu Á khác (trong đó có phong trào Đông Du của Phan Bội Châu ở Việt Nam).",
+          "image_path": null
+        }
+      ]
+    },
+    "score": 6.85,
+    "type": "mixed",
+    "ai_graded": true,
+    "essay_ai_feedback": [
+      {
+        "score": 3.0,
+        "analysis": "Bài làm đã phân tích một cách toàn diện và chính xác về nguyên nhân, diễn biến chính và ý nghĩa lịch sử của Cách mạng tháng Mười Nga năm 1917. Học sinh đã nắm vững kiến thức lịch sử, trình bày rõ ràng các mâu thuẫn chính trị, kinh tế - xã hội sâu sắc, cùng với tác động của Chiến tranh thế giới thứ nhất và vai trò quyết định của Đảng Bolshevik dưới sự lãnh đạo của V.I. Lênin. Phần diễn biến được tóm tắt mạch lạc, nêu bật các sự kiện then chốt tại Petrograd. Đặc biệt, phần ý nghĩa lịch sử được đánh giá cao khi phân tích sâu sắc tác động của cuộc cách mạng đối với cả nước Nga và cục diện thế giới, bao gồm việc truyền cảm hứng cho phong trào giải phóng dân tộc và để lại những bài học quý giá. Bố cục bài làm rõ ràng, lập luận chặt chẽ và sử dụng dẫn chứng lịch sử phù hợp.",
+        "suggestions": "Để bài làm đạt đến sự hoàn hảo hơn nữa, học sinh có thể cân nhắc một vài điểm sau: \n1. Trong phần nguyên nhân, có thể phân tách rõ ràng hơn giữa 'nguyên nhân sâu xa' (ví dụ: mâu thuẫn giai cấp trầm trọng, vấn đề ruộng đất, các vấn đề của chế độ Sa hoàng kéo dài...) và 'nguyên nhân trực tiếp' (ví dụ: tình hình 'hai chính quyền song song tồn tại' sau Cách mạng tháng Hai, sự kiệt quệ do Chiến tranh thế giới thứ nhất gây ra...).\n2. Trong phần diễn biến, tuy đã tóm tắt tốt, nhưng có thể thêm một câu ngắn gọn về vai trò của Ủy ban Quân sự Cách mạng do Trotsky đứng đầu trong việc tổ chức khởi nghĩa vũ trang để làm rõ hơn tính chất chuẩn bị của nó.\n3. Phần mở đầu có thể tạo ấn tượng hơn bằng cách đặt cuộc cách mạng vào bối cảnh chung của tình hình nước Nga và thế giới đầu thế kỷ XX trước khi đi vào phân tích chi tiết."
+      },
+      {
+        "score": 2.6,
+        "analysis": "Bài làm đã trình bày rõ ràng, mạch lạc các nội dung cải cách chủ yếu của cuộc Duy tân Minh Trị trên 4 lĩnh vực chính: Chính trị, Kinh tế, Quân sự, và Giáo dục. Các điểm cải cách được nêu cụ thể, chính xác và có hệ thống. Phần nhận xét về vai trò của Duy tân Minh Trị cũng rất tốt, thể hiện sự hiểu biết sâu sắc về ý nghĩa lịch sử của nó, bao gồm việc đập tan xiềng xích phong kiến, bảo vệ độc lập dân tộc, đưa Nhật Bản trở thành cường quốc công nghiệp và ảnh hưởng đến khu vực. Cách phân tích Duy tân Minh Trị như một cuộc \"Cách mạng tư sản không triệt để\" là một điểm cộng về chiều sâu tư duy.\n\nTuy nhiên, điểm thiếu sót chính của bài làm nằm ở phần mở đầu. Bài chưa nêu được bối cảnh lịch sử cụ thể và nguyên nhân sâu xa dẫn đến công cuộc Duy tân Minh Trị. Chỉ đề cập \"Nhật Bản lột xác từ một nước phong kiến lạc hậu\" là chưa đủ. Để bài làm trở nên hoàn chỉnh và sâu sắc hơn, cần phải đề cập đến tình trạng khủng hoảng nội tại của chế độ Mạc phủ, sự suy yếu của tầng lớp Samurai, áp lực từ các cường quốc phương Tây (đặc biệt là sự kiện Đề đốc Perry cập cảng) và mối đe dọa mất độc lập chủ quyền, vốn là động lực chính thúc đẩy Thiên hoàng Minh Trị và các nhà cải cách thực hiện công cuộc này.",
+        "suggestions": "Để bài làm đạt điểm cao hơn, em cần bổ sung phần bối cảnh lịch sử và nguyên nhân của công cuộc Duy tân Minh Trị vào đoạn mở đầu. Cụ thể, em nên đề cập đến:\n1.  Tình trạng khủng hoảng nội tại của chế độ Mạc phủ Tokugawa (kinh tế lạc hậu, xã hội phân hóa, mâu thuẫn giai cấp gay gắt).\n2.  Chính sách bế quan tỏa cảng (Sakoku) và hệ quả của nó (Nhật Bản tụt hậu so với phương Tây).\n3.  Áp lực từ bên ngoài: Sự xuất hiện của các tàu chiến phương Tây (đặc biệt là sự kiện Đề đốc Perry năm 1853-1854) buộc Nhật Bản phải ký các hiệp ước bất bình đẳng, làm bộc lộ rõ rệt sự yếu kém và nguy cơ bị xâm lược. Chính yếu tố này đã thúc đẩy các lực lượng cải cách nhận ra sự cần thiết phải \"phú quốc cường binh\" để bảo vệ độc lập dân tộc.\n\nViệc bổ sung những yếu tố này sẽ giúp người đọc hiểu rõ hơn động lực và tính cấp bách của công cuộc cải cách, từ đó nâng cao chất lượng và chiều sâu phân tích của bài làm."
+      }
+    ],
+    "mc_ai_feedback": {
+      "overall_analysis": "Học sinh cho thấy một số kiến thức cơ bản về lịch sử thế giới cận đại, đặc biệt là các sự kiện lớn như Chiến tranh thế giới thứ nhất, Cách mạng Nga, và cải cách Duy tân Minh Trị. Tuy nhiên, có những lỗ hổng đáng kể về các chi tiết cụ thể như niên đại, vai trò lãnh đạo, đặc điểm và tính chất của các phong trào, cũng như các khái niệm quan trọng (ví dụ: 'nguyên nhân sâu xa', 'nội dung quan trọng nhất', 'nền tảng'). Đặc biệt, có một số câu hỏi mà học sinh chọn đáp án đúng theo kiến thức phổ thông nhưng lại bị coi là sai theo đề bài, cho thấy có thể có sự nhầm lẫn trong cách ra đề hoặc yêu cầu về độ chi tiết của kiến thức. Học sinh cần củng cố lại các kiến thức nền tảng và luyện tập phân tích sâu hơn để hiểu rõ bản chất của các sự kiện.",
+      "questions_feedback": [
+        {
+          "question_number": 1,
+          "correct_explanation": "Nguyên nhân sâu xa nhất dẫn đến Chiến tranh thế giới thứ nhất là mâu thuẫn gay gắt về vấn đề thuộc địa, thị trường và nguồn nguyên liệu giữa các nước đế quốc (Anh, Pháp, Mỹ với Đức, Áo-Hung, Italia). Đây là bản chất của chủ nghĩa đế quốc tìm cách phân chia lại thế giới.",
+          "wrong_reason": "Mặc dù lựa chọn của em (A) là đáp án đúng về mặt kiến thức lịch sử thông thường cho câu hỏi về nguyên nhân sâu xa, nếu bị đánh giá sai, có thể em đã không nắm vững một khía cạnh cụ thể hoặc cách đặt vấn đề trong ngữ cảnh bài kiểm tra này. Tuy nhiên, về mặt học thuật, A là đáp án chính xác nhất để mô tả nguyên nhân sâu xa.",
+          "knowledge_gaps": "Cần nắm vững khái niệm 'nguyên nhân sâu xa' và phân biệt nó với 'nguyên nhân trực tiếp' (như sự kiện Thái tử Áo-Hung bị ám sát) hay 'biểu hiện/hệ quả' (như sự hình thành hai khối quân sự, chạy đua vũ trang).",
+          "study_tips": "Khi học về nguyên nhân của các sự kiện lịch sử lớn, hãy lập bảng so sánh nguyên nhân sâu xa (bản chất vấn đề), nguyên nhân trực tiếp (châm ngòi), và các yếu tố thúc đẩy/duy trì. Dùng sơ đồ tư duy để kết nối các loại nguyên nhân."
+        },
+        {
+          "question_number": 2,
+          "correct_explanation": "Trước Chiến tranh thế giới thứ nhất, hai khối quân sự đối lập chính là Khối Liên minh (Triple Alliance) gồm Đức, Áo-Hung, Italia và Khối Hiệp ước (Triple Entente) gồm Anh, Pháp, Nga.",
+          "wrong_reason": "Tương tự câu 1, lựa chọn của em (A) là đáp án chính xác theo kiến thức lịch sử. Nếu bị đánh giá sai, cần xem lại liệu có sự hiểu lầm nào về tên gọi hoặc phạm vi của câu hỏi không, nhưng đây là cặp khối quân sự chuẩn xác.",
+          "knowledge_gaps": "Cần ghi nhớ tên gọi và thành phần của hai khối quân sự chính trong giai đoạn này. Sự nhầm lẫn có thể xuất phát từ việc không phân biệt rõ 'Đồng minh' (Allies) là tên gọi của một phe trong Thế chiến II hoặc là cách gọi chung chung sau khi Italia chuyển phe trong Thế chiến I.",
+          "study_tips": "Lập danh sách các khối liên minh quân sự trước và trong các cuộc chiến tranh lớn, ghi rõ thành phần các nước. Dùng từ viết tắt hoặc 'mẹo' nhớ tên các quốc gia trong mỗi khối."
+        },
+        {
+          "question_number": 3,
+          "correct_explanation": "Cách mạng tháng Hai năm 1917 ở Nga đã lật đổ chế độ phong kiến Nga hoàng, thiết lập chế độ Cộng hòa và thành lập Chính phủ lâm thời tư sản.",
+          "wrong_reason": "Tương tự các câu trên, lựa chọn của em (A) là đáp án đúng về kết quả chính của Cách mạng tháng Hai. Nếu bị coi là sai, có thể có sự đòi hỏi về độ chính xác cao hơn về các giai đoạn hoặc kết quả cụ thể. Tuy nhiên, A là mô tả chính xác nhất cho thành quả của Cách mạng tháng Hai.",
+          "knowledge_gaps": "Cần phân biệt rõ ràng giữa Cách mạng tháng Hai và Cách mạng tháng Mười năm 1917 ở Nga về mục tiêu, lực lượng lãnh đạo và kết quả. Cách mạng tháng Hai lật đổ Nga hoàng; Cách mạng tháng Mười đưa giai cấp công nhân lên nắm quyền, thành lập Nhà nước Xô viết.",
+          "study_tips": "Lập bảng so sánh hai cuộc cách mạng Nga năm 1917: thời gian, mục tiêu, lực lượng lãnh đạo, kết quả chính. Việc này giúp tránh nhầm lẫn các giai đoạn và thành tựu khác nhau."
+        },
+        {
+          "question_number": 4,
+          "correct_explanation": "Lãnh đạo chủ chốt của Cách mạng tháng Mười Nga năm 1917, người đã chỉ đạo khởi nghĩa vũ trang và thành lập Nhà nước Xô viết, là V.I. Lê-nin.",
+          "wrong_reason": "Xtalin là một lãnh đạo quan trọng của Đảng Bolshevik và sau này là người kế nhiệm Lê-nin, nhưng ông không phải là người trực tiếp lãnh đạo và tổ chức Cách mạng tháng Mười như Lê-nin. Vai trò của Xtalin nổi bật hơn trong giai đoạn xây dựng chủ nghĩa xã hội sau đó.",
+          "knowledge_gaps": "Cần nắm vững vai trò của các nhân vật lịch sử quan trọng. Lê-nin là linh hồn của Cách mạng tháng Mười, người đưa ra 'Luận cương tháng Tư' và trực tiếp lãnh đạo cuộc khởi nghĩa.",
+          "study_tips": "Ghi chú các nhân vật lịch sử cùng với vai trò và sự kiện chính mà họ tham gia. Tạo một 'thư viện' các nhân vật và sự kiện để dễ dàng tra cứu và ghi nhớ."
+        },
+        {
+          "question_number": 5,
+          "correct_explanation": "Chính sách kinh tế mới (NEP) được Lê-nin đề xuất và thực hiện ở Nga từ tháng 3 năm 1921 nhằm khôi phục nền kinh tế bị tàn phá sau Nội chiến và chính sách Cộng sản thời chiến.",
+          "wrong_reason": "Tương tự các câu có đáp án trùng khớp, lựa chọn của em (D) là đáp án đúng về thời điểm bắt đầu của NEP. Nếu bị đánh giá sai, cần xem lại kỹ lưỡng yêu cầu của câu hỏi, nhưng 1921 là mốc thời gian chính xác.",
+          "knowledge_gaps": "Cần ghi nhớ các mốc thời gian quan trọng, đặc biệt là các chính sách lớn như NEP để không nhầm lẫn với các giai đoạn khác (ví dụ: Cộng sản thời chiến, Nội chiến).",
+          "study_tips": "Lập timeline (dòng thời gian) cho các sự kiện và chính sách kinh tế lớn ở Nga/Liên Xô, đánh dấu rõ ràng thời điểm bắt đầu và kết thúc (nếu có)."
+        },
+        {
+          "question_number": 6,
+          "correct_explanation": "Nội dung quan trọng nhất, mang tính bước ngoặt và đặc trưng nhất của NEP là việc thay thế chính sách trưng thu lương thực thừa của nông dân (từng áp dụng trong thời Cộng sản thời chiến) bằng thuế lương thực. Nông dân được phép bán số lương thực còn lại sau khi nộp thuế, khuyến khích sản xuất.",
+          "wrong_reason": "Trưng thu lương thực của nông dân là chính sách của thời Cộng sản thời chiến, mà NEP được ban hành để thay thế chính sách đó, nhằm xoa dịu mâu thuẫn giữa nhà nước và nông dân, khôi phục sản xuất. Vì vậy, lựa chọn B là sai, nó ngược lại với bản chất của NEP.",
+          "knowledge_gaps": "Cần hiểu rõ bản chất và sự khác biệt giữa chính sách Cộng sản thời chiến và Chính sách kinh tế mới (NEP), đặc biệt là về vấn đề lương thực và vai trò của kinh tế tư nhân.",
+          "study_tips": "Lập bảng so sánh hai chính sách 'Cộng sản thời chiến' và 'NEP' về bối cảnh, nội dung chính, tác động và ý nghĩa. Tập trung vào những thay đổi cốt lõi."
+        },
+        {
+          "question_number": 7,
+          "correct_explanation": "Chiến tranh thế giới thứ nhất là cuộc chiến tranh đế quốc phi nghĩa, bởi vì nó xuất phát từ mâu thuẫn về quyền lợi, thị trường và thuộc địa giữa các cường quốc đế quốc, nhằm mục đích tranh giành ảnh hưởng và bóc lột.",
+          "wrong_reason": "Tương tự các câu có đáp án trùng khớp, lựa chọn của em (C) là đáp án hoàn toàn chính xác về tính chất của Chiến tranh thế giới thứ nhất. Nếu bị đánh giá sai, có thể cần xem xét lại yêu cầu của đề bài, nhưng về mặt lịch sử, C là không thể bàn cãi.",
+          "knowledge_gaps": "Cần nắm vững khái niệm và tiêu chí để xác định tính chất của một cuộc chiến tranh (chính nghĩa, phi nghĩa, giải phóng dân tộc, cách mạng).",
+          "study_tips": "Khi học về các cuộc chiến tranh, luôn phân tích bối cảnh, mục tiêu của các bên tham chiến để rút ra tính chất của cuộc chiến. Tránh nhầm lẫn giữa chiến tranh giành độc lập dân tộc với chiến tranh tranh giành quyền lực giữa các đế quốc."
+        },
+        {
+          "question_number": 8,
+          "correct_explanation": "Cuộc Duy tân Minh Trị là một loạt các cải cách kinh tế, chính trị, xã hội, giáo dục và quân sự diễn ra ở Nhật Bản vào cuối thế kỷ XIX, đưa Nhật Bản thoát khỏi chế độ phong kiến lạc hậu và trở thành cường quốc.",
+          "wrong_reason": "Tương tự các câu có đáp án trùng khớp, lựa chọn của em (B) là đáp án hoàn toàn chính xác về quốc gia diễn ra cuộc Duy tân Minh Trị. Nếu bị đánh giá sai, cần xem xét lại yêu cầu của đề bài, nhưng về mặt lịch sử, B là không thể bàn cãi.",
+          "knowledge_gaps": "Cần ghi nhớ tên gọi và địa điểm diễn ra các cuộc cải cách lớn ở châu Á, tránh nhầm lẫn giữa Nhật Bản với Trung Quốc (ví dụ: Cách mạng Tân Hợi, Cải cách Duy tân Mậu Tuất) hay các nước khác.",
+          "study_tips": "Lập bản đồ tư duy hoặc bảng so sánh các phong trào cải cách hoặc cách mạng ở các nước châu Á (Nhật Bản, Trung Quốc, Ấn Độ, v.v.) về thời gian, địa điểm, nội dung chính và ý nghĩa."
+        },
+        {
+          "question_number": 9,
+          "correct_explanation": "Các cải cách của Duy tân Minh Trị diễn ra trên nhiều lĩnh vực, nhưng để xây dựng một đất nước 'phú quốc cường binh' (giàu mạnh và quân đội hùng mạnh), nền tảng kinh tế (D) vững chắc là điều kiện tiên quyết. Phát triển công nghiệp, nông nghiệp, tài chính là cơ sở để thực hiện các cải cách khác, bao gồm cả quân sự và giáo dục.",
+          "wrong_reason": "Quân sự (A) là một trong những lĩnh vực được cải cách mạnh mẽ và là mục tiêu của khẩu hiệu 'phú quốc cường binh', nhưng nó không phải là 'nền tảng' theo nghĩa tạo ra sức mạnh và nguồn lực cho các cải cách khác. Kinh tế, chính trị và giáo dục là những nền tảng giúp Nhật Bản có thể xây dựng quân đội hiện đại và hùng mạnh.",
+          "knowledge_gaps": "Cần hiểu mối quan hệ nhân-quả và vai trò của từng lĩnh vực trong một công cuộc cải cách toàn diện. Cải cách quân sự là một phần quan trọng, nhưng kinh tế thường được coi là nền tảng để nuôi dưỡng sức mạnh đó.",
+          "study_tips": "Khi phân tích các cuộc cải cách, hãy tìm hiểu 'cái gì là mục tiêu', 'cái gì là phương tiện/nền tảng', và 'cái gì là kết quả'. Sắp xếp các lĩnh vực cải cách theo mức độ ưu tiên và mối liên hệ qua lại."
+        },
+        {
+          "question_number": 10,
+          "correct_explanation": "Đảng Quốc đại Ấn Độ (Indian National Congress) được thành lập năm 1885 và đại diện chủ yếu cho tầng lớp tư sản, trí thức và quý tộc mới ở Ấn Độ, những người muốn đấu tranh giành độc lập bằng con đường ôn hòa, cải cách.",
+          "wrong_reason": "Nông dân (B) là một giai cấp đông đảo nhưng không phải là giai cấp đại diện của Đảng Quốc đại ở giai đoạn đầu. Phong trào của nông dân thường mang tính tự phát hoặc dưới sự lãnh đạo của các lực lượng khác. Đảng Quốc đại mang màu sắc tư sản rõ rệt.",
+          "knowledge_gaps": "Cần nắm vững đặc điểm các giai cấp và lực lượng lãnh đạo trong các phong trào giải phóng dân tộc ở châu Á, đặc biệt là ở Ấn Độ. Phân biệt rõ vai trò của giai cấp tư sản, công nhân, nông dân trong các phong trào đấu tranh.",
+          "study_tips": "Với mỗi phong trào/tổ chức, hãy xác định rõ: Ai là lãnh đạo? Họ đại diện cho giai cấp nào? Mục tiêu và phương pháp đấu tranh của họ là gì? Điều này giúp phân loại và ghi nhớ chính xác."
+        },
+        {
+          "question_number": 11,
+          "correct_explanation": "Phong trào đấu tranh ở châu Phi đầu thế kỷ XX thường diễn ra muộn hơn so với châu Á, chủ yếu mang tính tự phát, cục bộ, thiếu sự lãnh đạo thống nhất và chưa giành được thắng lợi hoàn toàn.",
+          "wrong_reason": "Lựa chọn C 'giành được thắng lợi hoàn toàn' là sai. Trong giai đoạn đầu thế kỷ XX, các phong trào giải phóng dân tộc ở châu Phi vẫn còn yếu và hầu hết bị đàn áp, chưa có quốc gia nào giành được độc lập hoàn toàn. Thắng lợi thực sự ở châu Phi phải chờ đến giữa thế kỷ XX.",
+          "knowledge_gaps": "Cần nắm vững đặc điểm chung của phong trào giải phóng dân tộc ở các khu vực khác nhau (châu Á, châu Phi, Mỹ Latinh) trong từng giai đoạn lịch sử cụ thể, đặc biệt là sự khác biệt về thời điểm bùng nổ, quy mô, tổ chức và kết quả.",
+          "study_tips": "Lập bảng so sánh đặc điểm phong trào giải phóng dân tộc ở các châu lục khác nhau về thời gian, tính chất, hình thức đấu tranh và kết quả. Tập trung vào những điểm khác biệt chính."
+        },
+        {
+          "question_number": 12,
+          "correct_explanation": "Xiêm (tên gọi cũ của Thái Lan) là quốc gia duy nhất ở Đông Nam Á không trở thành thuộc địa của phương Tây. Nhờ chính sách ngoại giao khôn khéo và cải cách kịp thời, Xiêm đã giữ được độc lập.",
+          "wrong_reason": "In-đô-nê-xi-a (B) đã trở thành thuộc địa của Hà Lan trong nhiều thế kỷ. Việt Nam, Phi-lip-pin cũng là thuộc địa của các đế quốc khác (Pháp và Tây Ban Nha/Mỹ). Vì vậy, B là đáp án sai.",
+          "knowledge_gaps": "Cần ghi nhớ tên các quốc gia Đông Nam Á và tình trạng thuộc địa của họ trong thời kỳ chủ nghĩa đế quốc. Đây là một kiến thức cơ bản.",
+          "study_tips": "Sử dụng bản đồ chính trị của Đông Nam Á trước và sau thời kỳ thuộc địa, ghi chú tên các quốc gia và cường quốc đã đô hộ họ. Dùng hình ảnh và màu sắc để dễ ghi nhớ."
+        },
+        {
+          "question_number": 13,
+          "correct_explanation": "Cách mạng Tân Hợi năm 1911 là cuộc cách mạng dân chủ tư sản do Tôn Trung Sơn lãnh đạo, đã lật đổ triều đình Mãn Thanh ở Trung Quốc và chấm dứt chế độ phong kiến tồn tại hàng nghìn năm.",
+          "wrong_reason": "Triều Tiên (C) là quốc gia khác. Cách mạng Tân Hợi diễn ra ở Trung Quốc. Việc nhầm lẫn địa điểm của các sự kiện lịch sử quan trọng là một lỗi cơ bản.",
+          "knowledge_gaps": "Cần nắm vững địa điểm và thời gian của các cuộc cách mạng lớn ở châu Á, đặc biệt là giữa Trung Quốc và Nhật Bản/Triều Tiên.",
+          "study_tips": "Lập danh sách các sự kiện lịch sử lớn theo quốc gia và thời gian. Tập trung vào việc gắn liền sự kiện với một địa điểm cụ thể trên bản đồ."
+        },
+        {
+          "question_number": 14,
+          "correct_explanation": "Người lãnh đạo trực tiếp và quan trọng nhất của Cách mạng Tân Hợi là Tôn Trung Sơn, người đã đề ra 'Ba nguyên tắc của dân tộc' và thành lập Trung Quốc Đồng minh hội.",
+          "wrong_reason": "Tương tự các câu có đáp án trùng khớp, lựa chọn của em (C) là đáp án hoàn toàn chính xác về người lãnh đạo Cách mạng Tân Hợi. Nếu bị đánh giá sai, cần xem xét lại yêu cầu của đề bài, nhưng về mặt lịch sử, C là không thể bàn cãi.",
+          "knowledge_gaps": "Cần ghi nhớ tên các lãnh tụ của các phong trào cách mạng lớn. Phân biệt Tôn Trung Sơn với các nhân vật khác như Viên Thế Khải (người lợi dụng cách mạng để giành quyền lực) hay Khang Hữu Vi (lãnh đạo Duy tân Mậu Tuất).",
+          "study_tips": "Gắn liền tên lãnh đạo với sự kiện mà họ tham gia và vai trò chính của họ. Sử dụng flashcards hoặc các câu chuyện ngắn để ghi nhớ."
+        },
+        {
+          "question_number": 15,
+          "correct_explanation": "Hạn chế lớn nhất của Cách mạng Tân Hợi là dù lật đổ triều đình Mãn Thanh, nhưng nó không đánh đổ được hoàn toàn các thế lực đế quốc và phong kiến, dẫn đến Trung Quốc vẫn chìm trong cảnh nội chiến và bị các nước đế quốc xâm lược, chia cắt.",
+          "wrong_reason": "Lựa chọn A 'không lật đổ phong kiến' là sai. Cách mạng Tân Hợi đã lật đổ triều Mãn Thanh, chấm dứt chế độ phong kiến đã tồn tại hàng nghìn năm ở Trung Quốc. Mặc dù tàn dư phong kiến vẫn còn tồn tại, nhưng về mặt chế độ chính trị thì phong kiến đã bị lật đổ. Hạn chế lớn nhất là không giải quyết được vấn đề chống đế quốc và đưa Trung Quốc tiến lên một cách vững chắc.",
+          "knowledge_gaps": "Cần phân biệt rõ 'lật đổ chế độ phong kiến' (lật đổ triều đại, thay đổi thể chế chính trị) với 'xóa bỏ tàn dư phong kiến' (những ảnh hưởng về kinh tế, xã hội, văn hóa). Hạn chế lớn nhất của cách mạng Tân Hợi là không giải quyết triệt để nhiệm vụ chống đế quốc và phong kiến để đưa Trung Quốc đi lên.",
+          "study_tips": "Khi đánh giá ý nghĩa và hạn chế của một cuộc cách mạng, hãy xem xét nó đã hoàn thành được những mục tiêu nào và những mục tiêu nào chưa đạt được, đặc biệt là các mục tiêu cốt lõi của một cuộc cách mạng dân chủ tư sản (chống phong kiến và chống đế quốc)."
+        },
+        {
+          "question_number": 16,
+          "correct_explanation": "Nhật Bản đã tiến hành cải cách Duy tân Minh Trị một cách kịp thời và triệt để, giúp nước này nhanh chóng hiện đại hóa, xây dựng một nền kinh tế vững mạnh và một quân đội hùng cường, từ đó giữ vững độc lập và thậm chí trở thành một cường quốc đế quốc đi xâm lược các nước khác.",
+          "wrong_reason": "Quân sự mạnh sẵn có (B) không phải là nguyên nhân. Trước cải cách Minh Trị, quân đội Nhật Bản vẫn lạc hậu. Quân sự mạnh là *kết quả* của quá trình cải cách kịp thời, chứ không phải một điều kiện có sẵn đã giúp Nhật Bản tránh bị xâm lược. Chính việc tiến hành cải cách (C) mới là nguyên nhân chính.",
+          "knowledge_gaps": "Cần phân biệt rõ giữa nguyên nhân và kết quả. Cải cách Minh Trị là nguyên nhân, còn quân sự mạnh là một trong những thành quả quan trọng của cải cách đó.",
+          "study_tips": "Luôn đặt câu hỏi 'Tại sao?' và 'Để làm gì?' để hiểu sâu về mối quan hệ nhân-quả trong lịch sử. Ví dụ: Tại sao Nhật Bản cải cách? Để cường hóa đất nước. Kết quả của cường hóa là gì? Quân sự mạnh, không bị xâm lược."
+        },
+        {
+          "question_number": 17,
+          "correct_explanation": "Sau Chiến tranh thế giới thứ nhất, Pháp (Pháp) là nước chịu thiệt hại nặng nề nhất về cả người và của. Phần lớn chiến trường phía Tây diễn ra trên đất Pháp, gây ra thiệt hại nghiêm trọng về cơ sở hạ tầng, đất đai và nhân lực. Số lượng binh sĩ tử trận và bị thương của Pháp thuộc hàng cao nhất so với dân số.",
+          "wrong_reason": "Tương tự các câu có đáp án trùng khớp, lựa chọn của em (B) là đáp án đúng về nước chịu thiệt hại nặng nề nhất về nhiều mặt (nhân mạng, kinh tế, vật chất). Nếu bị đánh giá sai, cần xem xét lại yêu cầu của đề bài, nhưng về mặt lịch sử, Pháp là một ứng cử viên hàng đầu cho nhận định này.",
+          "knowledge_gaps": "Cần nắm vững hậu quả của Chiến tranh thế giới thứ nhất đối với các nước tham chiến, đặc biệt là về thiệt hại nhân mạng và vật chất. Phân biệt thiệt hại trực tiếp do chiến tranh với thiệt hại do các yếu tố hậu chiến (như bồi thường chiến tranh của Đức).",
+          "study_tips": "Khi học về hậu quả chiến tranh, lập bảng thống kê thiệt hại về người, của, và những thay đổi chính trị-xã hội ở các nước lớn. Việc này giúp có cái nhìn tổng quát và so sánh được mức độ thiệt hại."
+        },
+        {
+          "question_number": 18,
+          "correct_explanation": "Giai cấp giữ vai trò lãnh đạo trong Cách mạng tháng Mười Nga là giai cấp công nhân, thông qua đội tiền phong của mình là Đảng Bolshevik do Lê-nin đứng đầu.",
+          "wrong_reason": "Giai cấp tư sản (B) đã nắm quyền sau Cách mạng tháng Hai nhưng không thể giải quyết được các vấn đề của đất nước và bị lật đổ trong Cách mạng tháng Mười. Giai cấp tư sản là lực lượng đối lập với cách mạng xã hội chủ nghĩa.",
+          "knowledge_gaps": "Cần nắm vững lý luận về vai trò của các giai cấp trong cách mạng xã hội chủ nghĩa, đặc biệt là vai trò lãnh đạo của giai cấp công nhân. Tránh nhầm lẫn với vai trò của giai cấp tư sản trong các cuộc cách mạng dân chủ tư sản.",
+          "study_tips": "Khi học về cách mạng, hãy xác định rõ giai cấp nào lãnh đạo, giai cấp nào là động lực chính, và giai cấp nào bị lật đổ. Điều này giúp hiểu bản chất và mục tiêu của từng cuộc cách mạng."
+        },
+        {
+          "question_number": 19,
+          "correct_explanation": "Mục tiêu chính và xuyên suốt của các nước đế quốc khi xâm lược thuộc địa là bóc lột kinh tế. Họ muốn chiếm đoạt tài nguyên, biến thuộc địa thành thị trường tiêu thụ hàng hóa và nơi cung cấp nhân công rẻ mạt.",
+          "wrong_reason": "Chiếm đất sinh sống (C) không phải là mục tiêu chính của chủ nghĩa đế quốc. Mặc dù có những yếu tố định cư, nhưng động lực chính là kinh tế. Các mục tiêu như 'truyền bá văn hóa' hay 'khai hóa văn minh' (A, B) chỉ là những vỏ bọc, những lý do bao biện cho hành vi bóc lột.",
+          "knowledge_gaps": "Cần hiểu bản chất của chủ nghĩa đế quốc và động cơ chính của việc xâm lược thuộc địa. Động cơ kinh tế là yếu tố cốt lõi, các yếu tố khác thường là thứ yếu hoặc là cái cớ.",
+          "study_tips": "Phân tích các khẩu hiệu, chính sách của các nước đế quốc và so sánh chúng với thực tế để thấy rõ bản chất bóc lột của chủ nghĩa đế quốc."
+        },
+        {
+          "question_number": 20,
+          "correct_explanation": "Phong trào giải phóng dân tộc ở châu Á phát triển sớm hơn so với châu Phi và Mỹ Latinh, với nhiều hình thức đấu tranh đa dạng (từ cải cách ôn hòa đến đấu tranh vũ trang, từ chủ nghĩa dân tộc đến các phong trào chịu ảnh hưởng của chủ nghĩa cộng sản).",
+          "wrong_reason": "Lựa chọn B 'chịu ảnh hưởng của phương Tây' đúng về mặt nào đó (ví dụ: tư tưởng dân chủ, khoa học kỹ thuật, chủ nghĩa Mác-Lênin), nhưng nó không phải là 'đặc điểm nổi bật' hay 'toàn diện' như 'phát triển sớm, đa dạng hình thức' (C). Phong trào ở châu Phi cũng chịu ảnh hưởng phương Tây, nên B không đủ để làm nổi bật sự khác biệt của châu Á.",
+          "knowledge_gaps": "Cần có cái nhìn tổng thể và khả năng so sánh các phong trào giải phóng dân tộc giữa các châu lục để nhận diện được những đặc điểm nổi bật nhất, mang tính khái quát cao.",
+          "study_tips": "Tổng hợp và so sánh đặc điểm của phong trào giải phóng dân tộc ở các châu lục khác nhau trong cùng một giai đoạn. Xác định đâu là điểm chung, đâu là điểm riêng nổi bật nhất của từng khu vực."
+        }
+      ],
+      "improvement_plan": "Kế hoạch ôn tập cụ thể cho học sinh: 1. Hệ thống hóa kiến thức: Lập sơ đồ tư duy hoặc bảng biểu tổng hợp các sự kiện lịch sử lớn, bao gồm: tên sự kiện, thời gian, địa điểm, nhân vật lãnh đạo, nguyên nhân (sâu xa, trực tiếp), diễn biến chính, kết quả, ý nghĩa, tính chất, và hạn chế. 2. Phân biệt khái niệm: Dành thời gian ôn tập và phân biệt rõ ràng các khái niệm dễ nhầm lẫn (ví dụ: nguyên nhân sâu xa/trực tiếp, Cộng sản thời chiến/NEP, tính chất chiến tranh, vai trò của các giai cấp, v.v.). 3. Tập trung vào chi tiết: Luyện tập ghi nhớ các chi tiết như niên đại, tên gọi cụ thể của các khối liên minh, quốc gia liên quan đến sự kiện. 4. Đọc hiểu sâu: Đọc kỹ các câu hỏi trắc nghiệm, phân tích từng lựa chọn để tìm ra đáp án tối ưu nhất, tránh chọn đáp án đúng nhưng chưa đủ hoặc chưa phải là 'nhất'. 5. Luyện tập giải đề: Thực hành làm nhiều bài tập trắc nghiệm, sau đó tự chấm và phân tích kỹ lưỡng các lỗi sai, ghi lại lý do sai để tránh lặp lại.",
+      "related_topics": "Các chủ đề liên quan cần ôn tập thêm: 1. Chủ nghĩa đế quốc và sự phân chia thế giới cuối thế kỷ XIX - đầu thế kỷ XX. 2. Chiến tranh thế giới thứ nhất (1914-1918): Nguyên nhân, diễn biến, kết quả, tính chất, tác động. 3. Cách mạng tháng Mười Nga (1917) và công cuộc xây dựng chủ nghĩa xã hội ở Liên Xô những năm 1920-1930. 4. Phong trào giải phóng dân tộc ở châu Á, châu Phi, Mỹ Latinh đầu thế kỷ XX (điển hình: Duy tân Minh Trị ở Nhật Bản, Cách mạng Tân Hợi ở Trung Quốc, phong trào ở Ấn Độ, Đông Nam Á)."
+    },
+    "tf_ai_feedback": null,
+    "teacher_adjusted": false,
+    "teacher_score": null,
+    "teacher_comment": null
+  },
+  {
+    "exam_id": "20260111163814",
+    "student": "hs001",
+    "submitted_at": "2026-01-12 17:22:31",
+    "answers": {
+      "mc_0": "A",
+      "mc_1": "A",
+      "mc_2": "A",
+      "mc_3": "B",
+      "mc_4": "A",
+      "mc_5": "A",
+      "mc_6": "B",
+      "mc_7": "A",
+      "mc_8": "B",
+      "mc_9": "A",
+      "tf_0": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "tf_1": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "tf_2": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "tf_3": [
+        false,
+        true,
+        false,
+        true
+      ]
+    },
+    "score": 2.45,
+    "type": "multiple_choice",
+    "ai_graded": true,
+    "essay_ai_feedback": null,
+    "mc_ai_feedback": {
+      "ke_hoach_on_tap": "Dựa trên các lỗi sai cơ bản về triều đại nhà Trần, học sinh cần thực hiện kế hoạch ôn tập chi tiết và có hệ thống sau:\n\n1.  Lập sơ đồ tư duy hoặc bảng biểu tổng hợp các sự kiện lớn về nhà Trần:\n    *   Thời gian thành lập: Nắm vững năm thành lập (1225/1226) và quá trình chuyển giao quyền lực từ nhà Lý (Lý Chiêu Hoàng nhường ngôi cho Trần Cảnh). Đây là kiến thức nền tảng để tránh nhầm lẫn ngay từ câu hỏi đầu tiên.\n    *   Nhân vật lãnh đạo chủ chốt: Ghi nhớ các vị vua đầu tiên (Trần Thái Tông/Trần Cảnh), các vị vua anh minh sau này (Thánh Tông, Nhân Tông) và các danh tướng, quan lại quan trọng (đặc biệt là Trần Thủ Độ với vai trò đặt nền móng và Trần Hưng Đạo – tổng chỉ huy quân đội trong kháng chiến chống Mông – Nguyên). Việc nhầm lẫn giữa Trần Cảnh và các nhân vật khác cho thấy sự thiếu rõ ràng về vai trò của từng người.\n    *   Thể chế chính trị: Hiểu rõ về chế độ “Thái thượng hoàng” độc đáo của nhà Trần, cơ cấu tổ chức bộ máy nhà nước từ trung ương đến địa phương để hiểu được cách thức vận hành của chính quyền nhà Trần.\n    *   Chính sách kinh tế - xã hội: Tập trung vào chính sách “ngụ binh ư nông” (nội dung chính là khi có chiến tranh thì huy động binh lính, khi hòa bình thì cho binh lính về làm ruộng), các chính sách về ruộng đất (điền trang, thái ấp) và ý nghĩa của chúng. Lỗi sai ở câu hỏi về “ngụ binh ư nông” cho thấy học sinh chưa nắm rõ bản chất của chính sách này.\n    *   Địa điểm quan trọng: Xác định rõ kinh đô Thăng Long – là kinh đô xuyên suốt của nhà Trần và các địa danh gắn liền với các chiến thắng lớn (Đông Bộ Đầu, Chương Dương, Hàm Tử, Bạch Đằng). Nhầm lẫn về kinh đô cho thấy sự thiếu chú ý đến các thông tin cơ bản.\n    *   Các cuộc kháng chiến chống Mông – Nguyên: Lập bảng thời gian biểu chi tiết cho 3 lần kháng chiến (1258, 1285, 1287-1288), ghi rõ tổng chỉ huy (Trần Quốc Tuấn/Hưng Đạo Đại Vương), các trận đánh quyết định (đặc biệt là Bạch Đằng năm 1288 cho lần thứ ba), nguyên nhân thắng lợi và ý nghĩa lịch sử. Các lỗi sai ở câu hỏi về tổng chỉ huy và trận đánh quyết định cho thấy học sinh chưa có cái nhìn tổng thể và chi tiết về sự kiện trọng đại này.\n    *   Nguyên nhân suy yếu và sụp đổ: Phân tích các yếu tố nội tại (sự sa đọa của quý tộc, tranh chấp nội bộ, tập trung ruộng đất vào tay các thế lực lớn, triều đình không còn đủ uy tín) và ngoại cảnh dẫn đến sự suy yếu và sau đó là sự diệt vong của nhà Trần vào cuối thế kỷ XIV. Đây là một câu hỏi mang tính phân tích, đòi hỏi sự hiểu biết sâu sắc về các yếu tố kinh tế, xã hội, chính trị ảnh hưởng đến một triều đại.\n\n2.  Dành thời gian ôn tập và phân biệt rõ ràng các khái niệm dễ nhầm lẫn:\n    *   So sánh và phân biệt nhà Trần với nhà Lý về thời gian thành lập, vị vua đầu tiên, các chính sách lớn và công lao lịch sử để tránh nhầm lẫn thông tin giữa hai triều đại kế tiếp. Việc học sinh chọn 'A' một cách ngẫu nhiên có thể là do nhầm lẫn giữa các mốc thời gian, nhân vật của các triều đại khác nhau.\n    *   Làm rõ sự khác biệt giữa các chính sách quân sự, kinh tế để tránh nhầm lẫn nội dung của chúng (ví dụ: bản chất của “ngụ binh ư nông” khác với các chính sách khác).\n    *   Phân biệt các trận đánh trong từng cuộc kháng chiến chống Mông – Nguyên, đặc biệt là trận đánh quyết định cho mỗi lần kháng chiến.\n\n3.  Tập trung vào chi tiết:\n    *   Luyện tập ghi nhớ các chi tiết cụ thể như niên đại chính xác (năm thành lập, năm diễn ra các trận chiến), tên gọi đầy đủ của các nhân vật lịch sử, địa danh cụ thể của kinh đô và các chiến trường. Các lỗi sai cho thấy học sinh thiếu nền tảng về các chi tiết cơ bản này.\n    *   Xây dựng “thẻ ghi nhớ” (flashcards) cho các sự kiện, nhân vật, mốc thời gian và định nghĩa quan trọng để ôn tập nhanh và hiệu quả.\n\n4.  Đọc hiểu sâu các câu hỏi và đáp án:\n    *   Khi làm bài, đọc thật kỹ câu hỏi để xác định yêu cầu chính (ví dụ: “nguyên nhân chủ yếu”, “trận đánh quyết định”, “người đầu tiên”). Đôi khi, các lựa chọn đều có vẻ đúng một phần, nhưng chỉ có một đáp án là 'đúng nhất' hoặc 'đầy đủ nhất'.\n    *   Phân tích từng lựa chọn đáp án một cách cẩn thận, loại trừ các đáp án sai rõ ràng, các đáp án không đầy đủ hoặc không chính xác nhất. Tránh chọn đáp án chỉ vì nó có vẻ quen thuộc mà chưa phải là câu trả lời tối ưu.\n\n5.  Luyện tập giải đề và tự phân tích lỗi sai:\n    *   Thực hành làm nhiều bài tập trắc nghiệm riêng biệt về nhà Trần sau mỗi buổi học để củng cố kiến thức và làm quen với các dạng câu hỏi.\n    *   Sau khi hoàn thành, tự chấm điểm và quan trọng nhất là phân tích kỹ lưỡng từng lỗi sai: ghi lại lý do vì sao mình sai (nhầm lẫn thông tin, chưa nắm vững kiến thức, đọc sai đề,…) và ghi nhớ đáp án đúng kèm theo giải thích ngắn gọn. Mục tiêu là không lặp lại cùng một loại lỗi sai.",
+      "cac_chu_de_lien_quan": [
+        "Chủ nghĩa đế quốc và sự phân chia thế giới cuối thế kỷ XIX - đầu thế kỷ XX.",
+        "Chiến tranh thế giới thứ nhất (1914-1918): Nguyên nhân, diễn biến, kết quả, tính chất, tác động.",
+        "Cách mạng tháng Mười Nga (1917) và công cuộc xây dựng chủ nghĩa xã hội ở Liên Xô những năm 1920-1930.",
+        "Phong trào giải phóng dân tộc ở châu Á, châu Phi, Mỹ Latinh đầu thế kỷ XX (điển hình: Duy tân Minh Trị ở Nhật Bản, Cách mạng Tân Hội ở Trung Quốc, phong trào ở Ấn Độ, Đông Nam Á)."
+      ]
+    },
+    "tf_ai_feedback": {
+      "ke_hoach_on_tap": "Em thân mến, qua các lỗi sai trong bài kiểm tra về nhà Trần, thầy nhận thấy em còn một số lỗ hổng kiến thức khá cơ bản và chưa nắm vững các khái niệm, sự kiện quan trọng. Để khắc phục tình trạng này, em cần có một kế hoạch ôn tập hiệu quả sau đây:\n\n1.  Lập sơ đồ tư duy hoặc bảng biểu tổng hợp các sự kiện lịch sử lớn: Đối với mỗi sự kiện liên quan đến nhà Trần (ví dụ: Sự thành lập nhà Trần, Bộ máy nhà nước, Kháng chiến chống Mông – Nguyên, Tình hình kinh tế – xã hội), em hãy tổng hợp các thông tin sau:\n    *   Tên sự kiện: Ví dụ, 'Sự thành lập nhà Trần'.\n    *   Thời gian: Ví dụ, '1226'.\n    *   Địa điểm (nếu có): Ví dụ, 'Thăng Long'.\n    *   Nhân vật lãnh đạo/chủ chốt: Ví dụ, 'Trần Thủ Độ, Trần Thái Tông'.\n    *   Nguyên nhân (sâu xa, trực tiếp): Ví dụ, 'Nhà Lý suy yếu, Trần Thủ Độ sắp đặt'.\n    *   Diễn biến chính: Tóm tắt các giai đoạn chính.\n    *   Kết quả: Các thành tựu đạt được hoặc sự thay đổi.\n    *   Ý nghĩa: Tầm quan trọng của sự kiện.\n    *   Tính chất (nếu có): Ví dụ, 'chiến tranh vệ quốc'.\n    *   Hạn chế (nếu có): Các điểm chưa hoàn hảo.\n\n2.  Dành thời gian ôn tập và phân biệt rõ ràng các khái niệm dễ nhầm lẫn: Em cần đặc biệt chú ý đến các khái niệm sau để tránh nhầm lẫn:\n    *   'Quân đội thường trực': Đây là lực lượng quân sự được duy trì liên tục bởi nhà nước để bảo vệ đất nước và giữ gìn trật tự. Các triều đại phong kiến lớn đều có quân đội thường trực.\n    *   'Chế độ Thái Thượng Hoàng': Đây là đặc trưng chính trị độc đáo của nhà Trần, nơi vua cha truyền ngôi cho con nhưng vẫn nắm giữ quyền lực tối cao, giúp chuyển giao quyền lực suôn sẻ và có sự chuẩn bị tốt cho người kế vị.\n    *   'Tiêu diệt hoàn toàn': Cần hiểu đúng mức độ của các chiến thắng. Chiến thắng Bạch Đằng năm 1288 là chiến thắng quyết định, đánh bại ý chí xâm lược và tiêu hao lớn quân địch, nhưng không phải là tiêu diệt 'hoàn toàn' toàn bộ đạo quân xâm lược về số lượng.\n\n3.  Tập trung vào chi tiết: Luyện tập ghi nhớ các chi tiết quan trọng như niên đại (ví dụ: 1288 cho Bạch Đằng, 3 lần kháng chiến chống Mông – Nguyên), tên gọi cụ thể của nhân vật (Trần Thủ Độ), các khái niệm chính trị, kinh tế, xã hội. Việc này giúp em không bị nhầm lẫn các mốc thời gian hay nhân vật.\n\n4.  Đọc hiểu sâu: Khi làm bài tập trắc nghiệm, em hãy đọc kỹ các câu hỏi, phân tích từng lựa chọn để tìm ra đáp án tối ưu nhất. Tránh chọn đáp án đúng nhưng chưa đủ hoặc chưa phải là 'nhất'. Đặc biệt chú ý đến các từ khóa như 'quan trọng', 'duy trì', 'nét đặc trưng', 'hoàn toàn' để hiểu đúng ý nghĩa của câu hỏi.\n\n5.  Luyện tập giải đề: Thường xuyên thực hành làm nhiều bài tập trắc nghiệm, sau đó tự chấm và phân tích kỹ lưỡng các lỗi sai. Ghi lại lý do em sai để rút kinh nghiệm và tránh lặp lại những lỗi tương tự trong các lần ôn tập sau.",
+      "cac_chu_de_lien_quan": "Để mở rộng kiến thức và có cái nhìn tổng quan hơn về lịch sử thế giới, em có thể tìm hiểu thêm các chủ đề sau:\n\n1.  Chủ nghĩa đế quốc và sự phân chia thế giới cuối thế kỷ XIX - đầu thế kỷ XX: Nắm vững nguyên nhân, đặc điểm và hệ quả của sự phát triển chủ nghĩa đế quốc.\n2.  Chiến tranh thế giới thứ nhất (1914-1918): Tập trung vào nguyên nhân sâu xa và trực tiếp, diễn biến chính, kết quả, tính chất và tác động to lớn của cuộc chiến.\n3.  Cách mạng tháng Mười Nga (1917) và công cuộc xây dựng chủ nghĩa xã hội ở Liên Xô những năm 1920-1930: Hiểu rõ về ý nghĩa, thành tựu và những thách thức của giai đoạn này.\n4.  Phong trào giải phóng dân tộc ở châu Á, châu Phi, Mỹ Latinh đầu thế kỷ XX: Nghiên cứu các phong trào tiêu biểu như Duy tân Minh Trị ở Nhật Bản, Cách mạng Tân Hợi ở Trung Quốc, và các phong trào ở Ấn Độ, Đông Nam Á để thấy được sự trỗi dậy của các dân tộc bị áp bức."
+    },
+    "teacher_adjusted": false,
+    "teacher_score": null,
+    "teacher_comment": null
+  }
+]

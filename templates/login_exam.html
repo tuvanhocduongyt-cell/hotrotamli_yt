@@ -1,0 +1,42 @@
+<!-- templates/login_exam.html -->
+{% extends "layout.html" %}
+
+{% block title %}Dang nhap - On luyen lich su{% endblock %}
+
+{% block content %}
+<h2>ĐĂNG NHẬP HỆ THỐNG ÔN LUYỆN</h2>
+
+{% if message %}
+<p style="color: red; text-align: center;">{{ message }}</p>
+{% endif %}
+
+<form method="POST">
+  <div style="margin-bottom: 20px;">
+    <label style="display: block; margin-bottom: 8px; font-weight: 600;">Vai trò :</label>
+    <select name="role" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 15px;">
+      <option value="student">Học sinh</option>
+      <option value="teacher">Giáo viên</option>
+    </select>
+  </div>
+
+  <div style="margin-bottom: 20px;">
+    <label style="display: block; margin-bottom: 8px; font-weight: 600;">Tên đăng nhập:</label>
+    <input type="text" name="username" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 15px;">
+  </div>
+
+  <div style="margin-bottom: 20px;">
+    <label style="display: block; margin-bottom: 8px; font-weight: 600;">Mật khẩu:</label>
+    <input type="password" name="password" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 15px;">
+  </div>
+
+  <button type="submit" style="width: 100%; margin-top: 10px;">Đăng nhập</button>
+</form>
+
+<p style="text-align: center; margin-top: 20px;">
+  Chưa có tài khoản? <a href="{{ url_for('register_exam') }}">Đăng kí ngay</a>
+</p>
+
+<p style="text-align: center; margin-top: 10px;">
+  <a href="{{ url_for('menu') }}">Trang chủ</a>
+</p>
+{% endblock %}

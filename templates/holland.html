@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trắc nghiệm Holland</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f7fa; }
+        h1 { text-align: center; color: #333; }
+        form { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .question { margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
+        .question p { margin-bottom: 8px; font-weight: bold; }
+        label { display: block; margin-bottom: 4px; }
+        .btn-submit { background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px; }
+        .btn-back { background-color: #2196F3; color: white; padding: 8px 15px; border: none; border-radius: 5px; text-decoration: none; }
+        .btn-submit:hover, .btn-back:hover { opacity: 0.9; }
+    </style>
+</head>
+<body>
+    <h1>Bài trắc nghiệm Holland</h1>
+    <form method="POST">
+        {% for q in questions %}
+        <div class="question">
+            <p>{{ loop.index }}. {{ q.text }}</p>
+            <label><input type="radio" name="{{ loop.index }}" value="1" required> 1 - Chưa bao giờ đúng</label>
+            <label><input type="radio" name="{{ loop.index }}" value="2"> 2 - Đúng một vài trường hợp</label>
+            <label><input type="radio" name="{{ loop.index }}" value="3"> 3 - Đúng một nửa</label>
+            <label><input type="radio" name="{{ loop.index }}" value="4"> 4 - Gần như đúng</label>
+            <label><input type="radio" name="{{ loop.index }}" value="5"> 5 - Hoàn toàn đúng</label>
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn-submit">Xem kết quả</button>
+    </form>
+    <br>
+    <a href="{{ url_for('menu') }}" class="btn-back">⬅ Trở về Menu</a>
+</body>
+</html>

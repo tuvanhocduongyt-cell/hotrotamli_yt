@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kết quả trắc nghiệm Stress</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .result {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-size: 18px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .result b {
+            color: #2980b9;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            background: #3498db;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+
+        a:hover {
+            background: #2980b9;
+        }
+
+        /* Màu tùy theo mức độ */
+        .low { color: green; font-weight: bold; }
+        .medium { color: orange; font-weight: bold; }
+        .high { color: red; font-weight: bold; }
+
+        /* Responsive cho điện thoại */
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            .result {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Kết quả trắc nghiệm Stress</h2>
+
+        <div class="result">
+            <b>Trầm cảm (D):</b> {{ score_D }} điểm - 
+            <span class="{% if 'Thấp' in level_D %}low{% elif 'Vừa' in level_D %}medium{% else %}high{% endif %}">
+                {{ level_D }}
+            </span>
+        </div>
+
+        <div class="result">
+            <b>Lo âu (A):</b> {{ score_A }} điểm - 
+            <span class="{% if 'Thấp' in level_A %}low{% elif 'Vừa' in level_A %}medium{% else %}high{% endif %}">
+                {{ level_A }}
+            </span>
+        </div>
+
+        <div class="result">
+            <b>Stress (S):</b> {{ score_S }} điểm - 
+            <span class="{% if 'Thấp' in level_S %}low{% elif 'Vừa' in level_S %}medium{% else %}high{% endif %}">
+                {{ level_S }}
+            </span>
+        </div>
+
+        <a href="/">⬅ Quay lại menu</a>
+    </div>
+</body>
+</html>

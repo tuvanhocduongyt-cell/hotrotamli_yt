@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hệ thống học tập</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url("{{ url_for('static', filename='images/nen.jpg') }}") no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.6);
+            z-index: -1;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 48px;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.7);
+        }
+        p.subtitle {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 3px rgba(255,255,255,0.7);
+        }
+        .menu-container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+        .menu-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px 40px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 250px;
+        }
+        .menu-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
+        .menu-card a {
+            text-decoration: none;
+            color: #3498db;
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+        .logo {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1> Hệ thống học tập</h1>
+    <p class="subtitle">Nơi tổng hợp các công cụ hỗ trợ học tập và giải trí</p>
+
+    <div class="menu-container">
+        <div class="menu-card">
+            <img src="{{ url_for('static', filename='images/tamli.jpg') }}" alt="Chatbot" class="logo">
+            <a href="/tro_chuyen_tam_li_cung_tro_ly_ai_pham_hang">Chatbot tâm lí ảo</a>
+        </div>
+        <div class="menu-card">
+            <img src="{{ url_for('static', filename='images/stress.jpg') }}" alt="Trắc nghiệm stress" class ="logo">
+            <a href="{{ url_for('stress_test') }}">Trắc nghiệm Stress</a>
+        </div>
+        <div class="menu-card">
+            <img src="{{ url_for('static', filename='images/trac_nghiem.jpg') }}" alt="Trắc nghiệm nghề nghiệp" class="logo">
+            <a href="{{ url_for('holland_test') }}">Trắc nghiệm Nghề nghiệp</a>
+        </div>
+        <div class="menu-card">
+            <img src="{{ url_for('static', filename='images/goctho.jpg') }}" alt="Góc Thở & Thư Giãn" class="logo">
+            <a href="{{ url_for('relax_page', mode='menu') }}"> Góc Thở & Thư Giãn</a>
+        </div>
+        <div class="menu-card">
+            <img src="{{ url_for('static', filename='images/nhat_ki.jpg') }}" alt="Nhật kí" class="logo">
+            <a href="{{ url_for('emotion_journal', mode='menu') }}"> Nhật kí</a>
+        </div>
+        <div class="menu-card">
+            <img src="{{ url_for('static', filename='images/chat_voice.jpg') }}" alt="Tâm An" class="logo">
+            <a href="{{ url_for('tam_an') }}">Trò chuyện với bạn Tâm An</a>
+        </div>
+        <div class="menu-card">
+            <img src="{{ url_for('static', filename='images/cham_diem.jpg') }}" alt="Chấm Lịch sử" class="logo">
+            <a href="{{ url_for('index_td') }}">AI Chấm Bài - Lịch sử</a>
+        </div>
+        <div class="menu-card">
+            <img src="{{ url_for('static', filename='images/choigame.jpg') }}" alt="Game" class="logo">
+            <a href="/enter_nickname">Đấu trường lịch sử</a>
+        </div>
+        <div class="menu-card">
+            <img src="{{ url_for('static', filename='images/phamhang.jpg') }}" alt="Chatbot" class="logo">
+            <a href="/chatbot"> Chatbot AI lịch sử</a>
+        </div>
+        <div class="menu-card">
+            <img src="{{ url_for('static', filename='images/tailieu.jpg') }}" alt="Xem tài liệu" class="logo">
+            <a href="/docs"> Xem Tài Liệu</a>
+        </div>
+        <div class="menu-card">
+            <img src="{{ url_for('static', filename='images/chuyengia.png') }}" alt="Dịch vụ y tế" class="logo">
+            <a href="/dich-vu-y-te">Dịch Vụ Y Tế</a>
+        </div>
+        <div class="menu-card">
+            <img src="{{ url_for('static', filename='images/onluyen.png') }}" alt="On luyen lich su" class="logo">
+            <a href="/login_exam">Ôn Luyện Lịch Sử</a>
+        </div>
+    </div>
+</body>
+</html>

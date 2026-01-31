@@ -1,0 +1,12 @@
+Flask
+google-generativeai
+pytz
+reportlab
+google-cloud-texttospeech
+PyPDF2
+pytesseract
+Pillow
+gunicorn
+dotenv
+mammoth
+python-docx

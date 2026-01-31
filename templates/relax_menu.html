@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Góc Thở - Thư Giãn Tinh Thần</title>
+<style>
+  /* Reset cơ bản */
+  * {
+    box-sizing: border-box;
+  }
+  body, html {
+    margin: 0; padding: 0; height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6dd5fa, #2980b9);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #2c3e50;
+  }
+  #container {
+    display: flex;
+    min-height: 100vh;
+    background:
+      linear-gradient(145deg, #ffffff, #d1d9e6);
+    box-shadow: inset 4px 4px 10px #a1b0c5,
+                inset -4px -4px 10px #ffffff;
+  }
+  /* Menu trái */
+  nav {
+    width: 220px;
+    background: linear-gradient(145deg, #1e3c72, #2a5298);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    box-shadow: 3px 0 8px rgba(0,0,0,0.2);
+  }
+  nav h2 {
+    margin: 0 0 30px;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 1px;
+    user-select: none;
+  }
+  nav button {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 14px 20px;
+    width: 90%;
+    margin: 8px 0;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+  nav button:hover, nav button.active {
+    background-color: #5499c7;
+    color: #f0f0f0;
+  }
+  nav button span {
+    margin-left: 8px;
+    font-weight: 600;
+  }
+  /* Nội dung bên phải */
+  main {
+    flex-grow: 1;
+    padding: 30px;
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow:
+      10px 10px 30px rgba(0,0,0,0.1),
+      -10px -10px 30px rgba(255,255,255,0.7);
+    display: flex;
+    flex-direction: column;
+  }
+  main h2 {
+    margin-top: 0;
+    font-weight: 700;
+    color: #34495e;
+  }
+  main p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+  }
+  audio, iframe {
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    height: 320px;
+  }
+  audio {
+    height: 60px;
+  }
+  .breathing-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #3498db, #5dade2);
+    margin: 40px auto;
+    animation: breathe 8s ease-in-out infinite;
+    box-shadow:
+      0 0 20px rgba(52,152,219,0.6),
+      inset 0 0 40px rgba(93,173,226,0.8);
+  }
+  @keyframes breathe {
+    0%, 100% { transform: scale(1); background: #3498db; }
+    50% { transform: scale(1.5); background: #5dade2; }
+  }
+  .btn-back {
+    margin-top: auto;
+    text-align: center;
+  }
+  .btn-back a {
+    display: inline-block;
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 30px;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(39,174,96,0.6);
+    transition: background-color 0.3s ease;
+  }
+  .btn-back a:hover {
+    background-color: #1e8449;
+  }
+  /* Responsive */
+  @media (max-width: 900px) {
+    #container {
+      flex-direction: column;
+      padding: 10px;
+    }
+    nav {
+      width: 100%;
+      flex-direction: row;
+      justify-content: center;
+      padding: 10px 0;
+      box-shadow: none;
+    }
+    nav button {
+      width: auto;
+      margin: 0 10px;
+      padding: 10px 16px;
+      font-size: 14px;
+      border-radius: 6px;
+    }
+    main {
+      margin: 20px auto 40px;
+      width: 100%;
+      max-width: none;
+      border-radius: 12px;
+      padding: 20px;
+    }
+    audio, iframe {
+      height: 200px;
+    }
+    .breathing-circle {
+      width: 130px;
+      height: 130px;
+      margin: 20px auto;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div id="container">
+  <nav>
+    <h2>Góc Thở</h2>
+    <button class="active" onclick="openTab('music', this)">🎵 <span>Nhạc thư giãn</span></button>
+    <button onclick="openTab('yoga', this)">🧘‍♂️ <span>Yoga</span></button>
+    <button onclick="openTab('meditation', this)">🧘‍♀️ <span>Thiền</span></button>
+    <button onclick="openTab('breathing', this)">🌬 <span>Tập thở</span></button>
+  </nav>
+
+  <main>
+    <section id="music" class="tab-content active-tab">
+      <h2>🎵 Nhạc thư giãn</h2>
+      <p>Hãy nhắm mắt lại, thả lỏng cơ thể và tận hưởng âm nhạc nhẹ nhàng...</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/tVQ_uDRs_7U" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="yoga" class="tab-content" style="display:none;">
+      <h2>🧘‍♂️ Hướng dẫn tập Yoga</h2>
+      <p>Các động tác yoga đơn giản giúp thư giãn cơ thể:</p>
+      <iframe src="https://www.youtube.com/embed/HCYK5CJKfHk" allowfullscreen></iframe>
+    </section>
+
+    <section id="meditation" class="tab-content" style="display:none;">
+      <h2>🧘‍♀️ Hướng dẫn thiền</h2>
+      <p>Ngồi thoải mái, lưng thẳng, nhắm mắt, tập trung vào hơi thở...</p>
+      <iframe src="https://www.youtube.com/embed/maBkMrKAgTU" allowfullscreen></iframe>
+    </section>
+
+    <section id="breathing" class="tab-content" style="display:none;">
+      <h2>🌬 Tập thở - Kỹ thuật Box Breathing (4-4-4-4)</h2>
+      <p>Hít vào 4 giây → Giữ hơi 4 giây → Thở ra 4 giây → Giữ hơi 4 giây</p>
+      <div class="breathing-circle"></div>
+      <p style="text-align:center; font-weight: 600; color: #2980b9;">
+        Hít vào khi vòng tròn phình ra, thở ra khi vòng tròn co lại.
+      </p>
+    </section>
+
+    <div class="btn-back">
+      <a href="{{ url_for('menu') }}">⬅ Trở về Menu</a>
+    </div>
+  </main>
+</div>
+
+<script>
+  function openTab(tabId, btn) {
+    // Ẩn hết
+    document.querySelectorAll('.tab-content').forEach(tab => tab.style.display = 'none');
+    // Hiện tab chọn
+    document.getElementById(tabId).style.display = 'block';
+
+    // Bỏ active cũ
+    document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+    // Gán active mới
+    btn.classList.add('active');
+  }
+</script>
+
+</body>
+</html>

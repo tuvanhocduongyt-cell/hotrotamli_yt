@@ -1,0 +1,593 @@
+{
+  "20260111163814": {
+    "id": "20260111163814",
+    "title": "lịch sử lớp 11",
+    "type": "multiple_choice",
+    "duration": 15,
+    "created_by": "gv001",
+    "created_at": "2026-01-11 16:38:31",
+    "questions": {
+      "multiple_choice": [
+        {
+          "question": "Nhà Trần được thành lập vào năm nào?",
+          "options": [
+            "A. 1209",
+            "B. 1215",
+            "C. 1225",
+            "D. 1230"
+          ],
+          "answer": "C"
+        },
+        {
+          "question": "Người được lập làm vua đầu tiên của nhà Trần là",
+          "options": [
+            "A. Trần Thủ Độ",
+            "B. Trần Quốc Tuấn",
+            "C. Trần Cảnh",
+            "D. Trần Liễu"
+          ],
+          "answer": "C"
+        },
+        {
+          "question": "Kinh đô của nhà Trần được đặt tại",
+          "options": [
+            "A. Hoa Lư",
+            "B. Thăng Long",
+            "C. Tây Đô",
+            "D. Phú Xuân"
+          ],
+          "answer": "B"
+        },
+        {
+          "question": "Chính quyền nhà Trần được tổ chức theo chế độ",
+          "options": [
+            "A. Quân chủ chuyên chế trung ương tập quyền",
+            "B. Phong kiến phân quyền",
+            "C. Cộng hòa quý tộc",
+            "D. Quân chủ lập hiến"
+          ],
+          "answer": "A"
+        },
+        {
+          "question": "Quân xâm lược Mông – Nguyên tiến hành xâm lược nước ta lần thứ nhất vào năm",
+          "options": [
+            "A. 1258",
+            "B. 1279",
+            "C. 1285",
+            "D. 1288"
+          ],
+          "answer": "A"
+        },
+        {
+          "question": "Tổng chỉ huy quân đội nhà Trần trong kháng chiến chống Mông – Nguyên là",
+          "options": [
+            "A. Trần Thái Tông",
+            "B. Trần Thánh Tông",
+            "C. Trần Quốc Tuấn",
+            "D. Trần Nhật Duật"
+          ],
+          "answer": "C"
+        },
+        {
+          "question": "Chiến thắng nào sau đây quyết định thắng lợi cuộc kháng chiến chống Mông – Nguyên lần thứ ba?",
+          "options": [
+            "A. Đông Bộ Đầu",
+            "B. Chương Dương",
+            "C. Hàm Tử",
+            "D. Bạch Đằng"
+          ],
+          "answer": "D"
+        },
+        {
+          "question": "Chính sách “ngụ binh ư nông” của nhà Trần có nội dung là",
+          "options": [
+            "A. Quân lính chỉ sản xuất nông nghiệp",
+            "B. Quân đội vừa sản xuất vừa sẵn sàng chiến đấu",
+            "C. Tất cả dân đều phải đi lính",
+            "D. Bỏ quân đội thường trực"
+          ],
+          "answer": "B"
+        },
+        {
+          "question": "Tôn giáo giữ vai trò quan trọng trong đời sống tinh thần thời Trần là",
+          "options": [
+            "A. Nho giáo",
+            "B. Phật giáo",
+            "C. Đạo giáo",
+            "D. Thiên Chúa giáo"
+          ],
+          "answer": "B"
+        },
+        {
+          "question": "Nguyên nhân chủ yếu dẫn đến sự suy yếu của nhà Trần vào cuối thế kỉ XIV là",
+          "options": [
+            "A. Sự xâm lược của quân Minh",
+            "B. Kinh tế phát triển quá nhanh",
+            "C. Nội bộ triều đình suy thoái",
+            "D. Thiếu nhân tài"
+          ],
+          "answer": "C"
+        }
+      ],
+      "true_false": [
+        {
+          "question": "Về sự thành lập nhà Trần",
+          "statements": [
+            "Nhà Trần được thành lập sau khi nhà Lý suy yếu.",
+            "Trần Thủ Độ đóng vai trò quan trọng trong việc lập ra nhà Trần.",
+            "Nhà Trần lên ngôi bằng con đường khởi nghĩa vũ trang.",
+            "Trần Cảnh là vị vua đầu tiên của nhà Trần."
+          ],
+          "answers": [
+            true,
+            true,
+            false,
+            true
+          ]
+        },
+        {
+          "question": "Về bộ máy nhà nước thời Trần",
+          "statements": [
+            "Nhà Trần tổ chức bộ máy nhà nước từ trung ương đến địa phương.",
+            "Các vua Trần thường nhường ngôi sớm cho con.",
+            "Nhà Trần không duy trì quân đội thường trực.",
+            "Chế độ thái thượng hoàng là nét đặc trưng của triều Trần."
+          ],
+          "answers": [
+            true,
+            true,
+            false,
+            true
+          ]
+        },
+        {
+          "question": "Về kháng chiến chống Mông – Nguyên",
+          "statements": [
+            "Nhà Trần đã ba lần kháng chiến chống quân Mông – Nguyên.",
+            "Trần Quốc Tuấn là tổng chỉ huy quân đội trong các cuộc kháng chiến.",
+            "Nhà Trần luôn chủ trương “đánh nhanh thắng nhanh”.",
+            "Chiến thắng Bạch Đằng năm 1288 đã tiêu diệt hoàn toàn đạo quân xâm lược."
+          ],
+          "answers": [
+            true,
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "question": "Về tình hình kinh tế – xã hội thời Trần",
+          "statements": [
+            "Nông nghiệp giữ vai trò quan trọng trong nền kinh tế.",
+            "Nhà Trần chú trọng khai hoang, mở rộng ruộng đất.",
+            "Cuối thời Trần, đời sống nhân dân ngày càng ổn định.",
+            "Sự phát triển của điền trang, thái ấp làm xã hội phân hóa sâu sắc."
+          ],
+          "answers": [
+            true,
+            true,
+            false,
+            true
+          ]
+        }
+      ]
+    },
+    "total_score": 10
+  },
+  "20260112132918": {
+    "id": "20260112132918",
+    "title": "battap test",
+    "type": "essay",
+    "duration": 30,
+    "created_by": "gv001",
+    "created_at": "2026-01-12 13:29:18",
+    "essay_question": "Trình bày nguyên nhân bùng nổ và tính chất của Chiến tranh thế giới thứ nhất (1914–1918).",
+    "grading_criteria": "Tiêu chí chấm\r\n\r\nNguyên nhân bùng nổ (2 điểm)\r\n\r\nMâu thuẫn giữa các nước đế quốc về vấn đề thuộc địa (1.0 đ)\r\nSự hình thành hai khối quân sự đối lập và chạy đua vũ trang (0.5 đ)\r\nDuyên cớ trực tiếp: Thái tử Áo–Hung bị ám sát tại Xéc-bi (0.5 đ)\r\nTính chất chiến tranh (1 điểm)\r\nLà cuộc chiến tranh đế quốc phi nghĩa (0.75 đ)\r\nGây tổn thất nặng nề cho nhân loại (0.25 đ)",
+    "total_score": 10,
+    "grade": "10"
+  },
+  "20260112133101": {
+    "id": "20260112133101",
+    "title": "testhh",
+    "type": "mixed",
+    "duration": 50,
+    "created_by": "gv001",
+    "created_at": "2026-01-12 13:31:24",
+    "questions": {
+      "multiple_choice": [
+        {
+          "question": "Nội dung nào sau đây là một trong những mục tiêu của các cuộc cách mạng tư sản (từ giữa thế kỉ XVI đến đầu thế kỉ XX)?",
+          "options": [
+            "A. Thúc đẩy khoa học công nghệ phát triển.",
+            "B. Xóa bỏ triệt để mâu thuẫn trong xã hội.",
+            "C. Xác lập sự thống trị của chế độ phong kiến.",
+            "D. Đưa giai cấp tư sản lên nắm quyền."
+          ],
+          "answer": "D"
+        },
+        {
+          "question": "Cuối thế kỉ XIX - đầu thế kỉ XX, các nước tư bản chuyển sang giai đoạn nào sau đây?",
+          "options": [
+            "A. Chủ nghĩa tư bản tự do cạnh tranh.",
+            "B. Đế quốc chủ nghĩa.",
+            "C. Chủ nghĩa dân tộc cực đoan.",
+            "D. Cộng sản chủ nghĩa."
+          ],
+          "answer": "B"
+        },
+        {
+          "question": "Nội dung nào không phản ánh đúng tiềm năng của chủ nghĩa tư bản hiện đại?",
+          "options": [
+            "A. Nền tảng khoa học - kĩ thuật hiện đại.",
+            "B. Trình độ phát triển sản xuất cao.",
+            "C. Khả năng tự điều chỉnh, thích ứng.",
+            "D. Giải quyết triệt để mâu thuẫn xã hội."
+          ],
+          "answer": "D"
+        },
+        {
+          "question": "Sự phát triển của chủ nghĩa tư bản gắn liền với yếu tố chủ yếu nào sau đây?",
+          "options": [
+            "A. Sự phát triển khoa học - kĩ thuật.",
+            "B. Điều kiện tự nhiên thuận lợi",
+            "C. Vai trò của lãnh chúa phong kiến.",
+            "D. Vai trò của giai cấp vô sản."
+          ],
+          "answer": "A"
+        },
+        {
+          "question": "Một trong những nước cộng hoà đầu tiên gia nhập Liên bang Cộng hoà xã hội chủ nghĩa Xô viết vào năm 1922 là",
+          "options": [
+            "A. Nga.",
+            "B. Campuchia.",
+            "C. Nhật Bản.",
+            "D. Lào."
+          ],
+          "answer": "A"
+        },
+        {
+          "question": "Năm 1924, bản Hiến pháp đầu tiên của Liên Xô được thông qua có ý nghĩa nào dưới đây?",
+          "options": [
+            "A. Khởi đầu quá trình thành lập nhà nước Liên Xô.",
+            "B. Chính thức thành lập nhà nước Liên Xô.",
+            "C. Hoàn thành quá trình thành lập nhà nước Liên Xô.",
+            "D. Chấm dứt sự tồn tại của nhà nước Liên Xô."
+          ],
+          "answer": "C"
+        },
+        {
+          "question": "Đối với Liên Xô, việc thành lập Liên bang Cộng hoà xã hội chủ nghĩa Xô viết có ý nghĩa nào sau đây?",
+          "options": [
+            "A. Cổ vũ các dân tộc bị áp bức đứng lên đấu tranh tự giải phóng.",
+            "B. Đánh dấu chủ nghĩa xã hội trở thành hệ thống thế giới.",
+            "C. Giúp cho các dân tộc thuộc địa tìm ra con đường cứu nước.",
+            "D. Tạo sức mạnh để xây dựng chủ nghĩa tư bản và bảo vệ đất nước."
+          ],
+          "answer": "D"
+        },
+        {
+          "question": "Theo tư tưởng chỉ đạo của Lê-nin và Hiến pháp Liên Xô, việc thành lập Liên bang Cộng hoà xã hội chủ nghĩa Xô viết không dựa trên cơ sở nào sau đây?",
+          "options": [
+            "A. Bình đẳng.",
+            "B. Tự nguyện.",
+            "C. Tương trợ.",
+            "D. Ép buộc."
+          ],
+          "answer": "D"
+        },
+        {
+          "question": "Nhận định nào sau đây là đúng về quá trình hình thành Liên bang Cộng hòa xã hội chủ nghĩa Xô viết?",
+          "options": [
+            "A. Diễn ra lâu dài nhưng thuận lợi do cuộc chiến tranh giữa các nước đế quốc đã kết thúc.",
+            "B. Diễn ra lâu dài và gian nan, thể hiện tinh thần đấu tranh kiên cường của nhân dân Xô viết.",
+            "C. Diễn ra nhanh, ít đỗ máu, thể hiện tinh thần yêu nước, chuộng hòa bình của giai cấp tư sản.",
+            "D. Diễn ra thuận lợi và nhanh chóng do được các nước đế quốc châu Âu ủng hộ, giúp đỡ."
+          ],
+          "answer": "B"
+        }
+      ],
+      "true_false": [
+        {
+          "question": "Đánh giá các nhận định sau về các cuộc cách mạng tư sản và chủ nghĩa tư bản:",
+          "statements": [
+            "a. Các cuộc cách mạng tư sản đã lật đổ hoàn toàn chế độ phong kiến trên toàn thế giới ngay từ thế kỷ XVI.",
+            "b. Giai đoạn đế quốc chủ nghĩa đánh dấu sự phát triển cao nhất của chủ nghĩa tư bản với sự hình thành các tập đoàn độc quyền.",
+            "c. Một trong những mục tiêu chính của cách mạng tư sản là xác lập quyền lực của giai cấp vô sản.",
+            "d. Chủ nghĩa tư bản hiện đại có khả năng tự điều chỉnh và thích ứng với nhiều biến động."
+          ],
+          "answers": [
+            false,
+            true,
+            false,
+            true
+          ]
+        },
+        {
+          "question": "Nhận định nào sau đây là đúng hay sai về quá trình thành lập và ý nghĩa của Liên bang Xô viết?",
+          "statements": [
+            "a. Liên Xô được thành lập trên nguyên tắc tự nguyện, bình đẳng và tương trợ giữa các nước cộng hòa.",
+            "b. Bản Hiến pháp đầu tiên năm 1924 đã đánh dấu sự khởi đầu của quá trình thành lập nhà nước Liên Xô.",
+            "c. Sự ra đời của Liên Xô đã tạo ra một sức mạnh tổng hợp to lớn để xây dựng xã hội chủ nghĩa và bảo vệ đất nước.",
+            "d. Lê-nin là người đã chỉ đạo việc thành lập Liên bang Cộng hòa Xã hội chủ nghĩa Xô viết theo nguyên tắc ép buộc các dân tộc yếu hơn."
+          ],
+          "answers": [
+            true,
+            false,
+            true,
+            false
+          ]
+        }
+      ],
+      "essay": [
+        {
+          "question": "Phân tích những biến đổi lớn của chủ nghĩa tư bản từ giai đoạn tự do cạnh tranh sang giai đoạn độc quyền (đế quốc chủ nghĩa) cuối thế kỷ XIX - đầu thế kỷ XX. Nêu những hệ quả chính của sự biến đổi này.",
+          "grading_criteria": "Nêu được khái niệm chủ nghĩa tư bản tự do cạnh tranh và độc quyền. Phân tích nguyên nhân chuyển biến (phát triển lực lượng sản xuất, tích tụ tư bản). Trình bày đặc điểm của chủ nghĩa đế quốc (tập trung sản xuất, tư bản tài chính, xuất khẩu tư bản, chia khu vực ảnh hưởng). Nêu hệ quả (đẩy mạnh xâm lược thuộc địa, chiến tranh thế giới, mâu thuẫn xã hội)."
+        },
+        {
+          "question": "Trình bày bối cảnh lịch sử và quá trình hình thành Liên bang Cộng hòa xã hội chủ nghĩa Xô viết. Nêu ý nghĩa của sự kiện này đối với Liên Xô và phong trào cách mạng thế giới.",
+          "grading_criteria": "Nêu bối cảnh (sau Cách mạng tháng Mười, nội chiến, can thiệp nước ngoài, nhu cầu đoàn kết). Mô tả quá trình thành lập (hội nghị các nước cộng hòa, tuyên bố thành lập 1922, Hiến pháp 1924). Phân tích ý nghĩa đối với Liên Xô (tạo sức mạnh tổng hợp, bảo vệ thành quả cách mạng, xây dựng CNXH). Phân tích ý nghĩa đối với thế giới (cổ vũ phong trào giải phóng dân tộc, khẳng định con đường XHCN)."
+        }
+      ]
+    },
+    "total_score": 10,
+    "grade": "11",
+    "tf_grading_method": "per_item"
+  },
+  "20260112133757": {
+    "id": "20260112133757",
+    "title": "test đề hỗn hợp",
+    "type": "mixed",
+    "duration": 50,
+    "created_by": "gv001",
+    "created_at": "2026-01-12 13:38:23",
+    "questions": {
+      "multiple_choice": [
+        {
+          "question": "Nguyên nhân sâu xa dẫn đến Chiến tranh thế giới thứ nhất là",
+          "options": [
+            "A. mâu thuẫn giữa các nước đế quốc về vấn đề thuộc địa",
+            "B. sự kiện Thái tử Áo–Hung bị ám sát",
+            "C. sự hình thành hai khối quân sự",
+            "D. chạy đua vũ trang"
+          ],
+          "answer": null
+        },
+        {
+          "question": "Hai khối quân sự đối lập trước Chiến tranh thế giới thứ nhất là",
+          "options": [
+            "A. Liên minh – Hiệp ước",
+            "B. Hiệp ước – Đồng minh",
+            "C. Liên minh – Đồng minh",
+            "D. Hiệp ước – Trung tâm"
+          ],
+          "answer": null
+        },
+        {
+          "question": "Cách mạng tháng Hai năm 1917 ở Nga đã",
+          "options": [
+            "A. lật đổ chế độ phong kiến Nga hoàng",
+            "B. đưa giai cấp công nhân lên nắm quyền",
+            "C. thành lập nhà nước Xô viết",
+            "D. xây dựng chủ nghĩa xã hội"
+          ],
+          "answer": null
+        },
+        {
+          "question": "Lãnh đạo Cách mạng tháng Mười Nga năm 1917 là",
+          "options": [
+            "A. Xtalin",
+            "B. Lê-nin",
+            "C. Mác",
+            "D. Ăng-ghen"
+          ],
+          "answer": null
+        },
+        {
+          "question": "Chính sách kinh tế mới (NEP) được thực hiện ở Nga từ năm",
+          "options": [
+            "A. 1917",
+            "B. 1918",
+            "C. 1920",
+            "D. 1921"
+          ],
+          "answer": null
+        },
+        {
+          "question": "Nội dung quan trọng nhất của NEP là",
+          "options": [
+            "A. quốc hữu hóa toàn bộ nền kinh tế",
+            "B. trưng thu lương thực của nông dân",
+            "C. thay trưng thu bằng thuế lương thực",
+            "D. xóa bỏ kinh tế tư nhân"
+          ],
+          "answer": null
+        },
+        {
+          "question": "Tính chất của Chiến tranh thế giới thứ nhất là",
+          "options": [
+            "A. chiến tranh chính nghĩa",
+            "B. chiến tranh giải phóng dân tộc",
+            "C. chiến tranh đế quốc phi nghĩa",
+            "D. chiến tranh cách mạng"
+          ],
+          "answer": null
+        },
+        {
+          "question": "Cuộc Duy tân Minh Trị diễn ra ở nước nào?",
+          "options": [
+            "A. Trung Quốc",
+            "B. Nhật Bản",
+            "C. Ấn Độ",
+            "D. Thái Lan"
+          ],
+          "answer": null
+        },
+        {
+          "question": "Lĩnh vực được coi là nền tảng của công cuộc Duy tân Minh Trị là",
+          "options": [
+            "A. quân sự",
+            "B. giáo dục",
+            "C. chính trị",
+            "D. kinh tế"
+          ],
+          "answer": null
+        },
+        {
+          "question": "Đảng Quốc đại đại diện cho giai cấp nào ở Ấn Độ?",
+          "options": [
+            "A. công nhân",
+            "B. nông dân",
+            "C. tư sản",
+            "D. địa chủ"
+          ],
+          "answer": null
+        },
+        {
+          "question": "Phong trào đấu tranh ở châu Phi đầu thế kỉ XX có đặc điểm",
+          "options": [
+            "A. phát triển mạnh mẽ, có tổ chức chặt chẽ",
+            "B. diễn ra muộn, thiếu sự lãnh đạo thống nhất",
+            "C. giành được thắng lợi hoàn toàn",
+            "D. gắn liền với chủ nghĩa xã hội"
+          ],
+          "answer": null
+        },
+        {
+          "question": "Quốc gia duy nhất ở Đông Nam Á không trở thành thuộc địa phương Tây là",
+          "options": [
+            "A. Việt Nam",
+            "B. In-đô-nê-xi-a",
+            "C. Phi-lip-pin",
+            "D. Xiêm"
+          ],
+          "answer": null
+        },
+        {
+          "question": "Cuộc cách mạng Tân Hợi (1911) diễn ra ở",
+          "options": [
+            "A. Nhật Bản",
+            "B. Trung Quốc",
+            "C. Triều Tiên",
+            "D. Việt Nam"
+          ],
+          "answer": null
+        },
+        {
+          "question": "Người lãnh đạo cách mạng Tân Hợi là",
+          "options": [
+            "A. Viên Thế Khải",
+            "B. Khang Hữu Vi",
+            "C. Tôn Trung Sơn",
+            "D. Mao Trạch Đông"
+          ],
+          "answer": null
+        },
+        {
+          "question": "Hạn chế lớn nhất của cách mạng Tân Hợi là",
+          "options": [
+            "A. không lật đổ phong kiến",
+            "B. không đánh đổ đế quốc",
+            "C. không thành lập chính phủ",
+            "D. không được nhân dân ủng hộ"
+          ],
+          "answer": null
+        },
+        {
+          "question": "Nguyên nhân khiến Nhật Bản không bị xâm lược là",
+          "options": [
+            "A. tài nguyên phong phú",
+            "B. quân sự mạnh sẵn có",
+            "C. tiến hành cải cách kịp thời",
+            "D. có sự giúp đỡ của phương Tây"
+          ],
+          "answer": null
+        },
+        {
+          "question": "Sau Chiến tranh thế giới thứ nhất, nước chịu thiệt hại nặng nề nhất là",
+          "options": [
+            "A. Anh",
+            "B. Pháp",
+            "C. Đức",
+            "D. Nga"
+          ],
+          "answer": null
+        },
+        {
+          "question": "Giai cấp giữ vai trò lãnh đạo trong Cách mạng tháng Mười Nga là",
+          "options": [
+            "A. nông dân",
+            "B. tư sản",
+            "C. công nhân",
+            "D. địa chủ"
+          ],
+          "answer": null
+        },
+        {
+          "question": "Mục tiêu chính của các nước đế quốc khi xâm lược thuộc địa là",
+          "options": [
+            "A. truyền bá văn hóa",
+            "B. khai hóa văn minh",
+            "C. chiếm đất sinh sống",
+            "D. bóc lột kinh tế"
+          ],
+          "answer": null
+        },
+        {
+          "question": "Đặc điểm nổi bật của phong trào giải phóng dân tộc ở châu Á là",
+          "options": [
+            "A. diễn ra muộn",
+            "B. chịu ảnh hưởng của phương Tây",
+            "C. phát triển sớm, đa dạng hình thức",
+            "D. hoàn toàn thất bại"
+          ],
+          "answer": null
+        }
+      ],
+      "true_false": [
+        {
+          "question": "Về Chiến tranh thế giới thứ nhất (1914-1918)",
+          "statements": [
+            "a. Chiến tranh kết thúc với sự thất bại hoàn toàn của khối Liên minh.",
+            "b. Mục đích chính của các nước tham chiến là chia lại thuộc địa và thị trường.",
+            "c. Hoa Kỳ tham gia chiến tranh ngay từ giai đoạn đầu, năm 1914.",
+            "d. Hậu quả của chiến tranh đã tạo điều kiện thuận lợi cho phong trào cách mạng ở nhiều nước."
+          ],
+          "answers": [
+            true,
+            true,
+            false,
+            true
+          ]
+        },
+        {
+          "question": "Về Chính sách kinh tế mới (NEP) của nước Nga Xô viết",
+          "statements": [
+            "a. NEP là chính sách kinh tế do V.I. Lê-nin đề xướng và lãnh đạo thực hiện.",
+            "b. Nội dung cốt lõi của NEP là bãi bỏ hoàn toàn chế độ tư hữu về ruộng đất.",
+            "c. NEP đã giúp khôi phục nền kinh tế, ổn định xã hội ở Nga sau Nội chiến.",
+            "d. Chính sách NEP tồn tại và được áp dụng liên tục cho đến khi Liên Xô tan rã."
+          ],
+          "answers": [
+            true,
+            false,
+            true,
+            false
+          ]
+        }
+      ],
+      "essay": [
+        {
+          "question": "Phân tích nguyên nhân, diễn biến chính và ý nghĩa lịch sử của Cách mạng tháng Mười Nga năm 1917.",
+          "grading_criteria": "Nêu được các nguyên nhân sâu xa và trực tiếp dẫn đến cách mạng (mâu thuẫn xã hội, tình hình kinh tế, Chiến tranh thế giới thứ nhất, vai trò của Đảng Bôn-sê-vích). Trình bày tóm tắt diễn biến chính của Cách mạng tháng Mười (khởi nghĩa vũ trang ở Pê-tơ-rô-grát, lật đổ Chính phủ lâm thời). Đánh giá ý nghĩa lịch sử của cách mạng (đối với nước Nga và thế giới). Bố cục rõ ràng, lập luận chặt chẽ, dẫn chứng phù hợp."
+        },
+        {
+          "question": "Trình bày những cải cách chủ yếu trong công cuộc Duy tân Minh Trị ở Nhật Bản và nhận xét về vai trò của nó đối với sự phát triển của Nhật Bản cuối thế kỷ XIX - đầu thế kỷ XX.",
+          "grading_criteria": "Nêu được bối cảnh lịch sử và nguyên nhân của công cuộc Duy tân Minh Trị. Trình bày các nội dung cải cách trên các lĩnh vực: chính trị, kinh tế, quân sự, giáo dục. Đánh giá vai trò, ý nghĩa của Duy tân Minh Trị trong việc đưa Nhật Bản thoát khỏi nguy cơ thuộc địa, phát triển thành cường quốc đế quốc. Bố cục rõ ràng, phân tích sâu sắc."
+        }
+      ]
+    },
+    "total_score": 10,
+    "grade": "10",
+    "tf_grading_method": "per_item"
+  }
+}

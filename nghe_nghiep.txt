@@ -1,0 +1,75 @@
+[Chủ đề]: Hiểu bản thân
+[Người dùng hỏi]: Em không biết mình phù hợp với nghề gì, phải làm sao ạ?
+[Bot trả lời]: Không sao đâu, ai cũng bắt đầu từ chỗ chưa rõ về bản thân. Em hãy thử viết ra các việc khiến em hứng thú nhất, các môn học em làm tốt, và hỏi bạn bè – thầy cô xem họ nhận xét gì về điểm mạnh của em. Ngoài ra, em có thể làm bài trắc nghiệm nghề nghiệp Holland để hiểu rõ nhóm tính cách của mình nhé.
+
+[Chủ đề]: Hiểu bản thân
+[Người dùng hỏi]: Làm thế nào để biết điểm mạnh của em là gì ạ?
+[Bot trả lời]: Em hãy chú ý đến những việc mình làm tốt hơn người khác và cảm thấy hứng thú khi làm. Ví dụ, nếu em thích giải bài toán khó, khả năng em có tư duy logic mạnh. Nếu em hay tham gia hoạt động nhóm và giao tiếp tốt, có thể em thuộc nhóm xã hội.
+
+[Chủ đề]: Cây nghề nghiệp
+[Người dùng hỏi]: Lý thuyết cây nghề nghiệp là gì vậy ạ?
+[Bot trả lời]: Lý thuyết cây nghề nghiệp xem nghề nghiệp như một cái cây. “Rễ cây” là sở thích, khả năng, cá tính và giá trị nghề nghiệp của em. Nếu em chọn nghề dựa vào “rễ” – tức là hiểu rõ bản thân – em sẽ có “trái ngọt” là thành công và hạnh phúc. Còn nếu chọn nghề chỉ vì tiền hay danh tiếng thì rất dễ bị chán nản sau này.
+
+[Chủ đề]: Cây nghề nghiệp
+[Người dùng hỏi]: Em nên chọn nghề theo sở thích hay theo thu nhập ạ?
+[Bot trả lời]: Tốt nhất là kết hợp cả hai, nhưng sở thích và khả năng nên là nền tảng. Khi em giỏi việc mình thích, thu nhập cũng sẽ tăng theo. Nếu chỉ chọn nghề vì tiền, em có thể thiếu động lực để cố gắng lâu dài.
+
+[Chủ đề]: Mật mã Holland (RIASEC)
+[Người dùng hỏi]: Mật mã Holland là gì ạ?
+[Bot trả lời]: Đây là một lý thuyết chia con người thành 6 nhóm tính cách nghề nghiệp: R (Kỹ thuật), I (Nghiên cứu), A (Nghệ thuật), S (Xã hội), E (Quản lý), C (Nghiệp vụ). Khi em làm bài trắc nghiệm Holland, 3 chữ có điểm cao nhất sẽ là mật mã nghề của em.
+
+[Chủ đề]: Mật mã Holland (RIASEC)
+[Người dùng hỏi]: Nếu em thuộc nhóm A (Nghệ thuật) thì nên làm nghề gì?
+[Bot trả lời]: Em thuộc nhóm Nghệ thuật thì nên theo nghề cần sáng tạo như: thiết kế đồ họa, nhiếp ảnh, diễn viên, nhạc sĩ, nhà văn, kiến trúc sư, hoặc marketing sáng tạo. Nghề phù hợp sẽ giúp em được thể hiện bản thân và cảm thấy hạnh phúc khi làm việc.
+
+[Chủ đề]: Lập kế hoạch nghề (7 bước)
+[Người dùng hỏi]: Em học lớp 11, giờ nên làm gì để định hướng nghề nghiệp sớm ạ?
+[Bot trả lời]: Rất tốt khi em nghĩ sớm! Em có thể làm theo 7 bước lập kế hoạch nghề: (1) Hiểu rõ bản thân; (2) Tìm hiểu thị trường lao động; (3) Xem điều kiện gia đình, xã hội; (4) Xác định mục tiêu nghề nghiệp; (5) Ra quyết định chọn nghề; (6) Thực hiện kế hoạch; (7) Đánh giá và điều chỉnh.
+
+[Chủ đề]: Lập kế hoạch nghề (7 bước)
+[Người dùng hỏi]: Em sợ mình chọn sai nghề thì sao ạ?
+[Bot trả lời]: Sai không sao, quan trọng là dám điều chỉnh. Khi em thực hiện 7 bước lập kế hoạch nghề, em luôn có giai đoạn “đánh giá và điều chỉnh”. Nếu thấy nghề chưa phù hợp, em hoàn toàn có thể chuyển hướng sớm để tìm nghề phù hợp hơn.
+
+[Chủ đề]: Lý thuyết hệ thống
+[Người dùng hỏi]: Em muốn học âm nhạc nhưng bố mẹ bắt học kinh tế, em nên làm sao?
+[Bot trả lời]: Theo lý thuyết hệ thống, lựa chọn nghề chịu ảnh hưởng từ nhiều yếu tố: gia đình, xã hội, bản thân. Em nên trò chuyện nhẹ nhàng với bố mẹ, trình bày rõ đam mê và kế hoạch học tập cụ thể. Em cũng có thể chọn cách dung hòa – học kinh tế, nhưng vẫn rèn kỹ năng âm nhạc như một hướng phụ để phát triển song song.
+
+[Chủ đề]: Lý thuyết hệ thống
+[Người dùng hỏi]: Gia đình em làm nghề nông, vậy có ảnh hưởng gì đến định hướng nghề của em không?
+[Bot trả lời]: Có chứ, môi trường gia đình ảnh hưởng nhiều đến nhận thức nghề nghiệp. Nhưng em vẫn có quyền tự khám phá và phát triển hướng riêng. Gia đình cho em nền tảng về giá trị lao động, còn nghề nghiệp tương lai nên dựa trên năng lực và sở thích của chính em.
+
+[Chủ đề]: Thị trường lao động
+[Người dùng hỏi]: Ngành nào đang có cơ hội việc làm cao nhất hiện nay ạ?
+[Bot trả lời]: Một số ngành có nhu cầu nhân lực cao gồm: công nghệ thông tin, trí tuệ nhân tạo, y tế – chăm sóc sức khỏe, năng lượng tái tạo, logistics, và giáo dục. Tuy nhiên, nghề “phù hợp với em” vẫn quan trọng hơn “nghề hot” nhé.
+
+[Chủ đề]: Thị trường lao động
+[Người dùng hỏi]: Em nghe nói nghề giáo bây giờ khó xin việc, có đúng không ạ?
+[Bot trả lời]: Thực tế, một số ngành giáo viên ở đô thị đang dư thừa, nhưng vùng nông thôn và miền núi lại rất cần. Nếu em thật sự yêu nghề dạy học, em vẫn có thể thành công bằng cách chọn chuyên môn phù hợp và không ngừng học hỏi để phát triển bản thân.
+
+[Chủ đề]: Kỹ năng chọn nghề
+[Người dùng hỏi]: Làm sao để biết nghề nào hợp với mình nhất?
+[Bot trả lời]: Em nên so sánh 3 yếu tố: (1) Hiểu bản thân, (2) Hiểu nghề, (3) Hiểu thị trường. Nghề phù hợp là nghề đáp ứng cả ba: em có năng lực, em yêu thích, và xã hội cần.
+
+[Chủ đề]: Kỹ năng chọn nghề
+[Người dùng hỏi]: Khi chọn trường đại học, em nên dựa vào tiêu chí nào?
+[Bot trả lời]: Hãy xem xét 4 yếu tố: (1) Ngành học có phù hợp với năng lực – sở thích không; (2) Trường có uy tín và môi trường học tập tốt không; (3) Cơ hội việc làm sau khi ra trường; (4) Vị trí địa lý, học phí và điều kiện gia đình.
+
+[Chủ đề]: Các lỗi khi chọn nghề
+[Người dùng hỏi]: Những sai lầm thường gặp khi chọn nghề là gì ạ?
+[Bot trả lời]: Ba sai lầm phổ biến nhất là: (1) Chọn nghề theo bạn bè; (2) Chọn nghề chỉ vì nghe nói “lương cao”; (3) Không tìm hiểu kỹ về nghề. Em hãy tránh ba lỗi này bằng cách tự tìm hiểu và hỏi ý kiến tư vấn từ người có kinh nghiệm.
+
+[Chủ đề]: Định hướng học tập
+[Người dùng hỏi]: Em học tốt khối D thì nên theo ngành nào ạ?
+[Bot trả lời]: Học khối D (Toán, Văn, Anh), em có thể theo: ngôn ngữ, marketing, truyền thông, sư phạm, quản trị, hoặc công nghệ thông tin. Tuy nhiên, hãy chọn ngành phù hợp với tính cách và đam mê của mình nhé.
+
+[Chủ đề]: Định hướng học tập
+[Người dùng hỏi]: Em muốn thi khối A1, sau này nên làm nghề gì?
+[Bot trả lời]: Khối A1 (Toán, Lý, Anh) phù hợp với các nghề như lập trình, kỹ thuật, logistics, tài chính – ngân hàng, hoặc kỹ sư công nghệ. Em nên chọn theo lĩnh vực mà em cảm thấy hứng thú và tự tin nhất.
+
+[Chủ đề]: Du học và hội nhập
+[Người dùng hỏi]: Em định đi du học, nên chọn ngành nào dễ xin việc ạ?
+[Bot trả lời]: Những ngành dễ xin việc quốc tế gồm: công nghệ thông tin, trí tuệ nhân tạo, logistics, kinh tế – tài chính, y học, và thiết kế sáng tạo. Tuy nhiên, em hãy chọn ngành mình yêu thích và có tiềm năng phát triển lâu dài.
+
+[Chủ đề]: Du học và hội nhập
+[Người dùng hỏi]: Em muốn đi du học Nhật, nên học gì để về Việt Nam có việc tốt ạ?
+[Bot trả lời]: Em có thể chọn ngành công nghệ, cơ điện tử, điều dưỡng, hoặc ngôn ngữ Nhật. Đây là những lĩnh vực Việt Nam đang cần nhân lực có chuyên môn và khả năng tiếng Nhật tốt.

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Đấu Trường Lịch Sử</title>
+    <style>
+        body {
+            background-color: #14213d;
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        #game-container {
+            max-width: 700px;
+            margin: auto;
+            background-color: #1f1f1f;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #000;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .question {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        .option {
+            display: block;
+            background-color: #fca311;
+            color: black;
+            padding: 12px;
+            margin: 10px auto;
+            width: 80%;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .option:hover {
+            background-color: #ffb347;
+        }
+        .score {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #ff4d6d;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+        #timer {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #fca311;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <h2>🧠 Đấu Trường Lịch Sử</h2>
+        <div id="timer">⏱ Thời gian: 20s</div>
+        <div id="question-box">
+            <p class="question">Đang tải câu hỏi...</p>
+        </div>
+        <div class="score" id="score-box">Điểm: 0</div>
+    </div>
+
+    <script>
+        let questions = [];
+        let currentIndex = 0;
+        let score = 0;
+        let countdown;
+        let timeLeft = 20;
+
+        async function loadQuestions() {
+            // Nếu dùng query string để chọn bài
+            const params = new URLSearchParams(window.location.search);
+            const bai = params.get("bai");
+
+            const url = bai ? `/get_questions?bai=${bai}` : `/get_questions`;
+            const res = await fetch(url);
+            questions = await res.json();
+            showQuestion();
+        }
+
+        function startTimer() {
+            timeLeft = 20;
+            document.getElementById("timer").textContent = `⏱ Thời gian: ${timeLeft}s`;
+            countdown = setInterval(() => {
+                timeLeft--;
+                document.getElementById("timer").textContent = `⏱ Thời gian: ${timeLeft}s`;
+                if (timeLeft <= 0) {
+                    clearInterval(countdown);
+                    currentIndex++;
+                    showQuestion();
+                }
+            }, 1000);
+        }
+
+        function showQuestion() {
+            if (currentIndex >= questions.length) {
+                fetch("/submit_score", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ score })
+                }).then(() => {
+                    document.getElementById("game-container").innerHTML = `
+                        <h3>🎉 Hoàn thành! Điểm của bạn: ${score}/${questions.length}</h3>
+                        <a href="/leaderboard" class="back-btn">📊 Xem bảng vinh danh</a>
+                        <a href="/enter_nickname" class="back-btn">🔁 Làm lại</a>
+                    `;
+                });
+                return;
+            }
+
+            clearInterval(countdown);
+            startTimer();
+
+            const q = questions[currentIndex];
+            const box = document.getElementById("question-box");
+            box.innerHTML = `<p class="question">${q.question}</p>`;
+
+            q.options.forEach(opt => {
+                const btn = document.createElement("div");
+                btn.className = "option";
+                btn.textContent = opt;
+                btn.onclick = () => {
+                    clearInterval(countdown);
+                    if (opt === q.answer) score++;
+                    currentIndex++;
+                    document.getElementById("score-box").textContent = `Điểm: ${score}`;
+                    showQuestion();
+                };
+                box.appendChild(btn);
+            });
+        }
+
+        loadQuestions();
+    </script>
+</body>
+</html>

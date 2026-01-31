@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài kiểm tra Stress - DASS-21</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f8f9fa;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .question p {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        label {
+            background: #ecf0f1;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        label:hover {
+            background: #dcdde1;
+        }
+
+        input[type="radio"] {
+            margin-right: 6px;
+        }
+
+        button, .back-btn {
+            display: block;
+            width: 100%;
+            background: #3498db;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        button:hover, .back-btn:hover {
+            background: #2980b9;
+        }
+
+        /* Responsive cho điện thoại */
+        @media (max-width: 600px) {
+            .options {
+                flex-direction: column;
+            }
+
+            label {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Bài kiểm tra Stress - DASS-21</h2>
+        <form method="POST">
+            {% for q in questions %}
+            <div class="question">
+                <p>{{ loop.index }}. {{ q }}</p>
+                <div class="options">
+                    <label><input type="radio" name="{{ loop.index }}" value="0" required> Không hề</label>
+                    <label><input type="radio" name="{{ loop.index }}" value="1"> Thỉnh thoảng</label>
+                    <label><input type="radio" name="{{ loop.index }}" value="2"> Thường xuyên</label>
+                    <label><input type="radio" name="{{ loop.index }}" value="3"> Rất thường xuyên</label>
+                </div>
+            </div>
+            {% endfor %}
+            <button type="submit">Xem kết quả</button>
+        </form>
+        <br>
+        <a href="/" class="back-btn">⬅ Quay về menu</a>
+    </div>
+</body>
+</html>

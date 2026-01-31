@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+{% block title %}Làm bài trắc nghiệm{% endblock %}
+{% block content %}
+<h2>📝 Làm bài trắc nghiệm</h2>
+
+<p id="progress" style="font-weight: bold; margin-bottom: 20px;"></p>
+
+<form method="POST" action="/submit/{{ de_id }}">
+
+  <!-- Câu hỏi trắc nghiệm nhiều lựa chọn -->
+  {% if questions.multiple_choice %}
+    {% for q in questions.multiple_choice %}
+      {% set q_index = loop.index0 %}
+      <div style="margin-bottom: 20px;">
+        <h3>Câu {{ loop.index }}: {{ q.question }}</h3>
+        {% for opt in q.options %}
+          <label>
+            <input type="radio" name="mc_{{ q_index }}" value="{{ opt }}">
+            {{ opt }}
+          </label><br>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>Không có câu hỏi trắc nghiệm nhiều lựa chọn.</p>
+  {% endif %}
+
+  <!-- Câu hỏi đúng/sai -->
+  {% if questions.true_false %}
+    {% for tf in questions.true_false %}
+      {% set i = loop.index0 %}
+      {% set base_index = i + questions.multiple_choice|length %}
+      <div style="margin-bottom: 20px;">
+        <h3>Câu {{ base_index + 1 }}: {{ tf.question }}</h3>
+        {% for s in tf.statements %}
+          {% set j = loop.index0 %}
+          <p><strong>Ý {{ j + 1 }}:</strong> {{ s }}</p>
+          <label>
+            <input type="radio" name="tf_{{ i }}_{{ j }}" value="true"> Đúng
+          </label>
+          <label>
+            <input type="radio" name="tf_{{ i }}_{{ j }}" value="false"> Sai
+          </label>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>Không có câu hỏi đúng/sai.</p>
+  {% endif %}
+
+  <button type="submit" onclick="return confirm('Bạn có chắc chắn muốn nộp bài không?')">Nộp bài</button>
+</form>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const radios = document.querySelectorAll("input[type=radio]");
+    const lastClicked = {};
+
+    function updateProgress() {
+      const totalGroups = new Set();
+      const answeredGroups = new Set();
+
+      radios.forEach(r => {
+        totalGroups.add(r.name);
+        if (r.checked) {
+          answeredGroups.add(r.name);
+        }
+      });
+
+      const total = totalGroups.size;
+      const answered = answeredGroups.size;
+      document.getElementById("progress").textContent = `Đã trả lời ${answered} / ${total} câu`;
+    }
+
+    radios.forEach(function (radio) {
+      const label = radio.closest("label");
+
+      const saved = localStorage.getItem(radio.name);
+      if (saved && radio.value === saved) {
+        radio.checked = true;
+        label.classList.add("selected-answer");
+        lastClicked[radio.name] = radio;
+      }
+
+      radio.addEventListener("click", function () {
+        if (lastClicked[radio.name] === radio) {
+          radio.checked = false;
+          localStorage.removeItem(radio.name);
+          label.classList.remove("selected-answer");
+          lastClicked[radio.name] = null;
+        } else {
+          lastClicked[radio.name] = radio;
+          localStorage.setItem(radio.name, radio.value);
+
+          document.querySelectorAll(`input[name="${radio.name}"]`).forEach(function (r) {
+            r.closest("label").classList.remove("selected-answer");
+          });
+
+          label.classList.add("selected-answer");
+        }
+
+        updateProgress();
+      });
+    });
+
+    updateProgress();
+  });
+</script>
+{% endblock %}

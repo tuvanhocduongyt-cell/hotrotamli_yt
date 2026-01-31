@@ -1,0 +1,226 @@
+<!-- templates/do_exam.html -->
+{% extends "layout.html" %}
+
+{% block title %}Lam bai thi{% endblock %}
+
+{% block content %}
+<h2>{{ exam.title }}</h2>
+
+<div style="background-color: #e0f2f1; padding: 15px; border-radius: 8px; margin-bottom: 30px;">
+  <p style="margin: 5px 0;"><strong>Thời gian:</strong> {{ exam.duration }} phút</p>
+  <p style="margin: 5px 0;"><strong>Tổng điểm:</strong> {{ exam.total_score }} điểm</p>
+  <p style="margin: 5px 0;"><strong>Lớp:</strong> {{ exam.grade }}</p>
+  <p style="margin: 5px 0;" id="timer" style="color: #d32f2f; font-weight: bold;"></p>
+</div>
+
+<form method="POST" enctype="multipart/form-data" id="examForm">
+  
+  <!-- ĐỀ TRẮC NGHIỆM -->
+  {% if exam.type == 'multiple_choice' %}
+  
+  <div style="margin-bottom: 40px;">
+    <h3 style="color: #00796b;">PHẦN TRẮC NGHIỆM (60%)</h3>
+    {% for question in exam.questions.multiple_choice %}
+    {% set question_index = loop.index0 %}
+    <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+      <p style="font-weight: 600; margin-bottom: 15px;">Cau {{ loop.index }}: {{ question.question }}</p>
+      {% for option in question.options %}
+      <label style="display: block; padding: 10px; margin-bottom: 8px; background-color: white; border-radius: 6px; cursor: pointer; border: 2px solid transparent; transition: all 0.3s;" class="radio-label" data-question="mc_{{ question_index }}">
+        <input type="radio" name="mc_{{ question_index }}" value="{{ option[0] }}" required style="margin-right: 10px;">
+        <span>{{ option }}</span>
+      </label>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+
+  <div style="margin-bottom: 40px;">
+    <h3 style="color: #00796b;">PHẦN ĐÚNG/SAI (40%)</h3>
+    <p style="color: #666; margin-bottom: 20px;">
+      Tiêu chí chấm: Sai 1 ý (-0.5d), Sai 2 ý (0.25d), Sai 3 ý (0.1d), Sai 4 ý (0d)
+    </p>
+    {% for tf_question in exam.questions.true_false %}
+    {% set outer_index = loop.index0 %}
+    <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+      <p style="font-weight: 600; margin-bottom: 15px;">Câu {{ loop.index + exam.questions.multiple_choice|length }}: {{ tf_question.question }}</p>
+      {% for statement in tf_question.statements %}
+      <div style="background-color: white; padding: 15px; border-radius: 6px; margin-bottom: 10px;">
+        <p style="margin-bottom: 10px; font-weight: 500;">{{ loop.index }}. {{ statement }}</p>
+        <label style="display: inline-block; margin-right: 20px; padding: 8px 15px; cursor: pointer; border: 2px solid transparent; border-radius: 6px; transition: all 0.3s;" class="tf-label" data-question="tf_{{ outer_index }}_{{ loop.index0 }}">
+          <input type="radio" name="tf_{{ outer_index }}_{{ loop.index0 }}" value="true" required style="margin-right: 5px;">
+          <span>Đúng</span>
+        </label>
+        <label style="display: inline-block; padding: 8px 15px; cursor: pointer; border: 2px solid transparent; border-radius: 6px; transition: all 0.3s;" class="tf-label" data-question="tf_{{ outer_index }}_{{ loop.index0 }}">
+          <input type="radio" name="tf_{{ outer_index }}_{{ loop.index0 }}" value="false" required style="margin-right: 5px;">
+          <span>Sai</span>
+        </label>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- ĐỀ HỖN HỢP -->
+  {% elif exam.type == 'mixed' %}
+  
+  <!-- Phần trắc nghiệm ABCD -->
+  {% if exam.questions.multiple_choice %}
+  <div style="margin-bottom: 40px;">
+    <h3 style="color: #00796b;">PHẦN TRẮC NGHIỆM ABCD (40%)</h3>
+    {% for question in exam.questions.multiple_choice %}
+    {% set question_index = loop.index0 %}
+    <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+      <p style="font-weight: 600; margin-bottom: 15px;">Câu {{ loop.index }}: {{ question.question }}</p>
+      {% for option in question.options %}
+      <label style="display: block; padding: 10px; margin-bottom: 8px; background-color: white; border-radius: 6px; cursor: pointer; border: 2px solid transparent; transition: all 0.3s;" class="radio-label" data-question="mc_{{ question_index }}">
+        <input type="radio" name="mc_{{ question_index }}" value="{{ option[0] }}" required style="margin-right: 10px;">
+        <span>{{ option }}</span>
+      </label>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- Phần đúng/sai -->
+  {% if exam.questions.true_false %}
+  <div style="margin-bottom: 40px;">
+    <h3 style="color: #00796b;">PHẦN ĐÚNG/SAI (30%)</h3>
+    <p style="color: #666; margin-bottom: 20px;">
+      {% if exam.tf_grading_method == 'deduction' %}
+        Tiêu chí chấm : Sai 1 ý (-0.5d), Sai 2 ý (-0.75d), Sai 3 ý (chỉ còn 0.1d)
+      {% else %}
+        Tiêu chí chấm : Mọi ý đúng +0.25d, moị ý sai +0d
+      {% endif %}
+    </p>
+    {% for tf_question in exam.questions.true_false %}
+    {% set outer_index = loop.index0 %}
+    {% set start_num = exam.questions.multiple_choice|length + loop.index %}
+    <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+      <p style="font-weight: 600; margin-bottom: 15px;">Câu {{ start_num }}: {{ tf_question.question }}</p>
+      {% for statement in tf_question.statements %}
+      <div style="background-color: white; padding: 15px; border-radius: 6px; margin-bottom: 10px;">
+        <p style="margin-bottom: 10px; font-weight: 500;">{{ loop.index }}. {{ statement }}</p>
+        <label style="display: inline-block; margin-right: 20px; padding: 8px 15px; cursor: pointer; border: 2px solid transparent; border-radius: 6px; transition: all 0.3s;" class="tf-label" data-question="tf_{{ outer_index }}_{{ loop.index0 }}">
+          <input type="radio" name="tf_{{ outer_index }}_{{ loop.index0 }}" value="true" required style="margin-right: 5px;">
+          <span>Đúng</span>
+        </label>
+        <label style="display: inline-block; padding: 8px 15px; cursor: pointer; border: 2px solid transparent; border-radius: 6px; transition: all 0.3s;" class="tf-label" data-question="tf_{{ outer_index }}_{{ loop.index0 }}">
+          <input type="radio" name="tf_{{ outer_index }}_{{ loop.index0 }}" value="false" required style="margin-right: 5px;">
+          <span>Sai</span>
+        </label>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- Phần tự luận -->
+  {% if exam.questions.essay %}
+  <div style="margin-bottom: 40px;">
+    <h3 style="color: #00796b;">PHẦN TỰ LUẬN (30%)</h3>
+    {% for essay_q in exam.questions.essay %}
+    {% set essay_index = loop.index0 %}
+    {% set start_num = exam.questions.multiple_choice|length + exam.questions.true_false|length + loop.index %}
+    <div style="background-color: #fff3e0; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #f57c00;">
+      <p style="font-weight: 600; margin-bottom: 15px;">Câu {{ start_num }}: {{ essay_q.question }}</p>
+      
+      <div style="margin-bottom: 20px;">
+        <label style="display: block; margin-bottom: 10px; font-weight: 600;">Cách 1: nhập bài làm trực tiếp</label>
+        <textarea name="essay_{{ essay_index }}" rows="10" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 15px;" placeholder="Nhap bai lam cua ban vao day..."></textarea>
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <label style="display: block; margin-bottom: 10px; font-weight: 600;">Cách 2: uploads hình ảnh bài làm</label>
+        <input type="file" name="essay_image_{{ essay_index }}" accept="image/*" style="width: 100%;">
+        <small style="color: #666;">Chỉ chấp nhận file ảnh (jpg, png, jpeg)</small>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- ĐỀ TỰ LUẬN -->
+  {% elif exam.type == 'essay' %}
+  
+  <div style="margin-bottom: 30px;">
+    <h3 style="color: #00796b;">CÂU HỎI TỰ LUẬN</h3>
+    <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+      <p style="font-weight: 600;">{{ exam.essay_question }}</p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <label style="display: block; margin-bottom: 10px; font-weight: 600;">Cách 1: nhập bài làm trực tiếp</label>
+      <textarea name="essay_answer" rows="15" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 15px;" placeholder="Nhap bai lam cua ban vao day..."></textarea>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <label style="display: block; margin-bottom: 10px; font-weight: 600;">Cách 2: uploads hình ảnh bài làm</label>
+      <input type="file" name="essay_image" accept="image/*" style="width: 100%;">
+      <small style="color: #666;">Chỉ chấp nhận file ảnh (jpg, png, jpeg)</small>
+    </div>
+  </div>
+
+  {% endif %}
+
+  <button type="submit" style="width: 100%; padding: 15px; font-size: 16px; background: linear-gradient(135deg, #00796b 0%, #009688 100%); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">Nộp bài</button>
+</form>
+
+<p style="text-align: center; margin-top: 20px;">
+  <a href="{{ url_for('dashboard_student') }}" style="color: #00796b; text-decoration: none; font-weight: 600;">← Quay lại</a>
+</p>
+
+<script>
+var timeLeft = {{ exam.duration }} * 60;
+var timerElement = document.getElementById('timer');
+
+function updateTimer() {
+  var minutes = Math.floor(timeLeft / 60);
+  var seconds = timeLeft % 60;
+  timerElement.textContent = 'Thoi gian con lai: ' + minutes + ' phut ' + seconds + ' giay';
+  
+  if (timeLeft <= 0) {
+    alert('Het thoi gian! Bai thi se tu dong nop.');
+    document.getElementById('examForm').submit();
+  }
+  
+  timeLeft--;
+}
+
+setInterval(updateTimer, 1000);
+updateTimer();
+
+document.addEventListener('DOMContentLoaded', function() {
+  var allRadios = document.querySelectorAll('input[type="radio"]');
+  
+  allRadios.forEach(function(radio) {
+    radio.addEventListener('change', function() {
+      var questionName = this.name;
+      var allLabelsForQuestion = document.querySelectorAll('label[data-question="' + questionName + '"]');
+      
+      allLabelsForQuestion.forEach(function(lbl) {
+        lbl.style.backgroundColor = 'white';
+        lbl.style.border = '2px solid transparent';
+        var span = lbl.querySelector('span');
+        if (span) {
+          span.style.color = '';
+          span.style.fontWeight = '';
+        }
+      });
+      
+      var parentLabel = this.closest('label');
+      if (parentLabel) {
+        parentLabel.style.backgroundColor = '#e8eaf6';
+        parentLabel.style.border = '2px solid #667eea';
+        var span = parentLabel.querySelector('span');
+        if (span) {
+          span.style.color = '#667eea';
+          span.style.fontWeight = 'bold';
+        }
+      }
+    });
+  });
+});
+</script>
+{% endblock %}

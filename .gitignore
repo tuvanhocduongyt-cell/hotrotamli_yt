@@ -1,0 +1,22 @@
+# Environment variables
+.env
+.env.local
+
+# Upload folder
+uploads/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

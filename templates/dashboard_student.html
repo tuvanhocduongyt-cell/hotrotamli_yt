@@ -1,0 +1,398 @@
+<!-- templates/dashboard_student.html -->
+{% extends "layout.html" %}
+
+{% block title %}Trang hoc sinh{% endblock %}
+
+{% block content %}
+<style>
+  .grade-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e0f2f1;
+    padding-bottom: 10px;
+  }
+
+  .grade-tab {
+    padding: 10px 20px;
+    border: 2px solid #00796b;
+    background: white;
+    color: #00796b;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    font-size: 14px;
+  }
+
+  .grade-tab:hover {
+    background: #e0f2f1;
+  }
+
+  .grade-tab.active {
+    background: #00796b;
+    color: white;
+  }
+
+  .grade-content {
+    animation: fadeIn 0.3s;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+  }
+
+  .material-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+  }
+
+  .material-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+  }
+
+  .material-icon {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .material-card h5 {
+    color: #00796b;
+    font-size: 16px;
+    margin-bottom: 10px;
+    min-height: 40px;
+  }
+
+  .material-card p {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 10px;
+    min-height: 60px;
+  }
+
+  .material-card small {
+    color: #999;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .material-actions {
+    text-align: center;
+  }
+
+  .btn-material {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #00796b 0%, #009688 100%);
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(0,121,107,0.3);
+  }
+
+  .btn-material:hover {
+    background: linear-gradient(135deg, #005a4d 0%, #00796b 100%);
+    box-shadow: 0 4px 12px rgba(0,121,107,0.5);
+    transform: translateY(-2px);
+  }
+
+  .btn-material.video {
+    background: linear-gradient(135deg, #d32f2f 0%, #f44336 100%);
+  }
+
+  .btn-material.video:hover {
+    background: linear-gradient(135deg, #b71c1c 0%, #d32f2f 100%);
+  }
+
+  .no-materials {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+    font-size: 14px;
+    background: #f5f5f5;
+    border-radius: 8px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .section-header h3 {
+    color: #00796b;
+    margin: 0;
+  }
+
+  .material-type-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .material-type-badge.file {
+    background: #e3f2fd;
+    color: #1976d2;
+  }
+
+  .material-type-badge.video {
+    background: #fce4ec;
+    color: #c2185b;
+  }
+
+  /* THÊM STYLE CHO TRẠNG THÁI ĐIỂM */
+  .score-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .score-ai {
+    background: #e3f2fd;
+    color: #1976d2;
+  }
+
+  .score-teacher {
+    background: #e8f5e9;
+    color: #388e3c;
+  }
+
+  .score-pending {
+    background: #fff3e0;
+    color: #f57c00;
+  }
+
+  .feedback-preview {
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 5px;
+    font-size: 13px;
+    color: #666;
+    border-left: 3px solid #2196f3;
+  }
+</style>
+
+<h2>TRANG HỌC SINH</h2>
+
+<p style="text-align: right; margin-bottom: 20px;">
+  Xin chào, <strong>{{ session['exam_username'] }}</strong> | 
+  <a href="{{ url_for('logout_exam') }}">Đăng xuất</a>
+</p>
+
+<div style="margin-bottom: 30px;">
+  <h3 style="color: #00796b;">Đề thi hiện có</h3>
+  {% if exams %}
+  <table style="width: 100%; border-collapse: collapse;">
+    <thead>
+      <tr style="background-color: #e0f2f1;">
+        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Tiêu đề</th>
+        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Loại</th>
+        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Thời gian</th>
+        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Thao tác</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for exam_id, exam in exams.items() %}
+      <tr>
+        <td style="padding: 12px; border: 1px solid #ddd;">{{ exam.title }}</td>
+        <td style="padding: 12px; border: 1px solid #ddd;">
+          {% if exam.type == 'multiple_choice' %}Trắc nghiệm
+          {% elif exam.type == 'mixed' %}Hỗn hợp
+          {% else %}Tự luận{% endif %}
+        </td>
+        <td style="padding: 12px; border: 1px solid #ddd;">{{ exam.duration }} phút</td>
+        <td style="padding: 12px; border: 1px solid #ddd;">
+          <a href="{{ url_for('do_exam', exam_id=exam_id) }}" style="display: inline-block; padding: 6px 12px; background-color: #009688; color: white; border-radius: 6px; text-decoration: none; font-size: 14px;">Làm bài</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p style="color: #666;">Chưa có đề thi nào.</p>
+  {% endif %}
+</div>
+
+<!-- CẬP NHẬT PHẦN KẾT QUẢ - Hiển thị feedback AI -->
+<div style="margin-bottom: 30px;">
+  <h3 style="color: #00796b;"> KẾT QUẢ CỦA BẠN</h3>
+  <p style="color: #666; font-size: 14px; margin-bottom: 15px;">
+    Bài tự luận được AI chấm sau khi nộp
+  </p>
+  
+  {% if my_submissions %}
+  <table style="width: 100%; border-collapse: collapse;">
+    <thead>
+      <tr style="background-color: #e0f2f1;">
+        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Đề thi</th>
+        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Loại</th>
+        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Ngày nộp</th>
+        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Điểm</th>
+        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Trạng thái</th>
+        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Chi tiết</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for submission in my_submissions %}
+      <tr>
+        <td style="padding: 12px; border: 1px solid #ddd;">
+          {% if exams.get(submission.exam_id) %}
+            <strong>{{ exams[submission.exam_id].title }}</strong>
+          {% else %}
+            <span style="color: #999;">Không tìm thấy đề</span>
+          {% endif %}
+        </td>
+        <td style="padding: 12px; border: 1px solid #ddd;">
+          {% if submission.type == 'essay' %}
+            <span style="color: #f57c00;">📝 Tự luận</span>
+          {% elif submission.type == 'mixed' %}
+            <span style="color: #9c27b0;">🔀 Hỗn hợp</span>
+          {% else %}
+            <span style="color: #2196f3;">✓ Trắc nghiệm</span>
+          {% endif %}
+        </td>
+        <td style="padding: 12px; border: 1px solid #ddd;">{{ submission.submitted_at }}</td>
+        <td style="padding: 12px; border: 1px solid #ddd;">
+          {% if submission.score is not none %}
+            <strong style="color: #00796b; font-size: 18px;">{{ submission.score }}/10</strong>
+          {% else %}
+            <span class="score-badge score-pending">Đang chờ</span>
+          {% endif %}
+        </td>
+        <td style="padding: 12px; border: 1px solid #ddd;">
+          {% if submission.teacher_adjusted %}
+            <span class="score-badge score-teacher">
+              ✓ GV đã điều chỉnh
+            </span>
+          {% elif submission.ai_graded %}
+            <span class="score-badge score-ai">
+              🤖 AI đã chấm
+            </span>
+          {% else %}
+            <span class="score-badge score-pending">
+              ⏳ Chưa chấm
+            </span>
+          {% endif %}
+          
+          <!-- Hiển thị feedback AI ngắn gọn nếu có -->
+          {% if submission.ai_feedback and submission.type == 'essay' %}
+            <div class="feedback-preview">
+              💡 <strong>Diểm mạnh:</strong> {{ submission.ai_feedback.strengths[:80] }}{% if submission.ai_feedback.strengths|length > 80 %}...{% endif %}
+            </div>
+          {% endif %}
+        </td>
+        <td style="padding: 12px; border: 1px solid #ddd;">
+          {% if submission.score is not none %}
+            <a href="{{ url_for('view_submission', submission_index=loop.index0) }}" 
+               style="display: inline-block; padding: 8px 16px; background-color: #28a745; color: white; border-radius: 20px; text-decoration: none; font-size: 14px; font-weight: 600;">
+              📋Xem chi tiết
+            </a>
+          {% else %}
+            <span style="color: #ff9800; font-size: 14px;">Đang chờ chấm...</span>
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p style="color: #666;">Chưa làm bài thi nào.</p>
+  {% endif %}
+</div>
+
+<div>
+  <div class="section-header">
+    <h3>📚 TÀI LIỆU HỌC TẬP</h3>
+  </div>
+  
+  <div class="grade-tabs">
+    <button onclick="showGrade('10')" class="grade-tab active">📘 Lớp 10</button>
+    <button onclick="showGrade('11')" class="grade-tab">📗 Lớp 11</button>
+    <button onclick="showGrade('12')" class="grade-tab">📕 Lớp 12</button>
+  </div>
+  
+  {% for grade in ['10', '11', '12'] %}
+  <div id="grade-{{ grade }}" class="grade-content" style="{% if grade != '10' %}display: none;{% endif %}">
+    {% if materials_by_grade[grade] %}
+      <div class="materials-grid">
+        {% for material in materials_by_grade[grade] %}
+        <div class="material-card">
+          <div class="material-icon">
+            {% if material.type == 'file' %}
+              📄
+            {% else %}
+              🎥
+            {% endif %}
+          </div>
+          
+          <span class="material-type-badge {% if material.type == 'file' %}file{% else %}video{% endif %}">
+            {% if material.type == 'file' %}Tài liệu{% else %}Video{% endif %}
+          </span>
+          
+          <h5>{{ material.title }}</h5>
+          <p>{{ material.description or 'không có mô tả' }}</p>
+          <small>👤 {{ material.uploaded_by }} • 📅 {{ material.uploaded_at }}</small>
+          
+          <div class="material-actions">
+            {% if material.type == 'file' %}
+              <a href="{{ url_for('download_material', filename=material.filename) }}" 
+                 class="btn-material">
+                📥 Tải xuống
+              </a>
+            {% else %}
+              <a href="{{ material.video_link }}" 
+                 target="_blank" 
+                 class="btn-material video">
+                ▶️ Xem video
+              </a>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="no-materials">
+        <p style="font-size: 48px; margin-bottom: 10px;">📭</p>
+        <p>Chưa có tài liệu nào cho lớp {{ grade }}</p>
+      </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+
+<script>
+function showGrade(grade) {
+    document.querySelectorAll('.grade-content').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('.grade-tab').forEach(el => el.classList.remove('active'));
+    document.getElementById('grade-' + grade).style.display = 'block';
+    event.target.classList.add('active');
+}
+</script>
+{% endblock %}

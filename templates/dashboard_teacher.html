@@ -1,0 +1,530 @@
+<!-- templates/dashboard_teacher.html -->
+{% extends "layout.html" %}
+
+{% block title %}Trang giáo viên{% endblock %}
+
+{% block content %}
+<style>
+  .grade-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e0f2f1;
+    padding-bottom: 10px;
+  }
+
+  .grade-tab {
+    padding: 10px 20px;
+    border: 2px solid #00796b;
+    background: white;
+    color: #00796b;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    font-size: 14px;
+  }
+
+  .grade-tab:hover {
+    background: #e0f2f1;
+  }
+
+  .grade-tab.active {
+    background: #00796b;
+    color: white;
+  }
+
+  .grade-content {
+    animation: fadeIn 0.3s;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .material-type-selector {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .type-option {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s;
+  }
+
+  .type-option:hover {
+    border-color: #00796b;
+    background: #e0f2f1;
+  }
+
+  .type-option.active {
+    border-color: #00796b;
+    background: #00796b;
+    color: white;
+  }
+
+  .upload-section {
+    display: none;
+  }
+
+  .upload-section.active {
+    display: block;
+  }
+
+  .materials-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+
+  .materials-table th,
+  .materials-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+
+  .materials-table thead tr {
+    background-color: #e0f2f1;
+  }
+
+  .btn-action {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    margin: 2px;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .btn-download {
+    background: #4CAF50;
+    color: white;
+  }
+
+  .btn-view {
+    background: #2196F3;
+    color: white;
+  }
+
+  .btn-delete {
+    background: #f44336;
+    color: white;
+  }
+
+  .no-materials {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+    font-size: 14px;
+    background: #f5f5f5;
+    border-radius: 8px;
+  }
+
+  .material-icon {
+    font-size: 20px;
+  }
+
+  /* THÊM STYLE CHO TRẠNG THÁI CHẤM ĐIỂM */
+  .status-badge {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+  }
+
+  .status-ai-graded {
+    background: #e3f2fd;
+    color: #1976d2;
+  }
+
+  .status-teacher-adjusted {
+    background: #e8f5e9;
+    color: #388e3c;
+  }
+
+  .status-pending {
+    background: #fff3e0;
+    color: #f57c00;
+  }
+</style>
+
+<h2>TRANG GIÁO VIÊN</h2>
+
+<p style="text-align: right; margin-bottom: 20px;">
+  Xin chào, <strong>{{ session['exam_username'] }}</strong> | 
+  <a href="{{ url_for('logout_exam') }}">Đăng xuất</a>
+</p>
+
+<div style="margin-bottom: 30px;">
+  <h3 style="color: #00796b;">QUẢN LÝ</h3>
+  <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+    <a href="{{ url_for('create_exam') }}" style="display: inline-block; padding: 12px 24px; background-color: #009688; color: white; border-radius: 8px; text-decoration: none;">Tạo đề thi mới</a>
+    <a href="{{ url_for('exam_statistics') }}" style="display: inline-block; padding: 12px 24px; background-color: #0288d1; color: white; border-radius: 8px; text-decoration: none;">Thống kê học sinh</a>
+    <button onclick="document.getElementById('uploadMaterialForm').style.display='block'" style="padding: 12px 24px; background-color: #f57c00;">Đăng tài liệu</button>
+  </div>
+</div>
+
+<!-- Form Upload Tài Liệu -->
+<div id="uploadMaterialForm" style="display: none; background: #f5f5f5; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+  <h4 style="margin-top: 0;">📚 Đăng tài liệu bài giảng</h4>
+  <form method="POST" action="{{ url_for('upload_material') }}" enctype="multipart/form-data">
+    
+    <div style="margin-bottom: 15px;">
+      <label style="display: block; margin-bottom: 5px; font-weight: 600;">Tiêu đề:</label>
+      <input type="text" name="title" required style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 6px;">
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+      <label style="display: block; margin-bottom: 5px; font-weight: 600;">Mô tả:</label>
+      <textarea name="description" rows="3" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 6px;"></textarea>
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+      <label style="display: block; margin-bottom: 5px; font-weight: 600;">Chọn lớp:</label>
+      <select name="grade" required style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 6px;">
+        <option value="">-- Chọn lớp --</option>
+        <option value="10">📘 Lớp 10</option>
+        <option value="11">📗 Lớp 11</option>
+        <option value="12">📕 Lớp 12</option>
+      </select>
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+      <label style="display: block; margin-bottom: 10px; font-weight: 600;">Loại tài liệu:</label>
+      <div class="material-type-selector">
+        <label class="type-option active" onclick="selectMaterialType('file', this)">
+          <input type="radio" name="material_type" value="file" checked>
+          <div style="font-size: 32px; margin-bottom: 8px;">📄</div>
+          <div style="font-weight: 600;">File tài liệu</div>
+          <small>PDF, Word, PowerPoint</small>
+        </label>
+        
+        <label class="type-option" onclick="selectMaterialType('video', this)">
+          <input type="radio" name="material_type" value="video">
+          <div style="font-size: 32px; margin-bottom: 8px;">🎥</div>
+          <div style="font-weight: 600;">Video bài giảng</div>
+          <small>Google Drive link</small>
+        </label>
+      </div>
+    </div>
+    
+    <!-- Upload File Section -->
+    <div id="file-upload" class="upload-section active">
+      <div style="margin-bottom: 15px;">
+        <label style="display: block; margin-bottom: 5px; font-weight: 600;">Chọn file:</label>
+        <input type="file" name="material_file" accept=".pdf,.doc,.docx,.ppt,.pptx,.txt" style="width: 100%;">
+        <small style="color: #666;">Hỗ trợ: PDF, Word, PowerPoint</small>
+      </div>
+    </div>
+    
+    <!-- Video Link Section -->
+    <div id="video-upload" class="upload-section">
+      <div style="margin-bottom: 15px;">
+        <label style="display: block; margin-bottom: 5px; font-weight: 600;">Link Google Drive:</label>
+        <input type="text" name="video_link" placeholder="https://drive.google.com/file/d/..." style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 6px;">
+        <small style="color: #666;">Paste link chia sẻ từ Google Drive (Lưu ý: Phải bật chế độ "Anyone with the link can view")</small>
+      </div>
+    </div>
+    
+    <button type="submit" style="background-color: #009688; padding: 10px 24px; color: white; border: none; border-radius: 6px; cursor: pointer;">Tải lên</button>
+    <button type="button" onclick="document.getElementById('uploadMaterialForm').style.display='none'" style="background-color: #757575; padding: 10px 24px; color: white; border: none; border-radius: 6px; cursor: pointer; margin-left: 10px;">Hủy</button>
+  </form>
+</div>
+
+<div style="margin-bottom: 30px;">
+  <h3 style="color: #00796b;">DANH SÁCH ĐỀ THI</h3>
+  {% if exams %}
+  <table style="width: 100%; border-collapse: collapse;">
+    <thead>
+      <tr style="background-color: #e0f2f1;">
+        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Tiêu đề</th>
+        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Loại</th>
+        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Thời gian</th>
+        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Ngày tạo</th>
+        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Thao tác</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for exam_id, exam in exams.items() %}
+      <tr>
+        <td style="padding: 12px; border: 1px solid #ddd;">{{ exam.title }}</td>
+        <td style="padding: 12px; border: 1px solid #ddd;">
+          {% if exam.type == 'multiple_choice' %}Trắc nghiệm
+          {% elif exam.type == 'mixed' %}Hỗn hợp
+          {% else %}Tự luận{% endif %}
+        </td>
+        <td style="padding: 12px; border: 1px solid #ddd;">{{ exam.duration }} phút</td>
+        <td style="padding: 12px; border: 1px solid #ddd;">{{ exam.created_at }}</td>
+        <td style="padding: 12px; border: 1px solid #ddd;">
+          <button onclick="viewExam('{{ exam_id }}')" style="padding: 6px 12px; font-size: 14px; background-color: #0288d1;">Xem đề</button>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p style="color: #666;">Chưa có đề thi nào.</p>
+  {% endif %}
+</div>
+
+<div id="examDetailModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1000; overflow-y: auto;">
+  <div style="background: white; max-width: 800px; margin: 50px auto; padding: 30px; border-radius: 12px; position: relative;">
+    <button onclick="closeExamDetail()" style="position: absolute; top: 15px; right: 15px; background: #f44336; padding: 8px 16px;">Đóng</button>
+    <div id="examDetailContent"></div>
+  </div>
+</div>
+
+<!-- CẬP NHẬT: DANH SÁCH BÀI NỘP - Hiển thị tất cả bài có tự luận -->
+<div style="margin-bottom: 30px;">
+  <h3 style="color: #00796b;">🤖 BÀI NỘP ĐÃ ĐƯỢC AI CHẤM</h3>
+  <p style="color: #666; font-size: 14px; margin-bottom: 15px;">
+    📌 AI đã tự động chấm tất cả bài tự luận. Bạn có thể xem và điều chỉnh điểm nếu cần.
+  </p>
+  
+  {% set ai_graded_submissions = submissions|selectattr('ai_graded', 'equalto', True)|list %}
+  
+  {% if ai_graded_submissions %}
+  <table style="width: 100%; border-collapse: collapse;">
+    <thead>
+      <tr style="background-color: #e0f2f1;">
+        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Học sinh</th>
+        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Đề thi</th>
+        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Loại</th>
+        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Điểm AI</th>
+        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Trạng thái</th>
+        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Ngày nộp</th>
+        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Thao tác</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for submission in ai_graded_submissions %}
+      <tr>
+        <td style="padding: 12px; border: 1px solid #ddd;">
+          <strong>{{ submission.student }}</strong>
+        </td>
+        <td style="padding: 12px; border: 1px solid #ddd;">
+          {{ exams[submission.exam_id].title }}
+        </td>
+        <td style="padding: 12px; border: 1px solid #ddd;">
+          {% if submission.type == 'essay' %}
+            <span style="color: #f57c00;">📝 Tự luận</span>
+          {% elif submission.type == 'mixed' %}
+            <span style="color: #9c27b0;">🔀 Hỗn hợp</span>
+          {% else %}
+            <span style="color: #2196f3;">✓ Trắc nghiệm</span>
+          {% endif %}
+        </td>
+        <td style="padding: 12px; border: 1px solid #ddd;">
+          <strong style="color: #1976d2; font-size: 16px;">
+            {{ submission.score }} điểm
+          </strong>
+        </td>
+        <td style="padding: 12px; border: 1px solid #ddd;">
+          {% if submission.teacher_adjusted %}
+            <span class="status-badge status-teacher-adjusted">
+              ✓ GV đã điều chỉnh
+            </span>
+          {% else %}
+            <span class="status-badge status-ai-graded">
+              🤖 AI đã chấm
+            </span>
+          {% endif %}
+        </td>
+        <td style="padding: 12px; border: 1px solid #ddd;">
+          {{ submission.submitted_at }}
+        </td>
+        <td style="padding: 12px; border: 1px solid #ddd;">
+          <a href="{{ url_for('view_submission', submission_index=loop.index0) }}" 
+             style="padding: 6px 12px; font-size: 14px; background-color: #0288d1; color: white; text-decoration: none; border-radius: 4px; display: inline-block;">
+            {% if submission.teacher_adjusted %}
+              Xem chi tiết
+            {% else %}
+              Xem & Điều chỉnh
+            {% endif %}
+          </a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p style="color: #666;">Chưa có bài nộp nào.</p>
+  {% endif %}
+</div>
+
+<!-- TÀI LIỆU ĐÃ ĐĂNG - PHÂN LOẠI THEO LỚP -->
+<div>
+  <h3 style="color: #00796b;">📚 TÀI LIỆU ĐÃ ĐĂNG</h3>
+  
+  <div class="grade-tabs">
+    <button onclick="showGradeMaterials('10')" class="grade-tab active">📘 Lớp 10</button>
+    <button onclick="showGradeMaterials('11')" class="grade-tab">📗 Lớp 11</button>
+    <button onclick="showGradeMaterials('12')" class="grade-tab">📕 Lớp 12</button>
+  </div>
+  
+  {% for grade in ['10', '11', '12'] %}
+  <div id="materials-grade-{{ grade }}" class="grade-content" style="{% if grade != '10' %}display: none;{% endif %}">
+    {% if materials_by_grade[grade] %}
+      <table class="materials-table">
+        <thead>
+          <tr>
+            <th style="width: 5%;">Loại</th>
+            <th style="width: 25%;">Tiêu đề</th>
+            <th style="width: 30%;">Mô tả</th>
+            <th style="width: 15%;">Người đăng</th>
+            <th style="width: 15%;">Ngày đăng</th>
+            <th style="width: 10%;">Thao tác</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for material in materials_by_grade[grade] %}
+          <tr>
+            <td style="text-align: center;">
+              <span class="material-icon">
+                {% if material.type == 'file' %}📄{% else %}🎥{% endif %}
+              </span>
+            </td>
+            <td><strong>{{ material.title }}</strong></td>
+            <td>{{ material.description or 'Không có mô tả' }}</td>
+            <td>{{ material.uploaded_by }}</td>
+            <td>{{ material.uploaded_at }}</td>
+            <td>
+              {% if material.type == 'file' %}
+                <a href="{{ url_for('download_material', filename=material.filename) }}" class="btn-action btn-download">Tải xuống</a>
+              {% else %}
+                <a href="{{ material.video_link }}" target="_blank" class="btn-action btn-view">Xem</a>
+              {% endif %}
+              <form action="{{ url_for('delete_material', material_id=material.id) }}" method="POST" style="display: inline;">
+                <button type="submit" class="btn-action btn-delete" onclick="return confirm('Bạn chắc chắn muốn xóa tài liệu này?')">Xóa</button>
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <div class="no-materials">
+        <p style="font-size: 48px; margin-bottom: 10px;">📭</p>
+        <p>Chưa có tài liệu nào cho lớp {{ grade }}</p>
+      </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+
+<script>
+var examsData = {{ exams|tojson }};
+
+function selectMaterialType(type, element) {
+  document.querySelectorAll('.type-option').forEach(el => el.classList.remove('active'));
+  element.classList.add('active');
+  
+  if (type === 'file') {
+    document.getElementById('file-upload').classList.add('active');
+    document.getElementById('video-upload').classList.remove('active');
+    document.querySelector('input[name="material_file"]').required = true;
+    document.querySelector('input[name="video_link"]').required = false;
+  } else {
+    document.getElementById('file-upload').classList.remove('active');
+    document.getElementById('video-upload').classList.add('active');
+    document.querySelector('input[name="material_file"]').required = false;
+    document.querySelector('input[name="video_link"]').required = true;
+  }
+}
+
+function showGradeMaterials(grade) {
+  document.querySelectorAll('.grade-content').forEach(el => el.style.display = 'none');
+  document.querySelectorAll('.grade-tab').forEach(el => el.classList.remove('active'));
+  document.getElementById('materials-grade-' + grade).style.display = 'block';
+  event.target.classList.add('active');
+}
+
+function viewExam(examId) {
+  var exam = examsData[examId];
+  var content = '<h2 style="color: #00796b;">' + exam.title + '</h2>';
+  content += '<p><strong>Loại:</strong> ';
+  if (exam.type === 'multiple_choice') content += 'Trắc nghiệm';
+  else if (exam.type === 'mixed') content += 'Hỗn hợp';
+  else content += 'Tự luận';
+  content += '</p>';
+  content += '<p><strong>Thời gian:</strong> ' + exam.duration + ' phút</p>';
+  content += '<p><strong>Tổng điểm:</strong> ' + exam.total_score + ' điểm</p>';
+  
+  // Hiển thị tiêu chí chấm tổng thể (nếu có)
+  if (exam.general_grading_criteria) {
+    content += '<div style="background: #fff3e0; padding: 15px; margin: 15px 0; border-radius: 8px; border-left: 4px solid #f57c00;">';
+    content += '<h4 style="margin-top: 0; color: #f57c00;">📋 Tiêu chí chấm tổng thể</h4>';
+    content += '<pre style="white-space: pre-wrap; font-family: inherit;">' + exam.general_grading_criteria + '</pre>';
+    content += '</div>';
+  }
+  
+  content += '<hr style="margin: 20px 0;">';
+  
+  if (exam.type === 'multiple_choice' || exam.type === 'mixed') {
+    if (exam.questions.multiple_choice && exam.questions.multiple_choice.length > 0) {
+      content += '<h3>PHẦN TRẮC NGHIỆM</h3>';
+      exam.questions.multiple_choice.forEach(function(q, i) {
+        content += '<div style="background: #f5f5f5; padding: 15px; margin-bottom: 15px; border-radius: 8px;">';
+        content += '<p><strong>Câu ' + (i+1) + ':</strong> ' + q.question + '</p>';
+        q.options.forEach(function(opt) {
+          var isCorrect = opt[0] === q.answer;
+          content += '<p style="margin-left: 20px; ' + (isCorrect ? 'color: green; font-weight: bold;' : '') + '">' + opt + (isCorrect ? ' (Đáp án đúng)' : '') + '</p>';
+        });
+        content += '</div>';
+      });
+    }
+    
+    if (exam.questions.true_false && exam.questions.true_false.length > 0) {
+      content += '<h3>PHẦN ĐÚNG/SAI</h3>';
+      exam.questions.true_false.forEach(function(tf, i) {
+        content += '<div style="background: #f5f5f5; padding: 15px; margin-bottom: 15px; border-radius: 8px;">';
+        var qNum = exam.questions.multiple_choice ? i + exam.questions.multiple_choice.length + 1 : i + 1;
+        content += '<p><strong>Câu ' + qNum + ':</strong> ' + tf.question + '</p>';
+        tf.statements.forEach(function(stmt, j) {
+          var isTrue = tf.answers[j];
+          content += '<p style="margin-left: 20px;"><strong>' + (j+1) + '.</strong> ' + stmt + ' - <span style="color: ' + (isTrue ? 'green' : 'red') + '; font-weight: bold;">' + (isTrue ? 'ĐÚNG' : 'SAI') + '</span></p>';
+        });
+        content += '</div>';
+      });
+    }
+    
+    if (exam.type === 'mixed' && exam.questions.essay && exam.questions.essay.length > 0) {
+      content += '<h3>PHẦN TỰ LUẬN</h3>';
+      exam.questions.essay.forEach(function(eq, i) {
+        content += '<div style="background: #f5f5f5; padding: 15px; margin-bottom: 15px; border-radius: 8px;">';
+        content += '<p><strong>Câu ' + (i+1) + ':</strong> ' + eq.question + '</p>';
+        content += '<p style="margin-left: 20px; color: #666;"><em>Tiêu chí chấm:</em> ' + eq.grading_criteria + '</p>';
+        content += '</div>';
+      });
+    }
+  } else if (exam.type === 'essay') {
+    content += '<h3>CÂU HỎI TỰ LUẬN</h3>';
+    content += '<div style="background: #f5f5f5; padding: 15px; border-radius: 8px;">';
+    content += '<p>' + exam.essay_question + '</p>';
+    content += '</div>';
+    content += '<h3 style="margin-top: 20px;">TIÊU CHÍ CHẤM ĐIỂM</h3>';
+    content += '<div style="background: #f5f5f5; padding: 15px; border-radius: 8px;">';
+    content += '<pre style="white-space: pre-wrap;">' + exam.grading_criteria + '</pre>';
+    content += '</div>';
+  }
+  
+  document.getElementById('examDetailContent').innerHTML = content;
+  document.getElementById('examDetailModal').style.display = 'block';
+}
+
+function closeExamDetail() {
+  document.getElementById('examDetailModal').style.display = 'none';
+}
+</script>
+{% endblock %}

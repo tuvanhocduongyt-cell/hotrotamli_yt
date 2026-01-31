@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bảng Vinh Danh</title>
+    <style>
+        body {
+            background-color: #0d1b2a;
+            color: white;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+        h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #fca311;
+        }
+        h3 {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #e0e1dd;
+        }
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 80%;
+            background-color: #1b263b;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+        th, td {
+            padding: 14px;
+            border-bottom: 1px solid #415a77;
+            font-size: 16px;
+        }
+        th {
+            background-color: #fca311;
+            color: black;
+            font-weight: bold;
+        }
+        tr {
+            transition: background-color 0.3s ease;
+        }
+        tr:hover {
+            background-color: rgba(252, 163, 17, 0.2);
+        }
+        tr.top1 {
+            background-color: rgba(255, 215, 0, 0.15);
+        }
+        tr.top2 {
+            background-color: rgba(192, 192, 192, 0.15);
+        }
+        tr.top3 {
+            background-color: rgba(205, 127, 50, 0.15);
+        }
+        td.rank {
+            font-size: 20px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 20px;
+            background-color: #fca311;
+            color: black;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #ffb347;
+        }
+    </style>
+</head>
+<body>
+    <h2>🏆 Bảng Vinh Danh</h2>
+    <h3>Đề thi: {{ bai }}</h3>
+
+    <table>
+        <tr>
+            <th>Hạng</th>
+            <th>Nickname</th>
+            <th>Điểm</th>
+            <th>Thời gian</th>
+        </tr>
+        {% for player in players %}
+        <tr class="{% if loop.index == 1 %}top1{% elif loop.index == 2 %}top2{% elif loop.index == 3 %}top3{% endif %}">
+            <td class="rank">
+                {% if loop.index == 1 %}
+                    🥇
+                {% elif loop.index == 2 %}
+                    🥈
+                {% elif loop.index == 3 %}
+                    🥉
+                {% else %}
+                    {{ loop.index }}
+                {% endif %}
+            </td>
+            <td>{{ player.nickname }}</td>
+            <td>{{ player.score }}</td>
+            <td>{{ player.time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/">🔁 Trở về</a>
+</body>
+</html>

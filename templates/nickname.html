@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Đấu Trường Lịch Sử</title>
+    <style>
+        body {
+            background-color: #14213d;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+        input, select {
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 6px;
+            border: none;
+            width: 250px;
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #fca311;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        h2 {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>🎓 Đấu Trường Lịch Sử</h2>
+    <form action="/start_game" method="POST">
+        <input type="text" name="nickname" placeholder="Nhập nickname của bạn" required>
+        <br>
+        <select name="bai" required>
+            <option value="" disabled selected>Chọn bài thi</option>
+            <option value="bai_1">📝  Chủ đề 1: Cách mạng tháng 10 Nga</option>
+            <option value="bai_2">📜  Chủ đề 2: Lịch sử Việt Nam</option>
+            <option value="bai_3">📜  Chủ đề 3: Chủ nghĩa xã hội từ năm 1917 đến nay</option>
+            <option value="bai_4">📜  Chủ đề 4: Thế giới trong và sau chiến tranh lạnh</option>
+            <option value="bai_5">📜  Chủ đề 5: Lịch sử đối ngoại của Việt Nam</option>
+            <option value="bai_6">📜  Chủ đề 6: ASEAN - Những chặng đường lịch sử</option>
+            <option value="bai_7">📜  Chủ đề 7: Sự hình thành của liên bang cộng hòa</option>
+            <option value="bai_8">📜  Chủ đề 8: Hồ Chí Minh trong lịch sử Việt Nam</option>
+        </select>
+        <br>
+        <button type="submit">Bắt đầu thi đấu</button>
+    </form>
+</body>
+</html>

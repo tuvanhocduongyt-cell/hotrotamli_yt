@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Danh sách tài liệu</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+    color: #2c3e50;
+  }
+  .top-bar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  }
+  .btn-back {
+    background: white;
+    color: #3498db;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-weight: 700;
+    margin-right: 20px;
+    transition: background 0.3s, color 0.3s;
+    text-decoration: none;
+    user-select: none;
+  }
+  .btn-back:hover {
+    background: #217dbb;
+    color: white;
+  }
+  h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  .container {
+    display: flex;
+    height: calc(100vh - 58px);
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    background: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  /* Khung đọc tài liệu bên trái */
+  .viewer {
+    flex: 3;
+    border-right: 1px solid #ddd;
+    position: relative;
+  }
+  .viewer iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  .loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #3498db;
+  }
+  /* Danh sách tài liệu bên phải */
+  .doc-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+  }
+  .doc-list h2 {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .doc-item {
+    background: #eef4fb;
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.05);
+  }
+  .doc-item:hover, .doc-item.active {
+    background: #3498db;
+    color: white;
+    box-shadow: 0 4px 12px rgb(52 152 219 / 0.4);
+  }
+  .doc-item:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Responsive cho điện thoại */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      height: auto;
+      max-width: 100%;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: none;
+    }
+    .viewer {
+      flex: none;
+      height: 50vh;
+      border-right: none;
+      border-bottom: 1px solid #ddd;
+    }
+    .doc-list {
+      flex: none;
+      height: auto;
+      max-height: 40vh;
+      padding: 10px;
+      overflow-y: auto;
+    }
+    .doc-list h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .doc-item {
+      padding: 10px;
+      font-size: 16px;
+    }
+    .top-bar {
+      justify-content: center;
+    }
+    .btn-back {
+      margin-right: 10px;
+      padding: 8px 14px;
+      font-size: 16px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar">
+    <a href="/" class="btn-back" aria-label="Quay về menu">← Quay về Menu</a>
+    <h1>Danh sách tài liệu</h1>
+  </div>
+
+  <div class="container">
+    <div class="viewer">
+      <div class="loading" id="loading">Đang tải tài liệu...</div>
+      <iframe id="docViewer" src="" allowfullscreen></iframe>
+    </div>
+    <div class="doc-list">
+      <h2>Tài liệu</h2>
+      <div id="docs"></div>
+    </div>
+  </div>
+
+<script>
+  // Danh sách tài liệu
+  const docs_list = [
+    {
+      "title": "Bộ đề tham khảo lịch sử THPT D21",
+      "link": "https://drive.google.com/file/d/1qIS83JH_9OpTk_tR9bwhl61F_EETPaFk/preview"
+    },
+    {
+      "title": "Bộ đề tham khảo lịch sử THPT D22",
+      "link": "https://drive.google.com/file/d/1dxNrWXjxLlO97ZAAb-E-s56n6peCYrqp/preview"
+    },
+    {
+      "title": "Bộ đề tham khảo lịch sử THPT D23",
+      "link": "https://drive.google.com/file/d/16jaAmn-87QN7kiYzB7dIcF0fjRGpPLJg/preview"
+    },
+    {
+      "title": "Bộ đề tham khảo lịch sử THPT D24",
+      "link": "https://drive.google.com/file/d/1p8GQ5aHna5H8q0ujq26tK7uqjT5v3P-1/preview"
+    },
+    {
+      "title": "Bộ đề tham khảo lịch sử THPT D25",
+      "link": "https://drive.google.com/file/d/1IUtEbTVS4-mRmyBEV6gbDGjHxJHAtgSf/preview"
+    },
+    {
+      "title": "Bộ đề tham khảo lịch sử THPT D26",
+      "link": "https://drive.google.com/file/d/1CXVEz6NPRusUaVJE3HRTOBm6neYbcmge/preview"
+    },
+    {
+      "title": "Bộ đề tham khảo lịch sử THPT D27",
+      "link": "https://drive.google.com/file/d/1NlCO6a7kTCortwWU0BC2Yme3sTH4xBOV/preview"
+    },
+    {
+      "title": "Bộ đề tham khảo lịch sử THPT D28",
+      "link": "https://drive.google.com/file/d/1M7FLkTU4P35ljfghkjvuDEHV1k5ZrTv3/preview"
+    },
+    {
+      "title": "Bộ đề tham khảo lịch sử THPT D29",
+      "link": "https://drive.google.com/file/d/1Ob-hF8P1_itOvZoKWk0JUNzpLxQTGHdZ/preview"
+    },
+    {
+      "title": "Bộ đề tham khảo lịch sử THPT D30",
+      "link": "https://drive.google.com/file/d/16_xfgmEqr_HSF2rD0jLZOj00CTDiSfDQ/preview"
+    },
+    {
+      "title": "Tài liệu ôn thi",
+      "link": "https://drive.google.com/file/d/1N23yjH5L4f5ySms8Q3dlXllB9YmG5Lt2/preview"
+    },
+    {
+      "title": "Kiến thức trọng tâm",
+      "link": "https://drive.google.com/file/d/1NPZIZkZ0q9PEY1JdV9zjSvtJD_0ykEo2/preview"
+    }
+  ];
+
+  const docsContainer = document.getElementById('docs');
+  const iframe = document.getElementById('docViewer');
+  const loading = document.getElementById('loading');
+
+  function clearActive() {
+    document.querySelectorAll('.doc-item').forEach(el => {
+      el.classList.remove('active');
+    });
+  }
+
+  function loadDoc(index) {
+    const doc = docs_list[index];
+    if(!doc.link) {
+      alert("Chưa có link tài liệu này!");
+      return;
+    }
+    
+    // Hiển thị loading
+    loading.style.display = 'block';
+    
+    // Load tài liệu
+    iframe.src = doc.link;
+    
+    // Ẩn loading sau khi iframe load xong
+    iframe.onload = () => {
+      loading.style.display = 'none';
+    };
+    
+    clearActive();
+    document.querySelectorAll('.doc-item')[index].classList.add('active');
+  }
+
+  function init() {
+    docs_list.forEach((doc, idx) => {
+      const div = document.createElement('div');
+      div.className = 'doc-item';
+      div.textContent = doc.title;
+      div.addEventListener('click', () => loadDoc(idx));
+      docsContainer.appendChild(div);
+    });
+
+    if(docs_list.length > 0) {
+      loadDoc(0);
+    }
+  }
+
+  init();
+</script>
+</body>
+</html>

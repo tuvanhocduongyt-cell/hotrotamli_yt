@@ -1,0 +1,27 @@
+{
+  "hs001": {
+    "password": "hocsinh123",
+    "fullname": "Le Van An",
+    "created_at": "2025-01-05 10:30:00"
+  },
+  "hs002": {
+    "password": "student456",
+    "fullname": "Hoang Thi Bich",
+    "created_at": "2025-01-05 11:00:00"
+  },
+  "hs003": {
+    "password": "hocsinh789",
+    "fullname": "Pham Van Cuong",
+    "created_at": "2025-01-05 11:30:00"
+  },
+  "hs004": {
+    "password": "student111",
+    "fullname": "Nguyen Thi Dung",
+    "created_at": "2025-01-06 09:00:00"
+  },
+  "hs005": {
+    "password": "hocsinh222",
+    "fullname": "Tran Van En",
+    "created_at": "2025-01-06 09:30:00"
+  }
+}

@@ -1,0 +1,1863 @@
+{
+  "de1": {
+    "video": "https://www.youtube.com/embed/abc123",
+    "multiple_choice": [
+      {
+        "question": "Cách mạng tháng Hai năm 1917 ở Nga đã lật đổ",
+        "options": ["chế độ phong kiến", "nhà nước tư sản", "chính quyền vô sản", "giai cấp tư sản"],
+        "answer": "chế độ phong kiến"
+      },
+      {
+        "question": "Vào thế kỉ XV, nhà Hồ tiến hành cuộc kháng chiến chống quân xâm lược",
+        "options": ["Minh", "Thanh", "Tống", "Đường"],
+        "answer": "Minh"
+      },
+      {
+        "question": "Liên Hợp Quốc được thành lập nhằm mục đích nào sau đây?",
+        "options": [
+          "Phát triển mối quan hệ giữa các dân tộc",
+          "Kết thúc mọi tranh chấp trên thế giới",
+          "Quốc tế hóa chiến tranh xâm lược",
+          "Tiến lên xây dựng chủ nghĩa xã hội"
+        ],
+        "answer": "Phát triển mối quan hệ giữa các dân tộc"
+      },
+      {
+        "question": "Nội dung nào sau đây là bối cảnh ra đời của tổ chức ASEAN?",
+        "options": [
+          "Trật tự thế giới hai cực Ianta đã được xác lập",
+          "Liên Xô và các nước Đông Âu lâm vào khủng hoảng",
+          "Hệ thống tư bản chủ nghĩa tan rã, sụp đổ",
+          "Xu thế đối đầu Đông – Tây vừa mới xuất hiện"
+        ],
+        "answer": "Trật tự thế giới hai cực Ianta đã được xác lập"
+      },
+      {
+        "question": "Một trong những trụ cột của cộng đồng ASEAN là cộng đồng",
+        "options": ["Kinh tế", "Nghệ thuật", "Du lịch", "Quân sự"],
+        "answer": "Kinh tế"
+      },
+      {
+        "question": "Nội dung nào sau đây là bối cảnh bùng nổ cách mạng tháng Tám năm 1945 ở Việt Nam?",
+        "options": [
+          "Phát xít Nhật đầu hàng Đồng minh",
+          "Đế quốc Mĩ nhảy vào Đông Dương",
+          "Thực dân Pháp bị mất hết thuộc địa",
+          "Chế độ phong kiến đã bị sụp đổ"
+        ],
+        "answer": "Phát xít Nhật đầu hàng Đồng minh"
+      },
+      {
+        "question": "Nhân dân Việt Nam tiến hành kháng chiến chống thực dân Pháp (1945 – 1954) nhằm mục đích nào sau đây?",
+        "options": [
+          "Bảo vệ chế độ Dân chủ Cộng hòa",
+          "Giành chính quyền về tay địa chủ",
+          "Xóa bỏ chế độ thực dân - phát xít",
+          "Thủ tiêu mọi giai cấp trong xã hội"
+        ],
+        "answer": "Bảo vệ chế độ Dân chủ Cộng hòa"
+      },
+      {
+        "question": "Trong những năm 1961-1965, nhân dân miền Nam Việt Nam thực hiện nhiệm vụ nào sau đây?",
+        "options": [
+          "Kháng chiến chống Mỹ, cứu nước",
+          "Lật đổ chế độ cai trị của thực dân Anh",
+          "Đẩy quân Trung Hoa Dân quốc về nước",
+          "Xóa bỏ nhà nước chiếm hữu nô lệ"
+        ],
+        "answer": "Kháng chiến chống Mỹ, cứu nước"
+      },
+      {
+        "question": "Đường lối đổi mới đất nước ở Việt Nam từ năm 1986 được đề ra trong bối cảnh nào sau đây?",
+        "options": [
+          "Nền kinh tế bị khủng hoảng",
+          "Nhà nước cách mạng non trẻ",
+          "Chiến tranh lạnh vừa chấm dứt",
+          "Đất nước bị chia cắt thành hai miền"
+        ],
+        "answer": "Nền kinh tế bị khủng hoảng"
+      },
+      {
+        "question": "Những hoạt động đối ngoại của Phan Bội Châu đầu thế kỉ XX nhằm mục đích nào sau đây?",
+        "options": [
+          "Giành độc lập cho đất nước",
+          "Đánh bại phát xít Nhật Bản",
+          "Xóa bỏ chế độ tư bản chủ nghĩa",
+          "Xây dựng nhà nước vô sản"
+        ],
+        "answer": "Giành độc lập cho đất nước"
+      },
+      {
+        "question": "Năm 1995, Việt Nam có hoạt động đối ngoại nào sau đây?",
+        "options": [
+          "Gia nhập Hiệp hội các quốc gia Đông Nam Á",
+          "Trở thành thành viên của Liên hợp quốc",
+          "Thiết lập quan hệ ngoại giao với Lào",
+          "Khôi phục quan hệ ngoại giao với Liên Xô"
+        ],
+        "answer": "Gia nhập Hiệp hội các quốc gia Đông Nam Á"
+      },
+      {
+        "question": "Năm 1925, Nguyễn Ái Quốc có hoạt động nào sau đây?",
+        "options": [
+          "Sáng lập Hội Việt Nam cách mạng Thanh niên",
+          "Tuyên bố thành lập nước Cộng hòa Việt Nam",
+          "Triệu tập Hội nghị thành lập Đảng Cộng sản",
+          "Biên soạn và đọc bản Tuyên ngôn độc lập"
+        ],
+        "answer": "Sáng lập Hội Việt Nam cách mạng Thanh niên"
+      },
+      {
+        "question": "Trong công cuộc cải cách đất nước, Trung Quốc đạt được thành tựu nào sau đây?",
+        "options": [
+          "Dự trữ ngoại tệ đứng đầu thế giới",
+          "Trình độ phát triển cao nhất thế giới",
+          "Mở đầu cách mạng công nghiệp 4.0",
+          "Đưa con người lên Sao Hỏa, Mặt Trời"
+        ],
+        "answer": "Dự trữ ngoại tệ đứng đầu thế giới"
+      },
+      {
+        "question": "Nội dung nào sau đây phản ánh không đúng nguyên nhân thắng lợi của cuộc khởi nghĩa Lam Sơn?",
+        "options": [
+          "Chính quyền đô hộ khủng hoảng trầm trọng",
+          "Sự chỉ huy tài giỏi của các tướng quân",
+          "Tinh thần yêu nước, đoàn kết của nhân dân",
+          "Tính chính nghĩa của cuộc chiến tranh"
+        ],
+        "answer": "Sự chỉ huy tài giỏi của các tướng quân"
+      },
+      {
+        "question": "Trật tự thế giới hai cực I-an-ta bị xói mòn là do nguyên nhân nào sau đây?",
+        "options": [
+          "Thắng lợi của phong trào giải phóng dân tộc",
+          "Sự tan rã của phe tư bản chủ nghĩa",
+          "Các thế lực phát xít lên cầm quyền",
+          "Hệ thống xã hội chủ nghĩa sụp đổ"
+        ],
+        "answer": "Thắng lợi của phong trào giải phóng dân tộc"
+      },
+      {
+        "question": "Nội dung nào sau đây là triển vọng của cộng đồng ASEAN?",
+        "options": [
+          "Sự phát triển quan hệ giữa các thành viên",
+          "Có nền kinh tế hiện đại nhất thế giới",
+          "Các mâu thuẫn xã hội đều được thủ tiêu",
+          "Xây dựng thành công chế độ xã hội chủ nghĩa"
+        ],
+        "answer": "Sự phát triển quan hệ giữa các thành viên"
+      },
+      {
+        "question": "Cuộc kháng chiến chống Mỹ, cứu nước (1954 – 1975) của nhân dân Việt Nam diễn ra trong bối cảnh nào sau đây?",
+        "options": [
+          "Miền Bắc đã cơ bản hoàn thành cách mạng dân tộc dân chủ",
+          "Nhân dân miền Nam giành được chính quyền ở các đô thị lớn",
+          "Toàn bộ thuộc địa của chủ nghĩa thực dân ổn định, lớn mạnh",
+          "Xu thế đa cực ra đời, chi phối sự phát triển của quan hệ quốc tế"
+        ],
+        "answer": "Miền Bắc đã cơ bản hoàn thành cách mạng dân tộc dân chủ"
+      },
+      {
+        "question": "Một trong những nhiệm vụ cơ bản của đổi mới chính trị ở Việt Nam từ năm 1986 là",
+        "options": [
+          "xây dựng nhà nước pháp quyền xã hội chủ nghĩa",
+          "duy trì chế độ lao động tập trung và bao cấp",
+          "thực hiện đa nguyên chính trị, đa đảng cầm quyền",
+          "tập trung nguồn lực khôi phục chế độ phong kiến"
+        ],
+        "answer": "xây dựng nhà nước pháp quyền xã hội chủ nghĩa"
+      },
+      {
+        "question": "Trong thời kì 1954 – 1975, nước Việt Nam Dân chủ cộng hòa có hoạt động đối ngoại nào sau đây?",
+        "options": [
+          "Thiết lập quan hệ ngoại giao với Cuba",
+          "Vận động thực dân Anh rút quân về nước",
+          "Kí với Chính phủ Pháp bản Hiệp định Sơ bộ",
+          "Đàm phán với quân Trung Hoa Dân quốc"
+        ],
+        "answer": "Thiết lập quan hệ ngoại giao với Cuba"
+      },
+      {
+        "question": "Nội dung nào sau đây là cống hiến của Hồ Chí Minh đối với cách mạng Việt Nam trong những năm 1930 – 1945?",
+        "options": [
+          "Góp phần củng cố, mở rộng khối đại đoàn kết dân tộc",
+          "Sáng lập tổ chức tiền thân của Đảng Cộng sản Việt Nam",
+          "Khẳng định con đường giành độc lập tự do cho dân tộc",
+          "Lãnh đạo thành công cuộc kháng chiến chống thực dân Pháp"
+        ],
+        "answer": "Góp phần củng cố, mở rộng khối đại đoàn kết dân tộc"
+      },
+      {
+        "question": "Từ sau Chiến tranh thế giới thứ hai đến những năm 70 của thế kỉ XX, nhân tố nào sau đây thúc đẩy sự chuyển biến của quan hệ quốc tế?",
+        "options": [
+          "Vấn đề cạnh tranh giữa các quốc gia ngày càng diễn ra quyết liệt",
+          "Chủ nghĩa khu vực phát triển thay thế cho chủ nghĩa dân tộc",
+          "Sự phát triển tương hỗ giữa hai hệ thống xã hội đối lập",
+          "Bản chất chế độ tư bản thay đổi theo nguyện vọng nhân dân"
+        ],
+        "answer": "Sự phát triển tương hỗ giữa hai hệ thống xã hội đối lập"
+      },
+      {
+        "question": "Nội dung nào sau đây là nguyên nhân chung dẫn đến thắng lợi của các cuộc chiến tranh bảo vệ Tổ quốc ở Việt Nam từ thế kỉ X đến năm 1975?",
+        "options": [
+          "Sự thống nhất trong ý chí và hành động của các lực lượng tham gia chiến đấu",
+          "Có sự lãnh đạo sáng suốt của các lực lượng xã hội mới với đường lối đúng đắn",
+          "Mục tiêu của các cuộc đấu tranh mang tính dân tộc, dân chủ và cách mạng",
+          "Tinh thần đoàn kết, quyết tâm chiến đấu cao độ của các lực lượng cách mạng"
+        ],
+        "answer": "Sự thống nhất trong ý chí và hành động của các lực lượng tham gia chiến đấu"
+      },
+      {
+        "question": "Thực tiễn công cuộc đổi mới đất nước ở Việt Nam từ năm 1986 cho thấy",
+        "options": [
+          "sự kiên định mục tiêu độc lập dân tộc và con đường đi lên xã hội chủ nghĩa",
+          "việc thay đổi chế độ chính trị là nhân tố quyết định sự phát triển kinh tế",
+          "kinh tế là nhân tố quyết định bản chất và sự ổn định của chế độ chính trị",
+          "hội nhập quốc tế là điều kiện tiên quyết của tăng trưởng và ổn định xã hội"
+        ],
+        "answer": "sự kiên định mục tiêu độc lập dân tộc và con đường đi lên xã hội chủ nghĩa"
+      },
+      {
+        "question": "Trong thời kì 1930 – 1945, Hồ Chí Minh có đóng góp nào sau đây với cách mạng Việt Nam?",
+        "options": [
+          "Sáng lập tổ chức cách mạng quyết định vận mệnh của quốc gia dân tộc",
+          "Giải quyết thành công các mâu thuẫn cơ bản trong xã hội Việt Nam",
+          "Truyền bá tư tưởng tiến bộ, bảo vệ vững chắc chính quyền công nông",
+          "Lãnh đạo nhân dân hoàn thành các mục tiêu chiến lược của cách mạng"
+        ],
+        "answer": "Sáng lập tổ chức cách mạng quyết định vận mệnh của quốc gia dân tộc"
+      }
+    ],
+    "true_false": [
+      {
+        "question": "Cho những thông tin trong bảng sau đây về Liên hợp quốc:",
+        "statements": [
+          "Bảng thông tin thể hiện về những vấn đề liên quan đến Liên hợp quốc",
+          "Liên hợp quốc ra đời xuất phát từ khát vọng hòa bình của nhân loại",
+          "Mỹ, Anh, Liên Xô vừa mâu thuẫn, vừa hợp tác với nhau trong vấn đề thành lập và duy trì hoạt động của Liên hợp quốc",
+          "Việt Nam và Liên hợp quốc đều đóng góp cho sự phát triển thông qua việc khởi xướng và thực hiện các mục tiêu thiên niên kỉ"
+        ],
+        "answers": [true, true, true, false]
+      },
+      {
+        "question": "Về nhiệm vụ cách mạng ở hai miền Nam - Bắc giai đoạn 1954-1975:",
+        "statements": [
+          "Trong thời kì 1954 – 1975 ở Việt Nam, cách mạng miền Bắc có vai trò quyết định nhất đối với cách mạng cả nước",
+          "Cách mạng miền Nam có tác động tích cực đối với cách mạng miền Bắc trong thời kì 1954 – 1975 ở Việt Nam",
+          "Việt Nam chủ trương dùng chiến tranh cách mạng để hoàn thành mục tiêu của cuộc cách mạng dân tộc dân chủ nhân dân trên cả nước",
+          "Cách mạng Việt Nam góp phần làm tan rã hệ thống thuộc địa của chủ nghĩa thực dân vì đã ngăn ngừa âm mưu xâm lược của đế quốc Mỹ"
+        ],
+        "answers": [true, true, true, false]
+      },
+      {
+        "question": "Về phát triển văn hóa xã hội trong công cuộc đổi mới:",
+        "statements": [
+          "Trong công cuộc đổi mới đất nước, Việt Nam luôn coi trọng sự phát triển hài hòa về đời sống vật chất và tinh thần cho nhân dân",
+          "Chăm lo đời sống vật chất và tinh thần cho người có công với cách mạng thể hiện đạo lí và truyền thống tốt đẹp của nhân loại",
+          "Những thành tựu của Việt Nam trong chiến tranh vệ quốc và đổi mới đất nước đã giúp Liên hợp quốc thực hiện thành công mục tiêu thiên niên kỉ",
+          "Đồng bào các dân tộc thiểu số và miền núi, vùng sâu, vùng xa, biên giới và hải đảo được ưu tiên bảo vệ trong chiến tranh và phát triển trong thời bình"
+        ],
+        "answers": [true, true, false, true]
+      },
+      {
+        "question": "Về hội nhập kinh tế quốc tế của Việt Nam:",
+        "statements": [
+          "Việt Nam thực hiện hội nhập để xây dựng, phát triển đất nước",
+          "Việt Nam thực hiện hội nhập tuần tự từ khu vực đến quốc tế",
+          "Độc lập dân tộc và chủ nghĩa xã hội là điều kiện tiên quyết để các nước hội nhập với Việt Nam",
+          "Để phát triển bền vững, Việt Nam cần kết hợp hài hòa các yếu tố truyền thống và hiện đại"
+        ],
+        "answers": [true, false, false, true]
+      }
+    ]
+  },
+  "de2": {
+    "video": "https://www.youtube.com/embed/abc123",
+    "multiple_choice": [
+      {
+        "question": "Giai cấp nào sau đây giữ vai trò lãnh đạo cuộc Cách mạng tháng Mười (1917) ở nước Nga?",
+        "options": ["Tư sản", "Nông dân", "Vô sản", "Địa chủ"],
+        "answer": "Vô sản"
+      },
+      {
+        "question": "Vào thế kỉ XVIII, nhà Tây Sơn tiến hành cuộc kháng chiến chống quân xâm lược nào sau đây?",
+        "options": ["Minh", "Thanh", "Tống", "Đường"],
+        "answer": "Thanh"
+      },
+      {
+        "question": "Nội dung nào sau đây là nguyên tắc hoạt động của Liên hợp quốc?",
+        "options": [
+          "Không can thiệp vào công việc nội bộ của các quốc gia",
+          "Thống nhất về thể chế chính trị giữa các quốc gia",
+          "Giải quyết các tranh chấp quốc tế bằng mọi giá",
+          "Bình đẳng về kinh tế của tất cả các quốc gia thành viên"
+        ],
+        "answer": "Không can thiệp vào công việc nội bộ của các quốc gia"
+      },
+      {
+        "question": "Quốc gia nào sau đây thành viên sáng lập của Hiệp hội các quốc gia Đông Nam Á (ASEAN)?",
+        "options": ["Mi-an-ma", "Mông Cổ", "Trung Quốc", "Ma-lai-xi-a"],
+        "answer": "Ma-lai-xi-a"
+      },
+      {
+        "question": "Trong quá trình phát triển, Cộng đồng ASEAN phải đối mặt với thách thức nào sau đây?",
+        "options": [
+          "Chủ nghĩa khủng bố hoành hành",
+          "Sự đa dạng về chế độ chính trị",
+          "Bị chủ nghĩa thực dân xâm lược",
+          "Quản trị lưu vực sông Hồng"
+        ],
+        "answer": "Sự đa dạng về chế độ chính trị"
+      },
+      {
+        "question": "Một trong những tỉnh lị giành được chính quyền sớm nhất trong Cách mạng tháng Tám (1945) ở Việt Nam là",
+        "options": ["Tây Ninh", "Bắc Giang", "Thái Nguyên", "Thái Bình"],
+        "answer": "Tây Ninh"
+      },
+      {
+        "question": "Nhân dân Việt Nam tiến hành kháng chiến chống thực dân Pháp (1945 – 1954) trong bối cảnh nào sau đây?",
+        "options": [
+          "Chủ nghĩa xã hội trở thành hệ thống thế giới",
+          "Đất nước độc lập tiến lên chủ nghĩa xã hội",
+          "Mọi tàn dư của chế độ phong kiến bị xoá bỏ",
+          "Chủ nghĩa tư bản là hệ thống duy nhất thế giới"
+        ],
+        "answer": "Chủ nghĩa xã hội trở thành hệ thống thế giới"
+      },
+      {
+        "question": "Trong những năm 1965-1968, nhân dân miền Bắc Việt Nam thực hiện nhiệm vụ nào sau đây?",
+        "options": [
+          "Trực tiếp chiến đấu chống Mỹ",
+          "Lật đổ chế độ quân chủ chuyên chế",
+          "Đẩy lùi cuộc xâm lược của thực dân Anh",
+          "Xóa bỏ chế độ cai trị của Pháp"
+        ],
+        "answer": "Trực tiếp chiến đấu chống Mỹ"
+      },
+      {
+        "question": "Trong những năm 1986-1995, Việt Nam thực hiện nhiệm vụ nào sau đây?",
+        "options": [
+          "Đấu tranh giải phóng giai cấp",
+          "Đánh đổ đế quốc và phong kiến",
+          "Kháng chiến chống thực dân Pháp",
+          "Tiến hành công cuộc đổi mới đất nước"
+        ],
+        "answer": "Tiến hành công cuộc đổi mới đất nước"
+      },
+      {
+        "question": "Nội dung nào sau đây là hoạt động đối ngoại của Phan Bội Châu đầu thế kỉ XX?",
+        "options": [
+          "Tổ chức phong trào Đông du",
+          "Tiến hành đấu tranh chống phát xít",
+          "Tham gia Quốc tế Cộng sản",
+          "Gia nhập vào Đảng Xã hội Pháp"
+        ],
+        "answer": "Tổ chức phong trào Đông du"
+      },
+      {
+        "question": "Năm 1995, Việt Nam có hoạt động đối ngoại nào sau đây?",
+        "options": [
+          "Kí bản Hiệp định Sơ bộ với Pháp",
+          "Thiết lập quan hệ ngoại giao với Cam-pu-chia",
+          "Bình thường hoá quan hệ với Mỹ",
+          "Khôi phục quan hệ ngoại giao với Trung Quốc"
+        ],
+        "answer": "Bình thường hoá quan hệ với Mỹ"
+      },
+      {
+        "question": "Năm 1930, Nguyễn Ái Quốc có hoạt động nào sau đây?",
+        "options": [
+          "Sáng lập Đảng Cộng sản Việt Nam",
+          "Sáng lập Mặt trận Việt Minh",
+          "Tham gia sáng lập Đảng cộng sản Pháp",
+          "Gia nhập Quốc tế cộng sản"
+        ],
+        "answer": "Sáng lập Đảng Cộng sản Việt Nam"
+      },
+      {
+        "question": "Thành tựu nào sau đây là của Trung Quốc trong công cuộc cải cách, mở cửa?",
+        "options": [
+          "Có tàu đưa con người bay vào vũ trụ",
+          "Đưa con người lên Mặt Trăng",
+          "Hoàn thành công cuộc chống lạm phát",
+          "Xoá bỏ được tình trạng tham nhũng"
+        ],
+        "answer": "Có tàu đưa con người bay vào vũ trụ"
+      },
+      {
+        "question": "Nội dung nào sau đây phản ánh đúng nguyên nhân thắng lợi của cuộc kháng chiến chống Tống thời Lý (1075 - 1077)?",
+        "options": [
+          "Các mâu thuẫn xã hội đều được thủ tiêu",
+          "Sự chỉ huy tài giỏi của các tướng lĩnh",
+          "Sự ủng hộ của nhân dân tiến bộ thế giới",
+          "Sự tan rã của phe tư bản chủ nghĩa"
+        ],
+        "answer": "Sự chỉ huy tài giỏi của các tướng lĩnh"
+      },
+      {
+        "question": "Nhân tố nào sau đây tác động đến những xu thế phát triển chính của thế giới sau Chiến tranh lạnh?",
+        "options": [
+          "Quá trình phát triển \"thần kì\" của các nước châu Phi",
+          "Sự khủng hoảng và sụp đổ của phe tư bản chủ nghĩa",
+          "Sự thay đổi tương quan lực lượng giữa các cường quốc",
+          "Quá trình phát triển thành hệ thống của chủ nghĩa xã hội"
+        ],
+        "answer": "Sự thay đổi tương quan lực lượng giữa các cường quốc"
+      },
+      {
+        "question": "Nội dung nào sau đây là thách thức của cộng đồng ASEAN?",
+        "options": [
+          "Nguy cơ chia rẽ trong nội khối",
+          "Chế độ tư bản chủ nghĩa bị xoá bỏ",
+          "Nền kinh tế bị chiến tranh tàn phá",
+          "Tình trạng khủng bố thường xuyên"
+        ],
+        "answer": "Nguy cơ chia rẽ trong nội khối"
+      },
+      {
+        "question": "Các cuộc đấu tranh bảo vệ Tổ quốc (từ sau tháng 4 – 1975 đến nay) của nhân dân Việt Nam diễn ra trong bối cảnh nào sau đây?",
+        "options": [
+          "Cả nước đã hoàn thành cuộc cách mạng xã hội chủ nghĩa",
+          "Phong trào giải phóng dân tộc trên thế giới giành nhiều thắng lợi",
+          "Trật tự hai cực I-an-ta hình thành, Chiến tranh lạnh chấm dứt",
+          "Đất nước bị chia cắt thành hai miền với hai chế độ chính trị khác nhau"
+        ],
+        "answer": "Phong trào giải phóng dân tộc trên thế giới giành nhiều thắng lợi"
+      },
+      {
+        "question": "Một trong những nhiệm vụ cơ bản của đổi mới đối ngoại ở Việt Nam từ năm 1986 là",
+        "options": [
+          "thực hiện chính sách đa dạng hoá, đa phương hoá",
+          "chuyển sang nền kinh tế thị trường xã hội chủ nghĩa",
+          "xoá bỏ cơ chế quản lý tập trung, quan liêu, bao cấp",
+          "xây dựng Nhà nước pháp quyền xã hội chủ nghĩa"
+        ],
+        "answer": "thực hiện chính sách đa dạng hoá, đa phương hoá"
+      },
+      {
+        "question": "Đầu thế kỉ XX, hoạt động đối ngoại của Phan Bội Châu có ý nghĩa nào sau đây?",
+        "options": [
+          "Ngoại giao trở thành một mặt trận trong phong trào yêu nước",
+          "Để lại nhiều bài học kinh nghiệm về hợp tác quốc tế",
+          "Công tác ngoại giao có phối hợp chặt chẽ với hoạt động quân sự",
+          "Tạo cơ sở pháp lí để đấu tranh trên mặt trận chính trị"
+        ],
+        "answer": "Ngoại giao trở thành một mặt trận trong phong trào yêu nước"
+      },
+      {
+        "question": "Trong thời kì 1930 – 1945, Hồ Chí Minh có cống hiến nào sau đây đối với cách mạng Việt Nam?",
+        "options": [
+          "Lãnh đạo công cuộc xây dựng chủ nghĩa xã hội trên cả nước",
+          "Phát động cuộc kháng chiến toàn quốc chống thực dân Pháp",
+          "Kết nối và đưa đến sự hợp tác, hỗ trợ của lực lượng Đồng minh",
+          "Tìm thấy con đường cứu nước đúng đắn cho toàn thể dân tộc"
+        ],
+        "answer": "Kết nối và đưa đến sự hợp tác, hỗ trợ của lực lượng Đồng minh"
+      },
+      {
+        "question": "Sự thành lập và phát triển của Liên hợp quốc cùng sự tồn tại của các trật tự thế giới sau Chiến tranh thế giới thứ hai chứng tỏ",
+        "options": [
+          "tình hình thế giới liên tục căng thẳng do tác động từ Chiến tranh lạnh",
+          "các cường quốc tư bản chủ nghĩa chi phối hoàn toàn quan hệ quốc tế",
+          "vai trò của các cường quốc trong sự phát triển của quan hệ quốc tế",
+          "có sự đối lập gay gắt trên mọi lĩnh vực giữa hai hệ thống xã hội đối lập"
+        ],
+        "answer": "vai trò của các cường quốc trong sự phát triển của quan hệ quốc tế"
+      },
+      {
+        "question": "Ở Việt Nam, thắng lợi của cuộc kháng chiến chống Pháp (1945-1954) đã bảo vệ và phát huy thành quả của Cách mạng tháng Tám năm 1945 vì một trong những lí do nào sau đây?",
+        "options": [
+          "Phát triển thể chế dân chủ nhân dân, góp phần thực hiện các mục tiêu của thời đại",
+          "Thiết lập chế độ dân chủ, giải phóng miền Bắc, tạo điều kiện thống nhất đất nước",
+          "Giải phóng miền Bắc, tạo những tiền đề đầu tiên để đi lên chủ nghĩa chủ nghĩa xã hội",
+          "Chấm dứt ách thống trị của chủ nghĩa thực dân, đưa miền Bắc đi lên chủ nghĩa xã hội"
+        ],
+        "answer": "Giải phóng miền Bắc, tạo những tiền đề đầu tiên để đi lên chủ nghĩa chủ nghĩa xã hội"
+      },
+      {
+        "question": "Thực tiễn thắng lợi bước đầu của công cuộc Đổi mới ở Việt Nam từ năm 1986 đến nay cho thấy",
+        "options": [
+          "quan điểm \"lấy dân làm gốc\" được kế thừa và phát huy trong lịch sử dân tộc",
+          "chính sách \"thực túc binh cường\" chỉ được thực hiện trong điều kiện hoà bình",
+          "hội nhập quốc tế là nhân tố quyết định thành công của nền kinh tế thị trường",
+          "phát triển quân sự là điều kiện tiên quyết đưa đến sự tăng trưởng của kinh tế"
+        ],
+        "answer": "quan điểm \"lấy dân làm gốc\" được kế thừa và phát huy trong lịch sử dân tộc"
+      },
+      {
+        "question": "Từ năm 1945 đến năm 1969, Hồ Chí Minh có đóng góp nào sau đây đối với cách mạng Việt Nam?",
+        "options": [
+          "Lãnh đạo nhân dân hoàn thành thắng lợi cuộc cách mạng xã hội chủ nghĩa",
+          "Hoàn chỉnh xây dựng hệ thống lí luận giải phóng dân tộc trong chiến tranh",
+          "Hoạch định và hoàn thành đường lối Đổi mới cho cách mạng Việt Nam",
+          "Góp phần đưa đấu tranh ngoại giao trở thành một mặt trận trong kháng chiến"
+        ],
+        "answer": "Góp phần đưa đấu tranh ngoại giao trở thành một mặt trận trong kháng chiến"
+      }
+    ],
+    "true_false": [
+      {
+        "question": "Cho những thông tin trong bảng về Trật tự thế giới sau Chiến tranh thế giới thứ hai:",
+        "statements": [
+          "Bảng thông tin thể hiện về những vấn đề liên quan đến Trật tự thế giới sau Chiến tranh thế giới thứ hai",
+          "Sự hình thành trật tự thế giới trong Chiến tranh lạnh chịu tác động bởi mục tiêu chiến lược của các cường quốc",
+          "Sự hình thành và phát triển của các trật tự thế giới trong và sau Chiến tranh lạnh đều chứng tỏ Liên hợp quốc là tổ chức duy nhất quyết định điều tiết quan hệ quốc tế",
+          "Thực tiễn quan hệ quốc tế trong thời kì Chiến tranh lạnh cho thấy các nước có thể chế chính trị khác nhau có vai trò như nhau đối với sự hình thành Trật tự thế giới đa cực"
+        ],
+        "answers": [true, true, false, false]
+      },
+      {
+        "question": "Về các loại hình căn cứ địa và hậu phương trong Cách mạng tháng Tám và kháng chiến chống Pháp:",
+        "statements": [
+          "Đoạn tư liệu trên đề cập đến các loại hình căn cứ địa và hậu phương trong Cách mạng tháng Tám (1945) và kháng chiến chống Pháp (1945 – 1954)",
+          "Hậu phương chiến lược trong kháng chiến chống Pháp (1945 – 1954) là nơi đứng chân an toàn của cơ quan đầu não chỉ huy của nhân dân Việt Nam",
+          "Thực tiễn cho thấy căn cứ địa trong Cách mạng tháng Tám (1945) và hậu phương trong kháng chiến chống Pháp (1945 – 1954) là nơi tập hợp, xây dựng khối đoàn kết",
+          "Hậu phương chiến lược trong kháng chiến chống Pháp (1945 – 1954) là nơi đối phương bất khả xâm phạm và rèn luyện, đứng chân, che giấu lực lượng trước và sau các trận đánh"
+        ],
+        "answers": [true, true, true, false]
+      },
+      {
+        "question": "Về phát triển xã hội trong công cuộc Đổi mới ở Việt Nam:",
+        "statements": [
+          "Trong công cuộc Đổi mới ở Việt Nam luôn đặt vấn đề chăm lo nâng cao đời sống vật chất, tinh thần cho nhân dân lên hàng đầu",
+          "Công cuộc Đổi mới thu hút, phát huy mạnh mẽ mọi nguồn lực và sức sáng tạo của nhân dân đã giúp Việt Nam hoàn thành mục tiêu xây dựng chủ nghĩa xã hội",
+          "Chiến tranh giải phóng dân tộc và công cuộc Đổi mới ở Việt Nam do Đảng Cộng sản lãnh đạo cho thấy nguyên tắc hàng đầu là độc lập dân tộc gắn liền với chủ nghĩa xã hội",
+          "Đảm bảo an ninh xã hội, an sinh xã hội, nâng cao phúc lợi xã hội trong công cuộc Đổi mới đất nước là nhiệm vụ hàng đầu của riêng lực lượng vũ trang Việt Nam"
+        ],
+        "answers": [true, false, true, false]
+      },
+      {
+        "question": "Về hoạt động đối ngoại và hội nhập quốc tế của Việt Nam:",
+        "statements": [
+          "Đoạn tư liệu trên đề cập đến những thành tựu Việt Nam đạt được trong lĩnh vực đối ngoại",
+          "Việt Nam gia nhập Liên hợp quốc là bước đầu của quá trình hội nhập khu vực và quốc tế",
+          "Hoạt động đối ngoại và quá trình hội nhập kinh tế quốc tế của Việt Nam là nhân tố quyết định đưa đến thắng lợi của công cuộc Đổi mới đất nước (từ năm 1986 đến nay)",
+          "Với việc Việt Nam là thành viên của hơn 70 tổ chức, diễn đàn quốc tế của khu vực và thế giới góp phần huy động các nguồn lực bên ngoài đẩy mạnh công nghiệp hoá, hiện đại hoá"
+        ],
+        "answers": [true, false, false, true]
+      }
+    ]
+  },
+  "de3": {
+    "video": "https://www.youtube.com/embed/abc123",
+    "multiple_choice": [
+      {
+        "question": "Cách mạng tháng Mười năm 1917 ở Nga đã lật đổ",
+        "options": ["Chế độ thực dân", "Nhà nước phát xít", "Chính quyền vô sản", "Chính quyền tư sản"],
+        "answer": "Chính quyền tư sản"
+      },
+      {
+        "question": "Vào thế kỉ XI, nhà Lý tiến hành cuộc kháng chiến chống quân xâm lược",
+        "options": ["Mông", "Thanh", "Tống", "Đường"],
+        "answer": "Tống"
+      },
+      {
+        "question": "Liên Hợp Quốc được thành lập nhằm mục đích nào sau đây?",
+        "options": [
+          "Tăng cường hợp tác quốc tế giữa các nước",
+          "Thống nhất thể chế chính trị trên thế giới",
+          "Tạo sự phát triển như nhau cho mọi nước",
+          "Giành thắng lợi trong cuộc Chiến tranh lạnh"
+        ],
+        "answer": "Tăng cường hợp tác quốc tế giữa các nước"
+      },
+      {
+        "question": "Nội dung nào sau đây là bối cảnh ra đời của tổ chức ASEAN?",
+        "options": [
+          "Mâu thuẫn giữa các nước thuộc địa phát triển",
+          "Cuộc Chiến tranh thế giới thứ hai diễn ra quyết liệt",
+          "Các cường quốc tăng cường cạnh tranh quyền lực",
+          "Xu hướng li khai và khủng bố lan rộng khắp thế giới"
+        ],
+        "answer": "Các cường quốc tăng cường cạnh tranh quyền lực"
+      },
+      {
+        "question": "Nội dung nào sau đây là mục tiêu của cộng đồng ASEAN?",
+        "options": [
+          "Tăng cường sự gắn kết giữa các thành viên",
+          "Củng cố vị thế là tổ chức quốc tế lớn nhất",
+          "Giải phóng các nước khỏi chủ nghĩa thực dân",
+          "Xây dựng một ngôi nhà chung trên thế giới"
+        ],
+        "answer": "Tăng cường sự gắn kết giữa các thành viên"
+      },
+      {
+        "question": "Nội dung nào sau đây là bối cảnh bùng nổ Cách mạng tháng Tám năm 1945 ở Việt Nam?",
+        "options": [
+          "Hệ thống xã hội chủ nghĩa phát triển lớn mạnh",
+          "Chính phủ Trần Trọng Kim hoang mang cực độ",
+          "Nhà nước ở Liên Xô khủng hoảng và sụp đổ",
+          "Chiến tranh thế giới thứ hai bắt đầu bùng nổ"
+        ],
+        "answer": "Chính phủ Trần Trọng Kim hoang mang cực độ"
+      },
+      {
+        "question": "Nhân dân Việt Nam tiến hành kháng chiến chống thực dân Pháp trong bối cảnh nào sau đây?",
+        "options": [
+          "Chủ nghĩa thực dân mới suy yếu, sụp đổ",
+          "Đất nước tạm thời bị chia cắt làm hai miền",
+          "Phong trào giải phóng dân tộc dâng cao",
+          "Công cuộc Đổi mới đất nước đã thành công"
+        ],
+        "answer": "Phong trào giải phóng dân tộc dâng cao"
+      },
+      {
+        "question": "Trong những năm 1954 -1960, nhân dân miền Bắc Việt Nam thực hiện nhiệm vụ nào sau đây?",
+        "options": [
+          "Hoàn thành cải cách ruộng đất",
+          "Chống Chiến tranh cục bộ của Mỹ",
+          "Chi viện cho Liên Xô chống Mỹ",
+          "Hoàn thành xây dựng đất nước"
+        ],
+        "answer": "Hoàn thành cải cách ruộng đất"
+      },
+      {
+        "question": "Đường lối đổi mới đất nước ở Việt Nam có nội dung nào sau đây?",
+        "options": [
+          "Xóa bỏ cơ chế tập trung, bao cấp",
+          "Duy trì nhà nước phong kiến tập quyền",
+          "Lấy phát triển văn hóa là trọng tâm",
+          "Đóng cửa với các nước châu Âu"
+        ],
+        "answer": "Xóa bỏ cơ chế tập trung, bao cấp"
+      },
+      {
+        "question": "Những hoạt động đối ngoại của Phan Châu Trinh đầu thế kỉ XX nhằm mục đích nào sau đây?",
+        "options": [
+          "Đưa đất nước đi lên chủ nghĩa cộng sản",
+          "Lật đổ chế độ thực dân của đế quốc Anh",
+          "Vận động nhân dân khởi nghĩa chống Pháp",
+          "Thức tỉnh tinh thần đấu tranh trong nhân dân"
+        ],
+        "answer": "Thức tỉnh tinh thần đấu tranh trong nhân dân"
+      },
+      {
+        "question": "Nội dung nào sau đây là chính sách đối ngoại của Việt Nam hiện nay?",
+        "options": [
+          "Xây dựng căn cứ địa cách mạng",
+          "Phát động nhân dân khởi nghĩa",
+          "Là đối tác tin cậy của các quốc gia",
+          "Liên minh với các nước châu Phi"
+        ],
+        "answer": "Là đối tác tin cậy của các quốc gia"
+      },
+      {
+        "question": "Năm 1911, Nguyễn Ái Quốc có hoạt động nào sau đây?",
+        "options": [
+          "Ra đi tìm đường cứu nước",
+          "Tham gia Quốc tế cộng sản",
+          "Sáng lập các hội cứu quốc",
+          "Lãnh đạo khởi nghĩa chống Pháp"
+        ],
+        "answer": "Ra đi tìm đường cứu nước"
+      },
+      {
+        "question": "Trong công cuộc cải cách, mở cửa, Trung Quốc đạt được thành tựu nào sau đây?",
+        "options": [
+          "Thành lập được nhiều liên minh quân sự lớn",
+          "Mở đầu cuộc cách mạng công nghiệp lần thứ nhất",
+          "Chấm dứt thời kì bị thực dân xâm lược, đô hộ",
+          "Đời sống nhân dân không ngừng được cải thiện"
+        ],
+        "answer": "Đời sống nhân dân không ngừng được cải thiện"
+      },
+      {
+        "question": "Nội dung nào sau đây phản ánh đúng nguyên nhân thắng lợi của các cuộc kháng chiến chống ngoại xâm ở Việt Nam trước năm 1858?",
+        "options": [
+          "Có nghệ thuật quân sự độc đáo",
+          "Được sự giúp đỡ của Cuba",
+          "Có sự lãnh đạo của Đảng Cộng sản",
+          "Chính quyền nhân dân được củng cố"
+        ],
+        "answer": "Có nghệ thuật quân sự độc đáo"
+      },
+      {
+        "question": "Trật tự thế giới hai cực I-an-ta bị xói mòn là do nguyên nhân nào sau đây?",
+        "options": [
+          "Mỹ từ bỏ tham vọng bá chủ thế giới",
+          "Sự vươn lên mạnh mẽ của nhiều nước tư bản",
+          "Liên Xô trở thành đồng minh của Mỹ",
+          "Trung Quốc thành nước giàu mạnh nhất"
+        ],
+        "answer": "Sự vươn lên mạnh mẽ của nhiều nước tư bản"
+      },
+      {
+        "question": "Nội dung nào sau đây là triển vọng của cộng đồng ASEAN?",
+        "options": [
+          "Thu hẹp, triệt tiêu sự phân hóa giàu nghèo trong xã hội",
+          "Giải quyết được tận gốc tình trạng biến đổi khí hậu",
+          "Phát triển hơn nữa mối quan hệ với các cường quốc",
+          "Tiến tới thành lập nhà nước chung của toàn khu vực"
+        ],
+        "answer": "Phát triển hơn nữa mối quan hệ với các cường quốc"
+      },
+      {
+        "question": "Cuộc kháng chiến chống Mỹ, cứu nước (1954 – 1975) của nhân dân Việt Nam diễn ra trong bối cảnh nào sau đây?",
+        "options": [
+          "Miền Bắc tiến hành xây dựng chủ nghĩa xã hội",
+          "Phát xít Nhật đảo chính Pháp ở Đông Dương",
+          "Thực dân Pháp quay lại xâm lược Đông Dương",
+          "Cuộc Chiến tranh thế giới thứ hai bùng nổ"
+        ],
+        "answer": "Miền Bắc tiến hành xây dựng chủ nghĩa xã hội"
+      },
+      {
+        "question": "Một trong những nhiệm vụ cơ bản của Việt Nam từ năm 1986 là",
+        "options": [
+          "Đưa nhân dân lao động lên làm chủ chính quyền",
+          "Phát động nhân dân tham gia kháng chiến",
+          "Hoàn thành công cuộc cải cách ruộng đất",
+          "Xây dựng nhà nước pháp quyền xã hội chủ nghĩa"
+        ],
+        "answer": "Xây dựng nhà nước pháp quyền xã hội chủ nghĩa"
+      },
+      {
+        "question": "Trong thời kì 1945 – 1954, nước Việt Nam Dân chủ cộng hòa không có hoạt động đối ngoại nào sau đây?",
+        "options": [
+          "Gia nhập tổ chức ASEAN",
+          "Đấu tranh với thực dân Pháp",
+          "Kí kết nhiều văn kiện hợp tác",
+          "Thiết lập quan hệ với Liên Xô"
+        ],
+        "answer": "Gia nhập tổ chức ASEAN"
+      },
+      {
+        "question": "Nội dung nào sau đây là cống hiến của Hồ Chí Minh đối với cách mạng Việt Nam trong những năm 1920 – 1930?",
+        "options": [
+          "Xây dựng liên minh chống thực dân giữa các nước thuộc địa",
+          "Góp phần giải quyết tình trạng khủng hoảng đường lối cứu nước",
+          "Củng cố vai trò lãnh đạo cách mạng của Đảng Cộng sản Việt Nam",
+          "Thiết lập mặt trận nhân dân thế giới đoàn kết với Việt Nam"
+        ],
+        "answer": "Góp phần giải quyết tình trạng khủng hoảng đường lối cứu nước"
+      },
+      {
+        "question": "Từ sau Chiến tranh thế giới thứ hai đến nay, Liên hợp quốc có đóng góp nào sau đây?",
+        "options": [
+          "Thủ tiêu được tình trạng bóc lột, thúc đẩy sự tiến bộ, công bằng xã hội",
+          "Giải quyết triệt để mối quan hệ giữa phát triển kinh tế và tiến bộ xã hội",
+          "Góp phần giải quyết các cuộc khủng hoảng lớn trên quy mô toàn cầu",
+          "Đảm bảo công bằng xã hội và chấm dứt các cuộc chiến tranh trên thế giới"
+        ],
+        "answer": "Góp phần giải quyết các cuộc khủng hoảng lớn trên quy mô toàn cầu"
+      },
+      {
+        "question": "Nội dung nào là nguyên nhân chung dẫn đến thắng lợi của các cuộc chiến tranh bảo vệ Tổ quốc ở Việt Nam từ thế kỉ X đến năm 1975?",
+        "options": [
+          "Phát huy được sức mạnh của tính chính nghĩa và tính nhân dân trong chiến đấu",
+          "Lợi dụng được yếu tố địa hình và thời cơ thuận lợi để tiến hành phản công",
+          "Tinh thần đoàn kết cao độ giữa nhân dân với triều đình trong quá trình kháng chiến",
+          "Có sự kết hợp chặt chẽ giữa đấu tranh quân sự với chính trị và ngoại giao"
+        ],
+        "answer": "Phát huy được sức mạnh của tính chính nghĩa và tính nhân dân trong chiến đấu"
+      },
+      {
+        "question": "Quá trình đổi mới đất nước ở Việt Nam từ năm 1986 cho thấy",
+        "options": [
+          "nhân dân là lực lượng quyết định làm nên thành công của sự nghiệp cách mạng",
+          "sự kết hợp giữa truyền thống yêu nước với nghệ thuật chiến tranh nhân dân",
+          "phải tăng cường khối đại đoàn kết toàn dân trong nhiều hình thức mặt trận dân tộc",
+          "việc thay đổi mục tiêu chiến lược cách mạng của Đảng là đúng đắn và hợp thời"
+        ],
+        "answer": "nhân dân là lực lượng quyết định làm nên thành công của sự nghiệp cách mạng"
+      },
+      {
+        "question": "Hồ Chí Minh được nhân dân thế giới tôn vinh vì lí do nào sau đây?",
+        "options": [
+          "Con đường cách mạng của Người gắn với cuộc đấu tranh của các lực lượng tiến bộ",
+          "Nhân dân thế giới có chung nhiệm vụ, mục tiêu với sự nghiệp cách mạng của Người",
+          "Hồ Chí Minh đã cùng nhân dân thế giới thực hiện đấu tranh lật đổ chủ nghĩa tư bản",
+          "Tư tưởng cách mạng của Hồ Chí Minh là chuẩn mực chung cho toàn nhân loại"
+        ],
+        "answer": "Con đường cách mạng của Người gắn với cuộc đấu tranh của các lực lượng tiến bộ"
+      }
+    ],
+    "true_false": [
+      {
+        "question": "Về vai trò của Việt Nam với Liên hợp quốc:",
+        "statements": [
+          "Duy trì hòa bình, an ninh thế giới là mục tiêu của Liên hợp quốc",
+          "Liên hợp quốc ủng hộ việc chạy đua vũ trang để bảo vệ đất nước",
+          "Liên hợp quốc đã góp phần chấm dứt Chiến tranh thế giới thứ hai và đảm bảo hòa bình bền vững cho nhân loại",
+          "Từ khi gia nhập Liên hợp quốc, Việt Nam không dùng bạo lực để giải quyết vấn đề dân tộc"
+        ],
+        "answers": [true, false, false, false]
+      },
+      {
+        "question": "Về xây dựng chủ nghĩa xã hội ở miền Bắc (1954-1975):",
+        "statements": [
+          "Phát huy tinh thần yêu nước là một nguyên nhân thành công của cách mạng Việt Nam",
+          "Để xây dựng thành công chủ nghĩa xã hội cần kết hợp sức mạnh dân tộc với sức mạnh thời đại",
+          "Cách mạng Việt Nam đã góp phần thúc đẩy việc thực hiện các mục tiêu lớn của thời đại và Hiến chương Liên hợp quốc",
+          "Bằng việc thực hiện đồng thời cuộc cách mạng dân tộc dân chủ nhân dân và cách mạng xã hội chủ nghĩa, miền Bắc đã góp phần duy trì hòa bình ở khu vực"
+        ],
+        "answers": [true, true, true, false]
+      },
+      {
+        "question": "Về đường lối đối ngoại trong thời kỳ đổi mới:",
+        "statements": [
+          "Trong thời kì đổi mới, Việt Nam thực hiện thực hiện nhất quán đường lối đối ngoại độc lập, tự chủ",
+          "Hoạt động đối ngoại song phương trước đa phương đã góp phần thực hiện thắng lợi sự nghiệp đổi mới ở Việt Nam",
+          "Để thực hiện hội nhập và phát triển, Việt Nam cần thực hiện chính sách đối ngoại chung với các quốc gia trên thế giới",
+          "Một trong những điểm mới của đường lối đổi mới đất nước ở Việt Nam là đặt lợi ích của dân tộc và nhân dân lên trên hết"
+        ],
+        "answers": [true, false, false, true]
+      },
+      {
+        "question": "Về hội nhập quốc tế của Việt Nam:",
+        "statements": [
+          "Hội nhập quốc tế là một trong những chính sách đối ngoại của Việt Nam",
+          "Một trong những đóng góp của hội nhập quốc tế là thúc đẩy sự phát triển đất nước",
+          "Sự kết hợp giữa bản chất ưu việt của thế chế chính trị với chính sách hội nhập phù hợp đã giúp Việt Nam hoàn thành mục tiêu chủ nghĩa xã hội",
+          "Sự phát triển kinh tế - xã hội và chính sách hội nhập quốc tế của Việt Nam có tác động qua lại với nhau và nâng cao sức mạnh quốc gia"
+        ],
+        "answers": [true, true, false, true]
+      }
+    ]
+  },
+  "de4": {
+    "video": "https://www.youtube.com/embed/abc123",
+    "multiple_choice": [
+      {
+        "question": "Liên bang cộng hòa xã hội chủ nghĩa Xô Viết thành lập có ý nghĩa nào sau đây?",
+        "options": [
+          "Thúc đẩy sự phát triển của cách mạng thế giới",
+          "Làm sụp đổ hệ thống tư bản chủ nghĩa",
+          "Đưa giai cấp nô lệ lên nắm chính quyền",
+          "Mở đầu kỷ nguyên độc lập, tự do cho nhân loại"
+        ],
+        "answer": "Thúc đẩy sự phát triển của cách mạng thế giới"
+      },
+      {
+        "question": "Thế kỉ XI, nhà Lý tiến hành cuộc kháng chiến chống quân xâm lược Tống ở phòng tuyến",
+        "options": ["Tây Đô", "Bạch Đằng", "Cửu Long", "Như Nguyệt"],
+        "answer": "Như Nguyệt"
+      },
+      {
+        "question": "Liên Hợp Quốc được thành lập nhằm mục đích nào sau đây?",
+        "options": [
+          "Kết thúc trật tự thế giới đơn cực",
+          "Thúc đẩy hòa bình và an ninh thế giới",
+          "Giúp Liên Xô xây dựng đất nước",
+          "Thiết lập quan hệ đối ngoại với ASEAN"
+        ],
+        "answer": "Thúc đẩy hòa bình và an ninh thế giới"
+      },
+      {
+        "question": "Nội dung nào sau đây là bối cảnh ra đời của tổ chức ASEAN?",
+        "options": [
+          "Một số cuộc chiến tranh cục bộ đã và đang diễn ra",
+          "Liên Xô và Mỹ cùng tuyên bố chấm dứt chiến tranh",
+          "Hệ thống tài chính toàn cầu khủng hoảng và sụp đổ",
+          "Chủ nghĩa thực dân trên thế giới hoàn toàn sụp đổ"
+        ],
+        "answer": "Một số cuộc chiến tranh cục bộ đã và đang diễn ra"
+      },
+      {
+        "question": "Một trong những trụ cột của cộng đồng ASEAN là cộng đồng",
+        "options": ["Văn hóa – xã hội", "Chính trị - Triết học", "Du lịch – dịch vụ", "Y tế - Giáo dục"],
+        "answer": "Văn hóa – xã hội"
+      },
+      {
+        "question": "Nội dung nào sau đây là bối cảnh bùng nổ Cách mạng tháng Tám năm 1945 ở Việt Nam?",
+        "options": [
+          "Đế quốc Mỹ can thiệp trực tiếp vào miền Nam",
+          "Miền Bắc tiến nhanh lên chủ nghĩa xã hội",
+          "Nhà nước Dân chủ Cộng hòa mới ra đời",
+          "Quân Đồng minh chuẩn bị vào Đông Dương"
+        ],
+        "answer": "Quân Đồng minh chuẩn bị vào Đông Dương"
+      },
+      {
+        "question": "Nhân dân Việt Nam tiến hành kháng chiến chống thực dân Pháp nhằm mục đích nào sau đây?",
+        "options": [
+          "Giải phóng các nước ở châu Âu và Bắc Mỹ",
+          "Bảo vệ độc lập, chủ quyền của Tổ quốc",
+          "Đập tan âm mưu xâm lược của nhà Thanh",
+          "Đưa nông dân lên địa vị thống trị xã hội"
+        ],
+        "answer": "Bảo vệ độc lập, chủ quyền của Tổ quốc"
+      },
+      {
+        "question": "Trong những năm 1954-1960, nhân dân miền Nam Việt Nam thực hiện nhiệm vụ nào sau đây?",
+        "options": [
+          "Thực hiện đổi mới toàn diện đất nước",
+          "Khởi nghĩa chống chế độ phong kiến",
+          "Chống lại chính sách xâm lược của Mỹ",
+          "Đấu tranh đòi thi hành Hiệp định Pa-ri"
+        ],
+        "answer": "Chống lại chính sách xâm lược của Mỹ"
+      },
+      {
+        "question": "Đường lối đổi mới đất nước ở Việt Nam được đề ra trong bối cảnh nào sau đây?",
+        "options": [
+          "Nhiều nước xã hội chủ nghĩa bị khủng hoảng",
+          "Trật tự hai cực I-an-ta hoàn toàn sụp đổ",
+          "Xu thế đối đầu Đông – Tây vừa xuất hiện",
+          "Các nước đều tập trung vào trí tuệ nhân tạo"
+        ],
+        "answer": "Nhiều nước xã hội chủ nghĩa bị khủng hoảng"
+      },
+      {
+        "question": "Những hoạt động đối ngoại của Phan Châu Trinh đầu thế kỉ XX nhằm mục đích nào sau đây?",
+        "options": [
+          "Chấn hưng sức mạnh dân tộc",
+          "Thiết lập chế độ xã hội chủ nghĩa",
+          "Thành lập ngay Đảng Cộng sản",
+          "Lật đổ chính quyền phát xít Nhật"
+        ],
+        "answer": "Chấn hưng sức mạnh dân tộc"
+      },
+      {
+        "question": "Hiện nay, Việt Nam thực hiện chính sách đối ngoại nào sau đây?",
+        "options": [
+          "Đóng cửa với các nước tư bản phương Tây",
+          "Phát triển quan hệ hữu nghị với các quốc gia",
+          "Cắt đứt quan hệ với các nước châu Âu",
+          "Xoay trục sang các nước châu Phi là chính"
+        ],
+        "answer": "Phát triển quan hệ hữu nghị với các quốc gia"
+      },
+      {
+        "question": "Năm 1920, Nguyễn Ái Quốc có hoạt động nào sau đây?",
+        "options": [
+          "Tham gia tổ chức Quốc tế cộng sản",
+          "Sáng lập Đảng Lao động Việt Nam",
+          "Kí với Pháp bản Hiệp định Sơ bộ",
+          "Ra Lời kêu gọi toàn quốc kháng chiến"
+        ],
+        "answer": "Tham gia tổ chức Quốc tế cộng sản"
+      },
+      {
+        "question": "Trong công cuộc đổi mới đất nước, Trung Quốc đạt được thành tựu nào sau đây?",
+        "options": [
+          "Giành độc lập hoàn toàn cho đất nước",
+          "Vượt qua Mỹ, trở thành nền kinh tế số một",
+          "Xóa bỏ hoàn toàn chênh lệch giàu nghèo",
+          "Có nền kinh tế phát triển nhanh, năng động"
+        ],
+        "answer": "Có nền kinh tế phát triển nhanh, năng động"
+      },
+      {
+        "question": "Nội dung nào sau đây phản ánh đúng nguyên nhân thắng lợi của các cuộc kháng chiến chống ngoại xâm ở Việt Nam trong thế kỉ XIII?",
+        "options": [
+          "Quân xâm lược bị suy yếu, khủng hoảng cực độ",
+          "Truyền thống đoàn kết của dân tộc được phát huy",
+          "Có sự phối hợp chiến đầu với các nước Đông Dương",
+          "Nhà nước dân chủ nhân dân được củng cố vững chắc"
+        ],
+        "answer": "Truyền thống đoàn kết của dân tộc được phát huy"
+      },
+      {
+        "question": "Trật tự thế giới hai cực I-an-ta bị xói mòn là do nguyên nhân nào sau đây?",
+        "options": [
+          "Chủ nghĩa phát xít tăng cường chạy đua vũ trang",
+          "Mỹ từ bỏ chính sách thù địch chống Liên Xô",
+          "Sự vươn lên mạnh mẽ của các trung tâm kinh tế",
+          "Liên minh châu Âu đối đầu căng thẳng với Mỹ"
+        ],
+        "answer": "Sự vươn lên mạnh mẽ của các trung tâm kinh tế"
+      },
+      {
+        "question": "Nội dung nào sau đây là triển vọng của cộng đồng ASEAN?",
+        "options": [
+          "Trở thành tổ chức liên kết của toàn khu vực châu Á",
+          "Có nền khoa học công nghệ phát triển nhất thế giới",
+          "Sự gắn kết trong quan hệ hợp tác giữa các thành viên",
+          "Tiến tới thành lập ngay một nhà nước chung của khu vực"
+        ],
+        "answer": "Sự gắn kết trong quan hệ hợp tác giữa các thành viên"
+      },
+      {
+        "question": "Cuộc kháng chiến chống Mỹ, cứu nước (1954 – 1975) của nhân dân Việt Nam diễn ra trong bối cảnh nào sau đây?",
+        "options": [
+          "Đất nước tạm thời bị chia cắt thành hai miền",
+          "Thực dân Pháp đem quân trở lại Đông Dương",
+          "Mỹ bắt tay với Liên Xô xây dựng cộng đồng chung",
+          "Các nước Đông Nam Á đều đã giành được độc lập"
+        ],
+        "answer": "Đất nước tạm thời bị chia cắt thành hai miền"
+      },
+      {
+        "question": "Một trong những nhiệm vụ cơ bản của đổi mới chính trị ở Việt Nam từ năm 1986 là",
+        "options": [
+          "Tăng cường quyền làm chủ của nhân dân",
+          "Thành lập nhà nước cách mạng mới",
+          "Thực hiện chế độ Tổng thống tập trung quyền lực",
+          "Xây dựng thể chế nhà nước Tam quyền phân lập"
+        ],
+        "answer": "Tăng cường quyền làm chủ của nhân dân"
+      },
+      {
+        "question": "Trong thời kì 1975 – 1986, Việt Nam không có hoạt động đối ngoại nào sau đây?",
+        "options": [
+          "Duy trì quan hệ với Liên Xô",
+          "Gia nhập khối liên minh châu Âu",
+          "Kí kết nhiều văn kiện hợp tác",
+          "Gia nhập tổ chức Liên hợp quốc"
+        ],
+        "answer": "Gia nhập khối liên minh châu Âu"
+      },
+      {
+        "question": "Nội dung nào sau đây là cống hiến của Hồ Chí Minh đối với cách mạng Việt Nam trong những năm 1930 – 1945?",
+        "options": [
+          "Xây dựng chế độ Dân chủ Cộng hòa không ngừng lớn mạnh",
+          "Cùng Trung ương Đảng xây dựng đường lối cách mạng",
+          "Phá thế bị bao vây cô lập đối với nhà nước cách mạng",
+          "Đề ra đường lối cách mạng xã hội chủ nghĩa ở miền Bắc"
+        ],
+        "answer": "Cùng Trung ương Đảng xây dựng đường lối cách mạng"
+      },
+      {
+        "question": "Từ sau Chiến tranh lạnh, các cường quốc có đóng góp nào sau đây cho nhân loại?",
+        "options": [
+          "Đưa chủ nghĩa khu vực phát triển thay thế cho chủ nghĩa dân tộc",
+          "Hỗ trợ hai hệ thống xã hội đối lập cùng phát triển hòa bình",
+          "Thay đổi bản chất chế độ tư bản theo hướng vì nhân dân lao động",
+          "Thúc đẩy sự phát triển khoa học công nghệ trên toàn cầu"
+        ],
+        "answer": "Thúc đẩy sự phát triển khoa học công nghệ trên toàn cầu"
+      },
+      {
+        "question": "Nội dung nào sau đây là nguyên nhân chung dẫn đến thắng lợi của các cuộc chiến tranh bảo vệ Tổ quốc ở Việt Nam từ thế kỉ X đến năm 1975?",
+        "options": [
+          "Có sự lãnh đạo sáng suốt của các lực lượng xã hội mới với đường lối đúng đắn",
+          "Mục tiêu của các cuộc chiến tranh đều mang tính chất dân tộc, dân chủ sâu sắc",
+          "Tinh thần đoàn kết, quyết tâm chiến đấu vì độc lập dân tộc, tự do cho nhân dân",
+          "Sự thống nhất trong ý chí và hành động của các lực lượng tham gia chiến đấu"
+        ],
+        "answer": "Tinh thần đoàn kết, quyết tâm chiến đấu vì độc lập dân tộc, tự do cho nhân dân"
+      },
+      {
+        "question": "Thực tiễn công cuộc đổi mới đất nước ở Việt Nam từ năm 1986 cho thấy",
+        "options": [
+          "sự kiên định mục tiêu độc lập dân tộc và con đường đi lên xã hội chủ nghĩa",
+          "việc thay đổi chế độ chính trị là nhân tố quyết định sự phát triển kinh tế",
+          "kinh tế là nhân tố quyết định bản chất và sự ổn định của chế độ chính trị",
+          "hội nhập quốc tế là điều kiện tiên quyết của tăng trưởng và ổn định xã hội"
+        ],
+        "answer": "sự kiên định mục tiêu độc lập dân tộc và con đường đi lên xã hội chủ nghĩa"
+      },
+      {
+        "question": "Nhân dân thế giới tôn vinh Hồ Chí Minh xuất phát từ một trong những cơ sở nào dưới đây?",
+        "options": [
+          "Tư tưởng cách mạng của Hồ Chí Minh gắn với cuộc đấu tranh vì tiến bộ xã hội",
+          "Hồ Chí Minh tham gia lãnh đạo cuộc đấu tranh giải phóng nhiều nước thuộc địa",
+          "Hồ Chí Minh có nhiều hoạt động giải quyết triệt để các mục tiêu lớn của thời đại",
+          "Tư tưởng cách mạng của Hồ Chí Minh là chuẩn mực chung cho toàn nhân loại"
+        ],
+        "answer": "Tư tưởng cách mạng của Hồ Chí Minh gắn với cuộc đấu tranh vì tiến bộ xã hội"
+      }
+    ],
+    "true_false": [
+      {
+        "question": "Về mối quan hệ giữa Việt Nam và Liên hợp quốc:",
+        "statements": [
+          "Tư liệu phản ánh mối quan hệ giữa Việt Nam và tổ chức quốc tế lớn nhất hành tinh",
+          "Liên hợp quốc đã giúp đỡ Việt Nam trong việc khắc phục hậu quả chiến tranh",
+          "Những hoạt động của Việt Nam đã góp phần phát huy vai trò của Liên hợp quốc trong việc đàm phán để chấm dứt chiến tranh thế giới",
+          "Việt Nam đã vận dụng sáng tạo nguyên tắc của Liên hợp quốc để xây dựng đường lối đối ngoại ngả về phe xã hội chủ nghĩa"
+        ],
+        "answers": [true, true, false, false]
+      },
+      {
+        "question": "Về cuộc kháng chiến chống thực dân Pháp (1945-1954):",
+        "statements": [
+          "Cuộc kháng chiến chống thực dân Pháp của nhân dân Việt Nam chịu tác động từ bối cảnh của tình hình thế giới",
+          "Sự ủng hộ của hệ thống các nước xã hội chủ nghĩa đã giúp Đảng Cộng sản Đông Dương có thêm quyết tâm để phát động toàn quốc kháng chiến chống thực dân Pháp",
+          "Trong cuộc kháng chiến chống thực dân Pháp, nhân dân các nước Đông Dương phải chống lại sự can thiệp của đế quốc Mĩ",
+          "Việc đề ra chủ trương, đường lối phù hợp đã giúp Đảng Cộng sản Đông Dương trở thành Đảng cầm quyền từ khi ra đời đến khi lãnh đạo các cuộc kháng chiến chống ngoại xâm"
+        ],
+        "answers": [true, false, true, false]
+      },
+      {
+        "question": "Về công cuộc đổi mới đất nước từ năm 1986:",
+        "statements": [
+          "Trong các cuộc kháng chiến chống ngoại xâm ở thế kỉ XX và công cuộc đổi mới, Đảng luôn phát huy sức mạnh dân tộc và sức mạnh thời đại",
+          "Để xây dựng thành công chủ nghĩa xã hội, cần khơi dậy khát vọng phát triển đất nước phồn vinh trong nhân dân",
+          "Đổi mới đồng thời trên nhiều lĩnh vực nhằm phát triển đất nước theo định hướng xã hội chủ nghĩa là chủ trương của Đảng Cộng sản Việt Nam từ khi ra đời",
+          "Hòa bình, ổn định là khát vọng của dân tộc Việt Nam từ thời trung đại đến hiện tại và trong tương lai"
+        ],
+        "answers": [true, true, false, true]
+      },
+      {
+        "question": "Về hành trình tìm đường cứu nước của Nguyễn Ái Quốc:",
+        "statements": [
+          "Năm 1911, Nguyễn Ái Quốc bắt đầu thực hiện quá trình ra đi tìm đường cứu nước giải phóng đồng bào",
+          "Điểm tương đồng trong hoạt động cứu nước của Nguyễn Ái Quốc với các bậc tiền bối đi trước đều là nhận thức được hạn chế của khuynh hướng tư sản",
+          "Quá trình chuyển biến tư tưởng của Nguyễn Ái Quốc là: từ chủ nghĩa yêu nước đến với chủ nghĩa Mác – Lê nin",
+          "Nguyễn Ái Quốc đã tiến hành đồng thời việc xây dựng hệ thống lý luận giải phóng dân tộc với việc chuẩn bị điều kiện cho sự thành lập các tổ chức Đảng Cộng sản ở Việt Nam"
+        ],
+        "answers": [true, false, true, true]
+      }
+    ]
+  },
+  "de5": {
+    "video": "https://www.youtube.com/embed/abc123",
+    "multiple_choice": [
+      {
+        "question": "Năm 1940, Mông Cổ định hướng phát triển đất nước theo thể chế chính trị nào sau đây?",
+        "options": ["Tư bản chủ nghĩa", "Quân chủ lập hiến", "Quân chủ chuyên chế", "Xã hội chủ nghĩa"],
+        "answer": "Xã hội chủ nghĩa"
+      },
+      {
+        "question": "Vào thế kỉ XVIII, nhà Tây Sơn tiến hành cuộc kháng chiến chống quân xâm lược nào sau đây?",
+        "options": ["Nguyên", "Xiêm", "Tần", "Hán"],
+        "answer": "Xiêm"
+      },
+      {
+        "question": "Quốc gia nào sau đây đóng vai trò quyết định trong việc thành lập Liên hợp quốc?",
+        "options": ["Mĩ", "Bỉ", "Hàn Quốc", "Nhật Bản"],
+        "answer": "Mĩ"
+      },
+      {
+        "question": "Năm 1997, quốc gia nào sau đây gia nhập vào Hiệp hội các quốc gia Đông Nam Á (ASEAN)?",
+        "options": ["Thái Lan", "Đức", "Cam-pu-chia", "Lào"],
+        "answer": "Cam-pu-chia"
+      },
+      {
+        "question": "Ý tưởng xây dựng Cộng đồng ASEAN chính thức được đề xuất trong văn bản nào sau đây?",
+        "options": [
+          "Tầm nhìn Cộng đồng ASEAN 2025",
+          "Tầm nhìn ASEAN 2020",
+          "Lộ trình xây dựng Cộng đồng ASEAN",
+          "Hiến chương ASEAN"
+        ],
+        "answer": "Tầm nhìn ASEAN 2020"
+      },
+      {
+        "question": "Năm 1945, nhân dân Việt Nam có hoạt động nào sau đây?",
+        "options": [
+          "Tổng khởi nghĩa giành chính quyền",
+          "Tiến hành cách mạng xã hội chủ nghĩa",
+          "Bài trừ lực lượng nội phản thân Mỹ",
+          "Xây dựng làng chiến đấu chống Mỹ"
+        ],
+        "answer": "Tổng khởi nghĩa giành chính quyền"
+      },
+      {
+        "question": "Nhân dân Việt Nam tiến hành kháng chiến chống thực dân Pháp (1945 – 1954) trong bối cảnh nào sau đây?",
+        "options": [
+          "Chiến tranh lạnh bùng nổ và phát triển",
+          "Trật tự hai cực I-an-ta sụp đổ hoàn toàn",
+          "Đất nước thống nhất hoàn toàn về lãnh thổ",
+          "Công thương nghiệp có bước phát triển lớn"
+        ],
+        "answer": "Chiến tranh lạnh bùng nổ và phát triển"
+      },
+      {
+        "question": "Nhân dân Việt Nam tiến hành kháng chiến chống Mỹ, cứu nước (1954 – 1975) trong bối cảnh nào sau đây?",
+        "options": [
+          "Hệ thống xã hội chủ nghĩa mở rộng",
+          "Trật tự đa cực, nhiều trung tâm hình thành",
+          "Chiến tranh lạnh hoàn toàn chấm dứt",
+          "Đất nước thống nhất về mặt lãnh thổ"
+        ],
+        "answer": "Hệ thống xã hội chủ nghĩa mở rộng"
+      },
+      {
+        "question": "Trong những năm 1995 - 2006, nhân dân Việt Nam thực hiện nhiệm vụ nào sau đây?",
+        "options": [
+          "Tiến hành cải cách ruộng đất",
+          "Đánh đổ lực lượng tay sai thân Nhật",
+          "Chống chiến lược chiến tranh đặc biệt",
+          "Công nghiệp hoá, hiện đại hoá"
+        ],
+        "answer": "Công nghiệp hoá, hiện đại hoá"
+      },
+      {
+        "question": "Nội dung nào sau đây là hoạt động đối ngoại của Phan Châu Trinh đầu thế kỉ XX?",
+        "options": [
+          "Đề nghị cải cách chế độ cai trị",
+          "Tổ chức đấu tranh chống quân phiệt Nhật",
+          "Sáng lập Hội Liên hiệp thuộc địa",
+          "Gia nhập Đảng Cộng sản Đông Dương"
+        ],
+        "answer": "Đề nghị cải cách chế độ cai trị"
+      },
+      {
+        "question": "Trong những năm 1930 - 1940, Đảng Cộng sản Đông Dương có hoạt động đối ngoại nào sau đây?",
+        "options": [
+          "Kí Hiệp định Giơ-ne-vơ với Pháp",
+          "Thiết lập quan hệ ngoại giao với Áo",
+          "Duy trì liên lạc với Quốc tế Cộng sản",
+          "Bình thường hoá quan hệ với Mỹ"
+        ],
+        "answer": "Duy trì liên lạc với Quốc tế Cộng sản"
+      },
+      {
+        "question": "Năm 1920, Nguyễn Ái Quốc có hoạt động nào sau đây?",
+        "options": [
+          "Lãnh đạo Tổng khởi nghĩa tháng Tám",
+          "Gia nhập tổ chức ASEAN",
+          "Tham gia sáng lập Đảng cộng sản Pháp",
+          "Sáng lập Mặt trận Liên Việt"
+        ],
+        "answer": "Tham gia sáng lập Đảng cộng sản Pháp"
+      },
+      {
+        "question": "Năm 1922, Liên bang Cộng hòa xã hội chủ nghĩa Xô viết ra đời đã",
+        "options": [
+          "đánh dấu hoàn thành công cuộc đấu tranh chống thù trong, giặc ngoài",
+          "chứng tỏ chế độ quân chủ chuyên chế đã hoàn toàn bị sụp đổ",
+          "đánh dấu sự phát triển của chế độ xã hội chủ nghĩa trên thế giới",
+          "đánh dấu hoàn thành công cuộc xây dựng chế độ xã hội chủ nghĩa"
+        ],
+        "answer": "đánh dấu sự phát triển của chế độ xã hội chủ nghĩa trên thế giới"
+      },
+      {
+        "question": "Nội dung nào sau đây là nguyên nhân thắng lợi của cuộc kháng chiến chống quân Thanh (1789)?",
+        "options": [
+          "Tinh thần đoàn kết của ba nước Đông Dương",
+          "Huy động được tối đa sức mạnh toàn dân tộc",
+          "Sự lãnh đạo, đường lối đúng đắn của Đảng vô sản",
+          "Quá trình suy yếu, tan rã của lực lượng phát xít"
+        ],
+        "answer": "Huy động được tối đa sức mạnh toàn dân tộc"
+      },
+      {
+        "question": "Nội dung nào sau đây là vai trò xuyên suốt của Liên hợp quốc?",
+        "options": [
+          "Định hướng thể chế chính trị cho các quốc gia thành viên",
+          "Góp phần vào sự phát triển văn hóa giáo dục của các nước",
+          "Ngăn chặn được các cuộc chiến tranh và xung đột khu vực",
+          "Xóa bỏ hoàn toàn tình trạng đói nghèo ở các quốc gia Trung Phi"
+        ],
+        "answer": "Góp phần vào sự phát triển văn hóa giáo dục của các nước"
+      },
+      {
+        "question": "Trong quá trình phát triển, Cộng đồng ASEAN có triển vọng nào sau đây?",
+        "options": [
+          "Có cơ hội nhất thể hoá về mặt chính trị",
+          "Trở thành khu vực phát triển năng động",
+          "Giải quyết triệt để \"vấn đề Campuchia\"",
+          "Kết nạp thêm thành viên ngoài khu vực"
+        ],
+        "answer": "Trở thành khu vực phát triển năng động"
+      },
+      {
+        "question": "Cuộc đấu tranh bảo vệ chủ quyền quốc gia ở Biển Đông (từ sau tháng 4 – 1975 đến nay) của quân dân Việt Nam nhằm thực hiện nhiệm vụ nào sau đây?",
+        "options": [
+          "Thực hiện giải phóng dân tộc",
+          "Bảo vệ vững chắc Tổ quốc",
+          "Đấu tranh giải phóng giai cấp",
+          "Tiến hành cách mạng dân chủ"
+        ],
+        "answer": "Bảo vệ vững chắc Tổ quốc"
+      },
+      {
+        "question": "Một trong những nhiệm vụ cơ bản của đổi mới kinh tế ở Việt Nam từ năm 1986 là",
+        "options": [
+          "thực hiện chính sách đa dạng hoá, đa phương hoá",
+          "chuyển sang nền kinh tế thị trường định hướng xã hội chủ nghĩa",
+          "xây dựng một nền văn hoá tiên tiến, đậm đà bản sắc dân tộc",
+          "xây dựng Nhà nước pháp quyền xã hội chủ nghĩa"
+        ],
+        "answer": "chuyển sang nền kinh tế thị trường định hướng xã hội chủ nghĩa"
+      },
+      {
+        "question": "Đầu thế kỉ XX, hoạt động đối ngoại của Phan Châu Trinh đã",
+        "options": [
+          "đưa ngoại giao trở thành mặt trận trong phong trào yêu nước",
+          "thúc đẩy phong trào yêu nước chống thực dân Pháp ở Đông Dương",
+          "hoàn thành cuộc cách mạng dân tộc, dân chủ ở Việt Nam",
+          "tạo cơ sở pháp lí để nhân dân đấu tranh chống Mỹ xâm lược"
+        ],
+        "answer": "thúc đẩy phong trào yêu nước chống thực dân Pháp ở Đông Dương"
+      },
+      {
+        "question": "Trong thời kì 1945 - 1954, Hồ Chí Minh có cống hiến nào sau đây đối với cách mạng Việt Nam?",
+        "options": [
+          "Lãnh đạo công cuộc xây dựng chủ nghĩa xã hội trên phạm vi cả nước",
+          "Tham gia chỉ đạo xây dựng hệ thống chính quyền dân chủ nhân dân",
+          "Kết nối và đưa đến sự hợp tác, hỗ trợ của lực lượng Đồng minh",
+          "Tìm thấy con đường cứu nước đúng đắn cho toàn thể dân tộc"
+        ],
+        "answer": "Tham gia chỉ đạo xây dựng hệ thống chính quyền dân chủ nhân dân"
+      },
+      {
+        "question": "Nội dung nào sau đây là nhận xét đúng về thế giới sau Chiến tranh lạnh?",
+        "options": [
+          "Tương quan lực lượng giữa hai hệ thống xã hội đối lập khi xây dựng trật tự thế giới mới",
+          "Sự thoả thuận, hợp tác của các cường quốc về chiến quả của cuộc Chiến tranh lạnh",
+          "Kết quả của quá trình thiết lập trật tự thế giới mới dựa vào sức mạnh thực lực quốc gia",
+          "Vai trò chi phối chủ đạo của Liên hợp quốc trong xây dựng trật tự thế giới đa cực"
+        ],
+        "answer": "Kết quả của quá trình thiết lập trật tự thế giới mới dựa vào sức mạnh thực lực quốc gia"
+      },
+      {
+        "question": "Ở Việt Nam, thắng lợi của cuộc kháng chiến chống Pháp (1945-1954) đã bảo vệ và phát huy thành quả của Cách mạng tháng Tám năm 1945 vì một trong những lí do nào sau đây?",
+        "options": [
+          "Những nền móng của chế độ xã hội chủ nghĩa được gây dựng trên các lĩnh vực",
+          "Thiết lập chế độ xã hội chủ nghĩa, tạo điều kiện giải phóng miền Nam, thống nhất đất nước",
+          "Giải phóng đất nước, tạo những tiền đề đầu tiên để cả nước đi lên chủ nghĩa chủ nghĩa xã hội",
+          "Chấm dứt ách thống trị của chủ nghĩa phát xít, đưa miền Bắc đi lên chủ nghĩa xã hội"
+        ],
+        "answer": "Giải phóng đất nước, tạo những tiền đề đầu tiên để cả nước đi lên chủ nghĩa chủ nghĩa xã hội"
+      },
+      {
+        "question": "Thắng lợi bước đầu của công cuộc Đổi mới ở Việt Nam từ năm 1986 đến nay cho thấy",
+        "options": [
+          "độc lập dân tộc là tiền đề đưa đất nước phát triển theo con đường xã hội chủ nghĩa",
+          "chính sách lấy phát triển quân sự chỉ được thực hiện trong điều kiện hoà bình",
+          "nền văn hoá tiên tiến là nhân tố quyết định thành công của kinh tế thị trường xã hội chủ nghĩa",
+          "phát triển của giáo dục và chính trị là điều kiện tiên quyết đưa đến sự tăng trưởng của kinh tế"
+        ],
+        "answer": "độc lập dân tộc là tiền đề đưa đất nước phát triển theo con đường xã hội chủ nghĩa"
+      },
+      {
+        "question": "Từ năm 1945 đến năm 1969, Hồ Chí Minh có đóng góp nào sau đây đối với cách mạng Việt Nam?",
+        "options": [
+          "Lãnh đạo nhân dân hoàn thành thắng lợi cuộc cách mạng dân tộc, dân chủ",
+          "Hoàn chỉnh hệ thống lí luận cách mạng xã hội chủ nghĩa trong chiến tranh",
+          "Hoàn thành xây dựng chính sách công nghiệp hoá, hiện đại hoá kinh tế",
+          "Tham gia hoạch định đường lối trong cuộc chiến tranh bảo vệ Tổ quốc"
+        ],
+        "answer": "Tham gia hoạch định đường lối trong cuộc chiến tranh bảo vệ Tổ quốc"
+      }
+    ],
+    "true_false": [
+      {
+        "question": "Về ảnh hưởng của bối cảnh lịch sử với việc thiết lập trật tự thế giới sau Chiến tranh lạnh:",
+        "statements": [
+          "Đoạn tư liệu cho thấy ảnh hưởng của bối cảnh lịch sử với việc thiết lập trật tự thế giới",
+          "Sự hình thành trật tự thế giới sau Chiến tranh lạnh chịu tác động từ đối đầu Đông – Tây",
+          "Thực tiễn cho thấy các trật tự thế giới sau Chiến tranh thế giới thứ hai đều chịu sự chi phối bởi lợi ích quốc gia, dân tộc",
+          "Sau Chiến tranh lạnh, trật tự thế giới được hình thành dựa vào so sánh lực lượng giữa hai hệ thống xã hội đối lập nhau"
+        ],
+        "answers": [true, true, true, false]
+      },
+      {
+        "question": "Về ý nghĩa của Cách mạng tháng Tám năm 1945 ở Việt Nam:",
+        "statements": [
+          "Đoạn tư liệu trên đề cập đến ý nghĩa của Cách mạng tháng Tám năm 1945 ở Việt Nam",
+          "Cách mạng tháng Tám năm 1945 góp phần thực hiện mục tiêu dân tộc và thời đại",
+          "Thực tiễn cho thấy Cách mạng tháng Tám (1945) ở Việt Nam diễn ra trên quy mô toàn quốc, giải quyết được triệt để mâu thuẫn cơ bản trong xã hội",
+          "Cách mạng tháng Tám (1945) ở Việt Nam đặt dưới sự lãnh đạo thống nhất của chính đảng vô sản đã lên cầm quyền, có sự kết hợp đấu tranh vũ trang với chính trị"
+        ],
+        "answers": [true, true, false, false]
+      },
+      {
+        "question": "Về đường lối xây dựng chủ nghĩa xã hội ở Việt Nam:",
+        "statements": [
+          "Đường lối xuyên suốt đi lên Chủ nghĩa xã hội của Việt Nam qua các thời kì khác nhau đều hướng tới sự phát triển vì con người",
+          "Đường lối của công cuộc Đổi mới ở Việt Nam thực hiện xoá bỏ mọi thành phần kinh tế tư bản chủ nghĩa nhằm phát triển kinh tế đi đôi với tiến bộ và công bằng xã hội",
+          "Mô hình nhà nước xã hội chủ nghĩa lí tưởng theo nguyên lý của Chủ nghĩa Mác – Lê nin đã được Việt Nam xây dựng thành công ngay khi tiến hành công cuộc Đổi mới",
+          "Hiện tượng \"cá lớn nuốt cá bé\" không còn trên phạm vi toàn thế giới khi Việt Nam quyết định đi lên xây dựng chủ nghĩa xã hội"
+        ],
+        "answers": [true, false, false, false]
+      },
+      {
+        "question": "Về phong trào Đông Du đầu thế kỉ XX:",
+        "statements": [
+          "Đoạn tư liệu trên đề cập đến vai trò của Phan Bội Châu những năm đầu thế kỉ XX",
+          "Phong trào Đông Du do Phan Châu Trinh khởi xướng thể hiện tinh thần yêu nước",
+          "Hoạt động đối ngoại của bộ phận thanh niên yêu nước đầu thế kỉ XX thể hiện tính chất cách mạng, góp phần xác lập khuynh hướng mới trong phong trào dân tộc, dân chủ ở Việt Nam",
+          "Phong trào Đông Du của thanh niên yêu nước đầu thế kỉ XX đã bước đầu xây dựng xây dựng mối liên hệ giữa phong trào yêu nước Việt Nam với cách mạng các nước châu Á và thế giới"
+        ],
+        "answers": [true, false, false, true]
+      }
+    ]
+  },
+  "de6": {
+    "video": "https://www.youtube.com/embed/abc123",
+    "multiple_choice": [
+      {
+        "question": "Nước nào sau đây tham gia Liên bang Cộng hòa xã hội chủ nghĩa Xô viết năm 1922?",
+        "options": ["Nga", "Anh", "Pháp", "Mĩ"],
+        "answer": "Nga"
+      },
+      {
+        "question": "Vào thế kỉ X, Ngô Quyền lãnh đạo nhân dân Việt Nam kháng chiến chống quân xâm lược nào sau đây?",
+        "options": ["Bắc Tống", "Nam Hán", "Minh", "Thanh"],
+        "answer": "Nam Hán"
+      },
+      {
+        "question": "Liên Hợp Quốc đề ra nguyên tắc hoạt động nào sau đây?",
+        "options": ["Ưu tiên quyền lợi cho các nước lớn mạnh", "Giúp đỡ các nước nghèo phát triển kinh tế", "Tôn trọng toàn vẹn lãnh thổ của các nước", "Chia đều nguồn tài chính cho tất cả quốc gia"],
+        "answer": "Tôn trọng toàn vẹn lãnh thổ của các nước"
+      },
+      {
+        "question": "Năm 1967, nước nào sau đây gia nhập tổ chức ASEAN?",
+        "options": ["Hà Lan", "Ấn Độ", "Hàn Quốc", "Thái Lan"],
+        "answer": "Thái Lan"
+      },
+      {
+        "question": "Nội dung nào sau đây là mục tiêu của Cộng đồng ASEAN?",
+        "options": ["Kiến tạo sự thịnh vượng cho các quốc gia", "Chấm dứt sự khác biệt về điều kiện xã hội", "Hướng tới xây dựng một nền văn hóa chung", "Thành lập một cơ quan đối ngoại chung"],
+        "answer": "Kiến tạo sự thịnh vượng cho các quốc gia"
+      },
+      {
+        "question": "Nội dung nào sau đây là bối cảnh bùng nổ Cách mạng tháng Tám năm 1945 ở Việt Nam?",
+        "options": ["Lực lượng cách mạng được chuẩn bị chu đáo", "Chiến tranh lạnh đi đến giai đoạn cuối", "Nhân dân đã giành được quyền làm chủ", "Lực lượng vũ trang cách mạng chưa ra đời"],
+        "answer": "Lực lượng cách mạng được chuẩn bị chu đáo"
+      },
+      {
+        "question": "Ngày 23-9-1945, Nhân dân Việt Nam đứng lên kháng chiến chống thực dân nào sau đây?",
+        "options": ["Đức", "Pháp", "Bỉ", "Anh"],
+        "answer": "Pháp"
+      },
+      {
+        "question": "Trong những năm 1954-1960, nhân dân miền Bắc Việt Nam thực hiện nhiệm vụ nào sau đây?",
+        "options": ["Hàn gắn vết thương chiến tranh", "Chống quân xâm lược Khơ me đỏ", "Đánh bại kế hoạch Rơve của Pháp", "Tham gia cao trào kháng Nhật"],
+        "answer": "Hàn gắn vết thương chiến tranh"
+      },
+      {
+        "question": "Đường lối Đổi mới đất nước ở Việt Nam có nội dung nào sau đây?",
+        "options": ["Thực hiện nền kinh tế hàng hóa", "Cố gắng hòa tan về văn hóa", "Giúp đỡ các nước thuộc địa", "Chống lại chủ nghĩa thực dân"],
+        "answer": "Thực hiện nền kinh tế hàng hóa"
+      },
+      {
+        "question": "Những hoạt động đối ngoại của các sĩ phu yêu nước đầu thế kỉ XX nhằm mục đích nào sau đây?",
+        "options": ["Đánh bại các triều đại phong kiến phương Bắc", "Thành lập mặt trận nhân dân chống Pháp", "Chống lại chế độ phong kiến phản động", "Truyền bá rộng rãi chủ nghĩa Mác – Lênin"],
+        "answer": "Chống lại chế độ phong kiến phản động"
+      },
+      {
+        "question": "Chính sách đối ngoại của Việt Nam hiện nay có nội dung nào sau đây?",
+        "options": ["Chú trọng quan hệ song phương và đa phương", "Lấy kinh tế quốc doanh là thành phần chủ đạo", "Tập trung khôi phục quan hệ với nhà nước Liên Xô", "Không tham gia, ủng hộ bất cứ tổ chức liên kết nào"],
+        "answer": "Chú trọng quan hệ song phương và đa phương"
+      },
+      {
+        "question": "Năm 1941, Nguyễn Ái Quốc có hoạt động nào sau đây?",
+        "options": ["Thành lập Hội thuộc địa", "Sáng lập mặt trận Việt Minh", "Đàm phán với quân Anh", "Viết di chúc cho nhân dân"],
+        "answer": "Sáng lập mặt trận Việt Minh"
+      },
+      {
+        "question": "Trong công cuộc cải cách, mở cửa đất nước, Trung Quốc đạt được thành tựu nào sau đây?",
+        "options": ["Thuyết phục Mỹ từ bỏ âm mưu bá chủ thế giới", "Đưa con người lên thám hiểm Mặt Trời", "Phát triển quan hệ đối ngoại với nhiều quốc gia", "Khắc phục được hết tình trạng tham nhũng"],
+        "answer": "Phát triển quan hệ đối ngoại với nhiều quốc gia"
+      },
+      {
+        "question": "Nội dung nào sau đây phản ánh đúng ý nghĩa thắng lợi của các cuộc kháng chiến chống ngoại xâm ở Việt Nam trước năm 1858?",
+        "options": ["Đưa đất nước đi lên chủ nghĩa xã hội", "Bảo vệ vững chắc nhà nước dân chủ", "Mở đầu kỷ nguyên độc lập, thống nhất", "Góp phần phát triển văn hóa dân tộc"],
+        "answer": "Góp phần phát triển văn hóa dân tộc"
+      },
+      {
+        "question": "Trật tự thế giới hai cực I-an-ta bị sụp đổ là do nguyên nhân nào sau đây?",
+        "options": ["Liên Xô khủng hoảng và tan rã", "Chiến tranh thế giới kết thúc", "Liên hợp quốc được thành lập", "Đế quốc Mỹ bị suy yếu, sụp đổ"],
+        "answer": "Liên Xô khủng hoảng và tan rã"
+      },
+      {
+        "question": "Nội dung nào sau đây là thách thức của Cộng đồng ASEAN?",
+        "options": ["Sự chênh lệch về trình độ phát triển", "Có nhiều điểm tương đồng về văn hóa", "Nhu cầu hợp tác của các thành viên", "Chiến tranh lạnh bao trùm thế giới"],
+        "answer": "Sự chênh lệch về trình độ phát triển"
+      },
+      {
+        "question": "Cuộc kháng chiến chống Mỹ, cứu nước của nhân dân Việt Nam diễn ra trong bối cảnh nào sau đây?",
+        "options": ["Đế quốc Anh giúp thực dân Pháp trở lại xâm lược Đông Dương", "Thực dân Pháp cấu kết với quân Trung Hoa Dân quốc chống phá", "Trật tự thế giới đa cực, nhiều trung tâm xác lập và phát triển", "Thực dân Pháp thi hành không nghiêm chỉnh Hiệp định Giơ ne vơ"],
+        "answer": "Thực dân Pháp thi hành không nghiêm chỉnh Hiệp định Giơ ne vơ"
+      },
+      {
+        "question": "Một trong những thành tựu cơ bản của Việt Nam trong công cuộc Đổi mới đất nước là",
+        "options": ["thanh toán triệt để tình trạng nghèo đói", "giải phóng miền Nam, thống nhất đất nước", "chấm dứt được tình trạng phân hóa xã hội", "giảm tỉ lệ người đói nghèo trong xã hội"],
+        "answer": "giảm tỉ lệ người đói nghèo trong xã hội"
+      },
+      {
+        "question": "Trong thời kì 1945 – 1954, những hoạt động đối ngoại của nước Việt Nam Dân chủ Cộng hòa có tác dụng nào sau đây?",
+        "options": ["Trực tiếp đánh bại thực dân Pháp", "Xây dựng thành công nhà nước mới", "Nâng cao uy, tín địa vị của quốc gia", "Đánh bại chủ nghĩa thực dân của Mĩ"],
+        "answer": "Nâng cao uy, tín địa vị của quốc gia"
+      },
+      {
+        "question": "Nội dung nào sau đây là cống hiến của Hồ Chí Minh đối với cách mạng Việt Nam trong những năm 1920 – 1930?",
+        "options": ["Lãnh đạo nhân dân tham gia phong trào cộng sản, công nhân quốc tế", "Phát triển lí luận cách mạng giải phóng nhân loại đúng đắn, sáng tạo", "Góp phần xây dựng, phát triển mối quan hệ giữa các dân tộc bị áp bức", "Xây dựng học thuyết Mác – Lênin về vấn đề giải phóng dân tộc và xã hội"],
+        "answer": "Lãnh đạo nhân dân tham gia phong trào cộng sản, công nhân quốc tế"
+      },
+      {
+        "question": "Các trật tự thế giới từ sau Chiến tranh thế giới thứ hai đến nay có đặc điểm nào sau đây?",
+        "options": ["Thế giới chia thành nhiều cực, nhiều phe đối lập, cạnh tranh gay gắt", "Thể hiện vị thế, vai trò của các cường quốc trong các vấn đề quốc tế", "Đảm bảo sự cân bằng về quyền lực và quyền lợi giữa các cường quốc", "Có tổ chức quốc tế duy trì nên đảm bảo được tính ổn định và phát triển"],
+        "answer": "Thể hiện vị thế, vai trò của các cường quốc trong các vấn đề quốc tế"
+      },
+      {
+        "question": "Nội dung nào sau đây là đóng góp chung của các cuộc chiến tranh bảo vệ Tổ quốc ở Việt Nam từ thế kỉ X đến năm 1979?",
+        "options": ["Bảo vệ độc lập Tổ quốc và phát huy quyền làm chủ của quần chúng nhân dân", "Góp phần bảo tồn, phát huy các giá trị văn hóa và truyền thống dân tộc", "Thúc đẩy sự thống nhất quốc gia và mở rộng chủ quyền, lãnh thổ của Tổ quốc", "Xóa bỏ ách nô dịch của chủ nghĩa thực dân, hoàn thành giải phóng dân tộc"],
+        "answer": "Góp phần bảo tồn, phát huy các giá trị văn hóa và truyền thống dân tộc"
+      },
+      {
+        "question": "Quá trình đổi mới đất nước ở Việt Nam từ năm 1986 cho thấy",
+        "options": ["đổi mới về tư duy là nhân tố mở đường đưa đất nước thoát khỏi khủng hoảng", "sức mạnh của dân tộc sẽ hình thành và phát triển khi có sự giúp đỡ của quốc tế", "quần chúng là lực lượng sáng tạo ra đường lối và tạo nên thành quả cách mạng", "truyền thống yêu nước đã giúp nhân dân hoàn thành việc chế độ xã hội mới"],
+        "answer": "đổi mới về tư duy là nhân tố mở đường đưa đất nước thoát khỏi khủng hoảng"
+      },
+      {
+        "question": "Đối với Việt Nam hiện nay, phong cách, đạo đức Hồ Chí Minh có giá trị nào sau đây?",
+        "options": ["Góp phần xây dựng nhà nước pháp quyền xã hội chủ nghĩa trong sạch, vững mạnh", "Nhận được viện trợ lớn của thế giới trong công cuộc xây dựng và bảo vệ Tổ quốc", "Bổ sung, hoàn chỉnh đường lối Đổi mới nhằm phát huy được thời cơ và thách thức", "Tập hợp được sức mạnh của nhân dân trong việc xây dựng chế độ dân chủ cộng hòa"],
+        "answer": "Góp phần xây dựng nhà nước pháp quyền xã hội chủ nghĩa trong sạch, vững mạnh"
+      }
+    ],
+    "true_false": [
+      {
+        "question": "Về thiện chí hòa bình của Việt Nam trong kháng chiến chống Pháp:",
+        "statements": [
+          "Tư liệu phản ánh về thiện chí hòa bình của Việt Nam trong việc giải quyết mối quan hệ với thực dân Pháp",
+          "Đấu tranh ngoại giao và quân sự có mối quan hệ mật thiết với nhau và cùng dẫn tới thắng lợi của kháng chiến",
+          "Để có hòa bình thực sự, nhân dân Việt Nam đã phải tiến hành cuộc chiến tranh cách mạng lâu dài và gian khổ",
+          "Cơ sở để đi tới việc chấm dứt chiến tranh là thiện chí của các bên tham chiến và việc tôn trọng các quyền dân tộc cơ bản của Pháp và Việt Nam"
+        ],
+        "answers": [true, true, true, false]
+      },
+      {
+        "question": "Về sự phát triển của ASEAN:",
+        "statements": [
+          "Năm 1967, Hiệp hội các quốc gia Đông Nam Á (ASEAN) ra đời",
+          "Quá trình phát triển thành viên của ASEAN diễn ra nhanh chóng và thuận lợi",
+          "Cộng đồng ASEAN được thành lập trên cơ sở sự tương đồng về mục tiêu và con đường phát triển của các quốc gia",
+          "Để duy trì sự ổn định và phát triển, Cộng đồng ASEAN cần tăng cường sự gắn kết và thống nhất thể chế chính trị"
+        ],
+        "answers": [true, false, false, false]
+      },
+      {
+        "question": "Về chiến thắng Điện Biên Phủ trên không:",
+        "statements": [
+          "Tư liệu phản ánh cuộc đối đầu quyết liệt giữa Việt Nam và Hoa Kì trên bàn đàm phán ngoại giao",
+          "Chiến thắng \"Điện Biên Phủ trên không\" diễn ra trên địa bàn miền Bắc Việt Nam",
+          "Chiến thắng \"Điện Biên Phủ trên không\" phản ánh tinh thần chủ động, mưu trí, sáng tạo của nghệ thuật vừa đánh vừa đàm của Việt Nam",
+          "Để giành được thắng lợi trong trận \"Điện Biên Phủ trên không\", Việt Nam đã huy động lực lượng ở khắp mọi miền Tổ quốc"
+        ],
+        "answers": [false, true, true, false]
+      },
+      {
+        "question": "Về cống hiến của Hồ Chí Minh:",
+        "statements": [
+          "Tư liệu phản ánh về cống hiến của Hồ Chí Minh cho dân tộc Việt Nam",
+          "Hồ Chí Minh sáng lập Đảng Cộng sản Việt Nam và soạn ra Cương lĩnh cách mạng trong thời kì quá độ ở Việt Nam",
+          "Sự kết hợp giữa lòng yêu nước với chủ nghĩa dân tộc vô sản đã tạo nên nhân cách cao đẹp của Hồ Chí Minh",
+          "Bằng việc khi nghiêng sang \"tả\", lúc thiên về \"hữu\", Hồ Chí Minh đã thể hiện sự linh hoạt, mềm dẻo trong quá trình chỉ đạo cách mạng"
+        ],
+        "answers": [true, false, false, false]
+      }
+    ]
+  },
+  "de7": {
+    "video": "https://www.youtube.com/embed/abc123",
+    "multiple_choice": [
+      {
+        "question": "Tháng 9 – 1948, quốc gia nào sau đây ở Đông Bắc Á được thành lập và đi lên xây dựng chủ nghĩa xã hội?",
+        "options": ["Hàn Quốc", "Việt Nam", "Triều Tiên", "Thái Lan"],
+        "answer": "Triều Tiên"
+      },
+      {
+        "question": "Thế kỉ XV, quân dân triều đại nào sau đây đã tiến hành cuộc kháng chiến chống quân xâm lược Minh?",
+        "options": ["Lý", "Hồ", "Trần", "Đinh"],
+        "answer": "Hồ"
+      },
+      {
+        "question": "Năm 1945, quốc gia nào sau đây gia nhập Liên hợp quốc?",
+        "options": ["Anh", "Việt Nam", "Hàn Quốc", "Đức"],
+        "answer": "Anh"
+      },
+      {
+        "question": "Quốc gia nào sau đây là thành viên sáng lập Hiệp hội các quốc gia Đông Nam Á (ASEAN)?",
+        "options": ["Mi-an-ma", "Bru-nây", "Xin-ga-po", "Cam-pu-chia"],
+        "answer": "Xin-ga-po"
+      },
+      {
+        "question": "Nội dung nào sau đây là bối cảnh lịch sử dẫn đến sự thành lập Hiệp hội các quốc gia Đông Nam Á (ASEAN)?",
+        "options": ["Xu thế khu vực hoá xuất hiện, ngày càng phát triển mạnh mẽ", "Các nước Đông Nam Á đã hoàn thành công nghiệp hóa", "Xu thế toàn cầu hoá xuất hiện, ngày càng phát triển mạnh mẽ", "Liên Xô và Mĩ đã tuyên bố chấm dứt cuộc Chiến tranh lạnh"],
+        "answer": "Xu thế khu vực hoá xuất hiện, ngày càng phát triển mạnh mẽ"
+      },
+      {
+        "question": "Nội dung nào sau đây là bối cảnh bùng nổ Cách mạng tháng Tám năm 1945 ở Việt Nam?",
+        "options": ["Phát xít Nhật đầu hàng Đồng minh", "Thực dân Pháp đầu hàng phát xít Đức", "Thực dân Anh bị mất hết thuộc địa", "Chế độ phong kiến bị hoàn toàn sụp đổ"],
+        "answer": "Phát xít Nhật đầu hàng Đồng minh"
+      },
+      {
+        "question": "Nhân dân Việt Nam tiến hành kháng chiến chống thực dân Pháp (1945 – 1954) nhằm mục đích nào sau đây?",
+        "options": ["Xóa bỏ chế độ cộng hoà", "Thống nhất ba nước Đông Dương", "Bảo vệ độc lập, chủ quyền", "Thủ tiêu chế độ thực dân kiểu mới"],
+        "answer": "Bảo vệ độc lập, chủ quyền"
+      },
+      {
+        "question": "Trong thời kì 1954-1960, phong trào nào sau đây đã làm lung lay tận gốc chính quyền tay sai Ngô Đình Diệm?",
+        "options": ["Đồng khởi", "Cần vương", "Dạy tốt", "Học tốt"],
+        "answer": "Đồng khởi"
+      },
+      {
+        "question": "Nội dung nào sau đây là kết quả công cuộc Đổi mới đất nước của Việt Nam (từ năm 1986 đến nay)?",
+        "options": ["Thành công bước đầu", "Hoàn toàn thất bại", "Hoàn toàn thành công", "Thất bại về chính trị"],
+        "answer": "Thành công bước đầu"
+      },
+      {
+        "question": "Nội dung nào sau đây là hoạt động đối ngoại của Nguyễn Ái Quốc (1918 – 1930)?",
+        "options": ["Sáng lập Hội Liên hiệp thuộc địa", "Liên hệ với lực lượng Đồng minh", "Thành lập Việt Nam Quang phục Hội", "Thành lập Hội Chấn Hoa Hưng Á"],
+        "answer": "Sáng lập Hội Liên hiệp thuộc địa"
+      },
+      {
+        "question": "Trong kháng chiến chống thực dân Pháp (1945 – 1954), Việt Nam có hoạt động đối ngoại nào sau đây?",
+        "options": ["Kí Hiệp định Pari với Hoa kỳ", "Gia nhập Hiệp hội các quốc gia Đông Nam Á", "Kí Hiệp định Sơ bộ với Pháp", "Bình thường hoá quan hệ ngoại giao với Mỹ"],
+        "answer": "Kí Hiệp định Sơ bộ với Pháp"
+      },
+      {
+        "question": "Năm 1910, Nguyễn Ái Quốc có hoạt động nào sau đây?",
+        "options": ["Học tập tại trường Quốc Học Huế", "Sáng lập Đảng Cộng sản Việt Nam", "Dạy học tại trường Dục Thanh", "Thành lập Mặt trận Việt Minh"],
+        "answer": "Dạy học tại trường Dục Thanh"
+      },
+      {
+        "question": "Cách mạng tháng Hai năm 1917 ở Nga đã",
+        "options": ["đưa nước Nga ra khỏi cuộc Chiến tranh thế giới", "lật đổ được chế độ quân chủ chuyên chế", "lật đổ được Chính phủ tư sản lâm thời", "giải phóng các dân tộc khỏi chủ nghĩa tư bản"],
+        "answer": "lật đổ được chế độ quân chủ chuyên chế"
+      },
+      {
+        "question": "Cuộc kháng chiến chống thực dân Pháp xâm lược (1858 - 1884) của nhà Nguyễn thất bại là do",
+        "options": ["sự phản bội ngay từ đầu của vua quan", "không có thái độ kiên quyết chống Pháp ngay từ đầu", "nhân dân không cùng triều đình đứng lên chống Pháp", "không có đường lối kháng chiến đúng đắn"],
+        "answer": "không có đường lối kháng chiến đúng đắn"
+      },
+      {
+        "question": "Quyết định nào sau đây của Hội nghị I-an-ta (2-1945) đã góp phần thúc đẩy Chiến tranh thế giới thứ hai nhanh chóng kết thúc?",
+        "options": ["Thống nhất mục tiêu chung là tiêu diệt tận gốc chủ nghĩa phát xít Đức, Nhật", "Thành lập tổ chức Hội quốc liên nhằm duy trì hòa bình và an ninh thế giới", "Thỏa thuận về việc đóng quân và phân chia phạm vi ảnh hưởng", "Khôi phục lại nền kinh tế thế giới sau khi chiến tranh kết thúc"],
+        "answer": "Thống nhất mục tiêu chung là tiêu diệt tận gốc chủ nghĩa phát xít Đức, Nhật"
+      },
+      {
+        "question": "Trong giai đoạn 1979 – 1991, quan hệ giữa Việt Nam và ASEAN đối đầu, căng thẳng vì lí do nào sau đây?",
+        "options": ["Tác động từ cục diện hai cực, hai phe", "Tác động của chiến tranh thế giới", "Mặt trái của xu thế toàn cầu hoá", "Mâu thuẫn Đông – Tây xuất hiện"],
+        "answer": "Tác động từ cục diện hai cực, hai phe"
+      },
+      {
+        "question": "Trong cuộc kháng chiến chống thực dân Pháp (1945-1954), thắng lợi nào sau đây quân dân Việt Nam đã khai thông con đường liên lạc với các nước xã hội chủ nghĩa?",
+        "options": ["Chiến dịch Hồ Chí Minh", "Chiến thắng Núi Thành", "Chiến dịch Biên giới", "Chiến thắng Bình Giã"],
+        "answer": "Chiến dịch Biên giới"
+      },
+      {
+        "question": "Trong đường lối Đổi mới (1986), Đảng Cộng sản Việt Nam chọn đổi mới kinh tế là trọng tâm vì lí do nào sau đây?",
+        "options": ["Nền kinh tế đất nước đang khủng hoảng trầm trọng", "Nền kinh tế thế giới rơi vào khủng hoảng trầm trọng", "Hệ thống xã hội chủ nghĩa phát triển vượt bậc", "Đất nước chưa có sự thống nhất về mặt nhà nước"],
+        "answer": "Nền kinh tế đất nước đang khủng hoảng trầm trọng"
+      },
+      {
+        "question": "Nội dung nào sau đây là mục đích hoạt động đối ngoại của Phan Bội Châu những năm đầu thế kỉ XX?",
+        "options": ["Tìm kiếm sự giúp đỡ bên ngoài chống phong kiến, cải cách đất nước", "Tìm kiếm sự giúp đỡ bên ngoài chống Pháp, giành độc lập dân tộc", "Hoàn thành cuộc cách mạng xã hội chủ nghĩa ở Việt Nam", "Tạo cơ sở pháp lí để nhân dân kháng chiến chống Pháp"],
+        "answer": "Tìm kiếm sự giúp đỡ bên ngoài chống Pháp, giành độc lập dân tộc"
+      },
+      {
+        "question": "Trong thời kì 1954 - 1975, Hồ Chí Minh có cống hiến nào sau đây đối với cách mạng Việt Nam?",
+        "options": ["Xây dựng đường lối cho công cuộc Đổi mới đất nước", "Tham gia chỉ đạo xây dựng chủ nghĩa xã hội ở miền Bắc", "Hoàn thành công cuộc xây dựng chủ nghĩa xã hội trên cả nước", "Góp phần mở đầu hoạt động đối ngoại Đảng của Việt Nam"],
+        "answer": "Tham gia chỉ đạo xây dựng chủ nghĩa xã hội ở miền Bắc"
+      },
+      {
+        "question": "Quá trình hình thành của Trật tự hai cực I-an-ta có đặc điểm nào sau đây?",
+        "options": ["Là hệ quả trực tiếp của xu thế hoà hoãn Đông - Tây", "Bắt đầu diễn ra từ khi chiến tranh thế giới kết thúc", "Chịu sự tác động, chi phối trực tiếp của Liên hợp quốc", "Có sự thoả hiệp giữa các cường quốc vì lợi ích quốc gia"],
+        "answer": "Có sự thoả hiệp giữa các cường quốc vì lợi ích quốc gia"
+      },
+      {
+        "question": "Thực tế vấn đề thời cơ trong Cách mạng tháng Tám (1945), Tổng tiến công và nổi dậy Xuân (1975) ở Việt Nam đều cho thấy",
+        "options": ["kẻ thù của cách mạng cũng là kẻ thù chung của loài người tiến bộ bị tiêu diệt hoàn toàn", "quá trình vận động làm suy yếu kẻ thù của lực lượng cách mạng thúc đẩy thời cơ chín mồi", "thời cơ chủ yếu dựa vào những yếu tố khách quan do lực lượng cách mạng tạo lập thế", "bên cạnh sự xuất hiện của thời cơ cũng đồng thời nguy cơ lớn cho lực lượng cách mạng"],
+        "answer": "quá trình vận động làm suy yếu kẻ thù của lực lượng cách mạng thúc đẩy thời cơ chín mồi"
+      },
+      {
+        "question": "Thắng lợi bước đầu của công cuộc Đổi mới ở Việt Nam từ năm 1986 đến nay cho thấy",
+        "options": ["sự thay đổi trong nhận thức về kinh tế thị trường là tiến bộ chung của nhân loại", "hoàn thành xây dựng nông thôn mới có vai trò quyết định trong giữ gìn hoà bình", "xây dựng thế trận quốc phòng toàn dân là yếu tố tiên quyết trong phát triển kinh tế", "chủ nghĩa xã hội là phù hợp với thực tiễn của mọi quốc gia trên thế giới hiện nay"],
+        "answer": "sự thay đổi trong nhận thức về kinh tế thị trường là tiến bộ chung của nhân loại"
+      },
+      {
+        "question": "Nội dung nào sau đây là đóng góp của Nguyễn Ái Quốc cho cách mạng Việt Nam trong thời kì 1930 - 1945?",
+        "options": ["Lãnh đạo nhân dân Việt Nam hoàn thành cách mạng dân tộc dân chủ nhân dân", "Phác thảo và hoàn thành hai ngọn cờ độc lập dân tộc, chủ nghĩa xã hội cho dân tộc", "Lãnh đạo hoàn thành triệt để nhiệm vụ tư sản dân quyền và thổ địa cách mạng", "Phác thảo và từng bước hoàn chỉnh, bổ sung đường lối chiến chiến lược cách mạng"],
+        "answer": "Phác thảo và từng bước hoàn chỉnh, bổ sung đường lối chiến chiến lược cách mạng"
+      }
+    ],
+    "true_false": [
+      {
+        "question": "Về sự xói mòn và sụp đổ của Trật tự hai cực I-an-ta:",
+        "statements": [
+          "Thắng lợi của cách mạng Trung Quốc năm 1949 thể hiện sự suy yếu và sụp đổ của hệ thống tư bản chủ nghĩa sau Chiến tranh lạnh",
+          "Sự lớn mạnh của các quốc gia không phân biệt thể chế chính trị góp phần dẫn đến sự xói mòn và sụp đổ của Trật tự hai cực I-an-ta",
+          "Sự hình thành và tồn tại của trật tự thế giới trong Chiến tranh lạnh cho thấy sự phân tuyến triệt để giữa hai hệ thống xã hội đối lập",
+          "Thắng lợi của phong trào giải phóng dân tộc và sự phát triển của Nhật Bản, Tây Âu góp phần hình thành trật tự thế giới mới sau Chiến tranh lạnh"
+        ],
+        "answers": [false, true, true, false]
+      },
+      {
+        "question": "Về đường lối và thắng lợi của Cách mạng tháng Tám năm 1945:",
+        "statements": [
+          "Cách mạng tháng Tám sử dụng bạo lực cách mạng, coi trọng nhiệm vụ chống phong kiến hơn chống đế quốc",
+          "Thắng lợi của Cách mạng tháng Tám đã hoàn thành cuộc cách mạng dân tộc dân chủ nhân dân trên cả nước",
+          "Thắng lợi của Tổng khởi nghĩa tháng Tám có sự kết hợp hài hoà giữa địa bàn nông thôn và thành thị, mở ra kỷ nguyên giải phóng xã hội, giải phóng con người",
+          "Cách mạng tháng Tám có tính chất dân tộc điển hình vì đã xây dựng được một hình thức chính quyền nhà nước rộng rãi hơn chính quyền công nông"
+        ],
+        "answers": [false, false, false, true]
+      },
+      {
+        "question": "Về nền kinh tế thị trường định hướng xã hội chủ nghĩa ở Việt Nam:",
+        "statements": [
+          "Nền kinh tế thị trường là thành tựu về cơ sở lí luận cũng như trên thực tiễn đã được xây dựng đầu tiên ở Việt Nam",
+          "Nền kinh tế thị trường, định hướng xã hội chủ nghĩa được Việt Nam thực hiện ngay sau đại thắng mùa Xuân năm 1975",
+          "Về bản chất kinh tế thị trường định hướng xã hội chủ nghĩa là thành tựu chung của nhân loại được phát triển linh hoạt, sáng tạo, phù hợp với định hướng phát triển của Việt Nam",
+          "Xây dựng nền kinh hàng hoá nhiều thành phần vận hành theo cơ chế thị trường có sự quản lí của Nhà nước đã hoàn thành công cuộc xây dựng chủ nghĩa xã hội ở Việt Nam"
+        ],
+        "answers": [false, false, true, false]
+      },
+      {
+        "question": "Về hoạt động đối ngoại của Nguyễn Ái Quốc những năm 20 thế kỉ XX:",
+        "statements": [
+          "Bảng thông tin trên đề cập đến hoạt động đối ngoại của Nguyễn Ái Quốc trong những năm 20 của thế kỉ XX",
+          "Nguyễn Ái Quốc đã đứng trên lập trường của chiến sĩ cộng sản khi tham gia hoạt động trong Đảng Xã hội Pháp",
+          "Hoạt động đối ngoại của Nguyễn Ái Quốc 20 năm đầu thế kỉ XX thể hiện tinh thần yêu nước, góp phần xác lập khuynh hướng cách mạng mới ở Việt Nam",
+          "Những hoạt động đối ngoại Phan Bội Châu, Phan Châu Trinh và Nguyễn Ái Quốc đều hướng đến mục tiêu cuối cùng là giành độc lập cho dân tộc Việt Nam"
+        ],
+        "answers": [true, false, true, true]
+      }
+    ]
+  },
+  "de8": {
+    "video": "https://www.youtube.com/embed/abc123",
+    "multiple_choice": [
+      {
+        "question": "Từ năm 1991 đến nay, quốc gia nào sau đây phát triển đất nước theo chế độ xã hội chủ nghĩa?",
+        "options": ["Liên Xô", "Liên bang Nga", "Thổ Nhĩ Kì", "Trung Quốc"],
+        "answer": "Trung Quốc"
+      },
+      {
+        "question": "Năm 1858, quân dân triều đại nào sau đây đã tiến hành cuộc kháng chiến chống thực dân Pháp xâm lược?",
+        "options": ["Tây Sơn", "Nguyễn", "Trần", "Đinh"],
+        "answer": "Nguyễn"
+      },
+      {
+        "question": "Nội dung nào sau đây là vai trò Liên hợp quốc?",
+        "options": ["Thúc đẩy hợp tác quốc tế về kinh tế, tài chính", "Chấm dứt chiến tranh thế giới thứ hai", "Thúc đẩy cách mạng công nghiệp lần thứ nhất", "Chấm dứt chiến tranh thế giới thứ nhất"],
+        "answer": "Thúc đẩy hợp tác quốc tế về kinh tế, tài chính"
+      },
+      {
+        "question": "Năm 1999, Hiệp hội các quốc gia Đông Nam Á (ASEAN) kết nạp thành viên nào sau đây?",
+        "options": ["Ma-lai-xi-a", "Hàn Quốc", "Nhật Bản", "Cam-pu-chia"],
+        "answer": "Cam-pu-chia"
+      },
+      {
+        "question": "Cộng đồng nào sau đây là trụ cột của Cộng đồng ASEAN?",
+        "options": ["Quân sự", "Kinh tế", "Giáo dục", "Khoa học"],
+        "answer": "Kinh tế"
+      },
+      {
+        "question": "Trong Tổng khởi nghĩa năm 1945, nhân dân Việt Nam tiến hành hoạt động nào sau đây?",
+        "options": ["Đánh đuổi phát xít Nhật", "Tham gia Hội nghị thành lập Đảng", "Thành lập chính phủ công nông", "Tiêu diệt phát xít Đức"],
+        "answer": "Đánh đuổi phát xít Nhật"
+      },
+      {
+        "question": "Nhân dân Việt Nam tiến hành kháng chiến chống thực dân Pháp (1945 – 1954) trong bối cảnh nào sau đây?",
+        "options": ["Chủ nghĩa xã hội không còn là hệ thống", "Chiến tranh lạnh chấm dứt", "Cục diện đối đầu Đông – Tây căng thẳng", "Trật tự hai cực I-an-ta sụp đổ"],
+        "answer": "Cục diện đối đầu Đông – Tây căng thẳng"
+      },
+      {
+        "question": "Trong thời kì 1954-1960, miền Bắc Việt Nam thực hiện nhiệm vụ nào sau đây?",
+        "options": ["Cải cách ruộng đất", "Trực tiếp chống Mỹ", "Tiến hành Đổi mới", "Gia nhập ASEAN"],
+        "answer": "Cải cách ruộng đất"
+      },
+      {
+        "question": "Nội dung nào sau đây là nhiệm vụ của nhân dân Việt Nam trong giai đoạn 1996 - 2006?",
+        "options": ["Đẩy mạnh công nghiệp hoá", "Tiến hành kháng chiến chống Mỹ", "Hoàn thành cách mạng xanh", "Chống chiến tranh phá hoại của Mỹ"],
+        "answer": "Đẩy mạnh công nghiệp hoá"
+      },
+      {
+        "question": "Nội dung nào sau đây là hoạt động đối ngoại của Đảng Cộng sản Đông Dương (1930 - 1945)?",
+        "options": ["Thiết lập quan hệ ngoại giao với Liên Xô", "Bình thường hoá quan hệ với Mỹ", "Tiến hành phong trào Đông Du", "Duy trì liên lạc với Quốc tế Cộng sản"],
+        "answer": "Duy trì liên lạc với Quốc tế Cộng sản"
+      },
+      {
+        "question": "Trong kháng chiến chống Mỹ, cứu nước (1954 – 1975), Việt Nam có hoạt động đối ngoại nào sau đây?",
+        "options": ["Kí Hiệp định Pari với Hoa kỳ", "Gia nhập Liên hợp quốc", "Kí Hiệp định Sơ bộ với Pháp", "Hợp tác toàn diện với Nga"],
+        "answer": "Kí Hiệp định Pari với Hoa kỳ"
+      },
+      {
+        "question": "Yếu tố nào sau đây ảnh hưởng đến cuộc đời và sự nghiệp của Hồ Chí Minh?",
+        "options": ["Cách mạng công nghiệp 4.0 bùng nổ", "Xu thế hoà hoãn Đông – Tây xuất hiện", "Đất nước bị mất độc lập", "Chiến tranh lạnh chấm dứt"],
+        "answer": "Đất nước bị mất độc lập"
+      },
+      {
+        "question": "Cách mạng tháng Mười năm 1917 ở Nga đã",
+        "options": ["hoàn thành cuộc cách mạng văn hoá vô sản", "lật đổ được chế độ quân chủ chuyên chế", "lật đổ được Chính phủ tư sản lâm thời", "giải phóng loài người khỏi chế độ phát xít"],
+        "answer": "lật đổ được Chính phủ tư sản lâm thời"
+      },
+      {
+        "question": "Nội dung nào sau đây là nguyên nhân chủ quan dẫn đến thắng lợi của các cuộc kháng chiến bảo vệ Tổ quốc của nhân dân Việt Nam trước Cách mạng Tháng Tám 1945?",
+        "options": ["Cuộc chiến tranh mang tính chính nghĩa", "Cuộc chiến tranh mang tính phi nghĩa", "Việt Nam có sức mạnh vượt trội kẻ thù", "Việt Nam nhận được ủng hộ từ bên ngoài"],
+        "answer": "Cuộc chiến tranh mang tính chính nghĩa"
+      },
+      {
+        "question": "Nội dung nào sau đây không phải là nguyên nhân dẫn đến Trật tự hai cực I-an-ta sụp đổ?",
+        "options": ["Xu thế hòa hoãn trong quan hệ quốc tế", "Mĩ - Liên Xô xung đột trực tiếp về quân sự", "Sự tốn kém trong chạy đua vũ trang kéo dài", "Sự vươn lên mạnh mẽ của Nhật Bản và Đức"],
+        "answer": "Mĩ - Liên Xô xung đột trực tiếp về quân sự"
+      },
+      {
+        "question": "Nhận xét nào sau đây phản ánh đúng về hoạt động của Hiệp hội các quốc gia Đông Nam Á (ASEAN) trong giai đoạn 1967 - 1976?",
+        "options": ["Phát triển nền kinh tế kế hoạch hoá, tập trung xã hội chủ nghĩa", "Xây dựng và hoàn chỉnh được về thể chế chính trị, cơ cấu tổ chức", "Hợp tác kinh tế trong nội bộ tổ chức có những tiến triển mạnh mẽ", "Tập trung chủ yếu giải quyết những vấn đề về an ninh, chính trị"],
+        "answer": "Tập trung chủ yếu giải quyết những vấn đề về an ninh, chính trị"
+      },
+      {
+        "question": "Nội dung nào sau đây là tác động của chiến thắng \"Điện Biên Phủ trên không\" (1972) đến cách mạng Việt Nam?",
+        "options": ["Góp phần kết thúc thắng lợi cuộc kháng chiến chống Mĩ", "Mở ra quá trình đàm phán ngoại giao", "Đánh dấu hoàn thành thắng lợi của cuộc tổng khởi nghĩa", "Kết thúc quá trình chống ngoại xâm"],
+        "answer": "Mở ra quá trình đàm phán ngoại giao"
+      },
+      {
+        "question": "Trong quá trình Đổi mới đất nước (từ năm 1986), Việt Nam đã",
+        "options": ["thay đổi mục tiêu chủ nghĩa xã hội", "thay đổi cách thức quản lý kinh tế", "hạn chế phát triển kinh tế tri thức", "hạn chế thành phần kinh tế tư nhân"],
+        "answer": "thay đổi cách thức quản lý kinh tế"
+      },
+      {
+        "question": "Nội dung nào sau đây là ý nghĩa hoạt động ngoại giao kí kết Hiệp định Pari về chấm dứt chiến tranh, lập lại hòa bình ở Việt Nam (1973)?",
+        "options": ["Mở ra một kỉ nguyên mới độc lập và thống nhất cho dân tộc Việt Nam", "Nhiệm vụ \"đánh cho Mĩ cút\" của nhân dân Việt Nam cơ bản hoàn thành", "Tạo ra thời cơ thuận lợi để hai miền Nam - Bắc thống nhất đất nước về mặt chính trị", "Đánh dấu kết thúc cuộc đấu tranh chống chủ nghĩa thực dân của nhân dân Việt Nam"],
+        "answer": "Nhiệm vụ \"đánh cho Mĩ cút\" của nhân dân Việt Nam cơ bản hoàn thành"
+      },
+      {
+        "question": "Trong thời kì 1930 - 1945, Hồ Chí Minh có cống hiến nào sau đây đối với cách mạng Việt Nam?",
+        "options": ["Hoàn chỉnh công cuộc cải tạo quan hệ sản xuất ở miền Bắc", "Tham gia chỉ đạo xây dựng chủ nghĩa xã hội ở miền Bắc", "Hoàn thành công cuộc cải cách ruộng đất ở miền Bắc", "Góp phần mở đầu hoạt động đối ngoại Đảng của Việt Nam"],
+        "answer": "Góp phần mở đầu hoạt động đối ngoại Đảng của Việt Nam"
+      },
+      {
+        "question": "Sự thành lập và phát triển của Liên hợp quốc cùng sự tồn tại của các trật tự thế giới sau Chiến tranh thế giới thứ hai chứng tỏ",
+        "options": ["tình hình thế giới liên tục căng thẳng do tác động từ Chiến tranh lạnh", "các cường quốc tư bản chủ nghĩa chi phối hoàn toàn quan hệ quốc tế", "vai trò của các cường quốc trong sự phát triển của quan hệ quốc tế", "có sự đối lập gay gắt trên mọi lĩnh vực giữa hai hệ thống xã hội đối lập"],
+        "answer": "vai trò của các cường quốc trong sự phát triển của quan hệ quốc tế"
+      },
+      {
+        "question": "Thực tiễn 30 năm chiến tranh giải phóng dân tộc (1945-1975) ở Việt Nam cho thấy quá trình",
+        "options": ["liên tục chịu sự tác động trực tiếp của cuộc Chiến tranh lạnh và xu thế toàn cầu hoá", "thực hiện liên tục nhiệm vụ cách mạng chủ nghĩa xã hội và giải phóng dân tộc", "liên minh công - nông - tư sản giữ vai trò là lực lượng nòng cốt trong cách mạng", "chủ động lựa chọn cách đánh là đỉnh cao trong nghệ thuật quân sự của Đảng"],
+        "answer": "chủ động lựa chọn cách đánh là đỉnh cao trong nghệ thuật quân sự của Đảng"
+      },
+      {
+        "question": "Nội dung nào sau đây là điểm tương đồng trong công cuộc Cải cách – mở cửa ở Trung Quốc và công cuộc Đổi mới ở Việt Nam?",
+        "options": ["Xóa bỏ vai trò lãnh đạo của Đảng Cộng sản", "Lấy cải tổ hệ thống chính trị làm trung tâm", "Xây dựng kinh tế thị trường xã hội chủ nghĩa", "Hạn chế kinh tế có vốn đầu tư nước ngoài"],
+        "answer": "Xây dựng kinh tế thị trường xã hội chủ nghĩa"
+      },
+      {
+        "question": "Nội dung nào sau đây là sự sáng tạo của Nguyễn Ái Quốc trong quá trình vận động thành lập Đảng Cộng sản Việt Nam (1921-1930)?",
+        "options": ["Chuyển hướng chỉ đạo chiến lược cách mạng", "Sang phương Tây tìm đường cứu nước", "Lựa chọn khuynh hướng giải phóng dân tộc", "Thành lập tổ chức tiền thân của Đảng"],
+        "answer": "Thành lập tổ chức tiền thân của Đảng"
+      }
+    ],
+    "true_false": [
+      {
+        "question": "Về sự phát triển của Hiệp hội các quốc gia Đông Nam Á (ASEAN):",
+        "statements": [
+          "Bảng thông tin thể hiện các sự kiện của Hiệp hội các quốc gia Đông Nam Á (ASEAN)",
+          "Hiệp ước Ba-li (1976) và Hiến chương ASEAN (2007) là những văn kiện đánh dấu bước ngoặt trong quá trình phát triển của Hiệp hội các quốc gia Đông Nam Á",
+          "Hiệp hội các quốc gia Đông Nam Á và Cộng đồng ASEAN là hai tổ chức riêng biệt",
+          "Việt Nam trở thành thành viên của tổ chức ASEAN làm chấm dứt sự đối đầu ở khu vực Đông Nam Á trong thời kì Chiến tranh lạnh và tác động của xu thế toàn cầu hoá"
+        ],
+        "answers": [true, true, false, false]
+      },
+      {
+        "question": "Về nhiệm vụ cơ bản của cách mạng Việt Nam:",
+        "statements": [
+          "Đoạn tư liệu khẳng định nhiệm vụ hàng đầu của cách mạng Việt Nam là chống đế quốc nhằm mục đích giành và bảo vệ độc lập",
+          "Trong kháng chiến chống Mỹ, cứu nước miền Bắc thực hiện nhiệm vụ chủ yếu là gây dựng cơ sở bước đầu cho chủ nghĩa xã hội",
+          "Trong kháng chiến chống Pháp (1945 – 1954), Nhân dân Việt Nam phát huy thành quả Cách mạng tháng Tám năm 1945 qua thực hiện nhiệm vụ kiến quốc, phát triển chế độ dân chủ nhân dân",
+          "Việc xây dựng chế độ dân chủ nhân dân trong thời kì kháng chiến chống Pháp (1945 – 1954) tạo ra nền móng cho công cuộc xây dựng chủ nghĩa xã hội sau này ở Việt Nam"
+        ],
+        "answers": [true, false, true, true]
+      },
+      {
+        "question": "Về xã hội xã hội chủ nghĩa mà Việt Nam đang xây dựng:",
+        "statements": [
+          "Đoạn văn kiện khẳng định khái niệm xã hội xã hội chủ nghĩa mà Nhân dân Việt Nam hiện đang xây dựng",
+          "Hiện nay, Việt Nam là quốc gia duy nhất trên thế giới xây dựng Nhà nước pháp quyền xã hội chủ nghĩa",
+          "Thực tiễn quá trình Đổi mới (1986 đến nay) cho thấy cơ chế vận hành của hệ thống chính trị ở Việt Nam là Đảng lãnh đạo, Nhà nước quản lý, nhân dân làm chủ",
+          "Độc lập dân tộc gắn liền với chủ nghĩa xã hội là đường lối cơ bản, xuyên suốt của cách mạng Việt Nam và cũng là điểm cốt yếu trong di sản tư tưởng của Chủ tịch Hồ Chí Minh"
+        ],
+        "answers": [true, false, true, true]
+      },
+      {
+        "question": "Về Hiệp định Pari (1973) và ý nghĩa của nó:",
+        "statements": [
+          "Đoạn tư liệu đề cập đến hoạt động đối ngoại của Việt Nam trong thời kì kháng chiến chống Mỹ, cứu nước (1954 – 1975)",
+          "Hiệp định Pari là thành tựu tiêu biểu trong hoạt động đối ngoại của Việt Nam, đánh bại âm mưu \"phân tuyến\" của đối phương",
+          "Thắng lợi của Hiệp định Pari cho thấy Việt Nam hoàn thành nhiệm vụ \"đánh cho Mỹ cút, đánh cho Nguỵ nhào\", tạo thời cơ mới cho cách mạng Việt Nam",
+          "Hiệp định Pari là biểu hiện của việc giải quyết các xung đột quốc tế bằng con đường hòa bình, tác động sâu sắc đến bước đường tiến lên của nhiều dân tộc"
+        ],
+        "answers": [true, false, false, true]
+      }
+    ]
+  }
+}

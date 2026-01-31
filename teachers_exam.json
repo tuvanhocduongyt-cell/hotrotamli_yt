@@ -1,0 +1,20 @@
+{
+  "gv001": {
+    "password": "giaovien123",
+    "fullname": "Pham Thi Hang",
+    "subject": "Lich su",
+    "created_at": "2025-01-01 08:00:00"
+  },
+  "gv002": {
+    "password": "teacher456",
+    "fullname": "Nguyen Van Minh",
+    "subject": "Lich su",
+    "created_at": "2025-01-01 08:00:00"
+  },
+  "gv003": {
+    "password": "giaovien789",
+    "fullname": "Tran Thi Lan",
+    "subject": "Lich su",
+    "created_at": "2025-01-01 08:00:00"
+  }
+}

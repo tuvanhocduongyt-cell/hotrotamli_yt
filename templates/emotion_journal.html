@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhật ký cảm xúc</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        h1 {
+            text-align: center;
+            color: #ff5722;
+        }
+        form {
+            margin-bottom: 25px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 12px 0 5px;
+        }
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .activities {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .activities label {
+            font-weight: normal;
+        }
+        button {
+            background: #ff5722;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #e64a19;
+        }
+        .message {
+            text-align: center;
+            color: green;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .history {
+            margin-top: 25px;
+        }
+        .history h2 {
+            border-bottom: 2px solid #ff5722;
+            padding-bottom: 5px;
+            color: #ff5722;
+        }
+        .entry {
+            background: #fff3e0;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+        }
+        .entry strong {
+            color: #d84315;
+        }
+        .music-section {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="btn-back">
+        <a href="{{ url_for('menu') }}">⬅ Trở về Menu</a>
+        </div>
+        <h1>Nhật ký cảm xúc</h1>
+
+    {% if message %}
+    <div class="message">{{ message }}</div>
+    {% endif %}
+
+    <form method="POST">
+        <label for="emotion">Cảm xúc hiện tại:</label>
+        <select name="emotion" id="emotion" required>
+            <option value="">-- Chọn cảm xúc --</option>
+            <option value="Vui vẻ">😊 Vui vẻ</option>
+            <option value="Bình yên">😌 Bình yên</option>
+            <option value="Lo lắng">😟 Lo lắng</option>
+            <option value="Buồn">😢 Buồn</option>
+            <option value="Tức giận">😠 Tức giận</option>
+            <option value="Mệt mỏi">😐 Mệt mỏi</option>
+        </select>
+
+        <label for="note">Ghi chú:</label>
+        <textarea name="note" id="note" rows="3" placeholder="Hôm nay bạn cảm thấy thế nào?"></textarea>
+
+        <label>Hoạt động:</label>
+        <div class="activities">
+            <label><input type="checkbox" name="activities" value="Nghe nhạc"> Nghe nhạc</label>
+            <label><input type="checkbox" name="activities" value="Đọc sách"> Đọc sách</label>
+            <label><input type="checkbox" name="activities" value="Đi dạo"> Đi dạo</label>
+            <label><input type="checkbox" name="activities" value="Nấu ăn"> Nấu ăn</label>
+        </div>
+
+        <button type="submit">Ghi lại</button>
+    </form>
+
+    {% set emotion_icons = {
+        "Vui vẻ": "😊",
+        "Bình yên": "😌",
+        "Lo lắng": "😟",
+        "Buồn": "😢",
+        "Tức giận": "😠",
+        "Mệt mỏi": "😐"
+    } %}
+
+    <div class="history">
+        <h2>Lịch sử cảm xúc</h2>
+        <a href="{{ url_for('export_pdf') }}" class="btn btn-success" style="margin-bottom: 10px; display: inline-block;">   
+            📄 Xuất PDF
+        </a>
+        {% if history %}
+            {% for item in history|reverse %}
+            <div class="entry">
+                <div><strong>Thời gian:</strong> {{ item.datetime }}</div>
+                <div><strong>Cảm xúc:</strong> {{ emotion_icons.get(item.emotion, "🙂") }} {{ item.emotion }}</div>
+                <div><strong>Ghi chú:</strong> {{ item.note }}</div>
+                <div><strong>Hoạt động:</strong> {{ item.activities | join(', ') }}</div>
+
+                {% if "Nghe nhạc" in item.activities %}
+                <div class="music-section">
+                    <label>Chọn bài hát:</label>
+                    <select onchange="showVideo(this.value)">
+                        <option value="">-- Chọn --</option>
+                        {% for song, url in music_videos.items() %}
+                        <option value="{{ url }}">{{ song }}</option>
+                        {% endfor %}
+                    </select>
+                    <div id="video-container" style="margin-top:10px;"></div>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>Chưa có dữ liệu cảm xúc nào.</p>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+function showVideo(url) {
+    const container = document.getElementById('video-container');
+    if (url) {
+        container.innerHTML = `<iframe width="100%" height="315" src="${url}" frameborder="0" allowfullscreen></iframe>`;
+    } else {
+        container.innerHTML = "";
+    }
+}
+</script>
+</body>
+</html>

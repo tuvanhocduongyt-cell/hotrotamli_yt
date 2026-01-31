@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Đăng ký</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #1cc88a, #4e73df);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .register-container {
+        background: white;
+        padding: 30px 40px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+    }
+    h2 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+    input {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 1rem;
+    }
+    button {
+        width: 100%;
+        padding: 12px;
+        background: #1cc88a;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: 0.3s;
+    }
+    button:hover {
+        background: #17a673;
+    }
+    .link {
+        margin-top: 15px;
+        display: block;
+        color: #4e73df;
+        text-decoration: none;
+    }
+    .message {
+        color: red;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<div class="register-container">
+    <h2>Đăng ký</h2>
+    {% if message %}
+    <div class="message">{{ message }}</div>
+    {% endif %}
+    <form method="POST">
+        <input type="text" name="username" placeholder="Tên đăng nhập" required>
+        <input type="password" name="password" placeholder="Mật khẩu" required>
+        <button type="submit">Đăng ký</button>
+    </form>
+    <a href="{{ url_for('login') }}" class="link">Đã có tài khoản? Đăng nhập</a>
+</div>
+</body>
+</html>
