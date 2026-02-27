@@ -2,8 +2,7 @@
 .env
 .env.local
 
-# Upload folder
-uploads/
+
 
 # Python
 __pycache__/

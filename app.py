@@ -59,7 +59,7 @@ def load_context(topic):
             return f.read()
     except FileNotFoundError:
         return "Không tìm thấy dữ liệu phù hợp."
-
+#// 
 def build_prompt(topic, context_data, user_input, is_first_message=False):
     context_summary = context_data[:1500] if context_data else ""
     
