@@ -2,15 +2,57 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Chatbot AI tâm lí ảo</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Chatbot AI lịch sử</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{
+            font-family:Inter,Segoe UI,Arial,sans-serif;
+            background:#eef5ff;
+            display:flex;align-items:center;justify-content:center;
+            min-height:100vh;padding:20px;
+        }
+        .chat-wrapper{width:100%;max-width:600px;height:80vh;background:#fff;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.12);display:flex;flex-direction:column;}
+        .chat-header{padding:16px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;font-size:18px;font-weight:600;display:flex;align-items:center;justify-content:space-between;}
+        #chatbox{flex:1;padding:16px;overflow-y:auto;background:#f8f9fa;display:flex;flex-direction:column;gap:12px;}
+        .message{max-width:80%;padding:10px 14px;border-radius:12px;font-size:14px;line-height:1.4;}
+        .message.user{align-self:flex-end;background:#d7f9e1;border-bottom-right-radius:4px;}
+        .message.bot{align-self:flex-start;background:#e6f2ff;border-bottom-left-radius:4px;}
+        #inputArea{padding:12px;display:flex;gap:8px;border-top:1px solid #ddd;background:#fff;}
+        #userInput{flex:1;padding:10px;border:1px solid #ccc;border-radius:6px;}
+        #inputArea button{padding:10px 20px;background:#667eea;color:#fff;border:none;border-radius:6px;cursor:pointer;transition:background .2s;}
+        #inputArea button:hover{background:#5469d4;}
+        #feedbackPanel{padding:12px 16px;border-top:1px solid #eee;background:#fafafa;}
+        #feedbackPanel input,#feedbackPanel select{padding:8px;border:1px solid #ccc;border-radius:6px;}
+        #feedbackPanel button{padding:8px 16px;background:#3b82f6;color:#fff;border:none;border-radius:6px;cursor:pointer;}
+        #feedbackPanel h4{margin-bottom:8px;font-size:15px;color:#333;}
+    </style>
 </head>
 <body>
-    <h2>Chatbot AI lịch sử</h2>
-    <div id="chatbox"></div>
-    <div id="inputArea">
-        <input type="text" id="userInput" placeholder="Nhập tin nhắn...">
-        <button onclick="sendMessage()">Gửi</button>
+    <div class="chat-wrapper">
+        <div class="chat-header">
+            <span>Chatbot AI lịch sử</span>
+        </div>
+        <div id="chatbox"></div>
+        <div id="inputArea">
+            <input type="text" id="userInput" placeholder="Nhập tin nhắn...">
+            <button onclick="sendMessage()">Gửi</button>
+        </div>
+        <div id="feedbackPanel">
+            <h4>Đánh giá chatbot</h4>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+                <input id="fbName" type="text" placeholder="Tên của bạn" style="flex:1 1 120px;" />
+                <select id="fbRating" style="flex:1 1 120px;">
+                    <option value="">Chọn mức độ</option>
+                    <option>Rất hài lòng</option>
+                    <option>Hài lòng</option>
+                    <option>Bình thường</option>
+                    <option>Không hài lòng</option>
+                    <option>Rất không hài lòng</option>
+                </select>
+                <button onclick="sendFeedback()">Gửi</button>
+            </div>
+            <div id="fbMsg" style="margin-top:8px;font-size:13px;color:green;"></div>
+        </div>
     </div>
 
     <script>
@@ -22,23 +64,29 @@
             chatbox.appendChild(msg);
             chatbox.scrollTop = chatbox.scrollHeight;
         }
-
         async function sendMessage() {
             const input = document.getElementById("userInput");
             const message = input.value.trim();
             if (!message) return;
-
             appendMessage("user", message);
             input.value = "";
-
             const res = await fetch("/chat", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ message })
             });
-
             const data = await res.json();
             appendMessage("bot", data.reply);
+        }
+        async function sendFeedback() {
+            const name = document.getElementById('fbName').value.trim();
+            const rating = document.getElementById('fbRating').value;
+            const msg = document.getElementById('fbMsg');
+            if (!name || !rating) { msg.style.color='red'; msg.textContent='Nhập tên và chọn đánh giá'; return; }
+            const res = await fetch('/chat_feedback', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,rating,bot:'lichsu'})});
+            const d = await res.json();
+            if(d.status==='ok'){msg.style.color='green';msg.textContent='Cảm ơn!';document.getElementById('fbName').value='';document.getElementById('fbRating').value='';}
+            else{msg.style.color='red';msg.textContent='Gửi thất bại';}
         }
     </script>
 </body>

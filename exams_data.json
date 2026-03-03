@@ -589,5 +589,323 @@
     "total_score": 10,
     "grade": "10",
     "tf_grading_method": "per_item"
+  },
+  "20260303200639": {
+    "id": "20260303200639",
+    "title": "test api đợt 3",
+    "type": "multiple_choice",
+    "duration": 60,
+    "created_by": "gv001",
+    "created_at": "2026-03-03 20:06:40",
+    "questions": {
+      "multiple_choice": [
+        {
+          "question": "Vì sao trong đường lối Đổi mới giai đoạn (1986-1995) Đảng Cộng sản Việt Nam xác định trọng tâm là đối mới kinh tế?",
+          "options": [
+            "A. Kinh tế là tiêu chí đánh giá sức mạnh mỗi quốc gia.",
+            "B. Đang học hỏi bài học kinh nghiệm của Trung Quốc.",
+            "C. Nền kinh tế của Việt Nam đang bị Pháp vượt qua.",
+            "D. Kinh tế tự chủ mới quyết định được các vấn đề khác."
+          ],
+          "answer": "D"
+        },
+        {
+          "question": "Ngày 5/6/1911, Nguyễn Tất Thành rời bến cảng Nhà Rồng ra đi tìm đường cứu nước với tên gọi mới là",
+          "options": [
+            "A. Ông Ké.",
+            "B. Lý Thụy.",
+            "C. Thầu Chín.",
+            "D. Văn Ba."
+          ],
+          "answer": "D"
+        },
+        {
+          "question": "Sự kiện nào đây có ý nghĩa là bước ngoặt mới đối với cuộc kháng chiến chống Mỹ, cứu nước 1954-1975 của Nhân dân Việt Nam?",
+          "options": [
+            "A. Hội nghị cấp cao ba nước Đông Dương.",
+            "B. Hiệp định Pa-ri được ký kết năm 1973.",
+            "C. Cuộc tiến công chiến lược năm 1972.",
+            "D. Chiến thắng Lam Sơn 719 năm 1971."
+          ],
+          "answer": "B"
+        },
+        {
+          "question": "Một trong những nội dung thuận lợi của cách mạng Việt Nam từ sau tháng 4-1975 là",
+          "options": [
+            "A. Khơ-me đỏ nên nắm quyền.",
+            "B. Trung Quốc cải cách, mở cửa.",
+            "C. Mỹ dỡ bỏ những cấm kinh tế.",
+            "D. được sự lãnh đạo của Đảng."
+          ],
+          "answer": "D"
+        },
+        {
+          "question": "Đặc trưng nền kinh tế Việt Nam trước khi thực hiện đường lối đổi mới (1986) là",
+          "options": [
+            "A. bao cấp.",
+            "B. thị trường.",
+            "C. tự chủ.",
+            "D. tự nhiên."
+          ],
+          "answer": "A"
+        },
+        {
+          "question": "Về văn hoá – xã hội, Việt Nam đạt được thành tựu nào sau đây trong thời kì Đổi mới?",
+          "options": [
+            "A. Phổ cập giáo dục đại học.",
+            "B. Xoá hoàn toàn hộ nghèo.",
+            "C. Giảm tỉ lệ hộ nghèo.",
+            "D. Bước đầu xoá mù chữ."
+          ],
+          "answer": "C"
+        },
+        {
+          "question": "Trong giai đoạn từ năm 1923 đến năm 1927 Nguyễn Ái Quốc đã thực hiện các hoạt động đối ngoại ở đâu?",
+          "options": [
+            "A. Thái Lan.",
+            "B. Tây Âu.",
+            "C. Liên Xô.",
+            "D. Ấn Độ."
+          ],
+          "answer": "C"
+        },
+        {
+          "question": "Điểm tương đồng trong hoạt động đối ngoại của Phan Bội Châu và Phan Châu Trinh ở đầu thế kỉ XX là đều hướng đến",
+          "options": [
+            "A. xây dựng xã hội tư bản.",
+            "B. mục tiêu độc lập dân tộc.",
+            "C. sự giúp đỡ của nước Nga Xô -viết.",
+            "D. tìm sự ủng hộ của các nước Âu - Mỹ."
+          ],
+          "answer": "B"
+        },
+        {
+          "question": "Một trong những tổ chức Việt Nam đã gia nhập từ sau năm 1986 đến nay là",
+          "options": [
+            "A. NATO.",
+            "B. SEATO.",
+            "C. ASEAN.",
+            "D. SEV."
+          ],
+          "answer": "C"
+        },
+        {
+          "question": "Chiến thắng biên giới Tây Nam của quân dân Việt Nam có ý nghĩa như thế nào đối với cách mạng Cam-pu-chia?",
+          "options": [
+            "A. Tạo nên sức mạnh của Việt Nam và Cam-pu-chia.",
+            "B. Tiêu diệt hoàn toàn chế độ Pôn-pốt - Iêng-xê-ri.",
+            "C. Tạo thời cơ thuận lợi cho cách mạng thắng lợi.",
+            "D. Tăng cường tình đoàn kết các nước Đông Nam Á."
+          ],
+          "answer": "B"
+        },
+        {
+          "question": "Một trong những phẩm chất tốt đẹp của xứ Nghệ đã được Chủ tịch Hồ Chí Minh tiếp thu và thể hiện rõ nét trong cuộc đời hoạt động các mạng là",
+          "options": [
+            "A. trọng nghĩa khinh tài.",
+            "B. ý chí trong học tập.",
+            "C. giỏi nghề thủ công.",
+            "D. kinh nghiệm đi biển."
+          ],
+          "answer": "A"
+        },
+        {
+          "question": "Năm 2007, Việt Nam chính thức đã gia nhập tổ chức nào sau đây:",
+          "options": [
+            "A. NATO.",
+            "B. ASEAN.",
+            "C. WTO",
+            "D. EU."
+          ],
+          "answer": "C"
+        },
+        {
+          "question": "Trong đường lối Đổi mới từ năm 1986, Đảng Cộng sản Việt Nam chủ trương xây dựng nền kinh tế hàng hóa nhiều thành phần có sự quản lí của Nhà nước nhằm",
+          "options": [
+            "A. phát huy quyền làm chủ kinh tế của nhân dân.",
+            "B. giải quyết tình trạng khủng hoảng kéo dài về chính trị.",
+            "C. phát triển kinh tế theo định hướng tư bản chủ nghĩa.",
+            "D. xóa bỏ hoàn toàn thành phần kinh tế quốc doanh."
+          ],
+          "answer": "A"
+        },
+        {
+          "question": "Trong khoảng 10 năm đầu sau Đại thắng mùa Xuân năm 1975, Việt Nam coi trọng phát triển quan hệ ngoại giao toàn diện với quốc gia nào sau đây?",
+          "options": [
+            "A. Mỹ.",
+            "B. Anh.",
+            "C. Pháp.",
+            "D. Liên Xô."
+          ],
+          "answer": "D"
+        },
+        {
+          "question": "Một trong những nơi ghi dấu tội ác của tập đoàn Khơ-me đỏ đối với nhân dân Việt Nam là",
+          "options": [
+            "A. An Giang.",
+            "B. Cà Mau.",
+            "C. Cần Thơ.",
+            "D. Bạc Liêu."
+          ],
+          "answer": "A"
+        },
+        {
+          "question": "Một trong những điểm khác biệt trong con đường cứu nước của Nguyễn Ái Quốc và Phan Chu Trinh là",
+          "options": [
+            "A. Khuynh hướng cách mạng cứu nước.",
+            "B. Mục tiêu giải phóng dân tộc Việt Nam.",
+            "C. Ý chí mãnh liệt, muốn đất nước độc lập.",
+            "D. Cống hiến hết mình cho cách mạng."
+          ],
+          "answer": "A"
+        },
+        {
+          "question": "Tháng 3 năm 1988, Trung Quốc đã sử dụng lực lượng lớn tấn công vào đảo",
+          "options": [
+            "A. Đá Bắc.",
+            "B. Gạc Ma.",
+            "C. Hữu Nhật.",
+            "D. Phú Lâm."
+          ],
+          "answer": "B"
+        },
+        {
+          "question": "Từ thắng lợi của Việt Nam trong hội nghị Pa-ri năm 1973, bài học kinh nghiệm rút ra cho đường lối ngoại giao hiện nay là",
+          "options": [
+            "A. tranh thủ tối đa sự ủng hộ của các cường quốc.",
+            "B. đa dạng hóa, đa phương hóa quan hệ quốc tế.",
+            "C. giải quyết các tranh chấp bằng biện pháp hòa bình.",
+            "D. thực hiện đường lối ngoại giao độc lập tự chủ."
+          ],
+          "answer": "D"
+        },
+        {
+          "question": "Trọng tâm của đường lối Đổi mới mà Đảng Cộng sản Việt Nam đề ra năm 1986 là",
+          "options": [
+            "A. chính trị.",
+            "B. tư tưởng.",
+            "C. văn hóa.",
+            "D. kinh tế."
+          ],
+          "answer": "D"
+        },
+        {
+          "question": "Trước ngày 6-3-1946, nước Việt Nam Dân chủ Cộng hoà thực hiện chính sách đối ngoại nào sau đây?",
+          "options": [
+            "A. Hoà hoãn với Anh để đánh đuổi Nhật.",
+            "B. Hoà Pháp để đuổi Trung Hoa Dân quốc.",
+            "C. Hoà Trung Hoa Dân quốc để đánh Pháp.",
+            "D. Hoà hoãn với cả Pháp và Trung Hoa Dân quốc."
+          ],
+          "answer": "C"
+        },
+        {
+          "question": "Về chính trị, trong thời kì Đổi mới, Việt Nam đã đạt được thành tựu tiêu biểu nào sau đây?",
+          "options": [
+            "A. Xoá bỏ chế độ phong kiến, xây dựng chế độ mới, dân chủ.",
+            "B. Thay đổi phương hưởng tiến lên chủ nghĩa xã hội.",
+            "C. Xây dựng được mô hình Nhà nước chuyên chính vô sản.",
+            "D. Xây dựng Nhà nước pháp quyền xã hội chủ nghĩa."
+          ],
+          "answer": "D"
+        },
+        {
+          "question": "Tháng 6 năm 1925, Nguyễn Ái Quốc thành lập tổ chức cách mạng nào tại Quảng Châu (Trung Quốc)?",
+          "options": [
+            "A. Hội Việt Nam Cách mạng Thanh niên.",
+            "B. Cộng sản đoàn.",
+            "C. Hội Liên hiệp thuộc địa.",
+            "D. Việt Nam Quốc dân Đảng."
+          ],
+          "answer": "A"
+        },
+        {
+          "question": "Đại hội đại biểu toàn quốc lần thứ VI của Đảng Cộng sản Việt Nam (12/1986) đã đề ra đường lối gì?",
+          "options": [
+            "A. Xây dựng chủ nghĩa xã hội trong cả nước.",
+            "B. Đổi mới toàn diện đất nước.",
+            "C. Công nghiệp hóa, hiện đại hóa đất nước.",
+            "D. Phát triển kinh tế thị trường định hướng xã hội chủ nghĩa."
+          ],
+          "answer": "B"
+        },
+        {
+          "question": "Cơ hội lớn nhất đối với Việt Nam khi thực hiện công cuộc Đổi mới là gì?",
+          "options": [
+            "A. Sự sụp đổ của hệ thống xã hội chủ nghĩa ở Liên Xô và Đông Âu.",
+            "B. Xu thế hòa bình, hợp tác và phát triển của thế giới.",
+            "C. Mâu thuẫn giữa các nước lớn ngày càng gay gắt.",
+            "D. Các nước tư bản chủ nghĩa lâm vào khủng hoảng."
+          ],
+          "answer": "B"
+        }
+      ],
+      "true_false": [
+        {
+          "question": "Về bối cảnh và nguyên nhân thực hiện đường lối Đổi mới (1986).",
+          "statements": [
+            "Việt Nam đã trải qua một thời gian dài chiến tranh, kinh tế kiệt quệ, đời sống nhân dân gặp nhiều khó khăn.",
+            "Mô hình kinh tế kế hoạch hóa tập trung, bao cấp đã bộc lộ những hạn chế, kìm hãm sự phát triển.",
+            "Tình hình quốc tế thuận lợi, không có sự bao vây, cấm vận đối với Việt Nam.",
+            "Yêu cầu khách quan của lịch sử là phải đổi mới để đưa đất nước thoát khỏi khủng hoảng kinh tế – xã hội."
+          ],
+          "answers": [
+            true,
+            true,
+            false,
+            true
+          ]
+        },
+        {
+          "question": "Về hoạt động của Nguyễn Ái Quốc đầu thế kỷ XX.",
+          "statements": [
+            "Nguyễn Ái Quốc gửi 'Bản yêu sách của nhân dân An Nam' tới Hội nghị Véc-xai dưới tên Nguyễn Tất Thành.",
+            "Năm 1920, Người tham gia sáng lập Đảng Cộng sản Pháp và trở thành người Việt Nam đầu tiên gia nhập Quốc tế Cộng sản.",
+            "Người đã tiếp thu Chủ nghĩa Tam dân của Tôn Trung Sơn để tìm con đường cứu nước.",
+            "Từ năm 1925, Người đã mở lớp huấn luyện cán bộ tại Quảng Châu (Trung Quốc) để đào tạo lực lượng cho cách mạng Việt Nam."
+          ],
+          "answers": [
+            false,
+            true,
+            false,
+            true
+          ]
+        },
+        {
+          "question": "Về thành tựu và ý nghĩa của đường lối Đổi mới.",
+          "statements": [
+            "Đường lối Đổi mới đã đưa Việt Nam thoát khỏi khủng hoảng kinh tế – xã hội, tạo tiền đề vững chắc cho sự phát triển.",
+            "Nền kinh tế thị trường định hướng xã hội chủ nghĩa đã hoàn thiện và đạt được hiệu quả tối ưu.",
+            "Đời sống vật chất và tinh thần của đại bộ phận nhân dân được cải thiện rõ rệt.",
+            "Vị thế của Việt Nam trên trường quốc tế được nâng cao đáng kể."
+          ],
+          "answers": [
+            true,
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "question": "Về quan hệ đối ngoại của Việt Nam từ sau Đổi mới.",
+          "statements": [
+            "Việt Nam đã bình thường hóa quan hệ ngoại giao với Hoa Kỳ vào năm 1995.",
+            "Việc Việt Nam gia nhập Hiệp hội các quốc gia Đông Nam Á (ASEAN) năm 1995 đã mở ra một kỷ nguyên mới cho quan hệ khu vực.",
+            "Việt Nam đã trở thành thành viên của Tổ chức Thương mại Thế giới (WTO) vào năm 2007.",
+            "Chính sách đối ngoại của Việt Nam trong thời kỳ Đổi mới là tập trung duy nhất vào các nước xã hội chủ nghĩa truyền thống."
+          ],
+          "answers": [
+            true,
+            true,
+            true,
+            false
+          ]
+        }
+      ]
+    },
+    "total_score": 10,
+    "grade": "12",
+    "tf_grading_method": "deduction",
+    "general_grading_criteria": "1:A\r\n2:D\r\n3:B\r\n4:D\r\n5:A\r\n6:C\r\n7:C\r\n8:B\r\n9:C\r\n10:C\r\n11:B\r\n12:C\r\n13:A\r\n14:D\r\n15:A\r\n16:A\r\n17:B\r\n18:D\r\n19:D\r\n20:C\r\n21:D\r\n22:A\r\n23:B\r\n24:C\r\n1a:ĐÚNG\r\n1b:SAI\r\n1c:ĐÚNG\r\n1d:SAI\r\n2a:ĐÚNG\r\n2b:SAI\r\n2c:ĐÚNG\r\n2d:ĐÚNG\r\n3a:ĐÚNG\r\n3b:ĐÚNG\r\n3c:SAI\r\n3d:SAI\r\n4a:ĐÚNG\r\n4b:SAI\r\n4c:ĐÚNG\r\n4d:SAI"
   }
 }

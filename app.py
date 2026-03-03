@@ -39,13 +39,47 @@ timestamp = datetime.now(vn_timezone).strftime("%Y-%m-%d %H:%M:%S")
 
 load_dotenv()  # Load từ file .env
 
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-if not GOOGLE_API_KEY:
-    raise ValueError("Không tìm thấy GOOGLE_API_KEY trong environment")
+# API key handling (support multiple categories and rotation)
+# use GOOGLE_API_KEYS_LICHSU for history-exam/chat features (two keys as requested)
+# use GOOGLE_API_KEYS_GENERAL or fallback GOOGLE_API_KEYS for everything else
 
-genai.configure(api_key=GOOGLE_API_KEY)
-model = genai.GenerativeModel("models/gemini-2.5-flash")
+lic_keys_env = os.getenv("GOOGLE_API_KEYS_LICHSU")
+general_keys_env = os.getenv("GOOGLE_API_KEYS_GENERAL")
+all_keys_env = os.getenv("GOOGLE_API_KEYS")
+single = os.getenv("GOOGLE_API_KEY")
+
+LICHSU_KEYS = [k.strip() for k in lic_keys_env.split(",")] if lic_keys_env else []
+GENERAL_KEYS = [k.strip() for k in general_keys_env.split(",")] if general_keys_env else []
+if all_keys_env:
+    GENERAL_KEYS.extend([k.strip() for k in all_keys_env.split(",") if k.strip()])
+if single:
+    GENERAL_KEYS.append(single)
+
+# make sure at least one key exists in general list
+if not GENERAL_KEYS and not LICHSU_KEYS:
+    raise ValueError("Không tìm thấy khóa API trong GOOGLE_API_KEYS*, GOOGLE_API_KEYS hoặc GOOGLE_API_KEY")
+
+# helper to pick key based on feature
+
+def get_api_key(feature=None):
+    if feature == 'lichsu' and LICHSU_KEYS:
+        return random.choice(LICHSU_KEYS)
+    # fall back to general list
+    return random.choice(GENERAL_KEYS)
+
+# build a new model instance each time after configuring with a chosen key
+# optionally pass feature string to select proper key pool
+
+def get_model(feature=None):
+    key = get_api_key(feature)
+    genai.configure(api_key=key)
+    return genai.GenerativeModel("models/gemini-2.5-flash")
+
 app.config['UPLOAD_FOLDER'] = 'uploads'
+
+# temporary server-side storage for exams pending preview/save
+# key is a UUID token, value is exam data dict
+TEMP_EXAMS = {}
 
 def load_context(topic):
     file_map = {
@@ -128,7 +162,7 @@ def tam_li_chat():
             is_first = session.get(f'first_message_{topic}', True)
             
             prompt = build_prompt(topic, context_data, user_input, is_first_message=is_first)
-            response = model.generate_content(prompt)
+            response = get_model().generate_content(prompt)
             response_text = response.text
             
             # ✅ LOẠI BỎ MARKDOWN
@@ -658,7 +692,7 @@ QUY TẮC QUAN TRỌNG:
 Trả lời:
 """
             
-            response = model.generate_content(
+            response = get_model('lichsu').generate_content(
                 prompt,
                 stream=True,
                 generation_config={
@@ -751,7 +785,7 @@ QUY TẮC QUAN TRỌNG:
 Trả lời:
     """
     
-    response = model.generate_content(prompt)
+    response = get_model('lichsu').generate_content(prompt)
     reply_text = response.text
     
     reply_text = reply_text.replace('###', '')
@@ -777,6 +811,40 @@ def clear_chat():
     session['chat_history'] = []
     session.modified = True
     return jsonify({"status": "ok"})
+
+
+# ---------- CHAT FEEDBACK ----------
+FEEDBACK_FILE = 'chat_feedback.json'
+
+def save_feedback(entry):
+    try:
+        if os.path.exists(FEEDBACK_FILE):
+            with open(FEEDBACK_FILE, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+        else:
+            data = []
+    except Exception:
+        data = []
+    data.append(entry)
+    with open(FEEDBACK_FILE, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+@app.route('/chat_feedback', methods=['POST'])
+def chat_feedback():
+    data = request.get_json() or {}
+    name = data.get('name', '').strip()
+    rating = data.get('rating', '').strip()
+    bot = data.get('bot', 'unknown')
+    if not name or not rating:
+        return jsonify({'error': 'Tên và đánh giá là bắt buộc'}), 400
+    entry = {
+        'name': name,
+        'rating': rating,
+        'bot': bot,
+        'timestamp': datetime.now(vn_timezone).strftime("%Y-%m-%d %H:%M:%S")
+    }
+    save_feedback(entry)
+    return jsonify({'status': 'ok'})
 
 AUDIO_DIR = os.path.join(os.path.dirname(__file__), "static", "replies")
 os.makedirs(AUDIO_DIR, exist_ok=True)
@@ -820,7 +888,7 @@ QUY TẮC BẮT BUỘC:
 Người dùng hỏi: {user_message}
 """
     try:
-        resp = model.generate_content(prompt)
+        resp = get_model().generate_content(prompt)
         text_reply = resp.text.strip()
         
         # Format lại response: loại bỏ markdown
@@ -835,7 +903,7 @@ Người dùng hỏi: {user_message}
     if contains_english(text_reply):
         try:
             follow_prompt = prompt + "\n\nBạn đã sử dụng từ tiếng Anh, hãy trả lời lại hoàn toàn bằng tiếng Việt."
-            resp2 = model.generate_content(follow_prompt)
+            resp2 = get_model().generate_content(follow_prompt)
             text_reply = resp2.text.strip()
             
             # Format lại lần nữa sau khi retry
@@ -952,7 +1020,7 @@ def submit(de_id):
             "2. Phân tích từng lỗi sai (nêu lý do sai, giải thích kiến thức liên quan)\n"
             "3. Đề xuất ít nhất 3 dạng bài tập cụ thể để học sinh luyện tập đúng phần bị sai"
         )
-        response = model.generate_content([prompt])
+        response = get_model('lichsu').generate_content([prompt])
         ai_feedback = response.text
         
         # Format lại response: thay thế markdown bằng HTML
@@ -1056,7 +1124,7 @@ def upload_image():
             prompt = generate_grading_prompt()
 
             # Gọi model AI (thay 'model' bằng model của bạn)
-            response = model.generate_content([img, prompt])
+            response = get_model('lichsu').generate_content([img, prompt])
             ai_feedback = response.text
             
             # Format lại response để hiển thị đẹp
@@ -1352,7 +1420,7 @@ Tra ve JSON (KHONG DUNG DAU # VA **):
 
 Chi tra ve JSON, khong them bat ky ky tu nao khac.
 """
-            response = model.generate_content([img, prompt])
+            response = get_model('lichsu').generate_content([img, prompt])
         else:
             prompt = f"""
 Ban la giao vien lich su cham bai thi tu luan.
@@ -1383,7 +1451,7 @@ Tra ve JSON (KHONG DUNG DAU # VA **):
 
 Chi tra ve JSON.
 """
-            response = model.generate_content(prompt)
+            response = get_model().generate_content(prompt)
         
         text = response.text.strip()
         text = text.replace('```json', '').replace('```', '').strip()
@@ -1429,7 +1497,7 @@ Tra ve JSON (KHONG DUNG # VA **):
 
 Chi tra ve JSON.
 """
-            response = model.generate_content([img, prompt])
+            response = get_model().generate_content([img, prompt])
         else:
             prompt = f"""
 Ban la giao vien lich su cham bai.
@@ -1452,7 +1520,7 @@ Tra ve JSON (KHONG DUNG # VA **):
 
 Chi tra ve JSON.
 """
-            response = model.generate_content(prompt)
+            response = get_model().generate_content(prompt)
         
         text = response.text.strip()
         text = text.replace('```json', '').replace('```', '').strip()
@@ -1470,48 +1538,131 @@ Chi tra ve JSON.
         return None
 
 # CẬP NHẬT HÀM GENERATE EXAM
-def generate_exam_from_text(text_content, num_multiple, num_truefalse, num_essay=0):
-    """Tạo đề thi từ nội dung văn bản"""
+def validate_exam_questions(exam_data, num_multiple, num_truefalse, num_essay=0):
+    """
+    ✅ KIỂM TRA xem AI tạo được đủ câu hỏi không
+    Trả về: (True/False, số MC, số TF, số Essay, thông báo lỗi)
+    """
+    if not exam_data:
+        return False, 0, 0, 0, "AI không tạo được đề thi"
+    
+    mc_list = exam_data.get('multiple_choice', [])
+    tf_list = exam_data.get('true_false', [])
+    essay_list = exam_data.get('essay', [])
+    
+    mc_count = len(mc_list)
+    tf_count = len(tf_list)
+    essay_count = len(essay_list)
+    
+    errors = []
+    
+    # Kiểm tra số lượng
+    if mc_count < num_multiple:
+        errors.append(f"❌ Trắc nghiệm: cần {num_multiple}, chỉ có {mc_count}")
+    if tf_count < num_truefalse:
+        errors.append(f"❌ Đúng/Sai: cần {num_truefalse}, chỉ có {tf_count}")
+    if num_essay > 0 and essay_count < num_essay:
+        errors.append(f"❌ Tự luận: cần {num_essay}, chỉ có {essay_count}")
+    
+    # Kiểm tra rỗng
+    for i, q in enumerate(mc_list):
+        if not q.get('question') or not q.get('answer'):
+            errors.append(f"❌ MC câu {i+1}: thiếu question hoặc answer")
+    
+    for i, q in enumerate(tf_list):
+        if not q.get('question') or not q.get('statements') or not q.get('answers'):
+            errors.append(f"❌ TF câu {i+1}: thiếu dữ liệu")
+    
+    is_valid = len(errors) == 0
+    error_msg = " | ".join(errors) if errors else ""
+    
+    return is_valid, mc_count, tf_count, essay_count, error_msg
+
+
+def generate_exam_from_text(text_content, num_multiple, num_truefalse, num_essay=0, attempt=1):
+    """
+    ✅ CẢI THIỆN: Tạo đề thi từ nội dung văn bản
+    - Dùng toàn bộ text (không cắt 3000 ký tự)
+    - Kiểm tra số lượng câu hỏi
+    - Retry lên đến 3 lần nếu chưa đủ
+    """
+    
+    # CHUNKING: Nếu quá dài, chia thành từng phần rõ ràng
+    max_chars = 5000
+    text_to_use = text_content if len(text_content) <= max_chars else text_content[:max_chars]
+    
     prompt = f"""
-Du lieu tu file Word:
-{text_content[:3000]}
+BẠN LÀ GIÁO VIÊN LỊCH SỬ LỚP 11 - HÃY TẠO ĐỀ THI CHÍNH XÁC:
 
-Hay tao de thi lich su voi:
-- {num_multiple} cau trac nghiem ABCD
-- {num_truefalse} cau dung sai (moi cau co 4 y)
-{'- ' + str(num_essay) + ' cau tu luan' if num_essay > 0 else ''}
+📚 NỘI DUNG TỪ FILE WORD:
+{text_to_use}
 
-Tra ve JSON voi format:
+📋 YÊUVẦU CẬP NHẬT (PHẢI ĐỦ CÂU):
+- TỔNG CỘNG {num_multiple} CÂU TRẮC NGHIỆM (ABCD)
+- TỔNG CỘNG {num_truefalse} CÂU ĐÚNG/SAI (mỗi câu 4 ý)
+{'- TỔNG CỘNG ' + str(num_essay) + ' CÂU TỰ LUẬN' if num_essay > 0 else ''}
+
+⚠️ QUAN TRỌNG:
+1. PHẢI CÓ ĐÚNG {num_multiple} câu trắc nghiệm (không được ít hơn)
+2. PHẢI CÓ ĐÚNG {num_truefalse} câu đúng/sai (không được ít hơn)
+3. Mỗi câu trắc nghiệm phải có 4 options: A, B, C, D
+4. Mỗi câu đúng/sai phải có ĐÚNG 4 ý
+5. Chỉ trả về JSON, không cần giải thích
+
+📝 JSON FORMAT:
 {{
   "multiple_choice": [
     {{
-      "question": "Cau hoi",
-      "options": ["A. ...", "B. ...", "C. ...", "D. ..."],
+      "question": "Câu hỏi cụ thể",
+      "options": ["A. Option 1", "B. Option 2", "C. Option 3", "D. Option 4"],
       "answer": "A"
     }}
   ],
   "true_false": [
     {{
-      "question": "Cau hoi chinh",
-      "statements": ["Y a", "Y b", "Y c", "Y d"],
+      "question": "Câu hỏi chính",
+      "statements": ["Ý 1", "Ý 2", "Ý 3", "Ý 4"],
       "answers": [true, false, true, false]
     }}
   ]
-  {"," + '"essay": [{"question": "Cau hoi tu luan", "grading_criteria": "Tieu chi cham chi tiet: Noi dung (4d), Logic (3d), Trieu luan (2d), Truc bach (1d)"}]' if num_essay > 0 else ''}
+  {"," + '"essay": [{"question": "Câu hỏi tự luận", "grading_criteria": "Tiêu chí: Nội dung (4đ), Logic (3đ), Trình bày (2đ), Trích dẫn (1đ)"}]' if num_essay > 0 else ''}
 }}
 
-CHU Y: Voi cau tu luan, hay tao tieu chi cham RANG RO va CHI TIET de AI co the cham diem khach quan.
-
-Chi tra ve JSON, khong co gi khac.
+CHỈ TRẢ VỀ JSON, KHÔNG CÓ GÌ KHÁC!
 """
     
     try:
-        response = model.generate_content(prompt)
+        print(f"[AI] Lần {attempt}: Tạo đề thi ({num_multiple} MC + {num_truefalse} TF + {num_essay} Essay)...")
+        response = get_model().generate_content(prompt)
         text = response.text.strip()
         text = text.replace('```json', '').replace('```', '').strip()
-        return json.loads(text)
+        exam_data = json.loads(text)
+        
+        # ✅ KIỂM TRA SỐ LƯỢNG
+        is_valid, mc_count, tf_count, essay_count, error_msg = validate_exam_questions(
+            exam_data, num_multiple, num_truefalse, num_essay
+        )
+        
+        if is_valid:
+            print(f"✅ Thành công! {mc_count} MC + {tf_count} TF + {essay_count} Essay")
+            return exam_data
+        else:
+            print(f"⚠️ Lần {attempt} chưa đủ: {error_msg}")
+            
+            # Retry tối đa 3 lần
+            if attempt < 3:
+                return generate_exam_from_text(text_content, num_multiple, num_truefalse, num_essay, attempt + 1)
+            else:
+                print(f"❌ Sau 3 lần vẫn không đủ. Trả về kết quả hiện tại.")
+                return exam_data  # Trả về dù chưa đủ, để giáo viên bổ sung
+        
+    except json.JSONDecodeError as e:
+        print(f"❌ Lỗi parse JSON (lần {attempt}): {e}")
+        if attempt < 3:
+            return generate_exam_from_text(text_content, num_multiple, num_truefalse, num_essay, attempt + 1)
+        return None
     except Exception as e:
-        print(f"Loi tao de AI: {e}")
+        print(f"❌ Lỗi tạo đề AI: {e}")
         return None
 
 # Routes cho exam system
@@ -1694,6 +1845,19 @@ def delete_material(material_id):
     save_materials_data(materials)
     return redirect(url_for('dashboard_teacher'))
 
+
+# Route xóa đề thi (chỉ giáo viên)
+@app.route('/delete_exam/<exam_id>', methods=['POST'])
+def delete_exam(exam_id):
+    if 'exam_username' not in session or session.get('exam_role') != 'teacher':
+        return redirect(url_for('login_exam'))
+    
+    exams = load_exams_data()
+    if exam_id in exams:
+        exams.pop(exam_id)
+        save_exams_data(exams)
+    return redirect(url_for('dashboard_teacher'))
+
 # Cập nhật route dashboard_teacher
 @app.route('/dashboard_teacher')
 def dashboard_teacher():
@@ -1710,12 +1874,32 @@ def dashboard_teacher():
         '11': [m for m in materials if m.get('grade') == '11'],
         '12': [m for m in materials if m.get('grade') == '12']
     }
-    
+
+    # load chatbot feedback statistics
+    feedback_list = []
+    try:
+        if os.path.exists(FEEDBACK_FILE):
+            with open(FEEDBACK_FILE, 'r', encoding='utf-8') as f:
+                feedback_list = json.load(f)
+    except Exception:
+        feedback_list = []
+
+    # compute counts per bot and rating
+    feedback_stats = {}
+    for entry in feedback_list:
+        bot = entry.get('bot','unknown')
+        rating = entry.get('rating','')
+        feedback_stats.setdefault(bot, {})
+        feedback_stats[bot].setdefault(rating, 0)
+        feedback_stats[bot][rating] += 1
+
     return render_template('dashboard_teacher.html', 
                          exams=exams, 
                          materials=materials,
                          materials_by_grade=materials_by_grade,
-                         submissions=submissions)
+                         submissions=submissions,
+                         feedback_stats=feedback_stats,
+                         raw_feedback=feedback_list)
 
 # Cập nhật route dashboard_student
 @app.route('/dashboard_student')
@@ -1750,105 +1934,155 @@ def create_exam():
         return redirect(url_for('login_exam'))
     
     if request.method == 'POST':
+        action = request.form.get('action', 'create')
         exam_type = request.form.get('exam_type')
-        exam_id = datetime.now(vn_timezone).strftime("%Y%m%d%H%M%S")
         grade = request.form.get('grade')
-        
-        # LẤY TIÊU CHÍ CHẤM TỔNG THỂ
         general_grading_criteria = request.form.get('general_grading_criteria', '').strip()
+        exam_title = request.form.get('title')
+        exam_duration = int(request.form.get('duration', 60))
         
-        if exam_type == 'multiple_choice':
+        # ========================
+        # BƯỚC 1: TẠO ĐỀ TỪ AI
+        # ========================
+        if action == 'create' and exam_type in ['multiple_choice', 'mixed']:
             word_file = request.files.get('word_file')
-            if word_file and word_file.filename.endswith('.docx'):
-                file_path = os.path.join(app.config['UPLOAD_FOLDER'], word_file.filename)
-                word_file.save(file_path)
-                
-                text_content = read_word_file(file_path)
-                
-                num_multiple = int(request.form.get('num_multiple', 10))
-                num_truefalse = int(request.form.get('num_truefalse', 5))
-                
-                exam_data = generate_exam_from_text(text_content, num_multiple, num_truefalse)
-                
-                if exam_data:
-                    exams = load_exams_data()
-                    exams[exam_id] = {
-                        'id': exam_id,
-                        'title': request.form.get('title'),
-                        'type': 'multiple_choice',
-                        'duration': int(request.form.get('duration', 60)),
-                        'created_by': session['exam_username'],
-                        'created_at': datetime.now(vn_timezone).strftime("%Y-%m-%d %H:%M:%S"),
-                        'questions': exam_data,
-                        'total_score': 10,
-                        'grade': grade,
-                        'tf_grading_method': 'deduction',
-                        'general_grading_criteria': general_grading_criteria  # THÊM
-                    }
-                    save_exams_data(exams)
-                    return redirect(url_for('dashboard_teacher'))
-        
-        elif exam_type == 'mixed':
-            word_file = request.files.get('word_file')
-            if word_file and word_file.filename.endswith('.docx'):
-                file_path = os.path.join(app.config['UPLOAD_FOLDER'], word_file.filename)
-                word_file.save(file_path)
-                
-                text_content = read_word_file(file_path)
-                
-                num_multiple = int(request.form.get('num_multiple', 5))
-                num_truefalse = int(request.form.get('num_truefalse', 3))
-                num_essay = int(request.form.get('num_essay', 1))
-                
-                exam_data = generate_exam_from_text(text_content, num_multiple, num_truefalse, num_essay)
-                
-                # CHO PHÉP GIÁO VIÊN CHỈNH SỬA TIÊU CHÍ TỪNG CÂU TỰ LUẬN
-                if exam_data and 'essay' in exam_data:
-                    for i, eq in enumerate(exam_data['essay']):
-                        custom_criteria = request.form.get(f'essay_criteria_{i}', '').strip()
-                        if custom_criteria:
-                            eq['grading_criteria'] = custom_criteria
-                
-                if exam_data:
-                    exams = load_exams_data()
-                    exams[exam_id] = {
-                        'id': exam_id,
-                        'title': request.form.get('title'),
-                        'type': 'mixed',
-                        'duration': int(request.form.get('duration', 90)),
-                        'created_by': session['exam_username'],
-                        'created_at': datetime.now(vn_timezone).strftime("%Y-%m-%d %H:%M:%S"),
-                        'questions': exam_data,
-                        'total_score': 10,
-                        'grade': grade,
-                        'tf_grading_method': request.form.get('tf_grading_method', 'deduction'),
-                        'general_grading_criteria': general_grading_criteria  # THÊM
-                    }
-                    save_exams_data(exams)
-                    return redirect(url_for('dashboard_teacher'))
+            if not word_file or not word_file.filename.endswith('.docx'):
+                flash("❌ Vui lòng chọn file Word (.docx)", "error")
+                return render_template('create_exam.html')
             
-        elif exam_type == 'essay':
-            essay_question = request.form.get('essay_question')
-            grading_criteria = request.form.get('grading_criteria')
+            # Lưu temp file
+            file_path = os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(word_file.filename))
+            word_file.save(file_path)
+            text_content = read_word_file(file_path)
+            
+            if not text_content:
+                flash("❌ Không thể đọc file Word. Vui lòng kiểm tra file.", "error")
+                return render_template('create_exam.html')
+            
+            # Tạo đề thi từ AI
+            num_multiple = int(request.form.get('num_multiple', 10))
+            num_truefalse = int(request.form.get('num_truefalse', 5))
+            num_essay = int(request.form.get('num_essay', 0)) if exam_type == 'mixed' else 0
+            
+            exam_data = generate_exam_from_text(text_content, num_multiple, num_truefalse, num_essay)
+            
+            if not exam_data:
+                flash("❌ AI không thể tạo đề thi. Vui lòng thử lại.", "error")
+                return render_template('create_exam.html')
+            
+            # ========================
+            # BƯỚC 2: KIỂM TRA SỐ LƯỢNG
+            # ========================
+            is_valid, mc_count, tf_count, essay_count, error_msg = validate_exam_questions(
+                exam_data, num_multiple, num_truefalse, num_essay
+            )
+            
+            # tạo token và lưu vào TEMP_EXAMS thay vì session
+            import uuid
+            token = str(uuid.uuid4())
+            TEMP_EXAMS[token] = {
+                'type': exam_type,
+                'title': exam_title,
+                'duration': exam_duration,
+                'grade': grade,
+                'questions': exam_data,
+                'is_valid': is_valid,
+                'error_msg': error_msg,
+                'mc_count': mc_count,
+                'tf_count': tf_count,
+                'essay_count': essay_count,
+                'required_mc': num_multiple,
+                'required_tf': num_truefalse,
+                'required_essay': num_essay,
+                'general_grading_criteria': general_grading_criteria
+            }
+            
+            # redirect to preview with token param
+            return redirect(url_for('preview_exam', token=token))
+        
+        # ========================
+        # BƯỚC 3: HÀM CONFIRM LƯU
+        # ========================
+        elif action == 'save':
+            token = request.form.get('token')
+            if not token or token not in TEMP_EXAMS:
+                flash("❌ Dữ liệu tạm thời không hợp lệ. Vui lòng tạo lại đề.", "error")
+                return redirect(url_for('create_exam'))
+            temp_data = TEMP_EXAMS.pop(token)
+            exam_id = datetime.now(vn_timezone).strftime("%Y%m%d%H%M%S")
             
             exams = load_exams_data()
             exams[exam_id] = {
                 'id': exam_id,
-                'title': request.form.get('title'),
+                'title': temp_data['title'],
+                'type': temp_data['type'],
+                'duration': temp_data['duration'],
+                'created_by': session['exam_username'],
+                'created_at': datetime.now(vn_timezone).strftime("%Y-%m-%d %H:%M:%S"),
+                'questions': temp_data['questions'],
+                'total_score': 10,
+                'grade': temp_data['grade'],
+                'tf_grading_method': 'deduction',
+                'general_grading_criteria': temp_data['general_grading_criteria']
+            }
+            save_exams_data(exams)
+            
+            flash(f"✅ Tạo đề thi thành công! ({temp_data['mc_count']} trắc nghiệm + {temp_data['tf_count']} đúng/sai)", "success")
+            return redirect(url_for('dashboard_teacher'))
+        
+        # Đề thi pure essay (không cần AI)
+        elif exam_type == 'essay':
+            essay_question = request.form.get('essay_question')
+            grading_criteria = request.form.get('grading_criteria')
+            
+            exam_id = datetime.now(vn_timezone).strftime("%Y%m%d%H%M%S")
+            exams = load_exams_data()
+            exams[exam_id] = {
+                'id': exam_id,
+                'title': exam_title,
                 'type': 'essay',
-                'duration': int(request.form.get('duration', 90)),
+                'duration': exam_duration,
                 'created_by': session['exam_username'],
                 'created_at': datetime.now(vn_timezone).strftime("%Y-%m-%d %H:%M:%S"),
                 'essay_question': essay_question,
                 'grading_criteria': grading_criteria,
                 'total_score': 10,
                 'grade': grade,
-                'general_grading_criteria': general_grading_criteria  # THÊM
+                'general_grading_criteria': general_grading_criteria
             }
             save_exams_data(exams)
+            
+            flash("✅ Tạo đề thi thành công!", "success")
             return redirect(url_for('dashboard_teacher'))
     
     return render_template('create_exam.html')
+
+
+# ========================
+# ROUTE XEM TRƯỚC ĐỀ THI
+# ========================
+@app.route('/preview_exam')
+def preview_exam():
+    """Xem trước đề thi được tạo từ AI.
+    Yêu cầu param `token` được trả về sau khi generate.
+    """
+    if 'exam_username' not in session or session.get('exam_role') != 'teacher':
+        return redirect(url_for('login_exam'))
+    
+    token = request.args.get('token')
+    if not token or token not in TEMP_EXAMS:
+        flash("❌ Không có dữ liệu đề thi. Vui lòng tạo lại.", "error")
+        return redirect(url_for('create_exam'))
+    
+    temp_data = TEMP_EXAMS[token]
+    
+    # nếu giáo viên nhấn lưu thì xử lý ở route khác, nhưng có thể reuse token
+    return render_template('preview_exam.html', 
+                         exam=temp_data,
+                         is_valid=temp_data['is_valid'],
+                         error_msg=temp_data['error_msg'],
+                         token=token)
+
 ############## sửa
 def analyze_wrong_answers(exam, mc_wrong):
     """AI đưa ra kế hoạch ôn tập và chủ đề liên quan"""
@@ -1883,7 +2117,7 @@ Tra ve JSON (KHONG DUNG # VA **):
 Chi tra ve JSON.
 """
         
-        response = model.generate_content(prompt)
+        response = get_model().generate_content(prompt)
         text = response.text.strip()
         text = text.replace('```json', '').replace('```', '').strip()
         result = json.loads(text)
@@ -1932,7 +2166,7 @@ Tra ve JSON (KHONG DUNG # VA **):
 Chi tra ve JSON.
 """
         
-        response = model.generate_content(prompt)
+        response = get_model().generate_content(prompt)
         text = response.text.strip()
         text = text.replace('```json', '').replace('```', '').strip()
         result = json.loads(text)

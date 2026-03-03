@@ -242,6 +242,96 @@
   </form>
 </div>
 
+<!-- CHATBOT FEEDBACK SUMMARY -->
+<div style="margin-bottom: 30px;">
+  <h3 style="color: #00796b;">📊 Đánh giá chatbot AI</h3>
+  {% if feedback_stats %}
+    {% for bot, ratings in feedback_stats.items() %}
+      <div style="margin-bottom: 25px;">
+        <strong>Bot: {{ bot }}</strong>
+        <div style="position: relative; height: 300px; max-width: 600px; margin-top:10px;">
+          <canvas id="chart-{{ bot|replace(' ','_') }}"></canvas>
+        </div>
+        <table style="width: auto; border-collapse: collapse; margin-top: 10px;">
+          <thead>
+            <tr style="background:#e0f2f1;">
+              <th style="padding:6px 12px; border:1px solid #ddd;">Đánh giá</th>
+              <th style="padding:6px 12px; border:1px solid #ddd;">Số lượt</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for rating, count in ratings.items() %}
+            <tr>
+              <td style="padding:6px 12px; border:1px solid #ddd;">{{ rating }}</td>
+              <td style="padding:6px 12px; border:1px solid #ddd; text-align:right;">{{ count }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p style="color:#666;">Chưa có phản hồi nào.</p>
+  {% endif %}
+
+  {% if raw_feedback %}
+    <h4 style="margin-top:20px; color:#00796b;">Chi tiết phản hồi</h4>
+    <table style="width:100%; border-collapse:collapse; margin-top:10px;">
+      <thead>
+        <tr style="background:#e0f2f1;">
+          <th style="padding:8px; border:1px solid #ddd;">Tên</th>
+          <th style="padding:8px; border:1px solid #ddd;">Bot</th>
+          <th style="padding:8px; border:1px solid #ddd;">Đánh giá</th>
+          <th style="padding:8px; border:1px solid #ddd;">Thời điểm</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for f in raw_feedback %}
+        <tr>
+          <td style="padding:8px; border:1px solid #ddd;">{{ f.name }}</td>
+          <td style="padding:8px; border:1px solid #ddd;">{{ f.bot }}</td>
+          <td style="padding:8px; border:1px solid #ddd;">{{ f.rating }}</td>
+          <td style="padding:8px; border:1px solid #ddd;">{{ f.timestamp }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+</div>
+
+<!-- include Chart.js from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const feedbackStats = {{ feedback_stats|tojson }};
+  window.addEventListener('load', () => {
+    Object.keys(feedbackStats).forEach(bot => {
+      const safeBot = bot.replace(/\s+/g, '_');
+      const ratings = feedbackStats[bot];
+      const labels = Object.keys(ratings);
+      const counts = labels.map(l => ratings[l]);
+      const ctx = document.getElementById('chart-' + safeBot);
+      if (ctx) {
+        new Chart(ctx.getContext('2d'), {
+          type: 'bar',
+          data: {
+            labels: labels,
+            datasets: [{
+              label: 'Số lượt',
+              data: counts,
+              backgroundColor: '#2193b0'
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: { y: { beginAtZero: true, precision:0 } }
+          }
+        });
+      }
+    });
+  });
+</script>
+
 <div style="margin-bottom: 30px;">
   <h3 style="color: #00796b;">DANH SÁCH ĐỀ THI</h3>
   {% if exams %}
@@ -268,6 +358,9 @@
         <td style="padding: 12px; border: 1px solid #ddd;">{{ exam.created_at }}</td>
         <td style="padding: 12px; border: 1px solid #ddd;">
           <button onclick="viewExam('{{ exam_id }}')" style="padding: 6px 12px; font-size: 14px; background-color: #0288d1;">Xem đề</button>
+          <form method="POST" action="{{ url_for('delete_exam', exam_id=exam_id) }}" style="display:inline;" onsubmit="return confirm('Bạn có chắc muốn xóa đề này?');">
+            <button type="submit" class="btn-action btn-delete">Xóa</button>
+          </form>
         </td>
       </tr>
       {% endfor %}

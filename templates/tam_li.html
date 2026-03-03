@@ -356,6 +356,16 @@
                 margin-top: 10px;
             }
         }
+
+        /* Feedback panel styling */
+        #feedbackPanel{
+            padding:12px 16px;
+            border-top:1px solid #eee;
+            background:#fafafa;
+        }
+        #feedbackPanel input,#feedbackPanel select{padding:8px;border:1px solid #ccc;border-radius:6px;}
+        #feedbackPanel button{padding:8px 16px;background:#3b82f6;color:#fff;border:none;border-radius:6px;cursor:pointer;}
+        #feedbackPanel h4{margin-bottom:8px;font-size:15px;color:#333;}
     </style>
 </head>
 <body>
@@ -402,6 +412,24 @@
                 placeholder="Nhập điều bạn muốn chia sẻ..."
             ></textarea>
             <button id="sendBtn">Gửi</button>
+        </div>
+        
+        <!-- FEEDBACK PANEL -->
+        <div id="feedbackPanel">
+            <h4>Đánh giá chatbot</h4>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+                <input id="fbName" type="text" placeholder="Tên của bạn" style="flex:1 1 120px;" />
+                <select id="fbRating" style="flex:1 1 120px;">
+                    <option value="">Chọn mức độ</option>
+                    <option>Rất hài lòng</option>
+                    <option>Hài lòng</option>
+                    <option>Bình thường</option>
+                    <option>Không hài lòng</option>
+                    <option>Rất không hài lòng</option>
+                </select>
+                <button onclick="sendFeedback()">Gửi</button>
+            </div>
+            <div id="fbMsg" style="margin-top:8px;font-size:13px;color:green;"></div>
         </div>
     </div>
 
@@ -594,6 +622,38 @@
                 }, 15);
             }
         });
+
+        // feedback handler for tâm lý bot
+        async function sendFeedback() {
+            const name = document.getElementById('fbName').value.trim();
+            const rating = document.getElementById('fbRating').value;
+            const msg = document.getElementById('fbMsg');
+            if (!name || !rating) {
+                msg.style.color = 'red';
+                msg.textContent = 'Vui lòng nhập tên và chọn đánh giá';
+                return;
+            }
+            try {
+                const res = await fetch('/chat_feedback', {
+                    method: 'POST',
+                    headers: {'Content-Type':'application/json'},
+                    body: JSON.stringify({name, rating, bot: 'tam_li'})
+                });
+                const data = await res.json();
+                if (data.status === 'ok') {
+                    msg.style.color = 'green';
+                    msg.textContent = 'Cảm ơn bạn đã đánh giá!';
+                    document.getElementById('fbName').value = '';
+                    document.getElementById('fbRating').value = '';
+                } else {
+                    msg.style.color = 'red';
+                    msg.textContent = 'Gửi không thành công';
+                }
+            } catch (e) {
+                msg.style.color = 'red';
+                msg.textContent = 'Lỗi mạng';
+            }
+        }
     </script>
 </body>
 </html>
