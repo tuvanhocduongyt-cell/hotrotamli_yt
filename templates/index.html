@@ -40,7 +40,6 @@
         <div id="feedbackPanel">
             <h4>Đánh giá chatbot</h4>
             <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
-                <input id="fbName" type="text" placeholder="Tên của bạn" style="flex:1 1 120px;" />
                 <select id="fbRating" style="flex:1 1 120px;">
                     <option value="">Chọn mức độ</option>
                     <option>Rất hài lòng</option>
@@ -79,13 +78,12 @@
             appendMessage("bot", data.reply);
         }
         async function sendFeedback() {
-            const name = document.getElementById('fbName').value.trim();
             const rating = document.getElementById('fbRating').value;
             const msg = document.getElementById('fbMsg');
-            if (!name || !rating) { msg.style.color='red'; msg.textContent='Nhập tên và chọn đánh giá'; return; }
-            const res = await fetch('/chat_feedback', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,rating,bot:'lichsu'})});
+            if (!rating) { msg.style.color='red'; msg.textContent='Chọn đánh giá'; return; }
+            const res = await fetch('/chat_feedback', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({rating,bot:'lichsu'})});
             const d = await res.json();
-            if(d.status==='ok'){msg.style.color='green';msg.textContent='Cảm ơn!';document.getElementById('fbName').value='';document.getElementById('fbRating').value='';}
+            if(d.status==='ok'){msg.style.color='green';msg.textContent='Cảm ơn!';document.getElementById('fbRating').value='';}
             else{msg.style.color='red';msg.textContent='Gửi thất bại';}
         }
     </script>

@@ -10,3 +10,4 @@ gunicorn
 dotenv
 mammoth
 python-docx
+openpyxl

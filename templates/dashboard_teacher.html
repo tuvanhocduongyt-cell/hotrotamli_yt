@@ -274,29 +274,7 @@
     <p style="color:#666;">Chưa có phản hồi nào.</p>
   {% endif %}
 
-  {% if raw_feedback %}
-    <h4 style="margin-top:20px; color:#00796b;">Chi tiết phản hồi</h4>
-    <table style="width:100%; border-collapse:collapse; margin-top:10px;">
-      <thead>
-        <tr style="background:#e0f2f1;">
-          <th style="padding:8px; border:1px solid #ddd;">Tên</th>
-          <th style="padding:8px; border:1px solid #ddd;">Bot</th>
-          <th style="padding:8px; border:1px solid #ddd;">Đánh giá</th>
-          <th style="padding:8px; border:1px solid #ddd;">Thời điểm</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for f in raw_feedback %}
-        <tr>
-          <td style="padding:8px; border:1px solid #ddd;">{{ f.name }}</td>
-          <td style="padding:8px; border:1px solid #ddd;">{{ f.bot }}</td>
-          <td style="padding:8px; border:1px solid #ddd;">{{ f.rating }}</td>
-          <td style="padding:8px; border:1px solid #ddd;">{{ f.timestamp }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  {% endif %}
+  {# raw feedback hidden by default - show only aggregated charts #}
 </div>
 
 <!-- include Chart.js from CDN -->
@@ -309,16 +287,29 @@
       const ratings = feedbackStats[bot];
       const labels = Object.keys(ratings);
       const counts = labels.map(l => ratings[l]);
+      // color map for rating labels
+      // màu theo thứ tự: đỏ, vàng, xanh biển, xanh lá, tím
+      const colorMap = {
+        'Rất không hài lòng': '#ef4444', // đỏ
+        'Không hài lòng': '#f59e0b',     // vàng
+        'Bình thường': '#3b82f6',        // xanh biển
+        'Hài lòng': '#16a34a',           // xanh lá
+        'Rất hài lòng': '#8b5cf6'        // tím
+      };
+      const backgroundColors = labels.map(l => colorMap[l] || '#2193b0');
       const ctx = document.getElementById('chart-' + safeBot);
       if (ctx) {
         new Chart(ctx.getContext('2d'), {
           type: 'bar',
           data: {
             labels: labels,
-            datasets: [{
+              datasets: [{
               label: 'Số lượt',
               data: counts,
-              backgroundColor: '#2193b0'
+              backgroundColor: backgroundColors,
+              // giảm độ rộng cột khoảng 50%
+              barPercentage: 0.5,
+              categoryPercentage: 0.5
             }]
           },
           options: {
@@ -358,6 +349,7 @@
         <td style="padding: 12px; border: 1px solid #ddd;">{{ exam.created_at }}</td>
         <td style="padding: 12px; border: 1px solid #ddd;">
           <button onclick="viewExam('{{ exam_id }}')" style="padding: 6px 12px; font-size: 14px; background-color: #0288d1;">Xem đề</button>
+          <a href="{{ url_for('export_scores', exam_id=exam_id) }}" style="padding: 6px 12px; font-size: 14px; background-color: #4CAF50; color:white; text-decoration:none; margin-left:4px;">Xuất điểm</a>
           <form method="POST" action="{{ url_for('delete_exam', exam_id=exam_id) }}" style="display:inline;" onsubmit="return confirm('Bạn có chắc muốn xóa đề này?');">
             <button type="submit" class="btn-action btn-delete">Xóa</button>
           </form>

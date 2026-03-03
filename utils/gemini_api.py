@@ -1,6 +1,10 @@
 import os
 import random
+from dotenv import load_dotenv
 import google.generativeai as genai
+
+# ensure .env is loaded in case the importer didn't load it yet
+load_dotenv()
 
 # load keys from environment (support comma-separated list)
 keys_env = os.getenv("GOOGLE_API_KEYS")

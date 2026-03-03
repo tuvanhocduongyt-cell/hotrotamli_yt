@@ -10,6 +10,19 @@
   <a href="{{ url_for('dashboard_teacher') }}">Quay lại trang quản lý</a>
 </p>
 
+{% if exams %}
+<div style="margin-bottom: 30px;">
+  <h3 style="color: #00796b;">Xuất điểm theo đề</h3>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;">
+    {% for exam_id, exam in exams.items() %}
+      <a href="{{ url_for('export_scores', exam_id=exam_id) }}" style="padding:8px 16px;background:#4CAF50;color:white;border-radius:6px;text-decoration:none;">
+        {{ exam.title }}
+      </a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
 {% if stats %}
 <div style="margin-bottom: 30px;">
   <h3 style="color: #00796b;">TỔNG QUAN</h3>

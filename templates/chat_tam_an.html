@@ -189,8 +189,7 @@
       <div id="feedbackPanel" style="width:100%; padding:12px 16px; border-top:1px solid #ddd; background:#fafafa;">
         <h3 style="margin:0 0 8px;font-size:15px;color:#333;">Đánh giá trợ lý AI</h3>
         <div style="display:flex; gap:8px; flex-wrap:wrap;">
-          <input id="fbName2" type="text" placeholder="Tên của bạn" style="flex:1 1 120px; padding:8px; border:1px solid #ccc; border-radius:6px;"/>
-          <select id="fbRating2" style="flex:1 1 120px; padding:8px; border:1px solid #ccc; border-radius:6px;">
+          <select id="fbRating2" style="flex:1 1 160px; padding:8px; border:1px solid #ccc; border-radius:6px;">
             <option value="">Mức độ hài lòng</option>
             <option value="Rất hài lòng">Rất hài lòng</option>
             <option value="Hài lòng">Hài lòng</option>
@@ -481,27 +480,25 @@ window.addEventListener('load', () => {
   txt.focus();
 });
 
-// feedback handler for Tâm An
+// feedback handler for Tâm An (rating only)
 async function sendFeedback2() {
-  const name = document.getElementById('fbName2').value.trim();
   const rating = document.getElementById('fbRating2').value;
   const msg = document.getElementById('fbMsg2');
-  if (!name || !rating) {
+  if (!rating) {
     msg.style.color = 'red';
-    msg.textContent = 'Vui lòng nhập tên và chọn đánh giá';
+    msg.textContent = 'Vui lòng chọn đánh giá';
     return;
   }
   try {
     const res = await fetch('/chat_feedback', {
       method: 'POST',
       headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({name, rating, bot: 'tam_an'})
+      body: JSON.stringify({rating, bot: 'tam_an'})
     });
     const data = await res.json();
     if (data.status === 'ok') {
       msg.style.color = 'green';
       msg.textContent = 'Cảm ơn bạn đã đánh giá!';
-      document.getElementById('fbName2').value = '';
       document.getElementById('fbRating2').value = '';
     } else {
       msg.style.color = 'red';

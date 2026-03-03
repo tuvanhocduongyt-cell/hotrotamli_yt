@@ -418,8 +418,7 @@
         <div id="feedbackPanel">
             <h4>Đánh giá chatbot</h4>
             <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
-                <input id="fbName" type="text" placeholder="Tên của bạn" style="flex:1 1 120px;" />
-                <select id="fbRating" style="flex:1 1 120px;">
+                <select id="fbRating" style="flex:1 1 160px; padding:8px; border-radius:6px;">
                     <option value="">Chọn mức độ</option>
                     <option>Rất hài lòng</option>
                     <option>Hài lòng</option>
@@ -623,27 +622,25 @@
             }
         });
 
-        // feedback handler for tâm lý bot
+        // feedback handler for tâm lý bot (rating only)
         async function sendFeedback() {
-            const name = document.getElementById('fbName').value.trim();
             const rating = document.getElementById('fbRating').value;
             const msg = document.getElementById('fbMsg');
-            if (!name || !rating) {
+            if (!rating) {
                 msg.style.color = 'red';
-                msg.textContent = 'Vui lòng nhập tên và chọn đánh giá';
+                msg.textContent = 'Vui lòng chọn đánh giá';
                 return;
             }
             try {
                 const res = await fetch('/chat_feedback', {
                     method: 'POST',
                     headers: {'Content-Type':'application/json'},
-                    body: JSON.stringify({name, rating, bot: 'tam_li'})
+                    body: JSON.stringify({rating, bot: 'tam_li'})
                 });
                 const data = await res.json();
                 if (data.status === 'ok') {
                     msg.style.color = 'green';
                     msg.textContent = 'Cảm ơn bạn đã đánh giá!';
-                    document.getElementById('fbName').value = '';
                     document.getElementById('fbRating').value = '';
                 } else {
                     msg.style.color = 'red';

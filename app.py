@@ -5,6 +5,8 @@ import re
 import random
 import base64
 import string
+import csv
+import openpyxl
 from PIL import Image
 from datetime import datetime
 from flask import send_file, send_from_directory, Response, stream_with_context
@@ -835,10 +837,11 @@ def chat_feedback():
     name = data.get('name', '').strip()
     rating = data.get('rating', '').strip()
     bot = data.get('bot', 'unknown')
-    if not name or not rating:
-        return jsonify({'error': 'Tên và đánh giá là bắt buộc'}), 400
+    # Only rating is required now; name is optional
+    if not rating:
+        return jsonify({'error': 'Đánh giá là bắt buộc'}), 400
     entry = {
-        'name': name,
+        'name': name if name else None,
         'rating': rating,
         'bot': bot,
         'timestamp': datetime.now(vn_timezone).strftime("%Y-%m-%d %H:%M:%S")
@@ -1579,35 +1582,73 @@ def validate_exam_questions(exam_data, num_multiple, num_truefalse, num_essay=0)
     return is_valid, mc_count, tf_count, essay_count, error_msg
 
 
-def generate_exam_from_text(text_content, num_multiple, num_truefalse, num_essay=0, attempt=1):
+def generate_exam_from_text_local(text_content, num_multiple, num_truefalse, num_essay=0):
+    """Rule-based fallback generation without calling AI API."""
+    # split into sentences
+    sentences = [s.strip() for s in re.split(r'(?<=[\.\?!])\s+', text_content) if s.strip()]
+    mc = []
+    tf = []
+    # helper to pick year from sentence
+    for s in sentences:
+        years = re.findall(r"\b(19|20)\d{2}\b", s)
+        if years and len(mc) < num_multiple:
+            year = years[0]
+            # build options: include year plus nearby variants
+            opts = [year]
+            for d in (-10, -5, 5, 10):
+                opts.append(str(int(year) + d))
+            random.shuffle(opts)
+            mc.append({
+                "question": f"Năm nào được nhắc tới trong câu: '{s}'?",
+                "options": [f"{chr(65+i)}. {opt}" for i,opt in enumerate(opts[:4])],
+                "answer": opts[:4].index(year)
+            })
+        if 'không' in s.lower() and len(tf) < num_truefalse:
+            # create a trivial TF by asking if sentence contains một từ cụ thể
+            stmt = s
+            tf.append({
+                "question": f"Câu sau đúng hay sai? {s}",
+                "statements": [s, "Câu khác", "Câu khác nữa", "Khác"],
+                "answers": [True, False, False, False]
+            })
+    return {"multiple_choice": mc[:num_multiple], "true_false": tf[:num_truefalse], "essay": []}
+
+
+def generate_exam_from_text(text_content, num_multiple, num_truefalse, num_essay=0, attempt=1, use_api=True):
     """
-    ✅ CẢI THIỆN: Tạo đề thi từ nội dung văn bản
-    - Dùng toàn bộ text (không cắt 3000 ký tự)
+    Tạo đề thi từ nội dung văn bản.
+
+    Nếu `use_api` được bật thì sẽ gọi dịch vụ AI external, còn không
+    thì sẽ chạy hàm rule‑based nhẹ `generate_exam_from_text_local` để
+    tự sinh câu hỏi đơn giản, không cần Internet.
+
+    - Dùng toàn bộ text (chuẫn hóa độ dài)
     - Kiểm tra số lượng câu hỏi
-    - Retry lên đến 3 lần nếu chưa đủ
+    - Retry tối đa 3 lần nếu chưa đủ hoặc phát hiện câu bịa.
     """
     
-    # CHUNKING: Nếu quá dài, chia thành từng phần rõ ràng
+    # CHUNKING: Nếu quá dài, sử dụng phần đầu nhưng vẫn nhấn mạnh không tạo thêm nội dung
     max_chars = 5000
     text_to_use = text_content if len(text_content) <= max_chars else text_content[:max_chars]
     
     prompt = f"""
-BẠN LÀ GIÁO VIÊN LỊCH SỬ LỚP 11 - HÃY TẠO ĐỀ THI CHÍNH XÁC:
+BẠN LÀ GIÁO VIÊN LỊCH SỬ LỚP 11 - HÃY TẠO ĐỀ THI CHÍNH XÁC DỰA TRÊN NỘI DUNG DƯỚI ĐÂY:
 
 📚 NỘI DUNG TỪ FILE WORD:
 {text_to_use}
 
-📋 YÊUVẦU CẬP NHẬT (PHẢI ĐỦ CÂU):
+📋 YÊU CẦU CẬP NHẬT (PHẢI ĐỦ CÂU):
 - TỔNG CỘNG {num_multiple} CÂU TRẮC NGHIỆM (ABCD)
 - TỔNG CỘNG {num_truefalse} CÂU ĐÚNG/SAI (mỗi câu 4 ý)
 {'- TỔNG CỘNG ' + str(num_essay) + ' CÂU TỰ LUẬN' if num_essay > 0 else ''}
 
 ⚠️ QUAN TRỌNG:
-1. PHẢI CÓ ĐÚNG {num_multiple} câu trắc nghiệm (không được ít hơn)
-2. PHẢI CÓ ĐÚNG {num_truefalse} câu đúng/sai (không được ít hơn)
-3. Mỗi câu trắc nghiệm phải có 4 options: A, B, C, D
-4. Mỗi câu đúng/sai phải có ĐÚNG 4 ý
-5. Chỉ trả về JSON, không cần giải thích
+1. CHỈ DÙNG THÔNG TIN CÓ TRONG PHẦN NỘI DUNG Ở TRÊN. KHÔNG ĐƯỢC SÁNG TẠO, KHÔNG THÊM Ý MỚI BÊN NGOÀI.
+2. PHẢI CÓ ĐÚNG {num_multiple} câu trắc nghiệm (không được ít hơn)
+3. PHẢI CÓ ĐÚNG {num_truefalse} câu đúng/sai (không được ít hơn)
+4. Mỗi câu trắc nghiệm phải có 4 options: A, B, C, D
+5. Mỗi câu đúng/sai phải có ĐÚNG 4 ý
+6. Chỉ trả về JSON, không cần giải thích
 
 📝 JSON FORMAT:
 {{
@@ -1632,7 +1673,10 @@ CHỈ TRẢ VỀ JSON, KHÔNG CÓ GÌ KHÁC!
 """
     
     try:
-        print(f"[AI] Lần {attempt}: Tạo đề thi ({num_multiple} MC + {num_truefalse} TF + {num_essay} Essay)...")
+        # nếu không dùng API thì bỏ qua prompt và dùng bộ luật nội bộ
+        print(f"[AI] Lần {attempt}: Tạo đề thi ({num_multiple} MC + {num_truefalse} TF + {num_essay} Essay)... use_api={use_api}")
+        if not use_api:
+            return generate_exam_from_text_local(text_content, num_multiple, num_truefalse, num_essay)
         response = get_model().generate_content(prompt)
         text = response.text.strip()
         text = text.replace('```json', '').replace('```', '').strip()
@@ -1643,13 +1687,46 @@ CHỈ TRẢ VỀ JSON, KHÔNG CÓ GÌ KHÁC!
             exam_data, num_multiple, num_truefalse, num_essay
         )
         
-        if is_valid:
+        # ✅ KIỂM TRA NỘI DUNG CÂU HỎI CÓ LIÊN QUAN ĐẾN VĂN BẢN
+        def question_in_source(q):
+            # nếu chuỗi rỗng thì coi là không hợp lệ
+            if not q or not text_content:
+                return False
+            # kiểm tra từ dài
+            for part in q.split():
+                if len(part) >= 5 and part in text_content:
+                    return True
+            # kiểm tra n-gram (3 từ liền)
+            words = [w.strip('.,?"!') for w in q.split() if w.strip('.,?"!')]
+            for i in range(len(words) - 2):
+                gram = ' '.join(words[i:i+3])
+                if len(gram) >= 10 and gram in text_content:
+                    return True
+            return False
+        bad = False
+        for q in exam_data.get('multiple_choice', []):
+            if not question_in_source(q.get('question','')):
+                print(f"❗Câu MC không tìm thấy trong source: {q.get('question','')}")
+                bad = True
+        for q in exam_data.get('true_false', []):
+            if not question_in_source(q.get('question','')):
+                print(f"❗Câu TF không tìm thấy trong source: {q.get('question','')}")
+                bad = True
+        if bad and attempt < 3:
+            print(f"⚠️ Phát hiện câu hỏi có vẻ bịa, thử lại lần {attempt+1}")
+            return generate_exam_from_text(text_content, num_multiple, num_truefalse, num_essay, attempt + 1)
+        
+        if is_valid and not bad:
             print(f"✅ Thành công! {mc_count} MC + {tf_count} TF + {essay_count} Essay")
             return exam_data
         else:
-            print(f"⚠️ Lần {attempt} chưa đủ: {error_msg}")
+            if bad:
+                # nếu đã retry 3 lần vẫn có câu bịa, trả về cho giáo viên chỉnh
+                print(f"❌ Vẫn tồn tại câu bịa sau {attempt} lần.")
+            else:
+                print(f"⚠️ Lần {attempt} chưa đủ: {error_msg}")
             
-            # Retry tối đa 3 lần
+            # Retry tối đa 3 lần nếu chưa đủ và chưa bị bad
             if attempt < 3:
                 return generate_exam_from_text(text_content, num_multiple, num_truefalse, num_essay, attempt + 1)
             else:
@@ -1898,8 +1975,40 @@ def dashboard_teacher():
                          materials=materials,
                          materials_by_grade=materials_by_grade,
                          submissions=submissions,
-                         feedback_stats=feedback_stats,
-                         raw_feedback=feedback_list)
+                         feedback_stats=feedback_stats)
+
+# Export scores for a given exam to CSV (opened with Excel)
+@app.route('/export_scores/<exam_id>')
+def export_scores(exam_id):
+    if 'exam_username' not in session or session.get('exam_role') != 'teacher':
+        return redirect(url_for('login_exam'))
+    submissions = load_exam_submissions()
+    # filter submissions belonging to this exam
+    rows = [s for s in submissions if s.get('exam_id') == exam_id]
+    if not rows:
+        flash('Không có bài nộp nào cho đề này.', 'warning')
+        return redirect(url_for('dashboard_teacher'))
+    # create Excel workbook in memory
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.title = "Điểm"
+    # header row
+    ws.append(['Học sinh (username)', 'Tên đầy đủ', 'Điểm'])
+    students = load_exam_students()
+    for s in rows:
+        user = s.get('student', '')
+        fullname = students.get(user, {}).get('fullname', '')
+        score = s.get('score', '')
+        ws.append([user, fullname, score])
+    out = io.BytesIO()
+    wb.save(out)
+    out.seek(0)
+    exams = load_exams_data()
+    title = exams.get(exam_id, {}).get('title', exam_id)
+    fname = f"scores_{exam_id}.xlsx"
+    return send_file(out, as_attachment=True,
+                     download_name=fname,
+                     mimetype='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
 # Cập nhật route dashboard_student
 @app.route('/dashboard_student')
@@ -2507,7 +2616,7 @@ def exam_statistics():
             'submissions': student_submissions
         }
     
-    return render_template('exam_statistics.html', stats=stats)
+    return render_template('exam_statistics.html', stats=stats, exams=exams)
 
 ############
 # THAY THẾ ROUTE adjust_score VÀ view_submission HIỆN TẠI
