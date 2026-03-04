@@ -10,7 +10,7 @@
     background: #f9f9f9;
     border-radius: 8px;
   }
-  
+
   .exam-header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
@@ -18,29 +18,29 @@
     border-radius: 8px;
     margin-bottom: 20px;
   }
-  
+
   .exam-header h1 {
     margin: 0;
     font-size: 28px;
   }
-  
+
   .exam-stats {
     display: flex;
     gap: 30px;
     margin-top: 15px;
     font-size: 16px;
   }
-  
+
   .stat-item {
     display: flex;
     align-items: center;
     gap: 8px;
   }
-  
+
   .stat-icon {
     font-size: 20px;
   }
-  
+
   .warning-box {
     background: #fff3cd;
     border-left: 5px solid #ffc107;
@@ -48,22 +48,22 @@
     margin-bottom: 20px;
     border-radius: 4px;
   }
-  
+
   .warning-box h4 {
     color: #856404;
     margin-top: 0;
   }
-  
+
   .warning-box .error-list {
     color: #856404;
     margin: 10px 0 0 20px;
   }
-  
+
   .warning-box .error-list li {
     margin: 5px 0;
     font-weight: 500;
   }
-  
+
   .success-box {
     background: #d4edda;
     border-left: 5px solid #28a745;
@@ -72,7 +72,7 @@
     border-radius: 4px;
     color: #155724;
   }
-  
+
   .section-title {
     background: #667eea;
     color: white;
@@ -82,7 +82,7 @@
     font-size: 18px;
     font-weight: bold;
   }
-  
+
   .question-item {
     background: white;
     border: 1px solid #ddd;
@@ -91,20 +91,21 @@
     border-radius: 4px;
     border-left: 4px solid #667eea;
   }
-  
+
   .question-num {
     color: #667eea;
     font-weight: bold;
     font-size: 16px;
     margin-bottom: 10px;
   }
-  
+
   .question-text {
     font-size: 15px;
     margin-bottom: 12px;
     line-height: 1.5;
+    white-space: pre-wrap;
   }
-  
+
   .option {
     padding: 8px;
     margin: 5px 0;
@@ -112,14 +113,14 @@
     border-radius: 3px;
     font-size: 14px;
   }
-  
+
   .correct-answer {
     color: #28a745;
     font-weight: bold;
     font-size: 13px;
     margin-top: 8px;
   }
-  
+
   .tf-statements {
     background: #f0f0f0;
     padding: 10px;
@@ -127,19 +128,19 @@
     margin: 10px 0;
     font-size: 14px;
   }
-  
+
   .tf-statement {
     padding: 5px 0;
     margin: 5px 0;
   }
-  
+
   .action-buttons {
     display: flex;
     gap: 15px;
     margin-top: 30px;
     justify-content: center;
   }
-  
+
   .btn {
     padding: 12px 30px;
     font-size: 16px;
@@ -150,36 +151,36 @@
     text-decoration: none;
     display: inline-block;
   }
-  
+
   .btn-save {
     background: #28a745;
     color: white;
   }
-  
+
   .btn-save:hover {
     background: #218838;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
-  
+
   .btn-cancel {
     background: #6c757d;
     color: white;
   }
-  
+
   .btn-cancel:hover {
     background: #5a6268;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
-  
+
   .btn-disable {
     background: #ccc;
     color: #666;
     cursor: not-allowed;
     opacity: 0.6;
   }
-  
+
   .count-badge {
     display: inline-block;
     background: #667eea;
@@ -189,11 +190,11 @@
     font-size: 13px;
     margin-left: 10px;
   }
-  
+
   .count-badge.danger {
     background: #dc3545;
   }
-  
+
   .scroll-preview {
     border: 1px solid #ddd;
     padding: 15px;
@@ -224,92 +225,92 @@
 
   <!-- KIỂM TRA KẾT QUẢ -->
   {% if exam.is_valid %}
-    <div class="success-box">
-      <h4>✅ Nội dung đủ tiêu chí!</h4>
-      <p>
-        <strong>Trắc nghiệm:</strong> {{ exam.mc_count }}/{{ exam.required_mc }} ✓ |
-        <strong>Đúng/Sai:</strong> {{ exam.tf_count }}/{{ exam.required_tf }} ✓
-        {% if exam.essay_count > 0 %}
-          | <strong>Tự luận:</strong> {{ exam.essay_count }}/{{ exam.required_essay }} ✓
-        {% endif %}
-      </p>
-    </div>
+  <div class="success-box">
+    <h4>✅ Nội dung đủ tiêu chí!</h4>
+    <p>
+      <strong>Trắc nghiệm:</strong> {{ exam.mc_count }}/{{ exam.required_mc }} ✓ |
+      <strong>Đúng/Sai:</strong> {{ exam.tf_count }}/{{ exam.required_tf }} ✓
+      {% if exam.essay_count > 0 %}
+      | <strong>Tự luận:</strong> {{ exam.essay_count }}/{{ exam.required_essay }} ✓
+      {% endif %}
+    </p>
+  </div>
   {% else %}
-    <div class="warning-box">
-      <h4>⚠️ Thiếu câu hỏi! Vui lòng tạo lại:</h4>
-      <ul class="error-list">
-        <li>{{ exam.error_msg }}</li>
-      </ul>
-      <p style="margin-top: 15px; color: #856404;">
-        Bạn có thể:
-        <br>❌ Hủy và tạo lại với số câu ít hơn
-        <br>❌ Hủy và dùng file Word khác có nội dung nhiều hơn
-      </p>
-    </div>
+  <div class="warning-box">
+    <h4>⚠️ Thiếu câu hỏi! Vui lòng tạo lại:</h4>
+    <ul class="error-list">
+      <li>{{ exam.error_msg }}</li>
+    </ul>
+    <p style="margin-top: 15px; color: #856404;">
+      Bạn có thể:
+      <br>❌ Hủy và tạo lại với số câu ít hơn
+      <br>❌ Hủy và dùng file Word khác có nội dung nhiều hơn
+    </p>
+  </div>
   {% endif %}
 
   <!-- XEM TRƯỚC CÂU HỎI -->
   <div class="scroll-preview">
     {% if exam.questions.multiple_choice %}
-      <div class="section-title">
-        📝 TRẮC NGHIỆM
-        <span class="count-badge">{{ exam.questions.multiple_choice|length }} câu</span>
-      </div>
-      
-      {% for q in exam.questions.multiple_choice %}
-        <div class="question-item">
-          <div class="question-num">Câu {{ loop.index }}:</div>
-          <div class="question-text">{{ q.question }}</div>
-          {% for opt in q.options %}
-            <div class="option">{{ opt }}</div>
-          {% endfor %}
-          <div class="correct-answer">➜ Đáp án: <strong>{{ q.answer }}</strong></div>
-        </div>
+    <div class="section-title">
+      📝 TRẮC NGHIỆM
+      <span class="count-badge">{{ exam.questions.multiple_choice|length }} câu</span>
+    </div>
+
+    {% for q in exam.questions.multiple_choice %}
+    <div class="question-item">
+      <div class="question-num">Câu {{ loop.index }}:</div>
+      <div class="question-text">{{ q.question }}</div>
+      {% for opt in q.options %}
+      <div class="option">{{ opt }}</div>
       {% endfor %}
-      
+      <div class="correct-answer">➜ Đáp án: <strong>{{ q.answer }}</strong></div>
+    </div>
+    {% endfor %}
+
     {% endif %}
 
     {% if exam.questions.true_false %}
-      <div class="section-title">
-        ✓/✗ ĐÚNG - SAI
-        <span class="count-badge">{{ exam.questions.true_false|length }} câu</span>
-      </div>
-      
-      {% for q in exam.questions.true_false %}
-        <div class="question-item">
-          <div class="question-num">Câu {{ loop.index }}:</div>
-          <div class="question-text">{{ q.question }}</div>
-          <div class="tf-statements">
-            {% for stmt in q.statements %}
-              <div class="tf-statement">
-                <strong>Ý {{ loop.index }}:</strong> {{ stmt }}
-                <span style="margin-left: 10px; color: #28a745; font-weight: bold;">
-                  {% if q.answers[loop.index0] %}✓ ĐÚNG{% else %}✗ SAI{% endif %}
-                </span>
-              </div>
-            {% endfor %}
-          </div>
+    <div class="section-title">
+      ✓/✗ ĐÚNG - SAI
+      <span class="count-badge">{{ exam.questions.true_false|length }} câu</span>
+    </div>
+
+    {% for q in exam.questions.true_false %}
+    <div class="question-item">
+      <div class="question-num">Câu {{ loop.index }}:</div>
+      <div class="question-text">{{ q.question }}</div>
+      <div class="tf-statements">
+        {% for stmt in q.statements %}
+        <div class="tf-statement">
+          <strong>Ý {{ loop.index }}:</strong> {{ stmt }}
+          <span style="margin-left: 10px; color: #28a745; font-weight: bold;">
+            {% if q.answers[loop.index0] %}✓ ĐÚNG{% else %}✗ SAI{% endif %}
+          </span>
         </div>
-      {% endfor %}
-      
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+
     {% endif %}
 
     {% if exam.questions.essay %}
-      <div class="section-title">
-        📄 TỰ LUẬN
-        <span class="count-badge">{{ exam.questions.essay|length }} câu</span>
+    <div class="section-title">
+      📄 TỰ LUẬN
+      <span class="count-badge">{{ exam.questions.essay|length }} câu</span>
+    </div>
+
+    {% for q in exam.questions.essay %}
+    <div class="question-item">
+      <div class="question-num">Câu {{ loop.index }}:</div>
+      <div class="question-text">{{ q.question }}</div>
+      <div style="font-size: 13px; color: #666; margin-top: 10px;">
+        <strong>Tiêu chí chấm:</strong>
+        <br>{{ q.grading_criteria }}
       </div>
-      
-      {% for q in exam.questions.essay %}
-        <div class="question-item">
-          <div class="question-num">Câu {{ loop.index }}:</div>
-          <div class="question-text">{{ q.question }}</div>
-          <div style="font-size: 13px; color: #666; margin-top: 10px;">
-            <strong>Tiêu chí chấm:</strong>
-            <br>{{ q.grading_criteria }}
-          </div>
-        </div>
-      {% endfor %}
+    </div>
+    {% endfor %}
     {% endif %}
   </div>
 
@@ -322,16 +323,16 @@
         💾 Lưu Đề Thi
       </button>
     </form>
-    
+
     <a href="{{ url_for('create_exam') }}" class="btn btn-cancel">
       ↩️ Tạo Lại
     </a>
   </div>
 
   {% if not exam.is_valid %}
-    <p style="text-align: center; color: #dc3545; margin-top: 20px; font-weight: bold;">
-      ⚠️ Bạn không thể lưu cho đến khi đủ câu hỏi
-    </p>
+  <p style="text-align: center; color: #dc3545; margin-top: 20px; font-weight: bold;">
+    ⚠️ Bạn không thể lưu cho đến khi đủ câu hỏi
+  </p>
   {% endif %}
 </div>
 

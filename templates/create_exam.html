@@ -26,7 +26,7 @@
     border-color: #00796b;
     background: #e0f2f1;
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,121,107,0.2);
+    box-shadow: 0 5px 15px rgba(0, 121, 107, 0.2);
   }
 
   .exam-card.active {
@@ -46,14 +46,21 @@
     border-radius: 10px;
     margin-top: 20px;
   }
-  
+
   .exam-form:not(.active) {
     display: none;
   }
 
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .form-group {
@@ -148,7 +155,7 @@
 
   .btn-submit:hover {
     background: linear-gradient(135deg, #005a4d 0%, #00796b 100%);
-    box-shadow: 0 5px 15px rgba(0,121,107,0.3);
+    box-shadow: 0 5px 15px rgba(0, 121, 107, 0.3);
   }
 
   /* STYLE CHO KHUNG FILE MẪU */
@@ -192,7 +199,7 @@
     background: #4caf50;
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(76,175,80,0.3);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
   }
 
   .sample-download-btn span {
@@ -206,7 +213,8 @@
 <div class="sample-file-box">
   <h3>📥 File đề mẫu minh họa</h3>
   <p>Tải về file mẫu để tham khảo định dạng trước khi tạo đề thi</p>
-  <a href="https://docs.google.com/document/d/18uqjNDtnikyVAYhYX6GxNMTwnDSr0PnT/edit?usp=sharing&ouid=109388140720750358249&rtpof=true&sd=true" target="_blank" class="sample-download-btn">
+  <a href="https://docs.google.com/document/d/18uqjNDtnikyVAYhYX6GxNMTwnDSr0PnT/edit?usp=sharing&ouid=109388140720750358249&rtpof=true&sd=true"
+    target="_blank" class="sample-download-btn">
     <span>📄</span>
     <div style="text-align: left;">
       <strong>File mẫu định dạng đề thi</strong><br>
@@ -238,7 +246,7 @@
 <!-- FORM TRẮC NGHIỆM -->
 <form id="form-multiple-choice" class="exam-form active" method="POST" enctype="multipart/form-data">
   <input type="hidden" name="exam_type" value="multiple_choice">
-  
+
   <h3 style="color: #00796b; margin-bottom: 20px;">Cấu hình đề trắc nghiệm</h3>
 
   <div class="form-group">
@@ -262,19 +270,14 @@
   </div>
 
   <div class="form-group">
-    <label>Upload file Word chứa nội dung:</label>
+    <label>Upload file Word (.docx):</label>
+    <div class="info-box" style="margin-top: 0; background: #e8f5e9; border-color: #4caf50;">
+      <strong style="color: #2e7d32;">ℹ️ Quy định định dạng:</strong><br>
+      - <b>Trắc nghiệm:</b> Câu 1. [Hỏi] \n A. [ ] B. [ ] \n Đáp án: A<br>
+      - <b>Đúng/Sai:</b> Câu 2. [Dẫn] \n a) [ ] b) [ ] \n Đáp án: a-Đ, b-S...
+    </div>
     <input type="file" name="word_file" accept=".docx" required>
-    <small style="color: #666;">File .docx chứa nội dung để AI tạo câu hỏi</small>
-  </div>
-
-  <div class="form-group">
-    <label>Số câu trắc nghiệm ABCD:</label>
-    <input type="number" name="num_multiple" value="10" min="1" max="50" required>
-  </div>
-
-  <div class="form-group">
-    <label>Số câu Đúng/Sai (mỗi câu 4 ý):</label>
-    <input type="number" name="num_truefalse" value="5" min="1" max="20" required>
+    <small style="color: #666;">Thuật toán sẽ lấy 100% nội dung theo đúng định dạng trên.</small>
   </div>
 
   <div class="criteria-box">
@@ -289,8 +292,8 @@
     </div>
   </div>
 
-  <div class="info-box">
-    <strong>Lưu ý:</strong> AI sẽ tự động tạo câu hỏi dựa trên nội dung file Word bạn upload
+  <div class="info-box" style="background: #e1f5fe; border-left-color: #03a9f4;">
+    <strong>💡 Thông tin:</strong> Hệ thống sẽ tự động bóc tách toàn bộ câu hỏi và đáp án từ file Word bạn vừa tải lên.
   </div>
 
   <button type="submit" class="btn-submit">Tạo đề thi</button>
@@ -299,7 +302,7 @@
 <!-- FORM HỖN HỢP -->
 <form id="form-mixed" class="exam-form" method="POST" enctype="multipart/form-data">
   <input type="hidden" name="exam_type" value="mixed">
-  
+
   <h3 style="color: #00796b; margin-bottom: 20px;">Cấu hình đề hỗn hợp</h3>
 
   <div class="form-group">
@@ -323,25 +326,15 @@
   </div>
 
   <div class="form-group">
-    <label>Upload file Word chứa nội dung:</label>
+    <label>Upload file Word (.docx):</label>
+    <div class="info-box" style="margin-top: 0; background: #e8f5e9; border-color: #4caf50;">
+      <strong style="color: #2e7d32;">ℹ️ Quy định định dạng:</strong><br>
+      - Theo đúng định dạng Câu 1., A., Đáp án: ... như hướng dẫn.
+    </div>
     <input type="file" name="word_file" accept=".docx">
-    <small style="color: #666;">File .docx chứa nội dung để AI tạo câu hỏi</small>
+    <small style="color: #666;">Thuật toán sẽ tự động bóc tách 100% nội dung.</small>
   </div>
 
-  <div class="form-group">
-    <label>Số câu trắc nghiệm ABCD:</label>
-    <input type="number" name="num_multiple" value="5" min="0" max="30">
-  </div>
-
-  <div class="form-group">
-    <label>Số câu Đúng/Sai:</label>
-    <input type="number" name="num_truefalse" value="3" min="0" max="15">
-  </div>
-
-  <div class="form-group">
-    <label>Số câu Tự luận:</label>
-    <input type="number" name="num_essay" value="1" min="1" max="5" id="num_essay_mixed">
-  </div>
 
   <div class="form-group">
     <label>Phương pháp chấm điểm Đúng/Sai:</label>
@@ -380,21 +373,21 @@
     </div>
   </div>
 
-  <div id="essay-criteria-container" style="display: none;">
-    <div class="criteria-box">
-      <h4>📝 Tiêu chí chấm cho từng câu tự luận</h4>
-      <p style="font-size: 13px; color: #666; margin-bottom: 15px;">
-        AI sẽ tạo câu hỏi tự luận từ file Word. Sau khi tạo xong, bạn có thể chỉnh sửa tiêu chí từng câu trong phần xem đề.
-      </p>
-      <div class="info-box">
-        <strong>💡 Mẹo:</strong> Với đề hỗn hợp, AI sẽ tự động tạo tiêu chí chấm cho từng câu tự luận. Bạn có thể điều chỉnh sau khi đề được tạo.
-      </div>
+  <div class="criteria-box">
+    <h4>📝 Tiêu chí chấm cho từng câu tự luận</h4>
+    <p style="font-size: 13px; color: #666; margin-bottom: 15px;">
+      Hệ thống tự động trích xuất câu tự luận từ file Word. Bạn có thể chỉnh sửa tiêu chí chấm từng câu trong phần xem
+      lại sau khi upload.
+    </p>
+    <div class="info-box" style="margin-top: 10px;">
+      <strong>💡 Mẹo:</strong> Hệ thống sẽ tự động tạo tiêu chí chấm cơ bản, bạn nên kiểm tra và điều chỉnh để AI chấm
+      chính xác hơn.
     </div>
   </div>
 
-  <div class="info-box">
-    <strong>Phân bổ điểm:</strong> Trắc nghiệm 40% + Đúng/Sai 30% + Tự luận 30%<br>
-    <strong>Lưu ý:</strong> AI sẽ tự động chấm phần tự luận ngay sau khi học sinh nộp bài
+  <div class="info-box" style="background: #e1f5fe; border-left-color: #03a9f4;">
+    <strong>💡 Thông tin:</strong> Mọi câu hỏi (Trắc nghiệm, Đúng/Sai, Tự luận) sẽ được trích xuất tự động. AI sẽ hỗ trợ
+    chấm điểm phần Tự luận.
   </div>
 
   <button type="submit" class="btn-submit">Tạo đề thi</button>
@@ -403,7 +396,7 @@
 <!-- FORM TỰ LUẬN -->
 <form id="form-essay" class="exam-form" method="POST">
   <input type="hidden" name="exam_type" value="essay">
-  
+
   <h3 style="color: #00796b; margin-bottom: 20px;">Cấu hình đề tự luận</h3>
 
   <div class="form-group">
@@ -459,7 +452,7 @@ LƯU Ý CHẤM:
 - Không sao chép nguyên văn từ sách
 - Đánh giá cao nếu có sự phân tích cá nhân"></textarea>
       <small style="color: #666;">
-        <strong>Quan trọng:</strong> Tiêu chí càng chi tiết, AI chấm điểm càng chính xác. 
+        <strong>Quan trọng:</strong> Tiêu chí càng chi tiết, AI chấm điểm càng chính xác.
         Nên phân chia rõ từng ý và quy định cụ thể số điểm cho từng mức độ.
       </small>
     </div>
@@ -491,83 +484,66 @@ LƯU Ý CHẤM:
 </form>
 
 <p style="text-align: center; margin-top: 30px;">
-  <a href="{{ url_for('dashboard_teacher') }}" style="color: #00796b; text-decoration: none; font-weight: 600;">← Quay lại trang quản lý</a>
+  <a href="{{ url_for('dashboard_teacher') }}" style="color: #00796b; text-decoration: none; font-weight: 600;">← Quay
+    lại trang quản lý</a>
 </p>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('Script loaded');
-  
-  // Xử lý click vào exam card
-  document.querySelectorAll('.exam-card').forEach(card => {
-    card.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      const type = this.getAttribute('data-type');
-      console.log('Clicked:', type);
-      
-      // Xóa active từ tất cả cards
-      document.querySelectorAll('.exam-card').forEach(c => {
-        c.classList.remove('active');
+  document.addEventListener('DOMContentLoaded', function () {
+    console.log('Script loaded');
+
+    // Xử lý click vào exam card
+    document.querySelectorAll('.exam-card').forEach(card => {
+      card.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const type = this.getAttribute('data-type');
+        console.log('Clicked:', type);
+
+        // Xóa active từ tất cả cards
+        document.querySelectorAll('.exam-card').forEach(c => {
+          c.classList.remove('active');
+        });
+
+        // Thêm active cho card hiện tại
+        this.classList.add('active');
+
+        // Ẩn tất cả forms
+        document.querySelectorAll('.exam-form').forEach(form => {
+          form.classList.remove('active');
+        });
+
+        // Hiển thị form tương ứng
+        const targetForm = document.getElementById('form-' + type);
+        console.log('Target form:', targetForm);
+        if (targetForm) {
+          targetForm.classList.add('active');
+          console.log('Form activated:', 'form-' + type);
+        }
       });
-      
-      // Thêm active cho card hiện tại
-      this.classList.add('active');
-      
-      // Ẩn tất cả forms
-      document.querySelectorAll('.exam-form').forEach(form => {
-        form.classList.remove('active');
-      });
-      
-      // Hiển thị form tương ứng
-      const targetForm = document.getElementById('form-' + type);
-      console.log('Target form:', targetForm);
-      if (targetForm) {
-        targetForm.classList.add('active');
-        console.log('Form activated:', 'form-' + type);
-      }
     });
+
+    // Xử lý grading method
+    document.querySelectorAll('.grading-option').forEach(option => {
+      option.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        this.closest('.grading-method').querySelectorAll('.grading-option').forEach(opt => {
+          opt.classList.remove('active');
+        });
+
+        this.classList.add('active');
+
+        const radio = this.querySelector('input[type="radio"]');
+        if (radio) {
+          radio.checked = true;
+        }
+      });
+    });
+
+    // Tải xong
+    console.log('Forms initialized.');
   });
-  
-  // Xử lý grading method
-  document.querySelectorAll('.grading-option').forEach(option => {
-    option.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      this.closest('.grading-method').querySelectorAll('.grading-option').forEach(opt => {
-        opt.classList.remove('active');
-      });
-      
-      this.classList.add('active');
-      
-      const radio = this.querySelector('input[type="radio"]');
-      if (radio) {
-        radio.checked = true;
-      }
-    });
-  });
-  
-  // Hiển thị/ẩn phần tiêu chí tự luận
-  const numEssayInput = document.getElementById('num_essay_mixed');
-  if (numEssayInput) {
-    numEssayInput.addEventListener('change', function() {
-      const container = document.getElementById('essay-criteria-container');
-      if (parseInt(this.value) > 0) {
-        container.style.display = 'block';
-      } else {
-        container.style.display = 'none';
-      }
-    });
-    
-    if (parseInt(numEssayInput.value) > 0) {
-      document.getElementById('essay-criteria-container').style.display = 'block';
-    }
-  }
-  
-  // Log trạng thái ban đầu
-  console.log('Forms:', document.querySelectorAll('.exam-form'));
-  console.log('Active form:', document.querySelector('.exam-form.active'));
-});
 </script>
 
 {% endblock %}

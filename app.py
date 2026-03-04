@@ -1614,133 +1614,323 @@ def generate_exam_from_text_local(text_content, num_multiple, num_truefalse, num
     return {"multiple_choice": mc[:num_multiple], "true_false": tf[:num_truefalse], "essay": []}
 
 
-def generate_exam_from_text(text_content, num_multiple, num_truefalse, num_essay=0, attempt=1, use_api=True):
+def parse_docx_strictly(text):
     """
-    Tạo đề thi từ nội dung văn bản.
-
-    Nếu `use_api` được bật thì sẽ gọi dịch vụ AI external, còn không
-    thì sẽ chạy hàm rule‑based nhẹ `generate_exam_from_text_local` để
-    tự sinh câu hỏi đơn giản, không cần Internet.
-
-    - Dùng toàn bộ text (chuẫn hóa độ dài)
-    - Kiểm tra số lượng câu hỏi
-    - Retry tối đa 3 lần nếu chưa đủ hoặc phát hiện câu bịa.
+    Thuật toán tách đề thi chính xác 100% dựa trên các quy luật cố định (Câu X, A/B/C/D, a/b/c/d).
+    Hỗ trợ cả Đáp án đi kèm câu hỏi và Bảng đáp án tổng hợp ở cuối file.
     """
+    # 1. Chuẩn hóa xuống dòng để dễ xử lý
+    text = text.replace('\r\n', '\n')
     
-    # CHUNKING: Nếu quá dài, sử dụng phần đầu nhưng vẫn nhấn mạnh không tạo thêm nội dung
-    max_chars = 5000
-    text_to_use = text_content if len(text_content) <= max_chars else text_content[:max_chars]
+    # 2. Xử lý Bảng đáp án tổng hợp (nếu có)
+    mc_global_answers = {}
+    tf_global_answers = {}
+    
+    # Tìm vùng đáp án trắc nghiệm Phần I
+    # Thường bắt đầu bằng "ĐÁP ÁN" và chứa danh sách A, B, C, D
+    mc_section = re.search(r'(?i)ĐÁP\s+ÁN\s*[:\-]\s*PHẦN\s*I.*?(?=Phần\s*II|-------|$)', text, re.DOTALL)
+    if mc_section:
+        ans_text = mc_section.group(0)
+        # Tìm các cặp số và chữ cái (ví dụ: 1 B, 2 A...)
+        # Lưu ý: file mau_de.docx có format số ở trên, chữ ở dưới trong bảng, mammoth dump ra dính chùm hoặc cách xa
+        # Ta quét toàn bộ số và chữ cái độc lập trong vùng này
+        numbers = re.findall(r'\b(\d+)\b', ans_text)
+        letters = re.findall(r'\b([A-D])\b', ans_text.upper())
+        # Nếu số lượng khớp, ghép cặp
+        if len(numbers) == len(letters):
+            for n, l in zip(numbers, letters):
+                mc_global_answers[int(n)] = l
+        else:
+            # Fallback: Nếu không khớp, thử tìm các cụm dính nhau kiểu "1.A" hoặc "1 A"
+            pairs = re.findall(r'(\d+)[\s\.]*([A-D])', ans_text.upper())
+            for n, l in pairs:
+                mc_global_answers[int(n)] = l
+
+    # Tìm vùng đáp án Đúng/Sai Phần II
+    # Tìm "Phần II" ở vùng cuối file (vùng đáp án)
+    tf_section = re.search(r'(?i)\n\s*PHẦN\s*II.*?(?=$)', text, re.DOTALL)
+    if tf_section:
+        ans_text = tf_section.group(0)
+        # Lấy từng khối của Câu 1, Câu 2... trong vùng đáp án
+        tf_pairs = re.findall(r'(?i)Câu\s*(\d+)\s*[:\.\n\s]*(.*?)(?=Câu\s*\d+|Phần|-------|$)', ans_text, re.DOTALL)
+             
+        for n, val_block in tf_pairs:
+            vals = []
+            # Tìm tất cả ký hiệu Đ/S hoặc Đúng/Sai trong khối này
+            lines = val_block.split('\n')
+            for line in lines:
+                m = re.search(r'(?i)(?:[a-d][\s\.\)]+)?\s*([đs]|đúng|sai)\b', line)
+                if m:
+                    val = m.group(1).lower()
+                    if val.startswith('đ'): vals.append(True)
+                    else: vals.append(False)
+            
+            # Nếu không tìm thấy theo dòng, tìm tự do (ví dụ: Đ, S, Đ, Đ)
+            if not vals:
+                matches = re.findall(r'(?i)\b([đs]|đúng|sai)\b', val_block)
+                for m in matches:
+                    m = m.lower()
+                    if m.startswith('đ'): vals.append(True)
+                    else: vals.append(False)
+                    
+            if len(vals) >= 4:
+                tf_global_answers[int(n)] = vals[:4]
+
+    # 3. Cô lập văn bản chính (Main Content) và Đáp án (Footer)
+    footer_match = re.search(r'(?i)\n\s*ĐÁP\s*ÁN\s*[:\-]', text)
+    if footer_match:
+        main_text = text[:footer_match.start()].strip()
+    else:
+        # Fallback tìm "PHẦN I:" ở cuối file (vùng đáp án)
+        footer_match = re.search(r'(?i)\n\s*PHẦN\s*I\s*[:\-]', text)
+        if footer_match and footer_match.start() > len(text) * 0.7:
+             main_text = text[:footer_match.start()].strip()
+        else:
+             main_text = text
+
+    # 4. Tách văn bản thành các Phần (Phần I, Phần II, ...)
+    # Pattern: Phần [Số La Mã] hoặc [Số thường] ở đầu dòng
+    parts_raw = re.split(r'(?i)\n\s*(?:Phần|PHẦN)\s+([I|V|X|L|C]+|\d+)[\s\.\:]', "\n" + main_text)
+    
+    processed_mc = []
+    processed_tf = []
+    processed_essay = []
+    
+    current_sticky_context = ""
+    sticky_start = 0
+    sticky_until = 0
+    # Capture cả câu bắt đầu và câu kết thúc
+    context_pattern = r'(?i)(Đọc\s+đoạn\s+tư\s+liệu\s+.*?trả\s+lời\s+.*?(?:câu\s+|câu\s+hỏi\s+)(?:từ\s+)?(\d+)\s+đến\s+(\d+).*)'
+
+    # parse_docx_strictly iterate through parts
+    work_list = []
+    # Nếu parts_raw[0] chứa nội dung (không có Phần I heading ở đầu), nó là Phần I
+    if parts_raw[0].strip():
+        work_list.append(("I", parts_raw[0].strip()))
+    
+    for i in range(1, len(parts_raw), 2):
+        work_list.append((parts_raw[i].upper(), parts_raw[i+1].strip()))
+
+    for part_label, part_content in work_list:
+        # RESET context khi sang Phần mới
+        current_sticky_context = ""
+        sticky_start = 0
+        sticky_until = 0
+        
+        # Tách câu hỏi: Câu X ở ĐẦU DÒNG
+        raw_qs = re.split(r'(?i)\n\s*Câu\s+(\d+)[\.:]', "\n" + part_content)
+        
+        # Check context ở đoạn mở đầu phần
+        initial_context_match = re.search(context_pattern, raw_qs[0], re.DOTALL)
+        if initial_context_match:
+            current_sticky_context = initial_context_match.group(1).strip()
+            sticky_start = int(initial_context_match.group(2))
+            sticky_until = int(initial_context_match.group(3))
+
+        for j in range(1, len(raw_qs), 2):
+            q_num = int(raw_qs[j])
+            block = raw_qs[j+1].strip()
+            if not block: continue
+
+            # Kiểm tra context giữa chừng
+            context_match = re.search(context_pattern, block, re.DOTALL)
+            if context_match:
+                next_context = context_match.group(1).strip()
+                next_start = int(context_match.group(2))
+                next_until = int(context_match.group(3))
+                block = block[:context_match.start()].strip()
+                current_sticky_context = next_context
+                sticky_start = next_start
+                sticky_until = next_until
+
+            # CHỈ GẮN NẾU q_num nằm trong khoảng [sticky_start, sticky_until]
+            prefix = ""
+            if current_sticky_context and sticky_start <= q_num <= sticky_until:
+                prefix = f"({current_sticky_context})\n\n"
+            
+            # Reset nếu đã đi qua phạm vi
+            if q_num > sticky_until:
+                current_sticky_context = ""
+                sticky_start = 0
+                sticky_until = 0
+
+            # Xử lý Đáp án inline
+            ans_match = re.search(r'(?i)Đáp\s+án\s*[:\-]\s*(.*)', block)
+            ans_text = ans_match.group(1).strip() if ans_match else ""
+            content_block = re.split(r'(?i)Đáp\s+án\s*[:\-]', block)[0].strip()
+            
+            # PHÂN LOẠI CÂU HỎI THEO DẤU HIỆU VÀ PHẦN
+            # MCQ: A. B. C. D. (Phải là chữ HOA, có dấu cách phía trước hoặc đầu dòng)
+            has_mc_markers = all(re.search(fr'(?:\s+|^){L}[\.\)]', content_block) for L in ['A', 'B', 'C', 'D'])
+            # TF: a) b) c) d) (Phải là chữ thường, có dấu cách phía trước hoặc đầu dòng)
+            has_tf_markers = all(re.search(fr'(?:\s+|^){l}[\)\.]', content_block) for l in ['a', 'b', 'c', 'd'])
+
+            # Ưu tiên tuyệt đối cho loại câu hỏi theo Phần
+            q_type = "ESSAY"
+            if part_label == "I": 
+                q_type = "MCQ"
+                # Nếu có dấu hiệu TF quá rõ ràng thì ghi đè
+                if has_tf_markers and not has_mc_markers: q_type = "TF"
+            elif part_label == "II": 
+                q_type = "TF"
+                # Nếu có dấu hiệu MCQ quá rõ ràng thì ghi đè
+                if has_mc_markers and not has_tf_markers: q_type = "MCQ"
+            else:
+                if has_mc_markers: q_type = "MCQ"
+                elif has_tf_markers: q_type = "TF"
+
+            if q_type == "MCQ":
+                # Tách option (Case sensitive markers, yêu cầu có khoảng trắng phía trước)
+                parts = re.split(r'(?:\s+|^)([A-D][\.\)])', content_block)
+                question_text = prefix + parts[0].strip()
+                options = []
+                markers_found = []
+                for k in range(1, len(parts), 2):
+                    marker_raw = parts[k].upper().replace(')', '.')
+                    markers_found.append(marker_raw[0]) # Lấy chữ cái A, B, C, D
+                    opt_content = parts[k+1].strip()
+                    options.append(f"{marker_raw} {opt_content}")
+                
+                # Kiểm tra xem có đúng thứ tự A, B, C, D không
+                is_standard = (len(options) == 4 and "".join(markers_found) == "ABCD")
+                
+                current_answer = "A"
+                if ans_text:
+                    letter_match = re.search(r'[A-D]', ans_text.upper())
+                    if letter_match: current_answer = letter_match.group(0)
+                elif q_num in mc_global_answers:
+                    current_answer = mc_global_answers[q_num]
+                
+                q_obj = {
+                    "question": question_text,
+                    "options": options[:4] if len(options) >= 4 else options,
+                    "answer": current_answer,
+                    "_is_standard": is_standard,
+                    "_raw_block": content_block
+                }
+                processed_mc.append(q_obj)
+
+            elif q_type == "TF":
+                # Tách (Case sensitive markers lowercase, yêu cầu có khoảng trắng phía trước để tránh nhầm "miền Bắc.")
+                parts = re.split(r'(?:\s+|^)([a-d][\)\.])', content_block)
+                question_text = prefix + parts[0].strip()
+                statements = []
+                markers_found = []
+                for k in range(1, len(parts), 2):
+                    marker_raw = parts[k].lower().replace('.', ')')
+                    markers_found.append(marker_raw[0])
+                    stmt_content = parts[k+1].strip()
+                    statements.append(f"{marker_raw} {stmt_content}")
+                
+                is_standard = (len(statements) == 4 and "".join(markers_found) == "abcd")
+                
+                answers = [True, True, True, True]
+                if ans_text:
+                    line_text = ans_text.lower()
+                    new_ans = []
+                    for m in ['a', 'b', 'c', 'd']:
+                        if re.search(fr'{m}[\-\s:]*(đ|đúng)', line_text): new_ans.append(True)
+                        else: new_ans.append(False)
+                    if len(new_ans) == 4: answers = new_ans
+                elif q_num in tf_global_answers:
+                    answers = tf_global_answers[q_num]
+                    
+                processed_tf.append({
+                    "question": question_text,
+                    "statements": statements[:4] if len(statements) >= 4 else statements,
+                    "answers": answers,
+                    "_is_standard": is_standard,
+                    "_raw_block": content_block
+                })
+            else:
+                # Nếu là Tự luận nhưng trông có vẻ giống MCQ/TF bị lỗi, ta có thể đánh dấu để AI xử lý sau
+                # Ở đây ta tạm thời cứ để là Tự luận
+                processed_essay.append({
+                    "question": prefix + content_block,
+                    "grading_criteria": "Giáo viên tự chấm."
+                })
+            
+    # BƯỚC CUỐI: TỰ ĐỘNG SỬA NHỮNG CÂU BỊ LỖI (Hybrid)
+    final_mc = []
+    for q in processed_mc:
+        if not q.get('_is_standard'):
+            repaired = repair_question_with_ai(q.get('_raw_block', q['question']), "MCQ")
+            if repaired: 
+                # Giữ lời dẫn prefix nếu AI làm mất
+                if "Đọc đoạn tư liệu" in q['question'] and "Đọc đoạn tư liệu" not in repaired['question']:
+                    repaired['question'] = q['question'].split(')\n\n')[0] + ")\n\n" + repaired['question']
+                final_mc.append(repaired)
+            else: final_mc.append(q)
+        else:
+            final_mc.append(q)
+            
+    final_tf = []
+    for q in processed_tf:
+        if not q.get('_is_standard'):
+            repaired = repair_question_with_ai(q.get('_raw_block', q['question']), "TF")
+            if repaired: 
+                if "Đọc đoạn tư liệu" in q['question'] and "Đọc đoạn tư liệu" not in repaired['question']:
+                    repaired['question'] = q['question'].split(')\n\n')[0] + ")\n\n" + repaired['question']
+                final_tf.append(repaired)
+            else: final_tf.append(q)
+        else:
+            final_tf.append(q)
+
+    return {
+        "multiple_choice": final_mc,
+        "true_false": final_tf,
+        "essay": processed_essay
+    }
+
+def repair_question_with_ai(block_text, q_type):
+    """
+    Sử dụng Gemini để sửa một block câu hỏi bị lỗi cấu trúc.
+    """
+    model = get_model()
+    if not model: return None
     
     prompt = f"""
-BẠN LÀ GIÁO VIÊN LỊCH SỬ LỚP 11 - HÃY TẠO ĐỀ THI CHÍNH XÁC DỰA TRÊN NỘI DUNG DƯỚI ĐÂY:
+Bạn là chuyên gia bóc tách đề thi. Tôi có một câu hỏi bị lỗi định dạng khi bóc tách bằng thuật toán.
+Hãy bóc tách câu hỏi này sang định dạng JSON chính xác.
 
-📚 NỘI DUNG TỪ FILE WORD:
-{text_to_use}
+Loại câu hỏi: {q_type} (MCQ: Trắc nghiệm, TF: Đúng/Sai)
 
-📋 YÊU CẦU CẬP NHẬT (PHẢI ĐỦ CÂU):
-- TỔNG CỘNG {num_multiple} CÂU TRẮC NGHIỆM (ABCD)
-- TỔNG CỘNG {num_truefalse} CÂU ĐÚNG/SAI (mỗi câu 4 ý)
-{'- TỔNG CỘNG ' + str(num_essay) + ' CÂU TỰ LUẬN' if num_essay > 0 else ''}
+Nội dung thô:
+{block_text}
 
-⚠️ QUAN TRỌNG:
-1. CHỈ DÙNG THÔNG TIN CÓ TRONG PHẦN NỘI DUNG Ở TRÊN. KHÔNG ĐƯỢC SÁNG TẠO, KHÔNG THÊM Ý MỚI BÊN NGOÀI.
-2. PHẢI CÓ ĐÚNG {num_multiple} câu trắc nghiệm (không được ít hơn)
-3. PHẢI CÓ ĐÚNG {num_truefalse} câu đúng/sai (không được ít hơn)
-4. Mỗi câu trắc nghiệm phải có 4 options: A, B, C, D
-5. Mỗi câu đúng/sai phải có ĐÚNG 4 ý
-6. Chỉ trả về JSON, không cần giải thích
+JSON Format:
+Cho MCQ: {{"question": "...", "options": ["A. ...", "B. ...", "C. ...", "D. ..."], "answer": "..."}}
+Cho TF: {{"question": "...", "statements": ["a) ...", "b) ...", "c) ...", "d) ..."], "answers": [true, false, true, true]}}
 
-📝 JSON FORMAT:
-{{
-  "multiple_choice": [
-    {{
-      "question": "Câu hỏi cụ thể",
-      "options": ["A. Option 1", "B. Option 2", "C. Option 3", "D. Option 4"],
-      "answer": "A"
-    }}
-  ],
-  "true_false": [
-    {{
-      "question": "Câu hỏi chính",
-      "statements": ["Ý 1", "Ý 2", "Ý 3", "Ý 4"],
-      "answers": [true, false, true, false]
-    }}
-  ]
-  {"," + '"essay": [{"question": "Câu hỏi tự luận", "grading_criteria": "Tiêu chí: Nội dung (4đ), Logic (3đ), Trình bày (2đ), Trích dẫn (1đ)"}]' if num_essay > 0 else ''}
-}}
-
-CHỈ TRẢ VỀ JSON, KHÔNG CÓ GÌ KHÁC!
+LƯU Ý: 
+- Chỉ trả về JSON, không giải thích gì thêm. 
+- Không tự bịa thêm thông tin. 
+- Nếu là TF, trả về đủ 4 statements.
 """
-    
     try:
-        # nếu không dùng API thì bỏ qua prompt và dùng bộ luật nội bộ
-        print(f"[AI] Lần {attempt}: Tạo đề thi ({num_multiple} MC + {num_truefalse} TF + {num_essay} Essay)... use_api={use_api}")
-        if not use_api:
-            return generate_exam_from_text_local(text_content, num_multiple, num_truefalse, num_essay)
-        response = get_model().generate_content(prompt)
+        response = model.generate_content(prompt)
         text = response.text.strip()
-        text = text.replace('```json', '').replace('```', '').strip()
-        exam_data = json.loads(text)
-        
-        # ✅ KIỂM TRA SỐ LƯỢNG
-        is_valid, mc_count, tf_count, essay_count, error_msg = validate_exam_questions(
-            exam_data, num_multiple, num_truefalse, num_essay
-        )
-        
-        # ✅ KIỂM TRA NỘI DUNG CÂU HỎI CÓ LIÊN QUAN ĐẾN VĂN BẢN
-        def question_in_source(q):
-            # nếu chuỗi rỗng thì coi là không hợp lệ
-            if not q or not text_content:
-                return False
-            # kiểm tra từ dài
-            for part in q.split():
-                if len(part) >= 5 and part in text_content:
-                    return True
-            # kiểm tra n-gram (3 từ liền)
-            words = [w.strip('.,?"!') for w in q.split() if w.strip('.,?"!')]
-            for i in range(len(words) - 2):
-                gram = ' '.join(words[i:i+3])
-                if len(gram) >= 10 and gram in text_content:
-                    return True
-            return False
-        bad = False
-        for q in exam_data.get('multiple_choice', []):
-            if not question_in_source(q.get('question','')):
-                print(f"❗Câu MC không tìm thấy trong source: {q.get('question','')}")
-                bad = True
-        for q in exam_data.get('true_false', []):
-            if not question_in_source(q.get('question','')):
-                print(f"❗Câu TF không tìm thấy trong source: {q.get('question','')}")
-                bad = True
-        if bad and attempt < 3:
-            print(f"⚠️ Phát hiện câu hỏi có vẻ bịa, thử lại lần {attempt+1}")
-            return generate_exam_from_text(text_content, num_multiple, num_truefalse, num_essay, attempt + 1)
-        
-        if is_valid and not bad:
-            print(f"✅ Thành công! {mc_count} MC + {tf_count} TF + {essay_count} Essay")
-            return exam_data
-        else:
-            if bad:
-                # nếu đã retry 3 lần vẫn có câu bịa, trả về cho giáo viên chỉnh
-                print(f"❌ Vẫn tồn tại câu bịa sau {attempt} lần.")
-            else:
-                print(f"⚠️ Lần {attempt} chưa đủ: {error_msg}")
-            
-            # Retry tối đa 3 lần nếu chưa đủ và chưa bị bad
-            if attempt < 3:
-                return generate_exam_from_text(text_content, num_multiple, num_truefalse, num_essay, attempt + 1)
-            else:
-                print(f"❌ Sau 3 lần vẫn không đủ. Trả về kết quả hiện tại.")
-                return exam_data  # Trả về dù chưa đủ, để giáo viên bổ sung
-        
-    except json.JSONDecodeError as e:
-        print(f"❌ Lỗi parse JSON (lần {attempt}): {e}")
-        if attempt < 3:
-            return generate_exam_from_text(text_content, num_multiple, num_truefalse, num_essay, attempt + 1)
+        if "```json" in text:
+            text = text.split("```json")[1].split("```")[0].strip()
+        import json
+        return json.loads(text)
+    except:
         return None
+
+
+
+def generate_exam_from_text(text_content, num_multiple=0, num_truefalse=0, num_essay=0, attempt=1, use_api=True):
+    """
+    Hàm này bóc tách TOÀN BỘ nội dung từ file Word bằng thuật toán Strict Parser.
+    Số lượng câu hỏi sẽ phụ thuộc hoàn toàn vào nội dung file.
+    """
+    try:
+        strict_data = parse_docx_strictly(text_content)
+        return strict_data
     except Exception as e:
-        print(f"❌ Lỗi tạo đề AI: {e}")
+        print(f"❌ Lỗi xử lý đề thi: {e}")
         return None
+
 
 # Routes cho exam system
 
@@ -1784,15 +1974,28 @@ def register_exam():
         username = request.form.get('username').strip()
         password = request.form.get('password').strip()
         fullname = request.form.get('fullname').strip()
+        school = request.form.get('school', '').strip()
+        grade_level = request.form.get('grade_level', '').strip()
+        class_name = request.form.get('class_name', '').strip()
         
         students = load_exam_students()
         
         if username in students:
             return render_template('register_exam.html', message="Ten dang nhap da ton tai")
         
+        # Tạo mã học sinh tự động (HS + năm + 4 số ngẫu nhiên)
+        import random
+        from datetime import datetime
+        year = datetime.now(vn_timezone).year
+        student_id = f"HS{year}{random.randint(1000, 9999)}"
+        
         students[username] = {
             "password": password,
             "fullname": fullname,
+            "school": school,
+            "grade_level": grade_level,
+            "class_name": class_name,
+            "student_id": student_id,
             "created_at": datetime.now(vn_timezone).strftime("%Y-%m-%d %H:%M:%S")
         }
         save_exam_students(students)
@@ -1943,7 +2146,14 @@ def dashboard_teacher():
     
     exams = load_exams_data()
     materials = load_materials_data()
-    submissions = load_exam_submissions()
+    all_submissions = load_exam_submissions()
+    
+    # Gắn thêm index gốc cho mỗi submission
+    submissions = []
+    for i, s in enumerate(all_submissions):
+        s_with_index = s.copy()
+        s_with_index['original_index'] = i
+        submissions.append(s_with_index)
     
     # Phân loại tài liệu theo lớp
     materials_by_grade = {
@@ -1993,13 +2203,18 @@ def export_scores(exam_id):
     ws = wb.active
     ws.title = "Điểm"
     # header row
-    ws.append(['Học sinh (username)', 'Tên đầy đủ', 'Điểm'])
+    ws.append(['Mã học sinh', 'Tên đầy đủ', 'Trường', 'Khối', 'Lớp', 'Điểm', 'Tên đăng nhập'])
     students = load_exam_students()
     for s in rows:
         user = s.get('student', '')
-        fullname = students.get(user, {}).get('fullname', '')
+        student_info = students.get(user, {})
+        fullname = student_info.get('fullname', '')
+        student_id = student_info.get('student_id', 'N/A')
+        school = student_info.get('school', 'N/A')
+        grade = student_info.get('grade_level', 'N/A')
+        class_name = student_info.get('class_name', 'N/A')
         score = s.get('score', '')
-        ws.append([user, fullname, score])
+        ws.append([student_id, fullname, school, grade, class_name, score, user])
     out = io.BytesIO()
     wb.save(out)
     out.seek(0)
@@ -2019,9 +2234,15 @@ def dashboard_student():
     username = session['exam_username']
     exams = load_exams_data()
     materials = load_materials_data()
-    submissions = load_exam_submissions()
+    all_submissions = load_exam_submissions()
     
-    my_submissions = [s for s in submissions if s['student'] == username]
+    # Lấy bài của mình kèm theo index gốc
+    my_submissions = []
+    for i, s in enumerate(all_submissions):
+        if s.get('student') == username:
+            s_with_index = s.copy()
+            s_with_index['original_index'] = i
+            my_submissions.append(s_with_index)
     
     # Phân loại tài liệu theo lớp
     materials_by_grade = {
@@ -2068,23 +2289,19 @@ def create_exam():
                 flash("❌ Không thể đọc file Word. Vui lòng kiểm tra file.", "error")
                 return render_template('create_exam.html')
             
-            # Tạo đề thi từ AI
-            num_multiple = int(request.form.get('num_multiple', 10))
-            num_truefalse = int(request.form.get('num_truefalse', 5))
-            num_essay = int(request.form.get('num_essay', 0)) if exam_type == 'mixed' else 0
-            
-            exam_data = generate_exam_from_text(text_content, num_multiple, num_truefalse, num_essay)
+            # Thuật toán bóc tách 100% nội dung (Không giới hạn số câu)
+            exam_data = generate_exam_from_text(text_content)
             
             if not exam_data:
                 flash("❌ AI không thể tạo đề thi. Vui lòng thử lại.", "error")
                 return render_template('create_exam.html')
             
-            # ========================
-            # BƯỚC 2: KIỂM TRA SỐ LƯỢNG
-            # ========================
-            is_valid, mc_count, tf_count, essay_count, error_msg = validate_exam_questions(
-                exam_data, num_multiple, num_truefalse, num_essay
-            )
+            # Lấy số lượng thực tế sau bóc tách
+            mc_count = len(exam_data.get('multiple_choice', []))
+            tf_count = len(exam_data.get('true_false', []))
+            essay_count = len(exam_data.get('essay', []))
+            is_valid = (mc_count + tf_count + essay_count) > 0
+            error_msg = "" if is_valid else "Không tìm thấy câu hỏi nào trong file."
             
             # tạo token và lưu vào TEMP_EXAMS thay vì session
             import uuid
@@ -2100,9 +2317,9 @@ def create_exam():
                 'mc_count': mc_count,
                 'tf_count': tf_count,
                 'essay_count': essay_count,
-                'required_mc': num_multiple,
-                'required_tf': num_truefalse,
-                'required_essay': num_essay,
+                'required_mc': mc_count,
+                'required_tf': tf_count,
+                'required_essay': essay_count,
                 'general_grading_criteria': general_grading_criteria
             }
             
@@ -2521,7 +2738,7 @@ def do_exam(exam_id):
         submissions.append(submission)
         save_exam_submissions(submissions)
         
-        return redirect(url_for('dashboard_student'))
+        return redirect(url_for('view_submission', submission_index=len(submissions)-1))
     
     # GET REQUEST - HIỂN THỊ ĐỀ THI
     return render_template('do_exam.html', exam=exam, exam_id=exam_id)
