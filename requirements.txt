@@ -11,3 +11,4 @@ dotenv
 mammoth
 python-docx
 openpyxl
+gevent>=24.10.1
