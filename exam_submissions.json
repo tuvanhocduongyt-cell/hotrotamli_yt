@@ -486,5 +486,61 @@
     "teacher_adjusted": false,
     "teacher_score": null,
     "teacher_comment": null
+  },
+  {
+    "exam_id": "20260111163814",
+    "student": "hs00a12",
+    "submitted_at": "2026-03-05 12:56:01",
+    "answers": {
+      "mc_0": "A",
+      "mc_1": "A",
+      "mc_2": "A",
+      "mc_3": "A",
+      "mc_4": "B",
+      "mc_5": "A",
+      "mc_6": "C",
+      "mc_7": "C",
+      "mc_8": "B",
+      "mc_9": "A",
+      "tf_0": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "tf_1": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "tf_2": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "tf_3": [
+        true,
+        true,
+        false,
+        false
+      ]
+    },
+    "score": 3.95,
+    "type": "multiple_choice",
+    "ai_graded": true,
+    "essay_ai_feedback": null,
+    "mc_ai_feedback": {
+      "ke_hoach_on_tap": "Là một giáo viên lịch sử, tôi nhận thấy em đã mắc phải nhiều lỗi cơ bản về kiến thức lịch sử nhà Trần, từ các sự kiện trọng đại, niên đại cụ thể, nhân vật lịch sử, địa danh, đến việc hiểu rõ nội dung chính sách và phân tích nguyên nhân. Các lỗi sai cho thấy em chưa nắm vững kiến thức nền tảng và có sự nhầm lẫn giữa các mốc thời gian, nhân vật, và sự kiện quan trọng.\n\nCụ thể:\n*   Câu 1, 4: Sai niên đại thành lập nhà Trần và thời gian xâm lược Mông-Nguyên lần 1, cho thấy sự yếu kém trong việc ghi nhớ các mốc thời gian cơ bản.\n*   Câu 2, 5: Nhầm lẫn về vua đầu tiên và tổng chỉ huy quân đội, chứng tỏ em chưa nắm rõ vai trò và danh tính các nhân vật lịch sử chủ chốt.\n*   Câu 3: Sai về kinh đô, thể hiện thiếu kiến thức địa lý lịch sử.\n*   Câu 6: Sai về chiến thắng quyết định, cho thấy em chưa phân biệt được mức độ quan trọng của các trận đánh.\n*   Câu 7: Hiểu sai nội dung chính sách \"ngụ binh ư nông\", cho thấy em chưa nắm được bản chất và mục đích của các chính sách nhà Trần.\n*   Câu 8: Sai về nguyên nhân chủ yếu dẫn đến sự suy yếu của nhà Trần, cho thấy em chưa có khả năng phân tích sâu sắc các yếu tố nội tại và nguyên nhân sâu xa của sự kiện.\n\nĐể khắc phục những lỗi này, em cần có một kế hoạch ôn tập chi tiết và hệ thống như sau:\n\n1.  **Lập sơ đồ tư duy hoặc bảng biểu tổng hợp các sự kiện lịch sử lớn**, đặc biệt tập trung vào giai đoạn nhà Trần:\n    *   **Thành lập nhà Trần:** Thời gian (năm nào?), người đứng đầu (vua đầu tiên là ai?), kinh đô (đặt ở đâu?).\n    *   **Các cuộc kháng chiến chống Mông – Nguyên:** Nắm vững 3 lần xâm lược (thời gian cụ thể từng lần), tổng chỉ huy (Trần Quốc Tuấn và vai trò của ông), các trận đánh quan trọng và chiến thắng quyết định từng lần (đặc biệt là trận Bạch Đằng năm 1288).\n    *   **Các chính sách tiêu biểu:** Hiểu rõ nội dung, mục đích và ý nghĩa của chính sách \"ngụ binh ư nông\".\n    *   **Sự suy yếu của nhà Trần:** Phân tích các nguyên nhân chủ yếu (đặc biệt là sự mục ruỗng của bộ máy quan lại, tham nhũng, mâu thuẫn nội bộ) thay vì các yếu tố thứ yếu.\n2.  **Dành thời gian ôn tập và phân biệt rõ ràng các khái niệm dễ nhầm lẫn**:\n    *   Phân biệt niên đại giữa các lần xâm lược, các sự kiện quan trọng.\n    *   Phân biệt vai trò của các nhân vật lịch sử (vua, tướng, quan lại).\n    *   Phân biệt các loại nguyên nhân (khách quan/chủ quan, trực tiếp/gián tiếp, chủ yếu/thứ yếu).\n3.  **Tập trung vào chi tiết**: Luyện tập ghi nhớ các chi tiết như niên đại, tên gọi cụ thể của các nhân vật, địa điểm, tên trận đánh. Đừng bỏ qua các thông tin có vẻ nhỏ nhưng lại là mấu chốt của vấn đề.\n4.  **Đọc hiểu sâu**: Khi làm bài tập trắc nghiệm, đọc kỹ các câu hỏi, phân tích từng lựa chọn để tìm ra đáp án tối ưu nhất. Tránh chọn đáp án chỉ 'đúng' mà chưa phải là 'đúng nhất' hoặc 'đầy đủ nhất', đặc biệt với các câu hỏi về nguyên nhân, ý nghĩa.\n5.  **Luyện tập giải đề**: Thường xuyên thực hành làm nhiều bài tập trắc nghiệm, sau đó tự chấm và phân tích kỹ lưỡng các lỗi sai. Ghi lại cụ thể lý do em chọn sai (ví dụ: nhầm lẫn niên đại, không nắm rõ nhân vật, hiểu sai khái niệm) để tránh lặp lại những lỗi tương tự trong các lần ôn tập và kiểm tra sau.",
+      "cac_chu_de_lien_quan": "Chu nghia de quoc va su phan chia the gioi cuoi the ky XIX - dau the ky XX. Chien tranh the gioi thu nhat (1914-1918): Nguyen nhan, dien bien, ket qua, tinh chat, tac dong. Cach mang thang Muoi Nga (1917) va cong cuoc xay dung chu nghia xa hoi o Lien Xo nhung nam 1920-1930. Phong trao giai phong dan toc o chau A, chau Phi, My Latinh dau the ky XX (dien hinh: Duy tan Minh Tri o Nhat Ban, Cach mang Tan Hoi o Trung Quoc, phong trao o An Do, Dong Nam A)."
+    },
+    "tf_ai_feedback": {
+      "ke_hoach_on_tap": "Hệ thống AI tạm thời không khả dụng. Vui lòng liên hệ giáo viên.",
+      "cac_chu_de_lien_quan": ""
+    },
+    "teacher_adjusted": false,
+    "teacher_score": null,
+    "teacher_comment": null
   }
 ]

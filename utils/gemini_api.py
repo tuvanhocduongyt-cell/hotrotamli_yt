@@ -25,7 +25,7 @@ def get_api_key():
 
 def get_model():
     genai.configure(api_key=get_api_key())
-    return genai.GenerativeModel("models/gemini-1.5-flash")
+    return genai.GenerativeModel("models/gemini-flash-latest")
 
 
 def analyze_text_with_gemini(text):

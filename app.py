@@ -75,7 +75,7 @@ def get_api_key(feature=None):
 def get_model(feature=None):
     key = get_api_key(feature)
     genai.configure(api_key=key)
-    return genai.GenerativeModel("models/gemini-2.5-flash")
+    return genai.GenerativeModel("models/gemini-flash-latest")
 
 app.config['UPLOAD_FOLDER'] = 'uploads'
 
@@ -1393,27 +1393,26 @@ def read_word_file(file_path):
 def auto_grade_essay_with_ai(exam, essay_answer, image_path=None):
     """Tự động chấm bài tự luận bằng AI"""
     try:
-        if image_path:
+        de_bai = exam.get('essay_question', '')
+        tieu_chi = exam.get('grading_criteria', 'Cham theo noi dung va logic')
+
+        if image_path and os.path.exists(image_path):
             img = Image.open(image_path)
-            
-            prompt = f"""
-Ban la giao vien lich su cham bai thi tu luan.
+            has_text = bool(essay_answer and essay_answer.strip())
+            text_part = f"\nBai lam bang chu cua hoc sinh (neu co): {essay_answer}" if has_text else ""
 
-De bai: {exam.get('essay_question', '')}
+            prompt = f"""Ban la giao vien lich su cham bai thi tu luan.
 
-Tieu chi cham: {exam.get('grading_criteria', 'Cham theo noi dung va logic')}
+De bai: {de_bai}
 
-Hay cham diem bai lam cua hoc sinh trong anh theo thang diem 10.
+Tieu chi cham: {tieu_chi}
+{text_part}
 
-Phan tich chi tiet:
-1. Diem manh cua bai lam
-2. Diem yeu can cai thien
-3. Cac kien thuc con thieu
-4. Goi y cu the de cai thien
+Hoc sinh da nop bai lam viet tay trong anh dinh kem. Hay cham diem bai lam theo thang diem 10.
 
 Tra ve JSON (KHONG DUNG DAU # VA **):
 {{
-  "score": <diem so>,
+  "score": <diem so 0-10>,
   "strengths": "<diem manh>",
   "weaknesses": "<diem yeu>",
   "missing_knowledge": "<kien thuc thieu>",
@@ -1421,30 +1420,23 @@ Tra ve JSON (KHONG DUNG DAU # VA **):
   "suggestions": "<loi khuyen cu the>"
 }}
 
-Chi tra ve JSON, khong them bat ky ky tu nao khac.
-"""
+Chi tra ve JSON, khong them bat ky ky tu nao khac."""
             response = get_model('lichsu').generate_content([img, prompt])
         else:
-            prompt = f"""
-Ban la giao vien lich su cham bai thi tu luan.
+            prompt = f"""Ban la giao vien lich su cham bai thi tu luan.
 
-De bai: {exam.get('essay_question', '')}
+De bai: {de_bai}
 
-Tieu chi cham: {exam.get('grading_criteria', 'Cham theo noi dung va logic')}
+Tieu chi cham: {tieu_chi}
 
-Bai lam cua hoc sinh: {essay_answer}
+Bai lam cua hoc sinh:
+{essay_answer}
 
 Hay cham diem theo thang diem 10 va phan tich chi tiet.
 
-Phan tich chi tiet:
-1. Diem manh cua bai lam
-2. Diem yeu can cai thien
-3. Cac kien thuc con thieu
-4. Goi y cu the de cai thien
-
 Tra ve JSON (KHONG DUNG DAU # VA **):
 {{
-  "score": <diem so>,
+  "score": <diem so 0-10>,
   "strengths": "<diem manh>",
   "weaknesses": "<diem yeu>",
   "missing_knowledge": "<kien thuc thieu>",
@@ -1452,8 +1444,7 @@ Tra ve JSON (KHONG DUNG DAU # VA **):
   "suggestions": "<loi khuyen cu the>"
 }}
 
-Chi tra ve JSON.
-"""
+Chi tra ve JSON."""
             response = get_model().generate_content(prompt)
         
         text = response.text.strip()
@@ -1469,27 +1460,21 @@ Chi tra ve JSON.
 def auto_grade_mixed_essay_with_ai(question, grading_criteria, essay_answer, image_path=None, max_score=3):
     """
     Chấm từng câu tự luận trong đề hỗn hợp
-    
-    Args:
-        question: Câu hỏi
-        grading_criteria: Tiêu chí chấm
-        essay_answer: Bài làm của học sinh
-        image_path: Đường dẫn ảnh (nếu có)
-        max_score: Điểm tối đa cho câu này ⭐ THÊM THAM SỐ NÀY
+    Hỗ trợ: chỉ text, chỉ ảnh, hoặc cả hai
     """
     try:
-        if image_path:
+        if image_path and os.path.exists(image_path):
             img = Image.open(image_path)
-            
-            prompt = f"""
-Ban la giao vien lich su cham bai.
+            has_text = bool(essay_answer and essay_answer.strip())
+            text_part = f"\nBai lam bang chu (neu co): {essay_answer}" if has_text else ""
+
+            prompt = f"""Ban la giao vien lich su cham bai.
 
 Cau hoi: {question}
 
-Tieu chi: {grading_criteria}
+Tieu chi: {grading_criteria}{text_part}
 
-Hay cham diem bai lam trong anh theo thang diem {max_score}.
-                                                ^^^^^^^^^^^ ⭐ THAY ĐỔI
+Hoc sinh da nop bai lam viet tay trong anh dinh kem. Hay cham diem theo thang diem {max_score}.
 
 Tra ve JSON (KHONG DUNG # VA **):
 {{
@@ -1498,12 +1483,10 @@ Tra ve JSON (KHONG DUNG # VA **):
   "suggestions": "<loi khuyen cu the>"
 }}
 
-Chi tra ve JSON.
-"""
+Chi tra ve JSON."""
             response = get_model().generate_content([img, prompt])
         else:
-            prompt = f"""
-Ban la giao vien lich su cham bai.
+            prompt = f"""Ban la giao vien lich su cham bai.
 
 Cau hoi: {question}
 
@@ -1512,7 +1495,6 @@ Bai lam: {essay_answer}
 Tieu chi: {grading_criteria}
 
 Hay cham diem theo thang diem {max_score}.
-                              ^^^^^^^^^^^ ⭐ THAY ĐỔI
 
 Tra ve JSON (KHONG DUNG # VA **):
 {{
@@ -1521,18 +1503,17 @@ Tra ve JSON (KHONG DUNG # VA **):
   "suggestions": "<loi khuyen cu the>"
 }}
 
-Chi tra ve JSON.
-"""
+Chi tra ve JSON."""
             response = get_model().generate_content(prompt)
         
         text = response.text.strip()
         text = text.replace('```json', '').replace('```', '').strip()
         result = json.loads(text)
         
-        # ⭐ THÊM VALIDATION ĐỂ ĐẢM BẢO ĐIỂM KHÔNG VƯỢT QUÁ
+        # Đảm bảo điểm không vượt max_score
         score = float(result.get('score', 0))
-        result['score'] = round(min(max(score, 0), max_score), 2)  # Cap trong [0, max_score]
-        result['max_score'] = max_score  # ⭐ Lưu lại điểm tối đa
+        result['score'] = round(min(max(score, 0), max_score), 2)
+        result['max_score'] = max_score
         
         return result
         
