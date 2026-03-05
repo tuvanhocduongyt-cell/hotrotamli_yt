@@ -61,21 +61,86 @@ if single:
 if not GENERAL_KEYS and not LICHSU_KEYS:
     raise ValueError("Không tìm thấy khóa API trong GOOGLE_API_KEYS*, GOOGLE_API_KEYS hoặc GOOGLE_API_KEY")
 
-# helper to pick key based on feature
+# ============================================================
+# API KEY ROTATION: Round-Robin + Auto-retry khi bị 429
+# ============================================================
+import threading
+import time as _time
+
+# Bộ đếm riêng cho mỗi pool key (thread-safe)
+_general_counter_lock = threading.Lock()
+_lichsu_counter_lock  = threading.Lock()
+_general_counter = 0
+_lichsu_counter  = 0
 
 def get_api_key(feature=None):
+    """Round-Robin: lần lượt xoay vòng qua từng key thay vì random."""
+    global _general_counter, _lichsu_counter
     if feature == 'lichsu' and LICHSU_KEYS:
-        return random.choice(LICHSU_KEYS)
-    # fall back to general list
-    return random.choice(GENERAL_KEYS)
+        with _lichsu_counter_lock:
+            key = LICHSU_KEYS[_lichsu_counter % len(LICHSU_KEYS)]
+            _lichsu_counter += 1
+        return key
+    keys = GENERAL_KEYS if GENERAL_KEYS else LICHSU_KEYS
+    with _general_counter_lock:
+        key = keys[_general_counter % len(keys)]
+        _general_counter += 1
+    return key
 
-# build a new model instance each time after configuring with a chosen key
-# optionally pass feature string to select proper key pool
+def _get_next_key(feature=None, exclude_key=None):
+    """Lấy key tiếp theo trong pool, bỏ qua key đang bị lỗi."""
+    pool = (LICHSU_KEYS if (feature == 'lichsu' and LICHSU_KEYS) else GENERAL_KEYS) or LICHSU_KEYS
+    candidates = [k for k in pool if k != exclude_key]
+    if not candidates:
+        candidates = pool  # không còn lựa chọn, dùng lại key cũ
+    return random.choice(candidates)
 
 def get_model(feature=None):
+    """Trả về model với key đã được chọn theo Round-Robin."""
     key = get_api_key(feature)
     genai.configure(api_key=key)
     return genai.GenerativeModel("models/gemini-flash-latest")
+
+def generate_with_retry(prompt_or_parts, feature=None, max_retries=None):
+    """
+    Gọi Gemini AI với tự động retry khi bị 429 (quota exceeded).
+    - Thử tối đa len(key_pool) lần, mỗi lần dùng key khác.
+    - Nếu tất cả key đều hết quota → raise exception.
+    """
+    pool = (LICHSU_KEYS if (feature == 'lichsu' and LICHSU_KEYS) else GENERAL_KEYS) or LICHSU_KEYS
+    if max_retries is None:
+        max_retries = len(pool)
+
+    tried_keys = set()
+    last_error = None
+
+    for attempt in range(max_retries):
+        # Chọn key chưa thử
+        available = [k for k in pool if k not in tried_keys]
+        if not available:
+            available = pool  # quay lại từ đầu nếu đã thử hết
+        key = available[0]
+        tried_keys.add(key)
+
+        try:
+            genai.configure(api_key=key)
+            model = genai.GenerativeModel("models/gemini-flash-latest")
+            if isinstance(prompt_or_parts, list):
+                return model.generate_content(prompt_or_parts)
+            else:
+                return model.generate_content(prompt_or_parts)
+        except Exception as e:
+            last_error = e
+            err_str = str(e)
+            if '429' in err_str or 'quota' in err_str.lower():
+                print(f"[KEY ROTATE] Key ...{key[-6:]} hết quota (attempt {attempt+1}/{max_retries}), thử key khác...")
+                _time.sleep(1)  # nhỏ để tránh bursty
+                continue
+            # Lỗi khác (network, 400...) → không retry
+            raise
+
+    print(f"[KEY ROTATE] Tất cả {max_retries} key đều hết quota!")
+    raise last_error
 
 app.config['UPLOAD_FOLDER'] = 'uploads'
 
@@ -104,40 +169,50 @@ def build_prompt(topic, context_data, user_input, is_first_message=False):
         return (
             f"tôi là trợ lý AI Tâm An chuyên về lĩnh vực tâm lí.\n"
             f"Dữ liệu tham khảo:\n{context_summary}\n\n"
-            f"QUY TẮC:\n"
+            f"QUY TẮC BẮT BUỘC:\n"
+            f"- Gõ đúng chính tả, ĐẦY ĐỦ DẤU TIẾNG VIỆT.\n"
+            f"- Phân chia đoạn văn rõ ràng bằng dòng trống (gióng xuống hàng).\n"
+            f"- KHÔNG DÙNG ĐỊNH DẠNG MARKDOWN (không dùng dấu *, #, -, •, **).\n"
+            f"- Trả lời dưới dạng văn xuôi tự nhiên, thân thiện, dễ đọc.\n"
             f"- Ưu tiên dùng dữ liệu trên nếu liên quan\n"
             f"- Nếu không có trong dữ liệu, dùng kiến thức chung của bạn để trả lời\n"
             f"- KHÔNG BAO GIỜ nói 'xin lỗi, không có dữ liệu' hay 'nằm ngoài phạm vi'\n"
             f"- Trả lời tự nhiên, thân thiện như một cuộc hội thoại bình thường\n"
             f"- Câu đầu tiên: giới thiệu. Từ câu 2 trở đi: không cần giới thiệu lại\n\n"
             f"{intro}Câu hỏi: {user_input}\n"
-            f"Trả lời:"
+            f"Trả lời: (nhớ xuống dòng giữa các ý chính)"
         )
     elif topic == "stress":
         intro = "Chào bạn, tôi là trợ lý AI Tâm An, chuyên hỗ trợ tâm lý và stress.\n\n" if is_first_message else ""
         return (
             f"Bạn là trợ lý AI giúp học sinh vượt qua căng thẳng.\n"
             f"Dữ liệu tham khảo:\n{context_summary}\n\n"
-            f"QUY TẮC:\n"
+            f"QUY TẮC BẮT BUỘC:\n"
+            f"- Gõ đúng chính tả, ĐẦY ĐỦ DẤU TIẾNG VIỆT.\n"
+            f"- Phân chia đoạn văn rõ ràng bằng dòng trống (xuống hàng giữa các ý chính).\n"
+            f"- KHÔNG DÙNG ĐỊNH DẠNG MARKDOWN (không dùng dấu *, #, -, •, **).\n"
             f"- Trả lời với giọng điệu trấn an, đồng cảm\n"
             f"- Dùng dữ liệu nếu có, không thì dùng kiến thức chung\n"
             f"- KHÔNG nói 'xin lỗi, không biết'\n"
             f"- Trò chuyện tự nhiên, không rập khuôn\n\n"
             f"{intro}Câu hỏi: {user_input}\n"
-            f"Trả lời:"
+            f"Trả lời: (nhớ xuống dòng rõ ràng)"
         )
     elif topic == "nghe_nghiep":
         intro = "Chào bạn, tôi là trợ lý AI của cô Tâm An, chuyên tư vấn định hướng nghề nghiệp.\n\n" if is_first_message else ""
         return (
             f"Bạn là trợ lý AI tư vấn nghề nghiệp cho học sinh.\n"
             f"Dữ liệu tham khảo:\n{context_summary}\n\n"
-            f"QUY TẮC:\n"
+            f"QUY TẮC BẮT BUỘC:\n"
+            f"- Gõ đúng chính tả, ĐẦY ĐỦ DẤU TIẾNG VIỆT.\n"
+            f"- Phân chia đoạn văn rõ ràng bằng dòng trống (gióng xuống hàng).\n"
+            f"- KHÔNG DÙNG ĐỊNH DẠNG MARKDOWN (không dùng dấu *, #, -, •, **).\n"
             f"- Khích lệ, giúp học sinh khám phá bản thân\n"
             f"- Dùng dữ liệu nếu có, không thì đưa ra lời khuyên từ kiến thức chung\n"
             f"- KHÔNG từ chối trả lời\n"
             f"- Trò chuyện tự nhiên\n\n"
             f"{intro}Câu hỏi: {user_input}\n"
-            f"Trả lời:"
+            f"Trả lời: (viết văn xuôi tự nhiên, xuống dòng các ý)"
         )
     else:
         intro = "Chào bạn, tôi là trợ lý AI của cô Tâm An.\n\n" if is_first_message else ""
@@ -164,19 +239,17 @@ def tam_li_chat():
             is_first = session.get(f'first_message_{topic}', True)
             
             prompt = build_prompt(topic, context_data, user_input, is_first_message=is_first)
-            response = get_model().generate_content(prompt)
+            response = generate_with_retry(prompt)
             response_text = response.text
             
-            # ✅ LOẠI BỎ MARKDOWN
-            response_text = response_text.replace('###', '')
-            response_text = response_text.replace('***', '')
+            # ✅ KHÔNG DÙNG REPLACE NẾU DÍNH LIỀN
+            # Xóa các markdown block header nhưng giữ lại line break
+            response_text = re.sub(r'#{1,5}\s?', '', response_text)
             response_text = response_text.replace('**', '')
-            response_text = response_text.replace('* ', '')
-            response_text = response_text.replace('- ', '')
-            response_text = response_text.replace('• ', '')
+            response_text = response_text.replace('* ', '\n- ')  # chuyển list markdown thành gạch đầu dòng có xuống dòng
+            response_text = response_text.replace('• ', '\n- ')
             
             # ✅ XỬ LÝ XUỐNG DÒNG CHO CÁC SỐ THỨ TỰ
-            import re
             # Thêm 2 dòng trống trước các số thứ tự (1., 2., 3., 4., etc.)
             response_text = re.sub(r'(\d+\.)', r'\n\n\1', response_text)
             
@@ -678,7 +751,9 @@ Dữ liệu tham khảo (ưu tiên nếu liên quan):
 
 {context}
 
-QUY TẮC QUAN TRỌNG:
+QUY TẮC BẮT BUỘC:
+- Viết đúng chính tả, ĐẦY ĐỦ DẤU TIẾNG VIỆT.
+- Phân chia đoạn văn thành các đoạn nhỏ rõ ràng, nhớ xuống dòng giữa các ý.
 - Ưu tiên dùng dữ liệu trên nếu câu hỏi liên quan
 - Nếu không có trong dữ liệu, TỰ TIN trả lời bằng kiến thức tổng quát của bạn
 - TUYỆT ĐỐI KHÔNG nói "xin lỗi, không có dữ liệu" hay "nằm ngoài phạm vi kiến thức"
@@ -687,8 +762,7 @@ QUY TẮC QUAN TRỌNG:
 - Nếu họ dùng tiếng Việt thì trả lời bằng tiếng Việt
 - Chỉ giới thiệu ở câu đầu tiên, từ câu 2 trở đi trò chuyện bình thường
 - KHÔNG dùng markdown format (###, ***, **, -, •)
-- Trả lời dạng văn xuôi tự nhiên, KHÔNG dùng bullet points
-- Nếu cần liệt kê, viết thành câu văn: "Có 3 điều quan trọng: thứ nhất..., thứ hai..., thứ ba..."
+- Trả lời dạng văn xuôi tự nhiên, xuống dòng dễ nhìn.
 
 {intro}Câu hỏi hiện tại: {user_message}
 Trả lời:
@@ -710,17 +784,17 @@ Trả lời:
             for chunk in response:
                 if chunk.text:
                     clean_text = chunk.text
-                    clean_text = clean_text.replace('###', '')
-                    clean_text = clean_text.replace('***', '')
+                    clean_text = re.sub(r'#{1,5}\s?', '', clean_text)
                     clean_text = clean_text.replace('**', '')
-                    clean_text = clean_text.replace('* ', '')
-                    clean_text = clean_text.replace('- ', '')
-                    clean_text = clean_text.replace('• ', '')
+                    clean_text = clean_text.replace('* ', '\n- ')
+                    clean_text = clean_text.replace('• ', '\n- ')
                     
                     full_response += clean_text
                     data = json.dumps({"text": clean_text}, ensure_ascii=False)
                     yield f"data: {data}\n\n"
             
+            # Xử lý xuống dòng trước số thứ tự sau khi có full text
+            full_response = re.sub(r'(?<!\n)(\d+\.)', r'\n\n\1', full_response)
             chat_history.append(full_response)
             
             if len(chat_history) > 20:
@@ -772,7 +846,9 @@ Dữ liệu tham khảo (ưu tiên nếu liên quan):
 
 {context}
 
-QUY TẮC QUAN TRỌNG:
+QUY TẮC BẮT BUỘC:
+- Viết đúng chính tả, ĐẦY ĐỦ DẤU TIẾNG VIỆT.
+- Phân chia đoạn văn thành các đoạn nhỏ rõ ràng, nhớ XUỐNG DÒNG giữa các ý.
 - Ưu tiên sử dụng dữ liệu trên nếu câu hỏi liên quan
 - Nếu không có trong dữ liệu, TỰ TIN trả lời bằng kiến thức của bạn
 - KHÔNG BAO GIỜ nói "xin lỗi, không có dữ liệu" hoặc "nằm ngoài phạm vi"
@@ -781,22 +857,22 @@ QUY TẮC QUAN TRỌNG:
 - Nếu họ nói tiếng Việt thì trả lời bằng tiếng Việt
 - Câu đầu tiên có thể giới thiệu ngắn gọn, từ câu 2 trở đi không cần
 - KHÔNG dùng markdown format (###, ***, **, -, •)
-- Trả lời dạng văn xuôi tự nhiên
+- Trả lời dạng văn xuôi tự nhiên, xuống dòng cách đoạn để dễ nhìn.
 
 {intro}Câu hỏi hiện tại: {user_message}
 Trả lời:
     """
     
-    response = get_model('lichsu').generate_content(prompt)
+    response = generate_with_retry(prompt, feature='lichsu')
     reply_text = response.text
-    
-    reply_text = reply_text.replace('###', '')
-    reply_text = reply_text.replace('***', '')
+    # Xóa markdown, nhưng chuyển list sao cho có xuống dòng
+    reply_text = re.sub(r'#{1,5}\s?', '', reply_text)
     reply_text = reply_text.replace('**', '')
-    reply_text = reply_text.replace('* ', '')
-    reply_text = reply_text.replace('- ', '')
-    reply_text = reply_text.replace('• ', '')
-    
+    reply_text = reply_text.replace('* ', '\n- ')
+    reply_text = reply_text.replace('• ', '\n- ')
+    # Xử lý xuống dòng trước số thứ tự (vd: 1. 2. 3.)
+    reply_text = re.sub(r'(?<!\n)(\d+\.)', r'\n\n\1', reply_text)
+    reply_text = reply_text.lstrip()
     chat_history.append(user_message)
     chat_history.append(reply_text)
     
@@ -891,13 +967,14 @@ QUY TẮC BẮT BUỘC:
 Người dùng hỏi: {user_message}
 """
     try:
-        resp = get_model().generate_content(prompt)
+        resp = generate_with_retry(prompt)
         text_reply = resp.text.strip()
         
-        # Format lại response: loại bỏ markdown
+        # Lọc markdown nhưng bảo tồn dòng
+        text_reply = re.sub(r'#{1,5}\s?', '', text_reply)
         text_reply = text_reply.replace('**', '')
-        text_reply = text_reply.replace('##', '')
-        text_reply = text_reply.replace('###', '')
+        text_reply = text_reply.replace('* ', '- ')
+        text_reply = text_reply.replace('• ', '- ')
         
     except Exception as e:
         print("Lỗi khi gọi Gemini:", e)
@@ -906,7 +983,7 @@ Người dùng hỏi: {user_message}
     if contains_english(text_reply):
         try:
             follow_prompt = prompt + "\n\nBạn đã sử dụng từ tiếng Anh, hãy trả lời lại hoàn toàn bằng tiếng Việt."
-            resp2 = get_model().generate_content(follow_prompt)
+            resp2 = generate_with_retry(follow_prompt)
             text_reply = resp2.text.strip()
             
             # Format lại lần nữa sau khi retry
@@ -1023,7 +1100,7 @@ def submit(de_id):
             "2. Phân tích từng lỗi sai (nêu lý do sai, giải thích kiến thức liên quan)\n"
             "3. Đề xuất ít nhất 3 dạng bài tập cụ thể để học sinh luyện tập đúng phần bị sai"
         )
-        response = get_model('lichsu').generate_content([prompt])
+        response = generate_with_retry([prompt], feature='lichsu')
         ai_feedback = response.text
         
         # Format lại response: thay thế markdown bằng HTML
@@ -1126,8 +1203,8 @@ def upload_image():
             # SỬ DỤNG PROMPT MỚI với rubric chi tiết
             prompt = generate_grading_prompt()
 
-            # Gọi model AI (thay 'model' bằng model của bạn)
-            response = get_model('lichsu').generate_content([img, prompt])
+            # Gọi model AI với auto-retry khi 429
+            response = generate_with_retry([img, prompt], feature='lichsu')
             ai_feedback = response.text
             
             # Format lại response để hiển thị đẹp
@@ -1397,9 +1474,10 @@ def auto_grade_essay_with_ai(exam, essay_answer, image_path=None):
         tieu_chi = exam.get('grading_criteria', 'Cham theo noi dung va logic')
 
         if image_path and os.path.exists(image_path):
-            img = Image.open(image_path)
-            has_text = bool(essay_answer and essay_answer.strip())
-            text_part = f"\nBai lam bang chu cua hoc sinh (neu co): {essay_answer}" if has_text else ""
+            import PIL.Image as PILImage
+            img = PILImage.open(image_path)
+            has_text = bool(essay_answer and essay_answer.strip() and essay_answer.strip() != 'None')
+            text_part = f"\nBai lam bang chu (neu co): {essay_answer}" if has_text else "\nHoc sinh KHONG viet gi bang chu, CHIEU CHAM DUY NHAT BANG ANH BEN DUOI."
 
             prompt = f"""Ban la giao vien lich su cham bai thi tu luan.
 
@@ -1421,7 +1499,7 @@ Tra ve JSON (KHONG DUNG DAU # VA **):
 }}
 
 Chi tra ve JSON, khong them bat ky ky tu nao khac."""
-            response = get_model('lichsu').generate_content([img, prompt])
+            response = generate_with_retry([img, prompt], feature='lichsu')
         else:
             prompt = f"""Ban la giao vien lich su cham bai thi tu luan.
 
@@ -1445,11 +1523,12 @@ Tra ve JSON (KHONG DUNG DAU # VA **):
 }}
 
 Chi tra ve JSON."""
-            response = get_model().generate_content(prompt)
+            response = generate_with_retry(prompt)
         
         text = response.text.strip()
         text = text.replace('```json', '').replace('```', '').strip()
         result = json.loads(text)
+        result['max_score'] = max_score  # LUÔN truyền lại max_score
         return result
         
     except Exception as e:
@@ -1464,9 +1543,10 @@ def auto_grade_mixed_essay_with_ai(question, grading_criteria, essay_answer, ima
     """
     try:
         if image_path and os.path.exists(image_path):
-            img = Image.open(image_path)
-            has_text = bool(essay_answer and essay_answer.strip())
-            text_part = f"\nBai lam bang chu (neu co): {essay_answer}" if has_text else ""
+            import PIL.Image as PILImage
+            img = PILImage.open(image_path)
+            has_text = bool(essay_answer and essay_answer.strip() and essay_answer.strip() != 'None')
+            text_part = f"\nBai lam bang chu (neu co): {essay_answer}" if has_text else "\nHoc sinh KHONG viet gi bang chu, CHIEU CHAM DUY NHAT BANG ANH BEN DUOI."
 
             prompt = f"""Ban la giao vien lich su cham bai.
 
@@ -1484,7 +1564,7 @@ Tra ve JSON (KHONG DUNG # VA **):
 }}
 
 Chi tra ve JSON."""
-            response = get_model().generate_content([img, prompt])
+            response = generate_with_retry([img, prompt])
         else:
             prompt = f"""Ban la giao vien lich su cham bai.
 
@@ -1504,7 +1584,7 @@ Tra ve JSON (KHONG DUNG # VA **):
 }}
 
 Chi tra ve JSON."""
-            response = get_model().generate_content(prompt)
+            response = generate_with_retry(prompt)
         
         text = response.text.strip()
         text = text.replace('```json', '').replace('```', '').strip()
@@ -1873,8 +1953,8 @@ def repair_question_with_ai(block_text, q_type):
     """
     Sử dụng Gemini để sửa một block câu hỏi bị lỗi cấu trúc.
     """
-    model = get_model()
-    if not model: return None
+    # generate_with_retry handles key selection automatically
+    if not GENERAL_KEYS and not LICHSU_KEYS: return None
     
     prompt = f"""
 Bạn là chuyên gia bóc tách đề thi. Tôi có một câu hỏi bị lỗi định dạng khi bóc tách bằng thuật toán.
@@ -1895,7 +1975,7 @@ LƯU Ý:
 - Nếu là TF, trả về đủ 4 statements.
 """
     try:
-        response = model.generate_content(prompt)
+        response = generate_with_retry(prompt)
         text = response.text.strip()
         if "```json" in text:
             text = text.split("```json")[1].split("```")[0].strip()
@@ -2055,8 +2135,6 @@ def extract_drive_id(link):
     - https://drive.google.com/file/d/FILE_ID/view
     - https://drive.google.com/open?id=FILE_ID
     """
-    import re
-    
     # Dạng /file/d/FILE_ID/
     match = re.search(r'/file/d/([a-zA-Z0-9_-]+)', link)
     if match:
@@ -2119,10 +2197,40 @@ def delete_exam(exam_id):
     if 'exam_username' not in session or session.get('exam_role') != 'teacher':
         return redirect(url_for('login_exam'))
     
+    # Bước 1: Xóa đề thi
     exams = load_exams_data()
     if exam_id in exams:
         exams.pop(exam_id)
         save_exams_data(exams)
+    
+    # Bước 2: Xóa toàn bộ bài nộp liên quan
+    submissions = load_exam_submissions()
+    remaining = []
+    for sub in submissions:
+        if sub.get('exam_id') == exam_id:
+            # Xóa ảnh đã upload (nếu có)
+            for key in ['image_path']:
+                path = sub.get(key)
+                if path and os.path.exists(path):
+                    try:
+                        os.remove(path)
+                    except Exception:
+                        pass
+            # Xóa ảnh essay trong đề hỗn hợp
+            for ea in sub.get('answers', {}).get('essay', []):
+                path = ea.get('image_path') if isinstance(ea, dict) else None
+                if path and os.path.exists(path):
+                    try:
+                        os.remove(path)
+                    except Exception:
+                        pass
+        else:
+            remaining.append(sub)
+    
+    deleted_count = len(submissions) - len(remaining)
+    save_exam_submissions(remaining)
+    
+    flash(f"✅ Đã xóa đề thi và {deleted_count} bài nộp liên quan.", "success")
     return redirect(url_for('dashboard_teacher'))
 
 # Cập nhật route dashboard_teacher
@@ -2227,9 +2335,11 @@ def dashboard_student():
     my_submissions = []
     for i, s in enumerate(all_submissions):
         if s.get('student') == username:
-            s_with_index = s.copy()
-            s_with_index['original_index'] = i
-            my_submissions.append(s_with_index)
+            # Chỉ hiển thị bài nộp nếu đề thi vẫn còn tồn tại
+            if s.get('exam_id') in exams:
+                s_with_index = s.copy()
+                s_with_index['original_index'] = i
+                my_submissions.append(s_with_index)
     
     # Phân loại tài liệu theo lớp
     materials_by_grade = {
@@ -2430,7 +2540,7 @@ Tra ve JSON (KHONG DUNG # VA **):
 Chi tra ve JSON.
 """
         
-        response = get_model().generate_content(prompt)
+        response = generate_with_retry(prompt)
         text = response.text.strip()
         text = text.replace('```json', '').replace('```', '').strip()
         result = json.loads(text)
@@ -2479,7 +2589,7 @@ Tra ve JSON (KHONG DUNG # VA **):
 Chi tra ve JSON.
 """
         
-        response = get_model().generate_content(prompt)
+        response = generate_with_retry(prompt)
         text = response.text.strip()
         text = text.replace('```json', '').replace('```', '').strip()
         result = json.loads(text)
@@ -2833,7 +2943,8 @@ def view_submission(submission_index):
     
     if submission_index >= len(submissions):
         flash("Không tìm thấy bài nộp", "error")
-        return redirect(url_for('dashboard_teacher'))
+        target_dashboard = 'dashboard_student' if session.get('exam_role') == 'student' else 'dashboard_teacher'
+        return redirect(url_for(target_dashboard))
     
     submission = submissions[submission_index]
     
@@ -2846,8 +2957,9 @@ def view_submission(submission_index):
     exam = exams.get(submission['exam_id'])
     
     if not exam:
-        flash("Không tìm thấy đề thi", "error")
-        return redirect(url_for('dashboard_teacher'))
+        flash("Đề thi này đã bị xóa.", "error")
+        target_dashboard = 'dashboard_student' if session.get('exam_role') == 'student' else 'dashboard_teacher'
+        return redirect(url_for(target_dashboard))
     
     # ========== CHUẨN HÓA CẤU TRÚC EXAM ==========
     print(f"[DEBUG] exam type: {type(exam)}")

@@ -682,8 +682,10 @@
             {% if submission.essay_ai_feedback and submission.essay_ai_feedback[i] %}
             <div class="essay-feedback-box">
                 <h4 style="color: #2196F3; margin-top: 0;">🤖 Nhận xét AI cho câu này</h4>
-                <p><strong>Điểm:</strong> {{ submission.essay_ai_feedback[i].score }}/10</p>
-                <p style="line-height: 1.8; margin-top: 10px;">{{ submission.essay_ai_feedback[i].feedback }}</p>
+                <p><strong>Điểm:</strong> {{ submission.essay_ai_feedback[i].score }}/{{
+                    submission.essay_ai_feedback[i].get('max_score', 10) }}</p>
+                <p style="line-height: 1.8; margin-top: 10px;">{{ submission.essay_ai_feedback[i].analysis or
+                    submission.essay_ai_feedback[i].feedback or 'Không có nhận xét chi tiết.' }}</p>
             </div>
             {% endif %}
         </div>
