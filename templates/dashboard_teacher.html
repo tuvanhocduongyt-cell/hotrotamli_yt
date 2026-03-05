@@ -273,15 +273,15 @@
     <table style="width: auto; border-collapse: collapse; margin-top: 10px;">
       <thead>
         <tr style="background:#e0f2f1;">
-          <th style="padding:6px 12px; border:1px solid #ddd;">Đánh giá</th>
-          <th style="padding:6px 12px; border:1px solid #ddd;">Số lượt</th>
+          <th style="padding:6px 12px; border:1px solid #ddd; font-weight: 800; color: #004d40;">Đánh giá</th>
+          <th style="padding:6px 12px; border:1px solid #ddd; font-weight: 800; color: #004d40;">Số lượt</th>
         </tr>
       </thead>
       <tbody>
         {% for rating, count in ratings.items() %}
         <tr>
-          <td style="padding:6px 12px; border:1px solid #ddd;">{{ rating }}</td>
-          <td style="padding:6px 12px; border:1px solid #ddd; text-align:right;">{{ count }}</td>
+          <td style="padding:6px 12px; border:1px solid #ddd; font-weight: 700;">{{ rating }}</td>
+          <td style="padding:6px 12px; border:1px solid #ddd; text-align:right; font-weight: 700;">{{ count }}</td>
         </tr>
         {% endfor %}
       </tbody>
@@ -333,7 +333,23 @@
           options: {
             responsive: true,
             maintainAspectRatio: false,
-            scales: { y: { beginAtZero: true, precision: 0 } }
+            plugins: {
+              legend: {
+                labels: {
+                  font: { weight: 'bold', size: 13 }
+                }
+              }
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                precision: 0,
+                ticks: { font: { weight: 'bold' } }
+              },
+              x: {
+                ticks: { font: { weight: 'bold' } }
+              }
+            }
           }
         });
       }

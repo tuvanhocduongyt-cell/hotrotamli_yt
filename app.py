@@ -1622,13 +1622,23 @@ def parse_docx_strictly(text):
     # 1. Chuẩn hóa xuống dòng để dễ xử lý
     text = text.replace('\r\n', '\n')
     
-    # 2. Xử lý Bảng đáp án tổng hợp (nếu có)
+    # 2. Cô lập văn bản chính (Main Content) và Đáp án (Footer)
+    footer_match = re.search(r'(?i)\n\s*ĐÁP\s*ÁN\s*[:\-]', text)
+    if not footer_match:
+        # Fallback tìm "PHẦN I:" ở cuối file (vùng đáp án)
+        footer_match = re.search(r'(?i)\n\s*PHẦN\s*I\s*[I|V|X\d]*\s*[:\-]', text)
+        if not (footer_match and footer_match.start() > len(text) * 0.7):
+            footer_match = None
+
+    # 3. Xử lý Bảng đáp án tổng hợp (nếu có)
     mc_global_answers = {}
     tf_global_answers = {}
     
+    # Vùng tìm kiếm đáp án (Footer)
+    search_zone = text[footer_match.start():] if footer_match else text[int(len(text)*0.6):]
+
     # Tìm vùng đáp án trắc nghiệm Phần I
-    # Thường bắt đầu bằng "ĐÁP ÁN" và chứa danh sách A, B, C, D
-    mc_section = re.search(r'(?i)ĐÁP\s+ÁN\s*[:\-]\s*PHẦN\s*I.*?(?=Phần\s*II|-------|$)', text, re.DOTALL)
+    mc_section = re.search(r'(?i)PHẦN\s*I.*?(?=Phần\s*II|-------|$)', search_zone, re.DOTALL)
     if mc_section:
         ans_text = mc_section.group(0)
         # Tìm các cặp số và chữ cái (ví dụ: 1 B, 2 A...)
@@ -1647,8 +1657,7 @@ def parse_docx_strictly(text):
                 mc_global_answers[int(n)] = l
 
     # Tìm vùng đáp án Đúng/Sai Phần II
-    # Tìm "Phần II" ở vùng cuối file (vùng đáp án)
-    tf_section = re.search(r'(?i)\n\s*PHẦN\s*II.*?(?=$)', text, re.DOTALL)
+    tf_section = re.search(r'(?i)PHẦN\s*II.*?(?=$)', search_zone, re.DOTALL)
     if tf_section:
         ans_text = tf_section.group(0)
         # Lấy từng khối của Câu 1, Câu 2... trong vùng đáp án
@@ -1656,17 +1665,19 @@ def parse_docx_strictly(text):
              
         for n, val_block in tf_pairs:
             vals = []
-            # Tìm tất cả ký hiệu Đ/S hoặc Đúng/Sai trong khối này
-            lines = val_block.split('\n')
+            # Tìm theo định dạng dòng có marker: a) Đúng ...
+            lines = [l.strip() for l in val_block.split('\n') if l.strip()]
             for line in lines:
-                m = re.search(r'(?i)(?:[a-d][\s\.\)]+)?\s*([đs]|đúng|sai)\b', line)
+                # Phải có marker [a-d] ở đầu dòng (ví dụ: a) Đúng)
+                m = re.match(r'(?i)([a-d])[\s\.\)]+\s*([đs]|đúng|sai)\b', line)
                 if m:
-                    val = m.group(1).lower()
+                    val = m.group(2).lower()
                     if val.startswith('đ'): vals.append(True)
                     else: vals.append(False)
             
-            # Nếu không tìm thấy theo dòng, tìm tự do (ví dụ: Đ, S, Đ, Đ)
+            # Nếu không tìm thấy theo dòng có marker, tìm tự do (ví dụ: Đ, S, Đ, Đ hoặc S, Đ, Đ, Đ)
             if not vals:
+                # Tìm tất cả cụm từ đ/s/đúng/sai đứng độc lập hoặc cách nhau bởi dấu phẩy/khoảng trắng
                 matches = re.findall(r'(?i)\b([đs]|đúng|sai)\b', val_block)
                 for m in matches:
                     m = m.lower()
@@ -1676,19 +1687,8 @@ def parse_docx_strictly(text):
             if len(vals) >= 4:
                 tf_global_answers[int(n)] = vals[:4]
 
-    # 3. Cô lập văn bản chính (Main Content) và Đáp án (Footer)
-    footer_match = re.search(r'(?i)\n\s*ĐÁP\s*ÁN\s*[:\-]', text)
-    if footer_match:
-        main_text = text[:footer_match.start()].strip()
-    else:
-        # Fallback tìm "PHẦN I:" ở cuối file (vùng đáp án)
-        footer_match = re.search(r'(?i)\n\s*PHẦN\s*I\s*[:\-]', text)
-        if footer_match and footer_match.start() > len(text) * 0.7:
-             main_text = text[:footer_match.start()].strip()
-        else:
-             main_text = text
-
-    # 4. Tách văn bản thành các Phần (Phần I, Phần II, ...)
+    # 4. Tách đề thi thành các phần nội dung chính
+    main_text = text[:footer_match.start()].strip() if footer_match else text
     # Pattern: Phần [Số La Mã] hoặc [Số thường] ở đầu dòng
     parts_raw = re.split(r'(?i)\n\s*(?:Phần|PHẦN)\s+([I|V|X|L|C]+|\d+)[\s\.\:]', "\n" + main_text)
     
@@ -1824,21 +1824,27 @@ def parse_docx_strictly(text):
                 
                 is_standard = (len(statements) == 4 and "".join(markers_found) == "abcd")
                 
-                answers = [True, True, True, True]
+                # Mặc định, nếu không có đáp án thì để None để AI xử lý ở bước Repair
+                answers = [None, None, None, None] 
+                
                 if ans_text:
                     line_text = ans_text.lower()
                     new_ans = []
                     for m in ['a', 'b', 'c', 'd']:
                         if re.search(fr'{m}[\-\s:]*(đ|đúng)', line_text): new_ans.append(True)
-                        else: new_ans.append(False)
+                        elif re.search(fr'{m}[\-\s:]*(s|sai)', line_text): new_ans.append(False)
                     if len(new_ans) == 4: answers = new_ans
                 elif q_num in tf_global_answers:
                     answers = tf_global_answers[q_num]
+
+                # Nếu vẫn chưa có đáp án, ta sẽ dùng AI để suy luận
+                if None in answers:
+                    is_standard = False # Buộc qua bước AI Repair
                     
                 processed_tf.append({
                     "question": question_text,
                     "statements": statements[:4] if len(statements) >= 4 else statements,
-                    "answers": answers,
+                    "answers": [a if a is not None else True for a in answers],
                     "_is_standard": is_standard,
                     "_raw_block": content_block
                 })
