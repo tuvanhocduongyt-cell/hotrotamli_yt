@@ -1075,18 +1075,40 @@ def submit(de_id):
             results.append({"status": "Sai", "note": msg})
             feedback.append(msg)
 
-    for i, tf in enumerate(questions.get("true_false", [])):
+    # Điểm tối đa mỗi câu TF: chia đều từ 4 điểm dành cho phần TF
+    TF_TOTAL_POINT = 4  # tổng điểm dành cho phần đúng/sai (thang 10)
+    tf_list = questions.get("true_false", [])
+    score_per_tf = (TF_TOTAL_POINT / len(tf_list)) if tf_list else 0
+
+    for i, tf in enumerate(tf_list):
+        wrong_count = 0
+        tf_results = []
         for j, correct_tf in enumerate(tf["answers"]):
             user_tf_raw = request.form.get(f"tf_{i}_{j}", "").lower()
             user_tf = user_tf_raw == "true"
-            total_questions += 1
             if user_tf == correct_tf:
-                correct_count += 1
-                results.append({"status": "Đúng", "note": ""})
+                tf_results.append({"status": "Đúng", "note": ""})
             else:
+                wrong_count += 1
                 msg = f"Câu {i+1+len(questions['multiple_choice'])}, ý {j+1} sai."
-                results.append({"status": "Sai", "note": msg})
+                tf_results.append({"status": "Sai", "note": msg})
                 feedback.append(msg)
+
+        # Cơ cấu điểm thống nhất
+        if wrong_count == 0:
+            tf_score = score_per_tf          # 100%
+        elif wrong_count == 1:
+            tf_score = score_per_tf * 0.5   # 50%
+        elif wrong_count == 2:
+            tf_score = score_per_tf * 0.25  # 25%
+        elif wrong_count == 3:
+            tf_score = score_per_tf * 0.1   # 10%
+        else:
+            tf_score = 0                     # 0%
+
+        correct_count += tf_score
+        results.extend(tf_results)
+        total_questions += 1  # Đếm theo câu TF (không phải từng ý)
 
     score = correct_count
     summary = f"Học sinh làm đúng {correct_count} / {total_questions} câu."
@@ -2691,19 +2713,16 @@ def do_exam(exam_id):
                             'user_answers': user_answers
                         })
                     
-                    # CHẤM ĐIỂM THEO PHƯƠNG PHÁP
-                    if grading_method == 'deduction':
-                        if wrong_count == 0:
-                            score += score_per_tf
-                        elif wrong_count == 1:
-                            score += score_per_tf * 0.75  # ⭐ FIXED: Trừ 25%
-                        elif wrong_count == 2:
-                            score += score_per_tf * 0.5   # ⭐ FIXED: Trừ 50%
-                        elif wrong_count == 3:
-                            score += score_per_tf * 0.25  # ⭐ FIXED: Trừ 75%
-                        # Sai 4 ý = 0 điểm
-                    else:  # proportional
-                        score += (correct_count / 4) * score_per_tf  # ⭐ FIXED
+                    # Cơ cấu điểm thống nhất (áp dụng cho tất cả đề thi)
+                    if wrong_count == 0:
+                        score += score_per_tf          # 100% — đúng hết 4 ý
+                    elif wrong_count == 1:
+                        score += score_per_tf * 0.5   # 50% — sai 1 ý
+                    elif wrong_count == 2:
+                        score += score_per_tf * 0.25  # 25% — sai 2 ý
+                    elif wrong_count == 3:
+                        score += score_per_tf * 0.1   # 10% — sai 3 ý
+                    # Sai 4 ý = 0 điểm
             
             # ============================================
             # PHÂN TÍCH AI CHO CÂU SAI (TRẮC NGHIỆM & ĐÚNG/SAI)
