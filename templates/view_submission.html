@@ -673,7 +673,7 @@
                 <div style="margin-top: 15px;">
                     <strong style="color: #2193b0;">Hình ảnh đính kèm:</strong>
                     <br>
-                    <img src="{{ url_for('static', filename=essay_answer.image_path.replace('static/', '')) }}"
+                    <img src="/uploads/{{ essay_answer.image_path.replace('uploads/', '').replace('uploads\\', '').replace('\\', '/') }}"
                         alt="Bài làm" class="essay-image">
                 </div>
                 {% endif %}
@@ -710,7 +710,7 @@
                 <div style="margin-top: 15px;">
                     <strong style="color: #2193b0;">Hình ảnh đính kèm:</strong>
                     <br>
-                    <img src="{{ url_for('static', filename=submission.image_path.replace('static/', '')) }}"
+                    <img src="/uploads/{{ submission.image_path.replace('uploads/', '').replace('uploads\\', '').replace('\\', '/') }}"
                         alt="Bài làm" class="essay-image">
                 </div>
                 {% endif %}

@@ -144,7 +144,6 @@ def generate_with_retry(prompt_or_parts, feature=None, max_retries=None):
 
 app.config['UPLOAD_FOLDER'] = 'uploads'
 
-# temporary server-side storage for exams pending preview/save
 # key is a UUID token, value is exam data dict
 TEMP_EXAMS = {}
 
@@ -1216,22 +1215,19 @@ def upload_image():
         if not image or image.filename == '':
             return render_template('upload_image.html', feedback="⚠ Không có ảnh được chọn.")
 
-        image_path = os.path.join(app.config['UPLOAD_FOLDER'], image.filename)
+        # FIX: thêm timestamp tránh trùng tên file
+        import time
+        safe_filename = secure_filename(f"{int(time.time())}_{image.filename}")
+        image_path = os.path.join(app.config['UPLOAD_FOLDER'], safe_filename).replace('\\', '/')
         image.save(image_path)
 
         try:
             img = Image.open(image_path)
-            
-            # SỬ DỤNG PROMPT MỚI với rubric chi tiết
             prompt = generate_grading_prompt()
-
-            # Gọi model AI với auto-retry khi 429
             response = generate_with_retry([img, prompt], feature='lichsu')
             ai_feedback = response.text
-            
-            # Format lại response để hiển thị đẹp
             ai_feedback = format_feedback_html(ai_feedback)
-            
+
         except Exception as e:
             ai_feedback = f"⚠ Lỗi khi xử lý ảnh: {str(e)}"
 
@@ -1240,9 +1236,10 @@ def upload_image():
 
 def format_feedback_html(text):
     """Format feedback thành HTML đẹp"""
+    import re
     
-    # Thay thế markdown bold
-    text = text.replace('**', '<strong>').replace('**', '</strong>')
+    # FIX: dùng regex để đổi cặp **text** → <strong>text</strong>
+    text = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', text)
     
     # Thêm màu sắc cho các phần
     text = text.replace('📊 TỔNG ĐIỂM:', '<div class="total-score">📊 TỔNG ĐIỂM:')
@@ -1254,11 +1251,9 @@ def format_feedback_html(text):
     # Xuống dòng
     text = text.replace('\n', '<br>')
     
-    text += '</div>'  # Đóng div cuối cùng
+    text += '</div>'
     
     return text
-
-    ##########################################
 
 @app.route("/tam_an")
 def tam_an():
@@ -1313,7 +1308,8 @@ def submit_score():
 
     with open("scores.json", "r+", encoding="utf-8") as f:
         scores = json.load(f)
-        now = datetime.now().strftime("%d/%m/%Y %H:%M")
+        # FIX: dùng vn_timezone thay vì datetime.now() không có timezone
+        now = datetime.now(vn_timezone).strftime("%d/%m/%Y %H:%M")
 
         existing = next((s for s in scores if s["nickname"] == nickname and s.get("bai") == bai), None)
 
@@ -1338,7 +1334,6 @@ def submit_score():
         f.truncate()
 
     return jsonify({"status": "ok"})
-
 @app.route("/leaderboard")
 def leaderboard():
     bai = session.get("bai")
@@ -1493,136 +1488,192 @@ def auto_grade_essay_with_ai(exam, essay_answer, image_path=None):
     """Tự động chấm bài tự luận bằng AI"""
     try:
         de_bai = exam.get('essay_question', '')
-        tieu_chi = exam.get('grading_criteria', 'Cham theo noi dung va logic')
+        tieu_chi = exam.get('grading_criteria', 'Chấm theo nội dung và logic')
+
+        print(f"[AI GRADE] de_bai: {de_bai[:80]}")
+        print(f"[AI GRADE] tieu_chi: {tieu_chi[:80]}")
+        print(f"[AI GRADE] essay_answer: '{essay_answer[:100] if essay_answer else 'TRỐNG'}'")
+        print(f"[AI GRADE] image_path: {image_path}")
 
         if image_path and os.path.exists(image_path):
             import PIL.Image as PILImage
             img = PILImage.open(image_path)
             has_text = bool(essay_answer and essay_answer.strip() and essay_answer.strip() != 'None')
-            text_part = f"\nBai lam bang chu (neu co): {essay_answer}" if has_text else "\nHoc sinh KHONG viet gi bang chu, CHIEU CHAM DUY NHAT BANG ANH BEN DUOI."
+            text_part = f"\nBài làm bằng chữ (nếu có): {essay_answer}" if has_text else "\nHọc sinh KHÔNG viết gì bằng chữ, chỉ nộp ảnh bên dưới."
 
-            prompt = f"""Ban la giao vien lich su cham bai thi tu luan.
+            prompt = f"""Bạn là giáo viên lịch sử chấm bài thi tự luận.
 
-De bai: {de_bai}
+Đề bài: {de_bai}
 
-Tieu chi cham: {tieu_chi}
+Tiêu chí chấm: {tieu_chi}
 {text_part}
 
-Hoc sinh da nop bai lam viet tay trong anh dinh kem. Hay cham diem bai lam theo thang diem 10.
+Học sinh đã nộp bài làm viết tay trong ảnh đính kèm. Hãy đọc kỹ ảnh và chấm điểm theo thang điểm 10.
 
-Tra ve JSON (KHONG DUNG DAU # VA **):
+Chỉ trả về JSON thuần, không giải thích thêm:
 {{
-  "score": <diem so 0-10>,
-  "strengths": "<diem manh>",
-  "weaknesses": "<diem yeu>",
-  "missing_knowledge": "<kien thuc thieu>",
-  "improvement_areas": "<dang bai can cai thien>",
-  "suggestions": "<loi khuyen cu the>"
-}}
-
-Chi tra ve JSON, khong them bat ky ky tu nao khac."""
+  "score": <điểm số từ 0 đến 10>,
+  "strengths": "<điểm mạnh của bài làm>",
+  "weaknesses": "<điểm yếu cần cải thiện>",
+  "missing_knowledge": "<kiến thức còn thiếu>",
+  "improvement_areas": "<dạng bài cần luyện thêm>",
+  "suggestions": "<lời khuyên cụ thể cho học sinh>"
+}}"""
+            print(f"[AI GRADE] Gọi AI với ảnh...")
             response = generate_with_retry([img, prompt], feature='lichsu')
         else:
-            prompt = f"""Ban la giao vien lich su cham bai thi tu luan.
+            prompt = f"""Bạn là giáo viên lịch sử chấm bài thi tự luận.
 
-De bai: {de_bai}
+Đề bài: {de_bai}
 
-Tieu chi cham: {tieu_chi}
+Tiêu chí chấm: {tieu_chi}
 
-Bai lam cua hoc sinh:
-{essay_answer}
+Bài làm của học sinh:
+{essay_answer if essay_answer else '(Học sinh không viết gì)'}
 
-Hay cham diem theo thang diem 10 va phan tich chi tiet.
+Hãy chấm điểm theo thang điểm 10 và phân tích chi tiết.
 
-Tra ve JSON (KHONG DUNG DAU # VA **):
+Chỉ trả về JSON thuần, không giải thích thêm:
 {{
-  "score": <diem so 0-10>,
-  "strengths": "<diem manh>",
-  "weaknesses": "<diem yeu>",
-  "missing_knowledge": "<kien thuc thieu>",
-  "improvement_areas": "<dang bai can cai thien>",
-  "suggestions": "<loi khuyen cu the>"
+  "score": <điểm số từ 0 đến 10>,
+  "strengths": "<điểm mạnh của bài làm>",
+  "weaknesses": "<điểm yếu cần cải thiện>",
+  "missing_knowledge": "<kiến thức còn thiếu>",
+  "improvement_areas": "<dạng bài cần luyện thêm>",
+  "suggestions": "<lời khuyên cụ thể cho học sinh>"
+}}"""
+            print(f"[AI GRADE] Gọi AI với text...")
+            response = generate_with_retry(prompt, feature='lichsu')
+
+        raw_text = response.text.strip()
+        print(f"[AI GRADE] Raw response: {raw_text[:300]}")
+
+        # Làm sạch JSON
+        clean_text = raw_text
+        if "```json" in clean_text:
+            clean_text = clean_text.split("```json")[1].split("```")[0].strip()
+        elif "```" in clean_text:
+            clean_text = clean_text.split("```")[1].split("```")[0].strip()
+
+        result = json.loads(clean_text)
+        print(f"[AI GRADE] Score: {result.get('score')} / 10")
+        return result
+
+    except json.JSONDecodeError as e:
+        print(f"[AI GRADE] JSON parse lỗi: {e}")
+        print(f"[AI GRADE] Text gây lỗi: {raw_text[:200] if 'raw_text' in dir() else 'N/A'}")
+        return None
+    except Exception as e:
+        print(f"[AI GRADE] Lỗi: {type(e).__name__}: {e}")
+        import traceback
+        traceback.print_exc()
+        return None
+##
+def analyze_truefalse_errors(exam, tf_errors):
+    """AI đưa ra kế hoạch ôn tập cho câu đúng/sai"""
+    try:
+        if not tf_errors:
+            return None
+
+        errors_text = ""
+        for idx, item in enumerate(tf_errors):
+            tf = item['question']
+            errors_text += f"\nCâu {idx + 1}: {tf['question']}\n"
+            for j, stmt in enumerate(tf['statements']):
+                correct = "ĐÚNG" if tf['answers'][j] else "SAI"
+                user = "ĐÚNG" if item['user_answers'][j] else "SAI"
+                if tf['answers'][j] != item['user_answers'][j]:
+                    errors_text += f"  Ý {j+1}: {stmt}\n"
+                    errors_text += f"    Đáp án đúng: {correct}\n"
+                    errors_text += f"    Học sinh chọn: {user}\n"
+
+        prompt = f"""Bạn là giáo viên lịch sử, hãy phân tích các lỗi sai của học sinh trong câu đúng/sai.
+
+Các lỗi sai:
+{errors_text}
+
+Hãy đưa ra:
+1. KẾ HOẠCH ÔN TẬP cụ thể để học sinh khắc phục các lỗi sai trên.
+2. CÁC CHỦ ĐỀ LIÊN QUAN cần ôn thêm.
+
+Trả về JSON (KHÔNG DÙNG # VÀ **), viết đầy đủ dấu tiếng Việt:
+{{
+  "ke_hoach_on_tap": "<Kế hoạch ôn tập cụ thể>",
+  "cac_chu_de_lien_quan": "<Các chủ đề cần ôn thêm>"
 }}
 
-Chi tra ve JSON."""
-            response = generate_with_retry(prompt)
-        
+Chỉ trả về JSON."""
+
+        response = generate_with_retry(prompt, feature='lichsu')
         text = response.text.strip()
         text = text.replace('```json', '').replace('```', '').strip()
         result = json.loads(text)
-        result['max_score'] = max_score  # LUÔN truyền lại max_score
         return result
-        
+
     except Exception as e:
-        print(f"Loi cham AI: {e}")
+        print(f"Lỗi phân tích TF: {e}")
         return None
 
-
 def auto_grade_mixed_essay_with_ai(question, grading_criteria, essay_answer, image_path=None, max_score=3):
-    """
-    Chấm từng câu tự luận trong đề hỗn hợp
-    Hỗ trợ: chỉ text, chỉ ảnh, hoặc cả hai
-    """
+    """Chấm từng câu tự luận trong đề hỗn hợp"""
     try:
         if image_path and os.path.exists(image_path):
             import PIL.Image as PILImage
             img = PILImage.open(image_path)
             has_text = bool(essay_answer and essay_answer.strip() and essay_answer.strip() != 'None')
-            text_part = f"\nBai lam bang chu (neu co): {essay_answer}" if has_text else "\nHoc sinh KHONG viet gi bang chu, CHIEU CHAM DUY NHAT BANG ANH BEN DUOI."
+            text_part = f"\nBài làm bằng chữ (nếu có): {essay_answer}" if has_text else "\nHọc sinh KHÔNG viết gì bằng chữ, CHẤM DUY NHẤT BẰNG ẢNH BÊN DƯỚI."
 
-            prompt = f"""Ban la giao vien lich su cham bai.
+            prompt = f"""Bạn là giáo viên lịch sử chấm bài.
 
-Cau hoi: {question}
+Câu hỏi: {question}
 
-Tieu chi: {grading_criteria}{text_part}
+Tiêu chí: {grading_criteria}{text_part}
 
-Hoc sinh da nop bai lam viet tay trong anh dinh kem. Hay cham diem theo thang diem {max_score}.
+Học sinh đã nộp bài làm viết tay trong ảnh đính kèm. Hãy chấm điểm theo thang điểm {max_score}.
 
-Tra ve JSON (KHONG DUNG # VA **):
+Trả về JSON (KHÔNG DÙNG # VÀ **):
 {{
-  "score": <diem so tren {max_score}, lam tron 2 chu so thap phan>,
-  "analysis": "<phan tich bai lam>",
-  "suggestions": "<loi khuyen cu the>"
+  "score": <điểm số trên {max_score}, làm tròn 2 chữ số thập phân>,
+  "analysis": "<phân tích bài làm>",
+  "suggestions": "<lời khuyên cụ thể>"
 }}
 
-Chi tra ve JSON."""
-            response = generate_with_retry([img, prompt])
+Chỉ trả về JSON."""
+            response = generate_with_retry([img, prompt], feature='lichsu')
         else:
-            prompt = f"""Ban la giao vien lich su cham bai.
+            prompt = f"""Bạn là giáo viên lịch sử chấm bài.
 
-Cau hoi: {question}
+Câu hỏi: {question}
 
-Bai lam: {essay_answer}
+Bài làm: {essay_answer}
 
-Tieu chi: {grading_criteria}
+Tiêu chí: {grading_criteria}
 
-Hay cham diem theo thang diem {max_score}.
+Hãy chấm điểm theo thang điểm {max_score}.
 
-Tra ve JSON (KHONG DUNG # VA **):
+Trả về JSON (KHÔNG DÙNG # VÀ **):
 {{
-  "score": <diem so tren {max_score}, lam tron 2 chu so thap phan>,
-  "analysis": "<phan tich bai lam>",
-  "suggestions": "<loi khuyen cu the>"
+  "score": <điểm số trên {max_score}, làm tròn 2 chữ số thập phân>,
+  "analysis": "<phân tích bài làm>",
+  "suggestions": "<lời khuyên cụ thể>"
 }}
 
-Chi tra ve JSON."""
-            response = generate_with_retry(prompt)
-        
+Chỉ trả về JSON."""
+            response = generate_with_retry(prompt, feature='lichsu')
+
         text = response.text.strip()
         text = text.replace('```json', '').replace('```', '').strip()
         result = json.loads(text)
-        
-        # Đảm bảo điểm không vượt max_score
+
         score = float(result.get('score', 0))
         result['score'] = round(min(max(score, 0), max_score), 2)
         result['max_score'] = max_score
-        
-        return result
-        
-    except Exception as e:
-        print(f"Loi cham AI: {e}")
-        return None
 
+        return result
+
+    except Exception as e:
+        print(f"Lỗi chấm AI: {e}")
+        return None
 # CẬP NHẬT HÀM GENERATE EXAM
 def validate_exam_questions(exam_data, num_multiple, num_truefalse, num_essay=0):
     """
@@ -2534,93 +2585,41 @@ def analyze_wrong_answers(exam, mc_wrong):
     try:
         if not mc_wrong:
             return None
-        
+
         errors_text = ""
         for idx, item in enumerate(mc_wrong):
             q = item['question']
-            errors_text += f"\nCau {idx + 1}: {q['question']}\n"
-            errors_text += f"  Dap an dung: {q['answer']}\n"
-            errors_text += f"  Hoc sinh chon: {item['user_answer']}\n"
-        
-        prompt = f"""
-Ban la giao vien lich su, hay phan tich cac loi sai cua hoc sinh trong de thi trac nghiem.
+            errors_text += f"\nCâu {idx + 1}: {q['question']}\n"
+            errors_text += f"  Đáp án đúng: {q['answer']}\n"
+            errors_text += f"  Học sinh chọn: {item['user_answer']}\n"
 
-Cac loi sai:
+        prompt = f"""Bạn là giáo viên lịch sử, hãy phân tích các lỗi sai của học sinh trong đề thi trắc nghiệm.
+
+Các lỗi sai:
 {errors_text}
 
-Hay dua ra:
-1. KE HOACH ON TAP: Lap so do tu duy hoac bang bieu tong hop cac su kien lich su lon, bao gom: ten su kien, thoi gian, dia diem, nhan vat lanh dao, nguyen nhan (sau xa, truc tiep), dien bien chinh, ket qua, y nghia, tinh chat, va han che. Danh thoi gian on tap va phan biet ro rang cac khai niem de nham lan. Tap trung vao chi tiet: Luyen tap ghi nho cac chi tiet nhu nien dai, ten goi cu the cua cac khoi lien minh, quoc gia lien quan den su kien. Doc hieu sau: Doc ky cac cau hoi trac nghiem, phan tich tung lua chon de tim ra dap an toi uu nhat, tranh chon dap an dung nhung chua du hoac chua phai la 'nhat'. Luyen tap giai de: Thuc hanh lam nhieu bai tap trac nghiem, sau do tu cham va phan tich ly luong cac loi sai, ghi lai ly do sai de tranh lap lai.
+Hãy đưa ra:
+1. KẾ HOẠCH ÔN TẬP: Lập sơ đồ tư duy hoặc bảng biểu tổng hợp các sự kiện lịch sử lớn. Phân biệt rõ ràng các khái niệm dễ nhầm lẫn. Luyện tập ghi nhớ các chi tiết như niên đại, tên gọi cụ thể. Đọc kỹ câu hỏi và phân tích từng lựa chọn. Luyện tập giải đề và phân tích lỗi sai.
 
-2. CAC CHU DE LIEN QUAN: Chu nghia de quoc va su phan chia the gioi cuoi the ky XIX - dau the ky XX. Chien tranh the gioi thu nhat (1914-1918): Nguyen nhan, dien bien, ket qua, tinh chat, tac dong. Cach mang thang Muoi Nga (1917) va cong cuoc xay dung chu nghia xa hoi o Lien Xo nhung nam 1920-1930. Phong trao giai phong dan toc o chau A, chau Phi, My Latinh dau the ky XX (dien hinh: Duy tan Minh Tri o Nhat Ban, Cach mang Tan Hoi o Trung Quoc, phong trao o An Do, Dong Nam A).
+2. CÁC CHỦ ĐỀ LIÊN QUAN cần ôn thêm dựa trên các lỗi sai trên.
 
-Tra ve JSON (KHONG DUNG # VA **):
+Trả về JSON (KHÔNG DÙNG # VÀ **), viết đầy đủ dấu tiếng Việt:
 {{
-  "ke_hoach_on_tap": "<Ke hoach on tap cu the>",
-  "cac_chu_de_lien_quan": "<Cac chu de can on them>"
+  "ke_hoach_on_tap": "<Kế hoạch ôn tập cụ thể>",
+  "cac_chu_de_lien_quan": "<Các chủ đề cần ôn thêm>"
 }}
 
-Chi tra ve JSON.
-"""
-        
-        response = generate_with_retry(prompt)
+Chỉ trả về JSON."""
+
+        response = generate_with_retry(prompt, feature='lichsu')
         text = response.text.strip()
         text = text.replace('```json', '').replace('```', '').strip()
         result = json.loads(text)
         return result
-        
+
     except Exception as e:
-        print(f"Loi phan tich: {e}")
+        print(f"Lỗi phân tích: {e}")
         return None
-
-
-def analyze_truefalse_errors(exam, tf_errors):
-    """AI đưa ra kế hoạch ôn tập và chủ đề liên quan cho câu đúng/sai"""
-    try:
-        if not tf_errors:
-            return None
-        
-        errors_text = ""
-        for idx, item in enumerate(tf_errors):
-            tf = item['question']
-            errors_text += f"\nCau {idx + 1}: {tf['question']}\n"
-            for j, stmt in enumerate(tf['statements']):
-                correct = "DUNG" if tf['answers'][j] else "SAI"
-                user = "DUNG" if item['user_answers'][j] else "SAI"
-                if tf['answers'][j] != item['user_answers'][j]:
-                    errors_text += f"  Y {j+1}: {stmt}\n"
-                    errors_text += f"    Dap an dung: {correct}\n"
-                    errors_text += f"    Hoc sinh chon: {user}\n"
-        
-        prompt = f"""
-Ban la giao vien lich su, hay phan tich cac loi sai cua hoc sinh trong cau dung/sai.
-
-Cac loi sai:
-{errors_text}
-
-Hay dua ra:
-1. KE HOACH ON TAP: Lap so do tu duy hoac bang bieu tong hop cac su kien lich su lon, bao gom: ten su kien, thoi gian, dia diem, nhan vat lanh dao, nguyen nhan (sau xa, truc tiep), dien bien chinh, ket qua, y nghia, tinh chat, va han che. Danh thoi gian on tap va phan biet ro rang cac khai niem de nham lan. Tap trung vao chi tiet: Luyen tap ghi nho cac chi tiet nhu nien dai, ten goi cu the cua cac khoi lien minh, quoc gia lien quan den su kien. Doc hieu sau: Doc ky cac cau hoi trac nghiem, phan tich tung lua chon de tim ra dap an toi uu nhat, tranh chon dap an dung nhung chua du hoac chua phai la 'nhat'. Luyen tap giai de: Thuc hanh lam nhieu bai tap trac nghiem, sau do tu cham va phan tich ly luong cac loi sai, ghi lai ly do sai de tranh lap lai.
-
-2. CAC CHU DE LIEN QUAN: Chu nghia de quoc va su phan chia the gioi cuoi the ky XIX - dau the ky XX. Chien tranh the gioi thu nhat (1914-1918): Nguyen nhan, dien bien, ket qua, tinh chat, tac dong. Cach mang thang Muoi Nga (1917) va cong cuoc xay dung chu nghia xa hoi o Lien Xo nhung nam 1920-1930. Phong trao giai phong dan toc o chau A, chau Phi, My Latinh dau the ky XX (dien hinh: Duy tan Minh Tri o Nhat Ban, Cach mang Tan Hoi o Trung Quoc, phong trao o An Do, Dong Nam A).
-
-Tra ve JSON (KHONG DUNG # VA **):
-{{
-  "ke_hoach_on_tap": "<Ke hoach on tap cu the>",
-  "cac_chu_de_lien_quan": "<Cac chu de can on them>"
-}}
-
-Chi tra ve JSON.
-"""
-        
-        response = generate_with_retry(prompt)
-        text = response.text.strip()
-        text = text.replace('```json', '').replace('```', '').strip()
-        result = json.loads(text)
-        return result
-        
-    except Exception as e:
-        print(f"Loi phan tich TF: {e}")
-        return None
-
 # CẬP NHẬT ROUTE do_exam
 # ROUTE LÀM BÀI THI
 @app.route('/do_exam/<exam_id>', methods=['GET', 'POST'])
@@ -2912,7 +2911,10 @@ def adjust_score(submission_index):
     return redirect(url_for('dashboard_teacher'))
 
 ####
-
+@app.route('/uploads/<path:filename>')
+def serve_upload(filename):
+    """Serve file ảnh bài làm học sinh"""
+    return send_from_directory(app.config['UPLOAD_FOLDER'], os.path.basename(filename))
 @app.route('/download_material/<filename>')
 def download_material(filename):
     if 'exam_username' not in session:
