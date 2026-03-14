@@ -1,331 +1,394 @@
 [
-    {
-        "exam_id": "20260111163814",
-        "student": "hs001",
-        "submitted_at": "2026-01-12 16:27:10",
-        "answers": {
-            "mc_0": "A",
-            "mc_1": "B",
-            "mc_2": "A",
-            "mc_3": "A",
-            "mc_4": "A",
-            "mc_5": "B",
-            "mc_6": "D",
-            "mc_7": "C",
-            "mc_8": "C",
-            "mc_9": "D",
-            "tf_0": [
-                false,
-                false,
-                true,
-                true
-            ],
-            "tf_1": [
-                true,
-                false,
-                true,
-                false
-            ],
-            "tf_2": [
-                false,
-                true,
-                true,
-                false
-            ],
-            "tf_3": [
-                false,
-                true,
-                false,
-                true
-            ]
-        },
-        "score": 2.75,
-        "type": "multiple_choice",
-        "ai_graded": true,
-        "essay_ai_feedback": null,
-        "teacher_adjusted": false,
-        "teacher_score": null,
-        "teacher_comment": null
+  {
+    "exam_id": "20260111163814",
+    "student": "hs001",
+    "submitted_at": "2026-01-12 16:27:10",
+    "answers": {
+      "mc_0": "A",
+      "mc_1": "B",
+      "mc_2": "A",
+      "mc_3": "A",
+      "mc_4": "A",
+      "mc_5": "B",
+      "mc_6": "D",
+      "mc_7": "C",
+      "mc_8": "C",
+      "mc_9": "D",
+      "tf_0": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "tf_1": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "tf_2": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "tf_3": [
+        false,
+        true,
+        false,
+        true
+      ]
     },
-    {
-        "exam_id": "20260112132918",
-        "student": "hs001",
-        "submitted_at": "2026-01-12 16:27:55",
-        "essay_answer": "Chào bạn, mình xin tóm tắt ngắn gọn về nguyên nhân và tính chất của Chiến tranh thế giới thứ nhất (1914–1918) để bạn dễ nắm bắt nhé:\r\n\r\n1. Nguyên nhân bùng nổ\r\nNguyên nhân của cuộc chiến này thường được chia thành hai cấp độ:\r\n\r\nNguyên nhân sâu xa:\r\n\r\nSự phát triển không đều: Vào cuối thế kỷ XIX – đầu thế kỷ XX, sự phát triển kinh tế và chính trị không đồng đều làm thay đổi so sánh lực lượng giữa các nước đế quốc.\r\n\r\nMâu thuẫn về thuộc địa: Các nước đế quốc \"trẻ\" (Đức, Mỹ, Nhật) có tiềm lực kinh tế mạnh nhưng ít thuộc địa, mâu thuẫn gay gắt với các nước đế quốc \"già\" (Anh, Pháp) vốn có nhiều thuộc địa.\r\n\r\nSự hình thành hai khối quân sự đối đầu: Khối Liên minh (Đức, Áo-Hung, Italia) và khối Hiệp ước (Anh, Pháp, Nga) ráo riết chạy đua vũ trang, chuẩn bị chia lại thế giới.\r\n\r\nNguyên nhân trực tiếp (Duyên cớ):\r\n\r\nNgày 28/6/1914, Thái tử Áo-Hung bị một phần tử khủng bố người Xéc-bi ám sát tại Xa-ra-vô (Bô-xni-a). Giới quân phiệt Đức, Áo-Hung đã lấy cớ này để phát động chiến tranh.\r\n\r\n2. Tính chất của chiến tranh\r\nChiến tranh thế giới thứ nhất được đánh giá là một cuộc chiến tranh đế quốc phi nghĩa đối với cả hai phe tham chiến vì những lý do sau:\r\n\r\nMục đích: Cuộc chiến nổ ra không phải để bảo vệ độc lập dân tộc hay vì lợi ích của nhân dân, mà nhằm mục đích tranh giành thuộc địa, phân chia lại thị trường và áp đặt sự thống trị toàn cầu của các nước đế quốc.\r\n\r\nHậu quả: Gây ra thảm họa khủng khiếp cho nhân loại (khoảng 10 triệu người chết, 20 triệu người bị thương), phá hủy hàng nghìn thành phố, làng mạc và gây thiệt hại vật chất cực lớn trong khi chỉ mang lại lợi nhuận cho giai cấp tư sản cầm quyền.",
-        "image_path": null,
-        "score": 2.0,
-        "type": "essay",
-        "ai_graded": true,
-        "ai_feedback": {
-            "score": 10,
-            "strengths": "Bài làm trình bày rất rõ ràng, mạch lạc, có cấu trúc logic (chia thành nguyên nhân sâu xa, trực tiếp và tính chất). Nội dung đầy đủ, bám sát và đáp ứng xuất sắc tất cả các tiêu chí chấm điểm. Kiến thức chính xác, không có sai sót về mặt lịch sử. Học sinh còn đưa ra được những dẫn chứng cụ thể như tên các khối quân sự, các nước tiêu biểu, số liệu thương vong (10 triệu người chết, 20 triệu người bị thương), làm tăng tính thuyết phục và thể hiện sự nắm vững kiến thức. Cách diễn đạt rõ ràng, dễ hiểu và có sự giải thích sâu sắc hơn về nguyên nhân sâu xa cũng như mục đích, hậu quả của chiến tranh.",
-            "weaknesses": "Bài làm không có điểm yếu đáng kể nào về nội dung hay độ chính xác của kiến thức so với yêu cầu của đề bài và tiêu chí chấm điểm. Học sinh đã hoàn thành xuất sắc yêu cầu.",
-            "missing_knowledge": "Không có kiến thức nào bị thiếu so với đề bài và tiêu chí chấm. Học sinh đã trình bày đầy đủ và chính xác tất cả các điểm cần thiết.",
-            "improvement_areas": "Cần lưu ý về văn phong khi làm bài thi luận. Mặc dù không ảnh hưởng đến nội dung và điểm số, việc mở đầu bằng câu 'Chào bạn, mình xin tóm tắt ngắn gọn...' là văn phong giao tiếp, không phù hợp với bài thi học thuật.",
-            "suggestions": "Về nội dung, em đã làm rất tốt và không cần bổ sung thêm kiến thức. Về hình thức và văn phong, em nên loại bỏ những câu mở đầu mang tính giao tiếp khi làm bài thi luận. Thay vào đó, hãy đi thẳng vào vấn đề một cách trực tiếp và trang trọng hơn, ví dụ: 'Chiến tranh thế giới thứ nhất (1914-1918) bùng nổ do nhiều nguyên nhân sâu xa và trực tiếp, đồng thời mang tính chất đế quốc phi nghĩa và gây ra hậu quả nghiêm trọng...' để phù hợp với văn phong học thuật."
-        },
-        "teacher_adjusted": true,
-        "teacher_score": 2.0,
-        "teacher_comment": "dùng AI làm bài",
-        "original_ai_score": 10,
-        "adjusted_at": "2026-01-12 16:29:11"
+    "score": 2.75,
+    "type": "multiple_choice",
+    "ai_graded": true,
+    "essay_ai_feedback": null,
+    "teacher_adjusted": false,
+    "teacher_score": null,
+    "teacher_comment": null
+  },
+  {
+    "exam_id": "20260112132918",
+    "student": "hs001",
+    "submitted_at": "2026-01-12 16:27:55",
+    "essay_answer": "Chào bạn, mình xin tóm tắt ngắn gọn về nguyên nhân và tính chất của Chiến tranh thế giới thứ nhất (1914–1918) để bạn dễ nắm bắt nhé:\r\n\r\n1. Nguyên nhân bùng nổ\r\nNguyên nhân của cuộc chiến này thường được chia thành hai cấp độ:\r\n\r\nNguyên nhân sâu xa:\r\n\r\nSự phát triển không đều: Vào cuối thế kỷ XIX – đầu thế kỷ XX, sự phát triển kinh tế và chính trị không đồng đều làm thay đổi so sánh lực lượng giữa các nước đế quốc.\r\n\r\nMâu thuẫn về thuộc địa: Các nước đế quốc \"trẻ\" (Đức, Mỹ, Nhật) có tiềm lực kinh tế mạnh nhưng ít thuộc địa, mâu thuẫn gay gắt với các nước đế quốc \"già\" (Anh, Pháp) vốn có nhiều thuộc địa.\r\n\r\nSự hình thành hai khối quân sự đối đầu: Khối Liên minh (Đức, Áo-Hung, Italia) và khối Hiệp ước (Anh, Pháp, Nga) ráo riết chạy đua vũ trang, chuẩn bị chia lại thế giới.\r\n\r\nNguyên nhân trực tiếp (Duyên cớ):\r\n\r\nNgày 28/6/1914, Thái tử Áo-Hung bị một phần tử khủng bố người Xéc-bi ám sát tại Xa-ra-vô (Bô-xni-a). Giới quân phiệt Đức, Áo-Hung đã lấy cớ này để phát động chiến tranh.\r\n\r\n2. Tính chất của chiến tranh\r\nChiến tranh thế giới thứ nhất được đánh giá là một cuộc chiến tranh đế quốc phi nghĩa đối với cả hai phe tham chiến vì những lý do sau:\r\n\r\nMục đích: Cuộc chiến nổ ra không phải để bảo vệ độc lập dân tộc hay vì lợi ích của nhân dân, mà nhằm mục đích tranh giành thuộc địa, phân chia lại thị trường và áp đặt sự thống trị toàn cầu của các nước đế quốc.\r\n\r\nHậu quả: Gây ra thảm họa khủng khiếp cho nhân loại (khoảng 10 triệu người chết, 20 triệu người bị thương), phá hủy hàng nghìn thành phố, làng mạc và gây thiệt hại vật chất cực lớn trong khi chỉ mang lại lợi nhuận cho giai cấp tư sản cầm quyền.",
+    "image_path": null,
+    "score": 2.0,
+    "type": "essay",
+    "ai_graded": true,
+    "ai_feedback": {
+      "score": 10,
+      "strengths": "Bài làm trình bày rất rõ ràng, mạch lạc, có cấu trúc logic (chia thành nguyên nhân sâu xa, trực tiếp và tính chất). Nội dung đầy đủ, bám sát và đáp ứng xuất sắc tất cả các tiêu chí chấm điểm. Kiến thức chính xác, không có sai sót về mặt lịch sử. Học sinh còn đưa ra được những dẫn chứng cụ thể như tên các khối quân sự, các nước tiêu biểu, số liệu thương vong (10 triệu người chết, 20 triệu người bị thương), làm tăng tính thuyết phục và thể hiện sự nắm vững kiến thức. Cách diễn đạt rõ ràng, dễ hiểu và có sự giải thích sâu sắc hơn về nguyên nhân sâu xa cũng như mục đích, hậu quả của chiến tranh.",
+      "weaknesses": "Bài làm không có điểm yếu đáng kể nào về nội dung hay độ chính xác của kiến thức so với yêu cầu của đề bài và tiêu chí chấm điểm. Học sinh đã hoàn thành xuất sắc yêu cầu.",
+      "missing_knowledge": "Không có kiến thức nào bị thiếu so với đề bài và tiêu chí chấm. Học sinh đã trình bày đầy đủ và chính xác tất cả các điểm cần thiết.",
+      "improvement_areas": "Cần lưu ý về văn phong khi làm bài thi luận. Mặc dù không ảnh hưởng đến nội dung và điểm số, việc mở đầu bằng câu 'Chào bạn, mình xin tóm tắt ngắn gọn...' là văn phong giao tiếp, không phù hợp với bài thi học thuật.",
+      "suggestions": "Về nội dung, em đã làm rất tốt và không cần bổ sung thêm kiến thức. Về hình thức và văn phong, em nên loại bỏ những câu mở đầu mang tính giao tiếp khi làm bài thi luận. Thay vào đó, hãy đi thẳng vào vấn đề một cách trực tiếp và trang trọng hơn, ví dụ: 'Chiến tranh thế giới thứ nhất (1914-1918) bùng nổ do nhiều nguyên nhân sâu xa và trực tiếp, đồng thời mang tính chất đế quốc phi nghĩa và gây ra hậu quả nghiêm trọng...' để phù hợp với văn phong học thuật."
     },
-    {
-        "exam_id": "20260111163814",
-        "student": "hs001",
-        "submitted_at": "2026-01-12 17:22:31",
-        "answers": {
-            "mc_0": "A",
-            "mc_1": "A",
-            "mc_2": "A",
-            "mc_3": "B",
-            "mc_4": "A",
-            "mc_5": "A",
-            "mc_6": "B",
-            "mc_7": "A",
-            "mc_8": "B",
-            "mc_9": "A",
-            "tf_0": [
-                false,
-                false,
-                false,
-                true
-            ],
-            "tf_1": [
-                true,
-                true,
-                true,
-                false
-            ],
-            "tf_2": [
-                false,
-                true,
-                false,
-                true
-            ],
-            "tf_3": [
-                false,
-                true,
-                false,
-                true
-            ]
-        },
-        "score": 2.45,
-        "type": "multiple_choice",
-        "ai_graded": true,
-        "essay_ai_feedback": null,
-        "mc_ai_feedback": {
-            "ke_hoach_on_tap": "Dựa trên các lỗi sai cơ bản về triều đại nhà Trần, học sinh cần thực hiện kế hoạch ôn tập chi tiết và có hệ thống sau:\n\n1.  Lập sơ đồ tư duy hoặc bảng biểu tổng hợp các sự kiện lớn về nhà Trần:\n    *   Thời gian thành lập: Nắm vững năm thành lập (1225/1226) và quá trình chuyển giao quyền lực từ nhà Lý (Lý Chiêu Hoàng nhường ngôi cho Trần Cảnh). Đây là kiến thức nền tảng để tránh nhầm lẫn ngay từ câu hỏi đầu tiên.\n    *   Nhân vật lãnh đạo chủ chốt: Ghi nhớ các vị vua đầu tiên (Trần Thái Tông/Trần Cảnh), các vị vua anh minh sau này (Thánh Tông, Nhân Tông) và các danh tướng, quan lại quan trọng (đặc biệt là Trần Thủ Độ với vai trò đặt nền móng và Trần Hưng Đạo – tổng chỉ huy quân đội trong kháng chiến chống Mông – Nguyên). Việc nhầm lẫn giữa Trần Cảnh và các nhân vật khác cho thấy sự thiếu rõ ràng về vai trò của từng người.\n    *   Thể chế chính trị: Hiểu rõ về chế độ “Thái thượng hoàng” độc đáo của nhà Trần, cơ cấu tổ chức bộ máy nhà nước từ trung ương đến địa phương để hiểu được cách thức vận hành của chính quyền nhà Trần.\n    *   Chính sách kinh tế - xã hội: Tập trung vào chính sách “ngụ binh ư nông” (nội dung chính là khi có chiến tranh thì huy động binh lính, khi hòa bình thì cho binh lính về làm ruộng), các chính sách về ruộng đất (điền trang, thái ấp) và ý nghĩa của chúng. Lỗi sai ở câu hỏi về “ngụ binh ư nông” cho thấy học sinh chưa nắm rõ bản chất của chính sách này.\n    *   Địa điểm quan trọng: Xác định rõ kinh đô Thăng Long – là kinh đô xuyên suốt của nhà Trần và các địa danh gắn liền với các chiến thắng lớn (Đông Bộ Đầu, Chương Dương, Hàm Tử, Bạch Đằng). Nhầm lẫn về kinh đô cho thấy sự thiếu chú ý đến các thông tin cơ bản.\n    *   Các cuộc kháng chiến chống Mông – Nguyên: Lập bảng thời gian biểu chi tiết cho 3 lần kháng chiến (1258, 1285, 1287-1288), ghi rõ tổng chỉ huy (Trần Quốc Tuấn/Hưng Đạo Đại Vương), các trận đánh quyết định (đặc biệt là Bạch Đằng năm 1288 cho lần thứ ba), nguyên nhân thắng lợi và ý nghĩa lịch sử. Các lỗi sai ở câu hỏi về tổng chỉ huy và trận đánh quyết định cho thấy học sinh chưa có cái nhìn tổng thể và chi tiết về sự kiện trọng đại này.\n    *   Nguyên nhân suy yếu và sụp đổ: Phân tích các yếu tố nội tại (sự sa đọa của quý tộc, tranh chấp nội bộ, tập trung ruộng đất vào tay các thế lực lớn, triều đình không còn đủ uy tín) và ngoại cảnh dẫn đến sự suy yếu và sau đó là sự diệt vong của nhà Trần vào cuối thế kỷ XIV. Đây là một câu hỏi mang tính phân tích, đòi hỏi sự hiểu biết sâu sắc về các yếu tố kinh tế, xã hội, chính trị ảnh hưởng đến một triều đại.\n\n2.  Dành thời gian ôn tập và phân biệt rõ ràng các khái niệm dễ nhầm lẫn:\n    *   So sánh và phân biệt nhà Trần với nhà Lý về thời gian thành lập, vị vua đầu tiên, các chính sách lớn và công lao lịch sử để tránh nhầm lẫn thông tin giữa hai triều đại kế tiếp. Việc học sinh chọn 'A' một cách ngẫu nhiên có thể là do nhầm lẫn giữa các mốc thời gian, nhân vật của các triều đại khác nhau.\n    *   Làm rõ sự khác biệt giữa các chính sách quân sự, kinh tế để tránh nhầm lẫn nội dung của chúng (ví dụ: bản chất của “ngụ binh ư nông” khác với các chính sách khác).\n    *   Phân biệt các trận đánh trong từng cuộc kháng chiến chống Mông – Nguyên, đặc biệt là trận đánh quyết định cho mỗi lần kháng chiến.\n\n3.  Tập trung vào chi tiết:\n    *   Luyện tập ghi nhớ các chi tiết cụ thể như niên đại chính xác (năm thành lập, năm diễn ra các trận chiến), tên gọi đầy đủ của các nhân vật lịch sử, địa danh cụ thể của kinh đô và các chiến trường. Các lỗi sai cho thấy học sinh thiếu nền tảng về các chi tiết cơ bản này.\n    *   Xây dựng “thẻ ghi nhớ” (flashcards) cho các sự kiện, nhân vật, mốc thời gian và định nghĩa quan trọng để ôn tập nhanh và hiệu quả.\n\n4.  Đọc hiểu sâu các câu hỏi và đáp án:\n    *   Khi làm bài, đọc thật kỹ câu hỏi để xác định yêu cầu chính (ví dụ: “nguyên nhân chủ yếu”, “trận đánh quyết định”, “người đầu tiên”). Đôi khi, các lựa chọn đều có vẻ đúng một phần, nhưng chỉ có một đáp án là 'đúng nhất' hoặc 'đầy đủ nhất'.\n    *   Phân tích từng lựa chọn đáp án một cách cẩn thận, loại trừ các đáp án sai rõ ràng, các đáp án không đầy đủ hoặc không chính xác nhất. Tránh chọn đáp án chỉ vì nó có vẻ quen thuộc mà chưa phải là câu trả lời tối ưu.\n\n5.  Luyện tập giải đề và tự phân tích lỗi sai:\n    *   Thực hành làm nhiều bài tập trắc nghiệm riêng biệt về nhà Trần sau mỗi buổi học để củng cố kiến thức và làm quen với các dạng câu hỏi.\n    *   Sau khi hoàn thành, tự chấm điểm và quan trọng nhất là phân tích kỹ lưỡng từng lỗi sai: ghi lại lý do vì sao mình sai (nhầm lẫn thông tin, chưa nắm vững kiến thức, đọc sai đề,…) và ghi nhớ đáp án đúng kèm theo giải thích ngắn gọn. Mục tiêu là không lặp lại cùng một loại lỗi sai.",
-            "cac_chu_de_lien_quan": [
-                "Chủ nghĩa đế quốc và sự phân chia thế giới cuối thế kỷ XIX - đầu thế kỷ XX.",
-                "Chiến tranh thế giới thứ nhất (1914-1918): Nguyên nhân, diễn biến, kết quả, tính chất, tác động.",
-                "Cách mạng tháng Mười Nga (1917) và công cuộc xây dựng chủ nghĩa xã hội ở Liên Xô những năm 1920-1930.",
-                "Phong trào giải phóng dân tộc ở châu Á, châu Phi, Mỹ Latinh đầu thế kỷ XX (điển hình: Duy tân Minh Trị ở Nhật Bản, Cách mạng Tân Hội ở Trung Quốc, phong trào ở Ấn Độ, Đông Nam Á)."
-            ]
-        },
-        "tf_ai_feedback": {
-            "ke_hoach_on_tap": "Em thân mến, qua các lỗi sai trong bài kiểm tra về nhà Trần, thầy nhận thấy em còn một số lỗ hổng kiến thức khá cơ bản và chưa nắm vững các khái niệm, sự kiện quan trọng. Để khắc phục tình trạng này, em cần có một kế hoạch ôn tập hiệu quả sau đây:\n\n1.  Lập sơ đồ tư duy hoặc bảng biểu tổng hợp các sự kiện lịch sử lớn: Đối với mỗi sự kiện liên quan đến nhà Trần (ví dụ: Sự thành lập nhà Trần, Bộ máy nhà nước, Kháng chiến chống Mông – Nguyên, Tình hình kinh tế – xã hội), em hãy tổng hợp các thông tin sau:\n    *   Tên sự kiện: Ví dụ, 'Sự thành lập nhà Trần'.\n    *   Thời gian: Ví dụ, '1226'.\n    *   Địa điểm (nếu có): Ví dụ, 'Thăng Long'.\n    *   Nhân vật lãnh đạo/chủ chốt: Ví dụ, 'Trần Thủ Độ, Trần Thái Tông'.\n    *   Nguyên nhân (sâu xa, trực tiếp): Ví dụ, 'Nhà Lý suy yếu, Trần Thủ Độ sắp đặt'.\n    *   Diễn biến chính: Tóm tắt các giai đoạn chính.\n    *   Kết quả: Các thành tựu đạt được hoặc sự thay đổi.\n    *   Ý nghĩa: Tầm quan trọng của sự kiện.\n    *   Tính chất (nếu có): Ví dụ, 'chiến tranh vệ quốc'.\n    *   Hạn chế (nếu có): Các điểm chưa hoàn hảo.\n\n2.  Dành thời gian ôn tập và phân biệt rõ ràng các khái niệm dễ nhầm lẫn: Em cần đặc biệt chú ý đến các khái niệm sau để tránh nhầm lẫn:\n    *   'Quân đội thường trực': Đây là lực lượng quân sự được duy trì liên tục bởi nhà nước để bảo vệ đất nước và giữ gìn trật tự. Các triều đại phong kiến lớn đều có quân đội thường trực.\n    *   'Chế độ Thái Thượng Hoàng': Đây là đặc trưng chính trị độc đáo của nhà Trần, nơi vua cha truyền ngôi cho con nhưng vẫn nắm giữ quyền lực tối cao, giúp chuyển giao quyền lực suôn sẻ và có sự chuẩn bị tốt cho người kế vị.\n    *   'Tiêu diệt hoàn toàn': Cần hiểu đúng mức độ của các chiến thắng. Chiến thắng Bạch Đằng năm 1288 là chiến thắng quyết định, đánh bại ý chí xâm lược và tiêu hao lớn quân địch, nhưng không phải là tiêu diệt 'hoàn toàn' toàn bộ đạo quân xâm lược về số lượng.\n\n3.  Tập trung vào chi tiết: Luyện tập ghi nhớ các chi tiết quan trọng như niên đại (ví dụ: 1288 cho Bạch Đằng, 3 lần kháng chiến chống Mông – Nguyên), tên gọi cụ thể của nhân vật (Trần Thủ Độ), các khái niệm chính trị, kinh tế, xã hội. Việc này giúp em không bị nhầm lẫn các mốc thời gian hay nhân vật.\n\n4.  Đọc hiểu sâu: Khi làm bài tập trắc nghiệm, em hãy đọc kỹ các câu hỏi, phân tích từng lựa chọn để tìm ra đáp án tối ưu nhất. Tránh chọn đáp án đúng nhưng chưa đủ hoặc chưa phải là 'nhất'. Đặc biệt chú ý đến các từ khóa như 'quan trọng', 'duy trì', 'nét đặc trưng', 'hoàn toàn' để hiểu đúng ý nghĩa của câu hỏi.\n\n5.  Luyện tập giải đề: Thường xuyên thực hành làm nhiều bài tập trắc nghiệm, sau đó tự chấm và phân tích kỹ lưỡng các lỗi sai. Ghi lại lý do em sai để rút kinh nghiệm và tránh lặp lại những lỗi tương tự trong các lần ôn tập sau.",
-            "cac_chu_de_lien_quan": "Để mở rộng kiến thức và có cái nhìn tổng quan hơn về lịch sử thế giới, em có thể tìm hiểu thêm các chủ đề sau:\n\n1.  Chủ nghĩa đế quốc và sự phân chia thế giới cuối thế kỷ XIX - đầu thế kỷ XX: Nắm vững nguyên nhân, đặc điểm và hệ quả của sự phát triển chủ nghĩa đế quốc.\n2.  Chiến tranh thế giới thứ nhất (1914-1918): Tập trung vào nguyên nhân sâu xa và trực tiếp, diễn biến chính, kết quả, tính chất và tác động to lớn của cuộc chiến.\n3.  Cách mạng tháng Mười Nga (1917) và công cuộc xây dựng chủ nghĩa xã hội ở Liên Xô những năm 1920-1930: Hiểu rõ về ý nghĩa, thành tựu và những thách thức của giai đoạn này.\n4.  Phong trào giải phóng dân tộc ở châu Á, châu Phi, Mỹ Latinh đầu thế kỷ XX: Nghiên cứu các phong trào tiêu biểu như Duy tân Minh Trị ở Nhật Bản, Cách mạng Tân Hợi ở Trung Quốc, và các phong trào ở Ấn Độ, Đông Nam Á để thấy được sự trỗi dậy của các dân tộc bị áp bức."
-        },
-        "teacher_adjusted": false,
-        "teacher_score": null,
-        "teacher_comment": null
+    "teacher_adjusted": true,
+    "teacher_score": 2.0,
+    "teacher_comment": "dùng AI làm bài",
+    "original_ai_score": 10,
+    "adjusted_at": "2026-01-12 16:29:11"
+  },
+  {
+    "exam_id": "20260111163814",
+    "student": "hs001",
+    "submitted_at": "2026-01-12 17:22:31",
+    "answers": {
+      "mc_0": "A",
+      "mc_1": "A",
+      "mc_2": "A",
+      "mc_3": "B",
+      "mc_4": "A",
+      "mc_5": "A",
+      "mc_6": "B",
+      "mc_7": "A",
+      "mc_8": "B",
+      "mc_9": "A",
+      "tf_0": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "tf_1": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "tf_2": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "tf_3": [
+        false,
+        true,
+        false,
+        true
+      ]
     },
-    {
-        "exam_id": "20260111163814",
-        "student": "hs00a12",
-        "submitted_at": "2026-03-04 13:33:13",
-        "answers": {
-            "mc_0": "A",
-            "mc_1": "A",
-            "mc_2": "A",
-            "mc_3": "A",
-            "mc_4": "A",
-            "mc_5": "A",
-            "mc_6": "A",
-            "mc_7": "A",
-            "mc_8": "A",
-            "mc_9": "A",
-            "tf_0": [
-                true,
-                false,
-                true,
-                false
-            ],
-            "tf_1": [
-                true,
-                false,
-                true,
-                false
-            ],
-            "tf_2": [
-                true,
-                true,
-                true,
-                false
-            ],
-            "tf_3": [
-                true,
-                true,
-                false,
-                false
-            ]
-        },
-        "score": 3.2,
-        "type": "multiple_choice",
-        "ai_graded": true,
-        "essay_ai_feedback": null,
-        "mc_ai_feedback": {
-            "ke_hoach_on_tap": "Lập sơ đồ tư duy hoặc bảng biểu tổng hợp các sự kiện lịch sử lớn, bao gồm: tên sự kiện, thời gian, địa điểm, nhân vật lãnh đạo, nguyên nhân (sâu xa, trực tiếp), diễn biến chính, kết quả, ý nghĩa, tính chất, và hạn chế. Dành thời gian ôn tập và phân biệt rõ ràng các khái niệm dễ nhầm lẫn. Tập trung vào chi tiết: Luyện tập ghi nhớ các chi tiết như niên đại, tên gọi cụ thể của các khối liên minh, quốc gia liên quan đến sự kiện. Đọc hiểu sâu: Đọc kỹ các câu hỏi trắc nghiệm, phân tích từng lựa chọn để tìm ra đáp án tối ưu nhất, tránh chọn đáp án đúng nhưng chưa đủ hoặc chưa phải là 'nhất'. Luyện tập giải đề: Thực hành làm nhiều bài tập trắc nghiệm, sau đó tự chấm và phân tích lý lượng các lỗi sai, ghi lại lý do sai để tránh lặp lại.",
-            "cac_chu_de_lien_quan": "Chủ nghĩa đế quốc và sự phân chia thế giới cuối thế kỷ XIX - đầu thế kỷ XX. Chiến tranh thế giới thứ nhất (1914-1918): Nguyên nhân, diễn biến, kết quả, tính chất, tác động. Cách mạng tháng Mười Nga (1917) và công cuộc xây dựng chủ nghĩa xã hội ở Liên Xô những năm 1920-1930. Phong trào giải phóng dân tộc ở châu Á, châu Phi, Mỹ Latinh đầu thế kỷ XX (điển hình: Duy tân Minh Trị ở Nhật Bản, Cách mạng Tân Hợi ở Trung Quốc, phong trào ở Ấn Độ, Đông Nam Á)."
-        },
-        "tf_ai_feedback": {
-            "ke_hoach_on_tap": "Lập sơ đồ tư duy hoặc bảng biểu tổng hợp các sự kiện lịch sử lớn của nhà Trần, bao gồm: tên sự kiện (thành lập nhà Trần, kháng chiến chống Mông-Nguyên), thời gian, địa điểm, nhân vật lãnh đạo (như Trần Thủ Độ, Trần Cảnh), nguyên nhân, diễn biến chính, kết quả, ý nghĩa, tính chất và hạn chế. Đặc biệt chú ý đến cách thức nhà Trần lên ngôi (không phải khởi nghĩa vũ trang mà là chuyển giao quyền lực thông qua hôn nhân và sắp đặt chính trị) và vai trò của các nhân vật chủ chốt (Trần Thủ Độ là người đặt nền móng, Trần Cảnh là vị vua đầu tiên). Dành thời gian ôn tập và phân biệt rõ ràng các khái niệm dễ nhầm lẫn như: con đường lên ngôi của nhà Trần, đặc điểm bộ máy nhà nước (chế độ Thái thượng hoàng, việc duy trì quân đội thường trực), chiến lược quân sự (nhà Trần không chủ trương 'đánh nhanh thắng nhanh' mà là 'vườn không nhà trống', 'đánh lâu dài', 'đánh chắc thắng chắc' khi có thời cơ), và tác động của điền trang, thái ấp đến xã hội (gây phân hóa sâu sắc). Tập trung vào chi tiết: Luyện tập ghi nhớ các chi tiết như niên đại, tên gọi cụ thể của các nhân vật, các chính sách và đặc điểm riêng của nhà Trần. Đọc hiểu sâu: Đọc kỹ các câu hỏi trắc nghiệm, phân tích từng lựa chọn để tìm ra đáp án tối ưu nhất, tránh chọn đáp án đúng nhưng chưa đủ hoặc chưa phải là 'nhất'. Đặc biệt lưu ý phân biệt chiến lược của ta và địch, cũng như các nét đặc trưng của triều đại. Luyện tập giải đề: Thực hành làm nhiều bài tập trắc nghiệm liên quan đến triều Trần, sau đó tự chấm và phân tích lý lượng các lỗi sai, ghi lại lý do sai để tránh lặp lại.",
-            "cac_chu de_lien_quan": "Chủ nghĩa đế quốc và sự phân chia thế giới cuối thế kỷ XIX - đầu thế kỷ XX. Chiến tranh thế giới thứ nhất (1914-1918): Nguyên nhân, diễn biến, kết quả, tính chất, tác động. Cách mạng tháng Mười Nga (1917) và công cuộc xây dựng chủ nghĩa xã hội ở Liên Xô những năm 1920-1930. Phong trào giải phóng dân tộc ở châu Á, châu Phi, Mỹ Latinh đầu thế kỷ XX (điển hình: Duy tân Minh Trị ở Nhật Bản, Cách mạng Tân Hội ở Trung Quốc, phong trào ở Ấn Độ, Đông Nam Á)."
-        },
-        "teacher_adjusted": false,
-        "teacher_score": null,
-        "teacher_comment": null
+    "score": 2.45,
+    "type": "multiple_choice",
+    "ai_graded": true,
+    "essay_ai_feedback": null,
+    "mc_ai_feedback": {
+      "ke_hoach_on_tap": "Dựa trên các lỗi sai cơ bản về triều đại nhà Trần, học sinh cần thực hiện kế hoạch ôn tập chi tiết và có hệ thống sau:\n\n1.  Lập sơ đồ tư duy hoặc bảng biểu tổng hợp các sự kiện lớn về nhà Trần:\n    *   Thời gian thành lập: Nắm vững năm thành lập (1225/1226) và quá trình chuyển giao quyền lực từ nhà Lý (Lý Chiêu Hoàng nhường ngôi cho Trần Cảnh). Đây là kiến thức nền tảng để tránh nhầm lẫn ngay từ câu hỏi đầu tiên.\n    *   Nhân vật lãnh đạo chủ chốt: Ghi nhớ các vị vua đầu tiên (Trần Thái Tông/Trần Cảnh), các vị vua anh minh sau này (Thánh Tông, Nhân Tông) và các danh tướng, quan lại quan trọng (đặc biệt là Trần Thủ Độ với vai trò đặt nền móng và Trần Hưng Đạo – tổng chỉ huy quân đội trong kháng chiến chống Mông – Nguyên). Việc nhầm lẫn giữa Trần Cảnh và các nhân vật khác cho thấy sự thiếu rõ ràng về vai trò của từng người.\n    *   Thể chế chính trị: Hiểu rõ về chế độ “Thái thượng hoàng” độc đáo của nhà Trần, cơ cấu tổ chức bộ máy nhà nước từ trung ương đến địa phương để hiểu được cách thức vận hành của chính quyền nhà Trần.\n    *   Chính sách kinh tế - xã hội: Tập trung vào chính sách “ngụ binh ư nông” (nội dung chính là khi có chiến tranh thì huy động binh lính, khi hòa bình thì cho binh lính về làm ruộng), các chính sách về ruộng đất (điền trang, thái ấp) và ý nghĩa của chúng. Lỗi sai ở câu hỏi về “ngụ binh ư nông” cho thấy học sinh chưa nắm rõ bản chất của chính sách này.\n    *   Địa điểm quan trọng: Xác định rõ kinh đô Thăng Long – là kinh đô xuyên suốt của nhà Trần và các địa danh gắn liền với các chiến thắng lớn (Đông Bộ Đầu, Chương Dương, Hàm Tử, Bạch Đằng). Nhầm lẫn về kinh đô cho thấy sự thiếu chú ý đến các thông tin cơ bản.\n    *   Các cuộc kháng chiến chống Mông – Nguyên: Lập bảng thời gian biểu chi tiết cho 3 lần kháng chiến (1258, 1285, 1287-1288), ghi rõ tổng chỉ huy (Trần Quốc Tuấn/Hưng Đạo Đại Vương), các trận đánh quyết định (đặc biệt là Bạch Đằng năm 1288 cho lần thứ ba), nguyên nhân thắng lợi và ý nghĩa lịch sử. Các lỗi sai ở câu hỏi về tổng chỉ huy và trận đánh quyết định cho thấy học sinh chưa có cái nhìn tổng thể và chi tiết về sự kiện trọng đại này.\n    *   Nguyên nhân suy yếu và sụp đổ: Phân tích các yếu tố nội tại (sự sa đọa của quý tộc, tranh chấp nội bộ, tập trung ruộng đất vào tay các thế lực lớn, triều đình không còn đủ uy tín) và ngoại cảnh dẫn đến sự suy yếu và sau đó là sự diệt vong của nhà Trần vào cuối thế kỷ XIV. Đây là một câu hỏi mang tính phân tích, đòi hỏi sự hiểu biết sâu sắc về các yếu tố kinh tế, xã hội, chính trị ảnh hưởng đến một triều đại.\n\n2.  Dành thời gian ôn tập và phân biệt rõ ràng các khái niệm dễ nhầm lẫn:\n    *   So sánh và phân biệt nhà Trần với nhà Lý về thời gian thành lập, vị vua đầu tiên, các chính sách lớn và công lao lịch sử để tránh nhầm lẫn thông tin giữa hai triều đại kế tiếp. Việc học sinh chọn 'A' một cách ngẫu nhiên có thể là do nhầm lẫn giữa các mốc thời gian, nhân vật của các triều đại khác nhau.\n    *   Làm rõ sự khác biệt giữa các chính sách quân sự, kinh tế để tránh nhầm lẫn nội dung của chúng (ví dụ: bản chất của “ngụ binh ư nông” khác với các chính sách khác).\n    *   Phân biệt các trận đánh trong từng cuộc kháng chiến chống Mông – Nguyên, đặc biệt là trận đánh quyết định cho mỗi lần kháng chiến.\n\n3.  Tập trung vào chi tiết:\n    *   Luyện tập ghi nhớ các chi tiết cụ thể như niên đại chính xác (năm thành lập, năm diễn ra các trận chiến), tên gọi đầy đủ của các nhân vật lịch sử, địa danh cụ thể của kinh đô và các chiến trường. Các lỗi sai cho thấy học sinh thiếu nền tảng về các chi tiết cơ bản này.\n    *   Xây dựng “thẻ ghi nhớ” (flashcards) cho các sự kiện, nhân vật, mốc thời gian và định nghĩa quan trọng để ôn tập nhanh và hiệu quả.\n\n4.  Đọc hiểu sâu các câu hỏi và đáp án:\n    *   Khi làm bài, đọc thật kỹ câu hỏi để xác định yêu cầu chính (ví dụ: “nguyên nhân chủ yếu”, “trận đánh quyết định”, “người đầu tiên”). Đôi khi, các lựa chọn đều có vẻ đúng một phần, nhưng chỉ có một đáp án là 'đúng nhất' hoặc 'đầy đủ nhất'.\n    *   Phân tích từng lựa chọn đáp án một cách cẩn thận, loại trừ các đáp án sai rõ ràng, các đáp án không đầy đủ hoặc không chính xác nhất. Tránh chọn đáp án chỉ vì nó có vẻ quen thuộc mà chưa phải là câu trả lời tối ưu.\n\n5.  Luyện tập giải đề và tự phân tích lỗi sai:\n    *   Thực hành làm nhiều bài tập trắc nghiệm riêng biệt về nhà Trần sau mỗi buổi học để củng cố kiến thức và làm quen với các dạng câu hỏi.\n    *   Sau khi hoàn thành, tự chấm điểm và quan trọng nhất là phân tích kỹ lưỡng từng lỗi sai: ghi lại lý do vì sao mình sai (nhầm lẫn thông tin, chưa nắm vững kiến thức, đọc sai đề,…) và ghi nhớ đáp án đúng kèm theo giải thích ngắn gọn. Mục tiêu là không lặp lại cùng một loại lỗi sai.",
+      "cac_chu_de_lien_quan": [
+        "Chủ nghĩa đế quốc và sự phân chia thế giới cuối thế kỷ XIX - đầu thế kỷ XX.",
+        "Chiến tranh thế giới thứ nhất (1914-1918): Nguyên nhân, diễn biến, kết quả, tính chất, tác động.",
+        "Cách mạng tháng Mười Nga (1917) và công cuộc xây dựng chủ nghĩa xã hội ở Liên Xô những năm 1920-1930.",
+        "Phong trào giải phóng dân tộc ở châu Á, châu Phi, Mỹ Latinh đầu thế kỷ XX (điển hình: Duy tân Minh Trị ở Nhật Bản, Cách mạng Tân Hội ở Trung Quốc, phong trào ở Ấn Độ, Đông Nam Á)."
+      ]
     },
-    {
-        "exam_id": "20260111163814",
-        "student": "hs00a12",
-        "submitted_at": "2026-03-04 13:44:01",
-        "answers": {
-            "mc_0": "A",
-            "mc_1": "A",
-            "mc_2": "A",
-            "mc_3": "A",
-            "mc_4": "A",
-            "mc_5": "A",
-            "mc_6": "A",
-            "mc_7": "A",
-            "mc_8": "D",
-            "mc_9": "A",
-            "tf_0": [
-                true,
-                false,
-                true,
-                false
-            ],
-            "tf_1": [
-                true,
-                false,
-                true,
-                false
-            ],
-            "tf_2": [
-                true,
-                false,
-                true,
-                false
-            ],
-            "tf_3": [
-                true,
-                false,
-                true,
-                true
-            ]
-        },
-        "score": 2.7,
-        "type": "multiple_choice",
-        "ai_graded": true,
-        "essay_ai_feedback": null,
-        "mc_ai_feedback": {
-            "ke_hoach_on_tap": {
-                "nhan_dien_loi_sai_tong_quat": "Học sinh có vẻ thiếu hụt kiến thức nền tảng một cách nghiêm trọng về nhà Trần, thể hiện qua việc chọn đáp án A gần như đồng loạt cho tất cả các câu hỏi (7/8 câu), ngay cả khi đáp án đúng là B, C, hoặc D. Điều này cho thấy khả năng cao là học sinh chưa nắm vững các sự kiện, nhân vật, địa danh, chính sách, cũng như nguyên nhân, kết quả liên quan đến triều đại này. Các lỗi sai bao gồm: lỗi về niên đại, tên nhân vật lịch sử, địa điểm, khái niệm chính sách, tên trận đánh và nguyên nhân suy vong của triều đại.",
-                "phuong_phap_khac_phuc": [
-                    {
-                        "tieu_de": "1. Lập sơ đồ tư duy hoặc bảng biểu tổng hợp các sự kiện lịch sử lớn của nhà Trần",
-                        "noi_dung": "Mục tiêu: Xây dựng khung kiến thức nền tảng vững chắc, khắc phục lỗi sai cơ bản về sự kiện, thời gian, nhân vật. Cần tổng hợp: Tên sự kiện (ví dụ: Thành lập nhà Trần, các cuộc kháng chiến chống Mông – Nguyên, chính sách 'ngụ binh ư nông', nguyên nhân suy yếu), Thời gian (năm thành lập: 1226, các mốc thời gian kháng chiến, cuối thế kỷ XIV), Địa điểm (Kinh đô Thăng Long, chiến trường Bạch Đằng), Nhân vật lãnh đạo (Trần Cảnh/Trần Thái Tông, Trần Quốc Tuấn/Hưng Đạo Vương), Nguyên nhân (sâu xa, trực tiếp), Diễn biến chính, Kết quả, Ý nghĩa, Tính chất và Hạn chế. Cách thực hiện: Sử dụng màu sắc, hình ảnh, sơ đồ hóa để dễ ghi nhớ mối liên hệ giữa các yếu tố. Đặt sơ đồ ở nơi dễ nhìn để thường xuyên ôn lại."
-                    },
-                    {
-                        "tieu_de": "2. Dành thời gian ôn tập và phân biệt rõ ràng các khái niệm dễ nhầm lẫn",
-                        "noi_dung": "Mục tiêu: Cải thiện khả năng hiểu và phân tích các khái niệm, đặc biệt là các chính sách và vai trò của tôn giáo. Tập trung vào: Phân biệt chính sách 'ngụ binh ư nông' với các chính sách quân sự khác, làm rõ vai trò của Phật giáo (là tôn giáo quan trọng thời Trần) so với Nho giáo và Đạo giáo. Cách thực hiện: Ghi chú lại các điểm khác biệt, so sánh đối chiếu giữa các khái niệm/sự kiện có thể gây nhầm lẫn."
-                    },
-                    {
-                        "tieu_de": "3. Tập trung vào chi tiết",
-                        "noi_dung": "Mục tiêu: Khắc phục lỗi sai về niên đại, tên gọi cụ thể của các nhân vật, địa danh. Cần luyện tập ghi nhớ: Niên đại thành lập nhà Trần (1226), tên vị vua đầu tiên (Trần Cảnh), tên tổng chỉ huy quân đội (Trần Quốc Tuấn), tên chiến thắng quyết định kháng chiến lần 3 (Bạch Đằng). Cách thực hiện: Sử dụng flashcards, làm bài tập điền khuyết, trắc nghiệm nhanh các chi tiết nhỏ để củng cố trí nhớ."
-                    },
-                    {
-                        "tieu_de": "4. Đọc hiểu sâu và phân tích câu hỏi",
-                        "noi_dung": "Mục tiêu: Rèn luyện kỹ năng đọc và phân tích câu hỏi, tránh chọn đáp án theo cảm tính. Khi làm bài, cần gạch chân các từ khóa quan trọng trong câu hỏi (ví dụ: 'năm nào?', 'đầu tiên', 'kinh đô', 'tổng chỉ huy', 'quyết định thắng lợi', 'nội dung là', 'tôn giáo quan trọng', 'nguyên nhân chủ yếu'). Sau đó, phân tích từng lựa chọn đáp án, loại trừ các phương án sai rõ ràng và so sánh các phương án còn lại để tìm ra đáp án tối ưu nhất. Cách thực hiện: Luyện tập trên các đề thi thử, sau mỗi câu hỏi, tự đặt câu hỏi 'Tại sao đáp án này đúng và các đáp án khác sai?'."
-                    },
-                    {
-                        "tieu_de": "5. Luyện tập giải đề và phân tích lỗi sai",
-                        "noi_dung": "Mục tiêu: Củng cố kiến thức, phát hiện lỗ hổng và rèn luyện tâm lý phòng thi. Thực hành làm nhiều bài tập trắc nghiệm về nhà Trần từ các nguồn khác nhau. Sau đó, tự chấm và *quan trọng nhất là phân tích kỹ lý do sai của từng câu*. Ghi lại các lỗi sai thường gặp, các chủ đề còn yếu để ưu tiên ôn tập lại. Cách thực hiện: Tạo một nhật ký lỗi sai, ghi rõ: Câu hỏi, đáp án đã chọn, đáp án đúng, lý do sai (ví dụ: nhầm lẫn niên đại, không nhớ tên nhân vật, hiểu sai khái niệm, đọc sót đề)."
-                    }
-                ]
-            },
-            "cac_chu_de_lien_quan": [
-                "Chủ nghĩa đế quốc và sự phân chia thế giới cuối thế kỷ XIX - đầu thế kỷ XX.",
-                "Chiến tranh thế giới thứ nhất (1914-1918): Nguyên nhân, diễn biến, kết quả, tính chất, tác động.",
-                "Cách mạng tháng Mười Nga (1917) và công cuộc xây dựng chủ nghĩa xã hội ở Liên Xô những năm 1920-1930.",
-                "Phong trào giải phóng dân tộc ở châu Á, châu Phi, Mỹ Latinh đầu thế kỷ XX (điển hình: Duy tân Minh Trị ở Nhật Bản, Cách mạng Tân Hợi ở Trung Quốc, phong trào ở Ấn Độ, Đông Nam Á)."
-            ]
-        },
-        "tf_ai_feedback": {
-            "ke_hoach_on_tap": "Học sinh cần lập sơ đồ tư duy hoặc bảng biểu tổng hợp các sự kiện lịch sử lớn của nhà Trần, bao gồm: tên sự kiện (ví dụ: Sự thành lập nhà Trần, Kháng chiến chống Nguyên Mông lần 1, các chính sách kinh tế), thời gian, địa điểm, nhân vật lãnh đạo (như Trần Thủ Độ, Trần Cảnh, Trần Thái Tông, Trần Quốc Tuấn), nguyên nhân (sau xa, trực tiếp), diễn biến chính, kết quả, ý nghĩa, tính chất, và hạn chế. Đặc biệt, cần dành thời gian ôn tập và phân biệt rõ ràng các khái niệm dễ nhầm lẫn (ví dụ: 'chuyển giao quyền lực hòa bình' với 'khởi nghĩa vũ trang'; 'chế độ thái thượng hoàng' và ý nghĩa của nó; chiến thuật 'vườn không nhà trống' của ta so với 'đánh nhanh thắng nhanh' của địch). Tập trung vào chi tiết: Luyện tập ghi nhớ các chi tiết như niên đại, tên gọi cụ thể của các nhân vật, các chính sách cụ thể của nhà Trần. Đọc hiểu sâu: Đọc kỹ các câu hỏi trắc nghiệm, phân tích từng lựa chọn để tìm ra đáp án tối ưu nhất, tránh chọn đáp án đúng nhưng chưa đủ hoặc chưa phải là 'nhất'. Luyện tập giải đề: Thường xuyên thực hành làm nhiều bài tập trắc nghiệm về lịch sử nhà Trần, sau đó tự chấm và phân tích kỹ lưỡng các lỗi sai, ghi lại rõ ràng lý do sai để tránh lặp lại những lỗi tương tự.",
-            "cac_chu_de_lien_quan": "Ngoài kiến thức chuyên sâu về nhà Trần, học sinh cũng cần củng cố và mở rộng kiến thức ở các chủ đề lịch sử Việt Nam và thế giới khác để có cái nhìn toàn diện hơn: Chủ nghĩa đế quốc và sự phân chia thế giới cuối thế kỷ XIX - đầu thế kỷ XX. Chiến tranh thế giới thứ nhất (1914-1918): Nguyên nhân, diễn biến, kết quả, tính chất, tác động. Cách mạng tháng Mười Nga (1917) và công cuộc xây dựng chủ nghĩa xã hội ở Liên Xô những năm 1920-1930. Phong trào giải phóng dân tộc ở châu Á, châu Phi, Mỹ Latinh đầu thế kỷ XX (điển hình: Duy tân Minh Trị ở Nhật Bản, Cách mạng Tân Hợi ở Trung Quốc, phong trào ở Ấn Độ, Đông Nam Á)."
-        },
-        "teacher_adjusted": false,
-        "teacher_score": null,
-        "teacher_comment": null
+    "tf_ai_feedback": {
+      "ke_hoach_on_tap": "Em thân mến, qua các lỗi sai trong bài kiểm tra về nhà Trần, thầy nhận thấy em còn một số lỗ hổng kiến thức khá cơ bản và chưa nắm vững các khái niệm, sự kiện quan trọng. Để khắc phục tình trạng này, em cần có một kế hoạch ôn tập hiệu quả sau đây:\n\n1.  Lập sơ đồ tư duy hoặc bảng biểu tổng hợp các sự kiện lịch sử lớn: Đối với mỗi sự kiện liên quan đến nhà Trần (ví dụ: Sự thành lập nhà Trần, Bộ máy nhà nước, Kháng chiến chống Mông – Nguyên, Tình hình kinh tế – xã hội), em hãy tổng hợp các thông tin sau:\n    *   Tên sự kiện: Ví dụ, 'Sự thành lập nhà Trần'.\n    *   Thời gian: Ví dụ, '1226'.\n    *   Địa điểm (nếu có): Ví dụ, 'Thăng Long'.\n    *   Nhân vật lãnh đạo/chủ chốt: Ví dụ, 'Trần Thủ Độ, Trần Thái Tông'.\n    *   Nguyên nhân (sâu xa, trực tiếp): Ví dụ, 'Nhà Lý suy yếu, Trần Thủ Độ sắp đặt'.\n    *   Diễn biến chính: Tóm tắt các giai đoạn chính.\n    *   Kết quả: Các thành tựu đạt được hoặc sự thay đổi.\n    *   Ý nghĩa: Tầm quan trọng của sự kiện.\n    *   Tính chất (nếu có): Ví dụ, 'chiến tranh vệ quốc'.\n    *   Hạn chế (nếu có): Các điểm chưa hoàn hảo.\n\n2.  Dành thời gian ôn tập và phân biệt rõ ràng các khái niệm dễ nhầm lẫn: Em cần đặc biệt chú ý đến các khái niệm sau để tránh nhầm lẫn:\n    *   'Quân đội thường trực': Đây là lực lượng quân sự được duy trì liên tục bởi nhà nước để bảo vệ đất nước và giữ gìn trật tự. Các triều đại phong kiến lớn đều có quân đội thường trực.\n    *   'Chế độ Thái Thượng Hoàng': Đây là đặc trưng chính trị độc đáo của nhà Trần, nơi vua cha truyền ngôi cho con nhưng vẫn nắm giữ quyền lực tối cao, giúp chuyển giao quyền lực suôn sẻ và có sự chuẩn bị tốt cho người kế vị.\n    *   'Tiêu diệt hoàn toàn': Cần hiểu đúng mức độ của các chiến thắng. Chiến thắng Bạch Đằng năm 1288 là chiến thắng quyết định, đánh bại ý chí xâm lược và tiêu hao lớn quân địch, nhưng không phải là tiêu diệt 'hoàn toàn' toàn bộ đạo quân xâm lược về số lượng.\n\n3.  Tập trung vào chi tiết: Luyện tập ghi nhớ các chi tiết quan trọng như niên đại (ví dụ: 1288 cho Bạch Đằng, 3 lần kháng chiến chống Mông – Nguyên), tên gọi cụ thể của nhân vật (Trần Thủ Độ), các khái niệm chính trị, kinh tế, xã hội. Việc này giúp em không bị nhầm lẫn các mốc thời gian hay nhân vật.\n\n4.  Đọc hiểu sâu: Khi làm bài tập trắc nghiệm, em hãy đọc kỹ các câu hỏi, phân tích từng lựa chọn để tìm ra đáp án tối ưu nhất. Tránh chọn đáp án đúng nhưng chưa đủ hoặc chưa phải là 'nhất'. Đặc biệt chú ý đến các từ khóa như 'quan trọng', 'duy trì', 'nét đặc trưng', 'hoàn toàn' để hiểu đúng ý nghĩa của câu hỏi.\n\n5.  Luyện tập giải đề: Thường xuyên thực hành làm nhiều bài tập trắc nghiệm, sau đó tự chấm và phân tích kỹ lưỡng các lỗi sai. Ghi lại lý do em sai để rút kinh nghiệm và tránh lặp lại những lỗi tương tự trong các lần ôn tập sau.",
+      "cac_chu_de_lien_quan": "Để mở rộng kiến thức và có cái nhìn tổng quan hơn về lịch sử thế giới, em có thể tìm hiểu thêm các chủ đề sau:\n\n1.  Chủ nghĩa đế quốc và sự phân chia thế giới cuối thế kỷ XIX - đầu thế kỷ XX: Nắm vững nguyên nhân, đặc điểm và hệ quả của sự phát triển chủ nghĩa đế quốc.\n2.  Chiến tranh thế giới thứ nhất (1914-1918): Tập trung vào nguyên nhân sâu xa và trực tiếp, diễn biến chính, kết quả, tính chất và tác động to lớn của cuộc chiến.\n3.  Cách mạng tháng Mười Nga (1917) và công cuộc xây dựng chủ nghĩa xã hội ở Liên Xô những năm 1920-1930: Hiểu rõ về ý nghĩa, thành tựu và những thách thức của giai đoạn này.\n4.  Phong trào giải phóng dân tộc ở châu Á, châu Phi, Mỹ Latinh đầu thế kỷ XX: Nghiên cứu các phong trào tiêu biểu như Duy tân Minh Trị ở Nhật Bản, Cách mạng Tân Hợi ở Trung Quốc, và các phong trào ở Ấn Độ, Đông Nam Á để thấy được sự trỗi dậy của các dân tộc bị áp bức."
     },
-    {
-        "exam_id": "20260111163814",
-        "student": "hs00a12",
-        "submitted_at": "2026-03-05 12:56:01",
-        "answers": {
-            "mc_0": "A",
-            "mc_1": "A",
-            "mc_2": "A",
-            "mc_3": "A",
-            "mc_4": "B",
-            "mc_5": "A",
-            "mc_6": "C",
-            "mc_7": "C",
-            "mc_8": "B",
-            "mc_9": "A",
-            "tf_0": [
-                false,
-                true,
-                false,
-                true
-            ],
-            "tf_1": [
-                false,
-                true,
-                false,
-                true
-            ],
-            "tf_2": [
-                false,
-                true,
-                false,
-                true
-            ],
-            "tf_3": [
-                true,
-                true,
-                false,
-                false
-            ]
-        },
-        "score": 3.95,
-        "type": "multiple_choice",
-        "ai_graded": true,
-        "essay_ai_feedback": null,
-        "mc_ai_feedback": {
-            "ke_hoach_on_tap": "Là một giáo viên lịch sử, tôi nhận thấy em đã mắc phải nhiều lỗi cơ bản về kiến thức lịch sử nhà Trần, từ các sự kiện trọng đại, niên đại cụ thể, nhân vật lịch sử, địa danh, đến việc hiểu rõ nội dung chính sách và phân tích nguyên nhân. Các lỗi sai cho thấy em chưa nắm vững kiến thức nền tảng và có sự nhầm lẫn giữa các mốc thời gian, nhân vật, và sự kiện quan trọng.\n\nCụ thể:\n*   Câu 1, 4: Sai niên đại thành lập nhà Trần và thời gian xâm lược Mông-Nguyên lần 1, cho thấy sự yếu kém trong việc ghi nhớ các mốc thời gian cơ bản.\n*   Câu 2, 5: Nhầm lẫn về vua đầu tiên và tổng chỉ huy quân đội, chứng tỏ em chưa nắm rõ vai trò và danh tính các nhân vật lịch sử chủ chốt.\n*   Câu 3: Sai về kinh đô, thể hiện thiếu kiến thức địa lý lịch sử.\n*   Câu 6: Sai về chiến thắng quyết định, cho thấy em chưa phân biệt được mức độ quan trọng của các trận đánh.\n*   Câu 7: Hiểu sai nội dung chính sách \"ngụ binh ư nông\", cho thấy em chưa nắm được bản chất và mục đích của các chính sách nhà Trần.\n*   Câu 8: Sai về nguyên nhân chủ yếu dẫn đến sự suy yếu của nhà Trần, cho thấy em chưa có khả năng phân tích sâu sắc các yếu tố nội tại và nguyên nhân sâu xa của sự kiện.\n\nĐể khắc phục những lỗi này, em cần có một kế hoạch ôn tập chi tiết và hệ thống như sau:\n\n1.  **Lập sơ đồ tư duy hoặc bảng biểu tổng hợp các sự kiện lịch sử lớn**, đặc biệt tập trung vào giai đoạn nhà Trần:\n    *   **Thành lập nhà Trần:** Thời gian (năm nào?), người đứng đầu (vua đầu tiên là ai?), kinh đô (đặt ở đâu?).\n    *   **Các cuộc kháng chiến chống Mông – Nguyên:** Nắm vững 3 lần xâm lược (thời gian cụ thể từng lần), tổng chỉ huy (Trần Quốc Tuấn và vai trò của ông), các trận đánh quan trọng và chiến thắng quyết định từng lần (đặc biệt là trận Bạch Đằng năm 1288).\n    *   **Các chính sách tiêu biểu:** Hiểu rõ nội dung, mục đích và ý nghĩa của chính sách \"ngụ binh ư nông\".\n    *   **Sự suy yếu của nhà Trần:** Phân tích các nguyên nhân chủ yếu (đặc biệt là sự mục ruỗng của bộ máy quan lại, tham nhũng, mâu thuẫn nội bộ) thay vì các yếu tố thứ yếu.\n2.  **Dành thời gian ôn tập và phân biệt rõ ràng các khái niệm dễ nhầm lẫn**:\n    *   Phân biệt niên đại giữa các lần xâm lược, các sự kiện quan trọng.\n    *   Phân biệt vai trò của các nhân vật lịch sử (vua, tướng, quan lại).\n    *   Phân biệt các loại nguyên nhân (khách quan/chủ quan, trực tiếp/gián tiếp, chủ yếu/thứ yếu).\n3.  **Tập trung vào chi tiết**: Luyện tập ghi nhớ các chi tiết như niên đại, tên gọi cụ thể của các nhân vật, địa điểm, tên trận đánh. Đừng bỏ qua các thông tin có vẻ nhỏ nhưng lại là mấu chốt của vấn đề.\n4.  **Đọc hiểu sâu**: Khi làm bài tập trắc nghiệm, đọc kỹ các câu hỏi, phân tích từng lựa chọn để tìm ra đáp án tối ưu nhất. Tránh chọn đáp án chỉ 'đúng' mà chưa phải là 'đúng nhất' hoặc 'đầy đủ nhất', đặc biệt với các câu hỏi về nguyên nhân, ý nghĩa.\n5.  **Luyện tập giải đề**: Thường xuyên thực hành làm nhiều bài tập trắc nghiệm, sau đó tự chấm và phân tích kỹ lưỡng các lỗi sai. Ghi lại cụ thể lý do em chọn sai (ví dụ: nhầm lẫn niên đại, không nắm rõ nhân vật, hiểu sai khái niệm) để tránh lặp lại những lỗi tương tự trong các lần ôn tập và kiểm tra sau.",
-            "cac_chu_de_lien_quan": "Chu nghia de quoc va su phan chia the gioi cuoi the ky XIX - dau the ky XX. Chien tranh the gioi thu nhat (1914-1918): Nguyen nhan, dien bien, ket qua, tinh chat, tac dong. Cach mang thang Muoi Nga (1917) va cong cuoc xay dung chu nghia xa hoi o Lien Xo nhung nam 1920-1930. Phong trao giai phong dan toc o chau A, chau Phi, My Latinh dau the ky XX (dien hinh: Duy tan Minh Tri o Nhat Ban, Cach mang Tan Hoi o Trung Quoc, phong trao o An Do, Dong Nam A)."
-        },
-        "tf_ai_feedback": {
-            "ke_hoach_on_tap": "Hệ thống AI tạm thời không khả dụng. Vui lòng liên hệ giáo viên.",
-            "cac_chu_de_lien_quan": ""
-        },
-        "teacher_adjusted": false,
-        "teacher_score": null,
-        "teacher_comment": null
-    }
+    "teacher_adjusted": false,
+    "teacher_score": null,
+    "teacher_comment": null
+  },
+  {
+    "exam_id": "20260111163814",
+    "student": "hs00a12",
+    "submitted_at": "2026-03-04 13:33:13",
+    "answers": {
+      "mc_0": "A",
+      "mc_1": "A",
+      "mc_2": "A",
+      "mc_3": "A",
+      "mc_4": "A",
+      "mc_5": "A",
+      "mc_6": "A",
+      "mc_7": "A",
+      "mc_8": "A",
+      "mc_9": "A",
+      "tf_0": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "tf_1": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "tf_2": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "tf_3": [
+        true,
+        true,
+        false,
+        false
+      ]
+    },
+    "score": 3.2,
+    "type": "multiple_choice",
+    "ai_graded": true,
+    "essay_ai_feedback": null,
+    "mc_ai_feedback": {
+      "ke_hoach_on_tap": "Lập sơ đồ tư duy hoặc bảng biểu tổng hợp các sự kiện lịch sử lớn, bao gồm: tên sự kiện, thời gian, địa điểm, nhân vật lãnh đạo, nguyên nhân (sâu xa, trực tiếp), diễn biến chính, kết quả, ý nghĩa, tính chất, và hạn chế. Dành thời gian ôn tập và phân biệt rõ ràng các khái niệm dễ nhầm lẫn. Tập trung vào chi tiết: Luyện tập ghi nhớ các chi tiết như niên đại, tên gọi cụ thể của các khối liên minh, quốc gia liên quan đến sự kiện. Đọc hiểu sâu: Đọc kỹ các câu hỏi trắc nghiệm, phân tích từng lựa chọn để tìm ra đáp án tối ưu nhất, tránh chọn đáp án đúng nhưng chưa đủ hoặc chưa phải là 'nhất'. Luyện tập giải đề: Thực hành làm nhiều bài tập trắc nghiệm, sau đó tự chấm và phân tích lý lượng các lỗi sai, ghi lại lý do sai để tránh lặp lại.",
+      "cac_chu_de_lien_quan": "Chủ nghĩa đế quốc và sự phân chia thế giới cuối thế kỷ XIX - đầu thế kỷ XX. Chiến tranh thế giới thứ nhất (1914-1918): Nguyên nhân, diễn biến, kết quả, tính chất, tác động. Cách mạng tháng Mười Nga (1917) và công cuộc xây dựng chủ nghĩa xã hội ở Liên Xô những năm 1920-1930. Phong trào giải phóng dân tộc ở châu Á, châu Phi, Mỹ Latinh đầu thế kỷ XX (điển hình: Duy tân Minh Trị ở Nhật Bản, Cách mạng Tân Hợi ở Trung Quốc, phong trào ở Ấn Độ, Đông Nam Á)."
+    },
+    "tf_ai_feedback": {
+      "ke_hoach_on_tap": "Lập sơ đồ tư duy hoặc bảng biểu tổng hợp các sự kiện lịch sử lớn của nhà Trần, bao gồm: tên sự kiện (thành lập nhà Trần, kháng chiến chống Mông-Nguyên), thời gian, địa điểm, nhân vật lãnh đạo (như Trần Thủ Độ, Trần Cảnh), nguyên nhân, diễn biến chính, kết quả, ý nghĩa, tính chất và hạn chế. Đặc biệt chú ý đến cách thức nhà Trần lên ngôi (không phải khởi nghĩa vũ trang mà là chuyển giao quyền lực thông qua hôn nhân và sắp đặt chính trị) và vai trò của các nhân vật chủ chốt (Trần Thủ Độ là người đặt nền móng, Trần Cảnh là vị vua đầu tiên). Dành thời gian ôn tập và phân biệt rõ ràng các khái niệm dễ nhầm lẫn như: con đường lên ngôi của nhà Trần, đặc điểm bộ máy nhà nước (chế độ Thái thượng hoàng, việc duy trì quân đội thường trực), chiến lược quân sự (nhà Trần không chủ trương 'đánh nhanh thắng nhanh' mà là 'vườn không nhà trống', 'đánh lâu dài', 'đánh chắc thắng chắc' khi có thời cơ), và tác động của điền trang, thái ấp đến xã hội (gây phân hóa sâu sắc). Tập trung vào chi tiết: Luyện tập ghi nhớ các chi tiết như niên đại, tên gọi cụ thể của các nhân vật, các chính sách và đặc điểm riêng của nhà Trần. Đọc hiểu sâu: Đọc kỹ các câu hỏi trắc nghiệm, phân tích từng lựa chọn để tìm ra đáp án tối ưu nhất, tránh chọn đáp án đúng nhưng chưa đủ hoặc chưa phải là 'nhất'. Đặc biệt lưu ý phân biệt chiến lược của ta và địch, cũng như các nét đặc trưng của triều đại. Luyện tập giải đề: Thực hành làm nhiều bài tập trắc nghiệm liên quan đến triều Trần, sau đó tự chấm và phân tích lý lượng các lỗi sai, ghi lại lý do sai để tránh lặp lại.",
+      "cac_chu de_lien_quan": "Chủ nghĩa đế quốc và sự phân chia thế giới cuối thế kỷ XIX - đầu thế kỷ XX. Chiến tranh thế giới thứ nhất (1914-1918): Nguyên nhân, diễn biến, kết quả, tính chất, tác động. Cách mạng tháng Mười Nga (1917) và công cuộc xây dựng chủ nghĩa xã hội ở Liên Xô những năm 1920-1930. Phong trào giải phóng dân tộc ở châu Á, châu Phi, Mỹ Latinh đầu thế kỷ XX (điển hình: Duy tân Minh Trị ở Nhật Bản, Cách mạng Tân Hội ở Trung Quốc, phong trào ở Ấn Độ, Đông Nam Á)."
+    },
+    "teacher_adjusted": false,
+    "teacher_score": null,
+    "teacher_comment": null
+  },
+  {
+    "exam_id": "20260111163814",
+    "student": "hs00a12",
+    "submitted_at": "2026-03-04 13:44:01",
+    "answers": {
+      "mc_0": "A",
+      "mc_1": "A",
+      "mc_2": "A",
+      "mc_3": "A",
+      "mc_4": "A",
+      "mc_5": "A",
+      "mc_6": "A",
+      "mc_7": "A",
+      "mc_8": "D",
+      "mc_9": "A",
+      "tf_0": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "tf_1": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "tf_2": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "tf_3": [
+        true,
+        false,
+        true,
+        true
+      ]
+    },
+    "score": 2.7,
+    "type": "multiple_choice",
+    "ai_graded": true,
+    "essay_ai_feedback": null,
+    "mc_ai_feedback": {
+      "ke_hoach_on_tap": {
+        "nhan_dien_loi_sai_tong_quat": "Học sinh có vẻ thiếu hụt kiến thức nền tảng một cách nghiêm trọng về nhà Trần, thể hiện qua việc chọn đáp án A gần như đồng loạt cho tất cả các câu hỏi (7/8 câu), ngay cả khi đáp án đúng là B, C, hoặc D. Điều này cho thấy khả năng cao là học sinh chưa nắm vững các sự kiện, nhân vật, địa danh, chính sách, cũng như nguyên nhân, kết quả liên quan đến triều đại này. Các lỗi sai bao gồm: lỗi về niên đại, tên nhân vật lịch sử, địa điểm, khái niệm chính sách, tên trận đánh và nguyên nhân suy vong của triều đại.",
+        "phuong_phap_khac_phuc": [
+          {
+            "tieu_de": "1. Lập sơ đồ tư duy hoặc bảng biểu tổng hợp các sự kiện lịch sử lớn của nhà Trần",
+            "noi_dung": "Mục tiêu: Xây dựng khung kiến thức nền tảng vững chắc, khắc phục lỗi sai cơ bản về sự kiện, thời gian, nhân vật. Cần tổng hợp: Tên sự kiện (ví dụ: Thành lập nhà Trần, các cuộc kháng chiến chống Mông – Nguyên, chính sách 'ngụ binh ư nông', nguyên nhân suy yếu), Thời gian (năm thành lập: 1226, các mốc thời gian kháng chiến, cuối thế kỷ XIV), Địa điểm (Kinh đô Thăng Long, chiến trường Bạch Đằng), Nhân vật lãnh đạo (Trần Cảnh/Trần Thái Tông, Trần Quốc Tuấn/Hưng Đạo Vương), Nguyên nhân (sâu xa, trực tiếp), Diễn biến chính, Kết quả, Ý nghĩa, Tính chất và Hạn chế. Cách thực hiện: Sử dụng màu sắc, hình ảnh, sơ đồ hóa để dễ ghi nhớ mối liên hệ giữa các yếu tố. Đặt sơ đồ ở nơi dễ nhìn để thường xuyên ôn lại."
+          },
+          {
+            "tieu_de": "2. Dành thời gian ôn tập và phân biệt rõ ràng các khái niệm dễ nhầm lẫn",
+            "noi_dung": "Mục tiêu: Cải thiện khả năng hiểu và phân tích các khái niệm, đặc biệt là các chính sách và vai trò của tôn giáo. Tập trung vào: Phân biệt chính sách 'ngụ binh ư nông' với các chính sách quân sự khác, làm rõ vai trò của Phật giáo (là tôn giáo quan trọng thời Trần) so với Nho giáo và Đạo giáo. Cách thực hiện: Ghi chú lại các điểm khác biệt, so sánh đối chiếu giữa các khái niệm/sự kiện có thể gây nhầm lẫn."
+          },
+          {
+            "tieu_de": "3. Tập trung vào chi tiết",
+            "noi_dung": "Mục tiêu: Khắc phục lỗi sai về niên đại, tên gọi cụ thể của các nhân vật, địa danh. Cần luyện tập ghi nhớ: Niên đại thành lập nhà Trần (1226), tên vị vua đầu tiên (Trần Cảnh), tên tổng chỉ huy quân đội (Trần Quốc Tuấn), tên chiến thắng quyết định kháng chiến lần 3 (Bạch Đằng). Cách thực hiện: Sử dụng flashcards, làm bài tập điền khuyết, trắc nghiệm nhanh các chi tiết nhỏ để củng cố trí nhớ."
+          },
+          {
+            "tieu_de": "4. Đọc hiểu sâu và phân tích câu hỏi",
+            "noi_dung": "Mục tiêu: Rèn luyện kỹ năng đọc và phân tích câu hỏi, tránh chọn đáp án theo cảm tính. Khi làm bài, cần gạch chân các từ khóa quan trọng trong câu hỏi (ví dụ: 'năm nào?', 'đầu tiên', 'kinh đô', 'tổng chỉ huy', 'quyết định thắng lợi', 'nội dung là', 'tôn giáo quan trọng', 'nguyên nhân chủ yếu'). Sau đó, phân tích từng lựa chọn đáp án, loại trừ các phương án sai rõ ràng và so sánh các phương án còn lại để tìm ra đáp án tối ưu nhất. Cách thực hiện: Luyện tập trên các đề thi thử, sau mỗi câu hỏi, tự đặt câu hỏi 'Tại sao đáp án này đúng và các đáp án khác sai?'."
+          },
+          {
+            "tieu_de": "5. Luyện tập giải đề và phân tích lỗi sai",
+            "noi_dung": "Mục tiêu: Củng cố kiến thức, phát hiện lỗ hổng và rèn luyện tâm lý phòng thi. Thực hành làm nhiều bài tập trắc nghiệm về nhà Trần từ các nguồn khác nhau. Sau đó, tự chấm và *quan trọng nhất là phân tích kỹ lý do sai của từng câu*. Ghi lại các lỗi sai thường gặp, các chủ đề còn yếu để ưu tiên ôn tập lại. Cách thực hiện: Tạo một nhật ký lỗi sai, ghi rõ: Câu hỏi, đáp án đã chọn, đáp án đúng, lý do sai (ví dụ: nhầm lẫn niên đại, không nhớ tên nhân vật, hiểu sai khái niệm, đọc sót đề)."
+          }
+        ]
+      },
+      "cac_chu_de_lien_quan": [
+        "Chủ nghĩa đế quốc và sự phân chia thế giới cuối thế kỷ XIX - đầu thế kỷ XX.",
+        "Chiến tranh thế giới thứ nhất (1914-1918): Nguyên nhân, diễn biến, kết quả, tính chất, tác động.",
+        "Cách mạng tháng Mười Nga (1917) và công cuộc xây dựng chủ nghĩa xã hội ở Liên Xô những năm 1920-1930.",
+        "Phong trào giải phóng dân tộc ở châu Á, châu Phi, Mỹ Latinh đầu thế kỷ XX (điển hình: Duy tân Minh Trị ở Nhật Bản, Cách mạng Tân Hợi ở Trung Quốc, phong trào ở Ấn Độ, Đông Nam Á)."
+      ]
+    },
+    "tf_ai_feedback": {
+      "ke_hoach_on_tap": "Học sinh cần lập sơ đồ tư duy hoặc bảng biểu tổng hợp các sự kiện lịch sử lớn của nhà Trần, bao gồm: tên sự kiện (ví dụ: Sự thành lập nhà Trần, Kháng chiến chống Nguyên Mông lần 1, các chính sách kinh tế), thời gian, địa điểm, nhân vật lãnh đạo (như Trần Thủ Độ, Trần Cảnh, Trần Thái Tông, Trần Quốc Tuấn), nguyên nhân (sau xa, trực tiếp), diễn biến chính, kết quả, ý nghĩa, tính chất, và hạn chế. Đặc biệt, cần dành thời gian ôn tập và phân biệt rõ ràng các khái niệm dễ nhầm lẫn (ví dụ: 'chuyển giao quyền lực hòa bình' với 'khởi nghĩa vũ trang'; 'chế độ thái thượng hoàng' và ý nghĩa của nó; chiến thuật 'vườn không nhà trống' của ta so với 'đánh nhanh thắng nhanh' của địch). Tập trung vào chi tiết: Luyện tập ghi nhớ các chi tiết như niên đại, tên gọi cụ thể của các nhân vật, các chính sách cụ thể của nhà Trần. Đọc hiểu sâu: Đọc kỹ các câu hỏi trắc nghiệm, phân tích từng lựa chọn để tìm ra đáp án tối ưu nhất, tránh chọn đáp án đúng nhưng chưa đủ hoặc chưa phải là 'nhất'. Luyện tập giải đề: Thường xuyên thực hành làm nhiều bài tập trắc nghiệm về lịch sử nhà Trần, sau đó tự chấm và phân tích kỹ lưỡng các lỗi sai, ghi lại rõ ràng lý do sai để tránh lặp lại những lỗi tương tự.",
+      "cac_chu_de_lien_quan": "Ngoài kiến thức chuyên sâu về nhà Trần, học sinh cũng cần củng cố và mở rộng kiến thức ở các chủ đề lịch sử Việt Nam và thế giới khác để có cái nhìn toàn diện hơn: Chủ nghĩa đế quốc và sự phân chia thế giới cuối thế kỷ XIX - đầu thế kỷ XX. Chiến tranh thế giới thứ nhất (1914-1918): Nguyên nhân, diễn biến, kết quả, tính chất, tác động. Cách mạng tháng Mười Nga (1917) và công cuộc xây dựng chủ nghĩa xã hội ở Liên Xô những năm 1920-1930. Phong trào giải phóng dân tộc ở châu Á, châu Phi, Mỹ Latinh đầu thế kỷ XX (điển hình: Duy tân Minh Trị ở Nhật Bản, Cách mạng Tân Hợi ở Trung Quốc, phong trào ở Ấn Độ, Đông Nam Á)."
+    },
+    "teacher_adjusted": false,
+    "teacher_score": null,
+    "teacher_comment": null
+  },
+  {
+    "exam_id": "20260111163814",
+    "student": "hs00a12",
+    "submitted_at": "2026-03-05 12:56:01",
+    "answers": {
+      "mc_0": "A",
+      "mc_1": "A",
+      "mc_2": "A",
+      "mc_3": "A",
+      "mc_4": "B",
+      "mc_5": "A",
+      "mc_6": "C",
+      "mc_7": "C",
+      "mc_8": "B",
+      "mc_9": "A",
+      "tf_0": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "tf_1": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "tf_2": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "tf_3": [
+        true,
+        true,
+        false,
+        false
+      ]
+    },
+    "score": 3.95,
+    "type": "multiple_choice",
+    "ai_graded": true,
+    "essay_ai_feedback": null,
+    "mc_ai_feedback": {
+      "ke_hoach_on_tap": "Là một giáo viên lịch sử, tôi nhận thấy em đã mắc phải nhiều lỗi cơ bản về kiến thức lịch sử nhà Trần, từ các sự kiện trọng đại, niên đại cụ thể, nhân vật lịch sử, địa danh, đến việc hiểu rõ nội dung chính sách và phân tích nguyên nhân. Các lỗi sai cho thấy em chưa nắm vững kiến thức nền tảng và có sự nhầm lẫn giữa các mốc thời gian, nhân vật, và sự kiện quan trọng.\n\nCụ thể:\n*   Câu 1, 4: Sai niên đại thành lập nhà Trần và thời gian xâm lược Mông-Nguyên lần 1, cho thấy sự yếu kém trong việc ghi nhớ các mốc thời gian cơ bản.\n*   Câu 2, 5: Nhầm lẫn về vua đầu tiên và tổng chỉ huy quân đội, chứng tỏ em chưa nắm rõ vai trò và danh tính các nhân vật lịch sử chủ chốt.\n*   Câu 3: Sai về kinh đô, thể hiện thiếu kiến thức địa lý lịch sử.\n*   Câu 6: Sai về chiến thắng quyết định, cho thấy em chưa phân biệt được mức độ quan trọng của các trận đánh.\n*   Câu 7: Hiểu sai nội dung chính sách \"ngụ binh ư nông\", cho thấy em chưa nắm được bản chất và mục đích của các chính sách nhà Trần.\n*   Câu 8: Sai về nguyên nhân chủ yếu dẫn đến sự suy yếu của nhà Trần, cho thấy em chưa có khả năng phân tích sâu sắc các yếu tố nội tại và nguyên nhân sâu xa của sự kiện.\n\nĐể khắc phục những lỗi này, em cần có một kế hoạch ôn tập chi tiết và hệ thống như sau:\n\n1.  **Lập sơ đồ tư duy hoặc bảng biểu tổng hợp các sự kiện lịch sử lớn**, đặc biệt tập trung vào giai đoạn nhà Trần:\n    *   **Thành lập nhà Trần:** Thời gian (năm nào?), người đứng đầu (vua đầu tiên là ai?), kinh đô (đặt ở đâu?).\n    *   **Các cuộc kháng chiến chống Mông – Nguyên:** Nắm vững 3 lần xâm lược (thời gian cụ thể từng lần), tổng chỉ huy (Trần Quốc Tuấn và vai trò của ông), các trận đánh quan trọng và chiến thắng quyết định từng lần (đặc biệt là trận Bạch Đằng năm 1288).\n    *   **Các chính sách tiêu biểu:** Hiểu rõ nội dung, mục đích và ý nghĩa của chính sách \"ngụ binh ư nông\".\n    *   **Sự suy yếu của nhà Trần:** Phân tích các nguyên nhân chủ yếu (đặc biệt là sự mục ruỗng của bộ máy quan lại, tham nhũng, mâu thuẫn nội bộ) thay vì các yếu tố thứ yếu.\n2.  **Dành thời gian ôn tập và phân biệt rõ ràng các khái niệm dễ nhầm lẫn**:\n    *   Phân biệt niên đại giữa các lần xâm lược, các sự kiện quan trọng.\n    *   Phân biệt vai trò của các nhân vật lịch sử (vua, tướng, quan lại).\n    *   Phân biệt các loại nguyên nhân (khách quan/chủ quan, trực tiếp/gián tiếp, chủ yếu/thứ yếu).\n3.  **Tập trung vào chi tiết**: Luyện tập ghi nhớ các chi tiết như niên đại, tên gọi cụ thể của các nhân vật, địa điểm, tên trận đánh. Đừng bỏ qua các thông tin có vẻ nhỏ nhưng lại là mấu chốt của vấn đề.\n4.  **Đọc hiểu sâu**: Khi làm bài tập trắc nghiệm, đọc kỹ các câu hỏi, phân tích từng lựa chọn để tìm ra đáp án tối ưu nhất. Tránh chọn đáp án chỉ 'đúng' mà chưa phải là 'đúng nhất' hoặc 'đầy đủ nhất', đặc biệt với các câu hỏi về nguyên nhân, ý nghĩa.\n5.  **Luyện tập giải đề**: Thường xuyên thực hành làm nhiều bài tập trắc nghiệm, sau đó tự chấm và phân tích kỹ lưỡng các lỗi sai. Ghi lại cụ thể lý do em chọn sai (ví dụ: nhầm lẫn niên đại, không nắm rõ nhân vật, hiểu sai khái niệm) để tránh lặp lại những lỗi tương tự trong các lần ôn tập và kiểm tra sau.",
+      "cac_chu_de_lien_quan": "Chu nghia de quoc va su phan chia the gioi cuoi the ky XIX - dau the ky XX. Chien tranh the gioi thu nhat (1914-1918): Nguyen nhan, dien bien, ket qua, tinh chat, tac dong. Cach mang thang Muoi Nga (1917) va cong cuoc xay dung chu nghia xa hoi o Lien Xo nhung nam 1920-1930. Phong trao giai phong dan toc o chau A, chau Phi, My Latinh dau the ky XX (dien hinh: Duy tan Minh Tri o Nhat Ban, Cach mang Tan Hoi o Trung Quoc, phong trao o An Do, Dong Nam A)."
+    },
+    "tf_ai_feedback": {
+      "ke_hoach_on_tap": "Hệ thống AI tạm thời không khả dụng. Vui lòng liên hệ giáo viên.",
+      "cac_chu_de_lien_quan": ""
+    },
+    "teacher_adjusted": false,
+    "teacher_score": null,
+    "teacher_comment": null
+  },
+  {
+    "exam_id": "20260112132918",
+    "student": "hs00a12",
+    "submitted_at": "2026-03-14 19:17:35",
+    "essay_answer": "",
+    "image_path": "uploads\\20260112132918_hs00a12_1773490642_gen-h-z7619880738939_0599b9b4edd853844abed89d9c30c9d5.jpg",
+    "score": 0,
+    "type": "essay",
+    "ai_graded": true,
+    "ai_feedback": {
+      "score": 0,
+      "strengths": "Chữ viết rõ ràng, dễ đọc, trình bày sạch sẽ. Học sinh có kiến thức khá tốt về các khái niệm văn hóa, văn minh và lịch sử Ai Cập cổ đại.",
+      "weaknesses": "Bài làm hoàn toàn lạc đề. Nội dung trong ảnh tập trung vào vai trò của sử học và văn minh Ai Cập cổ đại, không có bất kỳ thông tin nào liên quan đến Chiến tranh thế giới thứ nhất (1914–1918) như yêu cầu của đề bài.",
+      "missing_knowledge": "Thiếu toàn bộ kiến thức về nguyên nhân bùng nổ (mâu thuẫn đế quốc, các khối quân sự, duyên cớ ám sát Thái tử Áo-Hung) và tính chất phi nghĩa của Chiến tranh thế giới thứ nhất.",
+      "improvement_areas": "Kỹ năng đọc và phân tích đề bài để tránh việc làm bài sai nội dung yêu cầu.",
+      "suggestions": "Em cần lưu ý đọc kỹ đề bài trước khi làm bài để tránh nhầm lẫn giữa các chương mục kiến thức khác nhau. Hãy tập trung ôn tập lại bài Chiến tranh thế giới thứ nhất trong sách giáo khoa để nắm vững các nguyên nhân và tính chất của cuộc chiến này."
+    },
+    "teacher_adjusted": false,
+    "teacher_score": null,
+    "teacher_comment": null
+  },
+  {
+    "exam_id": "20260112132918",
+    "student": "hs00a12",
+    "submitted_at": "2026-03-14 19:30:46",
+    "essay_answer": "",
+    "image_path": "uploads\\20260112132918_hs00a12_1773491433_gen-h-z7619880738939_0599b9b4edd853844abed89d9c30c9d5.jpg",
+    "score": 0,
+    "type": "essay",
+    "ai_graded": true,
+    "ai_feedback": {
+      "score": 0,
+      "strengths": "Chữ viết rõ ràng, dễ đọc, trình bày sạch sẽ. Học sinh có kiến thức tốt về khái niệm văn hóa, văn minh và thành tựu chữ viết của Ai Cập cổ đại.",
+      "weaknesses": "Bài làm hoàn toàn lạc đề. Nội dung trong ảnh tập trung vào quan điểm học tập lịch sử và các khái niệm văn hóa, văn minh, trong khi đề bài yêu cầu trình bày về Chiến tranh thế giới thứ nhất.",
+      "missing_knowledge": "Thiếu toàn bộ kiến thức về Chiến tranh thế giới thứ nhất bao gồm: mâu thuẫn giữa các nước đế quốc về thuộc địa, sự hình thành các khối quân sự, duyên cớ trực tiếp (vụ ám sát Thái tử Áo-Hung) và tính chất phi nghĩa của cuộc chiến.",
+      "improvement_areas": "Kỹ năng đọc hiểu và phân tích đề bài. Cần xác định đúng nội dung yêu cầu trước khi trình bày.",
+      "suggestions": "Em cần đọc kỹ đề thi để tránh viết lạc đề. Dù kiến thức về văn hóa và Ai Cập của em khá tốt nhưng không đáp ứng được yêu cầu của câu hỏi về lịch sử thế giới giai đoạn 1914-1918. Hãy tập trung ôn tập đúng các sự kiện lịch sử theo chương trình học."
+    },
+    "teacher_adjusted": false,
+    "teacher_score": null,
+    "teacher_comment": null
+  },
+  {
+    "exam_id": "20260112132918",
+    "student": "hs00a12",
+    "submitted_at": "2026-03-14 19:34:47",
+    "essay_answer": "",
+    "image_path": "uploads\\20260112132918_hs00a12_1773491676_gen-h-z7619880738939_0599b9b4edd853844abed89d9c30c9d5.jpg",
+    "score": 0,
+    "type": "essay",
+    "ai_graded": true,
+    "ai_feedback": {
+      "score": 0,
+      "strengths": "Học sinh có kỹ năng trình bày bài làm rõ ràng, chữ viết dễ đọc. Có hiểu biết tốt về các khái niệm cơ bản của sử học (cách học lịch sử) và kiến thức về văn minh cổ đại (văn minh Ai Cập).",
+      "weaknesses": "Lạc đề hoàn toàn. Nội dung bài viết không liên quan đến yêu cầu của đề bài về 'Nguyên nhân bùng nổ và tính chất của Chiến tranh thế giới thứ nhất'. Học sinh đang trả lời các câu hỏi về nhập môn sử học và văn minh thế giới cổ trung đại.",
+      "missing_knowledge": "Toàn bộ kiến thức về Chiến tranh thế giới thứ nhất (1914–1918): Mâu thuẫn giữa các nước đế quốc về thuộc địa; Sự hình thành khối Liên minh và Hiệp ước; Duyên cớ trực tiếp từ sự kiện ở Xéc-bi; Tính chất phi nghĩa và hậu quả của cuộc chiến.",
+      "improvement_areas": "Kỹ năng đọc hiểu đề bài; Ôn tập kiến thức lịch sử thế giới cận đại, đặc biệt là giai đoạn đầu thế kỷ XX.",
+      "suggestions": "Em cần đọc kỹ đề thi trước khi đặt bút làm bài. Bài làm hiện tại của em đang viết về một chủ đề hoàn toàn khác. Hãy dành thời gian ôn lại chương về Chiến tranh thế giới thứ nhất trong sách giáo khoa để nắm vững các nguyên nhân và tính chất của cuộc chiến này."
+    },
+    "teacher_adjusted": false,
+    "teacher_score": null,
+    "teacher_comment": null
+  }
 ]
