@@ -2,32 +2,16 @@
   "hs001": {
     "password": "hocsinh123",
     "fullname": "Le Van An",
+    "school": "THPT Yen The",
+    "grade_level": "12",
+    "class_name": "12A3",
+    "student_id": "HS20269785",
     "created_at": "2025-01-05 10:30:00"
-  },
-  "hs002": {
-    "password": "student456",
-    "fullname": "Hoang Thi Bich",
-    "created_at": "2025-01-05 11:00:00"
-  },
-  "hs003": {
-    "password": "hocsinh789",
-    "fullname": "Pham Van Cuong",
-    "created_at": "2025-01-05 11:30:00"
-  },
-  "hs004": {
-    "password": "student111",
-    "fullname": "Nguyen Thi Dung",
-    "created_at": "2025-01-06 09:00:00"
-  },
-  "hs005": {
-    "password": "hocsinh222",
-    "fullname": "Tran Van En",
-    "created_at": "2025-01-06 09:30:00"
   },
   "hs00a12": {
     "password": "12345678",
-    "fullname": "Nguyễn Văn A",
-    "school": "THPT TEST",
+    "fullname": "Nguyễn Văn Anh",
+    "school": "THPT Yen The",
     "grade_level": "12",
     "class_name": "12A5",
     "student_id": "HS20269783",

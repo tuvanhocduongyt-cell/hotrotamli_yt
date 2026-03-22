@@ -288,7 +288,7 @@
         <td style="padding: 12px; border: 1px solid #ddd;">{{ submission.submitted_at }}</td>
         <td style="padding: 12px; border: 1px solid #ddd;">
           {% if submission.score is not none %}
-          <strong style="color: #00796b; font-size: 18px;">{{ submission.score }}/10</strong>
+          <strong style="color: #00796b; font-size: 18px;">{{ submission.score }}</strong>
           {% else %}
           <span class="score-badge score-pending">Đang chờ</span>
           {% endif %}

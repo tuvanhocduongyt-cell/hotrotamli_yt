@@ -935,5 +935,18 @@
     "grade": "12",
     "tf_grading_method": "deduction",
     "general_grading_criteria": "đáp án trong file"
+  },
+  "20260321165010": {
+    "id": "20260321165010",
+    "title": "kt giữa hk2",
+    "type": "essay",
+    "duration": 45,
+    "created_by": "gv001",
+    "created_at": "2026-03-21 16:50:10",
+    "essay_question": "Câu 1 (1.5 điểm): a, Em hãy trình bày thành tựu về chữ viết và văn học của văn minh Đông Nam Á cổ - trung đại? \r\nb) b, Kể tên một số tác phẩm văn học của Việt Nam thời cổ - trung đại?\r\ncâu 2 (1.5 điểm): a, Hoàn Thành bảng thống kê về đời sống vật chất và tinh thần của cư dân Văn Lang – Âu Lạc?\r\nb, Kể tên những thành tựu của cư dân Văn Lang – Âu Lạc còn được bảo tồn đến nay?\r\n",
+    "grading_criteria": "\r\n\r\n\r\n\r\n\r\n\r\nCâu 1\ta, Em hãy trình bày thành tựu về chữ viết và văn học của văn minh Đông Nam Á cổ - trung đại?\tĐiểm\r\n\t- Thành tựu về chữ viết:\r\n+ Trên cơ sở chữ (chữ Hán) của Trung Hoa  người Việt sáng tạo ra chữ Nôm (0.25 điểm)\r\n + Trên cơ sở chữ Phạn của Ấn Độ, cư dân nhiều nước Đông Nam Á đã sáng tạo ra chữ viết riêng của mình như chữ Chăm cổ, Khơ me cổ, …\t0,25 điểm\r\n\t- Thành tựu về văn học:\r\n+ Cư dân Đông Nam Á đã sáng tạo kho tàng văn học dân gian phong phú đa dạng: truyền thuyết, cổ tích, truyện cười… 0,25 điểm\r\n+ Trên cơ sở chữ viết riêng, cư dân các nước ĐNA đã xây dựng nền văn học viết với nhiều tác phẩm xuất sắc còn được lưu giữ đến ngày nay.\t0,25 điểm\r\n\tb, Kể tên một số tác phẩm văn học của Việt Nam thời cổ - trung đại?\r\n\t\tHọc sinh kể được 3 tác phẩm văn học Việt Nam cổ - trung đại thì cho điểm tối đa. Ví dụ: Hịch Tướng Sĩ, Bình Ngô Đại Cáo, Truyện Kiểu….\t0,5 điểm\r\nCâu 2\r\n\r\n\ta, Hoàn Thành bảng thống kê về đời sống vật chất và tinh thần của cư dân Văn Lang – Âu Lạc (0.5 điểm)\r\n\tĐời sống vật chất\tĂn: Cơm, rau cá. Lương thực chính là lúa gạo.\r\nỞ: Nhà sàn\r\nMặc: Nam đóng khố ở trần, nữ mặc áo yếm\r\nĐi lại: sử dụng thuyền bè\r\nĐời sống Tinh thần\tTín ngưỡng: thờ tổ tiên, sùng bái tự nhiên.\r\nPhong tục: ăn trầu, nhuộm răng đen, xăm mình.\r\nÂm nhạc: trống đồng, cồng chiêng, nhảy múa…\r\nNghệ thuật: điêu khắc, luyện kim, làm gốm.\r\n\t\r\n\tb, Kể tên những thành tựu của cư dân Văn Lang – Âu Lạc còn được bảo tồn đến nay?\r\n\t+ Tục nhuộm răng đen (vẫn phổ biến ở các vùng nông thôn thuộc khu vực Bắc Bộ).\r\n+ Tục ăn trầu; làm bánh trưng – bánh giày trong ngày lễ/ tết.\r\n+ Tục thờ cúng tổ tiên, anh hùng dân tộc…\r\n+ Tổ chức các lễ hội liên quan đến sản xuất nông nghiệp (lễ xuống đồng; lễ mừng cơm mới…).\r\n\r\n(Học sinh kể được từ 3 thành tựu thì cho điểm tối đa)\t0,5 điểm\r\n",
+    "total_score": 10,
+    "grade": "10",
+    "general_grading_criteria": ""
   }
 }

@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block title %}Gửi ảnh bài làm{% endblock %}
+{% block content %}
+<h2>📤 Gửi ảnh bài làm</h2>
+<form method="POST" enctype="multipart/form-data">
+  <input type="text" name="group_name" placeholder="Tên nhóm" required><br><br>
+  <input type="file" name="image" accept="image/*" required><br><br>
+  <button type="submit">Gửi ảnh</button>
+</form>
+
+{% if feedback %}
+  <div style="margin-top: 30px; background-color: #e0f2f1; padding: 20px; border-left: 5px solid #009688; border-radius: 8px;">
+    <h3>🤖 Phản hồi từ AI:</h3>
+    <div style="line-height: 1.8;">{{ feedback|safe }}</div>
+  </div>
+{% endif %}
+
+<hr>
+<h2>🖼️ Các bài làm đã gửi</h2>
+{% for img in images %}
+  <div style="border: 1px solid #ccc; padding: 15px; margin-bottom: 30px; border-radius: 8px;">
+    <h3>Nhóm: {{ img.group_name }}</h3>
+    <img src="{{ url_for('static', filename='uploads/' + img.filename) }}" style="max-width: 300px;">
+    <div style="margin-top: 15px; background-color: #f5f5f5; padding: 15px; border-radius: 5px;">
+      <strong>Nhận xét của AI:</strong><br>
+      <div style="margin-top: 10px; line-height: 1.8;">{{ img.ai_feedback|safe }}</div>
+    </div>
+
+    <form action="{{ url_for('comment_general', image_id=img.id) }}" method="POST" style="margin-top: 20px;">
+      <input type="text" name="student_name" placeholder="Tên của bạn" required><br><br>
+      <textarea name="comment_text" placeholder="Nhận xét bài làm..." required style="width:100%; height:60px;"></textarea><br><br>
+      <button type="submit">Gửi nhận xét</button>
+    </form>
+
+    <h4>💬 Bình luận:</h4>
+    {% for cmt in img.comments %}
+      <p><strong>{{ cmt.student_name }}:</strong> {{ cmt.comment_text }}</p>
+    {% endfor %}
+  </div>
+{% endfor %}
+
+<div style="margin-top: 30px;">
+  <a href="/" class="back-btn">Quay về trang chính</a>
+</div>
+{% endblock %}

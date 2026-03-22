@@ -390,5 +390,124 @@
     "teacher_adjusted": false,
     "teacher_score": null,
     "teacher_comment": null
+  },
+  {
+    "exam_id": "20260321165010",
+    "student": "hs001",
+    "submitted_at": "2026-03-21 16:51:00",
+    "essay_answer": "",
+    "image_path": "uploads\\20260321165010_hs001_1774086632_z7640471046820_3743e7b3b724364ae7e096b5d6d0f2c9.jpg",
+    "score": 2.25,
+    "type": "essay",
+    "ai_graded": true,
+    "ai_feedback": {
+      "score": 2.25,
+      "strengths": "Trình bày sạch sẽ, bố cục rõ ràng, đặc biệt là bảng thống kê ở câu 2a rất khoa học và đầy đủ ý. Chữ viết dễ đọc. Nắm vững kiến thức cơ bản về đời sống của cư dân Văn Lang - Âu Lạc.",
+      "weaknesses": "Chưa sử dụng chính xác các thuật ngữ lịch sử (chữ Nôm, chữ Phạn). Bỏ sót yêu cầu tách riêng câu 1b dẫn đến thiếu số lượng tác phẩm văn học cần kể. Câu 2b còn trả lời chung chung về ngành kinh tế, chưa tập trung vào các giá trị văn hóa truyền thống cụ thể.",
+      "missing_knowledge": "Tên gọi các loại chữ viết cổ (chữ Phạn, chữ Nôm). Các tác phẩm văn học trung đại Việt Nam tiêu biểu (như Hịch tướng sĩ, Bình Ngô đại cáo). Các phong tục tập quán cụ thể còn tồn tại (ăn trầu, nhuộm răng, làm bánh chưng bánh giầy, thờ cúng tổ tiên).",
+      "improvement_areas": "Kỹ năng phân tích đề bài để tránh sót ý (đặc biệt là yêu cầu về số lượng). Kỹ năng ghi nhớ và sử dụng thuật ngữ chuyên ngành lịch sử.",
+      "suggestions": "Em cần đọc kỹ đề hơn, ví dụ đề yêu cầu kể tên một số tác phẩm thì nên liệt kê ít nhất 3 tác phẩm rõ ràng. Ở câu hỏi về các thành tựu được bảo tồn, em nên chú ý đến các nét đẹp văn hóa, phong tục tập quán vì đó là những di sản sống động nhất. Hãy bổ sung thêm các tên riêng như chữ Nôm, chữ Phạn để bài làm có độ sâu chuyên môn hơn."
+    },
+    "teacher_adjusted": false,
+    "teacher_score": null,
+    "teacher_comment": null
+  },
+  {
+    "exam_id": "20260321165010",
+    "student": "hs001",
+    "submitted_at": "2026-03-21 16:53:17",
+    "essay_answer": "",
+    "image_path": "uploads\\20260321165010_hs001_1774086787_z7640411381827_867219fdb6b7cf5a79a1c9f86c24a038.jpg",
+    "score": 2.5,
+    "type": "essay",
+    "ai_graded": true,
+    "ai_feedback": {
+      "score": 2.5,
+      "strengths": "Chữ viết rõ ràng, sạch đẹp; trình bày khoa học bằng bảng biểu và gạch đầu dòng. Nội dung phần 1a, 1b và 2a rất đầy đủ, chính xác, vượt mong đợi ở phần ví dụ các tác phẩm văn học.",
+      "weaknesses": "Học sinh bỏ sót hoàn toàn câu 2b (Kể tên những thành tựu của cư dân Văn Lang – Âu Lạc còn được bảo tồn đến nay).",
+      "missing_knowledge": "Kiến thức về sự kế thừa và bảo tồn văn hóa từ thời Văn Lang - Âu Lạc đến hiện tại (tục ăn trầu, bánh chưng bánh giầy, các lễ hội nông nghiệp).",
+      "improvement_areas": "Kỹ năng đọc đề bài bao quát để tránh bỏ sót các ý hỏi nhỏ hoặc câu hỏi phụ.",
+      "suggestions": "Em cần rèn luyện thói quen đọc kỹ toàn bộ đề bài và gạch chân dưới các câu hỏi (a, b, c) để đảm bảo không bỏ sót bất kỳ yêu cầu nào. Bài làm của em rất tốt về mặt kiến thức lý thuyết, hãy chú ý hơn để đạt điểm tuyệt đối."
+    },
+    "teacher_adjusted": false,
+    "teacher_score": null,
+    "teacher_comment": null
+  },
+  {
+    "exam_id": "20260111163814",
+    "student": "hs001",
+    "submitted_at": "2026-03-21 17:03:59",
+    "answers": {
+      "mc_0": "A",
+      "mc_1": "C",
+      "mc_2": "C",
+      "mc_3": "B",
+      "mc_4": "B",
+      "mc_5": "A",
+      "mc_6": "D",
+      "mc_7": "B",
+      "mc_8": "A",
+      "mc_9": "B",
+      "tf_0": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "tf_1": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "tf_2": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "tf_3": [
+        false,
+        false,
+        false,
+        true
+      ]
+    },
+    "score": 2.55,
+    "type": "multiple_choice",
+    "ai_graded": true,
+    "essay_ai_feedback": null,
+    "mc_ai_feedback": {
+      "ke_hoach_on_tap": "Hệ thống hóa lại toàn bộ kiến thức triều Trần bằng sơ đồ tư duy, đặc biệt chú trọng các mốc niên đại quan trọng (1225, 1258) và các địa danh hành chính (Thăng Long). Lập bảng so sánh về tổ chức bộ máy nhà nước và vai trò của các tôn giáo qua từng giai đoạn để tránh nhầm lẫn. Rèn luyện kỹ năng nhận diện từ khóa trong câu hỏi để phân biệt giữa các sự kiện có tính chất tương đồng. Thực hiện phân tích chi tiết đáp án sai sau mỗi lần luyện đề để hiểu rõ lỗ hổng về mặt bản chất lịch sử thay vì chỉ học thuộc lòng máy móc.",
+      "cac_chu_de_lien_quan": "Quá trình thành lập và tổ chức chính quyền thời Trần; Cuộc kháng chiến chống quân xâm lược Mông - Nguyên lần thứ nhất (1258); Vai trò của các nhân vật lịch sử tiêu biểu (Trần Hưng Đạo, Trần Thủ Độ); Đời sống văn hóa và sự phát triển của Phật giáo thời Trần; Tình hình kinh tế, xã hội và nguyên nhân dẫn đến sự sụp đổ của nhà Trần cuối thế kỷ XIV."
+    },
+    "tf_ai_feedback": {
+      "ke_hoach_on_tap": "Học sinh cần thực hiện lộ trình 3 bước để khắc phục các lỗ hổng kiến thức: 1. Hệ thống lại bối cảnh thành lập nhà Trần, phân biệt rõ sự chuyển giao quyền lực hòa bình (nhường ngôi) khác với khởi nghĩa vũ trang và vai trò then chốt của Trần Thủ Độ; 2. Vẽ sơ đồ bộ máy nhà nước thời Trần để ghi nhớ tính quy củ và đặc điểm độc bản là chế độ Thái thượng hoàng; 3. Lập bảng thống kê 3 lần kháng chiến chống Mông - Nguyên, làm rõ ý nghĩa trận Bạch Đằng 1288 là đè bẹp ý chí xâm lược chứ không phải tiêu diệt toàn bộ quân địch trên mọi mặt trận; 4. Rà soát các chính sách kinh tế trọng nông như đắp đê, khai hoang để hiểu rõ nền tảng xã hội.",
+      "cac_chu_de_lien_quan": "Sự suy yếu của nhà Lý cuối thế kỷ XII; Nghệ thuật quân sự Vườn không nhà trống; Vai trò của các danh tướng Trần Hưng Đạo, Trần Quang Khải; Văn hóa, giáo dục và sự phát triển của Phật giáo Trúc Lâm thời Trần; Các tầng lớp xã hội và chế độ sở hữu ruộng đất thời Trần."
+    },
+    "teacher_adjusted": false,
+    "teacher_score": null,
+    "teacher_comment": null
+  },
+  {
+    "exam_id": "20260321165010",
+    "student": "hs001",
+    "submitted_at": "2026-03-21 17:07:33",
+    "essay_answer": "",
+    "image_path": "uploads\\20260321165010_hs001_1774087618_z7640471046820_3743e7b3b724364ae7e096b5d6d0f2c9.jpg",
+    "score": 2.0,
+    "type": "essay",
+    "ai_graded": true,
+    "ai_feedback": {
+      "score": 2.0,
+      "strengths": "Trình bày bài làm sạch sẽ, khoa học, đúng cấu trúc bảng yêu cầu. Kiến thức cơ bản về đời sống vật chất và tinh thần của cư dân Văn Lang – Âu Lạc khá chắc chắn. Đặc biệt, em có mở rộng kiến thức về tín ngưỡng phồn thực và chi tiết về trình độ nghệ thuật (trống đồng, thạp đồng, tượng người...).",
+      "weaknesses": "Chưa tách biệt và trả lời đầy đủ cho câu 1b (chỉ nêu được 1 tác phẩm Việt Nam là Truyện Kiều lồng trong câu 1a, trong khi đề yêu cầu 3 tác phẩm). Câu 2b còn nhầm lẫn khi liệt kê các ngành kinh tế/kỹ thuật thay vì tập trung vào các thành tựu văn hóa, phong tục tập quán đặc trưng còn lưu giữ đến ngày nay.",
+      "missing_knowledge": "Tên các loại chữ viết cụ thể (chữ Nôm, chữ Chăm cổ, Khơ-me cổ...). Các tác phẩm văn học Việt Nam thời trung đại tiêu biểu khác (như Bình Ngô đại cáo, Hịch tướng sĩ...). Các phong tục truyền thống còn bảo tồn (như tục ăn trầu, nhuộm răng đen, làm bánh chưng bánh giầy).",
+      "improvement_areas": "Kỹ năng phân tích đề bài để tránh bỏ sót các ý hỏi nhỏ (như câu 1b). Kỹ năng phân loại kiến thức giữa 'thành tựu kinh tế' và 'thành tựu văn hóa' để trả lời chính xác trọng tâm câu hỏi.",
+      "suggestions": "Em nên đọc kỹ đề bài và đánh dấu các ý cần trả lời để không bỏ sót. Với những câu hỏi về thành tựu còn bảo tồn đến nay, hãy chú ý liên hệ với các phong tục, lễ hội truyền thống mà em thấy trong đời sống hàng ngày của người Việt."
+    },
+    "teacher_adjusted": false,
+    "teacher_score": null,
+    "teacher_comment": null
   }
 ]

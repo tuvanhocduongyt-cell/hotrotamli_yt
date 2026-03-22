@@ -411,7 +411,7 @@
 
 <!-- HIỂN THỊ ĐIỂM VÀ TRẠNG THÁI -->
 <div class="score-box">
-    <h2>{{ submission.score if submission.score is not none else '...' }}/10</h2>
+    <h2>{{ submission.score if submission.score is not none else '...' }}</h2>
     <p>
         {{ 'Diem cua ban' if session.exam_role == 'student' else 'Diem cua hoc sinh' }}
         {% if submission.teacher_adjusted %}
@@ -426,8 +426,8 @@
 {% if submission.teacher_adjusted %}
 <div class="grading-status teacher-adjusted">
     <h4 style="color: #388e3c; margin-top: 0;">✓ Giáo viên đã điều chỉnh điểm</h4>
-    <p><strong>Điểm AI gốc:</strong> {{ submission.get('original_ai_score', submission.score) }}/10</p>
-    <p><strong>Điểm sau điều chỉnh:</strong> {{ submission.score }}/10</p>
+    <p><strong>Điểm AI gốc:</strong> {{ submission.get('original_ai_score', submission.score) }}</p>
+    <p><strong>Điểm sau điều chỉnh:</strong> {{ submission.score }}</p>
 </div>
 {% elif submission.ai_graded %}
 <div class="grading-status">
@@ -532,7 +532,7 @@
         {% if submission.teacher_adjusted %}
         Bạn đã điều chỉnh điểm cho bài này. Bạn có thể thay đổi lại nếu cần.
         {% else %}
-        AI đã chấm điểm: <strong>{{ submission.score }}/10</strong>. Bạn có thể giữ nguyên hoặc điều chỉnh.
+        AI đã chấm điểm: <strong>{{ submission.score }}</strong>. Bạn có thể giữ nguyên hoặc điều chỉnh.
         {% endif %}
     </p>
 
@@ -541,7 +541,7 @@
             <label>Điểm mới (0-10):</label>
             <input type="number" name="teacher_score" min="0" max="10" step="0.1"
                 value="{{ submission.teacher_score if submission.teacher_adjusted else submission.score }}" required>
-            <small style="color: #666;">Điểm AI: {{ submission.score }}/10</small>
+            <small style="color: #666;">Điểm AI: {{ submission.score }}</small>
         </div>
 
         <div class="form-group">

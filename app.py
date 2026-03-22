@@ -187,7 +187,7 @@ def build_prompt(topic, context_data, user_input, is_first_message=False):
             f"Bạn là trợ lý AI giúp học sinh vượt qua căng thẳng.\n"
             f"Dữ liệu tham khảo:\n{context_summary}\n\n"
             f"QUY TẮC BẮT BUỘC:\n"
-            f"- Gõ đúng chính tả, ĐẦY ĐỦ DẤU TIẾNG VIỆT.\n"
+            f"- Trả lời ngắn gọn, trình bày khoa học, Gõ đúng chính tả, ĐẦY ĐỦ DẤU TIẾNG VIỆT.\n"
             f"- Phân chia đoạn văn rõ ràng bằng dòng trống (xuống hàng giữa các ý chính).\n"
             f"- KHÔNG DÙNG ĐỊNH DẠNG MARKDOWN (không dùng dấu *, #, -, •, **).\n"
             f"- Trả lời với giọng điệu trấn an, đồng cảm\n"
@@ -203,7 +203,7 @@ def build_prompt(topic, context_data, user_input, is_first_message=False):
             f"Bạn là trợ lý AI tư vấn nghề nghiệp cho học sinh.\n"
             f"Dữ liệu tham khảo:\n{context_summary}\n\n"
             f"QUY TẮC BẮT BUỘC:\n"
-            f"- Gõ đúng chính tả, ĐẦY ĐỦ DẤU TIẾNG VIỆT.\n"
+            f"- Trả lời ngắn gọn, trình bày khoa học, gõ đúng chính tả, ĐẦY ĐỦ DẤU TIẾNG VIỆT.\n"
             f"- Phân chia đoạn văn rõ ràng bằng dòng trống (gióng xuống hàng).\n"
             f"- KHÔNG DÙNG ĐỊNH DẠNG MARKDOWN (không dùng dấu *, #, -, •, **).\n"
             f"- Khích lệ, giúp học sinh khám phá bản thân\n"
@@ -219,7 +219,7 @@ def build_prompt(topic, context_data, user_input, is_first_message=False):
             f"Bạn là trợ lý AI thân thiện.\n"
             f"Dữ liệu tham khảo:\n{context_summary}\n\n"
             f"QUY TẮC:\n"
-            f"- Trả lời tự nhiên, thân thiện\n"
+            f"- Trả lời ngắn gọn nhưng đầy đủ kiến thức, tự nhiên, thân thiện\n"
             f"- Dùng cả dữ liệu và kiến thức chung\n"
             f"- KHÔNG từ chối hay xin lỗi khi không có dữ liệu\n\n"
             f"{intro}Câu hỏi: {user_input}\n"
@@ -293,43 +293,43 @@ if os.path.exists(pdf_folder):
 docs_list = [
     {
         "title": "Bộ đề tham tham khảo lịch sử THPT D21",
-        "link": "https://drive.google.com/file/d/1qIS83JH_9OpTk_tR9bwhl61F_EETPaFk/view?usp=sharing"
+        "link": "https://drive.google.com/file/d/16_HOsOEUv8zBWVevGw6OwEcdtBoZW1Pi/view?usp=sharing"
     },
     {
         "title": "Bộ đề tham tham khảo lịch sử THPT D22",
-        "link": "https://drive.google.com/file/d/1dxNrWXjxLlO97ZAAb-E-s56n6peCYrqp/view?usp=sharing"
+        "link": "https://drive.google.com/file/d/1eUjayvUHyudcRpb3cS4KsEeb5Wzk_rPP/view?usp=sharing"
     },
     {
         "title": "Bộ đề tham tham khảo lịch sử THPT D23",
-        "link": "https://drive.google.com/file/d/16jaAmn-87QN7kiYzB7dIcF0fjRGpPLJg/view?usp=sharing"
+        "link": "https://drive.google.com/file/d/1tXOmTZy-aO2g4LLU6mAsIGlBQ9jODwDA/view?usp=sharing"
     },
     {
         "title": "Bộ đề tham tham khảo lịch sử THPT D24",
-        "link": "https://drive.google.com/file/d/1p8GQ5aHna5H8q0ujq26tK7uqjT5v3P-1/view?usp=sharing"
+        "link": "https://drive.google.com/file/d/1ZDxMJOfM3Q_6sYW5UBpUrGsSxVbjRXDj/view?usp=sharing"
     },
     {
         "title": "Bộ đề tham tham khảo lịch sử THPT D25",
-        "link": "https://drive.google.com/file/d/1IUtEbTVS4-mRmyBEV6gbDGjHxJHAtgSf/view?usp=sharing"
+        "link": "https://drive.google.com/file/d/10SkT9OdjR6weoLWrdVIdWG6c969vY6dA/view?usp=sharing"
     },
     {
         "title": "Bộ đề tham tham khảo lịch sử THPT D26",
-        "link": "https://drive.google.com/file/d/1CXVEz6NPRusUaVJE3HRTOBm6neYbcmge/view?usp=sharing"
+        "link": "https://drive.google.com/file/d/1gWPk1a_RbffSY_T3x-UTq933U9pokoxa/view?usp=sharing"
     },
     {
         "title": "Bộ đề tham tham khảo lịch sử THPT D27",
-        "link": "https://drive.google.com/file/d/1NlCO6a7kTCortwWU0BC2Yme3sTH4xBOV/view?usp=sharing"
+        "link": "https://drive.google.com/file/d/1GikX4lqR2LaMclCboRIG_W5Qr8OlKe3Y/view?usp=sharing"
     },
     {
         "title": "Bộ đề tham tham khảo lịch sử THPT 28",
-        "link": "https://drive.google.com/file/d/1M7FLkTU4P35ljfghkjvuDEHV1k5ZrTv3/view?usp=sharing"
+        "link": "https://drive.google.com/file/d/1k0QEgiW88wGVZeLtbRww77_W1v2fkhBz/view?usp=sharing"
     },
     {
         "title": "Bộ đề tham tham khảo lịch sử THPT D29",
-        "link": "https://drive.google.com/file/d/1Ob-hF8P1_itOvZoKWk0JUNzpLxQTGHdZ/view?usp=sharing"
+        "link": "https://drive.google.com/file/d/1FdooUhfcbGS9CDg4N_prLApFVr_7OcLo/view?usp=sharing"
     },
     {
         "title": "Bộ đề tham tham khảo lịch sử THPT D30",
-        "link": "https://drive.google.com/file/d/16_xfgmEqr_HSF2rD0jLZOj00CTDiSfDQ/view?usp=sharing"
+        "link": "https://drive.google.com/file/d/1VmTW1wpRiL4v3KHOmbBffg5YLi7ZvIKt/view?usp=sharing"
     },
     {
         "title": "Tài liệu ôn thi",
@@ -749,7 +749,6 @@ Dữ liệu tham khảo (ưu tiên nếu liên quan):
 {custom_data[:1500]}
 
 {context}
-
 QUY TẮC BẮT BUỘC:
 - Viết đúng chính tả, ĐẦY ĐỦ DẤU TIẾNG VIỆT.
 - Phân chia đoạn văn thành các đoạn nhỏ rõ ràng, nhớ xuống dòng giữa các ý.
@@ -759,9 +758,9 @@ QUY TẮC BẮT BUỘC:
 - Trả lời tự nhiên, thân thiện như một cuộc trò chuyện thực tế
 - Nếu hỏi tiếp về câu trước, hãy dựa vào lịch sử hội thoại để trả lời liền mạch
 - Nếu họ dùng tiếng Việt thì trả lời bằng tiếng Việt
-- Chỉ giới thiệu ở câu đầu tiên, từ câu 2 trở đi trò chuyện bình thường
+- Chỉ giới thiệu ở câu đầu tiên, từ câu 2 trở đi trò chuyện bình thường không giới thiệu lại nữa
 - KHÔNG dùng markdown format (###, ***, **, -, •)
-- Trả lời dạng văn xuôi tự nhiên, xuống dòng dễ nhìn.
+- Trả lời dạng văn xuôi tự nhiên, xuống dòng thành các đoạn logic, dễ nhìn.
 
 {intro}Câu hỏi hiện tại: {user_message}
 Trả lời:
@@ -1142,21 +1141,25 @@ def submit(de_id):
         results=results
     )
 
-# TIÊU CHÍ CHẤM ĐIỂM từ file data_2.txt
+# TIÊU CHÍ CHẤM ĐIỂM từ file data_2.txt (bài tự luận khối 10)
 RUBRIC_CRITERIA = """
-HỆ THỐNG TIÊU CHÍ CHẤM ĐIỂM (10 điểm):
+HỆ THỐNG TIÊU CHÍ CHẤM ĐIỂM (3 điểm):
 
 Câu 1 (1,5 điểm):
-- Năng lực: Trình bày được nội dung chính về đặc điểm của các lực lượng cách mạng và vai trò của nghị quyết (0,5 điểm)  
-- Kể tên các nhân vật lịch sử, sự kiện và phản ánh năng lực phân tích (0,25 điểm)
-- Mức độ đầy đủ về các vấn đề liên quan đến nội dung câu hỏi (0,25 điểm)
-- Trong thời đại ngày nay, phân tích vai trò của các lực lượng và ý nghĩa trong bối cảnh hiện tại (0,25 điểm)
-- Công xót người dân về việc phát triển và xây dựng lực lượng cách mạng (0,25 điểm)
+a)- Thành tựu về chữ viết:
++ Trên cơ sở chữ (chữ Hán) của Trung Hoa  người Việt sáng tạo ra chữ Nôm (0,25 điểm)
++ Trên cơ sở chữ Phạn của Ấn Độ, cư dân nhiều nước Đông Nam Á đã sáng tạo ra chữ viết riêng của mình như chữ Chăm cổ, Khơ me cổ, … (0,25 điểm)
+- Thành tựu về văn học:
++ Cư dân Đông Nam Á đã sáng tạo kho tàng văn học dân gian phong phú đa dạng: truyền thuyết, cổ tích, truyện cười… (0,25 điểm)
++ Trên cơ sở chữ viết riêng, cư dân các nước ĐNA đã xây dựng nền văn học viết với nhiều tác phẩm xuất sắc còn được lưu giữ đến ngày nay (0,25 điểm).
+b) Học sinh kể được 3 tác phẩm văn học Việt Nam cổ - trung đại thì cho điểm tối đa. Ví dụ: Hịch Tướng Sĩ, Bình Ngô Đại Cáo, Truyện Kiểu….(0,5 điểm)
 
 Câu 2 (1,5 điểm):
-- Em hãy nêu khái niệm và vai trò của lực lượng dân tộc trong sự nghiệp cách mạng (0,5 điểm)
-- Năng lực phân tích bối cảnh lịch sử và vai trò của ngoại lực (0,5 điểm)
-- Viết mạch lạc, có luận cứ về vai trò của các yếu tố trong phong trào cách mạng (0,5 điểm)
+a) - Đời sống vật chất:Ăn: Cơm, rau cá. Lương thực chính là lúa gạo. Ở: Nhà sàn. Mặc: Nam đóng khố ở trần, nữ mặc áo yếm. Đi lại: sử dụng thuyền bè (0,5 điểm)
+- Đời sống Tinh thần: Tín ngưỡng: thờ tổ tiên, sùng bái tự nhiên. Phong tục: ăn trầu, nhuộm răng đen, xăm mình. Âm nhạc: trống đồng, cồng chiêng, nhảy múa… Nghệ thuật: điêu khắc, luyện kim, làm gốm. (0,5 điểm)
+b) + Tục nhuộm răng đen (vẫn phổ biến ở các vùng nông thôn thuộc khu vực Bắc Bộ) (0,25 điểm)
+ + Tục ăn trầu; làm bánh chưng, bánh giày trong ngày lễ, tết (0,25 điểm)
+
 """
 
 
@@ -1177,17 +1180,17 @@ YÊU CẦU CHẤM BÀI:
 📝 ĐIỂM CHI TIẾT:
 
 **CÂU 1 ([X]/1.5 điểm):**
-- Tiêu chí 1 (0.5đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+- Tiêu chí 1 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
 - Tiêu chí 2 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
 - Tiêu chí 3 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
 - Tiêu chí 4 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
-- Tiêu chí 5 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+- Tiêu chí 5 (0.5đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
 
 **CÂU 2 ([X]/1.5 điểm):**
 - Tiêu chí 1 (0.5đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
 - Tiêu chí 2 (0.5đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
-- Tiêu chí 3 (0.5đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
-
+- Tiêu chí 3 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+- Tiêu chí 4 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
 
 
 ❌ LỖI SAI CẦN SỬA (nếu có):
@@ -1204,7 +1207,6 @@ LƯU Ý QUAN TRỌNG:
 - Tối đa 200 từ, ngắn gọn súc tích"""
 
     return prompt
-
 
 @app.route('/upload_image', methods=['GET', 'POST'])
 def upload_image():
@@ -1233,6 +1235,94 @@ def upload_image():
 
     return render_template('upload_image.html', feedback=ai_feedback)
 
+    #Bài tự luận số 2 - HK1 khối 10
+RUBRIC_CRITERIA2 = """
+HỆ THỐNG TIÊU CHÍ CHẤM ĐIỂM (3 điểm):
+
+Câu 1 (1,5 điểm): Có quan điểm cho rằng: “ Học tập lịch sử chỉ diễn ra ở trong các lớp học và khi chúng ta còn là học sinh, sinh viên”. Theo em, quan điểm đó đúng hay sai? Tại sao?	
+Quan điểm cho rằng: “ Học tập lịch sử chỉ diễn ra ở trong các lớp học và khi chúng ta còn là học sinh, sinh viên”. Theo em, quan điểm đó là sai	0,5
+ Học tập lịch sử không chỉ diễn ra ở trong các lớp học và khi chúng ta còn là học sinh, sinh viên mà con người cần học tập và khám phá lịch sử suốt đời, vì:
++ Kho tàng tri thức lịch sử của nhân loại rất phong phú, rộng lớn và đa dạng. Tri thức lịch sử thu nhận ở nhà trường chỉ là một phần rất nhỏ trong kho tàng ấy.	0,25
++ Muốn hiểu đúng và đầy đủ về việc lịch sử là một quá trình lâu dài...	0,25
++ Trong thời đại ngày nay, những thay đổi, phát hiện mới trong khoa học lịch sử ngày càng nhiều, quan điểm, nhận thức về lịch sử cũng có nhiều chuyển biến mới....	0,25
++ Giúp mỗi người cập nhật và mở rộng tri thức, phát triển và hoàn thiện kĩ năng; nắm bắt tốt các cơ hội nghề nghiệp, việc làm và đời sống…	0,25
+
+Câu 2 (1,5 điểm):Em hãy so sánh khái niệm văn minh, văn hóa và trình bày về 01 thành tựu của nền văn minh Ai Cập cổ đại.	
+	- Giống nhau: đều là những giá trị vật chất và tinh thần do con người sáng tạo ra trong tiến trình lịch sử. 	0,5 điểm
+	- Khác nhau:
+    + Văn hóa bao gồm toàn bộ những giá trị vật chất và tinh thần mà con người sáng tạo ra từ khi xuất hiện cho đến nay	0,5 điểm
+	+ Văn minh là những giá trị vật chất và tinh thần mà con người sáng tạo ra trong giai đoạn phát triển cao của xã hội.	0,5 điểm
+
+
+"""
+def generate_grading_prompt2():
+    """Tạo prompt chấm điểm dựa trên rubric"""
+    
+    prompt = f"""Bạn là giáo viên Lịch sử chấm bài. Hãy phân tích bài làm trong ảnh theo TIÊU CHÍ SAU:
+
+{RUBRIC_CRITERIA2}
+
+YÊU CẦU CHẤM BÀI:
+1. Đọc kỹ bài làm của học sinh trong ảnh
+2. Chấm điểm CHI TIẾT cho TỪNG TIÊU CHÍ theo đúng thang điểm
+3. Phân tích theo format BẮT BUỘC:
+
+📊 TỔNG ĐIỂM: [X/3]
+
+📝 ĐIỂM CHI TIẾT:
+
+**CÂU 1 ([X]/1.0 điểm):**
+- Tiêu chí 1 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+- Tiêu chí 2 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+- Tiêu chí 3 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+- Tiêu chí 4 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+
+**CÂU 2 ([X]/1.5 điểm):**
+- Tiêu chí 1 (0.5đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+- Tiêu chí 2 (0.5đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+- Tiêu chí 3 (0.5đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+
+
+❌ LỖI SAI CẦN SỬA (nếu có):
+- "Trích nguyên văn lỗi trong bài" → Sửa: [giải thích đúng]
+- "Trích nguyên văn lỗi khác" → Sửa: [giải thích đúng]
+
+💡 GỢI Ý CẢI THIỆN:
+[1-2 câu ngắn gọn để học sinh cải thiện bài làm]
+
+LƯU Ý QUAN TRỌNG:
+- Phải TRÍCH NGUYÊN VĂN câu/đoạn sai trong bài làm (đặt trong dấu ngoặc kép)
+- Chỉ ra lỗi CỤ THỂ: sai sự kiện, sai năm tháng, sai khái niệm, thiếu logic, thiếu độ sâu...
+- Chấm điểm CÔNG BẰNG theo đúng thang điểm từng tiêu chí
+- Tối đa 200 từ, ngắn gọn súc tích"""
+
+    return prompt
+@app.route('/upload_image2', methods=['GET', 'POST'])
+def upload_image2():
+    ai_feedback = None
+
+    if request.method == 'POST':
+        image = request.files.get('image')
+        if not image or image.filename == '':
+            return render_template('upload_image2.html', feedback="⚠ Không có ảnh được chọn.")
+
+        # FIX: thêm timestamp tránh trùng tên file
+        import time
+        safe_filename = secure_filename(f"{int(time.time())}_{image.filename}")
+        image_path = os.path.join(app.config['UPLOAD_FOLDER'], safe_filename).replace('\\', '/')
+        image.save(image_path)
+
+        try:
+            img = Image.open(image_path)
+            prompt = generate_grading_prompt2()
+            response = generate_with_retry([img, prompt], feature='lichsu')
+            ai_feedback = response.text
+            ai_feedback = format_feedback_html(ai_feedback)
+
+        except Exception as e:
+            ai_feedback = f"⚠ Lỗi khi xử lý ảnh: {str(e)}"
+
+    return render_template('upload_image2.html', feedback=ai_feedback)
 
 def format_feedback_html(text):
     """Format feedback thành HTML đẹp"""
@@ -1508,11 +1598,11 @@ def auto_grade_essay_with_ai(exam, essay_answer, image_path=None):
 Tiêu chí chấm: {tieu_chi}
 {text_part}
 
-Học sinh đã nộp bài làm viết tay trong ảnh đính kèm. Hãy đọc kỹ ảnh và chấm điểm theo thang điểm 10.
+Học sinh đã nộp bài làm viết tay trong ảnh đính kèm. Hãy đọc kỹ ảnh và chấm điểm theo thang điểm 3. trình bày ngắn gọn, xúc tích, chính xác và khoa học.
 
 Chỉ trả về JSON thuần, không giải thích thêm:
 {{
-  "score": <điểm số từ 0 đến 10>,
+  "score": <điểm số từ 0 đến 3>,
   "strengths": "<điểm mạnh của bài làm>",
   "weaknesses": "<điểm yếu cần cải thiện>",
   "missing_knowledge": "<kiến thức còn thiếu>",
@@ -1522,7 +1612,7 @@ Chỉ trả về JSON thuần, không giải thích thêm:
             print(f"[AI GRADE] Gọi AI với ảnh...")
             response = generate_with_retry([img, prompt], feature='lichsu')
         else:
-            prompt = f"""Bạn là giáo viên lịch sử chấm bài thi tự luận.
+            prompt = f"""Bạn là giáo viên lịch sử chấm bài thi tự luận, có kiến thức chuyên môn sâu, trình bày ngắn gọn, dễ hiểu, chính xác và khoa học.
 
 Đề bài: {de_bai}
 
@@ -1531,11 +1621,11 @@ Tiêu chí chấm: {tieu_chi}
 Bài làm của học sinh:
 {essay_answer if essay_answer else '(Học sinh không viết gì)'}
 
-Hãy chấm điểm theo thang điểm 10 và phân tích chi tiết.
+Hãy chấm điểm theo thang điểm 3 và phân tích chi tiết, trình bày ngắn gọn, dễ hiểu và chính xác.
 
 Chỉ trả về JSON thuần, không giải thích thêm:
 {{
-  "score": <điểm số từ 0 đến 10>,
+  "score": <điểm số từ 0 đến 3>,
   "strengths": "<điểm mạnh của bài làm>",
   "weaknesses": "<điểm yếu cần cải thiện>",
   "missing_knowledge": "<kiến thức còn thiếu>",
@@ -1587,12 +1677,12 @@ def analyze_truefalse_errors(exam, tf_errors):
                     errors_text += f"    Đáp án đúng: {correct}\n"
                     errors_text += f"    Học sinh chọn: {user}\n"
 
-        prompt = f"""Bạn là giáo viên lịch sử, hãy phân tích các lỗi sai của học sinh trong câu đúng/sai.
+        prompt = f"""Bạn là giáo viên lịch sử, hãy phân tích ngắn gọn, cụ thể, chính xác các lỗi sai của học sinh trong câu đúng/sai.
 
 Các lỗi sai:
 {errors_text}
 
-Hãy đưa ra:
+Hãy đưa ra một cách ngắn gọn, chính xác và cụ thể:
 1. KẾ HOẠCH ÔN TẬP cụ thể để học sinh khắc phục các lỗi sai trên.
 2. CÁC CHỦ ĐỀ LIÊN QUAN cần ôn thêm.
 
@@ -1623,13 +1713,14 @@ def auto_grade_mixed_essay_with_ai(question, grading_criteria, essay_answer, ima
             has_text = bool(essay_answer and essay_answer.strip() and essay_answer.strip() != 'None')
             text_part = f"\nBài làm bằng chữ (nếu có): {essay_answer}" if has_text else "\nHọc sinh KHÔNG viết gì bằng chữ, CHẤM DUY NHẤT BẰNG ẢNH BÊN DƯỚI."
 
-            prompt = f"""Bạn là giáo viên lịch sử chấm bài.
+            prompt = f"""Bạn là giáo viên lịch sử chấm bài. cách trả lời của bạn đảm bảo phải chính xác, ngắn gọn, cụ thể và khoa học.
 
 Câu hỏi: {question}
 
 Tiêu chí: {grading_criteria}{text_part}
 
-Học sinh đã nộp bài làm viết tay trong ảnh đính kèm. Hãy chấm điểm theo thang điểm {max_score}.
+Học sinh đã nộp bài làm viết tay trong ảnh đính kèm. Hãy chấm điểm theo thang điểm {max_score}. cách nhận xét của bạn đảm bảo phải chính xác, ngắn gọn, cụ thể và khoa học.
+
 
 Trả về JSON (KHÔNG DÙNG # VÀ **):
 {{
@@ -1641,7 +1732,7 @@ Trả về JSON (KHÔNG DÙNG # VÀ **):
 Chỉ trả về JSON."""
             response = generate_with_retry([img, prompt], feature='lichsu')
         else:
-            prompt = f"""Bạn là giáo viên lịch sử chấm bài.
+            prompt = f"""Bạn là giáo viên lịch sử chấm bài. cách nhận xét của bạn đảm bảo phải chính xác, ngắn gọn, cụ thể và khoa học.
 
 Câu hỏi: {question}
 
@@ -2593,12 +2684,12 @@ def analyze_wrong_answers(exam, mc_wrong):
             errors_text += f"  Đáp án đúng: {q['answer']}\n"
             errors_text += f"  Học sinh chọn: {item['user_answer']}\n"
 
-        prompt = f"""Bạn là giáo viên lịch sử, hãy phân tích các lỗi sai của học sinh trong đề thi trắc nghiệm.
+        prompt = f"""Bạn là giáo viên lịch sử, hãy phân tích ngắn gọn, chính xác, khoa học và cụ thể các lỗi sai của học sinh trong đề thi trắc nghiệm.
 
 Các lỗi sai:
 {errors_text}
 
-Hãy đưa ra:
+Hãy đưa ra nhận xét rõ ràng, mạch lạc, xúc tích, ngắn gọn và chính xác:
 1. KẾ HOẠCH ÔN TẬP: Lập sơ đồ tư duy hoặc bảng biểu tổng hợp các sự kiện lịch sử lớn. Phân biệt rõ ràng các khái niệm dễ nhầm lẫn. Luyện tập ghi nhớ các chi tiết như niên đại, tên gọi cụ thể. Đọc kỹ câu hỏi và phân tích từng lựa chọn. Luyện tập giải đề và phân tích lỗi sai.
 
 2. CÁC CHỦ ĐỀ LIÊN QUAN cần ôn thêm dựa trên các lỗi sai trên.
@@ -2657,8 +2748,8 @@ def do_exam(exam_id):
             
             # PHÂN BỔ ĐIỂM
             if exam['type'] == 'mixed':
-                mc_total = 4
-                tf_total = 3
+                mc_total = 5
+                tf_total = 2
                 essay_total = 3
             else:
                 mc_total = 6
