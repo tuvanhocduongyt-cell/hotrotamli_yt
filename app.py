@@ -164,7 +164,7 @@ def build_prompt(topic, context_data, user_input, is_first_message=False):
     context_summary = context_data[:1500] if context_data else ""
     
     if topic == "tam_li":
-        intro = "Chào bạn, tôi là trợ lý AI Tâm An chuyên về lĩnh vực tâm lí.\n\n" if is_first_message else ""
+        intro = "Chào bạn, tôi là trợ lý AI Tâm An chuyên gia về lĩnh vực tâm lí.\n\n" if is_first_message else ""
         return (
             f"tôi là trợ lý AI Tâm An chuyên về lĩnh vực tâm lí.\n"
             f"Dữ liệu tham khảo:\n{context_summary}\n\n"
@@ -182,7 +182,7 @@ def build_prompt(topic, context_data, user_input, is_first_message=False):
             f"Trả lời: (nhớ xuống dòng giữa các ý chính)"
         )
     elif topic == "stress":
-        intro = "Chào bạn, tôi là trợ lý AI Tâm An, chuyên hỗ trợ tâm lý và stress.\n\n" if is_first_message else ""
+        intro = "Chào bạn, tôi là trợ lý AI Tâm An, chuyên gia hỗ trợ tâm lý và stress theo lý thuyết nhận thức - hành vi.\n\n" if is_first_message else ""
         return (
             f"Bạn là trợ lý AI giúp học sinh vượt qua căng thẳng.\n"
             f"Dữ liệu tham khảo:\n{context_summary}\n\n"
@@ -744,7 +744,7 @@ def chat_stream():
                 context += "\n"
             
             prompt = f"""
-Bạn là trợ lý AI thông minh của cô Phạm Hằng chuyên về lịch sử.
+Bạn là trợ lý AI thông minh của cô Phạm Hằng, giáo viên dạy học môn lịch sử, có kiến thức chuyên môn sâu rộng, kiến thức lịch sử chính xác.
 Dữ liệu tham khảo (ưu tiên nếu liên quan):
 {custom_data[:1500]}
 
@@ -753,7 +753,7 @@ QUY TẮC BẮT BUỘC:
 - Viết đúng chính tả, ĐẦY ĐỦ DẤU TIẾNG VIỆT.
 - Phân chia đoạn văn thành các đoạn nhỏ rõ ràng, nhớ xuống dòng giữa các ý.
 - Ưu tiên dùng dữ liệu trên nếu câu hỏi liên quan
-- Nếu không có trong dữ liệu, TỰ TIN trả lời bằng kiến thức tổng quát của bạn
+- Nếu không có trong dữ liệu, TỰ TIN trả lời bằng kiến thức tổng quát của bạn nhưng phải đảm bảo đúng chương trình giáo dục phổ thông 2018
 - TUYỆT ĐỐI KHÔNG nói "xin lỗi, không có dữ liệu" hay "nằm ngoài phạm vi kiến thức"
 - Trả lời tự nhiên, thân thiện như một cuộc trò chuyện thực tế
 - Nếu hỏi tiếp về câu trước, hãy dựa vào lịch sử hội thoại để trả lời liền mạch
@@ -838,7 +838,7 @@ def chat():
         context += "\n"
     
     prompt = f"""
-Bạn là trợ lý AI thông minh của cô Phạm Hằng chuyên về lịch sử.
+Bạn là trợ lý AI thông minh của cô Phạm Hằng, giáo viên dạy môn lịch sử, có kiến thức chuyên môn sâu rộng.
 Dữ liệu tham khảo (ưu tiên nếu liên quan):
 {custom_data[:1500]}
 
@@ -848,7 +848,7 @@ QUY TẮC BẮT BUỘC:
 - Viết đúng chính tả, ĐẦY ĐỦ DẤU TIẾNG VIỆT.
 - Phân chia đoạn văn thành các đoạn nhỏ rõ ràng, nhớ XUỐNG DÒNG giữa các ý.
 - Ưu tiên sử dụng dữ liệu trên nếu câu hỏi liên quan
-- Nếu không có trong dữ liệu, TỰ TIN trả lời bằng kiến thức của bạn
+- Nếu không có trong dữ liệu, TỰ TIN trả lời bằng kiến thức của bạn nhưng đúng kiến thức chương trình giáo dục phổ thông 2018
 - KHÔNG BAO GIỜ nói "xin lỗi, không có dữ liệu" hoặc "nằm ngoài phạm vi"
 - Trả lời tự nhiên, thân thiện như cuộc hội thoại thực tế
 - Nếu hỏi tiếp về câu trước, dựa vào lịch sử để trả lời liền mạch
@@ -1115,9 +1115,9 @@ def submit(de_id):
             f"{summary}\n\n"
             "Dưới đây là danh sách các lỗi học sinh mắc phải:\n"
             + "\n".join(feedback) + "\n\n"
-            "Bạn là giáo viên lịch sử. Hãy:\n"
-            "1. Nhận xét tổng thể bài làm\n"
-            "2. Phân tích từng lỗi sai (nêu lý do sai, giải thích kiến thức liên quan)\n"
+            "Bạn là giáo viên lịch sử cấp THPT, trình độ thạc sĩ, có kiến thức chuyên môn cao, chính xác theo chương trình giáo dục phổ thông 2018. Hãy:\n"
+            "1. Nhận xét tổng thể bài làm một cách ngắn gọn, khoa học và chính xác\n"
+            "2. Phân tích từng lỗi sai (nêu lý do sai, giải thích kiến thức liên quan) một cách chính xác, ngắn gọn, dễ hiểu\n"
             "3. Đề xuất ít nhất 3 dạng bài tập cụ thể để học sinh luyện tập đúng phần bị sai"
         )
         response = generate_with_retry([prompt], feature='lichsu')
@@ -1140,6 +1140,8 @@ def submit(de_id):
         total_questions=total_questions,
         results=results
     )
+
+
 
 # TIÊU CHÍ CHẤM ĐIỂM từ file data_2.txt (bài tự luận khối 10)
 RUBRIC_CRITERIA = """

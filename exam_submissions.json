@@ -509,5 +509,72 @@
     "teacher_adjusted": false,
     "teacher_score": null,
     "teacher_comment": null
+  },
+  {
+    "exam_id": "20260325101934",
+    "student": "hs001",
+    "submitted_at": "2026-03-25 10:22:54",
+    "answers": {
+      "mc_0": "D",
+      "mc_1": "D",
+      "mc_2": "C",
+      "mc_3": "B",
+      "mc_4": "B",
+      "mc_5": "B",
+      "mc_6": "C",
+      "mc_7": "C",
+      "mc_8": "A",
+      "mc_9": "C",
+      "mc_10": "C",
+      "mc_11": "C",
+      "mc_12": "C",
+      "mc_13": "A",
+      "mc_14": "D",
+      "mc_15": "B",
+      "mc_16": "B",
+      "mc_17": "C",
+      "mc_18": "D",
+      "mc_19": "C",
+      "mc_20": "B",
+      "mc_21": "C",
+      "mc_22": "C",
+      "mc_23": "D",
+      "tf_0": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "tf_1": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "tf_2": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "tf_3": [
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    "score": 9.75,
+    "type": "multiple_choice",
+    "ai_graded": true,
+    "essay_ai_feedback": null,
+    "mc_ai_feedback": {
+      "ke_hoach_on_tap": "Xây dựng sơ đồ tư duy hệ thống hóa phong trào Tây Sơn theo ba trụ cột: lật đổ các thế lực phong kiến, thống nhất đất nước và kháng chiến chống ngoại xâm. Sử dụng bảng biểu để phân biệt rõ ràng giữa kết quả (những gì đã đạt được) và ý nghĩa (giá trị, tầm quan trọng lâu dài). Luyện tập kỹ năng nhận diện từ khóa trong câu hỏi để không nhầm lẫn giữa ý nghĩa cục bộ và ý nghĩa toàn cục. Thực hiện phân tích các phương án nhiễu thường gặp về mốc thời gian thế kỷ XVIII.",
+      "cac_chu_de_lien_quan": "Quá trình sụp đổ của chính quyền Đàng Trong, Đàng Ngoài và sự tan rã của mô hình lưỡng đầu Lê - Trịnh. Cuộc kháng chiến chống quân Xiêm (1785) và quân Thanh (1789). Vai trò của Nguyễn Huệ trong việc đặt nền móng thống nhất đất nước. Các chính sách xây dựng đất nước thời Quang Trung và nguyên nhân thất bại của vương triều này trước nhà Nguyễn."
+    },
+    "tf_ai_feedback": null,
+    "teacher_adjusted": false,
+    "teacher_score": null,
+    "teacher_comment": null
   }
 ]

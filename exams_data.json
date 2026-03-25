@@ -1,11 +1,11 @@
 {
   "20260111163814": {
     "id": "20260111163814",
-    "title": "lịch sử lớp 11",
+    "title": "K11_CD1",
     "type": "multiple_choice",
     "duration": 15,
     "created_by": "gv001",
-    "created_at": "2026-01-11 16:38:31",
+    "created_at": "2025-03-11 16:38:31",
     "questions": {
       "multiple_choice": [
         {
@@ -176,11 +176,11 @@
   },
   "20260112132918": {
     "id": "20260112132918",
-    "title": "battap test",
+    "title": "K10_CD1",
     "type": "essay",
     "duration": 30,
     "created_by": "gv001",
-    "created_at": "2026-01-12 13:29:18",
+    "created_at": "2025-03-20 13:29:18",
     "essay_question": "Trình bày nguyên nhân bùng nổ và tính chất của Chiến tranh thế giới thứ nhất (1914–1918).",
     "grading_criteria": "Tiêu chí chấm\r\n\r\nNguyên nhân bùng nổ (2 điểm)\r\n\r\nMâu thuẫn giữa các nước đế quốc về vấn đề thuộc địa (1.0 đ)\r\nSự hình thành hai khối quân sự đối lập và chạy đua vũ trang (0.5 đ)\r\nDuyên cớ trực tiếp: Thái tử Áo–Hung bị ám sát tại Xéc-bi (0.5 đ)\r\nTính chất chiến tranh (1 điểm)\r\nLà cuộc chiến tranh đế quốc phi nghĩa (0.75 đ)\r\nGây tổn thất nặng nề cho nhân loại (0.25 đ)",
     "total_score": 10,
@@ -188,11 +188,11 @@
   },
   "20260304162902": {
     "id": "20260304162902",
-    "title": "kkkkkkkkk",
+    "title": "K12_CD2",
     "type": "multiple_choice",
-    "duration": 60,
+    "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-04 16:29:02",
+    "created_at": "2025-04-06 16:29:02",
     "questions": {
       "multiple_choice": [
         {
@@ -563,11 +563,11 @@
   },
   "20260305103258": {
     "id": "20260305103258",
-    "title": "kkkkkkkkkkkkkkkkk",
+    "title": "K12D2",
     "type": "multiple_choice",
-    "duration": 60,
+    "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-05 10:32:58",
+    "created_at": "2025-05-05 10:32:58",
     "questions": {
       "multiple_choice": [
         {
@@ -938,7 +938,7 @@
   },
   "20260321165010": {
     "id": "20260321165010",
-    "title": "kt giữa hk2",
+    "title": "KT giữa hk2",
     "type": "essay",
     "duration": 45,
     "created_by": "gv001",
@@ -947,6 +947,377 @@
     "grading_criteria": "\r\n\r\n\r\n\r\n\r\n\r\nCâu 1\ta, Em hãy trình bày thành tựu về chữ viết và văn học của văn minh Đông Nam Á cổ - trung đại?\tĐiểm\r\n\t- Thành tựu về chữ viết:\r\n+ Trên cơ sở chữ (chữ Hán) của Trung Hoa  người Việt sáng tạo ra chữ Nôm (0.25 điểm)\r\n + Trên cơ sở chữ Phạn của Ấn Độ, cư dân nhiều nước Đông Nam Á đã sáng tạo ra chữ viết riêng của mình như chữ Chăm cổ, Khơ me cổ, …\t0,25 điểm\r\n\t- Thành tựu về văn học:\r\n+ Cư dân Đông Nam Á đã sáng tạo kho tàng văn học dân gian phong phú đa dạng: truyền thuyết, cổ tích, truyện cười… 0,25 điểm\r\n+ Trên cơ sở chữ viết riêng, cư dân các nước ĐNA đã xây dựng nền văn học viết với nhiều tác phẩm xuất sắc còn được lưu giữ đến ngày nay.\t0,25 điểm\r\n\tb, Kể tên một số tác phẩm văn học của Việt Nam thời cổ - trung đại?\r\n\t\tHọc sinh kể được 3 tác phẩm văn học Việt Nam cổ - trung đại thì cho điểm tối đa. Ví dụ: Hịch Tướng Sĩ, Bình Ngô Đại Cáo, Truyện Kiểu….\t0,5 điểm\r\nCâu 2\r\n\r\n\ta, Hoàn Thành bảng thống kê về đời sống vật chất và tinh thần của cư dân Văn Lang – Âu Lạc (0.5 điểm)\r\n\tĐời sống vật chất\tĂn: Cơm, rau cá. Lương thực chính là lúa gạo.\r\nỞ: Nhà sàn\r\nMặc: Nam đóng khố ở trần, nữ mặc áo yếm\r\nĐi lại: sử dụng thuyền bè\r\nĐời sống Tinh thần\tTín ngưỡng: thờ tổ tiên, sùng bái tự nhiên.\r\nPhong tục: ăn trầu, nhuộm răng đen, xăm mình.\r\nÂm nhạc: trống đồng, cồng chiêng, nhảy múa…\r\nNghệ thuật: điêu khắc, luyện kim, làm gốm.\r\n\t\r\n\tb, Kể tên những thành tựu của cư dân Văn Lang – Âu Lạc còn được bảo tồn đến nay?\r\n\t+ Tục nhuộm răng đen (vẫn phổ biến ở các vùng nông thôn thuộc khu vực Bắc Bộ).\r\n+ Tục ăn trầu; làm bánh trưng – bánh giày trong ngày lễ/ tết.\r\n+ Tục thờ cúng tổ tiên, anh hùng dân tộc…\r\n+ Tổ chức các lễ hội liên quan đến sản xuất nông nghiệp (lễ xuống đồng; lễ mừng cơm mới…).\r\n\r\n(Học sinh kể được từ 3 thành tựu thì cho điểm tối đa)\t0,5 điểm\r\n",
     "total_score": 10,
     "grade": "10",
+    "general_grading_criteria": ""
+  },
+  "20260325101934": {
+    "id": "20260325101934",
+    "title": "K12D4",
+    "type": "multiple_choice",
+    "duration": 50,
+    "created_by": "gv001",
+    "created_at": "2026-03-25 10:19:34",
+    "questions": {
+      "multiple_choice": [
+        {
+          "question": "Sự sụp đổ của Trật tự hai cực I-an-ta có tác động nào sau đây đối với Việt Nam?",
+          "options": [
+            "A. Nhận được sự giúp đỡ của hệ thống xã hội chủ nghĩa để bảo vệ Tổ quốc.",
+            "B. Tạo ra nhiều thách thức trong cuộc đấu tranh giành độc lập dân tộc.",
+            "C. Tạo điều kiện thuận lợi cho Việt Nam gia nhập tổ chức Liên hợp quốc.",
+            "D. Tạo ra nhiều cơ hội cho Việt Nam xây dựng và phát triển đất nước."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Sự sụp đổ của Trật tự hai cực I-an-ta có tác động nào sau đây đối với Việt Nam? \n\nA. Nhận được sự giúp đỡ của hệ thống xã hội chủ nghĩa để bảo vệ Tổ quốc.\n\nB. Tạo ra nhiều thách thức trong cuộc đấu tranh giành độc lập dân tộc.\n\nC. Tạo điều kiện thuận lợi cho Việt Nam gia nhập tổ chức Liên hợp quốc.\n\nD. Tạo ra nhiều cơ hội cho Việt Nam xây dựng và phát triển đất nước."
+        },
+        {
+          "question": "Nội dung nào sau đây không phản ánh đúng thành tựu kinh tế trong công cuộc Đổi mới của Việt Nam từ năm 1986 đến nay?",
+          "options": [
+            "A. Cơ cấu thành phần kinh tế có sự thay đổi theo hướng đa dạng hóa.",
+            "B. Tốc độ tăng trưởng kinh tế khá cao và tương đối bền vững.",
+            "C. Cơ cấu ngành chuyển dịch theo hướng công nghiệp hóa, hiện đại hóa.",
+            "D. Hoàn thành sự nghiệp công nghiệp hóa, hiện đại hóa đất nước."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Nội dung nào sau đây không phản ánh đúng thành tựu kinh tế trong công cuộc Đổi mới của Việt Nam từ năm 1986 đến nay?\n\nA. Cơ cấu thành phần kinh tế có sự thay đổi theo hướng đa dạng hóa.\n\nB. Tốc độ tăng trưởng kinh tế khá cao và tương đối bền vững.\n\nC. Cơ cấu ngành chuyển dịch theo hướng công nghiệp hóa, hiện đại hóa.\n\nD. Hoàn thành sự nghiệp công nghiệp hóa, hiện đại hóa đất nước."
+        },
+        {
+          "question": "Từ năm 1991, Trung Quốc và Việt Nam đều",
+          "options": [
+            "A. trở thành thuộc địa kiểu mới của thực dân phương Tây.",
+            "B. tiến hành kháng chiến chống quân phiệt Nhật.",
+            "C. kiên định con đường đi lên chủ nghĩa xã hội.",
+            "D. trở thành các cường quốc công nghiệp của thế giới."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Từ năm 1991, Trung Quốc và Việt Nam đều\n\nA. trở thành thuộc địa kiểu mới của thực dân phương Tây.\tB. tiến hành kháng chiến chống quân phiệt Nhật.\n\nC. kiên định con đường đi lên chủ nghĩa xã hội.\tD. trở thành các cường quốc công nghiệp của thế giới."
+        },
+        {
+          "question": "Đường lối đổi mới của Đảng Cộng sản Việt Nam được đề ra lần đầu tiên tại",
+          "options": [
+            "A. Đại hội đại biểu toàn quốc lần thứ VIII (1996).",
+            "B. Đại hội đại biểu toản quốc lần thứ VI (1986).",
+            "C. Đại hội đại biểu toàn quốc lần thứ III (1960).",
+            "D. Đại hội đại biểu toàn quốc lần thứ VII (1991)."
+          ],
+          "answer": "B",
+          "_is_standard": true,
+          "_raw_block": "Đường lối đổi mới của Đảng Cộng sản Việt Nam được đề ra lần đầu tiên tại\n\nA. Đại hội đại biểu toàn quốc lần thứ VIII (1996).\t\tB. Đại hội đại biểu toản quốc lần thứ VI (1986). \n\nC. Đại hội đại biểu toàn quốc lần thứ III (1960). \t\tD. Đại hội đại biểu toàn quốc lần thứ VII (1991)."
+        },
+        {
+          "question": "Năm 1950, Chính phủ Việt Nam Dân chủ Cộng hòa thiết lập quan hệ ngoại giao với",
+          "options": [
+            "A. Mỹ.",
+            "B. Trung Quốc.",
+            "C. Pháp.",
+            "D. Nhật Bản."
+          ],
+          "answer": "B",
+          "_is_standard": true,
+          "_raw_block": "Năm 1950, Chính phủ Việt Nam Dân chủ Cộng hòa thiết lập quan hệ ngoại giao với\n\nA. Mỹ.\t\t\tB. Trung Quốc.\t\tC. Pháp.\t\tD. Nhật Bản."
+        },
+        {
+          "question": "Cộng đồng Văn hóa - Xã hội ASEAN (ASCC) tập trung vào lĩnh vực nào sau đây?",
+          "options": [
+            "A. An ninh và quốc phòng.",
+            "B. Phát triển con người.",
+            "C. Khoa học và công nghệ.",
+            "D. Hợp tác kinh tế - tài chính."
+          ],
+          "answer": "B"
+        },
+        {
+          "question": "Năm 1997, quốc gia nào sau đây là thành viên của Hiệp hội các quốc gia Đông Nam Á (ASEAN)?",
+          "options": [
+            "A. Thái Lan.",
+            "B. Ma-lai-xi-a.",
+            "C. Mi-an-ma.",
+            "D. Xin-ga-po."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Năm 1997, quốc gia nào sau đây là thành viên của Hiệp hội các quốc gia Đông Nam Á (ASEAN)?\n\nA. Thái Lan.\t\tB. Ma-lai-xi-a.\t\t\tC. Mi-an-ma.\t\tD. Xin-ga-po."
+        },
+        {
+          "question": "Các cuộc kháng chiến chống ngoại xâm ở Việt Nam trong giai đoạn 1945-1975 có điểm tương đồng nào sau đây?",
+          "options": [
+            "A. Diễn ra khi Việt Nam chưa có chính quyền và bị các nước đế quốc bao vây, cô lập.",
+            "B. Phát triển lực lượng vũ trang ba thứ quân, trong đó bộ đội địa phương đóng vai trò chủ lực.",
+            "C. Tập hợp, tổ chức lực lượng yêu nước trong các hình thức mặt trận dân tộc thống nhất.",
+            "D. Sáng tạo trong sử dụng lực lượng, trong đó lực lượng chính trị đóng vai trò quyết định thắng lợi."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Các cuộc kháng chiến chống ngoại xâm ở Việt Nam trong giai đoạn 1945-1975 có điểm tương đồng nào sau đây?\n\nA. Diễn ra khi Việt Nam chưa có chính quyền và bị các nước đế quốc bao vây, cô lập.\n\nB. Phát triển lực lượng vũ trang ba thứ quân, trong đó bộ đội địa phương đóng vai trò chủ lực.\n\nC. Tập hợp, tổ chức lực lượng yêu nước trong các hình thức mặt trận dân tộc thống nhất.\n\nD. Sáng tạo trong sử dụng lực lượng, trong đó lực lượng chính trị đóng vai trò quyết định thắng lợi."
+        },
+        {
+          "question": "Nội dung nào sau đây phản ánh đúng ý nghĩa của phong trào Tây Sơn (thế kỉ XVIII)?",
+          "options": [
+            "A. Kết thúc hoàn toàn 1000 năm đô hộ của phong kiến phương Bắc.",
+            "B. Mở ra thời kì phát triển đỉnh cao của chế độ phong kiến Đại Việt.",
+            "C. Bảo vệ vững chắc độc lập dân tộc, chủ quyền lãnh thổ của Tổ quốc.",
+            "D. Chấm dứt thời kì đô hộ của nhà Minh, khôi phục nền độc lập dân tộc."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Nội dung nào sau đây phản ánh đúng ý nghĩa của phong trào Tây Sơn (thế kỉ XVIII)?\n\nA. Kết thúc hoàn toàn 1000 năm đô hộ của phong kiến phương Bắc.\n\nB. Mở ra thời kì phát triển đỉnh cao của chế độ phong kiến Đại Việt.\n\nC. Bảo vệ vững chắc độc lập dân tộc, chủ quyền lãnh thổ của Tổ quốc.\n\nD. Chấm dứt thời kì đô hộ của nhà Minh, khôi phục nền độc lập dân tộc."
+        },
+        {
+          "question": "Nội dung nào sau đây không phản ánh đúng bối cảnh thế giới của cuộc kháng chiến chống Pháp ở Việt Nam (1945-1954)?",
+          "options": [
+            "A. Phong trào đấu tranh vì hòa bình, dân chủ phát triển.",
+            "B. Hệ thống xã hội chủ nghĩa đang hình thành.",
+            "C. Tình trạng đối đầu giữa các cường quốc chấm dứt.",
+            "D. Phong trào giải phóng dân tộc thế giới phát triển."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Nội dung nào sau đây không phản ánh đúng bối cảnh thế giới của cuộc kháng chiến chống Pháp ở Việt Nam (1945-1954)?\n\nA. Phong trào đấu tranh vì hòa bình, dân chủ phát triển.\tB. Hệ thống xã hội chủ nghĩa đang hình thành.\n\nC. Tình trạng đối đầu giữa các cường quốc chấm dứt.     D. Phong trào giải phóng dân tộc thế giới phát triển."
+        },
+        {
+          "question": "Thắng lợi của cách mạng nước nào sau đây đã mở rộng hệ thống xã hội chủ nghĩa ở khu vực Mỹ La-tinh?",
+          "options": [
+            "A. Trung Quốc.",
+            "B. Ba Lan.",
+            "C. Cuba.",
+            "D. Lào."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Thắng lợi của cách mạng nước nào sau đây đã mở rộng hệ thống xã hội chủ nghĩa ở khu vực Mỹ La-tinh?\n\nA. Trung Quốc.\t\tB. Ba Lan.\t\tC. Cuba.\t\tD. Lào."
+        },
+        {
+          "question": "Sau Cách mạng tháng Tám năm 1945, thế lực thực dân nào sau đây quay trở lại xâm lược Việt Nam?",
+          "options": [
+            "A. Tây Ban Nha.",
+            "B. Bồ Đào Nha.",
+            "C. Pháp.",
+            "D. Hà Lan."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Sau Cách mạng tháng Tám năm 1945, thế lực thực dân nào sau đây quay trở lại xâm lược Việt Nam?\n\nA. Tây Ban Nha. \t\tB. Bồ Đào Nha.\t\tC. Pháp.\t\tD. Hà Lan."
+        },
+        {
+          "question": "Một trong những hoạt động đối ngoại của Đảng Cộng sản Đông Dương trong giai đoạn 1930- 1945 là",
+          "options": [
+            "A. thiết lập quan hệ với các nước xã hội chủ nghĩa.",
+            "B. củng cố quan hệ với các nước xã hội chủ nghĩa.",
+            "C. ủng hộ Liên Xô chống quân phiệt Nhật Bản.",
+            "D. thiết lập quan hệ ngoại giao với Nhật Bản."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Một trong những hoạt động đối ngoại của Đảng Cộng sản Đông Dương trong giai đoạn 1930- 1945 là\n\nA. thiết lập quan hệ với các nước xã hội chủ nghĩa. \t\tB. củng cố quan hệ với các nước xã hội chủ nghĩa. \n\nC. ủng hộ Liên Xô chống quân phiệt Nhật Bản. \t\tD. thiết lập quan hệ ngoại giao với Nhật Bản."
+        },
+        {
+          "question": "Cộng đồng Chính trị - An ninh ASEAN (APSC) hướng tới một trong những mục tiêu nào sau đây?",
+          "options": [
+            "A. Tạo dựng môi trường hòa bình và an ninh ở Đông Nam Á.",
+            "B. Xây dựng nền văn hóa chung của Cộng đồng ASEAN.",
+            "C. Xóa bỏ hoàn toàn mâu thuẫn giữa các nước thành viên.",
+            "D. Đưa Đông Nam Á thành thị trường tiềm năng nhất thế giới."
+          ],
+          "answer": "A",
+          "_is_standard": true,
+          "_raw_block": "Cộng đồng Chính trị - An ninh ASEAN (APSC) hướng tới một trong những mục tiêu nào sau đây? \n\nA. Tạo dựng môi trường hòa bình và an ninh ở Đông Nam Á. \n\nB. Xây dựng nền văn hóa chung của Cộng đồng ASEAN. \n\nC. Xóa bỏ hoàn toàn mâu thuẫn giữa các nước thành viên. \n\nD. Đưa Đông Nam Á thành thị trường tiềm năng nhất thế giới."
+        },
+        {
+          "question": "Cuộc kháng chiến chống Tống của quân dân Đại Việt (1075-1077) đặt dưới sự lãnh đạo của",
+          "options": [
+            "A. Trần Quốc Tuấn.",
+            "B. Lê Lợi.",
+            "C. Lê Hoàn.",
+            "D. Lý Thường Kiệt."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Cuộc kháng chiến chống Tống của quân dân Đại Việt (1075-1077) đặt dưới sự lãnh đạo của \n\nA. Trần Quốc Tuấn.\t\tB. Lê Lợi. \t\tC. Lê Hoàn.\t\tD. Lý Thường Kiệt."
+        },
+        {
+          "question": "Nội dung nào sau đây không phản ánh đúng thành tựu đối ngoại của Việt Nam trong những năm 1979-1985?",
+          "options": [
+            "A. Hợp tác toàn diện với các nước xã hội chủ nghĩa.",
+            "B. Bình thường hóa quan hệ ngoại giao với Trung Quốc.",
+            "C. Phát triển quan hệ với các quốc gia và tổ chức quốc tế.",
+            "D. Thúc đẩy quan hệ với các nước Đông Nam Á."
+          ],
+          "answer": "B",
+          "_is_standard": true,
+          "_raw_block": "Nội dung nào sau đây không phản ánh đúng thành tựu đối ngoại của Việt Nam trong những năm 1979-1985?\n\nA. Hợp tác toàn diện với các nước xã hội chủ nghĩa.\t\t\n\nB. Bình thường hóa quan hệ ngoại giao với Trung Quốc.\n\nC. Phát triển quan hệ với các quốc gia và tổ chức quốc tế.\n\nD. Thúc đẩy quan hệ với các nước Đông Nam Á."
+        },
+        {
+          "question": "Mục tiêu và nguyên tắc hoạt động của tổ chức Liên hợp quốc được quy định trong văn kiện nào sau đây?",
+          "options": [
+            "A. Công ước Liên hợp quốc về Luật biển.",
+            "B. Hiến chương Liên hợp quốc.",
+            "C. Tuyên ngôn Quốc tế Nhân quyền",
+            "D. Công ước cấm vũ khí hóa học."
+          ],
+          "answer": "B",
+          "_is_standard": true,
+          "_raw_block": "Mục tiêu và nguyên tắc hoạt động của tổ chức Liên hợp quốc được quy định trong văn kiện nào sau đây?\n\nA. Công ước Liên hợp quốc về Luật biển. \t\t\tB. Hiến chương Liên hợp quốc.\n\nC. Tuyên ngôn Quốc tế Nhân quyền\t\t\t\tD. Công ước cấm vũ khí hóa học."
+        },
+        {
+          "question": "Nội dung nào sau đây phản ánh đúng xu thế phát triển của thế giới trong thập niên đầu sau Chiến tranh lạnh?",
+          "options": [
+            "A. Tăng cường xây dựng liên minh quân sự.",
+            "B. Trật tự thế giới đơn cực được xác lập.",
+            "C. Xu thế đối thoại, hòa bình, hợp tác.",
+            "D. Các nước tăng cường chạy đua vũ trang."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Nội dung nào sau đây phản ánh đúng xu thế phát triển của thế giới trong thập niên đầu sau Chiến tranh lạnh?\n\nA. Tăng cường xây dựng liên minh quân sự. \t\t\tB. Trật tự thế giới đơn cực được xác lập.\n\nC. Xu thế đối thoại, hòa bình, hợp tác.\t\t\tD. Các nước tăng cường chạy đua vũ trang."
+        },
+        {
+          "question": "Trong giai đoạn 1954-1960, nhân dân miền Nam Việt Nam thực hiện nhiệm vụ nào sau đây?",
+          "options": [
+            "A. Chiến đấu chống chiến tranh phá hoại lần thứ nhất của Mỹ.",
+            "B. Hoàn thành cải cách ruộng đất, phát triển kinh tế - xã hội.",
+            "C. Chiến đấu chống chiến lược “Chiến tranh cục bộ” của Mỹ.",
+            "D. Đấu tranh đòi Mỹ - Diệm thi hành Hiệp định Giơ-ne-vơ."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Trong giai đoạn 1954-1960, nhân dân miền Nam Việt Nam thực hiện nhiệm vụ nào sau đây? \n\nA. Chiến đấu chống chiến tranh phá hoại lần thứ nhất của Mỹ.\n\nB. Hoàn thành cải cách ruộng đất, phát triển kinh tế - xã hội. \n\nC. Chiến đấu chống chiến lược “Chiến tranh cục bộ” của Mỹ. \n\nD. Đấu tranh đòi Mỹ - Diệm thi hành Hiệp định Giơ-ne-vơ."
+        },
+        {
+          "question": "Một trong những địa phương giành chính quyền sớm nhất ở tỉnh lị trong Cách mạng tháng Tám năm 1945 là",
+          "options": [
+            "A. Hải Phòng.",
+            "B. Đồng Nai.",
+            "C. Hà Tĩnh.",
+            "D. Hà Tiên."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Một trong những địa phương giành chính quyền sớm nhất ở tỉnh lị trong Cách mạng tháng Tám năm 1945 là\n\nA. Hải Phòng. \t\tB. Đồng Nai.\t\tC. Hà Tĩnh.\t\tD. Hà Tiên."
+        },
+        {
+          "question": "Nhận xét nào sau đây đúng về công cuộc Đổi mới đất nước ở Việt Nam từ năm 1986 đến nay?",
+          "options": [
+            "A. Là quá trình thay đổi mục tiêu đi lên chủ nghĩa xã hội trước những biến động của thế giới.",
+            "B. Là quá trình vận dụng linh hoạt chủ nghĩa xã hội khoa học vào thực tiễn của đất nước.",
+            "C. Là quá trình cải biến sâu sắc, toàn diện nhằm thay đổi mục tiêu của chủ nghĩa xã hội.",
+            "D. Là quá trình thay đổi nguyên lý của chủ nghĩa xã hội khoa học để phù hợp với xu thế thời đại. \n\nKhai thác các tư liệu sau đây và trả lời các câu hỏi từ 22 đến 24\n\n\"Ngay từ Chánh cương vắn tắt, Sách lược vắn tắt, Chương trình tôm tắt, Nguyễn Ái Quốc đã thể hiện quan điểm của mình về quan hệ dân tộc và giai cấp; phần để và phản phong. Người đã vận dụng sáng tạo đường lối của Quốc tế Cộng sản vào điều kiện cụ thể của Việt Nam và có những điểm phát triển mới. Nổi bật là tư tưởng chỉ đạo chiến lược: tập trung vào nhiệm vụ chống đế quốc, giải phóng dân tộc, tập hợp đoàn kết mọi lực lượng, mọi giai cấp, mọi tầng lớp chống đế quốc thực dân và tay sai”.\n\n(Đại tướng Võ Nguyên Giáp (Chủ biên), Tư tưởng Hồ Chí Minh và con đường cách mạng Việt Nam, NXB Chính trị Quốc gia, Hà Nội, 2000, tr.112)\n\n “Hồ Chí Minh sớm khẳng định cách mạng ở thuộc địa trước hết là một cuộc cách mạng giải phóng dân tộc, yếu tố dân tộc là yếu tố quyết định tính độc đáo của cách mạng thuộc địa. Vấn đề sống còn của các dân tộc thuộc địa phải là thoát khỏi ách nô lệ của chủ nghĩa đế quốc, đoàn kết toàn dân dựa trên cơ sở khối liên minh công nông, hình thành một sức mạnh dân tộc kết hợp với sức mạnh quốc tế, tạo nên sức mạnh tổng hợp chống đế quốc và tay sai nhằm giành cho được độc lập, tự do”.\n\n(Lê Mậu Hãn, Sức mạnh dân tộc của cách mạng Việt Nam dưới ánh sáng tư tưởng Hồ Chí Minh, NXB Chính trị Quốc gia Sự thật, Hà Nội, 2020, tr.37-38)"
+          ],
+          "answer": "B",
+          "_is_standard": true,
+          "_raw_block": "Nhận xét nào sau đây đúng về công cuộc Đổi mới đất nước ở Việt Nam từ năm 1986 đến nay? \n\nA. Là quá trình thay đổi mục tiêu đi lên chủ nghĩa xã hội trước những biến động của thế giới. \n\nB. Là quá trình vận dụng linh hoạt chủ nghĩa xã hội khoa học vào thực tiễn của đất nước. \n\nC. Là quá trình cải biến sâu sắc, toàn diện nhằm thay đổi mục tiêu của chủ nghĩa xã hội.\n\nD. Là quá trình thay đổi nguyên lý của chủ nghĩa xã hội khoa học để phù hợp với xu thế thời đại. \n\nKhai thác các tư liệu sau đây và trả lời các câu hỏi từ 22 đến 24\n\n\"Ngay từ Chánh cương vắn tắt, Sách lược vắn tắt, Chương trình tôm tắt, Nguyễn Ái Quốc đã thể hiện quan điểm của mình về quan hệ dân tộc và giai cấp; phần để và phản phong. Người đã vận dụng sáng tạo đường lối của Quốc tế Cộng sản vào điều kiện cụ thể của Việt Nam và có những điểm phát triển mới. Nổi bật là tư tưởng chỉ đạo chiến lược: tập trung vào nhiệm vụ chống đế quốc, giải phóng dân tộc, tập hợp đoàn kết mọi lực lượng, mọi giai cấp, mọi tầng lớp chống đế quốc thực dân và tay sai”.\n\n(Đại tướng Võ Nguyên Giáp (Chủ biên), Tư tưởng Hồ Chí Minh và con đường cách mạng Việt Nam, NXB Chính trị Quốc gia, Hà Nội, 2000, tr.112)\n\n “Hồ Chí Minh sớm khẳng định cách mạng ở thuộc địa trước hết là một cuộc cách mạng giải phóng dân tộc, yếu tố dân tộc là yếu tố quyết định tính độc đáo của cách mạng thuộc địa. Vấn đề sống còn của các dân tộc thuộc địa phải là thoát khỏi ách nô lệ của chủ nghĩa đế quốc, đoàn kết toàn dân dựa trên cơ sở khối liên minh công nông, hình thành một sức mạnh dân tộc kết hợp với sức mạnh quốc tế, tạo nên sức mạnh tổng hợp chống đế quốc và tay sai nhằm giành cho được độc lập, tự do”.\n\n(Lê Mậu Hãn, Sức mạnh dân tộc của cách mạng Việt Nam dưới ánh sáng tư tưởng Hồ Chí Minh, NXB Chính trị Quốc gia Sự thật, Hà Nội, 2020, tr.37-38)"
+        },
+        {
+          "question": "Một trong những văn kiện thể hiện quan điểm của Nguyễn Ái Quốc - Hồ Chí Minh về cách mạng giải phóng dân tộc được nhắc đến trong đoạn tư liệu trên là",
+          "options": [
+            "A. Luận cương chính trị.",
+            "B. Lời kêu gọi toàn quốc kháng chiến.",
+            "C. Chánh cương vắn tắt.",
+            "D. Lời kêu gọi quốc dân đi bỏ phiếu."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Một trong những văn kiện thể hiện quan điểm của Nguyễn Ái Quốc - Hồ Chí Minh về cách mạng giải phóng dân tộc được nhắc đến trong đoạn tư liệu trên là\n\nA. Luận cương chính trị.\t\t\t\tB. Lời kêu gọi toàn quốc kháng chiến.\n\nC. Chánh cương vắn tắt.\t\t\t\tD. Lời kêu gọi quốc dân đi bỏ phiếu."
+        },
+        {
+          "question": "Nội dung nào sau đây không phản ánh đúng sự sáng tạo của Nguyễn Ái Quốc - Hồ Chí Minh về xây dựng lí luận cách mạng giải phóng dân tộc?",
+          "options": [
+            "A. Tập trung vào nhiệm vụ chống đế quốc và tay sai, giải phóng dân tộc.",
+            "B. Đoàn kết rộng rãi lực lượng yêu nước để chống thực dân và tay sai.",
+            "C. Tập trung vào nhiệm vụ đấu tranh giai cấp, giành quyền tự do, dân chủ.",
+            "D. Kết hợp sức mạnh dân tộc với sức mạnh quốc tế để giành độc lập."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Nội dung nào sau đây không phản ánh đúng sự sáng tạo của Nguyễn Ái Quốc - Hồ Chí Minh về xây dựng lí luận cách mạng giải phóng dân tộc?\n\nA. Tập trung vào nhiệm vụ chống đế quốc và tay sai, giải phóng dân tộc.\n\nB. Đoàn kết rộng rãi lực lượng yêu nước để chống thực dân và tay sai.\n\nC. Tập trung vào nhiệm vụ đấu tranh giai cấp, giành quyền tự do, dân chủ.\n\nD. Kết hợp sức mạnh dân tộc với sức mạnh quốc tế để giành độc lập."
+        },
+        {
+          "question": "Nhận xét nào sau đây phản ánh đúng về lí luận cách mạng giải phóng dân tộc của Nguyễn Ái Quốc?",
+          "options": [
+            "A. Được xây dựng theo đúng sự chỉ đạo của Quốc tế Cộng sản.",
+            "B. Được áp dụng cho nhiều quốc gia ở khu vực châu Á.",
+            "C. Là lí luận đấu tranh giai cấp của cách mạng Nga.",
+            "D. Được xây dựng trên cơ sở lí luận đấu tranh giai cấp."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Nhận xét nào sau đây phản ánh đúng về lí luận cách mạng giải phóng dân tộc của Nguyễn Ái Quốc? A. Được xây dựng theo đúng sự chỉ đạo của Quốc tế Cộng sản.\n\nB. Được áp dụng cho nhiều quốc gia ở khu vực châu Á.\n\nC. Là lí luận đấu tranh giai cấp của cách mạng Nga.\n\nD. Được xây dựng trên cơ sở lí luận đấu tranh giai cấp."
+        }
+      ],
+      "true_false": [
+        {
+          "question": "Cho đoạn tư liệu sau:\n\n\"Trong khoảng thời gian giữa hai kỳ đại hội của Đảng Cộng sản Việt Nam (từ Đại hội VI tháng 12 năm 1986 đến Đại hội VII tháng 7 năm 1991), đường lối đối ngoại rộng mở, đa phương hóa, đa dạng hóa dần dần hình thành. Nhất là sau khi quân đội Việt Nam rút toàn bộ khỏi Campuchia (tháng 9 năm 1989) thì những vướng mắc trong quan hệ với các nước ASEAN, Trung Quốc, Hoa Kỳ, EU.dần dần được tháo gỡ. Tại Đại hội Đảng lần thứ VII, Đảng Cộng sản Việt Nam trịnh trọng tuyên bố: “Việt Nam muốn là bạn của tất cả các nước trong cộng đồng thế giới, phấn đấu vì hòa bình, độc lập và phát triển”. Đây chính là lần thứ ba Việt Nam hội nhập quốc tế trong điều kiện chiến tranh lạnh đã kết thúc, trật tự hai cực không còn”.\n\n(Vũ Dương Ninh, Cách mạng Việt Nam trên bàn cờ quốc tế - Lịch sử và vấn đề, NXB Chính trị Quốc gia Sự thật, Hà Nội, 2017, tr.322)",
+          "statements": [
+            "a) Việt Nam đề ra chủ trương“muốn là bạn của tất cả các nước trong cộng đồng thế giới” trong bối cảnh Trật tự hai cực I-an-ta sụp đổ hoàn toàn.",
+            "b) Nguyên tắc hoà bình, hữu nghị, bình đẳng và hợp tác trong chủ trương đối ngoại của Việt Nam được bắt đầu đề ra từ Đại hội lần thứ VI của Đảng.",
+            "c) Việc quân đội Việt Nam rút khỏi Campuchia là một bước quan trọng trong việc giải quyết các vướng mắc trong quan hệ đối ngoại.",
+            "d) Việc gia nhập ASEAN là cơ sở để Việt Nam bình thường hóa quan hệ với Mỹ, Trung Quốc và EU, thúc đẩy nhanh chóng quá trình hội nhập quốc tế của Việt Nam."
+          ],
+          "answers": [
+            false,
+            false,
+            true,
+            false
+          ],
+          "_is_standard": true,
+          "_raw_block": "Cho đoạn tư liệu sau:\n\n\"Trong khoảng thời gian giữa hai kỳ đại hội của Đảng Cộng sản Việt Nam (từ Đại hội VI tháng 12 năm 1986 đến Đại hội VII tháng 7 năm 1991), đường lối đối ngoại rộng mở, đa phương hóa, đa dạng hóa dần dần hình thành. Nhất là sau khi quân đội Việt Nam rút toàn bộ khỏi Campuchia (tháng 9 năm 1989) thì những vướng mắc trong quan hệ với các nước ASEAN, Trung Quốc, Hoa Kỳ, EU.dần dần được tháo gỡ. Tại Đại hội Đảng lần thứ VII, Đảng Cộng sản Việt Nam trịnh trọng tuyên bố: “Việt Nam muốn là bạn của tất cả các nước trong cộng đồng thế giới, phấn đấu vì hòa bình, độc lập và phát triển”. Đây chính là lần thứ ba Việt Nam hội nhập quốc tế trong điều kiện chiến tranh lạnh đã kết thúc, trật tự hai cực không còn”.\n\n(Vũ Dương Ninh, Cách mạng Việt Nam trên bàn cờ quốc tế - Lịch sử và vấn đề, NXB Chính trị Quốc gia Sự thật, Hà Nội, 2017, tr.322) \n\na) Việt Nam đề ra chủ trương“muốn là bạn của tất cả các nước trong cộng đồng thế giới” trong bối cảnh Trật tự hai cực I-an-ta sụp đổ hoàn toàn.\n\nb) Nguyên tắc hoà bình, hữu nghị, bình đẳng và hợp tác trong chủ trương đối ngoại của Việt Nam được bắt đầu đề ra từ Đại hội lần thứ VI của Đảng.\n\nc) Việc quân đội Việt Nam rút khỏi Campuchia là một bước quan trọng trong việc giải quyết các vướng mắc trong quan hệ đối ngoại.\n\nd) Việc gia nhập ASEAN là cơ sở để Việt Nam bình thường hóa quan hệ với Mỹ, Trung Quốc và EU, thúc đẩy nhanh chóng quá trình hội nhập quốc tế của Việt Nam."
+        },
+        {
+          "question": "Cho đoạn tư liệu sau:\n\n“Hội nghị Ban Chấp hành Trung ương Đảng lần thứ 13, họp từ ngày 23 đến ngày 27/1/1967 phân tích: “Đấu tranh quân sự và đấu tranh chính trị ở miền Nam là nhân tố chủ yếu quyết định giành thắng lợi trên chiến trường, làm cơ sở cho thắng lợi trên mặt trận ngoại giao. Chúng ta chỉ có thể giành được trên bàn hội nghị những cái mà chúng ta đã giành được trên chiến trường. Tuy nhiên, đấu tranh ngoại giao không chỉ đơn thuần phản ánh cuộc đấu tranh trên chiến trường mà trong tình hình quốc tế hiện nay, với tính chất cuộc đấu tranh giữa ta và địch, đấu tranh ngoại giao giữ một vai trò quan trọng, tích cực và chủ động”.\n\n(Đảng Cộng sản Việt Nam, Văn kiện Đảng Toàn tập, tập 28, NXB Chính trị Quốc gia, Hà Nội, 2000, tr.174)",
+          "statements": [
+            "a) Hoạt động ngoại giao trong kháng chiến chống Mỹ đã tăng cường hậu phương quốc tế của ta, gắn Việt Nam với thế giới.",
+            "b) Trong những năm 1967-1973, tính chủ động của ngoại giao Việt Nam thể hiện ở việc vừa tiến công trực tiếp kẻ thù, vừa đoàn kết và giữ thế cân bằng với các nước trong phe xã hội chủ nghĩa.",
+            "c) Đấu tranh ngoại giao tác động trở lại các mặt trận quân sự và chính trị nhưng không thể góp phần làm thay đổi so sánh lực lượng trên chiến trường.",
+            "d) Hội nghị Ban Chấp hành Trung ương Đảng lần thứ 13 (23-27/1/1967) khẳng định thắng lợi trên mặt trận quân sự có ý nghĩa quyết định, làm cơ sở cho thắng lợi trên mặt trận ngoại giao."
+          ],
+          "answers": [
+            true,
+            true,
+            false,
+            true
+          ]
+        },
+        {
+          "question": "Cho đoạn tư liệu sau:\n\n“Cuộc kháng chiến chống Mỹ, cứu nước là một cuộc chiến tranh nhân dân toàn dân, toàn diện, với mục tiêu giải phóng miền Nam, bảo vệ miền Bắc, tiến tới hòa bình thống nhất đất nước. Kế thừa những kinh nghiệm của cuộc kháng chiến chống thực dân Pháp, đường lối quân sự của Đảng có bước phát triển vượt bậc lên tầm cao mới. Đó là “đường lối quốc phòng toàn dẫn, bảo vệ miền Bắc xã hội chủ nghĩa, làm hậu thuẫn cho công cuộc đấu tranh thống nhất nước nhà, xây dựng lực lượng vũ trang nhân dân với ba thứ quân, có lực lượng thường trực và lực lượng dự bị mạnh, xây dựng Quân đội nhân dân từng bước chính quy, có các quân chủng, binh chủng hiện đại”.\n\n(Vũ Quang Hiển, Đoàn Thị Yến (Đồng chủ biên), Chiến tranh nhân dân Việt Nam thời kỳ 1954-1975 (Một số chuyên khảo), NXB Đại học Thái Nguyên, 2022, tr.581)",
+          "statements": [
+            "a) Đường lối quân sự của Đảng Lao động Việt Nam trong cuộc kháng chiến chống Mỹ là đường lối khởi nghĩa toàn dân và chiến tranh nhân dân ở cả hai miền đất nước.",
+            "b) Trong cuộc kháng chiến chống Pháp và chống Mỹ, nền tảng của lực lượng vũ trang ba thứ quân là sức mạnh chính trị của quần chúng.",
+            "c) Đường lối quân sự trong cuộc kháng chiến chống Mỹ bao gồm cả việc bảo vệ miền Bắc xã hội chủ nghĩa và làm hậu thuẫn cho công cuộc đấu tranh thống nhất đất nước.",
+            "d) Mục tiêu của cuộc kháng chiến chống Mỹ, cứu nước là giải phóng miền Nam, bảo vệ miền Bắc, tiến tới hòa bình thống nhất đất nước."
+          ],
+          "answers": [
+            false,
+            true,
+            true,
+            true
+          ],
+          "_is_standard": true,
+          "_raw_block": "Cho đoạn tư liệu sau:\n\n“Cuộc kháng chiến chống Mỹ, cứu nước là một cuộc chiến tranh nhân dân toàn dân, toàn diện, với mục tiêu giải phóng miền Nam, bảo vệ miền Bắc, tiến tới hòa bình thống nhất đất nước. Kế thừa những kinh nghiệm của cuộc kháng chiến chống thực dân Pháp, đường lối quân sự của Đảng có bước phát triển vượt bậc lên tầm cao mới. Đó là “đường lối quốc phòng toàn dẫn, bảo vệ miền Bắc xã hội chủ nghĩa, làm hậu thuẫn cho công cuộc đấu tranh thống nhất nước nhà, xây dựng lực lượng vũ trang nhân dân với ba thứ quân, có lực lượng thường trực và lực lượng dự bị mạnh, xây dựng Quân đội nhân dân từng bước chính quy, có các quân chủng, binh chủng hiện đại”.\n\n(Vũ Quang Hiển, Đoàn Thị Yến (Đồng chủ biên), Chiến tranh nhân dân Việt Nam thời kỳ 1954-1975 (Một số chuyên khảo), NXB Đại học Thái Nguyên, 2022, tr.581) \n\na) Đường lối quân sự của Đảng Lao động Việt Nam trong cuộc kháng chiến chống Mỹ là đường lối khởi nghĩa toàn dân và chiến tranh nhân dân ở cả hai miền đất nước.\n\nb) Trong cuộc kháng chiến chống Pháp và chống Mỹ, nền tảng của lực lượng vũ trang ba thứ quân là sức mạnh chính trị của quần chúng.\n\nc) Đường lối quân sự trong cuộc kháng chiến chống Mỹ bao gồm cả việc bảo vệ miền Bắc xã hội chủ nghĩa và làm hậu thuẫn cho công cuộc đấu tranh thống nhất đất nước.\n\nd) Mục tiêu của cuộc kháng chiến chống Mỹ, cứu nước là giải phóng miền Nam, bảo vệ miền Bắc, tiến tới hòa bình thống nhất đất nước."
+        },
+        {
+          "question": "Cho đoạn tư liệu sau:\n\n“Tổ chức ASEAN ra đời trong hoàn cảnh chiến tranh nóng ở Đông Dương và chiến tranh lạnh thế giới. Điều kiện đặc biệt đó quy định thái độ của một số nước Đông Nam Á, vừa muốn không bị lôi cuốn quá sâu vào chiến tranh Đông Dương do sự thất bại của Mỹ, vừa lo ngại ảnh hưởng của cách mạng Việt Nam lan tới. Xuất phát từ lợi ích dân tộc, họ liên kết trong tổ chức ASEAN với mục tiêu hòa binh, hợp tác và phát triển. Trong không khí nóng bỏng trên chiến trường Đông Dirong, mối quan tâm chủ yếu của ASEAN trong 25 năm đầu (1967-1992) là vấn đề hòa bình, an ninh và ổn định khu vực”. \n\n(Vũ Dương Ninh (Chủ biên), Một số chuyên đề Lịch sử thế giới, NXB Đại học Quốc gia Hà Nội, 2002, tr.594-595)",
+          "statements": [
+            "a) Tổ chức ASEAN ra đời trong hoàn cảnh những bất ổn của khu vực Đông Nam Á đã được giải quyết.",
+            "b) Mối quan tâm chủ yếu của tổ chức ASEAN trong 25 năm đầu thành lập là hợp tác kinh tế, văn hóa; giúp Việt Nam chống Mỹ xâm lược.",
+            "c) Mục tiêu hòa bình, hợp tác và phát triển của tổ chức ASEAN là phù hợp với xu thế của thế giới và lợi ích của các nước Đông Nam Á.",
+            "d) Đoạn tư liệu phản ánh nguyên nhân thành lập của tổ chức ASEAN."
+          ],
+          "answers": [
+            false,
+            false,
+            true,
+            true
+          ],
+          "_is_standard": true,
+          "_raw_block": "Cho đoạn tư liệu sau:\n\n“Tổ chức ASEAN ra đời trong hoàn cảnh chiến tranh nóng ở Đông Dương và chiến tranh lạnh thế giới. Điều kiện đặc biệt đó quy định thái độ của một số nước Đông Nam Á, vừa muốn không bị lôi cuốn quá sâu vào chiến tranh Đông Dương do sự thất bại của Mỹ, vừa lo ngại ảnh hưởng của cách mạng Việt Nam lan tới. Xuất phát từ lợi ích dân tộc, họ liên kết trong tổ chức ASEAN với mục tiêu hòa binh, hợp tác và phát triển. Trong không khí nóng bỏng trên chiến trường Đông Dirong, mối quan tâm chủ yếu của ASEAN trong 25 năm đầu (1967-1992) là vấn đề hòa bình, an ninh và ổn định khu vực”. \n\n(Vũ Dương Ninh (Chủ biên), Một số chuyên đề Lịch sử thế giới, NXB Đại học Quốc gia Hà Nội, 2002, tr.594-595) \n\na) Tổ chức ASEAN ra đời trong hoàn cảnh những bất ổn của khu vực Đông Nam Á đã được giải quyết. \n\nb) Mối quan tâm chủ yếu của tổ chức ASEAN trong 25 năm đầu thành lập là hợp tác kinh tế, văn hóa; giúp Việt Nam chống Mỹ xâm lược.\n\nc) Mục tiêu hòa bình, hợp tác và phát triển của tổ chức ASEAN là phù hợp với xu thế của thế giới và lợi ích của các nước Đông Nam Á.\n\nd) Đoạn tư liệu phản ánh nguyên nhân thành lập của tổ chức ASEAN."
+        }
+      ],
+      "essay": []
+    },
+    "total_score": 10,
+    "grade": "12",
+    "tf_grading_method": "deduction",
     "general_grading_criteria": ""
   }
 }
