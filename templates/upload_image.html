@@ -1,9 +1,9 @@
 {% extends "layout.html" %}
-{% block title %}Gửi ảnh bài làm{% endblock %}
+{% block title %}Gửi ảnh bài làm thi Giữa HK2 k10 năm học 2025-2026{% endblock %}
 {% block content %}
 <h2>📤 Gửi ảnh bài làm</h2>
 <form method="POST" enctype="multipart/form-data">
-  <input type="text" name="group_name" placeholder="Tên nhóm" required><br><br>
+  <input type="text" name="group_name" placeholder="Họ và tên" required><br><br>
   <input type="file" name="image" accept="image/*" required><br><br>
   <button type="submit">Gửi ảnh</button>
 </form>

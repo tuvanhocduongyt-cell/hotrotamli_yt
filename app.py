@@ -1237,7 +1237,7 @@ def upload_image():
 
     return render_template('upload_image.html', feedback=ai_feedback)
 
-    #Bài tự luận số 2 - HK1 khối 10
+    #Bài tự luận số 2 - HK1 khối 10 2025-2026
 RUBRIC_CRITERIA2 = """
 HỆ THỐNG TIÊU CHÍ CHẤM ĐIỂM (3 điểm):
 
@@ -1325,6 +1325,113 @@ def upload_image2():
             ai_feedback = f"⚠ Lỗi khi xử lý ảnh: {str(e)}"
 
     return render_template('upload_image2.html', feedback=ai_feedback)
+
+ #Bài tự luận số 3 - giữa HK2 khối 11 2025-2026
+RUBRIC_CRITERIA2 = """
+HỆ THỐNG TIÊU CHÍ CHẤM ĐIỂM (3 điểm):
+
+Câu 1 (1,0 điểm): Dựa vào đoạn tư liệu sau: 
+Cuộc cải cách của vua Lê Thánh Tông “khiến cho quan to, quan nhỏ đều ràng buộc với nhau. Chức trọng, chức khinh cùng kiềm chế lẫn nhau. Uy quyền không bị lợi dụng, thế nước vậy là khó lay”.
+(Ngô Sỹ Liên, Đại Việt sử ký toàn thư, Tập II, Sđd, tr.454)
+Em đánh giá như thế nào về cuộc cải cách của vua Lê Thánh Tông ở thế kỷ XV?
+	
+- Làm cho bộ máy nhà nước trở nên quy củ, chặt chẽ, tập trung cao độ, đề cao quyền hành toàn diện của hoàng đế. Các chức danh được quy định rõ ràng, hệ thống giám sát được tăng cường, hạn chế sự tập trung quyền lực dẫn đến chuyên quyền và nguy cơ cát cứ. 0,5 điểm
+- Các chính sách kinh tế đã góp phần khẳng định quyền sở hữu tối cao của Nhà nước tạo nền tảng cho kinh tế nông nghiệp phát triển. 0,25 điểm
+- Chính sách giáo dục, khoa cử đã đào tạo được hệ thống quan lại trí thức có tài, đủ năng lực quản lí đất nước. 0,25 điểm
+
+
+Câu 2 (2 điểm): Trình bày một số biện pháp cải cách hành chính của vua Minh Mạng. Theo em, những bài học kinh nghiệm nào từ cuộc cải cách của vua Minh Mạng có thể áp dụng vào việc xây dựng nền hành chính Việt Nam hiện đại? 
+Trình bày một số biện pháp cải cách hành chính của vua Minh Mạng (1,5 điểm)
+♦ Ở trung ương:
+- Vua Minh Mạng tiến hành cải tổ hệ thống Văn thư phòng và thành lập Cơ mật viện làm hai cơ quan tham mưu và tư vấn tối cao của hoàng đế về hành chính, chính trị và an ninh, quân sự. 0,25 điểm
+- Hoàn thiện cơ cấu, chức năng của lục Bộ và cải tổ các cơ quan chuyên môn như Quốc tử giám, Hàn lâm viện.... 0,25 điểm
+- Vua Minh Mạng cũng thực hiện chế độ giám sát, thanh tra chéo giữa các cơ quan trung ương thông qua hoạt động của Đô sát viện và lục Khoa. 0,25 điểm
+♦ Ở địa phương:
+- Chia cả nước thành 30 tỉnh và phủ Thừa Thiên. Đứng đầu tỉnh là Tổng đốc, Tuần phủ. Tổng đốc thường là người phụ trách hai tỉnh, trực tiếp cai trị một tỉnh. Tỉnh còn lại do Tuần phủ đứng đầu, đặt dưới sự kiêm quản của Tổng đốc. 0,25 điểm
+- Đối với vùng dân tộc thiểu số: Vua cho đổi các động, sách thành xã như vùng đồng bằng, đồng thời bãi bỏ chế độ cai trị của các tù trưởng địa phương, bổ dụng quan lại của triều đình đến cai trị trực tiếp. 0,25 điểm
+- Về bộ máy quan lại: Vua Minh Mạng cũng cải tổ chế độ hồi tỵ bằng việc mở rộng phạm vi, đối tượng áp dụng và bổ sung những quy định mới rất nghiêm ngặt. 0,25 điểm
+	
+*Một số bài học kinh nghiệm từ cuộc cải cách của vua Minh Mạng có thể áp dụng vào việc xây dựng nền hành chính Việt Nam: (0,5 điểm)
+(HS nêu được 2 bài học đúng trong các bài học dưới đây thì cho điểm tối đa )
++ Thống nhất đơn vị hành chính địa phương trong cả nước;
++ Xây dựng cơ cấu bộ máy nhà nước đơn gọn nhẹ, chặt chẽ;
++ Phân định cụ thể chức năng, nhiệm vụ của các cơ quan và cán bộ, công chức nhà nước theo nguyên tắc “chức vụ và trách nhiệm nghiêm minh, quyền lợi và nghĩa vụ tương xứng”.
++ Chú trọng hơn nữa công tác đào tạo, bồi dưỡng, tuyển chọn nhân tài vào đảm đương các chức vụ trong bộ máy hành chính nhà nước.
++ Xây dựng cơ chế kiểm tra, giám sát các cơ quan hành chính và đội ngũ cán bộ, công chức có hiệu quả.
++ Mở rộng diện và đối tượng áp dụng chế độ “hồi tỵ” để giảm bớt những tiêu cực trong nền hành chính nhà nước.
+	
+
+"""
+def generate_grading_prompt3():
+    """Tạo prompt chấm điểm dựa trên rubric"""
+    
+    prompt = f"""Bạn là giáo viên Lịch sử chấm bài. Hãy phân tích bài làm trong ảnh theo TIÊU CHÍ SAU:
+
+{RUBRIC_CRITERIA2}
+
+YÊU CẦU CHẤM BÀI:
+1. Đọc kỹ bài làm của học sinh trong ảnh
+2. Chấm điểm CHI TIẾT cho TỪNG TIÊU CHÍ theo đúng thang điểm
+3. Phân tích theo format BẮT BUỘC:
+
+📊 TỔNG ĐIỂM: [X/3]
+
+📝 ĐIỂM CHI TIẾT:
+
+**CÂU 1 ([X]/1.0 điểm):**
+- Tiêu chí 1 (0.5đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+- Tiêu chí 2 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+- Tiêu chí 3 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+
+**CÂU 2 ([X]/2 điểm):**
+- Tiêu chí 1 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+- Tiêu chí 2 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+- Tiêu chí 3 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+- Tiêu chí 4 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+- Tiêu chí 5 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+- Tiêu chí 6 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+- Tiêu chí 7 (0.5đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+
+❌ LỖI SAI CẦN SỬA (nếu có):
+- "Trích nguyên văn lỗi trong bài" → Sửa: [giải thích đúng]
+- "Trích nguyên văn lỗi khác" → Sửa: [giải thích đúng]
+
+💡 GỢI Ý CẢI THIỆN:
+[1-2 câu ngắn gọn để học sinh cải thiện bài làm]
+
+LƯU Ý QUAN TRỌNG:
+- Phải TRÍCH NGUYÊN VĂN câu/đoạn sai trong bài làm (đặt trong dấu ngoặc kép)
+- Chỉ ra lỗi CỤ THỂ: sai sự kiện, sai năm tháng, sai khái niệm, thiếu logic, thiếu độ sâu...
+- Chấm điểm CÔNG BẰNG theo đúng thang điểm từng tiêu chí
+- Tối đa 200 từ, ngắn gọn súc tích"""
+
+    return prompt
+@app.route('/upload_image3', methods=['GET', 'POST'])
+def upload_image3():
+    ai_feedback = None
+
+    if request.method == 'POST':
+        image = request.files.get('image')
+        if not image or image.filename == '':
+            return render_template('upload_image3.html', feedback="⚠ Không có ảnh được chọn.")
+
+        # FIX: thêm timestamp tránh trùng tên file
+        import time
+        safe_filename = secure_filename(f"{int(time.time())}_{image.filename}")
+        image_path = os.path.join(app.config['UPLOAD_FOLDER'], safe_filename).replace('\\', '/')
+        image.save(image_path)
+
+        try:
+            img = Image.open(image_path)
+            prompt = generate_grading_prompt3()
+            response = generate_with_retry([img, prompt], feature='lichsu')
+            ai_feedback = response.text
+            ai_feedback = format_feedback_html(ai_feedback)
+
+        except Exception as e:
+            ai_feedback = f"⚠ Lỗi khi xử lý ảnh: {str(e)}"
+
+    return render_template('upload_image3.html', feedback=ai_feedback)
 
 def format_feedback_html(text):
     """Format feedback thành HTML đẹp"""
