@@ -5052,7 +5052,7 @@
     "type": "multiple_choice",
     "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-31 08:01:04",
+    "created_at": "2025-05-26 08:01:04",
     "questions": {
       "multiple_choice": [
         {
@@ -5427,7 +5427,7 @@
     "type": "multiple_choice",
     "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-31 08:05:04",
+    "created_at": "2025-05-30 09:25:04",
     "questions": {
       "multiple_choice": [
         {
@@ -5802,7 +5802,7 @@
     "type": "multiple_choice",
     "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-31 08:13:43",
+    "created_at": "2025-09-10 08:13:43",
     "questions": {
       "multiple_choice": [
         {
@@ -6175,7 +6175,7 @@
     "type": "multiple_choice",
     "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-31 08:14:18",
+    "created_at": "2025-09-15 10:14:18",
     "questions": {
       "multiple_choice": [
         {
@@ -6550,7 +6550,7 @@
     "type": "multiple_choice",
     "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-31 08:19:00",
+    "created_at": "2025-09-21 11:19:00",
     "questions": {
       "multiple_choice": [
         {
@@ -6925,7 +6925,7 @@
     "type": "multiple_choice",
     "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-31 08:21:31",
+    "created_at": "2029-09-25 08:21:31",
     "questions": {
       "multiple_choice": [
         {
@@ -7294,7 +7294,7 @@
     "type": "multiple_choice",
     "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-31 08:44:20",
+    "created_at": "2025-09-28 13:44:20",
     "questions": {
       "multiple_choice": [
         {
@@ -7655,7 +7655,7 @@
     "type": "multiple_choice",
     "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-31 08:46:13",
+    "created_at": "2025-10-02 08:46:13",
     "questions": {
       "multiple_choice": [
         {
@@ -8016,7 +8016,7 @@
     "type": "multiple_choice",
     "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-31 09:11:27",
+    "created_at": "2025-10-18 09:11:27",
     "questions": {
       "multiple_choice": [
         {
@@ -8391,7 +8391,7 @@
     "type": "multiple_choice",
     "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-31 09:12:06",
+    "created_at": "2025-10-21 07:12:06",
     "questions": {
       "multiple_choice": [
         {
@@ -8766,7 +8766,7 @@
     "type": "multiple_choice",
     "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-31 09:12:42",
+    "created_at": "2025-10-24 09:12:42",
     "questions": {
       "multiple_choice": [
         {
@@ -9141,7 +9141,7 @@
     "type": "multiple_choice",
     "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-31 09:13:10",
+    "created_at": "2025-10-27 14:13:10",
     "questions": {
       "multiple_choice": [
         {
@@ -9515,7 +9515,7 @@
     "type": "multiple_choice",
     "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-31 09:14:55",
+    "created_at": "2025-11-03 09:14:55",
     "questions": {
       "multiple_choice": [
         {
@@ -10225,7 +10225,7 @@
     "type": "multiple_choice",
     "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-31 09:46:42",
+    "created_at": "2025-11-15 10:46:42",
     "questions": {
       "multiple_choice": [
         {
@@ -10600,7 +10600,7 @@
     "type": "multiple_choice",
     "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-31 09:48:28",
+    "created_at": "2025-11-21 15:48:28",
     "questions": {
       "multiple_choice": [
         {
@@ -10975,7 +10975,7 @@
     "type": "multiple_choice",
     "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-31 09:49:35",
+    "created_at": "2025-12-10 09:49:35",
     "questions": {
       "multiple_choice": [
         {
@@ -11345,7 +11345,7 @@
     "type": "multiple_choice",
     "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-31 09:50:07",
+    "created_at": "2026-01-12 13:50:07",
     "questions": {
       "multiple_choice": [
         {
@@ -11720,7 +11720,7 @@
     "type": "multiple_choice",
     "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-31 09:51:13",
+    "created_at": "2026-01-16 10:51:13",
     "questions": {
       "multiple_choice": [
         {
@@ -12075,7 +12075,7 @@
     "type": "multiple_choice",
     "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-31 09:58:26",
+    "created_at": "2026-02-03 08:58:26",
     "questions": {
       "multiple_choice": [
         {
@@ -12450,7 +12450,7 @@
     "type": "multiple_choice",
     "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-31 10:00:36",
+    "created_at": "2026-03-20 10:00:36",
     "questions": {
       "multiple_choice": [
         {
@@ -12825,7 +12825,7 @@
     "type": "multiple_choice",
     "duration": 50,
     "created_by": "gv001",
-    "created_at": "2026-03-31 10:09:18",
+    "created_at": "2026-03-25 11:29:38",
     "questions": {
       "multiple_choice": [
         {
@@ -13535,6 +13535,1144 @@
     "total_score": 10,
     "grade": "12",
     "tf_grading_method": "deduction",
+    "general_grading_criteria": ""
+  },
+  "20260331104046": {
+    "id": "20260331104046",
+    "title": "K11 Đề số 1",
+    "type": "multiple_choice",
+    "duration": 50,
+    "created_by": "gv001",
+    "created_at": "2026-01-20 10:40:46",
+    "questions": {
+      "multiple_choice": [
+        {
+          "question": "Cuộc khởi nghĩa Lam Sơn (1418-1427) kết thúc thắng lợi được đánh dấu bằng sự kiện nào sau đây?",
+          "options": [
+            "A. Hội thề Đông Quan (Hà Nội).",
+            "B. Chiến thắng Ngọc Hồi-Đống Đa.",
+            "C. Hội thề ở Lũng Nhai (Thanh Hóa).",
+            "D. Chiến thắng Tốt Động-Chúc Động."
+          ],
+          "answer": "A",
+          "_is_standard": true,
+          "_raw_block": "Cuộc khởi nghĩa Lam Sơn (1418-1427) kết thúc thắng lợi được đánh dấu bằng sự kiện nào sau đây?\n\n A. Hội thề Đông Quan (Hà Nội).\n\n B. Chiến thắng Ngọc Hồi-Đống Đa.\n\n C. Hội thề ở Lũng Nhai (Thanh Hóa).\n\n D. Chiến thắng Tốt Động-Chúc Động."
+        },
+        {
+          "question": "Biểu tượng trên Quốc huy của Liên Xô theo Hiến pháp (1924) là",
+          "options": [
+            "A. ngôi sao vàng năm cánh.",
+            "B. búa liềm trên quả địa cầu.",
+            "C. Lê-nin cầm cờ đỏ búa liềm.",
+            "D. bánh răng và bông lúa nước."
+          ],
+          "answer": "B",
+          "_is_standard": true,
+          "_raw_block": "Biểu tượng trên Quốc huy của Liên Xô theo Hiến pháp (1924) là\n\n A. ngôi sao vàng năm cánh.\n\n B. búa liềm trên quả địa cầu.\n\n C. Lê-nin cầm cờ đỏ búa liềm.\n\n D. bánh răng và bông lúa nước."
+        },
+        {
+          "question": "Nội dung nào sau đâylà đúng về bối cảnh các nước Đông Nam Á trước khi trở thành thuộc địa của thực dân phương Tây?",
+          "options": [
+            "A. Các nước đánh mất bản sắc văn hóa dân tộc.",
+            "B. Nhiều cuộc nổi dậy chống lại chế độ phong kiến.",
+            "C. Nhân dân không hợp tác với triều đình phong kiến.",
+            "D. Nhà nước phong kiến đã phát triển thịnh vượng."
+          ],
+          "answer": "B",
+          "_is_standard": true,
+          "_raw_block": "Nội dung nào sau đâylà đúng về bối cảnh các nước Đông Nam Á trước khi trở thành thuộc địa của thực dân phương Tây?\n\n   A. Các nước đánh mất bản sắc văn hóa dân tộc.\n\n   B. Nhiều cuộc nổi dậy chống lại chế độ phong kiến.\n\n   C. Nhân dân không hợp tác với triều đình phong kiến.\n\n   D. Nhà nước phong kiến đã phát triển thịnh vượng."
+        },
+        {
+          "question": "Điểm tương đồng của Xiêm và Nhật Bản trong đường lối phát triển đất nước giai đoạn cuối thế kỉ XIX đầu thế kỉ XX là gì?",
+          "options": [
+            "A. Đều lệ thuộc vào các nước thực dân phương Tây.",
+            "B. Đều không đạt được mục đích trong công cuộc cải cách.",
+            "C. Tiến hành cải cách và trở thành cường quốc ở châu Á.",
+            "D. Tiến hành cải cách và phát triển theo tư bản chủ nghĩa."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Điểm tương đồng của Xiêm và Nhật Bản trong đường lối phát triển đất nước giai đoạn cuối thế kỉ XIX đầu thế kỉ XX là gì?\n\n   A. Đều lệ thuộc vào các nước thực dân phương Tây.\n\n   B. Đều không đạt được mục đích trong công cuộc cải cách.\n\n   C. Tiến hành cải cách và trở thành cường quốc ở châu Á.\n\n   D. Tiến hành cải cách và phát triển theo tư bản chủ nghĩa."
+        },
+        {
+          "question": "Thuật ngữ: “chủ nghĩa tư bản hiện đại” dùng để chỉ sự phát triển của chủ nghĩa tư bản trong giai đoạn",
+          "options": [
+            "A. trước Chiến tranh thế giới thứ hai.",
+            "B. sau Chiến tranh thế giới thứ nhất đến nay.",
+            "C. trước Chiến tranh thế giới thứ nhất.",
+            "D. sau Chiến tranh thế giới thứ hai đến nay."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Thuật ngữ: “chủ nghĩa tư bản hiện đại” dùng để chỉ sự phát triển của chủ nghĩa tư bản trong giai đoạn\n\n   A. trước Chiến tranh thế giới thứ hai.\n\n   B. sau Chiến tranh thế giới thứ nhất đến nay.\n\n   C. trước Chiến tranh thế giới thứ nhất.\n\n   D. sau Chiến tranh thế giới thứ hai đến nay."
+        },
+        {
+          "question": "Sau cuộc chiến đấu chống thù trong giặc ngoài, công cuộc xây dựng chủ nghĩa xã hội đặt ra yêu cầu gì đối với các dân tộc trên lãnh thổ nước Nga Xô viết?",
+          "options": [
+            "A. Một, hai dân tộc lớn liên minh với nhau giành quyền lực.",
+            "B. Liên kết với các nước bên ngoài để nhận sự giúp đỡ.",
+            "C. Liên minh, đoàn kết với nhau nhằm tăng cường sức mạnh.",
+            "D. Độc lập với nhau để phát huy sức mạnh của mỗi dân tộc."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Sau cuộc chiến đấu chống thù trong giặc ngoài, công cuộc xây dựng chủ nghĩa xã hội đặt ra yêu cầu gì đối với các dân tộc trên lãnh thổ nước Nga Xô viết?\n\n   A. Một, hai dân tộc lớn liên minh với nhau giành quyền lực.\n\n   B. Liên kết với các nước bên ngoài để nhận sự giúp đỡ.\n\n   C. Liên minh, đoàn kết với nhau nhằm tăng cường sức mạnh.\n\n   D. Độc lập với nhau để phát huy sức mạnh của mỗi dân tộc."
+        },
+        {
+          "question": "Về mặt chính trị, sau khi hoàn thành xâm lược Đông Nam Á các nước thực dân phương Tây đã thi hành chính sách",
+          "options": [
+            "A. \"phản phong\".",
+            "B. \"đồng hóa\".",
+            "C. \"ngu dân\".",
+            "D. \"chia để trị\"."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Về mặt chính trị, sau khi hoàn thành xâm lược Đông Nam Á các nước thực dân phương Tây đã thi hành chính sách\n\n A. \"phản phong\".\n\n B. \"đồng hóa\".\n\n C. \"ngu dân\".\n\n D. \"chia để trị\"."
+        },
+        {
+          "question": "Biểu hiện tiêu biểu của chủ nghĩa tư bản hiện đại là gì?",
+          "options": [
+            "A. Kết hợp sức mạnh kinh tế của các tổ chức độc quyền tư nhân với sức mạnh của nền tài chính.",
+            "B. Kết hợp sức mạnh kinh tế của các tổ chức độc quyền tư nhân với sức mạnh chính trị của nhà nước tư sản.",
+            "C. Kết hợp sức mạnh kinh tế của các tổ chức độc quyền tư nhân với nền văn hóa hiện đại.",
+            "D. Kết hợp sức mạnh kinh tế của các tổ chức độc quyền với sức mạnh chính trị của nhà nước tư sản."
+          ],
+          "answer": "B",
+          "_is_standard": true,
+          "_raw_block": "Biểu hiện tiêu biểu của chủ nghĩa tư bản hiện đại là gì?\n\n   A. Kết hợp sức mạnh kinh tế của các tổ chức độc quyền tư nhân với sức mạnh của nền tài chính.\n\n   B. Kết hợp sức mạnh kinh tế của các tổ chức độc quyền tư nhân với sức mạnh chính trị của nhà nước tư sản.\n\n   C. Kết hợp sức mạnh kinh tế của các tổ chức độc quyền tư nhân với nền văn hóa hiện đại.\n\n   D. Kết hợp sức mạnh kinh tế của các tổ chức độc quyền với sức mạnh chính trị của nhà nước tư sản."
+        },
+        {
+          "question": "Cuộccách mạng tư sản Pháp (cuối thế kỷ XVIII) và cách mạng tư sản Anh (thế kỷ XVII) có điểm khác biệt nào sau đây?",
+          "options": [
+            "A. Giải quyết vấn đề ruộng đất cho nông dân.",
+            "B. Tạo điều kiện cho kinh tế tư bản phát triển.",
+            "C. Do giai cấp tư sản và quý tộc mới lãnh đạo.",
+            "D. Xóa bỏ phong kiến, thiết lập quân chủ lập hiến."
+          ],
+          "answer": "A",
+          "_is_standard": true,
+          "_raw_block": "Cuộccách mạng tư sản Pháp (cuối thế kỷ XVIII) và cách mạng tư sản Anh (thế kỷ XVII) có điểm khác biệt nào sau đây?\n\n   A. Giải quyết vấn đề ruộng đất cho nông dân.\n\n   B. Tạo điều kiện cho kinh tế tư bản phát triển.\n\n   C. Do giai cấp tư sản và quý tộc mới lãnh đạo.\n\n   D. Xóa bỏ phong kiến, thiết lập quân chủ lập hiến."
+        },
+        {
+          "question": "Vai trò của trào lưu Triết học Ánh sáng là gì?",
+          "options": [
+            "A. Lên án chế độ phong kiến, cũng như những mặt trái của chủ nghĩa tư bản, xây dựng xã hội mới.",
+            "B. Đề cao chế độ phong kiến, lên án chế độ tư bản chủ nghĩa, bênh vực cho người lao động.",
+            "C. Lên án chế độ tư bản chủ nghĩa, đưa ra lí thuyết về xây dựng nhà nước xã hội chủ nghĩa.",
+            "D. Tấn công vào hệ tư tưởng của chế độ phong kiến, dọn đường cho cách mạng bùng nổ."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Vai trò của trào lưu Triết học Ánh sáng là gì?\n\n   A. Lên án chế độ phong kiến, cũng như những mặt trái của chủ nghĩa tư bản, xây dựng xã hội mới.\n\n   B. Đề cao chế độ phong kiến, lên án chế độ tư bản chủ nghĩa, bênh vực cho người lao động.\n\n   C. Lên án chế độ tư bản chủ nghĩa, đưa ra lí thuyết về xây dựng nhà nước xã hội chủ nghĩa.\n\n   D. Tấn công vào hệ tư tưởng của chế độ phong kiến, dọn đường cho cách mạng bùng nổ."
+        },
+        {
+          "question": "Sau Chiến tranh thế giới thứ hai, chủ nghĩa xã hội từ phạm vi một nước đã",
+          "options": [
+            "A. trở thành một hệ thống trên thế giới.",
+            "B. trở thành siêu cường số một thế giới.",
+            "C. lan rộng sang các nước ở Tây Âu.",
+            "D. bị xoá bỏ hoàn toàn trên thế giới."
+          ],
+          "answer": "A",
+          "_is_standard": true,
+          "_raw_block": "Sau Chiến tranh thế giới thứ hai, chủ nghĩa xã hội từ phạm vi một nước đã\n\n   A. trở thành một hệ thống trên thế giới.\n\n   B. trở thành siêu cường số một thế giới.\n\n   C. lan rộng sang các nước ở Tây Âu.\n\n   D. bị xoá bỏ hoàn toàn trên thế giới."
+        },
+        {
+          "question": "Từ đầu thế kỉ XVI các nước phương Tây xâm nhập vào các nước Đông Nam Á thông qua hoạt động",
+          "options": [
+            "A. buôn bán.",
+            "B. thể thao.",
+            "C. du lịch.",
+            "D. nhân đạo."
+          ],
+          "answer": "A",
+          "_is_standard": true,
+          "_raw_block": "Từ đầu thế kỉ XVI các nước phương Tây xâm nhập vào các nước Đông Nam Á thông qua hoạt động\n\n A. buôn bán.\n\n B. thể thao.\n\n C. du lịch.\n\n D. nhân đạo."
+        },
+        {
+          "question": "Trong cuộc kháng chiến chống Tống (1075-1077), quân và dân nhà Lý đã sử dụng nghệ thuật quân sự nào sau đây?",
+          "options": [
+            "A. Vườn không nhà trống.",
+            "B. Tiên phát chế nhân.",
+            "C. Đánh nhanh, thắng nhanh.",
+            "D. Vây thành, diệt viện."
+          ],
+          "answer": "B",
+          "_is_standard": true,
+          "_raw_block": "Trong cuộc kháng chiến chống Tống (1075-1077), quân và dân nhà Lý đã sử dụng nghệ thuật quân sự nào sau đây?\n\n A. Vườn không nhà trống.\n\n B. Tiên phát chế nhân.\n\n C. Đánh nhanh, thắng nhanh.\n\n D. Vây thành, diệt viện."
+        },
+        {
+          "question": "TheoHiến pháp (1924) của Liên Xô, ghi nhận việc hợp tác của các nước Cộng hòa Xô viết thành một nhà nước dựa trên cơ sở",
+          "options": [
+            "A. thương lượng.",
+            "B. tự nguyện.",
+            "C. thỏa thuận.",
+            "D. bắt buộc."
+          ],
+          "answer": "B",
+          "_is_standard": true,
+          "_raw_block": "TheoHiến pháp (1924) của Liên Xô, ghi nhận việc hợp tác của các nước Cộng hòa Xô viết thành một nhà nước dựa trên cơ sở\n\n A. thương lượng.\n\n B. tự nguyện.\n\n C. thỏa thuận.\n\n D. bắt buộc."
+        },
+        {
+          "question": "Để giữ gìn chủ quyền của đất nước, vua Ra-ma V đặc biệt quan tâm đến chính sách",
+          "options": [
+            "A. văn hóa.",
+            "B. thể thao.",
+            "C. ngoại giao.",
+            "D. tôn giáo."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Để giữ gìn chủ quyền của đất nước, vua Ra-ma V đặc biệt quan tâm đến chính sách\n\n A. văn hóa.\n\n B. thể thao.\n\n C. ngoại giao.\n\n D. tôn giáo."
+        },
+        {
+          "question": "Đâu là một trong những đặc điểm của phong trào giải phóng dân tộc ở Đông Nam Á trong giai đoạn 1920 - 1945?",
+          "options": [
+            "A. Giai cấp vô sản bước lên vũ đài chính trị.",
+            "B. Phong trào chủ yếu theo ý thức hệ phong kiến.",
+            "C. Hoàn thành cuộc đấu tranh giành độc lập.",
+            "D. Đánh dấu sự ra đời của giai cấp vô sản."
+          ],
+          "answer": "A",
+          "_is_standard": true,
+          "_raw_block": "Đâu là một trong những đặc điểm của phong trào giải phóng dân tộc ở Đông Nam Á trong giai đoạn 1920 - 1945?\n\n   A. Giai cấp vô sản bước lên vũ đài chính trị.\n\n   B. Phong trào chủ yếu theo ý thức hệ phong kiến.\n\n   C. Hoàn thành cuộc đấu tranh giành độc lập.\n\n   D. Đánh dấu sự ra đời của giai cấp vô sản."
+        },
+        {
+          "question": "Nội dung nào sau đây không phải là nguyên nhân dẫn đến thất bại của nhà Hồ trong cuộc kháng chiến chống quân Minh ở thế kỉ XV?",
+          "options": [
+            "A. Nhà Hồ không có tướng tài giỏi chỉ huy quân đội.",
+            "B. Sử dụng thế đánh phòng ngự, xây thành cố thủ.",
+            "C. Triều đình chỉ chú trọng xây dựng quân chính quy.",
+            "D. Không nhận được sự ủng hộ to lớn của nhân dân."
+          ],
+          "answer": "A",
+          "_is_standard": true,
+          "_raw_block": "Nội dung nào sau đây không phải là nguyên nhân dẫn đến thất bại của nhà Hồ trong cuộc kháng chiến chống quân Minh ở thế kỉ XV?\n\n   A. Nhà Hồ không có tướng tài giỏi chỉ huy quân đội.\n\n   B. Sử dụng thế đánh phòng ngự, xây thành cố thủ.\n\n   C. Triều đình chỉ chú trọng xây dựng quân chính quy.\n\n   D. Không nhận được sự ủng hộ to lớn của nhân dân."
+        },
+        {
+          "question": "Thực tiễn các chiến tranh bảo vệ Tổ quốc của nhân dân Việt Nam đã để lại bài học kinh nghiệm quý báu nào sau đây?",
+          "options": [
+            "A. Duy trì chính sách đối ngoại hòa bình, láng giềng thân thiện.",
+            "B. Giữ gìn bản sắc văn hóa, không hòa nhập với văn hóa bên ngoài.",
+            "C. Chủ động hòa hiếu với các nước lớn để tránh nguy cơ chiến tranh.",
+            "D. Lấy sức mạnh nội tại của quốc gia làm nền tảng duy trì hòa bình."
+          ],
+          "answer": "A",
+          "_is_standard": true,
+          "_raw_block": "Thực tiễn các chiến tranh bảo vệ Tổ quốc của nhân dân Việt Nam đã để lại bài học kinh nghiệm quý báu nào sau đây?\n\n   A. Duy trì chính sách đối ngoại hòa bình, láng giềng thân thiện.\n\n   B. Giữ gìn bản sắc văn hóa, không hòa nhập với văn hóa bên ngoài.\n\n   C. Chủ động hòa hiếu với các nước lớn để tránh nguy cơ chiến tranh.\n\n   D. Lấy sức mạnh nội tại của quốc gia làm nền tảng duy trì hòa bình."
+        },
+        {
+          "question": "Vào mùa hè năm 1423, Lê Lợi đã đề nghị tạm hoà với quân Minh vì",
+          "options": [
+            "A. quân sĩ khiếp sợ trước sức mạnh của giặc, tinh thần sa sút.",
+            "B. muốn tranh thủ thời gian hòa hoãn để xây dựng lực lượng.",
+            "C. nghĩa quân ánh mãi không thắng nên chấp nhận cầu hoà.",
+            "D. thiếu tướng tài, tinh thần chiến đấu của quân sĩ sa sút."
+          ],
+          "answer": "B",
+          "_is_standard": true,
+          "_raw_block": "Vào mùa hè năm 1423, Lê Lợi đã đề nghị tạm hoà với quân Minh vì\n\n   A. quân sĩ khiếp sợ trước sức mạnh của giặc, tinh thần sa sút.\n\n   B. muốn tranh thủ thời gian hòa hoãn để xây dựng lực lượng.\n\n   C. nghĩa quân ánh mãi không thắng nên chấp nhận cầu hoà.\n\n   D. thiếu tướng tài, tinh thần chiến đấu của quân sĩ sa sút."
+        },
+        {
+          "question": "Trong giai đoạn xây dựng và bảo vệ đất nước hiện nay, Việt Nam học tập điều gì từ sự ra đời và thành công của Liên bang Cộng hòa xã hội chủ nghĩa Xô viết?",
+          "options": [
+            "A. Mở rộng, giao lưu hợp tác quốc tế để khẳng định vị thế đất nước.",
+            "B. Tinh thần đoàn kết, hợp tác, giúp đỡ nhau giữa các dân tộc.",
+            "C. Đoàn kết, hợp tác trong đấu tranh chống ngoại xâm giữa các dân tộc.",
+            "D. Tham gia các liên minh quân sự để tăng cường sức mạnh phòng thủ."
+          ],
+          "answer": "B",
+          "_is_standard": true,
+          "_raw_block": "Trong giai đoạn xây dựng và bảo vệ đất nước hiện nay, Việt Nam học tập điều gì từ sự ra đời và thành công của Liên bang Cộng hòa xã hội chủ nghĩa Xô viết?\n\n   A. Mở rộng, giao lưu hợp tác quốc tế để khẳng định vị thế đất nước.\n\n   B. Tinh thần đoàn kết, hợp tác, giúp đỡ nhau giữa các dân tộc.\n\n   C. Đoàn kết, hợp tác trong đấu tranh chống ngoại xâm giữa các dân tộc.\n\n   D. Tham gia các liên minh quân sự để tăng cường sức mạnh phòng thủ."
+        },
+        {
+          "question": "Cuộc đấu tranh chống ngoại xâm nào sau đây của nhân dân Việt Nam diễn ra trong thời kỳ Bắc thuộc?",
+          "options": [
+            "A. Khởi nghĩa Phùng Hưng.",
+            "B. Khởi nghĩa Trương Định.",
+            "C. Phong trào Tây Sơn.",
+            "D. Khởi nghĩa Nguyễn Trung Trực."
+          ],
+          "answer": "A",
+          "_is_standard": true,
+          "_raw_block": "Cuộc đấu tranh chống ngoại xâm nào sau đây của nhân dân Việt Nam diễn ra trong thời kỳ Bắc thuộc?\n\n A. Khởi nghĩa Phùng Hưng.\n\n B. Khởi nghĩa Trương Định.\n\n C. Phong trào Tây Sơn.\n\n D. Khởi nghĩa Nguyễn Trung Trực."
+        },
+        {
+          "question": "Nội dung nào sau đây phản ánh đúng đặc điểm các cuộc chiến tranh bảo vệ Tổ quốc trong lịch sử dựng nước và giữ nước của dân tộc Việt Nam?",
+          "options": [
+            "A. Các triều đại phong kiến đều phát huy được khối đại đoàn kết toàn dân.",
+            "B. Các cuộc đấu tranh đều diễn ra dưới sự lãnh đạo của triều đình.",
+            "C. Dựng nước đi đôi với giữ nước, giữ gìn và phát huy bản sắc văn hóa.",
+            "D. Tât cả các cuộc đấu tranh diễn ra đều giành được thắng lợi vang dội."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Nội dung nào sau đây phản ánh đúng đặc điểm các cuộc chiến tranh bảo vệ Tổ quốc trong lịch sử dựng nước và giữ nước của dân tộc Việt Nam?\n\n   A. Các triều đại phong kiến đều phát huy được khối đại đoàn kết toàn dân.\n\n   B. Các cuộc đấu tranh đều diễn ra dưới sự lãnh đạo của triều đình.\n\n   C. Dựng nước đi đôi với giữ nước, giữ gìn và phát huy bản sắc văn hóa.\n\n   D. Tât cả các cuộc đấu tranh diễn ra đều giành được thắng lợi vang dội."
+        },
+        {
+          "question": "Nội dung nào sau đây phản ánh đúng quá trình chuyển biến của cách mạng ở khu vực Đông Nam Á từ cuối thế kỉ XIX đến năm 1920?",
+          "options": [
+            "A. đấu tranh chống xâm lược sang đấu tranh giành độc lập dân tộc",
+            "B. đấu tranh chính trị sang đấu tranh vũ trang giành chính quyền.",
+            "C. đấu tranh giành độc lập dân tộc sang đấu tranh giành chính quyền.",
+            "D. đấu tranh vũ trang sang đấu tranh chính trị giành độc lập dân tộc."
+          ],
+          "answer": "A",
+          "_is_standard": true,
+          "_raw_block": "Nội dung nào sau đây phản ánh đúng quá trình chuyển biến của cách mạng ở khu vực Đông Nam Á từ cuối thế kỉ XIX đến năm 1920?\n\n   A. đấu tranh chống xâm lược sang đấu tranh giành độc lập dân tộc\n\n   B. đấu tranh chính trị sang đấu tranh vũ trang giành chính quyền.\n\n   C. đấu tranh giành độc lập dân tộc sang đấu tranh giành chính quyền.\n\n   D. đấu tranh vũ trang sang đấu tranh chính trị giành độc lập dân tộc."
+        },
+        {
+          "question": "Điểm tương đồng trong công cuộc cải cách mở cửa ở Trung Quốc (1978), công cuộc cải tổ của Liên Xô (1985 - 1991) và đổi mới đất nước ở Việt Nam (1986) là gì?",
+          "options": [
+            "A. Tiến hành khi đất nước lâm vào tình trạng khủng hoảng kéo dài.",
+            "B. Củng cố và nâng cao vai trò lãnh đạo của Đảng Cộng sản.",
+            "C. Lấy cải tổ chính trị làm trọng tâm; thực hiện đa nguyên, đa đảng.",
+            "D. Lấy phát triển kinh tế làm trọng tâm, tiến hành cải cách mở cửa."
+          ],
+          "answer": "A",
+          "_is_standard": true,
+          "_raw_block": "Điểm tương đồng trong công cuộc cải cách mở cửa ở Trung Quốc (1978), công cuộc cải tổ của Liên Xô (1985 - 1991) và đổi mới đất nước ở Việt Nam (1986) là gì?\n\n   A. Tiến hành khi đất nước lâm vào tình trạng khủng hoảng kéo dài.\n\n   B. Củng cố và nâng cao vai trò lãnh đạo của Đảng Cộng sản.\n\n   C. Lấy cải tổ chính trị làm trọng tâm; thực hiện đa nguyên, đa đảng.\n\n   D. Lấy phát triển kinh tế làm trọng tâm, tiến hành cải cách mở cửa."
+        }
+      ],
+      "true_false": [
+        {
+          "question": "Đọc đoạn tư liệu sau đây:\n\n       Cuối năm 1287, 30 vạn quân Nguyên do Thoát Hoan chỉ huy tiến vào nước ta. Buổi đầu, trước sức mạnh của quân Nguyên, quân dân nhà Trần dưới sự lãnh đạo của các vua Trần mà trực tiếp là Trần Quốc Tuấn đã thực hiện cách đánh “dĩ đoản binh, chế trường trận”. Cách đánh này khiến cho quân địch rơi vào tình thế: tiến công không được, lui cũng không xong. Quân Mông – Nguyên buộc lòng phải rút lui. Biết được con đường rút lui của địch, Trần Quốc Tuấn quyết định chọn sông Bạch Đằng làm trận địa quyết chiến tiêu diệt đạo quân địch rút lui theo đường thủy.",
+          "statements": [
+            "a) Đoạn tư liệu cung cấp thông tin về cuộc kháng chiến chống quân Mông – Nguyên xâm lược lần thứ nhất của vương triều Trần.",
+            "b) Để khích lệ quân sĩ trong chiến đấu chống quân Nguyên, năm 1287 Trần Quốc Tuấn đã viết tác phẩm Hịch tướng sĩ.",
+            "c) Quân Mông – Nguyên đã bị quân dân ta phục kích đánh trên sông Bạch Đằng khi chúng tìm cách rút lui về nước",
+            "d) “dĩ đoản binh, chế trường trận” được nhắc đến trong đoạn tư liệu trên chính là kế sách “vườn không nhà trống”."
+          ],
+          "answers": [
+            false,
+            false,
+            true,
+            false
+          ],
+          "_is_standard": true,
+          "_raw_block": "Đọc đoạn tư liệu sau đây:\n\n       Cuối năm 1287, 30 vạn quân Nguyên do Thoát Hoan chỉ huy tiến vào nước ta. Buổi đầu, trước sức mạnh của quân Nguyên, quân dân nhà Trần dưới sự lãnh đạo của các vua Trần mà trực tiếp là Trần Quốc Tuấn đã thực hiện cách đánh “dĩ đoản binh, chế trường trận”. Cách đánh này khiến cho quân địch rơi vào tình thế: tiến công không được, lui cũng không xong. Quân Mông – Nguyên buộc lòng phải rút lui. Biết được con đường rút lui của địch, Trần Quốc Tuấn quyết định chọn sông Bạch Đằng làm trận địa quyết chiến tiêu diệt đạo quân địch rút lui theo đường thủy.\n\n  a. Đoạn tư liệu cung cấp thông tin về cuộc kháng chiến chống quân Mông – Nguyên xâm lược lần thứ nhất của vương triều Trần.\n\nb. Để khích lệ quân sĩ trong chiến đấu chống quân Nguyên, năm 1287 Trần Quốc Tuấn đã viết tác phẩm Hịch tướng sĩ.\n\nc. Quân Mông – Nguyên đã bị quân dân ta phục kích đánh trên sông Bạch Đằng khi chúng tìm cách rút lui về nước\n\nd. “dĩ đoản binh, chế trường trận” được nhắc đến trong đoạn tư liệu trên chính là kế sách “vườn không nhà trống”."
+        },
+        {
+          "question": "Đọc đoạn tư liệu sau đây:\n\n     “Chủ nghĩa tư bản hiện đại là thuật ngữ dùng để chỉ một giai đoạn phát triển của chủ nghĩa tư bản từ sau Chiến tranh thế giới thế hai đến nay với những biểu hiện mới, tiêu biểu là sự kết hợp giữa sức mạnh kinh tế của các tổ chức độc quyền tư nhân với sức mạnh chính trị của nhà nước tư sản. Chủ nghĩa tư bản hiện đại có sức sản xuất phát triển cao trên cơ sở những thành tựu của khoa học – công nghệ, có lực lượng lao động đáp ứng sự phát triển nhảy vọt của nền sản xuất, đồng thời không ngừng điều chỉnh để tồn tại và phát triển trong bối cảnh mới.”                                                        \n\n                                                             SGK Lịch sử 11, bộ Kết nối tri thức với cuộc sống, trang 17",
+          "statements": [
+            "a) Chủ nghĩa tư bản hiện đại là hệ quả trực tiếp của quá trình xâm lược thuộc địa.",
+            "b) Chủ nghĩa tư bản hiện đại là thuật ngữ dùng để chỉ một giai đoạn phát triển của chủ nghĩa tư bản từ sau năm 1945 đến nay.",
+            "c) Một trong những cơ sở thúc đẩy chủ nghĩa tư bản hiện đại có sức sản xuất phát triển cao là dựa trên sức mạnh chính trị của nhà nước tư sản.",
+            "d) Chủ nghĩa tư bản hiện đại ngày nay đã thay đổi về mặt bản chất, có khả năng điều chỉnh để tồn tại và phát triển trong bối cảnh mới."
+          ],
+          "answers": [
+            false,
+            true,
+            false,
+            false
+          ],
+          "_is_standard": true,
+          "_raw_block": "Đọc đoạn tư liệu sau đây:\n\n     “Chủ nghĩa tư bản hiện đại là thuật ngữ dùng để chỉ một giai đoạn phát triển của chủ nghĩa tư bản từ sau Chiến tranh thế giới thế hai đến nay với những biểu hiện mới, tiêu biểu là sự kết hợp giữa sức mạnh kinh tế của các tổ chức độc quyền tư nhân với sức mạnh chính trị của nhà nước tư sản. Chủ nghĩa tư bản hiện đại có sức sản xuất phát triển cao trên cơ sở những thành tựu của khoa học – công nghệ, có lực lượng lao động đáp ứng sự phát triển nhảy vọt của nền sản xuất, đồng thời không ngừng điều chỉnh để tồn tại và phát triển trong bối cảnh mới.”                                                        \n\n                                                             SGK Lịch sử 11, bộ Kết nối tri thức với cuộc sống, trang 17\n\na.Chủ nghĩa tư bản hiện đại là hệ quả trực tiếp của quá trình xâm lược thuộc địa. \n\nb.Chủ nghĩa tư bản hiện đại là thuật ngữ dùng để chỉ một giai đoạn phát triển của chủ nghĩa tư bản từ sau năm 1945 đến nay. \n\nc.Một trong những cơ sở thúc đẩy chủ nghĩa tư bản hiện đại có sức sản xuất phát triển cao là dựa trên sức mạnh chính trị của nhà nước tư sản. \n\nd.Chủ nghĩa tư bản hiện đại ngày nay đã thay đổi về mặt bản chất, có khả năng điều chỉnh để tồn tại và phát triển trong bối cảnh mới."
+        },
+        {
+          "question": "Đọc đoạn tư liệu sau đây:\n\n     “Do duy trì quá lâu những khiếm khuyết của mô hình cũ của chủ nghĩa xã hội, chậm trễ trong cách mạng khoa học và công nghệ, nhiều nước xã hội chủ nghĩa đã lâm vào khủng hoảng trầm trọng. Ở một số nước, Đảng cộng sản và công nhân không còn nắm vai trò lãnh đạo, chế độ xã hội đã thay đổi”.\n\n                                             (Đảng Cộng sản Việt Nam, Cương lĩnh xây dựng đất nước trong thời kì quá độ lên chủ nghĩa xã hội, Văn kiện Đảng toàn tập, Tập 51, NXB Chính trị quốc gia, 1991, tr.132)",
+          "statements": [
+            "a) Một trong những nguyên nhân dẫn đến sự khủng hoảng và sụp đổ của chủ nghĩa xã hội ở Liên Xô và Đông Âu là không áp dụng kịp thời những thành tựu của cách mạng khoa học và công nghệ.",
+            "b) Để giữ vững chế độ xã hội chủ nghĩa, các nước phải tiến hành cải cách toàn diện, xóa bỏ vai trò lãnh đạo của Đảng Cộng sản.",
+            "c) Sự sụp đổ của chủ nghĩa xã hội ở Đông Âu và Liên Xô chỉ là sự sụp đổ của một mô hình chủ nghĩa xã hội còn tồn tại nhiều thiếu sót.",
+            "d) Sự sụp đổ của chủ nghĩa xã hội ở Đông Âu và Liên Xô đã để lại nhiều bài học kinh nghiệm quý giá cho các nước hiện nay vẫn tiếp tục kiên định con đường xây dựng chủ nghĩa xã hội như Việt Nam, Trung Quốc, Triều Tiên."
+          ],
+          "answers": [
+            true,
+            false,
+            true,
+            true
+          ],
+          "_is_standard": true,
+          "_raw_block": "Đọc đoạn tư liệu sau đây:\n\n     “Do duy trì quá lâu những khiếm khuyết của mô hình cũ của chủ nghĩa xã hội, chậm trễ trong cách mạng khoa học và công nghệ, nhiều nước xã hội chủ nghĩa đã lâm vào khủng hoảng trầm trọng. Ở một số nước, Đảng cộng sản và công nhân không còn nắm vai trò lãnh đạo, chế độ xã hội đã thay đổi”.\n\n                                             (Đảng Cộng sản Việt Nam, Cương lĩnh xây dựng đất nước trong thời kì quá độ lên chủ nghĩa xã hội, Văn kiện Đảng toàn tập, Tập 51, NXB Chính trị quốc gia, 1991, tr.132)\n\na.Một trong những nguyên nhân dẫn đến sự khủng hoảng và sụp đổ của chủ nghĩa xã hội ở Liên Xô và Đông Âu là không áp dụng kịp thời những thành tựu của cách mạng khoa học và công nghệ. \n\nb.Để giữ vững chế độ xã hội chủ nghĩa, các nước phải tiến hành cải cách toàn diện, xóa bỏ vai trò lãnh đạo của Đảng Cộng sản. \n\nc.Sự sụp đổ của chủ nghĩa xã hội ở Đông Âu và Liên Xô chỉ là sự sụp đổ của một mô hình chủ nghĩa xã hội còn tồn tại nhiều thiếu sót. \n\nd.Sự sụp đổ của chủ nghĩa xã hội ở Đông Âu và Liên Xô đã để lại nhiều bài học kinh nghiệm quý giá cho các nước hiện nay vẫn tiếp tục kiên định con đường xây dựng chủ nghĩa xã hội như Việt Nam, Trung Quốc, Triều Tiên."
+        },
+        {
+          "question": "Đọc đoạn tư liệu sau đây:\n\n         “Để thoát khỏi tình trạng nghèo nàn, lạc hậu sau khi giành độc lập, các nước Đông Nam Á như In-đô-nê-xi-a, Ma-lai-xi-a, Phi-lip-pin, Xin-ga-po đã tiến hành chiến lược công nghiệp hoá từ giữa những năm 50 của thế kỉ XX, sớm hơn các nước còn lại trong khu vực.\n\n          Trong giai đoạn đầu, các nước Đông Nam Á thực hiện chiến lược công nghiệp hoá thay thế nhập khẩu với mục tiêu xây dựng nền kinh tế độc lập tự chủ, nhằm giải quyết những vấn đề cấp bách đặt ra cho nền kinh tế. Trong giai đoạn tiếp theo, các nước lần lượt chuyển sang thực hiện chiến lược công nghiệp hoá hướng về xuất khẩu, tập trung phát triển khu vực sản xuất hàng hoá xuất khẩu, lấy đó làm động lực chủ yếu để phát triển toàn bộ nền kinh tế.”                \n\nSGK Lịch sử 11, bộ Kết nối tri thức với cuộc sống, trang 41",
+          "statements": [
+            "a) Thời kì đầu sau khi giành độc lập, các nước Đông Nam Á như In-đô-nê-xi-a, Ma-lai-xi-a, Phi-lip-pin, Xin-ga-po tiến hành chiến lược công nghiệp hóa thay thế nhập khẩu với mục tiêu đưa đất nước thoát khỏi tình trạng nghèo nàn, lạc hậu, xây dựng nền kinh tế tự chủ.",
+            "b) Từ giữa những năm 50 đến giữa những năm 60 của thế kỉ XX, các nước Đông Nam Á như In-đô-nê-xi-a, Ma-lai-xi-a, Phi-lip-pin, Xin-ga-po thực hiện chiến lược công nghiệp hóa hướng về xuất khẩu, tập trung sản xuất hàng hoá để xuất khẩu, phát triển kinh tế đối ngoại.",
+            "c) Từ thành công của nhóm các nước sáng lập ASEAN trong quá trình xây dựng và phát triển đất nước, bài học cho Việt Nam để hội nhập kinh tế quốc tế là xây dựng nền kinh tế tự chủ, chú trọng phát triển công nghiệp nặng.",
+            "d) Thành công của nhóm các nước sáng lập ASEAN trong chính sách công nghiệp hoá là nhân tố quyết định để Việt Nam tiến hành công cuộc đổi mới đất nước năm 1986."
+          ],
+          "answers": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "_is_standard": true,
+          "_raw_block": "Đọc đoạn tư liệu sau đây:\n\n         “Để thoát khỏi tình trạng nghèo nàn, lạc hậu sau khi giành độc lập, các nước Đông Nam Á như In-đô-nê-xi-a, Ma-lai-xi-a, Phi-lip-pin, Xin-ga-po đã tiến hành chiến lược công nghiệp hoá từ giữa những năm 50 của thế kỉ XX, sớm hơn các nước còn lại trong khu vực.\n\n          Trong giai đoạn đầu, các nước Đông Nam Á thực hiện chiến lược công nghiệp hoá thay thế nhập khẩu với mục tiêu xây dựng nền kinh tế độc lập tự chủ, nhằm giải quyết những vấn đề cấp bách đặt ra cho nền kinh tế. Trong giai đoạn tiếp theo, các nước lần lượt chuyển sang thực hiện chiến lược công nghiệp hoá hướng về xuất khẩu, tập trung phát triển khu vực sản xuất hàng hoá xuất khẩu, lấy đó làm động lực chủ yếu để phát triển toàn bộ nền kinh tế.”                \n\nSGK Lịch sử 11, bộ Kết nối tri thức với cuộc sống, trang 41\n\n a. Thời kì đầu sau khi giành độc lập, các nước Đông Nam Á như In-đô-nê-xi-a, Ma-lai-xi-a, Phi-lip-pin, Xin-ga-po tiến hành chiến lược công nghiệp hóa thay thế nhập khẩu với mục tiêu đưa đất nước thoát khỏi tình trạng nghèo nàn, lạc hậu, xây dựng nền kinh tế tự chủ.\n\nb. Từ giữa những năm 50 đến giữa những năm 60 của thế kỉ XX, các nước Đông Nam Á như In-đô-nê-xi-a, Ma-lai-xi-a, Phi-lip-pin, Xin-ga-po thực hiện chiến lược công nghiệp hóa hướng về xuất khẩu, tập trung sản xuất hàng hoá để xuất khẩu, phát triển kinh tế đối ngoại.\n\nc. Từ thành công của nhóm các nước sáng lập ASEAN trong quá trình xây dựng và phát triển đất nước, bài học cho Việt Nam để hội nhập kinh tế quốc tế là xây dựng nền kinh tế tự chủ, chú trọng phát triển công nghiệp nặng.\n\nd. Thành công của nhóm các nước sáng lập ASEAN trong chính sách công nghiệp hoá là nhân tố quyết định để Việt Nam tiến hành công cuộc đổi mới đất nước năm 1986."
+        }
+      ],
+      "essay": []
+    },
+    "total_score": 10,
+    "grade": "11",
+    "tf_grading_method": "deduction",
+    "general_grading_criteria": ""
+  },
+  "20260331110108": {
+    "id": "20260331110108",
+    "title": "K11 Đề số 2",
+    "type": "multiple_choice",
+    "duration": 50,
+    "created_by": "gv001",
+    "created_at": "2026-03-25 11:01:08",
+    "questions": {
+      "multiple_choice": [
+        {
+          "question": "Nội dung nào dưới đây là điểm giống nhau giữa khởi nghĩa Hai Bà Trưng và khởi nghĩa Lý Bí?",
+          "options": [
+            "A. Diễn ra qua hai giai đoạn: khởi nghĩa và kháng chiến.",
+            "B. Diễn ra qua hai giai đoạn : kháng chiến và khởi nghĩa.",
+            "C. Sau khi giành thắng lợi đều xưng đế trên đất nước ta.",
+            "D. Mở ra thời kì phong kiến độc lập, tự chủ của nước ta."
+          ],
+          "answer": "A",
+          "_is_standard": true,
+          "_raw_block": "Nội dung nào dưới đây là điểm giống nhau giữa khởi nghĩa Hai Bà Trưng và khởi nghĩa Lý Bí?\n\n  A. Diễn ra qua hai giai đoạn: khởi nghĩa và kháng chiến.\n\n  B. Diễn ra qua hai giai đoạn : kháng chiến và khởi nghĩa.\n\n  C. Sau khi giành thắng lợi đều xưng đế trên đất nước ta.\n\n  D. Mở ra thời kì phong kiến độc lập, tự chủ của nước ta."
+        },
+        {
+          "question": "Trong cuộc kháng chiến chống Tống (1075-1077), quân và dân nhà Lý đã sử dụng nghệ thuật quân sự nào sau đây?",
+          "options": [
+            "A. Vườn không nhà trống.",
+            "B. Vây thành, diệt viện.",
+            "C. Đánh nhanh, thắng nhanh.",
+            "D. Tiên phát chế nhân."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Trong cuộc kháng chiến chống Tống (1075-1077), quân và dân nhà Lý đã sử dụng nghệ thuật quân sự nào sau đây?\n\n  A. Vườn không nhà trống.\t     B. Vây thành, diệt viện.\n\n  C. Đánh nhanh, thắng nhanh.\t     D. Tiên phát chế nhân."
+        },
+        {
+          "question": "Trong suốt tiến trình lịch sử, chiến tranh bảo vệ Tổ quốc của nhân dân Việt Nam có vai trò nào sau đây?",
+          "options": [
+            "A. Khẳng định Việt Nam là cường quốc về quân sự.",
+            "B. Củng cố vị thế cường quốc kinh tế của Việt Nam.",
+            "C. Góp phần bảo vệ vững chắc nền độc lập dân tộc.",
+            "D. Góp phần định hình bản sắc văn hóa dân tộc Việt."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Trong suốt tiến trình lịch sử, chiến tranh bảo vệ Tổ quốc của nhân dân Việt Nam có vai trò nào sau đây?\n\n  A. Khẳng định Việt Nam là cường quốc về quân sự.\n\n  B. Củng cố vị thế cường quốc kinh tế của Việt Nam.\n\n  C. Góp phần bảo vệ vững chắc nền độc lập dân tộc.\n\n  D. Góp phần định hình bản sắc văn hóa dân tộc Việt."
+        },
+        {
+          "question": "Thực tiễn các chiến tranh bảo vệ Tổ quốc của nhân dân Việt Nam đã để lại bài học kinh nghiệm quý báu nào sau đây?",
+          "options": [
+            "A. Duy trì chính sách đối ngoại hòa bình, láng giềng thân thiện.",
+            "B. Chủ động hòa hiếu với các nước lớn để tránh nguy cơ chiến tranh.",
+            "C. Lấy sức mạnh nội tại của quốc gia làm nền tảng duy trì hòa bình.",
+            "D. Giữ gìn bản sắc văn hóa, không hòa nhập với văn hóa bên ngoài."
+          ],
+          "answer": "A",
+          "_is_standard": true,
+          "_raw_block": "Thực tiễn các chiến tranh bảo vệ Tổ quốc của nhân dân Việt Nam đã để lại bài học kinh nghiệm quý báu nào sau đây?\n\n  A. Duy trì chính sách đối ngoại hòa bình, láng giềng thân thiện.\n\n  B. Chủ động hòa hiếu với các nước lớn để tránh nguy cơ chiến tranh.\n\n  C. Lấy sức mạnh nội tại của quốc gia làm nền tảng duy trì hòa bình.\n\n  D. Giữ gìn bản sắc văn hóa, không hòa nhập với văn hóa bên ngoài."
+        },
+        {
+          "question": "Việt Nam rút ra được bài học gì từ sự sụp đổ của chủ nghĩa xã hội ở Liên Xô và Đông Âu?",
+          "options": [
+            "A. khi tiến hành cải tổ thực hiện đa nguyên chính trị, đa đảng đối lập.",
+            "B. kiên trì sự lãnh đạo của Đảng Cộng sản.",
+            "C. xóa bỏ nền kinh tế tập trung, quan liêu, bao cấp xây dựng nền kinh tế thị trường.",
+            "D. lấy đổi mới chính trị làm trung tâm."
+          ],
+          "answer": "B",
+          "_is_standard": true,
+          "_raw_block": "Việt Nam rút ra được bài học gì từ sự sụp đổ của chủ nghĩa xã hội ở Liên Xô và Đông Âu?\n\n  A. khi tiến hành cải tổ thực hiện đa nguyên chính trị, đa đảng đối lập.\n\n  B. kiên trì sự lãnh đạo của Đảng Cộng sản.\n\n  C. xóa bỏ nền kinh tế tập trung, quan liêu, bao cấp xây dựng nền kinh tế thị trường.\n\n  D. lấy đổi mới chính trị làm trung tâm."
+        },
+        {
+          "question": "Nội dung nào dưới đây là điểm chung trong chính sách cai trị của các nước thực dân phương Tây ở  Đông Nam Á?",
+          "options": [
+            "A. Thủ tiêu hoàn toàn các thế lực phong kiến địa phương, thiết lập chính quyền của thực dân.",
+            "B. Thế lực phong kiến địa phương vẫn được duy trì, thực dân giữ vai trò cố vấn.",
+            "C. Giao cho các thế lực phong kiến địa phương nắm quyền hành cơ bản.",
+            "D. Thế lực phong kiến địa phương vẫn được duy trì và trở thành tay sai của thực dân."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Nội dung nào dưới đây là điểm chung trong chính sách cai trị của các nước thực dân phương Tây ở  Đông Nam Á?\n\n  A. Thủ tiêu hoàn toàn các thế lực phong kiến địa phương, thiết lập chính quyền của thực dân.\n\n  B. Thế lực phong kiến địa phương vẫn được duy trì, thực dân giữ vai trò cố vấn.\n\n  C. Giao cho các thế lực phong kiến địa phương nắm quyền hành cơ bản.\n\n  D. Thế lực phong kiến địa phương vẫn được duy trì và trở thành tay sai của thực dân."
+        },
+        {
+          "question": "Qua cuộc cải cách của Xiêm, Việt Nam có thể học hỏi được kinh nghiệm gì để giữ vững độc lập, chủ quyền của quốc gia?",
+          "options": [
+            "A. Xây dựng khối đoàn kết trong nước và quốc tế để xây dựng sức mạnh tổng hợp của quốc gia.",
+            "B. Phải không ngừng học hỏi, đổi mới toàn diện đất nước và có chính sách ngoại giao khôn khéo.",
+            "C. Phải học hỏi các nước tiên tiến trên thế giới, đầu tư vào quân sự quốc phòng để đối phó với kẻ thù .",
+            "D. Sẵn sàng kêu gọi nhân dân các nước trong khu vực đấu tranh để đánh bại âm mưu của kẻ thù."
+          ],
+          "answer": "B",
+          "_is_standard": true,
+          "_raw_block": "Qua cuộc cải cách của Xiêm, Việt Nam có thể học hỏi được kinh nghiệm gì để giữ vững độc lập, chủ quyền của quốc gia?\n\n  A. Xây dựng khối đoàn kết trong nước và quốc tế để xây dựng sức mạnh tổng hợp của quốc gia.\n\n  B. Phải không ngừng học hỏi, đổi mới toàn diện đất nước và có chính sách ngoại giao khôn khéo.\n\n  C. Phải học hỏi các nước tiên tiến trên thế giới, đầu tư vào quân sự quốc phòng để đối phó với kẻ thù .\n\n  D. Sẵn sàng kêu gọi nhân dân các nước trong khu vực đấu tranh để đánh bại âm mưu của kẻ thù."
+        },
+        {
+          "question": "Nguyên nhân chủ quan nào sau đây dẫn đến thắng lợi của các cuộc chiến tranh bảo vệ Tổ quốc trong lịch sử Việt Nam?",
+          "options": [
+            "A. Quân giặc không có tính chính nghĩa, gặp nhiều khó khăn trong quá trình xâm lược.",
+            "B. Các cuộc chiến tranh xâm lược của ngoại bang không có sự ủng hộ của quốc tế.",
+            "C. Nhân dân ta quyết tâm chiến đấu và nhận được sự ủng hộ giúp đỡ của quốc tế.",
+            "D. Quân và dân ta đoàn kết, có kế sách đánh giặc đúng đắn, linh hoạt và sáng tạo."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Nguyên nhân chủ quan nào sau đây dẫn đến thắng lợi của các cuộc chiến tranh bảo vệ Tổ quốc trong lịch sử Việt Nam?\n\n A. Quân giặc không có tính chính nghĩa, gặp nhiều khó khăn trong quá trình xâm lược.\n\n B. Các cuộc chiến tranh xâm lược của ngoại bang không có sự ủng hộ của quốc tế.\n\n C. Nhân dân ta quyết tâm chiến đấu và nhận được sự ủng hộ giúp đỡ của quốc tế.\n\n D. Quân và dân ta đoàn kết, có kế sách đánh giặc đúng đắn, linh hoạt và sáng tạo."
+        },
+        {
+          "question": "Một trong những đặc trưng của chủ nghĩa tư bản hiện đại là",
+          "options": [
+            "A. có sự kết hợp giữa tư bản ngân hàng với tư bản công nghiệp thành tư bản tài chính.",
+            "B. sự xuất hiện các tổ chức độc quyền có vai trò quyết định trong hoạt động kinh tế.",
+            "C. có khả năng tự thích ứng, điều chỉnh để vượt qua khủng hoảng.",
+            "D. các cường quốc tư bản lớn nhất đã chia nhau xong đất đai trên thế giới."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Một trong những đặc trưng của chủ nghĩa tư bản hiện đại là\n\nA. có sự kết hợp giữa tư bản ngân hàng với tư bản công nghiệp thành tư bản tài chính.\n\nB. sự xuất hiện các tổ chức độc quyền có vai trò quyết định trong hoạt động kinh tế.\n\nC. có khả năng tự thích ứng, điều chỉnh để vượt qua khủng hoảng.\n\nD. các cường quốc tư bản lớn nhất đã chia nhau xong đất đai trên thế giới."
+        },
+        {
+          "question": "Một trong những quốc gia đầu tiên gia nhập Liên bang Cộng hoà xã  hội chủ nghĩa Xô viết năm 1922 là",
+          "options": [
+            "A. Ucraina.",
+            "B. Litva.",
+            "C. Hunggari.",
+            "D. Ba Lan."
+          ],
+          "answer": "A",
+          "_is_standard": true,
+          "_raw_block": "Một trong những quốc gia đầu tiên gia nhập Liên bang Cộng hoà xã  hội chủ nghĩa Xô viết năm 1922 là\n\nA. Ucraina.          \t B. Litva.          \t C. Hunggari.             \tD. Ba Lan."
+        },
+        {
+          "question": "Nguyên nhân nào dưới đây dẫn đến sự thất bại của một số cuộc kháng chiến chống ngoại xâm trong lịch sử Việt Nam?",
+          "options": [
+            "A. Những sai lầm trong đường lối kháng chiến.",
+            "B. Không có tướng lĩnh tài giỏi, quân đội mạnh.",
+            "C. Không có vũ khí hiện đại, thành lũy kiên cố.",
+            "D. Nhân dân bị khuất phục trước sức mạnh của giặc."
+          ],
+          "answer": "A",
+          "_is_standard": true,
+          "_raw_block": "Nguyên nhân nào dưới đây dẫn đến sự thất bại của một số cuộc kháng chiến chống ngoại xâm trong lịch sử Việt Nam?\n\nA. Những sai lầm trong đường lối kháng chiến.\tB. Không có tướng lĩnh tài giỏi, quân đội mạnh.\n\nC. Không có vũ khí hiện đại, thành lũy kiên cố.        D. Nhân dân bị khuất phục trước sức mạnh của giặc."
+        },
+        {
+          "question": "Trận đánh nào sau đây có ý nghĩa quyết định thắng lợi cuộc chiến đấu chống chiến tranh xâm lược của quân Thanh thế kỉ XVIII?",
+          "options": [
+            "A. Rạch Gầm - Xoài Mút.",
+            "B. Tốt Động - Chúc Động.",
+            "C. Ngọc Hồi - Đống Đa.",
+            "D. Chi Lăng - Xương Giang."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Trận đánh nào sau đây có ý nghĩa quyết định thắng lợi cuộc chiến đấu chống chiến tranh xâm lược của quân Thanh thế kỉ XVIII?\n\nA. Rạch Gầm - Xoài Mút.\t\t\t\tB. Tốt Động - Chúc Động.\n\nC. Ngọc Hồi - Đống Đa.\t\t\t\tD. Chi Lăng - Xương Giang."
+        },
+        {
+          "question": "Những nước nào ở khu vực Đông Nam Á tuyên bố độc lập trong năm 1945?",
+          "options": [
+            "A. Việt Nam, Inđônêxia, Lào.",
+            "B. Campuchia, Inđônêxia, Brunây.",
+            "C. Thái Lan, Việt Nam, Lào.",
+            "D. Philippin, Malaixia, Việt Nam."
+          ],
+          "answer": "A",
+          "_is_standard": true,
+          "_raw_block": "Những nước nào ở khu vực Đông Nam Á tuyên bố độc lập trong năm 1945?\n\nA.Việt Nam, Inđônêxia, Lào.\t\t\t\tB. Campuchia, Inđônêxia, Brunây.\n\nC. Thái Lan, Việt Nam, Lào.\t\t\t\tD. Philippin, Malaixia, Việt Nam."
+        },
+        {
+          "question": "Thể chế “quân chủ lập hiến” lần đầu tiên được thiết lập sau cuộc cách mạng tư sản",
+          "options": [
+            "A. Anh.",
+            "B. Pháp.",
+            "C. Mĩ.",
+            "D. Nhật Bản."
+          ],
+          "answer": "A",
+          "_is_standard": true,
+          "_raw_block": "Thể chế “quân chủ lập hiến” lần đầu tiên được thiết lập sau cuộc cách mạng tư sản\n\n    A. Anh.          \t B. Pháp.          \t C. Mĩ.       \t   D. Nhật Bản."
+        },
+        {
+          "question": "Nội dung nào sau đây không phản ánh đúng tình hình kinh tế nước Pháp vào cuối thế kỉ XVIII?",
+          "options": [
+            "A. Kinh tế công thương nghiệp phát triển mạnh theo hướng tư bản chủ nghĩa.",
+            "B. Nền kinh tế tư bản chủ nghĩa bị kìm hãm bởi chế độ phong kiến chuyên chế.",
+            "C. Nông nghiệp lạc hậu: năng suất cây trồng thấp; diện tích đất bỏ hoang nhiều.",
+            "D. Phong trào “rào đất cướp ruộng” diễn ra khiến hàng triệu nông dân bị mất đất."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Nội dung nào sau đây không phản ánh đúng tình hình kinh tế nước Pháp vào cuối thế kỉ XVIII?\n\n  A. Kinh tế công thương nghiệp phát triển mạnh theo hướng tư bản chủ nghĩa.\n\n  B. Nền kinh tế tư bản chủ nghĩa bị kìm hãm bởi chế độ phong kiến chuyên chế.\n\n  C. Nông nghiệp lạc hậu: năng suất cây trồng thấp; diện tích đất bỏ hoang nhiều.\n\n  D. Phong trào “rào đất cướp ruộng” diễn ra khiến hàng triệu nông dân bị mất đất."
+        },
+        {
+          "question": "Nội dung nào sau đây là điểm tương đồng giữa Cách mạng tư sản Anh và Cách mạng tư sản Pháp?",
+          "options": [
+            "A. Giai cấp tư sản độc quyền lãnh đạo cách mạng.",
+            "B. Mở đường cho sự phát triển của chủ nghĩa tư bản.",
+            "C. Sau cách mạng, chế độ quân chủ lập hiến được thiết lập.",
+            "D. Sử dụng tôn giáo cải cách làm ngọn cờ tập hợp lực lượng."
+          ],
+          "answer": "B",
+          "_is_standard": true,
+          "_raw_block": "Nội dung nào sau đây là điểm tương đồng giữa Cách mạng tư sản Anh và Cách mạng tư sản Pháp?\n\n  A. Giai cấp tư sản độc quyền lãnh đạo cách mạng.\n\n  B. Mở đường cho sự phát triển của chủ nghĩa tư bản.\n\n  C. Sau cách mạng, chế độ quân chủ lập hiến được thiết lập.\n\n  D. Sử dụng tôn giáo cải cách làm ngọn cờ tập hợp lực lượng."
+        },
+        {
+          "question": "Nội dung nào sau đây phản ánh đúng đặc trưng của chủ nghĩa đế quốc?",
+          "options": [
+            "A. Có sức sản xuất phát triển cao trên cơ sở thành tựu của cách mạng khoa học - công nghệ.",
+            "B. Lực lượng lao động có những chuyển biến về cơ cấu, trình độ chuyên môn, nghiệp vụ.",
+            "C. Chủ nghĩa tư bản độc quyền nhà nước và cao hơn là độc quyền xuyên quốc gia.",
+            "D. Sự dung hợp giữa tư bản ngân hàng với tư bản công nghiệp thành tư bản tài chính."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Nội dung nào sau đây phản ánh đúng đặc trưng của chủ nghĩa đế quốc?\n\n  A. Có sức sản xuất phát triển cao trên cơ sở thành tựu của cách mạng khoa học - công nghệ.\n\n  B. Lực lượng lao động có những chuyển biến về cơ cấu, trình độ chuyên môn, nghiệp vụ.\n\n  C. Chủ nghĩa tư bản độc quyền nhà nước và cao hơn là độc quyền xuyên quốc gia.\n\n  D. Sự dung hợp giữa tư bản ngân hàng với tư bản công nghiệp thành tư bản tài chính."
+        },
+        {
+          "question": "Với cuộc cải cách của Hồ Quý Ly và triều Hồ cuối thế kỉ XIV, đầu thế kỉ XV, hệ tư tưởng nào từng bước trở thành ý thức hệ tư tưởng chủ đạo của xã hội Đại Việt?",
+          "options": [
+            "A. Nho giáo",
+            "B. Phật giáo",
+            "C. Đạo giáo",
+            "D. Thiên chúa giáo"
+          ],
+          "answer": "A",
+          "_is_standard": true,
+          "_raw_block": "Với cuộc cải cách của Hồ Quý Ly và triều Hồ cuối thế kỉ XIV, đầu thế kỉ XV, hệ tư tưởng nào từng bước trở thành ý thức hệ tư tưởng chủ đạo của xã hội Đại Việt?\n\n  A. Nho giáo\t\tB. Phật giáo\t\tC. Đạo giáo\t\tD. Thiên chúa giáo"
+        },
+        {
+          "question": "Tháng 12-1986, quốc gia nào sau đây thực hiện công cuộc đổi mới đất nước?",
+          "options": [
+            "A. Liên Xô.",
+            "B. Cu-ba.",
+            "C. Việt Nam.",
+            "D. Trung Quốc."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Tháng 12-1986, quốc gia nào sau đây thực hiện công cuộc đổi mới đất nước?\n\n  A. Liên Xô.\tB. Cu-ba.\tC. Việt Nam.\tD. Trung Quốc."
+        },
+        {
+          "question": "Trận quyết chiến chiến lược trong cuộc kháng chiến chống quân xâm lược Tống thời Lý diễn ra trên sông",
+          "options": [
+            "A. Bạch Đằng.",
+            "B. Cầu.",
+            "C. Thương.",
+            "D. Lục Nam."
+          ],
+          "answer": "B",
+          "_is_standard": true,
+          "_raw_block": "Trận quyết chiến chiến lược trong cuộc kháng chiến chống quân xâm lược Tống thời Lý diễn ra trên sông\n\n  A. Bạch Đằng.            B. Cầu.                    C. Thương.                   D. Lục Nam."
+        },
+        {
+          "question": "Nhà Hồ đã ban hành chính sách ruộng đất nào sau đây?",
+          "options": [
+            "A. Hạn điền.",
+            "B. Trang điền.",
+            "C. Tịch điền.",
+            "D. Lộc điền."
+          ],
+          "answer": "A",
+          "_is_standard": true,
+          "_raw_block": "Nhà Hồ đã ban hành chính sách ruộng đất nào sau đây?\n\n  A. Hạn điền.              B. Trang điền.                    C. Tịch điền.          D. Lộc điền."
+        },
+        {
+          "question": "Cuộc cải cách của Hồ Quý Ly cuối thế kỉ XIV – đầu thế kỉ XV được nhận xét là",
+          "options": [
+            "A. đậm nét dân tộc, không mô phỏng.",
+            "B. có ảnh hưởng từ bên ngoài.",
+            "C. vì lợi ích của giai cấp thống trị.",
+            "D. diến ra với nhịp độ nhanh, kéo dài."
+          ],
+          "answer": "A",
+          "_is_standard": true,
+          "_raw_block": "Cuộc cải cách của Hồ Quý Ly cuối thế kỉ XIV – đầu thế kỉ XV được nhận xét là\n\n  A. đậm nét dân tộc, không mô phỏng.\t  B. có ảnh hưởng từ bên ngoài.\n\n  C. vì lợi ích của giai cấp thống trị.\t\t  D. diến ra với nhịp độ nhanh, kéo dài."
+        },
+        {
+          "question": "Cải cách hành chính của Lê Thánh Tông diễn ra trong bối cảnh chính trị như thế nào?",
+          "options": [
+            "A. Nội bộ triều đình có nhiều mâu thuẫn, biến động.",
+            "B. Nạn đói diễn ra trầm trọng, đời sống khổ cực.",
+            "C. Chế độ ruộng đất bất cập, tình trạng mất mùa tăng.",
+            "D. Nạn cường hào lộng hành và quan lại tham ô"
+          ],
+          "answer": "A",
+          "_is_standard": true,
+          "_raw_block": "Cải cách hành chính của Lê Thánh Tông diễn ra trong bối cảnh chính trị như thế nào?\n\n\tA. Nội bộ triều đình có nhiều mâu thuẫn, biến động.\tB. Nạn đói diễn ra trầm trọng, đời sống khổ cực.\n\n\tC. Chế độ ruộng đất bất cập, tình trạng mất mùa tăng.  D. Nạn cường hào lộng hành và quan lại tham ô"
+        },
+        {
+          "question": "Bộ luật nào được biên soạn đầy đủ nhất, có nội dung tiến bộ nhất thời phong kiến ở Việt Nam?",
+          "options": [
+            "A. Hình thư.",
+            "B. Hình luật.",
+            "C. Quốc triều hình luật.",
+            "D. Hoàng Việt luật lệ."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Bộ luật nào được biên soạn đầy đủ nhất, có nội dung tiến bộ nhất thời phong kiến ở Việt Nam?\n\n\tA. Hình thư.            B. Hình luật.          C. Quốc triều hình luật.           D. Hoàng Việt luật lệ."
+        }
+      ],
+      "true_false": [
+        {
+          "question": "Đọc đoạn tư liệu sau đây:\n\n       Cuối năm 1287, 30 vạn quân Nguyên do Thoát Hoan chỉ huy tiến vào nước ta. Buổi đầu, trước sức mạnh của quân Nguyên, quân dân nhà Trần dưới sự lãnh đạo của các vua Trần mà trực tiếp là Trần Quốc Tuấn đã thực hiện cách đánh “dĩ đoản binh, chế trường trận”. Cách đánh này khiến cho quân địch rơi vào tình thế: tiến công không được, lui cũng không xong. Quân Mông – Nguyên buộc lòng phải rút lui. Biết được con đường rút lui của địch, Trần Quốc Tuấn quyết định chọn sông Bạch Đằng làm trận địa quyết chiến tiêu diệt đạo quân địch rút lui theo đường thủy.",
+          "statements": [
+            "a) Đoạn tư liệu cung cấp thông tin về cuộc kháng chiến chống quân Mông – Nguyên xâm lược lần thứ nhất của vương triều Trần.",
+            "b) Để khích lệ quân sĩ trong chiến đấu chống quân Nguyên, năm 1287 Trần Quốc Tuấn đã viết tác phẩm Hịch tướng sĩ.",
+            "c) Quân Mông – Nguyên đã bị quân dân ta phục kích đánh trên sông Bạch Đằng khi chúng tìm cách rút lui về nước",
+            "d) “dĩ đoản binh, chế trường trận” được nhắc đến trong đoạn tư liệu trên chính là kế sách “vườn không nhà trống”."
+          ],
+          "answers": [
+            false,
+            false,
+            true,
+            false
+          ],
+          "_is_standard": true,
+          "_raw_block": "Đọc đoạn tư liệu sau đây:\n\n       Cuối năm 1287, 30 vạn quân Nguyên do Thoát Hoan chỉ huy tiến vào nước ta. Buổi đầu, trước sức mạnh của quân Nguyên, quân dân nhà Trần dưới sự lãnh đạo của các vua Trần mà trực tiếp là Trần Quốc Tuấn đã thực hiện cách đánh “dĩ đoản binh, chế trường trận”. Cách đánh này khiến cho quân địch rơi vào tình thế: tiến công không được, lui cũng không xong. Quân Mông – Nguyên buộc lòng phải rút lui. Biết được con đường rút lui của địch, Trần Quốc Tuấn quyết định chọn sông Bạch Đằng làm trận địa quyết chiến tiêu diệt đạo quân địch rút lui theo đường thủy.\n\n  a. Đoạn tư liệu cung cấp thông tin về cuộc kháng chiến chống quân Mông – Nguyên xâm lược lần thứ nhất của vương triều Trần.\n\nb. Để khích lệ quân sĩ trong chiến đấu chống quân Nguyên, năm 1287 Trần Quốc Tuấn đã viết tác phẩm Hịch tướng sĩ.\n\nc. Quân Mông – Nguyên đã bị quân dân ta phục kích đánh trên sông Bạch Đằng khi chúng tìm cách rút lui về nước\n\nd. “dĩ đoản binh, chế trường trận” được nhắc đến trong đoạn tư liệu trên chính là kế sách “vườn không nhà trống”."
+        },
+        {
+          "question": "Đọc đoạn tư liệu sau:\n\n      Năm 1397, Hồ Quý Ly đổi trấn Thanh Hóa làm trấn Thanh Đô, trấn Quốc Oai làm trấn Quảng Oai, Lạng Sơn phủ làm Lạng Sơn trấn… và quy định “Lộ coi phủ, phủ coi châu, châu coi huyện. Phàm những việc hộ tịch, tiền thóc, kiện tụng đều gộp làm một sổ của lộ, đến cuối năm báo lên sảnh để kiểm xét. Cho dời kinh đô vào An Tôn.                   \n\n (Theo Khâm định Việt sử thông giám cương mục).",
+          "statements": [
+            "a) Hồ Qúy Ly bắt đầu tiến hành cải cách khi đã ép vua Trần nhường ngôi để lập ra nhà Hồ.",
+            "b) An Tôn được nhắc đến trong đoạn tư liệu chính là thành nhà Hồ ở Thanh Hóa.",
+            "c) Khi tiến hành cải cách Hồ Qúy Ly đã cho ban hành tiền giấy thay thế cho tiền đồng.",
+            "d) Đoạn tư liệu nói về nội dung cải cách trên tất cả các lĩnh vực của Hồ Qúy Ly."
+          ],
+          "answers": [
+            false,
+            true,
+            true,
+            false
+          ],
+          "_is_standard": true,
+          "_raw_block": "Đọc đoạn tư liệu sau:\n\n      Năm 1397, Hồ Quý Ly đổi trấn Thanh Hóa làm trấn Thanh Đô, trấn Quốc Oai làm trấn Quảng Oai, Lạng Sơn phủ làm Lạng Sơn trấn… và quy định “Lộ coi phủ, phủ coi châu, châu coi huyện. Phàm những việc hộ tịch, tiền thóc, kiện tụng đều gộp làm một sổ của lộ, đến cuối năm báo lên sảnh để kiểm xét. Cho dời kinh đô vào An Tôn.                   \n\n (Theo Khâm định Việt sử thông giám cương mục).\n\na. Hồ Qúy Ly bắt đầu tiến hành cải cách khi đã ép vua Trần nhường ngôi để lập ra nhà Hồ.\n\nb. An Tôn được nhắc đến trong đoạn tư liệu chính là thành nhà Hồ ở Thanh Hóa.\n\nc. Khi tiến hành cải cách Hồ Qúy Ly đã cho ban hành tiền giấy thay thế cho tiền đồng.\n\nd. Đoạn tư liệu nói về nội dung cải cách trên tất cả các lĩnh vực của Hồ Qúy Ly."
+        },
+        {
+          "question": "Đọc đoạn tư liệu sau đây:\n\n        “Phong trào Tây Sơn từ một cuộc khởi nghĩa địa phương đã phát triển thành phong trào dân tộc rộng lớn, lập nên những chiến công hiển hách. Phong trào đã lật đổ các chính quyền phong kiến Nguyễn - Trịnh, xoá bỏ tình trạng chia cắt đất nước. Đồng thời, phong trào còn đánh tan các thế lực ngoại xâm hùng mạnh, bảo vệ vững chắc nền độc lập dân tộc và chủ quyền lãnh thổ của Tổ quốc.”                                \n\n                                                            SGK Lịch sử 11, bộ Kết nối tri thức với cuộc sống, trang 57",
+          "statements": [
+            "a) Phong trào Tây Sơn (1771 - 1789) đập tan các thế lực ngoại xâm Minh- Thanh, bảo vệ vững chắc nền độc lập dân tộc.",
+            "b) Phong trào Tây Sơn (1771- 1789) đập tan âm mưu thủ tiêu nền văn hoá Đại Việt, mở ra thời kì phát triển mới của đất nước.",
+            "c) Phong trào Tây Sơn đã giải quyết đồng thời hai nhiệm vụ: đấu tranh giai cấp, thống nhất lãnh thổ và chống ngoại xâm, bảo vệ độc lập dân tộc.",
+            "d) Phong trào Tây Sơn là phong trào nông dân tiêu biểu nhất, phong trào nông dân duy nhất trong lịch sử phong kiến Việt Nam giành thắng lợi."
+          ],
+          "answers": [
+            false,
+            false,
+            true,
+            false
+          ],
+          "_is_standard": true,
+          "_raw_block": "Đọc đoạn tư liệu sau đây:\n\n        “Phong trào Tây Sơn từ một cuộc khởi nghĩa địa phương đã phát triển thành phong trào dân tộc rộng lớn, lập nên những chiến công hiển hách. Phong trào đã lật đổ các chính quyền phong kiến Nguyễn - Trịnh, xoá bỏ tình trạng chia cắt đất nước. Đồng thời, phong trào còn đánh tan các thế lực ngoại xâm hùng mạnh, bảo vệ vững chắc nền độc lập dân tộc và chủ quyền lãnh thổ của Tổ quốc.”                                \n\n                                                            SGK Lịch sử 11, bộ Kết nối tri thức với cuộc sống, trang 57\n\na) Phong trào Tây Sơn (1771 - 1789) đập tan các thế lực ngoại xâm Minh- Thanh, bảo vệ vững chắc nền độc lập dân tộc.\n\n     b) Phong trào Tây Sơn (1771- 1789) đập tan âm mưu thủ tiêu nền văn hoá Đại Việt, mở ra thời kì phát triển mới của đất nước.\n\n c) Phong trào Tây Sơn đã giải quyết đồng thời hai nhiệm vụ: đấu tranh giai cấp, thống nhất lãnh thổ và chống ngoại xâm, bảo vệ độc lập dân tộc.\n\n     d) Phong trào Tây Sơn là phong trào nông dân tiêu biểu nhất, phong trào nông dân duy nhất trong lịch sử phong kiến Việt Nam giành thắng lợi."
+        },
+        {
+          "question": "Cho bảng dự liệu sau\n\n        Thời gian\n\nSự kiện\n\n938\n\nChiến thắng Bạch Đằng chấm dứt thời kì Bắc thuộc\n\n1288\n\nTrận Bạch Đằng đánh bại ý chí xâm lược của quân Mông- Nguyên\n\n1427\n\nChiến thắng Chi Lăng- Xương Giang buộc quân Minh đầu hàng, rút quân về nước.\n\n1789\n\nChiến thắng Đống Đa đánh bại 29 vạn quan Thanh xâm lược.",
+          "statements": [
+            "a) Những thắng lợi trên là những trận quyết chiến chiến lược trong lịch sử.",
+            "b) Thể hiện nghệ thuật quân sự tài tình của cha ông ta trong chống ngoại xâm.",
+            "c) Tất cả những chiến thắng trên đều là trận thủy chiến mẫu mực của quân ta.",
+            "d) Các chiến thắng trên đều có sự kết hợp hài hòa giữa quân sự và ngoại giao."
+          ],
+          "answers": [
+            true,
+            true,
+            false,
+            false
+          ],
+          "_is_standard": true,
+          "_raw_block": "Cho bảng dự liệu sau\n\n        Thời gian\n\nSự kiện\n\n938\n\nChiến thắng Bạch Đằng chấm dứt thời kì Bắc thuộc\n\n1288\n\nTrận Bạch Đằng đánh bại ý chí xâm lược của quân Mông- Nguyên\n\n1427\n\nChiến thắng Chi Lăng- Xương Giang buộc quân Minh đầu hàng, rút quân về nước.\n\n1789\n\nChiến thắng Đống Đa đánh bại 29 vạn quan Thanh xâm lược.\n\na) Những thắng lợi trên là những trận quyết chiến chiến lược trong lịch sử. \n\nb) Thể hiện nghệ thuật quân sự tài tình của cha ông ta trong chống ngoại xâm. \n\nc) Tất cả những chiến thắng trên đều là trận thủy chiến mẫu mực của quân ta.\n\nd) Các chiến thắng trên đều có sự kết hợp hài hòa giữa quân sự và ngoại giao."
+        }
+      ],
+      "essay": []
+    },
+    "total_score": 10,
+    "grade": "11",
+    "tf_grading_method": "deduction",
+    "general_grading_criteria": ""
+  },
+  "20260331111222": {
+    "id": "20260331111222",
+    "title": "K11 Đề số 3",
+    "type": "multiple_choice",
+    "duration": 50,
+    "created_by": "gv001",
+    "created_at": "2026-03-31 11:12:22",
+    "questions": {
+      "multiple_choice": [
+        {
+          "question": "Liên bang Cộng hoà xã hội chủ nghĩa Xô viết được thành lập trong bối  cảnh lịch sử nào sau đây?",
+          "options": [
+            "A. Các nước cộng hòa Xô Viết có sự thống nhất về chính sách phát triển.",
+            "B. Các nước cộng hòa Xô viết phát triển không đồng đều về kinh tế.",
+            "C. Mâu thuẫn giữa các dân tộc Nga với chế độ Nga hoàng gay gắt.",
+            "D. Mâu thuẫn giữa nước Nga với các nước cộng hòa Xô viết gay gắt."
+          ],
+          "answer": "B",
+          "_is_standard": true,
+          "_raw_block": "Liên bang Cộng hoà xã hội chủ nghĩa Xô viết được thành lập trong bối  cảnh lịch sử nào sau đây?\n\n\tA. Các nước cộng hòa Xô Viết có sự thống nhất về chính sách phát triển.\n\n\tB. Các nước cộng hòa Xô viết phát triển không đồng đều về kinh tế.\n\n\tC. Mâu thuẫn giữa các dân tộc Nga với chế độ Nga hoàng gay gắt.\n\n\tD. Mâu thuẫn giữa nước Nga với các nước cộng hòa Xô viết gay gắt."
+        },
+        {
+          "question": "Nội dung nào sau đây không phải là bài học lịch sử của các cuộc khởi nghĩa và chiến tranh giải phóng dân tộc của nhân dân ta (từ thế kỉ III TCN đến cuối thế kỉ XIX)?",
+          "options": [
+            "A. Xây dựng lực lượng chống giặc ngoại xâm.",
+            "B. Nghệ thuật quân sự đánh giặc giữ nước.",
+            "C. Nâng cao sức năng lực lãnh đạo của Đảng.",
+            "D. Xây dựng khối đại đoàn kết toàn dân."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Nội dung nào sau đây không phải là bài học lịch sử của các cuộc khởi nghĩa và chiến tranh giải phóng dân tộc của nhân dân ta (từ thế kỉ III TCN đến cuối thế kỉ XIX)?\n\n\tA. Xây dựng lực lượng chống giặc ngoại xâm.\tB. Nghệ thuật quân sự đánh giặc giữ nước.\n\n\tC. Nâng cao sức năng lực lãnh đạo của Đảng.\t\tD. Xây dựng khối đại đoàn kết toàn dân."
+        },
+        {
+          "question": "Chiến tranh bảo vệ Tổ quốc của ta là cuộc chiến tranh chính nghĩa. Tính chất chính nghĩa của cuộc chiến tranh được thể hiện chủ yếu thông qua",
+          "options": [
+            "A. lực lượng tham gia.",
+            "B. mục đích chiến tranh.",
+            "C. thành phần lãnh đạo.",
+            "D. hình thức chiến tranh."
+          ],
+          "answer": "B",
+          "_is_standard": true,
+          "_raw_block": "Chiến tranh bảo vệ Tổ quốc của ta là cuộc chiến tranh chính nghĩa. Tính chất chính nghĩa của cuộc chiến tranh được thể hiện chủ yếu thông qua\n\n\tA. lực lượng tham gia.\tB. mục đích chiến tranh.\n\n\tC. thành phần lãnh đạo.\tD. hình thức chiến tranh."
+        },
+        {
+          "question": "Nội dung nào sau đây lý giải không đúng về nhận định: “Với vị trí địa chiến lược quan trọng, trong nhiều thế kỉ, Việt Nam là quốc gia thường xuyên trở thành đối tượng nhòm nhó, can thiệp và xâm lược của các thế lực bên ngoài”?",
+          "options": [
+            "A. Là trung tâm kinh tế - tài chính duy nhất của thế giới, nhiều nước lớn muốn giao thương.",
+            "B. Liền kề Trung Quốc, án ngữ biển Đông, là cầu nối giữa Đông Nam Á lục địa với hải đảo.",
+            "C. Nằm trên tuyến đường giao thông, giao thương lâu đời và quan trọng giữa các nước lớn.",
+            "D. Là địa bàn tiền tiêu của Đông Nam Á từ phía bắc, cửa ngõ tiến vào bán đảo Trung Ấn."
+          ],
+          "answer": "A",
+          "_is_standard": true,
+          "_raw_block": "Nội dung nào sau đây lý giải không đúng về nhận định: “Với vị trí địa chiến lược quan trọng, trong nhiều thế kỉ, Việt Nam là quốc gia thường xuyên trở thành đối tượng nhòm nhó, can thiệp và xâm lược của các thế lực bên ngoài”?\n\n\tA. Là trung tâm kinh tế - tài chính duy nhất của thế giới, nhiều nước lớn muốn giao thương.\n\n\tB. Liền kề Trung Quốc, án ngữ biển Đông, là cầu nối giữa Đông Nam Á lục địa với hải đảo.\n\n\tC. Nằm trên tuyến đường giao thông, giao thương lâu đời và quan trọng giữa các nước lớn.\n\n\tD. Là địa bàn tiền tiêu của Đông Nam Á từ phía bắc, cửa ngõ tiến vào bán đảo Trung Ấn."
+        },
+        {
+          "question": "Nguyên nhân chủ quan dẫn đến thất bại của cuộc kháng chiến chống quân Minh dưới triều Hồ và kháng chiến chống Pháp dưới triều Nguyễn là",
+          "options": [
+            "A. tương quan lực lượng chênh lệch không có lợi cho ta.",
+            "B. kháng chiến không có sự lãnh đạo của triều đình.",
+            "C. triều đình lơ là, mất cảnh giác, không có sự phòng bị.",
+            "D. triều đình không huy động được sức mạnh toàn dân."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Nguyên nhân chủ quan dẫn đến thất bại của cuộc kháng chiến chống quân Minh dưới triều Hồ và kháng chiến chống Pháp dưới triều Nguyễn là\n\n\tA. tương quan lực lượng chênh lệch không có lợi cho ta.\n\n\tB. kháng chiến không có sự lãnh đạo của triều đình.\n\n\tC. triều đình lơ là, mất cảnh giác, không có sự phòng bị.\n\n\tD. triều đình không huy động được sức mạnh toàn dân."
+        },
+        {
+          "question": "Nội dung nào sau đây phản ánh đúng sự ra đời của Liên bang Cộng hòa xã hội chủ nghĩa Xô viết năm 1922?",
+          "options": [
+            "A. Đáp ứng được nhiệm vụ cấp bách trong đấu tranh chống ngoại xâm.",
+            "B. Phù hợp với xu thế phát triển chung của thế giới lúc bấy giờ.",
+            "C. Chưa phù hợp với nguyện vọng các dân tộc trên đất nước Xô viết.",
+            "D. Phù hợp với lợi ích chung của các dân tộc trên đất nước Xô viết."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Nội dung nào sau đây phản ánh đúng sự ra đời của Liên bang Cộng hòa xã hội chủ nghĩa Xô viết năm 1922?\n\n\tA. Đáp ứng được nhiệm vụ cấp bách trong đấu tranh chống ngoại xâm.\n\n\tB. Phù hợp với xu thế phát triển chung của thế giới lúc bấy giờ.\n\n\tC. Chưa phù hợp với nguyện vọng các dân tộc trên đất nước Xô viết.\n\n\tD. Phù hợp với lợi ích chung của các dân tộc trên đất nước Xô viết."
+        },
+        {
+          "question": "Một trong những điểm khác biệt của cuộc khởi nghĩa Lam Sơn (1418 – 1427) so với cuộc kháng chiến chống quân Tống xâm lược (1075 – 1077) là",
+          "options": [
+            "A. sử dụng kế sách “tiên phát chế nhân”.",
+            "B. sử dụng kế sách “vườn không nhà trống”",
+            "C. được đông đảo nhân dân tham gia.",
+            "D. diễn ra khi đất nước bị mất độc lập."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Một trong những điểm khác biệt của cuộc khởi nghĩa Lam Sơn (1418 – 1427) so với cuộc kháng chiến chống quân Tống xâm lược (1075 – 1077) là\n\n\tA. sử dụng kế sách “tiên phát chế nhân”.\tB. sử dụng kế sách “vườn không nhà trống”\n\n\tC. được đông đảo nhân dân tham gia.\t\tD. diễn ra khi đất nước bị mất độc lập."
+        },
+        {
+          "question": "Một trong những khó khăn của Cuba trong công cuộc xây dựng chủ nghĩa xã hội từ 1991 đến nay là",
+          "options": [
+            "A. mâu thuẫn sắc tộc, tôn giáo không thể điều hòa",
+            "B. sự chống phá quyết liệt của các thế lực thù địch.",
+            "C. lệnh cấm vận kéo dài của Mĩ và phương Tây.",
+            "D. mô hình kinh tế tập trung bao cấp kém hiệu quả."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Một trong những khó khăn của Cuba trong công cuộc xây dựng chủ nghĩa xã hội từ 1991 đến nay là\n\n\tA. mâu thuẫn sắc tộc, tôn giáo không thể điều hòa\tB. sự chống phá quyết liệt của các thế lực thù địch.\n\n\tC. lệnh cấm vận kéo dài của Mĩ và phương Tây.\tD. mô hình kinh tế tập trung bao cấp kém hiệu quả."
+        },
+        {
+          "question": "Chính sách đối ngoại của Trung Quốc từ những năm 80 của thế kỉ XX là",
+          "options": [
+            "A. thiết lập quan hệ đối tác chiến lược với tất cả các quốc gia",
+            "B. thực hiện chính sách cấm vận đối với khu vực Đông Nam Á.",
+            "C. đa dạng hóa, đa phương hóa trong quan hệ với các nước.",
+            "D. bắt tay với Mĩ chống lại Liên Xô và các nước Tây Âu."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Chính sách đối ngoại của Trung Quốc từ những năm 80 của thế kỉ XX là\n\n\tA. thiết lập quan hệ đối tác chiến lược với tất cả các quốc gia\n\n\tB. thực hiện chính sách cấm vận đối với khu vực Đông Nam Á.\n\n\tC. đa dạng hóa, đa phương hóa trong quan hệ với các nước.\n\n\tD. bắt tay với Mĩ chống lại Liên Xô và các nước Tây Âu."
+        },
+        {
+          "question": "Cuộc khởi nghĩa nào sau đây của quân dân Việt Nam có đặc điểm độc đáo: sự khởi đầu và kết thúc cuộc khởi nghĩa là một hội thề lịch sử?",
+          "options": [
+            "A. Khởi nghĩa Mai Thúc Loan",
+            "B. Khởi nghĩa Bà Triệu",
+            "C. Khởi nghĩa Hai Bà Trưng",
+            "D. Khởi nghĩa Lam Sơn."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Cuộc khởi nghĩa nào sau đây của quân dân Việt Nam có đặc điểm độc đáo: sự khởi đầu và kết thúc cuộc khởi nghĩa là một hội thề lịch sử?\n\n\tA. Khởi nghĩa Mai Thúc Loan\tB. Khởi nghĩa Bà Triệu\n\n\tC. Khởi nghĩa Hai Bà Trưng\tD. Khởi nghĩa Lam Sơn."
+        },
+        {
+          "question": "Năm 1285, trong cuộc kháng chiến chống quân Nguyên xâm lược, quân dân nhà Trần đã tổ chức phản công và giành thắng lợi ở",
+          "options": [
+            "A. sông Như Nguyệt.",
+            "B. ải Chi Lăng.",
+            "C. cửa Hàm Tử.",
+            "D. sông Bạch Đằng."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Năm 1285, trong cuộc kháng chiến chống quân Nguyên xâm lược, quân dân nhà Trần đã tổ chức phản công và giành thắng lợi ở\n\n\tA. sông Như Nguyệt.\tB. ải Chi Lăng.\tC. cửa Hàm Tử.\tD. sông Bạch Đằng."
+        },
+        {
+          "question": "Một trong những cuộc kháng chiến không thành công của dân tộc Việt  Nam trước cách mạng tháng Tám năm 1945 là",
+          "options": [
+            "A. kháng chiến chống quân Tống thế kỉ XI.",
+            "B. kháng chiến chống quân Thanh thế kỉ XVIII.",
+            "C. kháng chiến chống quân Nam Hán thế kỉ X.",
+            "D. kháng chiến chống thực dân Pháp thế kỉ XIX."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Một trong những cuộc kháng chiến không thành công của dân tộc Việt  Nam trước cách mạng tháng Tám năm 1945 là\n\n\tA. kháng chiến chống quân Tống thế kỉ XI.\t\tB. kháng chiến chống quân Thanh thế kỉ XVIII.\n\n\tC. kháng chiến chống quân Nam Hán thế kỉ X.\tD. kháng chiến chống thực dân Pháp thế kỉ XIX."
+        },
+        {
+          "question": "Dưới triều Hồ, những tôn giáo nào bị suy giảm vai trò và vị trí so với các triều đại trước?",
+          "options": [
+            "A. Hin-đu giao và Hồi giáo.",
+            "B. Đạo Thiên chúa và Phật giáo.",
+            "C. Nho giáo và đạo giáo.",
+            "D. Phật giáo và Đạo giáo."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Dưới triều Hồ, những tôn giáo nào bị suy giảm vai trò và vị trí so với các triều đại trước?\n\n\tA. Hin-đu giao và Hồi giáo.\tB. Đạo Thiên chúa và Phật giáo.\n\n\tC. Nho giáo và đạo giáo.\tD. Phật giáo và Đạo giáo."
+        },
+        {
+          "question": "Chiến tranh bảo vệ Tổ quốc có vai trò quan trọng",
+          "options": [
+            "A. trong việc hình thành và nâng cao lòng tự hào dân tộc.",
+            "B. đối với sự sinh tồn và phát triển của quốc gia, dân tộc.",
+            "C. khơi dậy và củng cố tinh thần đoàn kết, lòng tự hào dân tộc.",
+            "D. trong việc hình thành và phát triển truyền thống yêu nước."
+          ],
+          "answer": "B",
+          "_is_standard": true,
+          "_raw_block": "Chiến tranh bảo vệ Tổ quốc có vai trò quan trọng\n\n\tA. trong việc hình thành và nâng cao lòng tự hào dân tộc.\n\n\tB. đối với sự sinh tồn và phát triển của quốc gia, dân tộc.\n\n\tC. khơi dậy và củng cố tinh thần đoàn kết, lòng tự hào dân tộc.\n\n\tD. trong việc hình thành và phát triển truyền thống yêu nước."
+        },
+        {
+          "question": "Liên bang Cộng hòa xã hội chủ nghĩa Xô viết ra đời năm 1922 đã",
+          "options": [
+            "A. chứng tỏ chế độ quân chủ chuyên chế do Nga hoàng đứng đầu hoàn toàn sụp đổ.",
+            "B. đánh dấu Liên Xô đã hoàn thành công cuộc xây dựng chế độ xã hội chủ nghĩa",
+            "C. đánh dấu sự xác lập chế độ xã hội chủ nghĩa trên toàn lãnh thổ Liên Xô rộng lớn.",
+            "D. đánh dấu Liên Xô hoàn thành công cuộc đấu tranh chống thù trong, giặc ngoài."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Liên bang Cộng hòa xã hội chủ nghĩa Xô viết ra đời năm 1922 đã\n\n\tA. chứng tỏ chế độ quân chủ chuyên chế do Nga hoàng đứng đầu hoàn toàn sụp đổ.\n\n\tB. đánh dấu Liên Xô đã hoàn thành công cuộc xây dựng chế độ xã hội chủ nghĩa\n\n\tC. đánh dấu sự xác lập chế độ xã hội chủ nghĩa trên toàn lãnh thổ Liên Xô rộng lớn.\n\n\tD. đánh dấu Liên Xô hoàn thành công cuộc đấu tranh chống thù trong, giặc ngoài."
+        },
+        {
+          "question": "Nội dung nào sau đây phản ánh đúng ý nghĩa thắng lợi của khởi nghĩa Lam Sơn?",
+          "options": [
+            "A. Đập tan quân xâm lược Xiêm và Thanh, bảo vệ độc lập dân tộc.",
+            "B. Đưa Đại Việt trở thành cường quốc hàng đầu khu vực Đông Nam Á.",
+            "C. Kết thúc 20 năm nhà Minh đô hộ, mở ra thời kì mới của đất nước.",
+            "D. Xóa bỏ ranh giới chia cắt đất nước, đặt cơ sở thống nhất quốc gia."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Nội dung nào sau đây phản ánh đúng ý nghĩa thắng lợi của khởi nghĩa Lam Sơn?\n\n\tA. Đập tan quân xâm lược Xiêm và Thanh, bảo vệ độc lập dân tộc.\n\n\tB. Đưa Đại Việt trở thành cường quốc hàng đầu khu vực Đông Nam Á.\n\n\tC. Kết thúc 20 năm nhà Minh đô hộ, mở ra thời kì mới của đất nước.\n\n\tD. Xóa bỏ ranh giới chia cắt đất nước, đặt cơ sở thống nhất quốc gia."
+        },
+        {
+          "question": "Từ năm 1991 đến nay, nhân dân một số nước ở khu vực nào sau đây tiến  hành cải cách, đổi mới, kiên định con đường xã hội chủ nghĩa?",
+          "options": [
+            "A. Bắc Phi.",
+            "B. Tây Âu.",
+            "C. Châu Á.",
+            "D. Nam Phi."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Từ năm 1991 đến nay, nhân dân một số nước ở khu vực nào sau đây tiến  hành cải cách, đổi mới, kiên định con đường xã hội chủ nghĩa?\n\n\tA. Bắc Phi.\tB. Tây Âu.\tC. Châu Á.\tD. Nam Phi."
+        },
+        {
+          "question": "Nội dung nào sau đây phản ánh đặc điểm nổi bật của khởi nghĩa Lam Sơn giai đoạn 1418 – 1423?",
+          "options": [
+            "A. Tổ chức các trận quyết chiến chiến lược và giành thắng lợi nhanh chóng.",
+            "B. Đánh bại các cuộc vây quét của quân Minh, làm chủ vùng đất Thanh Hoá, Nghệ An.",
+            "C. Liên tục bị quân Minh vây hãm và phải rút lui ba lần lên núi Chí Linh.",
+            "D. Chuyển hướng vào Nghệ An, mở rộng địa bàn hoạt động vào phía nam."
+          ],
+          "answer": "C",
+          "_is_standard": true,
+          "_raw_block": "Nội dung nào sau đây phản ánh đặc điểm nổi bật của khởi nghĩa Lam Sơn giai đoạn 1418 – 1423?\n\n\tA. Tổ chức các trận quyết chiến chiến lược và giành thắng lợi nhanh chóng.\n\n\tB. Đánh bại các cuộc vây quét của quân Minh, làm chủ vùng đất Thanh Hoá, Nghệ An.\n\n\tC. Liên tục bị quân Minh vây hãm và phải rút lui ba lần lên núi Chí Linh.\n\n\tD. Chuyển hướng vào Nghệ An, mở rộng địa bàn hoạt động vào phía nam."
+        },
+        {
+          "question": "Một trong những nghệ thuật quân sự tiêu biểu của cuộc kháng chiến chống quân Thanh (1789) là",
+          "options": [
+            "A. Đánh chắc, tiến chắc, bao vây địch.",
+            "B. vườn không nhà trống.",
+            "C. Tiên phát chế nhân.",
+            "D. Chớp thời cơ."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Một trong những nghệ thuật quân sự tiêu biểu của cuộc kháng chiến chống quân Thanh (1789) là\n\n\tA. Đánh chắc, tiến chắc, bao vây địch.\tB. vườn không nhà trống.\n\n\tC. Tiên phát chế nhân.\tD. Chớp thời cơ."
+        },
+        {
+          "question": "Trong cuộc kháng chiến chống Tống (1075-1077), quân và dân nhà Lý đã sử dụng nghệ thuật quân sự nào sau đây?",
+          "options": [
+            "A. Đánh nhanh, thắng nhanh.",
+            "B. Vây thành, diệt viện.",
+            "C. Vườn không nhà trống.",
+            "D. Chủ động tiến công."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Trong cuộc kháng chiến chống Tống (1075-1077), quân và dân nhà Lý đã sử dụng nghệ thuật quân sự nào sau đây?\n\n\tA. Đánh nhanh, thắng nhanh.\tB. Vây thành, diệt viện.\n\n\tC. Vườn không nhà trống.\tD. Chủ động tiến công."
+        },
+        {
+          "question": "Nội dung nào sau đây không phản ánh đúng kết quả cuộc cải cách của Hồ  Quý Ly và triều Hồ cuối thế kỉ XIV đầu thế kỉ XV?",
+          "options": [
+            "A. Đưa đất nước thoát khỏi tình trạng khủng hoảng.",
+            "B. Vai trò, sức mạnh của nhà nước được tăng cường.",
+            "C. Lĩnh vực quân đội, quốc phòng được củng cố.",
+            "D. Giúp Đại Việt thoát khỏi nguy cơ bị xâm lược."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Nội dung nào sau đây không phản ánh đúng kết quả cuộc cải cách của Hồ  Quý Ly và triều Hồ cuối thế kỉ XIV đầu thế kỉ XV?\n\n\tA. Đưa đất nước thoát khỏi tình trạng khủng hoảng.\tB. Vai trò, sức mạnh của nhà nước được tăng cường.\n\n\tC. Lĩnh vực quân đội, quốc phòng được củng cố.\tD. Giúp Đại Việt thoát khỏi nguy cơ bị xâm lược."
+        },
+        {
+          "question": "Một trong những nhân tố quyết định thắng lợi trong công cuộc chống giặc ngoại xâm của dân tộc Việt Nam là",
+          "options": [
+            "A. chủ trương giành thắng lợi từng bước.",
+            "B. tập hợp được sức mạnh của toàn dân.",
+            "C. đa phương hoá trong quan hệ quốc tế.",
+            "D. kết hợp đấu tranh quân sự với ngoại giao."
+          ],
+          "answer": "B",
+          "_is_standard": true,
+          "_raw_block": "Một trong những nhân tố quyết định thắng lợi trong công cuộc chống giặc ngoại xâm của dân tộc Việt Nam là\n\n\tA. chủ trương giành thắng lợi từng bước.\t\tB. tập hợp được sức mạnh của toàn dân.\n\n\tC. đa phương hoá trong quan hệ quốc tế.\t\tD. kết hợp đấu tranh quân sự với ngoại giao."
+        },
+        {
+          "question": "Nguyên nhân quyết định dẫn tới sự thất bại của cải cách Hồ Quý Ly?",
+          "options": [
+            "A. Sự uy hiếp của nhà Minh (Trung Quốc).",
+            "B. Người lãnh đạo không nắm thực quyền.",
+            "C. Không được sự ủng hộ của nhân dân.",
+            "D. Sự chống đối của quý tộc Trần."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Nguyên nhân quyết định dẫn tới sự thất bại của cải cách Hồ Quý Ly?\n\n\tA. Sự uy hiếp của nhà Minh (Trung Quốc).\t\tB. Người lãnh đạo không nắm thực quyền.\n\n\tC. Không được sự ủng hộ của nhân dân.\t\tD. Sự chống đối của quý tộc Trần."
+        },
+        {
+          "question": "Điểm giống nhau trong cách đánh của quân Lam Sơn (1418-1427) trong hai trận Tốt Động - Chúc Động và Chi Lăng - Xương Giang là gì?",
+          "options": [
+            "A. Dùng thủy chiến, kết hợp với trên bộ tấn công địch từ hai hướng.",
+            "B. Vừa đánh, vừa đám phán ngoại giao.",
+            "C. Đóng cọc gỗ trên sông để phục kích quân địch.",
+            "D. Dựa vào địa hình để phục kích nhằm tiêu hao sinh lực địch."
+          ],
+          "answer": "D",
+          "_is_standard": true,
+          "_raw_block": "Điểm giống nhau trong cách đánh của quân Lam Sơn (1418-1427) trong hai trận Tốt Động - Chúc Động và Chi Lăng - Xương Giang là gì?\n\n\tA. Dùng thủy chiến, kết hợp với trên bộ tấn công địch từ hai hướng.\n\n\tB. Vừa đánh, vừa đám phán ngoại giao.\n\n\tC. Đóng cọc gỗ trên sông để phục kích quân địch.\n\n\tD. Dựa vào địa hình để phục kích nhằm tiêu hao sinh lực địch."
+        }
+      ],
+      "true_false": [
+        {
+          "question": "Đọc đoạn tư liệu sau đây:\n\n    “Từ năm 1945 đến năm 1949, các nước Đông Âu tiến hành cải cách ruộng đất, xóa bỏ chế độ chiếm hữu ruộng đất của địa chủ, quốc hữu hóa các xí nghiệp của tư bản, ban hành các quyền tự do dân chủ\n\n     Từ năm 1950 đến nửa đầu thập niên 1970, công cuộc xây dựng chủ nghĩa xã hội ở Đông Âu nhận được sự giúp đỡ của Liên Xô đã đạt được nhiều tiến bộ: công nghiệp hóa, điện khí hóa, phát triển nông nghiệp,…\n\n     Nửa sau thập niên 1970 và trong thập niên 1980, các nước Đông Âu lâm vào suy thoái, khủng hoảng kinh tế - xã hội trầm trọng”",
+          "statements": [
+            "a) Quá trình phát triển của chủ nghĩa xã hội ở Đông Âu từ sau chiến tranh thế giới thứ hai đến hết thập niên 1980 chia thành 3 giai đoạn khác nhau.",
+            "b) Một trong những nhiệm vụ trọng tâm của các nước Đông Âu từ 1945 – 1949 là xây dựng chủ nghĩa xã hội.",
+            "c) Công cuộc xây dựng chủ nghĩa xã hội ở các nước Đông Âu đạt được nhiều thành tựu chủ yếu nhờ tinh thần tự lực tự cường của nhân dân các nước Đông Âu.",
+            "d) Nền kinh tế - xã hội các nước Đông Âu bắt đầu có dấu hiệu suy thoái, khủng hoảng từ đầu thập niên 1980."
+          ],
+          "answers": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "_is_standard": true,
+          "_raw_block": "Đọc đoạn tư liệu sau đây:\n\n    “Từ năm 1945 đến năm 1949, các nước Đông Âu tiến hành cải cách ruộng đất, xóa bỏ chế độ chiếm hữu ruộng đất của địa chủ, quốc hữu hóa các xí nghiệp của tư bản, ban hành các quyền tự do dân chủ\n\n     Từ năm 1950 đến nửa đầu thập niên 1970, công cuộc xây dựng chủ nghĩa xã hội ở Đông Âu nhận được sự giúp đỡ của Liên Xô đã đạt được nhiều tiến bộ: công nghiệp hóa, điện khí hóa, phát triển nông nghiệp,…\n\n     Nửa sau thập niên 1970 và trong thập niên 1980, các nước Đông Âu lâm vào suy thoái, khủng hoảng kinh tế - xã hội trầm trọng”\n\na. Quá trình phát triển của chủ nghĩa xã hội ở Đông Âu từ sau chiến tranh thế giới thứ hai đến hết thập niên 1980 chia thành 3 giai đoạn khác nhau.\n\nb. Một trong những nhiệm vụ trọng tâm của các nước Đông Âu từ 1945 – 1949 là xây dựng chủ nghĩa xã hội.\n\nc. Công cuộc xây dựng chủ nghĩa xã hội ở các nước Đông Âu đạt được nhiều thành tựu chủ yếu nhờ tinh thần tự lực tự cường của nhân dân các nước Đông Âu.\n\nd. Nền kinh tế - xã hội các nước Đông Âu bắt đầu có dấu hiệu suy thoái, khủng hoảng từ đầu thập niên 1980."
+        },
+        {
+          "question": "Đọc đoạn tư liệu sau đây:\n\nTrong công cuộc cải cách bộ máy chính quyền, vua Lê Thánh Tông đã bãi bỏ nhiều cơ quan, chức quan có nhiều quyền lực. Vị trí và vai trò của các chức quan đại thần suy giảm so với trước. Mọi công việc trong triều đình tập trung về Lục bộ. Lục bộ trở thành sáu cơ quan chức năng cao cấp chủ chốt trong bộ máy triều đình, do nhà vua trực tiếp điều hành, chịu trách nhiệm trước nhà vua. Lục bộ cũng đồng thời chịu sự giám sát của Lục khoa tương ứng.",
+          "statements": [
+            "a) Đoạn tư liệu cung cấp thông tin về cải cách của vua Lê Thánh Tông trên các lĩnh vực hành chính, quân đội, luật pháp.",
+            "b) Với cải cách của Lê Thánh Tông, nhà vua trực tiếp nắm quyền điều hành mọi việc, thông qua đầu mối lớn là Lục bộ, không thông qua bộ phận trung gian.",
+            "c) Lê Thánh Tông thành lập Lục khoa kiểm tra, giám sát các công việc của Lục bộ, nhằm ngăn ngừa sự lạm quyền của Lục bộ.",
+            "d) Cải cách của vua Lê Thánh Tông khiến nhiều chức quan đại thần bị suy giảm quyền hành."
+          ],
+          "answers": [
+            false,
+            true,
+            true,
+            true
+          ],
+          "_is_standard": true,
+          "_raw_block": "Đọc đoạn tư liệu sau đây:\n\nTrong công cuộc cải cách bộ máy chính quyền, vua Lê Thánh Tông đã bãi bỏ nhiều cơ quan, chức quan có nhiều quyền lực. Vị trí và vai trò của các chức quan đại thần suy giảm so với trước. Mọi công việc trong triều đình tập trung về Lục bộ. Lục bộ trở thành sáu cơ quan chức năng cao cấp chủ chốt trong bộ máy triều đình, do nhà vua trực tiếp điều hành, chịu trách nhiệm trước nhà vua. Lục bộ cũng đồng thời chịu sự giám sát của Lục khoa tương ứng.\n\na. Đoạn tư liệu cung cấp thông tin về cải cách của vua Lê Thánh Tông trên các lĩnh vực hành chính, quân đội, luật pháp.\n\nb. Với cải cách của Lê Thánh Tông, nhà vua trực tiếp nắm quyền điều hành mọi việc, thông qua đầu mối lớn là Lục bộ, không thông qua bộ phận trung gian.\n\nc. Lê Thánh Tông thành lập Lục khoa kiểm tra, giám sát các công việc của Lục bộ, nhằm ngăn ngừa sự lạm quyền của Lục bộ.\n\nd. Cải cách của vua Lê Thánh Tông khiến nhiều chức quan đại thần bị suy giảm quyền hành."
+        },
+        {
+          "question": "Đọc đoạn tư liệu sau đây:\n\n        “Phong trào Tây Sơn từ một cuộc khởi nghĩa địa phương đã phát triển thành phong trào dân tộc rộng lớn, lập nên những chiến công hiển hách. Phong trào đã lật đổ các chính quyền phong kiến Nguyễn - Trịnh, xoá bỏ tình trạng chia cắt đất nước. Đồng thời, phong trào còn đánh tan các thế lực ngoại xâm hùng mạnh, bảo vệ vững chắc nền độc lập dân tộc và chủ quyền lãnh thổ của Tổ quốc.”\n\n                                                                   SGK Lịch sử 11, bộ Kết nối tri thức với cuộc sống, trang 57",
+          "statements": [
+            "a) Phong trào Tây Sơn (1771 - 1789) đập tan các thế lực ngoại xâm Minh- Thanh, bảo vệ vững chắc nền độc lập dân tộc.S",
+            "b) Phong trào Tây Sơn (1771- 1789) đập tan âm mưu thủ tiêu nền văn hoá Đại Việt, mở ra thời kì phát triển mới của đất nước.S",
+            "c) Phong trào Tây Sơn đã giải quyết đồng thời hai nhiệm vụ: đấu tranh giai cấp, thống nhất lãnh thổ và chống ngoại xâm, bảo vệ độc lập dân tộc.Đ",
+            "d) Phong trào Tây Sơn là phong trào nông dân tiêu biểu nhất, phong trào nông dân duy nhất trong lịch sử phong kiến Việt Nam giành thắng lợi.Đ"
+          ],
+          "answers": [
+            false,
+            false,
+            true,
+            true
+          ],
+          "_is_standard": true,
+          "_raw_block": "Đọc đoạn tư liệu sau đây:\n\n        “Phong trào Tây Sơn từ một cuộc khởi nghĩa địa phương đã phát triển thành phong trào dân tộc rộng lớn, lập nên những chiến công hiển hách. Phong trào đã lật đổ các chính quyền phong kiến Nguyễn - Trịnh, xoá bỏ tình trạng chia cắt đất nước. Đồng thời, phong trào còn đánh tan các thế lực ngoại xâm hùng mạnh, bảo vệ vững chắc nền độc lập dân tộc và chủ quyền lãnh thổ của Tổ quốc.”\n\n                                                                   SGK Lịch sử 11, bộ Kết nối tri thức với cuộc sống, trang 57\n\na. Phong trào Tây Sơn (1771 - 1789) đập tan các thế lực ngoại xâm Minh- Thanh, bảo vệ vững chắc nền độc lập dân tộc.S\n\n     b. Phong trào Tây Sơn (1771- 1789) đập tan âm mưu thủ tiêu nền văn hoá Đại Việt, mở ra thời kì phát triển mới của đất nước.S\n\n c. Phong trào Tây Sơn đã giải quyết đồng thời hai nhiệm vụ: đấu tranh giai cấp, thống nhất lãnh thổ và chống ngoại xâm, bảo vệ độc lập dân tộc.Đ\n\n     d. Phong trào Tây Sơn là phong trào nông dân tiêu biểu nhất, phong trào nông dân duy nhất trong lịch sử phong kiến Việt Nam giành thắng lợi.Đ"
+        },
+        {
+          "question": "Cho bảng dự liệu sau\n\n        Thời gian\n\nSự kiện\n\n938\n\nChiến thắng Bạch Đằng chấm dứt thời kì Bắc thuộc\n\n1288\n\nTrận Bạch Đằng đánh bại ý chí xâm lược của quân Mông- Nguyên\n\n1427\n\nChiến thắng Chi Lăng- Xương Giang buộc quân Minh đầu hàng, rút quân về nước.\n\n1789\n\nChiến thắng Đống Đa đánh bại 29 vạn quan Thanh xâm lược.",
+          "statements": [
+            "a) Những thắng lợi trên là những trận quyết chiến chiến lược trong lịch sử.",
+            "b) Thể hiện nghệ thuật quân sự tài tình của cha ông ta trong chống ngoại xâm.",
+            "c) Tất cả những chiến thắng trên đều là trận thủy chiến mẫu mực của quân ta.",
+            "d) Các chiến thắng trên đều có sự kết hợp hài hòa giữa quân sự và ngoại giao"
+          ],
+          "answers": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "_is_standard": true,
+          "_raw_block": "Cho bảng dự liệu sau\n\n        Thời gian\n\nSự kiện\n\n938\n\nChiến thắng Bạch Đằng chấm dứt thời kì Bắc thuộc\n\n1288\n\nTrận Bạch Đằng đánh bại ý chí xâm lược của quân Mông- Nguyên\n\n1427\n\nChiến thắng Chi Lăng- Xương Giang buộc quân Minh đầu hàng, rút quân về nước.\n\n1789\n\nChiến thắng Đống Đa đánh bại 29 vạn quan Thanh xâm lược.\n\na) Những thắng lợi trên là những trận quyết chiến chiến lược trong lịch sử.\n\nb) Thể hiện nghệ thuật quân sự tài tình của cha ông ta trong chống ngoại xâm.\n\nc) Tất cả những chiến thắng trên đều là trận thủy chiến mẫu mực của quân ta.\n\nd) Các chiến thắng trên đều có sự kết hợp hài hòa giữa quân sự và ngoại giao"
+        }
+      ],
+      "essay": []
+    },
+    "total_score": 10,
+    "grade": "11",
+    "tf_grading_method": "deduction",
+    "general_grading_criteria": ""
+  },
+  "20260331113507": {
+    "id": "20260331113507",
+    "title": "K11 _TL 1",
+    "type": "essay",
+    "duration": 30,
+    "created_by": "gv001",
+    "created_at": "2026-03-31 11:35:07",
+    "essay_question": "Câu 1 (1 điểm): Phong trào Tây Sơn thế kỉ XVIII đã đóng góp vào truyền thống yêu nước của dân tộc Việt Nam những bài học lịch sử gì?\t\r\nCâu 2 (2 điểm): Trình bày nét chính về công cuộc cải cách ở Xiêm. Vì sao Xiêm là nước duy nhất ở khu vực Đông Nam Á không trở thành thuộc địa của thực dân phương Tây?",
+    "grading_criteria": "Câu 1: Phong trào Tây Sơn thế kỉ XVIII đã đóng góp vào truyền thống yêu nước của dân tộc Việt Nam những bài học lịch sử gì?\t\r\n- Phong trào Tây Sơn đã kết hợp nhiệm vụ chống kẻ thù bên trong với việc chống kẻ thù xâm lược bên ngoài để thống nhất đất nước và bảo vệ độc lập dân tộc \t0,25 điểm\r\n- Phát huy vai trò của quần chúng nhân dân , tập hợp đoàn kết dưới ngọn cờ chính nghĩa. Nhờ đó đã phát huy sức mạnh cao độ của dân tộc, đưa phong trào từ quy mô địa phương trở thành phong trào quy mô cả nước.. 0,25 điểm\r\n- Nắm vững tư tưởng tiến công, quyết đánh quyết thắng với phương châm “ thần tốc, bất ngờ”, tạo thế áp đảo kẻ thù...\t0,25 điểm\r\n- Chọn điểm quyết chiến chiến lược kết hợp tiến công mãnh liệt, lập chiến công quyết định thăng lợi như: trận Rạch Gầm – Xoài Mút đã đánh bại quân Xiêm; trận Ngọc Hồi-  Đống Đa đánh bại quân xâm lược Thanh....\t0,25 điểm\r\nCâu 2: \r\nTrình bày nét chính về công cuộc cải cách ở Xiêm. Vì sao Xiêm là nước duy nhất ở khu vực Đông Nam Á không trở thành thuộc địa của thực dân phương Tây?\t2,0 điểm\r\n* Nét chính về công cuộc cải cách ở Xiêm\t\r\n- Từ năm 1868, vua Ra-ma V tiến hành hàng loạt cải cách quan trọng trên các lĩnh vực của đời sống xã hội: kinh tế, xã hội, hành chính, ngoại giao, giáo dục…\t0,25\r\n- Về kinh tế: Trong công nghiệp, khuyến khích đầu tư vào công nghiệp, đường sắt…Trong nông nghiệp áp dụng chính sách giảm thuế nông nghiệp, khai khẩn đất hoang…\t0,25\r\n- Về hành chính: Vua Ra-ma V cải cách hành chính theo mô hình phương Tây…\r\n- Về giáo dục: Coi trọng công tác giáo dục, nhà vua công bố Chương trình giáo dục đầu tien ở Xiêm\t0,25\r\n- Về ngoại giao: Ra-ma V gặp gỡ đại diện chính phủ Anh, Pháp, Đức, Nga…nhằm xóa bỏ các hiệp ước bất bình đẳng…Cắt nhượng một số vùng đất thuộc ảnh hưởng của Xiêm để bảo vệ độc lập cho nước mình.\t0,25\r\n* Vì sao Xiêm là nước duy nhất ở khu vực Đông Nam Á không trở thành thuộc địa của thực dân phương Tây?\t\r\n- Trong bối cảnh bị thực dân phương Tây đe dọa xâm lược, chính phủ Xiêm đã nhanh chóng tiến hành cải cách đất nước một cách toàn diện trên các lĩnh vực: kinh tế, xã hội, hành chính, giáo dục, ngoại giao,…\t0,25\r\n- Trên cơ sở những thành tựu của công cuộc cải cách, chính phủ Xiêm đã tăng cường được sức mạnh của quốc gia, có thực lực để thực hiện đường lối ngoại giao mềm dẻo, nhằm giữ vững độc lập, chủ quyền đất nước\t0,25\r\n- Mặt khác, Xiêm có vị trí địa lí rất đặc biệt. Ở thời điểm cuối thế kỉ XIX - đầu thế kỉ XX, vị trí địa lí của Xiêm nằm giữa hai khu vực là: Ấn Độ thuộc Anh (bao gồm Ấn Độ, Miến Điện, Mã Lai) và Đông Dương thuộc Pháp (bao gồm Việt Nam, Lào, Campuchia).\t0,25\r\n- Trên thực tế, cả Anh và Pháp đều không muốn đụng độ với nhau ở Xiêm nên đã quyết định biến Xiêm trở thành “vùng đệm”. Nhận thức được ưu thế về vị trí địa chiến lược của mình, chính phủ Xiêm đã khéo léo kí kết các hiệp ước với nội dung đồng ý cắt một số vùng lãnh thổ thuộc ảnh hưởng của Xiêm ở Lào, Campuchia cho Pháp, Mã Lai cho Anh để bảo vệ nền độc lập của nước mình.\t0,25\r\n",
+    "total_score": 10,
+    "grade": "11",
     "general_grading_criteria": ""
   }
 }

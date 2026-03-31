@@ -4,34 +4,126 @@
     "description": "111",
     "filename": "Lich_su_11.docx",
     "uploaded_by": "gv001",
-    "uploaded_at": "2026-01-12 12:54:59"
+    "uploaded_at": "2026-01-12 12:54:59",
+    "id": 1
   },
   {
     "title": "test",
     "description": "ttttt",
     "filename": "HDC_Lich_su_11_cuoi_HK_I-2025-2026.docx",
     "uploaded_by": "gv001",
-    "uploaded_at": "2026-01-12 12:55:16"
+    "uploaded_at": "2026-01-12 12:55:16",
+    "id": 2
   },
   {
     "id": 3,
-    "title": "test",
-    "description": "1111",
+    "title": "Lý thuyết trọng tâm theo chủ đề",
+    "description": "Lý thuyết trọng tâm theo chủ đề",
     "type": "file",
-    "filename": "Lich_su_11.docx",
+    "filename": "LS10.Ly_thuyet_theo_Chu_e.docx",
     "grade": "10",
     "uploaded_by": "gv001",
-    "uploaded_at": "2026-01-12 13:05:32"
+    "uploaded_at": "2026-03-31 10:43:30"
   },
   {
     "id": 4,
-    "title": "ttt",
-    "description": "1112",
-    "type": "video",
-    "video_link": "https://drive.google.com/file/d/1_PRoDrmqvYUoW7iV-9-n3Pm2mlBedBML/view?usp=sharing",
-    "drive_id": "1_PRoDrmqvYUoW7iV-9-n3Pm2mlBedBML",
+    "title": "Bộ câu hỏi tự luận nâng cao ",
+    "description": "",
+    "type": "file",
+    "filename": "LS10.Cau_hoi_tu_luan_nang_cao.docx",
     "grade": "10",
     "uploaded_by": "gv001",
-    "uploaded_at": "2026-01-12 13:08:06"
+    "uploaded_at": "2026-03-31 10:44:23"
+  },
+  {
+    "id": 5,
+    "title": "Kiến thức trọng tâm theo chủ đề",
+    "description": "Lý thuyết trọng tâm theo chủ đề",
+    "type": "file",
+    "filename": "LS11.Ly_thuyet_theo_Chu_e.docx",
+    "grade": "11",
+    "uploaded_by": "gv001",
+    "uploaded_at": "2026-03-31 10:45:04"
+  },
+  {
+    "id": 6,
+    "title": "Bộ câu hỏi tự luận nâng cao",
+    "description": "Bộ câu hỏi tự luận nâng cao",
+    "type": "file",
+    "filename": "LS11.Cau_hoi_tu_luan_nang_cao.docx",
+    "grade": "11",
+    "uploaded_by": "gv001",
+    "uploaded_at": "2026-03-31 10:45:27"
+  },
+  {
+    "id": 7,
+    "title": "CD1_THẾ GIỚI TRONG VÀ SAU CHIẾN TRANH LẠNH",
+    "description": "Chủ đề 1_THẾ GIỚI TRONG VÀ SAU CHIẾN TRANH LẠNH",
+    "type": "file",
+    "filename": "CD1_THE_GIOI_TRONG_VA_SAU_CHIEN_TRANH_LANH.pdf",
+    "grade": "12",
+    "uploaded_by": "gv001",
+    "uploaded_at": "2026-03-31 10:45:57"
+  },
+  {
+    "id": 8,
+    "title": "CD2_ASEAN NHỮNG CHẶNG ĐƯỜNG LỊCH SỬ",
+    "description": "Chủ đề 2_ASEAN NHỮNG CHẶNG ĐƯỜNG LỊCH SỬ",
+    "type": "file",
+    "filename": "CD2_ASEAN_NHUNG_CHANG_UONG_LICH_SU.pdf",
+    "grade": "12",
+    "uploaded_by": "gv001",
+    "uploaded_at": "2026-03-31 10:46:22"
+  },
+  {
+    "id": 9,
+    "title": "CD3_CÁCH MẠNG THÁNG TÁM NĂM 1945, CHIẾN TRANH GIẢI PHÓNG DÂN TỘC VÀ CHIẾN TRANH BẢO VỆ TỔ QUỐC TRONG LỊCH SỬ VIỆT NAM",
+    "description": "Chủ đề 3_CÁCH MẠNG THÁNG TÁM NĂM 1945, CHIẾN TRANH GIẢI PHÓNG DÂN TỘC VÀ CHIẾN TRANH BẢO VỆ TỔ QUỐC TRONG LỊCH SỬ VIỆT NAM",
+    "type": "file",
+    "filename": "CD3_CACH_MANG_THANG_TAM_NAM_1945_CHIEN_TRANH_GIAI_PHONG_DAN_TOC_VA_CHIEN_TRANH_BAO_VE_TO_QUOC_TRONG_LICH_SU_VIET_NAM.pdf",
+    "grade": "12",
+    "uploaded_by": "gv001",
+    "uploaded_at": "2026-03-31 10:47:11"
+  },
+  {
+    "id": 10,
+    "title": "CD4_CÔNG CUỘC ĐỐI MỚI Ở VIỆT NAM TỪ NĂM 1986 ĐẾN NAY",
+    "description": "Chủ đề 4_CÔNG CUỘC ĐỐI MỚI Ở VIỆT NAM TỪ NĂM 1986 ĐẾN NAY",
+    "type": "file",
+    "filename": "CD4_CONG_CUOC_OI_MOI_O_VIET_NAM_TU_NAM_1986_EN_NAY.pdf",
+    "grade": "12",
+    "uploaded_by": "gv001",
+    "uploaded_at": "2026-03-31 10:48:05"
+  },
+  {
+    "id": 11,
+    "title": "CD5_HOẠT ĐỘNG ĐỐI NGOẠI CỦA VIỆT NAM THỜI CẬN – HIỆN ĐẠI",
+    "description": "Chủ đề 5_HOẠT ĐỘNG ĐỐI NGOẠI CỦA VIỆT NAM THỜI CẬN – HIỆN ĐẠI",
+    "type": "file",
+    "filename": "CD5_HOAT_ONG_OI_NGOAI_CUA_VIET_NAM_THOI_CAN_HIEN_AI.pdf",
+    "grade": "12",
+    "uploaded_by": "gv001",
+    "uploaded_at": "2026-03-31 10:48:28"
+  },
+  {
+    "id": 12,
+    "title": "CD6_HỒ CHÍ MINH TRONG LỊCH SỬ VIỆT NAM",
+    "description": "Chủ đề 6_HỒ CHÍ MINH TRONG LỊCH SỬ VIỆT NAM",
+    "type": "file",
+    "filename": "CD6_HO_CHI_MINH_TRONG_LICH_SU_VIET_NAM.pdf",
+    "grade": "12",
+    "uploaded_by": "gv001",
+    "uploaded_at": "2026-03-31 10:48:54"
+  },
+  {
+    "id": 13,
+    "title": "Ôn tập kiến thức Lịch sử 12: Lịch sử Việt Nam từ năm 1953 đến 1975",
+    "description": "Ôn tập kiến thức Lịch sử 12: Lịch sử Việt Nam từ năm 1953 đến 1975",
+    "type": "video",
+    "video_link": "https://www.youtube.com/watch?v=kU4x_Gaj5uQ",
+    "drive_id": "https://www.youtube.com/watch?v=kU4x_Gaj5uQ",
+    "grade": "12",
+    "uploaded_by": "gv001",
+    "uploaded_at": "2026-03-31 10:51:01"
   }
 ]

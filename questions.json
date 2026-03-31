@@ -1,5 +1,5 @@
 {
-  "chude_1": [
+  "k12_chude_1": [
     {
       "question": "Khi CTTG thứ hai đang diễn ra, các nước Đồng minh chống phát xít mong muốn",
       "options": [
@@ -755,7 +755,7 @@
       "difficulty": 3
       }
   ],
-  "chude_2": [
+  "k12_chude_2": [
      {
 "question": "Nhóm 5 nước sáng lập ASEAN (1967) gồm:",
 "options": [
@@ -1747,7 +1747,7 @@
       "difficulty": 1
     }
   ],
-  "chude_3": [
+  "k12_chude_3": [
     {
 "question": "Một trong những địa phương giành được chính quyền sớm nhất trong Tổng khởi nghĩa tháng Tám năm 1945 là",
 "options": [
@@ -2657,7 +2657,7 @@
 }
 
   ],
-  "chude_4": [
+  "k12_chude_4": [
    {
     "question": "Đảng Cộng sản Việt Nam tiến hành công cuộc đổi mới đất nước từ ngày12/1986 trong hoàn cảnh như thế nào?",
     "options": ["Hệ thống xã hội chủ nghĩa thế giới đã sụp đổ.", "Tình hình thế giới có rất nhiều điểm thuận lợi.", "Đất nước đang trên đà phát triển rất mạnh mẽ,", "Đang lâm vào khủng hoảng về kinh tế - xã hội."],
@@ -2839,7 +2839,7 @@
     "difficulty": 2
   }
   ],
-   "chude_5": [
+   "k12_chude_5": [
        {
     "question": "Những hoạt động đối ngoại của Phan Bội Châu đầu thế kỉ XX nhằm mục đích nào sau đây?",
     "options": ["Giành độc lập cho đất nước.", "Đánh bại phát xít Nhật Bản.", "Xóa bỏ chế độ tư bản chủ nghĩa.", "Xây dựng nhà nước vô sản."],
@@ -2919,7 +2919,7 @@
     "difficulty": 1
   }
   ],
-  "chude_6": [
+  "k12_chude_6": [
     {
     "question": "Năm 1925, Nguyễn Ái Quốc có hoạt động nào sau đây?",
     "options": [
@@ -3382,5 +3382,3070 @@
     "answer": "Góp phần hoạch định chiến lược, sách lược của cách mạng dân tôc, dân chủ.",
     "difficulty": 2
   }
-  ]
+  ],
+  "k10_chude_1": [
+    {
+      "question": "Hiện thực lịch sử là tất cả những",
+      "options": [
+        "điều đã diễn ra trong quá khứ, tồn tại theo ý muốn của con người.",
+        "điều đã diễn ra trong quá khứ, tồn tại một cách khách quan, độc lập.",
+        "hiện tượng siêu nhiên tác động đến tiến trình phát triển loài người.",
+        "nhân vật trong quá khứ có đóng góp cho sự phát triển của nhân loại."
+      ],
+      "answer": "điều đã diễn ra trong quá khứ, tồn tại một cách khách quan, độc lập.",
+      "difficulty": 1
+    },
+    {
+      "question": "Tất cả những gì đã diễn ra trong quá khứ, tồn tại một cách khách quan, không phụ thuộc vào ý muốn chủ quan của con người được gọi là",
+      "options": [
+        "hiện thực lịch sử.",
+        "tư duy lịch sử.",
+        "nhận thức lịch sử.",
+        "khám phá lịch sử."
+      ],
+      "answer": "hiện thực lịch sử.",
+      "difficulty": 1
+    },
+    {
+      "question": "Nội dung nào sau đây không đúng về khái niệm lịch sử?",
+      "options": [
+        "Những gì đã diễn ra trong quá khứ của xã hội loài người.",
+        "Những nhận thức, hiểu biết của con người về quá khứ.",
+        "Khoa học nghiên cứu về sự tương tác của con người với xã hội.",
+        "Sự tưởng tượng của con người về xã hội tương lai."
+      ],
+      "answer": "Sự tưởng tượng của con người về xã hội tương lai.",
+      "difficulty": 1
+    },
+    {
+      "question": "Nội dung nào sau đây phản ánh đúng hiện thực lịch sử?",
+      "options": [
+        "Những nhận thức và hiểu biết của con người về quá khứ.",
+        "Những câu chuyện kể hoặc tác phẩm ghi chép về lịch sử.",
+        "Ngành khoa học nghiên cứu về quá khứ của con người.",
+        "Những sự kiện xảy ra trong quá khứ, tồn tại khách quan."
+      ],
+      "answer": "Những sự kiện xảy ra trong quá khứ, tồn tại khách quan.",
+      "difficulty": 1
+    },
+    {
+      "question": "Nội dung nào sau đây không phản ánh đúng đặc điểm của hiện thực lịch sử?",
+      "options": [
+        "Có trước lịch sử được con người nhận thức",
+        "Không phụ thuộc vào ý muốn của con người",
+        "Có tính duy nhất và không thể thay đổi được.",
+        "Được trình bày theo nhiều cách khác nhau."
+      ],
+      "answer": "Được trình bày theo nhiều cách khác nhau.",
+      "difficulty": 1
+    },
+    {
+      "question": "Nội dung nào sau đây phản ánh đúng lịch sử được con người nhận thức?",
+      "options": [
+        "Những suy nghĩ và hiểu biết của con người về quá khứ.",
+        "Những tưởng tượng của con người về xã hội tương lai",
+        "Những hiện vật, di tích lịch sử được con người phát hiện",
+        "Những sự kiện xảy ra trong quá khứ, tồn tại khách quan."
+      ],
+      "answer": "Những suy nghĩ và hiểu biết của con người về quá khứ.",
+      "difficulty": 1
+    },
+    {
+      "question": "Nội dung nào sau đây phản ánh đúng đặc điểm của nhận thức lịch sử?",
+      "options": [
+        "Nhận thức lịch sử luôn phản ánh đúng hiện thực lịch sử.",
+        "Nhận thức lịch sử không thể tái hiện đầy đủ hiện thực lịch sử.",
+        "Nhận thức lịch sử thường lạc hậu hơn hiện thực lịch sử.",
+        "Nhận thức lịch sử độc lập, khách quan với hiện thực lịch sử."
+      ],
+      "answer": "Nhận thức lịch sử không thể tái hiện đầy đủ hiện thực lịch sử.",
+      "difficulty": 1
+    },
+    {
+      "question": "Nội dung nào sau đây phản ánh đúng điểm khác biệt của lịch sử được con người nhận thức so với hiện thực lịch sử?",
+      "options": [
+        "Có tính đa dạng và có thể thay đổi theo thời gian",
+        "Được tái hiện duy nhất thông qua các bản ghi chép",
+        "Không phụ thuộc vào ý muốn chủ quan con người",
+        "Không chịu sự chi phối của mục đích nghiên cứu"
+      ],
+      "answer": "Có tính đa dạng và có thể thay đổi theo thời gian",
+      "difficulty": 1
+    },
+    {
+      "question": "Nội dung nào sau đây không phải là nguyên nhân khiến lịch sử được con người nhận thức có sự khác nhau?",
+      "options": [
+        "Mục đích nghiên cứu",
+        "Phương pháp nghiên cứu",
+        "Hiện thực lịch sử",
+        "Nguồn sử liệu"
+      ],
+      "answer": "Hiện thực lịch sử",
+      "difficulty": 1
+    },
+    {
+      "question": "Ngày 2 – 9 – 1945 , tại Quảng trường Ba Đình (Hà Nội), Chủ tịch Hồ Chí Minh đọc bản Tuyên ngôn Độc lập, khai sinh ra nước Việt Nam Dân chủ Cộng hòa. Sự kiện này là kết quả của Cách mạng tháng Tám năm 1945, cuộc cách mạng giải phóng dân tộc điển hình.",
+      "options": [
+        "Tư liệu gốc phục vụ việc nghiên cứu và học tập lịch sử.",
+        "Tất cả những tri thức về lịch sử đã được nhận thức lại.",
+        "Tất cả những trí thức về quy luật lịch sử được đúc kết lại.",
+        "Hiện thực lịch sử và lịch sử được con người nhận thức."
+      ],
+      "answer": "Hiện thực lịch sử và lịch sử được con người nhận thức.",
+      "difficulty": 1
+    },
+    {
+    "question": "Nội dung nào sau đây phản ánh đúng khái niệm Sử học?",
+    "options": [
+      "Là những câu chuyện kể về nguồn gốc loài người",
+      "Là khoa học nghiên cứu về quá khứ loài người",
+      "Là những tưởng tượng của con người về tương lai",
+      "Là nghiên cứu về sự hình thành và phát triển của vũ trụ"
+    ],
+    "answer": "Là khoa học nghiên cứu về quá khứ loài người",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây phản ánh đúng đối tượng nghiên cứu của Sử học?",
+    "options": [
+      "Những hoạt động của con người trong quá khứ.",
+      "Quá trình hình thành và phát triển của vũ trụ.",
+      "Những hoạt động của con người trong tương lai.",
+      "Quá trình tiến hóa của các sinh vật trên Trái Đất."
+    ],
+    "answer": "Những hoạt động của con người trong quá khứ.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây không phải là đối tượng nghiên cứu của Sử học?",
+    "options": [
+      "Quá trình hình thành, phát triển, suy vong của một dân tộc.",
+      "Quá trình hoạt động, đóng góp của một cá nhân trong quá khứ",
+      "Hoạt động ngoại giao của một quốc gia trong quá khứ",
+      "Những hiện tượng tự nhiên xảy ra trong quá khứ."
+    ],
+    "answer": "Những hiện tượng tự nhiên xảy ra trong quá khứ.",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những nhiệm vụ quan trọng của Sử học là",
+    "options": [
+      "khám phá đại dương.",
+      "hội nhập quốc tế.",
+      "giáo dục, nêu gương.",
+      "chinh phục vũ trụ."
+    ],
+    "answer": "giáo dục, nêu gương.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây phản ánh đúng về đối tượng nghiên cứu của Sử học?",
+    "options": [
+      "Những hoạt động của con người trên lĩnh vực chính trị, quân sự.",
+      "Toàn bộ những hoạt động của con người diễn ra trong quá khứ",
+      "Toàn bộ những hoạt động của con người từ thời cổ đại đến cận đại.",
+      "Những hoạt động của con người từ khi xuất hiện chữ viết đến nay."
+    ],
+    "answer": "Toàn bộ những hoạt động của con người diễn ra trong quá khứ",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây không phải là chức năng của Sử học?",
+    "options": [
+      "Khôi phục các sự kiện lịch sử diễn ra trong quá khứ",
+      "Rút ra bản chất và các quy luật vận động của lịch sử",
+      "Giáo dục tình yêu thiên nhiên và bảo vệ môi trường",
+      "Rút ra những bài học kinh nghiệm cho cuộc sống hiện tại"
+    ],
+    "answer": "Giáo dục tình yêu thiên nhiên và bảo vệ môi trường",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những chức năng cơ bản của Sử học là",
+    "options": [
+      "khôi phục hiện thực lịch sử thông qua tưởng tượng.",
+      "tái tạo lại các biến cố lịch sử thông qua thí nghiệm.",
+      "khôi phục hiện thực lịch sử một cách khách quan.",
+      "cung cấp tri thức cho các lĩnh vực khoa học tự nhiên."
+    ],
+    "answer": "khôi phục hiện thực lịch sử một cách khách quan.",
+    "difficulty": 1
+  },
+  {
+    "question": "“Khôi phục lại hiện thực lịch sử một cách chính xác, khách quan” là chức năng nào sau đây của Sử học?",
+    "options": [
+      "Khoa học",
+      "Xã hội",
+      "Giáo dục",
+      "Dự báo"
+    ],
+    "answer": "Khoa học",
+    "difficulty": 1
+  },
+  {
+    "question": "“Giúp con người hiểu được các quy luật phát triển của xã hội, rút ra những bài học kinh nghiệm cho cuộc sống hiện tại” là chức năng nào sau đây của Sử học?",
+    "options": [
+      "Khoa học",
+      "Xã hội",
+      "Giáo dục",
+      "Dự báo"
+    ],
+    "answer": "Xã hội",
+    "difficulty": 1
+  },
+  {
+    "question": "Nhiệm vụ nhận thức của Sử học được thể hiện ở nội dung nào sau đây?",
+    "options": [
+      "Cung cấp các tri thức khoa học về lịch sử",
+      "Giáo dục tư tưởng, tình cảm cho con người",
+      "Dự báo về tương lai của đất nước, nhân loại",
+      "Bồi đắp lòng yêu nước, tinh thần tự tôn dân tộc"
+    ],
+    "answer": "Cung cấp các tri thức khoa học về lịch sử",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những chức năng quan trọng của Sử học là",
+    "options": [
+      "thúc đẩy xu thế toàn cầu hóa.",
+      "thúc đẩy xu thế hội nhập quốc tế.",
+      "khôi phục hiện thực lịch sử.",
+      "tìm hiểu quá trình biến đổi tự nhiên."
+    ],
+    "answer": "khôi phục hiện thực lịch sử.",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những lí do cần khám phá lịch sử suốt đời là giúp mỗi người",
+    "options": [
+      "bắt kịp những công nghệ mới.",
+      "làm giàu trí thức cho bản thân.",
+      "hoàn thiện năng lực thẩm mĩ.",
+      "hoàn thiện năng lực tính toán."
+    ],
+    "answer": "làm giàu trí thức cho bản thân.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây không phản ánh đúng lý do cần thiết phải học tập, khám phá lịch sử suốt đời?",
+    "options": [
+      "Tri thức lịch sử có sự biến đổi và phát triển không ngừng",
+      "Nhiều sự kiện lịch sử trong quá khứ chưa được làm sáng tỏ",
+      "Nhu cầu đúc rút kinh nghiệm quá khứ cho cuộc sống hiện tại",
+      "Học tập lịch sử là cách duy nhất để hội nhập quốc tế thành công"
+    ],
+    "answer": "Học tập lịch sử là cách duy nhất để hội nhập quốc tế thành công",
+    "difficulty": 1
+  },
+  {
+    "question": "Học tập và tìm hiểu lịch sử giúp đưa lại những cơ hội nghề nghiệp mới trên lĩnh vực nào sau đây?",
+    "options": [
+      "Công nghệ thông tin",
+      "Chế biến thủy sản",
+      "Công nghiệp văn hóa",
+      "Xuất khẩu dầu mỏ"
+    ],
+    "answer": "Công nghiệp văn hóa",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây phản ánh đúng ý nghĩa của tri thức lịch sử đối với cuộc sống ?",
+    "options": [
+      "Góp phần hình thành lòng yêu nước và tinh thần dân tộc.",
+      "Giúp những người hiểu về lịch sử đều trở thành nhà sử học",
+      "Đặt cơ sở cho sự ra đời của mọi ngành khoa học.",
+      "Giúp giải quyết được mọi mâu thuẫn trong xã hội."
+    ],
+    "answer": "Góp phần hình thành lòng yêu nước và tinh thần dân tộc.",
+    "difficulty": 1
+  },
+  {
+    "question": "Toàn bộ những tri thức, hiểu biết, suy nghĩ của con người về quá khứ được gọi là",
+    "options": [
+      "hiện thực khách quan lịch sử.",
+      "lịch sử được con người nhận thức.",
+      "cách thức sưu tầm lịch sử.",
+      "phương pháp nghiên cứu lịch sử."
+    ],
+    "answer": "lịch sử được con người nhận thức.",
+    "difficulty": 1
+  },
+  {
+    "question": "Đối tượng nghiên cứu của Sử học mang đặc điểm nào sau đây ?",
+    "options": [
+      "Phổ cập.",
+      "Toàn diện.",
+      "Tâm linh.",
+      "Hiện đại."
+    ],
+    "answer": "Toàn diện.",
+    "difficulty": 1
+  },
+  {
+    "question": "Toàn bộ những hình thức khác nhau của tư liệu lịch sử, chứa đựng những thông tin về quá khứ loài người được gọi là",
+    "options": [
+      "sử liệu",
+      "truyền thuyết",
+      "ngữ liệu",
+      "văn bản"
+    ],
+    "answer": "sử liệu",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những khâu quan trọng trong nghiên cứu, học tập, tìm hiểu lịch sử là",
+    "options": [
+      "hạch toán kinh doanh.",
+      "thu thập nguồn sử liệu.",
+      "xây dựng phiếu điều tra.",
+      "tiến hành thí nghiệm"
+    ],
+    "answer": "thu thập nguồn sử liệu.",
+    "difficulty": 1
+  },
+  {
+    "question": "Lập danh mục sử liệu cần sưu tầm; tìm kiếm, thu thập thông tin liên quan đến đối tượng tìm hiểu là các bước cơ bản của quá trình",
+    "options": [
+      "xử lý thông tin sử liệu",
+      "tiến hành thí nghiệm lịch sử",
+      "sưu tầm, thu thập sử liệu",
+      "xác minh, đánh giá sử liệu"
+    ],
+    "answer": "sưu tầm, thu thập sử liệu",
+    "difficulty": 1
+  },
+  {
+    "question": "Phân loại, đánh giá, thẩm định, so sánh nguồn sử liệu là các bước cơ bản của quá trình",
+    "options": [
+      "xử lý thông tin sử liệu",
+      "tiến hành thí nghiệm lịch sử",
+      "sưu tầm, thu thập sử liệu",
+      "tìm hiểu các di chỉ khảo cổ"
+    ],
+    "answer": "xử lý thông tin sử liệu",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây phản ánh đúng quy trình thu thậpvà xử lí thông tin sử liệu trong quá trình nghiên cứu, tìm hiểu lịch sử?",
+    "options": [
+      "Xác định vấn đề => Sưu tầm sử liệu => Chọn lọc, phân loại => Xác định, đánh giá.",
+      "Xác định vấn đề => Chọn lọc, phân loại => Xác định, đánh giá => Sưu tầm sử liệu.",
+      "Sưu tầm sử liệu => Chọn lọc, phân loại => Xác định, đánh giá => Xác định vấn đề.",
+      "Sưu tầm sử liệu => Chọn lọc, phân loại => Xác định vấn đề => Xác định, đánh giá."
+    ],
+    "answer": "Xác định vấn đề => Sưu tầm sử liệu => Chọn lọc, phân loại => Xác định, đánh giá.",
+    "difficulty": 1
+  },
+  {
+    "question": "Những bài học kinh nghiệm trong lịch sử có giá trị như thế nào đối với cuộc sống hiện tại và tương lai của con người?",
+    "options": [
+      "Giúp con người kế thừa mọi yếu tố trong quá khứ.",
+      "Giúp con người làm chủ hoàn toàn cuộc sống tương lai.",
+      "Giúp con người tránh lặp lại sai lầm trong quá khứ.",
+      "Là yếu tố quyết định đến tương lai của con người."
+    ],
+    "answer": "Giúp con người tránh lặp lại sai lầm trong quá khứ.",
+    "difficulty": 1
+  },
+  {
+    "question": "Trong quá trình tìm hiểu, nghiên cứu lịch sử, việc xác  minh, đánh giá nguồn sử liệu là một khâu quan trọng nhằm mục đích nào sau đây?",
+    "options": [
+      "Xác định danh sách các nguồn sử liệu cần thu thập",
+      "Xác định độ tin cậy và giá trị của các nguồn sử liệu",
+      "Ghi chép thông tin liên quan đến vấn đề nghiên cứu",
+      "Chọn lọc và phân loại các nguồn sử liệu phù hợp"
+    ],
+    "answer": "Xác định độ tin cậy và giá trị của các nguồn sử liệu",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây không phải là hình thức để học tập, khám phá lịch sử?",
+    "options": [
+      "Tham quan các bảo tàng",
+      "Xem các phim lịch sử",
+      "Khám phá các đại dương",
+      "Tham quan khu lưu niệm"
+    ],
+    "answer": "Khám phá các đại dương",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào  sau đây phản ánh đúng mối liên hệ giữa kiến thức lịch sử với cuộc sống hiện tại?",
+    "options": [
+      "Lịch sử giúp con người hiểu rõ hơn những vấn đề thời sự trong nước và quốc tế",
+      "Kiến thức lịch sử giúp con người thay đổi được quá khứ để hướng tới tương lai",
+      "Kiến thức lịch sử là yếu tố quyết định thành công của con người trong công việc",
+      "Lịch sử là nhân tố quyết định sự phát triển khoa học kĩ thuật của một quốc gia"
+    ],
+    "answer": "Lịch sử giúp con người hiểu rõ hơn những vấn đề thời sự trong nước và quốc tế",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây phản ánh không đúng ý nghĩa của tri thức lịch sử đối với cuộc sống ?",
+    "options": [
+      "Góp phần hình thành lòng yêu nước và tinh thần dân tộc.",
+      "Giúp con người tránh được những sai lầm trong quá khứ.",
+      "Giúp các dân tộc thu hẹp khoảng cách phân hóa giàu nghèo.",
+      "Giúp phát huy những di sản quý báu trong cuộc sống hiện tại."
+    ],
+    "answer": "Giúp các dân tộc thu hẹp khoảng cách phân hóa giàu nghèo.",
+    "difficulty": 1
+  },
+  {
+    "question": "Cần học tập lịch sử suốt đời vì tri thức lịch sử",
+    "options": [
+      "liên quan và ảnh hưởng quyết định đến tất cả mọi sự vật, hiện tượng.",
+      "chưa hoàn toàn chính xác, cần sửa đổi và bổ sung thường xuyên.",
+      "rất rộng lớn và đa dạng, lại biến đổi và phát triển không ngừng",
+      "giúp cá nhân hội nhập nhanh chóng vào cuộc sống hiện đại"
+    ],
+    "answer": "rất rộng lớn và đa dạng, lại biến đổi và phát triển không ngừng",
+    "difficulty": 1
+  }
+  ],
+  "k10_chude_2": [
+    {
+      "question": "Di sản văn hóa là một bộ phận quan trọng của",
+      "options": [
+        "toán học",
+        "lịch sử",
+        "công nghệ",
+        "kĩ thuật"
+      ],
+      "answer": "lịch sử",
+      "difficulty": 1
+    },
+    {
+      "question": "Di sản văn hoá là những sản phẩm tinh thần, vật chất, được lưu truyền từ thế hệ này sang thế hệ khác, có giá trị",
+      "options": [
+        "lịch sử, văn hoá.",
+        "kinh tế, chính trị.",
+        "luật pháp, văn hoá.",
+        "khoa học, công nghệ."
+      ],
+      "answer": "lịch sử, văn hoá.",
+      "difficulty": 1
+    },
+    {
+      "question": "Ngành khoa học nào sau đây góp phần quan trọng trong bảo tồn và phát huy những giá trị của di sản văn hóa phi vật thể?",
+      "options": [
+        "Sinh vật học.",
+        "Sử học.",
+        "Y học.",
+        "Giải phẫu học."
+      ],
+      "answer": "Sử học.",
+      "difficulty": 1
+    },
+    {
+      "question": "Nội dung nào sau đây không phải là biểu hiện về mối quan hệ giữa Sử học với di sản  văn hóa, di sản thiên nhiên?",
+      "options": [
+        "Sử học quyết định sự tồn tại của tất cả các di sản.",
+        "Di sản là nguồn sử liệu cho nghiên cứu lịch sử.",
+        "Sử học góp phần quảng bá hình ảnh di sản tới cộng đồng.",
+        "Sử học góp phần xác định đúng các giá trị của mỗi di sản."
+      ],
+      "answer": "Sử học quyết định sự tồn tại của tất cả các di sản.",
+      "difficulty": 1
+    },
+    {
+      "question": "Các loại hình di sản văn hóa có ý nghĩa nào sau đây đối với lĩnh vực Sử học?",
+      "options": [
+        "Quyết định nhất đối với sự tồn tại và phát triển của Sử học.",
+        "Quyết định chính sách của Nhà nước đối với khoa học lịch sử.",
+        "Là nguồn tư liệu và cơ sở để nghiên cứu, tái hiện lại lịch sử.",
+        "Là nguồn sử liệu phi chính thống trong nghiên cứu lịch sử."
+      ],
+      "answer": "Là nguồn tư liệu và cơ sở để nghiên cứu, tái hiện lại lịch sử.",
+      "difficulty": 1
+    },
+    {
+      "question": "Nội dung nào sau đây phản ánh đúng vai trò của các loại hình di sản văn hoá đối với nghiên cứu lịch sử?",
+      "options": [
+        "Là nguồn sử liệu duy nhất để tái hiện lại lịch sử.",
+        "Là nguồn sử liệu phi chính thống để tham khảo.",
+        "Là nguồn sử liệu thành văn có giá trị khoa học cao",
+        "Là nguồn sử liệu quan trọng để nghiên cứu lịch sử."
+      ],
+      "answer": "Là nguồn sử liệu quan trọng để nghiên cứu lịch sử.",
+      "difficulty": 1
+    },
+    {
+      "question": "Nội dung nào sau đây là biểu hiện về mối quan hệ giữa Sử học với di sản  văn hóa, di sản thiên nhiên?",
+      "options": [
+        "Sử học quyết định sự tồn tại của tất cả các di sản văn hóa",
+        "Di sản là nguồn sử liệu thành văn cho nghiên cứu lịch sử.",
+        "Nghiên cứu Sử học tạo cơ sở khoa học cho bảo tồn di sản.",
+        "Di sản quyết định trực tiếp sự tồn tại của khoa học lịch sử."
+      ],
+      "answer": "Nghiên cứu Sử học tạo cơ sở khoa học cho bảo tồn di sản.",
+      "difficulty": 1
+    },
+    {
+      "question": "Giá trị lịch sử của di sản được giữ gìn thông qua việc",
+      "options": [
+        "kiểm kê.",
+        "bảo tồn.",
+        "xây dựng.",
+        "làm mới."
+      ],
+      "answer": "bảo tồn.",
+      "difficulty": 1
+    },
+    {
+      "question": "Nội dung nào sao đây không phải là vai trò của Sử học đối với việc bảo tồn, phát huy giá trị di sản văn hóa, di sản thiên nhiên?",
+      "options": [
+        "Sử học nghiên cứu quá trình hình thành, phát triển của di sản.",
+        "Sử học giúp xác định đúng vị trí, vai trò và ý nghĩa của di sản.",
+        "Sử học cung cấp thông tin phục vụ việc bảo tồn, phát huy di sản.",
+        "Sử học trực tiếp quyết định chính sách bảo tồn, phát huy di sản."
+      ],
+      "answer": "Sử học trực tiếp quyết định chính sách bảo tồn, phát huy di sản.",
+      "difficulty": 1
+    },
+    {
+      "question": "Điều cốt lõi trong hoạt động bảo tồn di sản văn hóa là phải đảm bảo tính",
+      "options": [
+        "kế thừa.",
+        "nguyên trạng.",
+        "tái tạo.",
+        "nhân tạo."
+      ],
+      "answer": "nguyên trạng.",
+      "difficulty": 1
+    },
+
+    {
+      "question": "Phát huy giá trị di sản là",
+      "options": [
+        "Giữ nguyên dạng giá trị của di sản như ban đầu.",
+        "Giữ gìn sự tồn tại của di sản theo dạng thức vốn có.",
+        "Sử dụng hiệu quả giá trị của di sản trong đời sống.",
+        "Khắc phục tác động xấu từ bên ngoài lên di sản."
+      ],
+      "answer": "Sử dụng hiệu quả giá trị của di sản trong đời sống.",
+      "difficulty": 1
+    },
+    {
+      "question": "Cơ sở khoa học cho công tác xác định giá trị, bảo tồn và phát huy giá trị đích thực của di sản là kết quả nghiên cứu của",
+      "options": [
+        "Sử học.",
+        "Địa lí.",
+        "Văn học.",
+        "Toán học."
+      ],
+      "answer": "Sử học.",
+      "difficulty": 1
+    },
+    {
+      "question": "Bảo tồn và phát huy giá trị các di sản văn hoá không phải là hoạt động",
+      "options": [
+        "tiến hành xây mới các di tích, hiện đại hoá di tích.",
+        "đảm bảo sự phát triển bền vững của quốc gia, dân tộc.",
+        "đem lại hiệu quả thiết thực phát triển kinh tế, xã hội.",
+        "hình thành ý thức trách nhiệm với cộng đồng, xã hội"
+      ],
+      "answer": "tiến hành xây mới các di tích, hiện đại hoá di tích.",
+      "difficulty": 1
+    },
+    {
+      "question": "Nội dung nào sau đây phản ánh không đúng vai trò của công tác bảo tồn và phát huy giá trị di sản văn hoá, di sản thiên nhiên?",
+      "options": [
+        "Là cách duy nhất để quảng bá lịch sử, văn hóa của đất nước ra bên ngoài.",
+        "Góp phần khắc phục những tác động tiêu cực của tự nhiên đối với di sản.",
+        "Góp phần gìn giữ và lưu truyền di sản văn hoá phi vật thể cho thế hệ sau.",
+        "Giáo dục con người nhớ về cội nguồn và trách nhiệm với tổ tiên, cộng đồng."
+      ],
+      "answer": "Là cách duy nhất để quảng bá lịch sử, văn hóa của đất nước ra bên ngoài.",
+      "difficulty": 1
+    },
+
+    {
+      "question": "Một trong những di sản văn hóa phi vật thể tiêu biểu của Việt Nam là",
+      "options": [
+        "Đàn ca tài tử Nam Bộ.",
+        "Hoàng thành Thăng Long.",
+        "Mộc bản triều Nguyễn.",
+        "phố cổ Hội An."
+      ],
+      "answer": "Đàn ca tài tử Nam Bộ.",
+      "difficulty": 1
+    },
+    {
+      "question": "Bảo tồn và phát huy giá trị các di sản văn hoá là hoạt động",
+      "options": [
+        "tìm kiếm, lưu giữ và bảo vệ các giá trị di sản.",
+        "phát triển và lan toả các giá trị di sản.",
+        "lưu giữ, bảo vệ và lan toả các giá trị của di sản.",
+        "quy hoạch, lưu giữ và bảo vệ các di sản."
+      ],
+      "answer": "lưu giữ, bảo vệ và lan toả các giá trị của di sản.",
+      "difficulty": 1
+    },
+
+    {
+      "question": "Lĩnh vực nào sau đây đóng vai trò quan trọng trực tiếp đối với sự phát triển của ngành công nghiệp văn hóa?",
+      "options": [
+        "Thiên văn học.",
+        "Y học.",
+        "Sử học.",
+        "Địa lí."
+      ],
+      "answer": "Sử học.",
+      "difficulty": 1
+    },
+    {
+      "question": "Các di tích lịch sử - văn hóa của Việt Nam là một thế mạnh để phát triển",
+      "options": [
+        "nông nghiệp bền vững.",
+        "chế biến nông sản.",
+        "du lịch.",
+        "lâm nghiệp."
+      ],
+      "answer": "du lịch.",
+      "difficulty": 1
+    },
+
+    {
+      "question": "Đoạn tư liệu nhấn mạnh vai trò của ngành nào sau đây đối với sự phát triển kinh tế đất nước?",
+      "options": [
+        "Công nghiệp.",
+        "Du lịch.",
+        "Điện ảnh.",
+        "Khai thác."
+      ],
+      "answer": "Du lịch.",
+      "difficulty": 1
+    },
+
+    {
+      "question": "Trong việc phát triển du lịch, yếu tố nào sau đây có vai trò đặc biệt quan trọng?",
+      "options": [
+        "Kết quả hoạt động trong quá khứ của ngành du lịch.",
+        "Hoạt động sản xuất của các nhà máy, xí nghiệp.",
+        "Những giá trị về lịch sử, văn hoá truyền thống.",
+        "Sự đổi mới, xây dựng lại các công trình di sản."
+      ],
+      "answer": "Những giá trị về lịch sử, văn hoá truyền thống.",
+      "difficulty": 1
+    },
+    {
+      "question": "Nội dung nào sao đây không phản ánh đúng vai trò của lịch sử - văn hóa đối với du lịch?",
+      "options": [
+        "Là di sản, tài nguyên quý giá để phát triển du lịch.",
+        "Tạo sức hấp dẫn to lớn để thu hút khách du lịch.",
+        "Giúp con người hưởng thụ giá trị của di sản văn hóa.",
+        "Là yếu tố quyết định duy nhất sự phát triển du lịch."
+      ],
+      "answer": "Là yếu tố quyết định duy nhất sự phát triển du lịch.",
+      "difficulty": 1
+    },
+    {
+      "question": "Sự phát triển của du lịch có ý nghĩa nào sau đây đối với công tác bảo tồn di tích lịch sử - văn hóa?",
+      "options": [
+        "định hướng sự phát triển của Sử học trong tương lai.",
+        "Xác định chức năng, nhiệm vụ của khoa học lịch sử.",
+        "cung cấp bài học kinh nghiệm cho các nhà sử học.",
+        "quảng bá lịch sử, văn hoá cộng đồng ra bên ngoài."
+      ],
+      "answer": "quảng bá lịch sử, văn hoá cộng đồng ra bên ngoài.",
+      "difficulty": 1
+    }
+  ],
+  "k10_chude_3": [
+  {
+    "question": "Lăng ta – giơ Ma – han, Pháo đài Đỏ là những thành tựu tiêu biểu của văn minh Ấn Độ trên lĩnh vực nào sau đây?",
+    "options": ["Văn học", "Y học", "Toán học", "Kiến trúc"],
+    "answer": "Kiến trúc",
+    "difficulty": 1
+  },
+  {
+    "question": "Phát minh ra chữ số tự nhiên và số 0 là thành tựu nổi bật của nền văn minh nào sau đây?",
+    "options": ["Ai Cập.", "Ấn Độ.", "Trung Quốc.", "Lưỡng Hà."],
+    "answer": "Ấn Độ.",
+    "difficulty": 1
+  },
+  {
+    "question": "“Tính được căn bậc 2 và bậc 3, tính được diện tích các hình tiêu biểu” là thành tựu tiêu biểu của văn minh Ấn Độ trên lĩnh vực nào sau đây?",
+    "options": ["Kiến trúc", "Điêu khắc", "Y học", "Toán học"],
+    "answer": "Toán học",
+    "difficulty": 1
+  },
+  {
+    "question": "Ấn Độ là quê hương của những tôn giáo lớn nào sau đây?",
+    "options": [
+      "Phật giáo, Đạo giáo.",
+      "Phật giáo, Hin-đu giáo.",
+      "Thiên Chúa giáo, Hồi giáo.",
+      "Phật giáo, Hồi giáo."
+    ],
+    "answer": "Phật giáo, Hin-đu giáo.",
+    "difficulty": 1
+  },
+  {
+    "question": "Văn hoá truyền thống Ấn Độ có ảnh hưởng rõ nét nhất ở khu vực nào sau đây?",
+    "options": ["Đông Bắc Á.", "Trung Đông.", "Đông Nam Á.", "Tây Á."],
+    "answer": "Đông Nam Á.",
+    "difficulty": 1
+  },
+  {
+    "question": "Cư dân quốc gia cổ đại nào sau đây đã phát minh ra chữ số 0?",
+    "options": ["Ai Cập.", "Trung Quốc.", "Ấn Độ.", "La Mã."],
+    "answer": "Ấn Độ.",
+    "difficulty": 1
+  },
+  {
+    "question": "Thành tựu nào sau đây của Ấn Độ là di sản văn hóa thế giới?",
+    "options": [
+      "Lăng Ta – giơ Ma - han",
+      "Vạn lí trường thành.",
+      "Kim tự tháp.",
+      "Hoàng thành Thăng Long"
+    ],
+    "answer": "Lăng Ta – giơ Ma - han",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây là đặc điểm chung của các nền văn minh Ấn Độ và Trung Hoa thời kì cổ - trung đại?",
+    "options": [
+      "Theo chế độ quân chủ lập hiến",
+      "Hình thành gắn với các dòng sông lớn",
+      "Xây dựng được nhiều kim tự tháp",
+      "Hình thành gắn với các cuộc chiến tranh"
+    ],
+    "answer": "Hình thành gắn với các dòng sông lớn",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những thành tựu của văn minh Ấn Độ và Trung Hoa thời kì cổ - trung đại là",
+    "options": [
+      "sớm sáng tạo ra chữ viết riêng của mình",
+      "kĩ thuật ướp xác và xây dựng kim tự tháp",
+      "xây dựng được chế độ dân chủ cộng hòa",
+      "nơi khởi nguồn và phát triển của Phật giáo"
+    ],
+    "answer": "sớm sáng tạo ra chữ viết riêng của mình",
+    "difficulty": 1
+  },
+  {
+    "question": "Lĩnh vực nào sau đây của nền văn minh Ấn Độ thời kì cổ - trung đại có ảnh hưởng lớn đến Việt Nam?",
+    "options": ["Y học.", "Tư tưởng.", "Kiến trúc.", "Sử học."],
+    "answer": "Tư tưởng.",
+    "difficulty": 1
+  },
+  {
+    "question": "Đến nay, thành tựu thuộc lĩnh vực nào sau đây của cư dân Ấn Độ từ thời cổ đại còn được ứng dụng rộng rãi trong nhiều ngành khoa học?",
+    "options": ["Toán học.", "Kĩ thuật in.", "Văn học.", "Sử học."],
+    "answer": "Toán học.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây không phản ánh đúng điểm tương đồng giữa văn minh Ai Cập cổ đại với văn minh Ấn Độ cổ - trung đại?",
+    "options": [
+      "Là nơi khởi nguồn của nhiều tôn giáo lớn.",
+      "Thành tựu phong phú, đa dạng trên nhiều mặt",
+      "Có nền kinh tế nông nghiệp là chủ đạo.",
+      "Sớm tạo ra chữ viết riêng của dân tộc mình"
+    ],
+    "answer": "Là nơi khởi nguồn của nhiều tôn giáo lớn.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây không phản ánh đúng ý nghĩa của nền văn minh Ấn Độ thời kì cổ - trung đại?",
+    "options": [
+      "Có ảnh hưởng đến văn minh của nhiều quốc gia khác trên thế giới.",
+      "Tạo cơ sở và nền tảng cho sự phát triển của văn hóa Ấn Độ sau này",
+      "Chứng minh sự sáng tạo phi thường của cư dân Ấn Độ cổ trung đại",
+      "Tạo cơ sở cho sự hình thành và phát triển của văn minh Phục Hưng"
+    ],
+    "answer": "Tạo cơ sở cho sự hình thành và phát triển của văn minh Phục Hưng",
+    "difficulty": 1
+  },
+  {
+    "question": "Những thành tựu của nền văn minh Ai Cập cổ đại và văn minh Ấn Độ thời kì cổ - trung đại đều",
+    "options": [
+      "đóng góp cho sự phát triển của văn minh thế giới",
+      "ảnh hưởng sâu rộng đến văn minh Đông Nam Á",
+      "tạo tiền đề cho sự phát triển của văn minh Hi Lạp",
+      "tạo cơ sở thúc đẩy xu thế toàn cầu hóa phát triển"
+    ],
+    "answer": "đóng góp cho sự phát triển của văn minh thế giới",
+    "difficulty": 1
+  },
+  {
+    "question": "Sự hình thành và phát triển của nền văn minh Trung Hoa thời cổ - trung đại gắn liền với con sông nào sau đây?",
+    "options": ["Sông Ấn", "Sông Hoàng Hà", "Sông Nin", "Sông Hằng"],
+    "answer": "Sông Hoàng Hà",
+    "difficulty": 1
+  },
+  {
+    "question": "Nền văn minh Trung Hoa cổ - trung đại được hình thành ở châu lục nào sau đây?",
+    "options": ["Châu Phi", "Châu Á", "Châu Âu", "Châu Mĩ"],
+    "answer": "Châu Á",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những chữ viết cổ do người Trung Quốc sáng tạo ra là",
+    "options": ["chữ Nôm", "chữ Phạn", "chữ Kim văn", "chữ La – tinh"],
+    "answer": "chữ Kim văn",
+    "difficulty": 1
+  },
+  {
+    "question": "Chữ tượng hình của người Trung Hoa khắc trên mai rùa, xương thú được gọi là",
+    "options": ["Chữ Tiểu triện", "Chữ Đại Triện", "Chữ Lệ thư", "Chữ Giáp cốt"],
+    "answer": "Chữ Giáp cốt",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây phản ánh đúng đặc điểm về chữ viết của cư dân Trung Hoa thời kì cổ - trung đại?",
+    "options": [
+      "Tiếp thu sáng tạo thành tựu chữ viết bên ngoài",
+      "Ảnh hưởng đến tất cả các quốc gia trên thế giới",
+      "Tạo nền tảng cho hệ chữ viết La – tinh ngày nay",
+      "Chữ viết nhiều lần được chỉnh lý và phát triển"
+    ],
+    "answer": "Chữ viết nhiều lần được chỉnh lý và phát triển",
+    "difficulty": 1
+  },
+  {
+    "question": "Chữ viết của văn minh Trung Quốc ảnh hưởng sâu sắc đến chữ viết của quốc gia nào sau đây?",
+    "options": ["Ấn Độ", "Ai Cập", "Việt Nam", "Hi Lạp"],
+    "answer": "Việt Nam",
+    "difficulty": 1
+  },
+    {
+    "question": " Toàn bộ những giá trị vật chất và tinh thần do con người sáng tạo ra trong quá trình lịch sử được gọi là",
+    "options": ["văn minh", "văn hóa", "chữ viết", "nhà nước"],
+    "answer": "văn hóa",
+    "difficulty": 1
+  },
+  {
+    "question": " Sự tiến bộ về vật chất và tinh thần của xã hội loài người, trạng thái phát triển cao của văn hóa được gọi là",
+    "options": ["trí tuệ", "văn minh", "xã hội", "đẳng cấp"],
+    "answer": "văn minh",
+    "difficulty": 1
+  },
+  {
+    "question": " Nội dung nào sau đây là yếu tố cơ bản để xác định loài người bước vào thời kì văn minh?",
+    "options": ["Chữ viết, nhà nước.", "Tín ngưỡng, tôn giáo.", "Công cụ bằng đá.", "Nguyên tắc công bằng."],
+    "answer": "Chữ viết, nhà nước.",
+    "difficulty": 2
+  },
+  {
+    "question": " Văn hoá là tổng thể những giá trị vật chất và tinh thần do con người sáng tạo ra",
+    "options": ["trong tiến trình lịch sử.", "sau khi đã có chữ viết.", "sau khi xuất hiện nhà nước", "trong các cuộc chiến tranh."],
+    "answer": "trong tiến trình lịch sử.",
+    "difficulty": 1
+  },
+  {
+    "question": " Nội dung nào sau đây phản ánh đúng điểm tương đồng giữa văn hóa và văn minh?",
+    "options": ["Đều mang đậm bản sắc riêng của tộc người và có tính khép kín", "Đều phản ánh những tiến bộ vượt bậc về khoa học học và kĩ thuật", "Đều là những giá trị vật chất và tinh thần do con người sáng tạo nên", "Đều bắt đầu xuất hiện khi con người biết sử dụng công cụ bằng sắt"],
+    "answer": "Đều là những giá trị vật chất và tinh thần do con người sáng tạo nên",
+    "difficulty": 2
+  },
+  {
+    "question": " Nội dung nào sau đây phản ánh đúng điểm khác biệt của văn minh so với văn hóa?",
+    "options": ["Văn minh ra đời trước văn hóa và hoàn toàn độc lập với văn hóa", "Văn minh chỉ xuất hiện khi con người biết chế tạo công cụ lao động", "Văn minh xuất hiện đồng thời với sự xuất hiện con người trên trái đất", "Văn minh chỉ được sáng tạo trong thời kì phát triển cao của xã hội"],
+    "answer": "Văn minh chỉ được sáng tạo trong thời kì phát triển cao của xã hội",
+    "difficulty": 2
+  },
+  {
+    "question": " Nội dung nào sau đây không phản ánh đúng đặc điểm của văn minh?",
+    "options": ["Có tiêu chuẩn cơ bản để nhận diện là nhà nước", "Ra đời trước văn hóa và tồn tại độc lập với văn hóa", "Ra đời sau văn hóa và có liên hệ chặt chẽ với văn hóa", "Là những giá trị vật chất, tinh thần do con người sáng tạo"],
+    "answer": "Ra đời trước văn hóa và tồn tại độc lập với văn hóa",
+    "difficulty": 3
+  },
+  {
+    "question": " Một trong những nền văn minh tiêu biểu của phương Đông thời kì cổ - trung đại là",
+    "options": ["Hi Lạp", "Rô – ma", "Ấn Độ", "La Mã"],
+    "answer": "Ấn Độ",
+    "difficulty": 1
+  },
+  {
+    "question": " Thành tựu của nền văn minh Ai Cập cổ đại được hình thành và phát triển gắn với con sông nào sau đây?",
+    "options": ["Trường Giang.", "Hoàng Hà.", "Sông Hằng.", "Sông Nin."],
+    "answer": "Sông Nin.",
+    "difficulty": 1
+  },
+  {
+    "question": " Nền văn minh Ai Cập cổ đại được hình thành ở châu lục nào sau đây?",
+    "options": ["Châu Phi", "Châu Á", "Châu Âu", "Châu Mĩ"],
+    "answer": "Châu Phi",
+    "difficulty": 1
+  },
+  {
+    "question": " Cư dân Ai Cập cổ đại đã sớm tạo ra chữ viết riêng của mình, gọi là chữ",
+    "options": ["La – tinh", "Hán Nôm", "tượng hình", "Quốc ngữ"],
+    "answer": "tượng hình",
+    "difficulty": 1
+  },
+  {
+    "question": " Nội dung nào sau đây là nguồn gốc dẫn đến sự xuất hiện sớm của chữ viết ở Ai Cập thời kì cổ đại?",
+    "options": ["Nhu cầu ghi chép và lưu trữ những gì đã diễn ra", "Nhu cầu của sản xuất nông nghiệp đúng thời vụ", "Nhu cầu sáng tác các tác phẩm văn học nghệ thuật", "Nhu cầu đo đạc lại ruộng đất theo định kì hàng năm"],
+    "answer": "Nhu cầu ghi chép và lưu trữ những gì đã diễn ra",
+    "difficulty": 2
+  },
+  {
+    "question": " Sự ra đời của chữ viết Ai Cập thời kì cổ đại có ý nghĩa nào sau đây?",
+    "options": ["Phản ánh trình độ tư duy cao của cư dân Ai Cập.", "Tạo cơ sở cho sự ra đời của chữ La – tinh sau này.", "Tạo cơ sở để cư dân Ai Cập cổ đại hội nhập quốc tế.", "Phản ánh sự phát triển cao độ của nhà nước chuyên chế."],
+    "answer": "Phản ánh trình độ tư duy cao của cư dân Ai Cập.",
+    "difficulty": 2
+  },
+  {
+    "question": " Thành tựu về lĩnh vực nào sau đây của cư dân Ai Cập cổ đại đã được ứng dụng hiệu quả trong việc xây dựng kim tự tháp?",
+    "options": ["Tôn giáo.", "Toán học.", "Tín ngưỡng.", "Chữ viết."],
+    "answer": "Toán học.",
+    "difficulty": 1
+  },
+  {
+    "question": " Những thành tựu về toán học của cư dân Ai Cập cổ đại đã được ứng dụng rộng rãi trong việc",
+    "options": ["sáng tác văn học", "hội nhập quốc tế", "đo đạc ruộng đất", "phân chia đẳng cấp"],
+    "answer": "đo đạc ruộng đất",
+    "difficulty": 1
+  },
+  {
+    "question": " Một trong những nguyên nhân dẫn đến sự ra đời sớm của ngành lịch pháp và thiên văn ở Ai Cập cổ đại là do",
+    "options": ["nhu cầu sản xuất trong nông nghiệp.", "nhu cầu tính toán trong xây dựng", "nhu cầu ghi chép và lưu trữ thông tin.", "nhu cầu hội nhập quốc tế sâu rộng"],
+    "answer": "nhu cầu sản xuất trong nông nghiệp.",
+    "difficulty": 2
+  },
+  {
+    "question": " Yếu tố nào sau đây thúc đẩy sự ra đời sớm của những tri thức toán học ở Ai Cập cổ đại?",
+    "options": ["Nhu cầu sáng tác văn học nghệ thuật", "Nhu cầu tính toán trong xây dựng", "Nhu cầu phát triển sản xuất nông nghiệp", "Nhu cầu phát triển thương nghiệp"],
+    "answer": "Nhu cầu tính toán trong xây dựng",
+    "difficulty": 2
+  },
+  {
+    "question": " Kĩ thuật ướp xác là một trong những thành tựu tiêu biểu của văn minh Ấn Độ trên lĩnh vực nào sau đây?",
+    "options": ["Thiên văn", "Y học", "Văn học", "Kiến trúc"],
+    "answer": "Y học",
+    "difficulty": 1
+  },
+  {
+    "question": " Kim tự tháp là công trình kiến trúc tiêu biểu của nền văn minh cổ đại nào sau đây?",
+    "options": ["La Mã.", "Trung Quốc.", "Hy Lạp.", "Ai Cập."],
+    "answer": "Ai Cập.",
+    "difficulty": 1
+  },
+  {
+    "question": " Đối với thế giới, những thành tựu của nền văn minh Ai Cập cổ đại có ý nghĩa nào sau đây?",
+    "options": ["Thể hiện trí tuệ và sự sáng tạo vĩ đại của cư dân Ai Cập", "Tạo tiền đề cho sự phát triển của văn minh Ai Cập sau này", "Tạo cơ sở cho sự phát triển văn minh nhân loại trên nhiều mặt", "Chứng tỏ sự phát triển rực rỡ và toàn diện của văn minh Ai Cập"],
+    "answer": "Tạo cơ sở cho sự phát triển văn minh nhân loại trên nhiều mặt",
+    "difficulty": 2
+  },
+  {
+    "question": " Nền văn minh Ấn Độ thời kì cổ - trung đại được hình thành ở lưu vực con sông nào sau đây?",
+    "options": ["Sông Hằng", "Sông Nin", "Sông Hoàng Hà", "Sông Trường Giang"],
+    "answer": "Sông Hằng",
+    "difficulty": 1
+  },
+  {
+    "question": " Nền văn minh Ấn Độ cổ - trung đại được hình thành ở châu lục nào sau đây?",
+    "options": ["Châu Phi", "Châu Á", "Châu Âu", "Châu Mĩ"],
+    "answer": "Châu Á",
+    "difficulty": 1
+  },
+  {
+    "question": " Cư dân Ấn Độ đã sớm tạo ra chữ viết riêng của mình, gọi là chữ",
+    "options": ["La – tinh", "Hán", "Phạn", "Nôm"],
+    "answer": "Phạn",
+    "difficulty": 1
+  },
+  {
+    "question": " Chữ viết của Ấn Độ có ảnh hưởng sâu sắc đến chữ viết của nhiều quốc gia ở khu vực",
+    "options": ["Đông Nam Á", "Đông Bắc Á", "Mĩ La – tinh", "Đông Nam Âu"],
+    "answer": "Đông Nam Á",
+    "difficulty": 2
+  },
+  {
+    "question": "Sự ra đời của chữ viết đã tạo cơ sở cho nền văn minh Ấn Độ phát triển rực rỡ trên lĩnh vực nào sau đây?",
+    "options": ["Kiến trúc", "Điêu khắc", "Tín ngưỡng", "Văn học"],
+    "answer": "Văn học",
+    "difficulty": 2
+  },
+  {
+    "question": " Tác phẩm nào sau đây không phải thành tựu văn học của Ấn Độ thời cổ - trung đại?",
+    "options": ["Kinh Vê - đa.", "Tây du kí.", "Ra – ma – y – a - na.", "Ma – ha – bha – ra - ta."],
+    "answer": "Tây du kí.",
+    "difficulty": 2
+  },
+  {
+    "question": " Phật giáo có nguồn gốc từ quốc gia nào sau đây?",
+    "options": ["Mianma.", "Ấn Độ.", "Anh.", "Pháp."],
+    "answer": "Ấn Độ.",
+    "difficulty": 1
+  },
+  {
+    "question": " Tôn giáo nào sau đây không được khởi nguồn từ Ấn Độ?",
+    "options": ["Hồi giáo.", "Phật giáo.", "Hin-đu giáo.", "Bà La Môn giáo."],
+    "answer": "Hồi giáo.",
+    "difficulty": 2
+  },
+  {
+    "question": " Tôn giáo nào sau đây ra đời ở Ấn Độ, do Thích Ca Mâu Ni khởi xướng?",
+    "options": ["Hồi giáo.", "Phật giáo.", "Hin-đu giáo.", "Bà La Môn giáo."],
+    "answer": "Phật giáo.",
+    "difficulty": 1
+  },
+  {
+    "question": " Trong quá trình tồn tại và phát triển, văn minh Ấn Độ đã du nhập tôn giáo nào sau đây từ bên ngoài?",
+    "options": ["Hồi giáo.", "Phật giáo.", "Hin-đu giáo.", "Bà La Môn giáo."],
+    "answer": "Hồi giáo.",
+    "difficulty": 2
+  }
+],
+"k10_chude_4":[
+  {
+    "question": " Cuộc cách mạng công nghiệp lần thứ nhất diễn ra vào giữa thế kỉ XVIII, khởi đầu ở nước",
+    "options": ["Anh.", "Mĩ.", "Đức.", "Pháp."],
+    "answer": "Anh.",
+    "difficulty": 1
+  },
+  {
+    "question": " Cuộc cách mạng công nghiệp lần thứ nhất chủ yếu diễn ra ở khu vực nào sau đây?",
+    "options": ["Châu Á và châu Âu", "Châu Âu và Bắc Mĩ", "Châu Á và châu Phi", "Châu Phi và Mĩ Latinh"],
+    "answer": "Châu Âu và Bắc Mĩ",
+    "difficulty": 1
+  },
+  {
+    "question": " Một trong những thành tựu tiêu biểu của cuộc cách mạng công nghiệp lần thứ nhất là việc phát minh ra",
+    "options": ["máy bay", "ô tô", "máy hơi nước", "máy tính"],
+    "answer": "máy hơi nước",
+    "difficulty": 1
+  },
+  {
+    "question": " Việc phát minh ra máy hơi nước cuối thế kỉ XVII đã",
+    "options": ["thúc đẩy sự phát triển của ngành giao thông vận tải.", "khiến máy móc thay thế hoàn toàn lao động tay chân.", "thúc đẩy tự động hóa trong quá trình sản xuất vật chất.", "tạo tiền đề cho sự ra đời của ngành công nghệ thông tin."],
+    "answer": "thúc đẩy sự phát triển của ngành giao thông vận tải.",
+    "difficulty": 2
+  },
+  {
+    "question": " Cuối thế kỉ XVIII, phát minh nào sau đây đã khởi đầu quá trình công nghiệp hóa ở nước Anh?",
+    "options": ["Máy tính điện tử", "Trí tuệ nhân tạo", "Máy hơi nước", "Động cơ điện"],
+    "answer": "Máy hơi nước",
+    "difficulty": 1
+  },
+  {
+    "question": " Nội dung nào sau đây phản ánh thành tựu của cuộc cách mạng công nghiệp lần thứ nhất trong lĩnh vực giao thông vận tải?",
+    "options": ["Xuất hiện lò luyện quặng theo phương pháp mới", "Sự ra đời và hoàn thiện của động cơ đốt trong", "Sự phát triển mạnh của ô tô và ngành hàng không", "Sự xuất hiện của tàu thủy chạy bằng hơi nước"],
+    "answer": "Sự xuất hiện của tàu thủy chạy bằng hơi nước",
+    "difficulty": 1
+  },
+  {
+    "question": ": Sự ra đời của máy hơi nước cuối thế kỉ XVIII gắn liền với công lao to lớn của",
+    "options": ["Giêm Oát", "Giôn Ba – bơ", "Xti – phen – xơn", "Các – ben"],
+    "answer": "Giêm Oát",
+    "difficulty": 2
+  },
+  {
+    "question": " Nội dung nào sau đây phản ánh thành tựu của cuộc cách mạng công nghiệp lần thứ nhất trong lĩnh vực luyện kim?",
+    "options": ["Xuất hiện lò luyện quặng theo phương pháp mới", "Sự ra đời và hoàn thiện của động cơ hơi nước", "Sự phát triển mạnh của ô tô và ngành hàng không", "Sự xuất hiện của chiếc đầu máy xe lửa đầu tiên"],
+    "answer": "Xuất hiện lò luyện quặng theo phương pháp mới",
+    "difficulty": 2
+  },
+  {
+    "question": " Trong cuộc cách mạng công nghiệp lần thứ nhất, phát minh kĩ thuật nào sau đây đã tạo ra bước chuyển căn bản trong nền sản xuất tư bản chủ nghĩa?",
+    "options": ["Động cơ đốt trong.", "Máy điện tín", "Máy tính điện tử.", "Máy hơi nước."],
+    "answer": "Máy hơi nước.",
+    "difficulty": 2
+  },
+  {
+    "question": " Trong cuộc cách mạng công nghiệp lần thứ nhất, Rô-bớt Phơn-tơn đã chế tạo thành công",
+    "options": ["máy tính điện tử.", "tàu thủy chạy bằng hơi nước.", "hệ thống máy tự động.", "động cơ điện xoay chiều"],
+    "answer": "tàu thủy chạy bằng hơi nước.",
+    "difficulty": 2
+  },
+  {
+    "question": " Cuộc cách mạng công nghiệp lần thứ nhất diễn ra ở châu Âu và Bắc Mỹ là quá trình",
+    "options": ["công nghiệp hóa, hiện đại hóa các nước tư bản châu Âu.", "hình thành hai giai cấp cơ bản là tư sản và công nhân.", "cơ khí hóa nền sản xuất thay thế cho lao động thủ công.", "hình thành nền tảng kinh tế của của chủ nghĩa tư bản."],
+    "answer": "cơ khí hóa nền sản xuất thay thế cho lao động thủ công.",
+    "difficulty": 2
+  },
+  {
+    "question": "Trong cuộc cách mạng công nghiệp lần thứ nhất, Xti-phen-xơn đã chế tạo thành công",
+    "options": ["đầu máy xe lửa.", "động cơ hơi nước.", "máy tính điện tử.", "bóng đèn điện."],
+    "answer": "đầu máy xe lửa.",
+    "difficulty": 1
+  },
+  {
+    "question": " Động cơ đốt trong được phát minh trong cuộc cách mạng công nghiệp lần thứ nhất có ý nghĩa",
+    "options": ["thúc đẩy cơ giới hoá sản xuất.", "khởi đầu quá trình công nghiệp hoá.", "giúp liên lạc ngày càng thuận tiện.", "mở đầu thời kì sản xuất hàng loạt."],
+    "answer": "thúc đẩy cơ giới hoá sản xuất.",
+    "difficulty": 2
+  },
+  {
+    "question": " Việc phát minh ra lò luyện quặng theo phương pháp mới trong cuộc cách mạng công nghiệp lần thứ nhất đã mang lại tác dụng nào sau đây?",
+    "options": ["Thúc đẩy việc ứng dụng điện vào cuộc sống.", "Thúc đẩy sự phát triển của ngành cơ khí chế tạo", "Dẫn đến sự ra đời và phát triển của động cơ học.", "Đẩy mạnh quá trình công nghiệp hóa đất nước."],
+    "answer": "Thúc đẩy sự phát triển của ngành cơ khí chế tạo",
+    "difficulty": 2
+  },
+  {
+    "question": " Đặc trưng cơ bản của cuộc cách mạng công nghiệp cuối thế kỉ XVIII – đầu thế kỉ XIX là",
+    "options": ["ứng dụng điện tử và công nghệ thông tin để tự động hóa sản xuất.", "sử dụng điện năng với sự ra đời của dây chuyền sản xuất hàng loạt.", "sử dụng năng lượng hơi nước và cơ giới hóa quá trình sản xuất.", "quy trình sản xuất được tối ưu hóa trên nền tảng công nghệ số."],
+    "answer": "sử dụng năng lượng hơi nước và cơ giới hóa quá trình sản xuất.",
+    "difficulty": 2
+  },
+  {
+    "question": " Nhận xét nào sau đây là đúng về cuộc cách mạng công nghiệp lần thứ nhất từ nửa sau thế kỉ XVIII?",
+    "options": ["Đánh dấu bước chuyển của nhân loại từ văn minh nông nghiệp sang văn minh công nghiệp", "Những phát minh về khoa học đã tạo tiền đề trực tiếp dẫn đến những phát minh về kĩ thuật", "Sự xuất hiện của sản xuất hàng loạt theo dây chuyền và tiêu chuẩn hóa các loại hàng hóa", "Tự động hóa cao độ trong sản xuất hàng hóa bằng cách sử dụng rộng rãi máy tính điện tử"],
+    "answer": "Đánh dấu bước chuyển của nhân loại từ văn minh nông nghiệp sang văn minh công nghiệp",
+    "difficulty": 2
+  },
+  {
+    "question": " Cuộc cách mạng công nghiệp lần thứ hai được khởi đầu ở một trong những quốc gia nào sau đây?",
+    "options": ["Trung Quốc", "Nhật Bản", "Đức", "Ấn Độ"],
+    "answer": "Đức",
+    "difficulty": 1
+  },
+  {
+    "question": " Cuộc cách mạng công nghiệp lần thứ hai được tiến hành trong khoảng thời gian nào sau đây?",
+    "options": ["Cuối thế kỉ XX đầu thế kỉ XXI", "Cuối thế kỉ XIX đầu thế kỉ XX", "Cuối thế kỉ XVII đầu thế kỉ XVIII", "Cuối thế kỉ XVIII đầu thế kỉ XIX"],
+    "answer": "Cuối thế kỉ XIX đầu thế kỉ XX",
+    "difficulty": 1
+  },
+  {
+    "question": " Quốc gia nào sau đây ở châu Âu đã khởi đầu cuộc cách mạng công nghiệp lần thứ hai?",
+    "options": ["Mĩ", "Pháp", "Nhật Bản", "Trung Quốc"],
+    "answer": "Pháp",
+    "difficulty": 2
+  },
+  {
+    "question": " Cuộc cách mạng công nghiệp lần thứ hai đã sử dụng rộng rãi nhiều nguồn năng lượng vào sản xuất công nghiệp, ngoại trừ",
+    "options": ["than đá.", "điện.", "hạt nhân.", "dầu mỏ."],
+    "answer": "hạt nhân.",
+    "difficulty": 1
+  },
+  {
+    "question": " Một trong những thành tựu tiêu biểu của cuộc cách mạng công nghiệp lần thứ hai là việc phát minh ra",
+    "options": ["máy điện tín", "thiết bị điện tử", "máy hơi nước", "máy tính"],
+    "answer": "máy điện tín",
+    "difficulty": 2
+  },
+  {
+    "question": " Nội dung nào sau đây phản ánh thành tựu của cuộc cách mạng công nghiệp lần thứ hai trong lĩnh vực giao thông vận tải?",
+    "options": ["Xuất hiện lò luyện quặng theo phương pháp mới", "Sự ra đời và hoàn thiện của sản xuất dây chuyền", "Sự phát triển mạnh của ô tô và ngành hàng không", "Sự xuất hiện của tàu thủy chạy bằng hơi nước"],
+    "answer": "Sự phát triển mạnh của ô tô và ngành hàng không",
+    "difficulty": 1
+  },
+  {
+    "question": " Việc phát minh ra phương pháp sử dụng lò cao trong luyện kim của cuộc cách mạng công nghiệp lần thứ hai đã mang lại tác dụng nào sau đây?",
+    "options": ["thúc đẩy việc ứng dụng điện vào cuộc sống.", "thúc đẩy sản lượng thép thế giới tăng nhanh", "dẫn đến sự ra đời và phát triển của động cơ học.", "đẩy mạnh quá trình công nghiệp hóa đất nước."],
+    "answer": "thúc đẩy sản lượng thép thế giới tăng nhanh",
+    "difficulty": 2
+  },
+  {
+    "question": " Trong cuộc cách mạng công nghiệp lần thứ hai, Thô – mát Ê – đi - xơn đã phát minh ra",
+    "options": ["bóng đèn điện.", "động cơ hơi nước.", "máy tính điện tử.", "linh kiện bán dẫn."],
+    "answer": "bóng đèn điện.",
+    "difficulty": 1
+  },
+  {
+    "question": " Những phát minh về điện trong cuộc cách mạng công nghiệp lần thứ hai đã",
+    "options": ["tạo cơ sở trực tiếp cho sự ra đời của công nghiệp chế tạo ô tô và máy bay", "mở ra khả năng ứng dụng nguồn năng lượng mới vào cuộc sống và sản xuất", "thúc đẩy mạnh mẽ quá trình khu vực hóa và toàn cầu hóa nền kinh tế thế giới", "đưa nhân loại bước sang một nền văn minh mới: văn minh hậu công nghiệp"],
+    "answer": "mở ra khả năng ứng dụng nguồn năng lượng mới vào cuộc sống và sản xuất",
+    "difficulty": 2
+  },
+  {
+    "question": " Thành tựu nào sau đây đã được ra đời từ cuộc cách mạng công nghiệp lần thứ nhất và tiếp tục được cải tiến, ứng dụng rộng rãi trong cuộc cách mạng công nghiệp lần thứ hai?",
+    "options": ["máy hơi nước", "động cơ đốt trong", "máy tính điện tử", "thiết bị điện tử"],
+    "answer": "máy hơi nước",
+    "difficulty": 2
+  },
+  {
+    "question": " Nội dung nào sau đây là điểm khác biệt của cuộc cách mạng công nghiệp lần thứ hai so với cuộc cách mạng công nghiệp lần thứ nhất?",
+    "options": ["Các phát minh máy móc đều dựa trên sự cải tiến công cụ sẵn có", "Tự động hóa cao độ bằng cách sử dụng rộng rãi máy tính điện tử", "Những phát minh khoa học là cơ sở cho những phát minh kĩ thuật", "Mở rộng cao độ phạm vi, khả năng khám phá, chinh phục vũ trụ"],
+    "answer": "Những phát minh khoa học là cơ sở cho những phát minh kĩ thuật",
+    "difficulty": 3
+  },
+  {
+    "question": " Trong cuộc cách mạng công nghiệp lần thứ hai, phát minh nào sau đây đã đánh dấu sự ra đời của ngành hàng không thế giới?",
+    "options": ["Ô tô", "Động cơ điện", "Máy điện tín", "Máy bay"],
+    "answer": "Máy bay",
+    "difficulty": 1
+  },
+  {
+    "question": " Trong cuộc cách mạng công nghiệp lần thứ hai, phát minh nào sau đây giúp cho việc liên lạc ngày càng trở nên thuận tiện hơn?",
+    "options": ["Động cơ đốt trong", "Động cơ điện", "Máy điện tín", "Máy hơi nước"],
+    "answer": "Máy điện tín",
+    "difficulty": 1
+  },
+  {
+    "question": " Nhận xét nào sau đây là đúng về cuộc cách mạng công nghiệp lần thứ hai từ nửa sau thế kỉ XIX?",
+    "options": ["Đánh dấu bước chuyển từ nền sản xuất thủ công, manh mún sang nền sản xuất cơ khí hóa", "Thời gian từ phát minh khoa học đến ứng dụng vào trong sản xuất ngày càng được rút ngắn", "Sự xuất hiện của sản xuất hàng loạt theo dây chuyền và tiêu chuẩn hóa các loại hàng hóa", "Tự động hóa cao độ trong sản xuất hàng hóa bằng cách sử dụng rộng rãi máy tính điện tử"],
+    "answer": "Thời gian từ phát minh khoa học đến ứng dụng vào trong sản xuất ngày càng được rút ngắn",
+    "difficulty": 2
+  },
+  {
+    "question": " Các cuộc cách mạng công nghiệp thời kì cận đại không có ý nghĩa nào sau đây?",
+    "options": ["Thúc đầy nền kinh tế phát triển mạnh", "Hình thành các trung tâm công nghiệp.", "Dẫn đến sự ra đời của giai cấp tư sản", "Thúc đẩy quá trình liên kết khu vực"],
+    "answer": "Thúc đẩy quá trình liên kết khu vực",
+    "difficulty": 2
+  },
+  {
+    "question": " Nội dung nào sau đây không phản ánh đúng ý nghĩa của các cuộc cách mạng công nghiệp thời kì cận đại?",
+    "options": ["Thúc đẩy sự phát triển của lực lượng sản xuất.", "Nhiều trung tâm công nghiệp mới hình thành.", "Thúc đẩy chuyển biến mạnh mẽ trong nông nghiệp.", "Giải quyết triệt để mâu thuẫn trong xã hội tư bản."],
+    "answer": "Giải quyết triệt để mâu thuẫn trong xã hội tư bản.",
+    "difficulty": 3
+  },
+  {
+    "question": " Cách mạng công nghiệp thời kì cận đại đã dẫn đến sự hình thành hai giai cấp",
+    "options": ["tư sản và vô sản.", "tư sản và tiểu tư sản.", "nông dân và công nhân.", "nông dân và địa chủ"],
+    "answer": "tư sản và vô sản.",
+    "difficulty": 1
+  },
+  {
+    "question": " Một trong những ý nghĩa của các cuộc cách mạng công nghiệp thời kì cận đại đối với kinh tế là",
+    "options": ["thúc đẩy sự tăng trưởng của công nghiệp.", "hình thành hai giai cấp tư sản và vô sản.", "hình thành lối sống, tác phong công nghiệp.", "thúc đẩy giao lưu, kết nối văn hoá toàn cầu."],
+    "answer": "thúc đẩy sự tăng trưởng của công nghiệp.",
+    "difficulty": 1
+  },
+  {
+    "question": " Nội dung nào sau đây không phản ánh đúng hệ quả của các cuộc cách mạng công nghiệp thời kì cận đại?",
+    "options": ["Hình thành hai giai cấp cơ bản trong xã hội tư bản là tư sản và vô sản.", "Góp phần thúc đẩy sự phát triển của nông nghiệp và giao thông vận tải.", "Nâng cao năng suất lao động và làm thay đổi bộ mặt các nước tư bản.", "Làm tiền đề dẫn đến sự bùng nổ các cuộc cách mạng tư sản ở châu Âu."],
+    "answer": "Làm tiền đề dẫn đến sự bùng nổ các cuộc cách mạng tư sản ở châu Âu.",
+    "difficulty": 3
+  },
+  {
+    "question": " Nội dung nào sau đây phản ánh đúng ý nghĩa của các cuộc cách mạng công nghiệp thời kì cận đại về mặt văn hóa?",
+    "options": ["Dẫn đến sự hình thành các lực lượng xã hội mới.", "Thúc đẩy sự giao lưu và kết nối văn hoá toàn cầu.", "Tạo động lực cho sự tăng trưởng của công nghiệp.", "Tạo ra sự dịch chuyển trong tỉ lệ cư dân thành thị"],
+    "answer": "Thúc đẩy sự giao lưu và kết nối văn hoá toàn cầu.",
+    "difficulty": 2
+  }
+],
+"k10_chude_5": [
+  {
+    "question": "Từ thế kỉ VII đến cuối thế kỉ XV là giai đoạn văn minh Đông Nam Á",
+    "options": ["bước đầu hình thành.", "bước đầu phát triển.", "phát triển rực rỡ.", "tiếp tục phát triển."],
+    "answer": "phát triển rực rỡ.",
+    "difficulty": 1
+  },
+  {
+    "question": "Văn minh phương Tây bắt đầu ảnh hưởng đến Đông Nam Á trong giai đoạn",
+    "options": ["đầu Công nguyên đến thế kỉ VII.", "thế kỉ VII đến thế kỉ XV.", "thế kỉ XVI đến thế kỉ XIX.", "thế kỉ XIX đến nay."],
+    "answer": "thế kỉ XVI đến thế kỉ XIX.",
+    "difficulty": 1
+  },
+  {
+    "question": "Trong khoảng thời gian từ đầu Công nguyên đến thế kỉ VII, thành tựu nổi bật nhất của văn minh Đông Nam Á là",
+    "options": [
+      "sự ra đời và bước đầu phát triển của các nhà nước.",
+      "hình thành các quốc gia thống nhất và lớn mạnh.",
+      "các quốc gia phát triển đến thời kì cực thịnh.",
+      "các quốc gia có nhiều chuyển biến mới về văn hoá."
+    ],
+    "answer": "sự ra đời và bước đầu phát triển của các nhà nước.",
+    "difficulty": 2
+  },
+  {
+    "question": "Một trong những yếu tố tác động đến sự khủng hoảng và suy vong của nhiều quốc gia phong kiến Đông Nam Á từ thế kỉ XVI đến thế kỉ XIX là",
+    "options": [
+      "sự du nhập của Thiên Chúa giáo.",
+      "sự xâm nhập của các nước phương Tây.",
+      "sự xâm nhập và lan tỏa của Hồi giáo.",
+      "sự bành trướng và xâm lược của Trung Hoa."
+    ],
+    "answer": "sự xâm nhập của các nước phương Tây.",
+    "difficulty": 1
+  },
+  {
+    "question": "Từ đầu Công nguyên đến thế kỉ VII, quốc gia cổ đại nào sau đây đã được hình thành trên lãnh thổ Việt Nam ngày nay?",
+    "options": ["Chao – Phray – a .", "Ta – ru – ma .", "Phù Nam.", "Ma – lay – u"],
+    "answer": "Phù Nam.",
+    "difficulty": 1
+  },
+
+  {
+    "question": "Văn minh Đông Nam Á giai đoạn đầu Công nguyên đến đến thế kỉ VII có điểm tương đồng nào sau đây so với văn minh Đông Nam Á giai đoạn thế kỉ VII đến thế kỉ XV?",
+    "options": [
+      "Có sự xâm nhập và lan tỏa của Hồi giáo",
+      "Có sự xâm nhập và lan tỏa của Thiên chúa giáo",
+      "Chịu ảnh hưởng sâu sắc của văn minh Ấn Độ",
+      "Chịu ảnh hưởng sâu sắc của văn minh phương Tây"
+    ],
+    "answer": "Chịu ảnh hưởng sâu sắc của văn minh Ấn Độ",
+    "difficulty": 2
+  },
+
+  {
+    "question": "Văn minh Đông Nam Á từ thế kỉ XVI đến thế kỉ XIX có điểm khác biệt nào sau đây so với văn minh Đông Nam Á giai đoạn thế kỉ VII đến thế kỉ XV?",
+    "options": [
+      "Bắt đầu hình thành các quốc gia phong kiến lớn mạnh.",
+      "Có sự du nhập của yếu tố văn hóa đến từ phương Tây",
+      "Chịu ảnh hưởng sâu sắc của văn minh Trung Hoa",
+      "Nền văn minh bước vào giai đoạn phát triển cực thịnh"
+    ],
+    "answer": "Có sự du nhập của yếu tố văn hóa đến từ phương Tây",
+    "difficulty": 2
+  },
+
+  {
+    "question": "Một trong những đặc điểm nổi bật của văn minh Đông Nam Á từ thế kỉ VII đến thế kỉ XV là",
+    "options": [
+      "Ảnh hưởng của văn minh Ấn Độ đối với khu vực chưa thể hiện rõ nét",
+      "Văn minh phương Tây bắt đầu ảnh hưởng trên một số lĩnh vực",
+      "tiếp thu có chọn lọc thành tựu của văn minh Ấn Độ và Trung Hoa",
+      "sự suy yếu về chính trị và văn hóa của các quốc gia phong kiến."
+    ],
+    "answer": "tiếp thu có chọn lọc thành tựu của văn minh Ấn Độ và Trung Hoa",
+    "difficulty": 2
+  },
+
+  {
+    "question": "Sự ra đời của thánh lễ Thiên chúa giáo đầu tiên ở Phi – lip – pin năm 1521 là biểu hiện của sự du nhập yếu tố văn hóa nào sau đây đến từ phương Tây?",
+    "options": ["Tôn giáo", "Chữ viết", "Văn học", "Nghệ thuật"],
+    "answer": "Tôn giáo",
+    "difficulty": 1
+  },
+
+  {
+    "question": "Nguyên nhân chủ yếu dẫn đến sự phát triển rực rỡ của văn hóa Đông Nam Á từ thế kỉ X – XV là",
+    "options": [
+      "ảnh hưởng mạnh mẽ của văn minh Ấn Độ",
+      "sự tiếp thu có chọn lọc văn minh Trung Hoa",
+      "quá trình sáp nhập và hợp nhất các tiểu quốc",
+      "sự phát triển về kinh tế và ổn định chính trị"
+    ],
+    "answer": "sự phát triển về kinh tế và ổn định chính trị",
+    "difficulty": 2
+  },
+  {
+    "question": "“Cư dân Đông Nam Á thờ thần Lúa để bảo trợ cho sản xuất nông nghiệp”. Thông tin trên phản ánh tín ngưỡng nào sau đây của cư dân Đông Nam Á?",
+    "options": [
+      "Tín ngưỡng thờ cúng tổ tiên",
+      "Tín ngưỡng phồn thực",
+      "Tín ngưỡng tờ thần tự nhiên",
+      "Tín ngưỡng thờ thần động vật"
+    ],
+    "answer": "Tín ngưỡng tờ thần tự nhiên",
+    "difficulty": 2
+  },
+  {
+    "question": "“Dù ai đi ngược về xuôi\n\nNhớ ngày giỗ tổ mùng mười tháng ba”\n\nNgày giổ tổ Hùng Vương của Việt Nam hàng năm là một biểu hiện của hình thức thức tín ngưỡng nào sau đây?",
+    "options": [
+      "Thờ thần động vật.",
+      "Thờ thần tự nhiên.",
+      "Thờ cúng tổ tiên.",
+      "Tín ngưỡng phồn thực."
+    ],
+    "answer": "Thờ cúng tổ tiên.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây phản ánh đúng đặc điểm của các hình thức tín ngưỡng bản địa của cư dân Đông Nam Á ?",
+    "options": [
+      "Xuất hiện trước các tôn giáo và được bảo tồn trong quá trình phát triển",
+      "Tồn tại độc lập với các tôn giáo từ bên ngoài du nhập và có sự thống nhất",
+      "Các tín ngưỡng đa dạng nhưng không có sự tương đồng giữa các quốc gia",
+      "Xuất phát từ đặc thù kinh tế nông nghiệp và có sự thống nhất trong đa dạng."
+    ],
+    "answer": "Xuất phát từ đặc thù kinh tế nông nghiệp và có sự thống nhất trong đa dạng.",
+    "difficulty": 2
+  },
+  {
+    "question": "“Cư dân Đông Nam Á thờ các con vật gần gũi với cuộc sống của xã hội nông nghiệp như trâu, cóc, chim, rắn…”. Thông tin trên phản ánh tín ngưỡng nào sau đây của cư dân Đông Nam Á?",
+    "options": [
+      "Tín ngưỡng thờ cúng tổ tiên",
+      "Tín ngưỡng phồn thực",
+      "Tín ngưỡng tờ thần tự nhiên",
+      "Tín ngưỡng thờ thần động vật"
+    ],
+    "answer": "Tín ngưỡng thờ thần động vật",
+    "difficulty": 1
+  },
+  {
+    "question": "Tôn giáo nào sau đây có nguồn gốc từ Ấn Độ và được truyền bá mạnh mẽ vào khu vực Đông Nam Á?",
+    "options": ["Phật giáo", "Đạo giáo", "Hồi giáo", "Thiên chúa giáo"],
+    "answer": "Phật giáo",
+    "difficulty": 1
+  },
+  {
+    "question": "Từ thế kỉ XVI, thông qua hoạt động của các gião sĩ phương Tây, tôn giáo nào sau đây đã từng bước được du nhập vào Đông Nam Á ?",
+    "options": ["Phật giáo", "Đạo giáo", "Hồi giáo", "Thiên chúa giáo"],
+    "answer": "Thiên chúa giáo",
+    "difficulty": 1
+  },
+  {
+    "question": "Từ khoảng thế kỉ XIII, tôn giáo nào theo chân các thương nhân A-rập và Ấn Độ du nhập vào Đông Nam Á?",
+    "options": ["Ấn Độ giáo.", "Thiên Chúa giáo.", "Phật giáo.", "Hồi giáo."],
+    "answer": "Hồi giáo.",
+    "difficulty": 1
+  },
+  {
+    "question": "Những tôn giáo nào sau đây có nguồn gốc từ Ấn Độ và được truyền bá mạnh mẽ vào khu vực Đông Nam Á?",
+    "options": [
+      "Phật giáo, Hin-đu giáo.",
+      "Phật giáo, Hồi giáo",
+      "Hồi giáo, Hin-đu giáo.",
+      "Hin-đu giáo, Công giáo."
+    ],
+    "answer": "Phật giáo, Hin-đu giáo.",
+    "difficulty": 2
+  },
+  {
+    "question": "Ở khu vực Đông Nam Á, quốc gia nào sau đây chịu ảnh hưởng sâu sắc nhất của văn minh Trung Hoa?",
+    "options": ["Việt Nam.", "Thái Lan.", "Ma-lai-xi-a.", "Mi-an-ma."],
+    "answer": "Việt Nam.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây phản ánh đúng đặc điểm của các tôn giáo ở khu vực Đông Nam Á thời kì cổ - trung đại?",
+    "options": [
+      "Các tôn giáo đều được du nhập trước khi tín ngưỡng bản địa hình thành.",
+      "Các tôn giáo đa dạng nhưng cùng tồn tại và phát triển một cách hòa hợp.",
+      "Hồi giáo được du nhập đầu tiên vào Đông Nam Á và nhanh chóng phát triển.",
+      "Quá trình du nhập của các tôn giáo không thông qua hoạt động thương mại."
+    ],
+    "answer": "Các tôn giáo đa dạng nhưng cùng tồn tại và phát triển một cách hòa hợp.",
+    "difficulty": 2
+  },
+
+  {
+    "question": "Trên cơ sở tiếp thu một phần chữ Hán của Trung Quốc, người Việt đã sáng tạo ra chữ viết riêng của mình, có tên gọi là",
+    "options": ["chữ Chăm cổ.", "chữ Nôm.", "Chữ Khơ-me cổ.", "chữ Mã Lai cổ."],
+    "answer": "chữ Nôm.",
+    "difficulty": 1
+  },
+  {
+    "question": "Người Chăm, người Khơ – me, người Thái… ở khu vực Đông Nam Á đã sáng tạo ra chữ viết riêng của mình trên cơ sở tiếp thu chữ viết cổ của quốc gia nào sau đây ?",
+    "options": ["Nhật Bản", "Ai Cập", "Ấn Độ", "Trung Quốc"],
+    "answer": "Ấn Độ",
+    "difficulty": 1
+  },
+  {
+    "question": "Người Việt đã sáng tạo ra chữ Nôm trên cơ sở tiếp thu chữ Hán của quốc gia nào sau đây ?",
+    "options": ["Nhật Bản", "Ai Cập", "Ấn Độ", "Trung Quốc"],
+    "answer": "Trung Quốc",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây phản ánh đúng đặc điểm về chữ viết ở khu vực Đông Nam Á thời kì cổ - trung đại?",
+    "options": [
+      "Chịu ảnh hưởng của chữ viết từ bên ngoài",
+      "Ra đời sớm, trước khi xuất hiện Nhà nước",
+      "Có sự đa dạng nhưng thiếu tính thống nhất",
+      "Ra đời cùng quá trình du nhập tôn giáo"
+    ],
+    "answer": "Chịu ảnh hưởng của chữ viết từ bên ngoài",
+    "difficulty": 2
+  },
+  {
+    "question": "Nội dung nào sau đây phản ánh đúng ý nghĩa của việc cư dân Đông Nam Á sáng tạo ra chữ viết riêng của mình từ thời kì cổ - trung đại?",
+    "options": [
+      "Tạo điều kiện cho sự ra đời của Nhà nước và các quốc gia thống nhất.",
+      "Thể hiện tinh thần tự chủ, không vay mượn yếu tố văn hóa bên ngoài.",
+      "Tạo điều kiện cho sự phát triển rực rỡ của nền văn học dân tộc.",
+      "Tạo tiền đề trực tiếp cho sự phát triển kinh tế, khoa học kĩ thuật."
+    ],
+    "answer": "Tạo điều kiện cho sự phát triển rực rỡ của nền văn học dân tộc.",
+    "difficulty": 2
+  }
+],
+"k10_chude_6": [
+  {
+    "question": "Từ thế kỉ VII đến cuối thế kỉ XV là giai đoạn văn minh Đông Nam Á",
+    "options": ["bước đầu hình thành.", "bước đầu phát triển.", "phát triển rực rỡ.", "tiếp tục phát triển."],
+    "answer": "phát triển rực rỡ.",
+    "difficulty": 1
+  },
+  {
+    "question": "Văn minh phương Tây bắt đầu ảnh hưởng đến Đông Nam Á trong giai đoạn",
+    "options": ["đầu Công nguyên đến thế kỉ VII.", "thế kỉ VII đến thế kỉ XV.", "thế kỉ XVI đến thế kỉ XIX.", "thế kỉ XIX đến nay."],
+    "answer": "thế kỉ XVI đến thế kỉ XIX.",
+    "difficulty": 1
+  },
+  {
+    "question": "Trong khoảng thời gian từ đầu Công nguyên đến thế kỉ VII, thành tựu nổi bật nhất của văn minh Đông Nam Á là",
+    "options": [
+      "sự ra đời và bước đầu phát triển của các nhà nước.",
+      "hình thành các quốc gia thống nhất và lớn mạnh.",
+      "các quốc gia phát triển đến thời kì cực thịnh.",
+      "các quốc gia có nhiều chuyển biến mới về văn hoá."
+    ],
+    "answer": "sự ra đời và bước đầu phát triển của các nhà nước.",
+    "difficulty": 2
+  },
+  {
+    "question": "Một trong những yếu tố tác động đến sự khủng hoảng và suy vong của nhiều quốc gia phong kiến Đông Nam Á từ thế kỉ XVI đến thế kỉ XIX là",
+    "options": [
+      "sự du nhập của Thiên Chúa giáo.",
+      "sự xâm nhập của các nước phương Tây.",
+      "sự xâm nhập và lan tỏa của Hồi giáo.",
+      "sự bành trướng và xâm lược của Trung Hoa."
+    ],
+    "answer": "sự xâm nhập của các nước phương Tây.",
+    "difficulty": 1
+  },
+  {
+    "question": "Từ đầu Công nguyên đến thế kỉ VII, quốc gia cổ đại nào sau đây đã được hình thành trên lãnh thổ Việt Nam ngày nay?",
+    "options": ["Chao – Phray – a .", "Ta – ru – ma .", "Phù Nam.", "Ma – lay – u"],
+    "answer": "Phù Nam.",
+    "difficulty": 1
+  },
+
+  {
+    "question": "“Cư dân Đông Nam Á thờ thần Lúa để bảo trợ cho sản xuất nông nghiệp”. Thông tin trên phản ánh tín ngưỡng nào sau đây của cư dân Đông Nam Á?",
+    "options": [
+      "Tín ngưỡng thờ cúng tổ tiên",
+      "Tín ngưỡng phồn thực",
+      "Tín ngưỡng tờ thần tự nhiên",
+      "Tín ngưỡng thờ thần động vật"
+    ],
+    "answer": "Tín ngưỡng tờ thần tự nhiên",
+    "difficulty": 2
+  },
+  {
+    "question": "“Dù ai đi ngược về xuôi\n\nNhớ ngày giỗ tổ mùng mười tháng ba”\n\nNgày giổ tổ Hùng Vương của Việt Nam hàng năm là một biểu hiện của hình thức thức tín ngưỡng nào sau đây?",
+    "options": [
+      "Thờ thần động vật.",
+      "Thờ thần tự nhiên.",
+      "Thờ cúng tổ tiên.",
+      "Tín ngưỡng phồn thực."
+    ],
+    "answer": "Thờ cúng tổ tiên.",
+    "difficulty": 1
+  },
+
+  {
+    "question": "Tôn giáo nào sau đây có nguồn gốc từ Ấn Độ và được truyền bá mạnh mẽ vào khu vực Đông Nam Á?",
+    "options": ["Phật giáo", "Đạo giáo", "Hồi giáo", "Thiên chúa giáo"],
+    "answer": "Phật giáo",
+    "difficulty": 1
+  },
+  {
+    "question": "Từ thế kỉ XVI, thông qua hoạt động của các gião sĩ phương Tây, tôn giáo nào sau đây đã từng bước được du nhập vào Đông Nam Á ?",
+    "options": ["Phật giáo", "Đạo giáo", "Hồi giáo", "Thiên chúa giáo"],
+    "answer": "Thiên chúa giáo",
+    "difficulty": 1
+  },
+  {
+    "question": "Từ khoảng thế kỉ XIII, tôn giáo nào theo chân các thương nhân A-rập và Ấn Độ du nhập vào Đông Nam Á?",
+    "options": ["Ấn Độ giáo.", "Thiên Chúa giáo.", "Phật giáo.", "Hồi giáo."],
+    "answer": "Hồi giáo.",
+    "difficulty": 1
+  },
+
+  {
+    "question": "Ở khu vực Đông Nam Á, quốc gia nào sau đây chịu ảnh hưởng sâu sắc nhất của văn minh Trung Hoa?",
+    "options": ["Việt Nam.", "Thái Lan.", "Ma-lai-xi-a.", "Mi-an-ma."],
+    "answer": "Việt Nam.",
+    "difficulty": 1
+  },
+  {
+    "question": "Trên cơ sở tiếp thu một phần chữ Hán của Trung Quốc, người Việt đã sáng tạo ra chữ viết riêng của mình, có tên gọi là",
+    "options": ["chữ Chăm cổ.", "chữ Nôm.", "Chữ Khơ-me cổ.", "chữ Mã Lai cổ."],
+    "answer": "chữ Nôm.",
+    "difficulty": 1
+  },
+
+  {
+    "question": "Người Việt đã sáng tạo ra chữ Nôm trên cơ sở tiếp thu chữ Hán của quốc gia nào sau đây ?",
+    "options": ["Nhật Bản", "Ai Cập", "Ấn Độ", "Trung Quốc"],
+    "answer": "Trung Quốc",
+    "difficulty": 1
+  },
+
+  {
+    "question": "Nội dung nào sau đây phản ánh đúng ý nghĩa của việc cư dân Đông Nam Á sáng tạo ra chữ viết riêng của mình từ thời kì cổ - trung đại?",
+    "options": [
+      "Tạo điều kiện cho sự ra đời của Nhà nước và các quốc gia thống nhất.",
+      "Thể hiện tinh thần tự chủ, không vay mượn yếu tố văn hóa bên ngoài.",
+      "Tạo điều kiện cho sự phát triển rực rỡ của nền văn học dân tộc.",
+      "Tạo tiền đề trực tiếp cho sự phát triển kinh tế, khoa học kĩ thuật."
+    ],
+    "answer": "Tạo điều kiện cho sự phát triển rực rỡ của nền văn học dân tộc.",
+    "difficulty": 2
+  },
+  {
+    "question": "Nhà nước đầu tiên được hình thành trên lãnh thổ Việt Nam có tên gọi là",
+    "options": ["Văn Lang", "Lâm Ấp", "Chăm pa", "Phù Nam"],
+    "answer": "Văn Lang",
+    "difficulty": 1
+  },
+  {
+    "question": "Nền văn minh Văn Lang - Âu Lạc chủ yếu được hình thành trên lưu vực con sông nào sau đây?",
+    "options": ["Sông Hằng", "Sông Ấn", "Sông Hồng", "Sông Nin"],
+    "answer": "Sông Hồng",
+    "difficulty": 1
+  },
+  {
+    "question": "Nền văn minh Văn Lang - Âu Lạc được hình thành ở khu vực nào sau đây của Việt Nam?",
+    "options": [
+      "Khu vực Bắc Bộ và Bắc Trung Bộ Việt Nam ngày nay.",
+      "Vùng duyên hải và cao nguyên miền Trung Việt Nam.",
+      "Lưu vực sông Hồng, sông Thu Bồn và sông Cửu Long.",
+      "Vùng ven biển Nam Trung Bộ và Nam Bộ Việt Nam."
+    ],
+    "answer": "Khu vực Bắc Bộ và Bắc Trung Bộ Việt Nam ngày nay.",
+    "difficulty": 1
+  },
+  {
+    "question": "Điều kiện tự nhiên nào sau đây tạo thuận lợi cho cư dân Văn Lang – Âu Lạc phát triển ngành nông nghiệp lúa nước?",
+    "options": [
+      "Tài nguyên khoáng sản phong phú",
+      "Khí hậu khô hạn, lượng nhiệt lớn",
+      "Hệ thống đất phù sa màu mỡ",
+      "Tiếp giáp với các nền văn minh lớn"
+    ],
+    "answer": "Hệ thống đất phù sa màu mỡ",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây là cơ sở kinh tế dẫn đến sự hình thành nền văn minh Văn Lang - Âu Lạc?",
+    "options": [
+      "Hoạt động thương nghiệp đường biển đặc biệt phát triển",
+      "Bắt đầu xuất hiện sự phân hóa giữa các tầng lớp xã hội",
+      "Nhu cầu chống giặc ngoại xâm ngày càng trở nên bức thiết",
+      "Nông nghiệp trồng lúa nước đạt trình độ phát triển cao"
+    ],
+    "answer": "Nông nghiệp trồng lúa nước đạt trình độ phát triển cao",
+    "difficulty": 1
+  },
+  {
+    "question": "Cư dân Văn Lang – Âu Lạc sớm phát triển nghề luyện kim nhờ điều kiện tự nhiên thuận lợi nào sau đây?",
+    "options": [
+      "Tài nguyên khoáng sản phong phú",
+      "Khí hậu nhiệt đới ẩm gió mùa",
+      "Các vùng đồng bằng phù sa màu mỡ",
+      "Hệ thống sông ngòi chằng chịt"
+    ],
+    "answer": "Tài nguyên khoáng sản phong phú",
+    "difficulty": 1
+  },
+  {
+    "question": "Văn minh Văn Lang – Âu Lạc được hình thành trên cơ sở của nền văn hóa nào sau đây?",
+    "options": ["Sa Huỳnh", "Óc Eo", "Đông Sơn", "Sơn Vi"],
+    "answer": "Đông Sơn",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây là cơ sở xã hội dẫn đến sự hình thành nền văn minh Văn Lang - Âu Lạc?",
+    "options": [
+      "Xuất hiện sự phân hóa giữa các tầng lớp trong xã hội",
+      "Nhu cầu xâm lược, mở rộng lãnh thổ trở nên bức thiết",
+      "Hoạt động thủ công nghiệp đạt trình độ phát triển cao",
+      "Công cụ lao động bằng kim khí được sử dụng phổ biến"
+    ],
+    "answer": "Xuất hiện sự phân hóa giữa các tầng lớp trong xã hội",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây không phản ánh đúng cơ sở dẫn đến sự ra đời của nhà nước Văn Lang - Âu Lạc?",
+    "options": [
+      "Chế độ công xã nguyên thủy đạt đến giai đoạn cực thịnh",
+      "Yêu cầu của hoạt động trị thuỷ để phục vụ nông nghiệp.",
+      "Yêu cầu của công cuộc đấu tranh chống giặc ngoại xâm.",
+      "Những chuyển biến cơ bản trong đời sống kinh tế - xã hội."
+    ],
+    "answer": "Chế độ công xã nguyên thủy đạt đến giai đoạn cực thịnh",
+    "difficulty": 1
+  },
+  {
+    "question": "Khí hậu nhiệt đới ẩm gió mùa, lượng mưa nhiều là điều kiện thuận lợi để cư dân Văn Lang – Âu Lạc phát triển ngành kinh tế nào sau đây?",
+    "options": [
+      "Luyện kim, đúc đồng",
+      "Trồng trọt, chăn nuôi",
+      "Thương nghiệp biển",
+      "Chế tạo vũ khí"
+    ],
+    "answer": "Trồng trọt, chăn nuôi",
+    "difficulty": 1
+  },
+  {
+    "question": "Nhà nước nào sau đây ở Việt Nam ra đời vào khoảng thế kỉ VII TCN?",
+    "options": ["Văn Lang", "Âu Lạc", "Phù Nam", "Đại Việt"],
+    "answer": "Văn Lang",
+    "difficulty": 1
+  },
+  {
+    "question": "Kinh đô của nhà nước Văn Lang đặt tại",
+    "options": [
+      "Cổ Loa (Hà Nội)",
+      "Phong Châu (Phú Thọ)",
+      "Phú Xuân (Huế)",
+      "Quy Nhơn (Bình Định)"
+    ],
+    "answer": "Phong Châu (Phú Thọ)",
+    "difficulty": 1
+  },
+  {
+    "question": "Năm 208 TCN, nước Âu Lạc ra đời, đặt kinh đô tại",
+    "options": [
+      "Đông Anh (Hà Nội).",
+      "Phong Châu (Phú Thọ).",
+      "Trà Kiệu (Quảng Nam).",
+      "Thoại Sơn (An Giang)."
+    ],
+    "answer": "Đông Anh (Hà Nội).",
+    "difficulty": 1
+  },
+  {
+    "question": "Đứng đầu nhà nước Văn Lang là Vua Hùng, giúp việc cho vua là",
+    "options": ["tể tướng", "Lục bộ", "Lạc hầu", "đại hành khiển"],
+    "answer": "Lạc hầu",
+    "difficulty": 1
+  },
+  {
+    "question": "Bộ máy hành chính nhà nước dưới thời kì Văn Lang không tồn tại chức vụ nào sau đây?",
+    "options": ["Lạc hầu", "Lạc tướng", "Bồ chính", "Thượng thư"],
+    "answer": "Thượng thư",
+    "difficulty": 1
+  },
+  {
+    "question": "Nhà nước nào sau đây là sự kế thừa và phát triển của nhà nước Văn Lang?",
+    "options": ["Âu Lạc", "Lâm Ấp", "Chămpa", "Phù Nam"],
+    "answer": "Âu Lạc",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những biểu hiện chứng tỏ bước phát triển của nước Âu Lạc so với quốc gia Văn Lang là",
+    "options": [
+      "Bộ máy nhà nước được tổ chức hoàn thiện hơn so với thời kì trước",
+      "Lãnh thổ được mở rộng hơn trên cơ sở thống nhất Âu Việt và Lạc Việt",
+      "Cải cách đơn vị hành chính theo hướng tập trung, thống nhất, quan liêu",
+      "Bảo vệ vững chắc độc lập dân tộc trước sự xâm lược của quân Nam Hán"
+    ],
+    "answer": "Lãnh thổ được mở rộng hơn trên cơ sở thống nhất Âu Việt và Lạc Việt",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây phản ánh đúng đặc điểm của bộ máy nhà nước Văn Lang - Âu Lạc?",
+    "options": [
+      "Hoàn chỉnh, chặt chẽ",
+      "Đơn giản, sơ khai",
+      "Quan liêu, tập quyền",
+      "Phân quyền, pháp trị."
+    ],
+    "answer": "Đơn giản, sơ khai",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những công trình kiến trúc tiêu biểu được xây dựng dưới thời kì nhà nước Âu Lạc là",
+    "options": [
+      "chùa Một Cột",
+      "tháp Phổ Minh",
+      "thành Cổ Loa",
+      "kinh thành Huế"
+    ],
+    "answer": "thành Cổ Loa",
+    "difficulty": 1
+  },
+   {
+    "question": "Văn minh Đại Việt được phát triển trong điều kiện độc lập, tự chủ của quốc gia Đại Việt, với kinh đô chủ yếu là",
+    "options": ["Thăng Long (Hà Nội).", "Phú Xuân (Huế).", "Hoa Lư (Ninh Bình).", "Thiên Trường (Nam Định)."],
+    "answer": "Thăng Long (Hà Nội).",
+    "difficulty": 1
+  },
+  {
+    "question": "Văn minh Đại Việt là những sáng tạo vật chất và tinh thần tiêu biểu của quốc gia Đại Việt, kéo dài từ",
+    "options": ["Thế kỉ XV đến thế kỉ XX", "Thế kỉ X đến thế kỉ XV", "Thế kỉ X đến thế kỉ XIX", "Thế kỉ XVI đến thế kỉ XIX"],
+    "answer": "Thế kỉ X đến thế kỉ XIX",
+    "difficulty": 1
+  },
+  {
+    "question": "Quá trình phát triển của văn minh Đại Việt không gắn liền với vương triều nào sau đây của Việt Nam?",
+    "options": ["Tây Sơn", "Lê sơ", "Tiền Lý", "Tiền Lê"],
+    "answer": "Tiền Lý",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào dưới đây không phản ánh đúng cơ sở hình thành và phát triển của nền văn minh Đại Việt?",
+    "options": ["Kế thừa nền văn minh Văn Lang - Âu Lạc.", "Nền độc lập, tự chủ của quốc gia Đại Việt.", "Quá trình xâm lược và mở rộng lãnh thổ.", "Tiếp thu các thành tựu văn minh bên ngoài."],
+    "answer": "Quá trình xâm lược và mở rộng lãnh thổ.",
+    "difficulty": 1
+  },
+  {
+    "question": "Văn minh Đại Việt có nguồn gốc sâu xa từ",
+    "options": ["văn minh Chăm-pa.", "văn minh Phù Nam.", "văn minh Trung Hoa.", "văn minh Văn Lang – Âu Lạc"],
+    "answer": "văn minh Văn Lang – Âu Lạc",
+    "difficulty": 1
+  },
+
+  {
+    "question": "Người Việt đã tiếp thu có chọn lọc các thành tựu về thể chế chính trị, luật pháp từ nền văn minh nào sau đây?",
+    "options": ["Văn minh Ấn Độ.", "văn minh Trung Hoa.", "Văn minh Ai Cập.", "Văn minh La Mã."],
+    "answer": "văn minh Trung Hoa.",
+    "difficulty": 1
+  },
+  {
+    "question": "Trong quá trình tồn tại và phát triển, văn minh Đại Việt đã tiếp thu có chọn lọc thành tựu của văn minh Ấn Độ về",
+    "options": ["luật pháp", "thiết chế chính trị", "chữ viết", "kiến trúc"],
+    "answer": "kiến trúc",
+    "difficulty": 1
+  },
+  {
+    "question": "Trong quá trình tồn tại và phát triển, văn minh Đại Việt đã tiếp thu tôn giáo nào sau đây từ phương Tây?",
+    "options": ["Phật giáo", "Hinđu giáo", "Thiên Chúa giáo", "Hồi giáo"],
+    "answer": "Thiên Chúa giáo",
+    "difficulty": 1
+  },
+
+  {
+    "question": "Văn minh Đại Việt đã kế thừa và phát triển yếu tố nào sau đây từ nền văn minh Văn Lang – Âu Lạc?",
+    "options": ["Tín ngưỡng tốt đẹp", "Trình độ lập pháp", "Kĩ thuật làm giấy", "Kĩ thuật in tranh"],
+    "answer": "Tín ngưỡng tốt đẹp",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây là cơ sở quan trọng nhất dẫn đến sự hình thành và phát triển rực rỡ của văn minh Đại Việt?",
+    "options": ["Kế thừa các nền văn minh cổ đại", "Nền độc lập, tự chủ của đất nước", "Tiếp thu thành tựu văn minh Ấn Độ", "Tiếp thu thành tựu văn minh Trung Hoa"],
+    "answer": "Nền độc lập, tự chủ của đất nước",
+    "difficulty": 1
+  },
+
+  {
+    "question": "Nội dung nào sau đây không phải là cơ sở hình thành nền văn minh Đại Việt?",
+    "options": ["Có cội nguồn từ các nền văn minh cổ xưa trên đất nước Việt Nam.", "Tiếp thu chọn lọc từ thành tựu của các nền văn minh bên ngoài.", "Nho giáo là tư tưởng chính thống trong suốt các triều đại phong kiến.", "Trải qua quá trình đấu tranh, củng cố độc lập dân tộc của quân và dân ta."],
+    "answer": "Nho giáo là tư tưởng chính thống trong suốt các triều đại phong kiến.",
+    "difficulty": 1
+  },
+
+  {
+    "question": "Trong quá trình hình thành và phát triển, văn minh Đại Việt đã tiếp thu có chọn lọc tinh hoa văn minh từ bên ngoài, đặc biệt là văn minh",
+    "options": ["Trung Hoa", "Pháp", "Ả rập", "Ai Cập"],
+    "answer": "Trung Hoa",
+    "difficulty": 1
+  },
+
+  {
+    "question": "Trong thế kỉ X, văn minh Đại Việt",
+    "options": ["bước đầu được định hình.", "phát triển mạnh mẽ và toàn diện.", "có sự giao lưu với văn minh phương Tây.", "có những dấu hiệu trì trệ và lạc hậu."],
+    "answer": "bước đầu được định hình.",
+    "difficulty": 1
+  },
+
+  {
+    "question": "Từ thế kỉ XI - XV, văn minh Đại Việt",
+    "options": ["bước đầu được định hình.", "phát triển mạnh mẽ và toàn diện.", "có sự giao lưu với văn minh phương Tây.", "có những dấu hiệu trì trệ và lạc hậu."],
+    "answer": "phát triển mạnh mẽ và toàn diện.",
+    "difficulty": 1
+  },
+
+  {
+    "question": "Trong các thế kỉ XVI - XVII, văn minh Đại Việt",
+    "options": ["bước đầu được định hình.", "phát triển mạnh mẽ và toàn diện.", "có sự giao lưu với văn minh phương Tây.", "có những dấu hiệu trì trệ và lạc hậu."],
+    "answer": "có sự giao lưu với văn minh phương Tây.",
+    "difficulty": 1
+  },
+
+  {
+    "question": "Văn minh Đại Việt bộc lộ những dấu hiệu của sự trì trệ và lạc hậu vào thời kì nào sau đây?",
+    "options": ["Thế kỉ X.", "Thế kỉ XI - XV.", "Thế kỉ XVI - XVII.", "Thế kỉ XVIII - XIX."],
+    "answer": "Thế kỉ XVIII - XIX.",
+    "difficulty": 1
+  }
+],
+"k11_chude_1": [
+  {
+    "question": "Đầu thế kỉ XVII, ngành công nghiệp phát triển nhất ở nước Anh là",
+    "options": ["luyện kim.", "máy hơi nước.", "len, dạ.", "chế tạo máy móc."],
+    "answer": "len, dạ.",
+    "difficulty": 1
+  },
+  {
+    "question": "Đẳng cấp thứ ba trong xã hội Pháp trước cách mạng gồm những lực lượng nào?",
+    "options": ["Tư sản, nông dân, bình dân thành thị.", "Quý tộc, nông dân, tăng lữ, thợ thủ công.", "Tăng lữ, quý tộc và tư sản, nông dân.", "Vua, quan lại, tăng lữ, bình dân thành thị"],
+    "answer": "Tư sản, nông dân, bình dân thành thị.",
+    "difficulty": 1
+  },
+  {
+    "question": "Đến giữa thế kỉ XVIII, miền Bắc của 13 bang thuộc địa Anh ở Bắc Mĩ phổ biến phát triển",
+    "options": ["kinh tế đồn điền.", "công trường thủ công.", "dệt và làm gốm.", "phường hội thủ công."],
+    "answer": "công trường thủ công.",
+    "difficulty": 1
+  },
+  {
+    "question": "Đến giữa thế kỉ XVIII, miền Nam của 13 bang thuộc địa Anh ở Bắc Mĩ phổ biến phát triển",
+    "options": ["công thương nghiệp.", "đồn điền, trang trại.", "luyện kim và đóng tàu.", "khai thác dầu mỏ."],
+    "answer": "đồn điền, trang trại.",
+    "difficulty": 1
+  },
+  {
+    "question": "Từ thế kỉ XVII, nền nông nghiệp Anh có đặc điểm nổi bật nào sau đây?",
+    "options": ["Lạc hậu, manh mún, công cụ lao động thô sơ", "Bị cạnh tranh gay gắt bởi nông nghiệp Pháp.", "Phương thức kinh doanh mới thâm nhập mạnh", "Phát triển mạnh mẽ trong ngành đồn điền cao su."],
+    "answer": "Phương thức kinh doanh mới thâm nhập mạnh",
+    "difficulty": 1
+  },
+  {
+    "question": "Mục tiêu chung của các cuộc cách mạng tư sản thế kỉ XVI- XVIII là",
+    "options": ["lật đổ chế đổ phong kiến, thực dân cùng tàn tích của nó.", "lật đổ chế độ phong kiến, cổ đại cùng tàn tích của nó.", "tạo điều kiện cho sự phát triển của chế độ phong kiến.", "mở đường cho sự phát triển của chủ nghĩa xã hội."],
+    "answer": "lật đổ chế đổ phong kiến, thực dân cùng tàn tích của nó.",
+    "difficulty": 1
+  },
+  {
+    "question": "Các cuộc cách mạng tư sản thế kỉ XVI - XVIII có hai nhiệm vụ cơ bản là",
+    "options": ["dân tộc và dân chủ.", "dân tộc và dân sinh.", "độc lập và tự do.", "dân chủ và dân quyền."],
+    "answer": "dân tộc và dân chủ.",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những lực lượng lãnh đạo chủ yếu của các cuộc cách mạng tư sản thế kỉ XVI – XVIII là giai cấp",
+    "options": ["tư sản.", "công nhân.", "nông dân.", "địa chủ."],
+    "answer": "tư sản.",
+    "difficulty": 1
+  },
+  {
+    "question": "Lãnh đạo của cuộc cách mạng tư sản Anh thế kỉ XVII là",
+    "options": ["tư sản và chủ nô.", "tư sản và quý tộc mới.", "tăng lữ và quý tộc.", "Chủ nô và quý tộc"],
+    "answer": "tư sản và quý tộc mới.",
+    "difficulty": 1
+  },
+  {
+    "question": "“Lật đổ chế độ phong kiến đứng đầu là vua Sác- lơ I, thiết lập nền thống trị của giai cấp tư sản và quý tộc mới, mở đường cho sự phát triển của chủ nghĩa tư bản” là mục tiêu của cuộc cách mạng tư sản ở quốc gia nào sau đây?",
+    "options": ["Nga", "Pháp.", "Anh.", "Bắc Mỹ."],
+    "answer": "Anh.",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những ý nghĩa của cách mạng tư sản Pháp cuối thế kỷ XVIII là",
+    "options": ["lật đổ và xóa bỏ mọi tàn dư của chế độ phong kiến.", "thúc đẩy phong trào đấu tranh giành độc lập Mĩ Latinh.", "lật đổ chế độ quân chủ chuyên chế do vua Sác – lơ I đứng đầu", "lật đổ sự thống trị của thực dân Anh, giành độc lập dân tộc."],
+    "answer": "thúc đẩy phong trào đấu tranh giành độc lập Mĩ Latinh.",
+    "difficulty": 1
+  },
+  {
+    "question": "Cách mạng tư sản Anh thế kỉ XVII đã",
+    "options": ["lật đổ chế độ thuộc địa nửa phong kiến", "thiết lập chế độ dân chủ cộng hòa ở Anh.", "thiết lập chế độ quân chủ lập hiến ở Anh.", "giành độc lập dân tộc từ tay thực dân Pháp."],
+    "answer": "thiết lập chế độ quân chủ lập hiến ở Anh.",
+    "difficulty": 1
+  },
+  {
+    "question": "Mức độ thắng lợi của các cuộc cách mạng tư sản thời cận đại khác nhau là do",
+    "options": ["điều kiện lịch sử.", "giai cấp lãnh đạo.", "động lực cách mạng.", "nhiệm vụ cách mạng."],
+    "answer": "điều kiện lịch sử.",
+    "difficulty": 1
+  },
+  {
+    "question": "Đặc điểm nổi bật của tình hình chính trị nước Anh và Pháp trước khi bùng nổ cách mạng tư sản là",
+    "options": ["tồn tại chế độ quân chủ chuyên chế.", "là thuộc địa của chủ nghĩa thực dân.", "xuất hiện kinh tế tư bản chủ nghĩa.", "xuất hiện trào lưu triết học ánh sáng."],
+    "answer": "tồn tại chế độ quân chủ chuyên chế.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây không phải là đặc điểm tình hình nước Pháp cuối thế kỉ XVIII?",
+    "options": ["Lấy Thanh giáo làm ngọn cờ tư tưởng.", "Xuất hiện trào lưu Triết học ánh sáng.", "Xã hội phân chia thành các đẳng cấp.", "Vua Lu-I XVI có quyền lực tuyệt đối."],
+    "answer": "Lấy Thanh giáo làm ngọn cờ tư tưởng.",
+    "difficulty": 1
+  },
+  {
+    "question": "Đặc điểm nổi bật về kinh tế của 13 thuộc địa Anh ở Bắc Mĩ giữa thế kỉ XVIII là",
+    "options": ["miền Nam chủ yếu phát triển kinh tế công nghiệp.", "miền Bắc chủ yếu phát triển kinh tế thương nghiệp.", "kinh tế phát triển theo con đường tư bản chủ nghĩa.", "phương thức sản xuất tư bản chủ nghĩa chưa thâm nhập"],
+    "answer": "kinh tế phát triển theo con đường tư bản chủ nghĩa.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây không phải là mục tiêu của các cuộc cách mạng tư sản thế kỉ XVI - XVIII?",
+    "options": ["Lật đổ chế độ phong kiến, thực dân cùng tàn tích của nó.", "Tạo điều kiện cho sự phát triển của kinh tế tư bản chủ nghĩa.", "Thiết lập nền thống trị của giai cấp tư sản và liên minh của họ", "Mở ra thời đại thời đại thắng lợi của chế độ xã hội chủ nghĩa"],
+    "answer": "Mở ra thời đại thời đại thắng lợi của chế độ xã hội chủ nghĩa",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây là mục tiêu của cuộc cách mạng tư sản Pháp cuối thế kỉ XVIII?",
+    "options": ["Lật đổ chế độ phong kiến đứng đầu vua Sác- lơ I.", "Lật đổ ách thống trị của thực dân Anh, giành độc lập", "Lật đổ chế độ phong kiến đứng đầu vua Lu- i XVI.", "Thiết lập chính quyền của giai cấp tư sản và chủ nô"],
+    "answer": "Lật đổ chế độ phong kiến đứng đầu vua Lu- i XVI.",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những điểm chung của các cuộc cách mạng tư sản thời cận đại là",
+    "options": ["mở đường cho chủ nghĩa tư bản phát triển.", "do tư sản và chủ nô lãnh đạo.", "xóa bỏ chế độ phong kiến và nô lệ.", "Diễn ra dưới hình thức nội chiến."],
+    "answer": "mở đường cho chủ nghĩa tư bản phát triển.",
+    "difficulty": 1
+  },
+  {
+    "question": "Điểm khác biệt về tình hình chính trị Bắc Mĩ so với nước Anh và Pháp trước khi cách mạng tư sản bùng nổ thế kỉ XVIII là",
+    "options": ["thực dân phương Tây thống trị", "chế độ phong kiến kìm hãm.", "xuất hiện tầng lớp quí tộc mới.", "xã hội tồn tại chế độ đẳng cấp."],
+    "answer": "thực dân phương Tây thống trị",
+    "difficulty": 1
+  },
+  {
+    "question": "Điểm chung trong tiền đề tư tưởng của các cuộc cách mạng tư sản thế kỉ XVII - XVIII là",
+    "options": ["Xuất hiện trào lưu tư tưởng tiến bộ của tư sản.", "Xuất hiện trào lưu triết học ánh sáng.", "Xuất hiện các giai cấp, tầng lớp xã hội mới.", "Xuất hiện trào lưu xã hội không tưởng."],
+    "answer": "Xuất hiện trào lưu tư tưởng tiến bộ của tư sản.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nhận xét nào sau đây là đúng về ý nghĩa cách mạng tư sản Pháp cuối thế kỉ XVIII?",
+    "options": ["Lật đổ và xóa bỏ mọi tàn dư của chế độ phong kiến.", "Tạo điều kiện đầy đủ nhất cho kinh tế tư bản phát triển.", "Thúc đẩy phong trào giải phóng dân tộc ở Mĩ Latinh", "Thiết lập chế độ quân chủ lập hiến tiến bộ ở Pháp"],
+    "answer": "Thúc đẩy phong trào giải phóng dân tộc ở Mĩ Latinh",
+    "difficulty": 1
+  },
+  {
+    "question": "Các cuộc cách mạng tư sản thời cận đại đều",
+    "options": ["dẫn đến xác lập quan hệ sản xuất tư bản chủ nghĩa.", "tạo ra một nền dân chủ, tự do thực sự, rộng rãi", "lật đổ chế độ phong kiến, thiết lập nền cộng hòa.", "lật đổ chế độ thực dân, thiết lập nền cộng hòa."],
+    "answer": "dẫn đến xác lập quan hệ sản xuất tư bản chủ nghĩa.",
+    "difficulty": 1
+  },
+  {
+    "question": "Trước khi cách mạng tư sản bùng nổ, cả Anh và Pháp đều",
+    "options": ["theo thể chế quân chủ chuyên chế", "theo thể chế quân chủ lập hiến", "là thuộc địa của thực dân bên ngoài", "có nền nông nghiệp lạc hậu, manh mún"],
+    "answer": "theo thể chế quân chủ chuyên chế",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào phản ánh không đúng về nhiệm vụ dân chủ trong các cuộc cách mạng tư sản thời cận đại?",
+    "options": ["Xóa bỏ chế độ phong kiến chuyên chế.", "Xác lập nền dân chủ tư sản.", "Đem lại quyền tự do chính trị cho người dân.", "Thống nhất thị trường dân tộc."],
+    "answer": "Thống nhất thị trường dân tộc.",
+    "difficulty": 1
+  },
+  {
+    "question": "Ở nước Anh, do sự phát triển của ngành công nghiệp len dạ làm cho nghề nuôi cừu trở nên có lợi nhất... trở thành tầng lớp",
+    "options": ["tư sản", "chủ nô", "quý tộc phong kiến", "quý tộc mới"],
+    "answer": "quý tộc mới",
+    "difficulty": 1
+  },
+  {
+    "question": "Sự phát triển của nền kinh tế đã làm biến đổi xã hội Tây Âu và Bắc Mỹ, xuất hiện các giai cấp, tầng lớp mới đại diện cho phương thức sản xuất",
+    "options": ["tư bản chủ nghĩa.", "phong kiến.", "xã hội chủ nghĩa.", "chiếm hữu nô lệ."],
+    "answer": "tư bản chủ nghĩa.",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những nhiệm vụ của các cuộc cách mạng tư sản thế kỉ XVII - XVIII là",
+    "options": ["đưa giai cấp công nhân lên nắm quyền.", "xóa bỏ triệt để mâu thuẫn trong xã hội.", "xác lập sự thống trị của chủ nghĩa thực dân.", "xóa bỏ tình trạng phong kiến cát cứ."],
+    "answer": "xóa bỏ tình trạng phong kiến cát cứ.",
+    "difficulty": 1
+  },
+  {
+    "question": "Lãnh đạo các cuộc cách mạng tư sản từ thế kỉ XVII đến thế kỉ XVIII không bao gồm lực lượng nào sau đây?",
+    "options": ["tư sản.", "quý tộc mới.", "chủ nô.", "công nhân."],
+    "answer": "công nhân.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây là tiền đề về kinh tế dẫn đến sự bùng nổ và thắng lợi của các cuộc cách mạng tư sản thế kỉ XVII – XVIII?",
+    "options": ["Quan hệ sản xuất tư bản chủ nghĩa thay thế hoàn toàn quan hệ phong kiến.", "Triết học Ánh sáng ra đời, thức tỉnh, dọn đường cho quần chúng đấu tranh.", "Giai cấp tư sản và đồng minh có thế lực rất lớn cả về kinh tế và chính trị.", "Kinh tế tư bản chủ nghĩa ra đời và phát triển trong lòng chế độ phong kiến."],
+    "answer": "Kinh tế tư bản chủ nghĩa ra đời và phát triển trong lòng chế độ phong kiến.",
+    "difficulty": 1
+  },
+  {
+    "question": "Cuộc Chiến tranh giành độc lập của 13 thuộc địa Anh ở Bắc Mĩ (cuối thế kỷ XVIII) và cuộc cách mạng tư sản Anh (thế kỷ XVII) có điểm giống nhau nào sau đây?",
+    "options": ["Chống thực dân Anh, giành độc lập dân tộc.", "Mở đường cho chủ nghĩa tư bản phát triển.", "Có sự lãnh đạo của tầng lớp quý tộc mới.", "Diễn ra dưới hình thức một cuộc nội chiến."],
+    "answer": "Mở đường cho chủ nghĩa tư bản phát triển.",
+    "difficulty": 1
+  },
+  {
+    "question": "“ Lật đổ chế độ phong kiến đứng đầu là vua Lu – I XVI, thiết lập nền thống trị của giai cấp tư sản” là mục tiêu của cách mạng tư sản nào sau đây?",
+    "options": ["Đấu tranh thống nhất nước Đức", "Cách mạng tư sản Pháp", "Cách mạng tư sản Anh.", "Chiến tranh giành độc lập của 13 thuộc địa Anh ở Bắc Mỹ."],
+    "answer": "Cách mạng tư sản Pháp",
+    "difficulty": 1
+  },
+  {
+    "question": "Đầu thế kỉ XIX, các nước Mĩ Latinh giành độc lập từ tay thực dân",
+    "options": ["Tây Ban Nha và Bồ Đào Nha.", "Anh và đế quốc Mĩ.", "Tây Ban Nha và Pháp.", "Pháp và Đức."],
+    "answer": "Tây Ban Nha và Bồ Đào Nha.",
+    "difficulty": 1
+  },
+  {
+    "question": "Chủ nghĩa tư bản hiện đại là thuật ngữ dùng để chỉ chủ nghĩa tư bản",
+    "options": ["trong giai đoạn tự do cạnh tranh", "bắt đầu chuyển sang giai đoạn độc quyền.", "từ sau chiến tranh thế giới thứ II đến nay.", "Từ sau chiến tranh thế giới thứ I đến nay"],
+    "answer": "từ sau chiến tranh thế giới thứ II đến nay.",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những thách thức mà chủ nghĩa tư bản hiện đại phải đối mặt là",
+    "options": ["tiềm ẩn nguy cơ khủng hoảng tài chính mang tính toàn cầu.", "sức sản xuất của các ngành kinh tế ngày càng cao.", "khoa học công nghệ phát triển và ngày càng mở rộng.", "lực lượng lao động có chất lượng ngày càng cao."],
+    "answer": "tiềm ẩn nguy cơ khủng hoảng tài chính mang tính toàn cầu.",
+    "difficulty": 1
+  },
+  {
+    "question": "Chủ nghĩa tư bản được xác lập đầu tiên trên thế giới ở",
+    "options": ["Châu Âu và Bắc Mĩ.", "Tây Âu và Châu Á.", "Bắc Mĩ và Nam Á.", "Châu Á và Châu Phi."],
+    "answer": "Châu Âu và Bắc Mĩ.",
+    "difficulty": 1
+  },
+  {
+    "question": "Sự kiện đánh dấu sự mở rộng của cuộc cách mạng tư sản bên ngoài châu Âu là",
+    "options": ["Cách mạng tư sản Anh.", "Các mạng tư sản Pháp.", "Cách mạng tư sản Hà Lan.", "Chiến tranh giành độc lập ở Bắc Mĩ."],
+    "answer": "Chiến tranh giành độc lập ở Bắc Mĩ.",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những đặc điểm cơ bản của chủ nghĩa tư bản hiện đại là",
+    "options": ["bước đầu xuất khẩu tư bản.", "xuất hiện độc quyền nhà nước.", "bước đầu xâm lược thuộc địa.", "xuất hiện tư bản tài chính."],
+    "answer": "xuất hiện độc quyền nhà nước.",
+    "difficulty": 1
+  },
+  {
+    "question": "Sự xác lập của chủ nghĩa tư bản ở châu Âu và Bắc Mĩ thế kỉ XVII – XIX có điểm chung là",
+    "options": ["thiết lập chế độ quân chủ lập hiến.", "thiết lập chế độ cộng hòa.", "lật đổ chế độ thực dân.", "do giai cấp tư sản lãnh đạo"],
+    "answer": "do giai cấp tư sản lãnh đạo",
+    "difficulty": 1
+  },
+  {
+    "question": "Các nước tư bản hiện đại tiêu biểu là",
+    "options": ["Mĩ, Anh, Trung Quốc.", "Mĩ, Nhật, Cu Ba.", "Mĩ, Nhật, Đức.", "Mĩ, Nhật, Trung Quốc"],
+    "answer": "Mĩ, Nhật, Đức.",
+    "difficulty": 1
+  },
+  {
+    "question": "Sự khác biệt giữa chủ nghĩa tư bản tự do cạnh tranh và chủ nghĩa tư bản độc quyền xuất phát từ",
+    "options": ["sự phát triển kinh tế và công nghiệp.", "Sự cạnh tranh và chiến lược kinh doanh.", "Sự bất ổn định, phân hóa giàu nghèo.", "Sự tập trung tài sản và quyền lực."],
+    "answer": "Sự tập trung tài sản và quyền lực.",
+    "difficulty": 1
+  },
+  {
+    "question": "Từ đầu thế kỉ XIX, để đáp ứng nhu cầu ngày càng cao về nguyên liệu và nhân công, các nước tư bản phương Tây đã tăng cường",
+    "options": ["hợp tác và mở rộng đầu tư.", "thu hút vốn đầu tư bên ngoài.", "xâm lược và mở rộng thuộc địa.", "đổi mới hình thức kinh doanh."],
+    "answer": "xâm lược và mở rộng thuộc địa.",
+    "difficulty": 1
+  },
+  {
+    "question": "Cuối thế kỉ XIX – đầu thế kỉ XX, các nước tư bản chủ nghĩa đã chuyển sang giai đoạn",
+    "options": ["tự do cạnh tranh.", "cải cách đất nước.", "đế quốc chủ nghĩa.", "chủ nghĩa phát xít."],
+    "answer": "đế quốc chủ nghĩa.",
+    "difficulty": 1
+  },
+  {
+    "question": "Chủ nghĩa đế quốc ra đời từ cuối thế kỉ XIX đầu thế kỉ XX là hệ quả trực tiếp của quá trình",
+    "options": ["xâm lược thuộc địa.", "giao lưu buôn bán.", "toàn cầu hóa.", "hợp tác kinh tế."],
+    "answer": "xâm lược thuộc địa.",
+    "difficulty": 1
+  },
+  {
+    "question": "Cho đến cuối thế kỉ XIX, các nước đế quốc chủ nghĩa đã thiết lập hệ thống thuộc địa rộng khắp ở",
+    "options": ["châu Âu, châu Mỹ và khu vực Tây Âu.", "châu Âu, châu Úc và khu vực Bắc Mỹ.", "châu Á, châu Phi và khu vực Mỹ La-tinh.", "châu Mỹ, Tây Âu và khu vực Đông Âu."],
+    "answer": "châu Á, châu Phi và khu vực Mỹ La-tinh.",
+    "difficulty": 1
+  },
+  {
+    "question": "Đầu thế kỉ XX, quốc gia nào sau đây có hệ thống thuộc địa rộng lớn nhất?",
+    "options": ["Đức.", "I-ta-li-a.", "Nhật", "Anh."],
+    "answer": "Anh.",
+    "difficulty": 1
+  },
+  {
+    "question": "Các tổ chức độc quyền ra đời ở các nước tư bản (từ cuối thế kỉ XIX đầu thế kỉ XX) là kết quả của sự liên minh giữa",
+    "options": ["vô sản và tư sản.", "chủ nô và tư sản.", "các nhà tư bản lớn.", "địa chủ và quý tộc."],
+    "answer": "các nhà tư bản lớn.",
+    "difficulty": 1
+  },
+  {
+    "question": "Sự kiện nào sau đây đánh dấu sự mở rộng của chủ nghĩa tư bản ở ngoài châu Âu?",
+    "options": ["Chiến tranh giành độc lập của 13 thuộc địa Anh ở Bắc Mỹ.", "Phong trào đấu tranh giành độc lập ở khu vực Mỹ La-tinh.", "Cuộc vận động thống nhất nước Đức và I-ta-li-a.", "Cải cách nông nô ở Nga và cuộc nội chiến ở Mỹ."],
+    "answer": "Chiến tranh giành độc lập của 13 thuộc địa Anh ở Bắc Mỹ.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây là một trong những thách thức của chủ nghĩa tư bản hiện đại?",
+    "options": ["Nguồn nhân công ngày càng cạn kiệt.", "Giao lưu kinh tế quốc tế ngày càng tăng.", "Mâu thuẫn xã hội ngày càng gia tăng.", "Sự ra đời các tổ chức liên kết khu vực."],
+    "answer": "Mâu thuẫn xã hội ngày càng gia tăng.",
+    "difficulty": 1
+  },
+  {
+    "question": "Chính sách xâm lược và mở rộng thuộc địa của các nước tư bản nhằm mục đích đáp ứng nhu cầu",
+    "options": ["phát triển khoa học – kĩ thuật.", "giải quyết tình trạng thất nghiệp.", "thu hút nguồn vốn đầu tư bên ngoài.", "nguyên liệu và nguồn nhân công."],
+    "answer": "nguyên liệu và nguồn nhân công.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nước Anh được mệnh danh là “đế quốc mà Mặt Trời không bao giờ lặn” vì lí do nào sau đây?",
+    "options": ["Nước Anh luôn phải đối mặt với nạn ngoại xâm.", "Nước Anh có hệ thống thuộc địa rộng khắp thế giới.", "Nguồn vốn đầu tư của nước Anh trải khắp toàn cầu.", "Các nước đế quốc tranh nhau đầu tư vào nước Anh."],
+    "answer": "Nước Anh có hệ thống thuộc địa rộng khắp thế giới.",
+    "difficulty": 1
+  },
+  {
+    "question": "Cuộc Duy Tân Minh Trị (1868) ở Nhật Bản và cuộc cách mạng Tân Hợi (1911) ở Trung Quốc có điểm tương đồng nào sau đây?",
+    "options": ["Là cuộc cách mạng dân chủ tư sản triệt để.", "Mở đường cho chủ nghĩa tư bản phát triển.", "Là những cuộc chiến tranh giải phóng dân tộc.", "Giải quyết được vấn đề ruộng đất cho nông dân."],
+    "answer": "Mở đường cho chủ nghĩa tư bản phát triển.",
+    "difficulty": 1
+  },
+  {
+    "question": "Cuộc Duy tân Minh Trị đã",
+    "options": ["đặt nền móng cho xây dựng chủ nghĩa xã hội ở Nhật Bản.", "đưa Nhật Bản mở rộng ảnh hưởng sang châu Âu và châu Phi.", "đưa Nhật Bản từ nước phong kiến thành nước tư bản chủ nghĩa.", "giúp Nhật Bản đạt được nhiều tiến bộ về nghiên cứu hải dương."],
+    "answer": "đưa Nhật Bản từ nước phong kiến thành nước tư bản chủ nghĩa.",
+    "difficulty": 1
+  },
+  {
+    "question": "Ở châu Á, cuối thế kỉ XIX, những quốc gia nào sau khi tiến hành cải cách, duy tân đã đưa đất nước theo con đường tư bản chủ nghĩa?",
+    "options": ["Nhật Bản và Xiêm", "Nhật Bản và Trung Quốc", "Xiêm và Việt Nam", "Xiêm và Ấn Độ"],
+    "answer": "Nhật Bản và Xiêm",
+    "difficulty": 1
+  },
+  {
+    "question": "Trong những năm 50 – 70 của thế kỉ XIX, các cuộc cách mạng tư sản tiếp tục diễn ra dưới nhiều hình thức ở châu Âu và Bắc Mĩ, điển hình là",
+    "options": ["cách mạng tư sản Anh", "cách mạng tư sản Pháp", "Chiến tranh giành độc lập ở Bắc Mĩ", "Cải cách nông nô ở Nga"],
+    "answer": "Cải cách nông nô ở Nga",
+    "difficulty": 1
+  },
+  {
+    "question": "Cuối thế kỉ XIX, hầu hết các quốc gia ở châu Á đều trở thành thuộc của thực dân phương Tây, ngoại trừ",
+    "options": ["Xiêm và Nhật Bản", "Nhật Bản và Trung Quốc", "Trung Quốc và Xiêm.", "Ấn Độ và Xiêm"],
+    "answer": "Xiêm và Nhật Bản",
+    "difficulty": 1
+  },
+  {
+    "question": "Đầu thế kỉ XIX, các nước Mĩ Latinh giành độc lập từ tay thực dân",
+    "options": ["Tây Ban Nha và Bồ Đào Nha.", "Anh và đế quốc Mĩ.", "Tây Ban Nha và Pháp.", "Pháp và Đức."],
+    "answer": "Tây Ban Nha và Bồ Đào Nha.",
+    "difficulty": 1
+  },
+  {
+    "question": "Cuối thế kỉ XIX đầu thế kỉ XX, quốc gia nào sau đây được mệnh danh là “công xưởng của thế giới” và “đế quốc mà Mặt Trời không bao giờ lặn”?",
+    "options": ["Pháp", "Anh", "Đức", "Mĩ"],
+    "answer": "Anh",
+    "difficulty": 1
+  },
+  {
+    "question": "Cuối thế kỉ XIX, sự tập trung sản xuất và tích tụ cao độ đã đưa chủ nghĩa tư bản chuyển sang giai đoạn",
+    "options": ["độc quyền", "tự do cạnh tranh.", "hòa hoãn.", "hợp tác."],
+    "answer": "độc quyền",
+    "difficulty": 1
+  },
+  {
+    "question": "Cuối thế kỉ XIX, quốc gia nào sau đây đã bành trướng và can thiệp nội bộ đối với nhiều nước khu vực Mĩ Latinh?",
+    "options": ["Tây Ban Nha", "Bồ Đào Nha", "Anh", "Mĩ"],
+    "answer": "Mĩ",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những đặc điểm nổi bật của chủ nghĩa tư bản độc quyền cuối thế kỉ XIX đầu thế kỉ XX là sự hình thành của các",
+    "options": ["công ty xuyên quốc gia", "tổ chức độc quyền", "tổ chức liên kết khu vực", "tổ chức liên kết quốc tế"],
+    "answer": "tổ chức độc quyền",
+    "difficulty": 1
+  },
+  {
+    "question": "Lĩnh vực nào sau đây là tiềm năng phát triển của chủ nghĩa tư bản hiện đại?",
+    "options": ["Chạy đua vũ trang", "Sự bình đẳng xã hội", "Cơ cấu giai cấp xã hội", "Khoa học – công nghệ."],
+    "answer": "Khoa học – công nghệ.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây tạo cơ sở cho bước chuyển biến của chủ nghĩa tư bản từ tự do cạnh tranh sang giai đoạn độc quyền?",
+    "options": ["Quá trình hợp tác ở các nước tư bản.", "Sự phát triển của các tổ chức độc quyền.", "Nhiều trung tâm kinh tế - tài chính ra đời.", "Sự ra đời nhiều tổ chức liên kết khu vực."],
+    "answer": "Sự phát triển của các tổ chức độc quyền.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây phản ánh không đúng đặc điểm của chủ nghĩa tư bản độc quyền?",
+    "options": ["Sự tập trung sản xuất và tư bản ở mức cao.", "Xuấtkhẩu tư bản đóng vai trò quan trọng.", "Đầu tư, hợp tác với các nước đang phát triển.", "Tăng cường phân chia lãnh thổ thế giới."],
+    "answer": "Đầu tư, hợp tác với các nước đang phát triển.",
+    "difficulty": 1
+  },
+  {
+    "question": "Sự phát triển của chủ nghĩa tư bản diễn ra theo trình tự nào sau đây?",
+    "options": ["CNTB tự do cạnh tranh => CNTB độc quyền => CNTB hiện đại.", "CNTB độc quyền => CNTB hiện đại => CNTB tự do cạnh tranh.", "CNTB tự do cạnh tranh => CNTB hiện đại => CNTB độc quyền.", "CNTB hiện đại => CNTB độc quyền => CNTB tự do cạnh tranh."],
+    "answer": "CNTB tự do cạnh tranh => CNTB độc quyền => CNTB hiện đại.",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những đặc trưng của chủ nghĩa tư bản hiện đại là",
+    "options": ["sự dung hợp tư bản ngân hàng với tư bản công nghiệp thành tư bản tài chính.", "xuất hiện các tổ chức độc quyền có vai trò quyết định trong sinh hoạt kinh tế.", "lực lượng lao động có nhiều chuyển biến về cơ cấu, chuyên môn, nghiệp vụ.", "các cường quốc tư bản lớn nhất đã chia nhau xong đất đai trên thế giới."],
+    "answer": "lực lượng lao động có nhiều chuyển biến về cơ cấu, chuyên môn, nghiệp vụ.",
+    "difficulty": 1
+  }
+],
+"k11_chude_2": [
+  {
+    "question": "Sau cách mạng tháng Hai năm 1917, giai cấp tư sản ở nước Nga đã thành lập",
+    "options": ["Chính phủ tư sản lâm thời", "Chính phủ dân tộc dân chủ", "Chính quyền Xô viết", "Chính phủ dân chủ cộng hòa"],
+    "answer": "Chính phủ tư sản lâm thời",
+    "difficulty": 1
+  },
+  {
+    "question": "Sau Cách mạng tháng Hai năm 1917, chính quyền cách mạng của quần chúng nhân dân được thiết lập ở nước Nga được gọi là",
+    "options": ["chính phủ tư sản lâm thời", "chính phủ dân tộc dân chủ", "chính quyền Xô viết", "chính phủ dân chủ cộng hòa"],
+    "answer": "chính quyền Xô viết",
+    "difficulty": 1
+  },
+  {
+    "question": "Đại hội Xô viết toàn Nga lần thứ hai họp (25/10/ 1917) đã tuyên bố",
+    "options": ["thành lập chính phủ Xô viết", "tham chiến chống Nhật ở châu Á.", "thành lập khối Đồng minh chống phát xít.", "thành lập chính phủ tư sản lâm thời."],
+    "answer": "thành lập chính phủ Xô viết",
+    "difficulty": 1
+  },
+  {
+    "question": "Ngay sau khi thành lập (1917), chính quyền Xô viết ở Nga do Lê-nin đứng đầu đã",
+    "options": ["ban hành “Sắc lệnh hoà bình” và “Sắc lệnh ruộng đất”.", "giúp đỡ các nước xã hội chủ nghĩa xây dựng đất nước.", "tiến hành công cuộc cải tổ toàn diện đất nước.", "lãnh đạo nhân dân lật đổ chế độ Nga hoàng."],
+    "answer": "ban hành “Sắc lệnh hoà bình” và “Sắc lệnh ruộng đất”.",
+    "difficulty": 1
+  },
+  {
+    "question": "Quốc gia nào sau đây đã thành lập nhà nước chuyên chính vô sản đầu tiên trên thế giới?",
+    "options": ["Trung Quốc.", "Pháp.", "Liên Xô.", "Mĩ."],
+    "answer": "Liên Xô.",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những quốc gia đầu tiên gia nhập Liên bang Cộng hoà xã hội chủ nghĩa Xô viết năm 1922 là",
+    "options": ["Nga.", "Nhật Bản.", "Campuchia.", "Lào."],
+    "answer": "Nga.",
+    "difficulty": 1
+  },
+  {
+    "question": "Cách mạng tháng Hai năm 1917 ở Nga đã lật đổ",
+    "options": ["chế độ quân chủ chuyên chế", "chế độ độc tài quân sự", "chính phủ tư sản lâm thời.", "Chính quyền Xô viết"],
+    "answer": "chế độ quân chủ chuyên chế",
+    "difficulty": 1
+  },
+  {
+    "question": "Năm 1924, Hiến pháp đầu tiên của Liên Xô đã",
+    "options": ["hoàn thành quá trình thành lập nhà nước Liên Xô", "kết thúc cuộc chiến tranh bảo vệ tổ quốc.", "giải quyết yêu cầu hòa bình cho nhân dân", "giải quyết vấn đề ruộng đất cho nông dân."],
+    "answer": "hoàn thành quá trình thành lập nhà nước Liên Xô",
+    "difficulty": 1
+  },
+  {
+    "question": "Sự ra đời của Liên bang cộng hòa xã hội chủ nghĩa Xô Viết (1922) đã",
+    "options": ["giải phóng các dân tộc trên toàn thế giới.", "liên kết phong trào công nhân các nươc tư bản.", "tạo sức mạnh tổng hợp để xây dựng đất nước.", "đập tan âm mưu xâm lược của các nước đế quốc."],
+    "answer": "tạo sức mạnh tổng hợp để xây dựng đất nước.",
+    "difficulty": 1
+  },
+  {
+    "question": "Lãnh đạo cách mạng tháng Mười Nga năm 1917 là",
+    "options": ["Các Mác.", "Ănghen.", "Xtalin.", "Lênin."],
+    "answer": "Lênin.",
+    "difficulty": 1
+  },
+  {
+    "question": "Liên bang Cộng hoà xã hội chủ nghĩa Xô viết được thành lập trong bối cảnh lịch sử nào sau đây?",
+    "options": ["Các nước cộng hòa Xô viết phát triển không đồng đều về kinh tế.", "Mâu thuẫn giữa các dân tộc Nga với chế độ Nga hoàng gay gắt.", "Các nước cộng hòa Xô Viết có sự thống nhất về chính sách phát triển.", "Mâu thuẫn giữa nước Nga với các nước cộng hòa Xô viết gay gắt."],
+    "answer": "Các nước cộng hòa Xô Viết có sự thống nhất về chính sách phát triển.",
+    "difficulty": 1
+  },
+  {
+    "question": "Đặc điểm nổi bật của tình hình nước Nga sau cách mạng tháng Hai năm 1917 là",
+    "options": ["hai chính quyền song song tồn tại.", "Nhân dân lên nắm chính quyền.", "ba chính quyền tồn tại đồng thời.", "giai cấp tư sản nắm chính quyền."],
+    "answer": "hai chính quyền song song tồn tại.",
+    "difficulty": 1
+  },
+  {
+    "question": "Mục tiêu của việc thành lập Liên bang Cộng hòa xã hội chủ nghĩa Xô viết là",
+    "options": ["chống lại sự tấn công của 14 nước đế quốc.", "thực hiện hiệu quả chính sách kinh tế mới.", "hợp tác, giúp đỡ lẫn nhau để cùng phát triển.", "chống lại cuộc tấn công của phát xít Đức."],
+    "answer": "hợp tác, giúp đỡ lẫn nhau để cùng phát triển.",
+    "difficulty": 1
+  },
+  {
+    "question": "Năm 1917, nước Nga diễn ra hai cuộc cách mạng xã hội đều gắn với sự lãnh đạo của",
+    "options": ["giai cấp tư sản.", "giai cấp vô sản.", "tiểu tư sản trí thức.", "địa chủ phong kiến."],
+    "answer": "giai cấp vô sản.",
+    "difficulty": 1
+  },
+  {
+    "question": "Cách mạng tháng Mười Nga năm 1917 đã",
+    "options": ["lật đổ được Chính phủ tư sản lâm thời.", "lật đổ được chế độ quân chủ chuyên chế.", "đưa nước Nga ra khỏi cuộc Chiến tranh thế giới.", "giải phóng các dân tộc khỏi chế độ tư bản chủ nghĩa."],
+    "answer": "lật đổ được Chính phủ tư sản lâm thời.",
+    "difficulty": 1
+  },
+  {
+    "question": "Năm 1922, Đại hội lần thứ nhất các Xô viết toàn Liên bang đã thông qua",
+    "options": ["Tuyên ngôn thành lập Cộng hòa xã hội chủ nghĩa Xô viết.", "Hiến pháp đầu tiến của Cộng hòa xã hội chủ nghĩa Xô viết.", "Cương lĩnh xây dựng đất nước tiến lên chủ nghĩa xã hội.", "Báo cáo chính trị và báo cáo sửa đổi điều lệ Đảng Cộng sản."],
+    "answer": "Tuyên ngôn thành lập Cộng hòa xã hội chủ nghĩa Xô viết.",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những tư tưởng chỉ đạo của Lê-nin trong việc thành lập Liên bang Cộng hòa xã hội chủ nghĩa Xô viết năm 1922 là",
+    "options": ["sự bình đẳng về mọi mặt.", "phân biệt về tôn giáo.", "đồng hóa về văn hóa.", "phân biệt về chủng tộc."],
+    "answer": "sự bình đẳng về mọi mặt.",
+    "difficulty": 1
+  },
+  {
+    "question": "Đối với Liên Xô, sự ra đời của Liên bang Cộng hoà xã hội chủ nghĩa Xô viết không có ý nghĩa nào sau đây?",
+    "options": ["Thể hiện sức mạnh đoàn kết, giúp đỡ nhau giữa các dân tộc Xô viết.", "Phù hợp với lợi ích chung của các dân tộc trên đất nước Xô viết.", "Tăng cường vị thế của Nhà nước Liên Xô trên trường quốc tế.", "Tạo tiền đề cho sự ra đời của hệ thống xã hội chủ nghĩa trên thế giới."],
+    "answer": "Tạo tiền đề cho sự ra đời của hệ thống xã hội chủ nghĩa trên thế giới.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây phản ánh đúng sự ra đời của Liên bang Cộng hòa xã hội chủ nghĩa Xô viết năm 1922?",
+    "options": ["Phù hợp với lợi ích chung của các dân tộc trên đất nước Xô viết.", "Phù hợp với xu thế phát triển chung của thế giới lúc bấy giờ.", "Đáp ứng được nhiệm vụ cấp bách trong đấu tranh chống ngoại xâm.", "Chưa phù hợp với nguyện vọng các dân tộc trên đất nước Xô viết."],
+    "answer": "Phù hợp với lợi ích chung của các dân tộc trên đất nước Xô viết.",
+    "difficulty": 1
+  },
+  {
+    "question": "Đối với thế giới, sự ra đời của Liên bang Cộng hoà xã hội chủ nghĩa Xô viết không có ý nghĩa nào sau đây?",
+    "options": ["Tăng cường vị thế của Nhà nước Liên Xô trên trường quốc tế.", "Cổ vũ mạnh mẽ phong trào giải phóng dân tộc trên thế giới", "Để lại nhiều bài học kinh nghiệm quý báu về mô hình nhà nước", "Chứng minh học thuyết Mác – Lênin là đúng đắn, khoa học"],
+    "answer": "Tăng cường vị thế của Nhà nước Liên Xô trên trường quốc tế.",
+    "difficulty": 1
+  },
+  {
+    "question": "Khi mới thành lập, Liên bang Cộng hòa xã hội chủ nghĩa Xô viết gồm 4 nước Cộng hòa là",
+    "options": ["Nga, U-crai-na, Bê-lô-rút-xi-a và Ngoại Cáp-ca-dơ.", "Nga, Hung-ga-ri, Bê-lô-rút-xi-a và Ngoại Cáp-ca-dơ.", "Nga, Hung-ga-ri, Bung-ra-ri và Ngoại Cáp-ca-dơ.", "Liên Xô, Hung-ga-ri, Bung-ra-ri và Ngoại Cáp-ca-dơ."],
+    "answer": "Nga, U-crai-na, Bê-lô-rút-xi-a và Ngoại Cáp-ca-dơ.",
+    "difficulty": 1
+  },
+  {
+    "question": "Thắng lợi nào sau đây dẫn đến sự ra đời của Nhà nước xã hội chủ nghĩa đầu tiên trên thế giới?",
+    "options": ["Cách mạng tháng Hai (1917) ở Nga.", "Cách mạng tháng Mười Nga (1917).", "Cách mạng Nga năm 1905 - 1907.", "Công xã Pa-ri năm 1871 ở Pháp."],
+    "answer": "Cách mạng tháng Mười Nga (1917).",
+    "difficulty": 1
+  },
+  {
+    "question": "Liên bang Cộng hòa xã hội chủ nghĩa Xô viết ra đời năm 1922 đã",
+    "options": ["đánh dấu Liên Xô hoàn thành công cuộc đấu tranh chống thù trong, giặc ngoài", "chứng tỏ chế độ quân chủ chuyên chế do Nga hoàng dứng đầu hoàn toàn sụp đổ", "đánh dấu sự xác lập chế độ xã hội chủ nghĩa trên toàn lãnh thổ Liên Xô rộng lớn", "đánh dấu Liên Xô đã hoàn thành công cuộc xây dựng chế độ xã hội chủ nghĩa"],
+    "answer": "đánh dấu sự xác lập chế độ xã hội chủ nghĩa trên toàn lãnh thổ Liên Xô rộng lớn",
+    "difficulty": 1
+  }
+],
+"k11_chude_3": [
+  {
+    "question": "Từ sau chiến tranh thế giới thứ nhất, cuộc đấu tranh giành độc lập dân tộc ở Đông Nam Á có điểm mới nào sau đây?",
+    "options": ["Xuất hiện và phát triển theo hai khuynh hướng cách mạng: tư sản và vô sản", "Xuất hiện và phát triển theo hai khuynh hướng cách mạng: phong kiến và tư sản", "Khuynh hướng vô sản được nối tiếp sau khi khuynh hướng tư sản đã thất bại", "Tận dụng thời cơ chiến tranh thế giới thứ nhất, nhiều nước đã tuyên bố độc lập"],
+    "answer": "Xuất hiện và phát triển theo hai khuynh hướng cách mạng: tư sản và vô sản",
+    "difficulty": 1
+  },
+  {
+    "question": "Từ thế kỉ XVI đến thế kỉ XIX, nhân dân In-đô-nê-xi-a đấu tranh chống lại  thực dân nào sau đây?",
+    "options": ["Hà Lan.", "Tây Ban Nha.", "Anh.", "Pháp."],
+    "answer": "Hà Lan.",
+    "difficulty": 1
+  },
+  {
+    "question": "Từ giữa thế kỷ XVI đến cuối thế kỷ XIX, nhân dân Phi-líp-pin đấu tranh   chống lại thực dân nào sau đây?",
+    "options": ["Tây Ban Nha.", "Bồ Đào Nha.", "Mĩ.", "Hà Lan."],
+    "answer": "Tây Ban Nha.",
+    "difficulty": 1
+  },
+  {
+    "question": "Từ nửa sau thế kỉ XIX, nhân dân ba nước Đông Dương đấu tranh chống kẻ thù xâm lược nào sau đây?",
+    "options": ["Anh.", "Pháp.", "Hà Lan.", "Tây Ban Nha"],
+    "answer": "Pháp.",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những cuộc khởi nghĩa tiêu biểu của nhân dân Cam – pu – chia chống lại thực dân xâm lược cuối thế kỉ XIX là",
+    "options": ["Khởi nghĩa của Hoàng thân  Xi – vô – tha", "Khởi nghĩa của nhà vua Nô – rô – đôm", "Khởi nghĩa của Hô – xê Ri – đan", "Khởi nghĩa của Hoàng tử Đi – pô – nê – gô - rô"],
+    "answer": "Khởi nghĩa của Hoàng thân  Xi – vô – tha",
+    "difficulty": 1
+  },
+  {
+    "question": "Điểm chung trong phong trào giải phóng dân tộc ở các nước Việt Nam, Lào, Cam -pu – chia cuối thế kỉ XIX là",
+    "options": ["theo khuynh hướng  tư sản", "theo khuynh hướng vô sản", "Theo khuynh hướng phong kiến", "Từng bước giành được thắng lợi"],
+    "answer": "Theo khuynh hướng phong kiến",
+    "difficulty": 1
+  },
+  {
+    "question": "Năm 1930, ở Đông Nam Á, quốc gia nào sau đây thành lập Đảng Cộng sản?",
+    "options": ["Việt Nam.", "In-đô-nê-xi-a.", "Thái Lan.", "Miến Điện"],
+    "answer": " Việt Nam.",
+    "difficulty": 1
+  },
+  {
+    "question": "Năm 1945, quốc gia giành độc lập sớm nhất ở Đông Nam Á là",
+    "options": ["Inđônêxia.", "Lào.", "Campuchia.", "Việt Nam."],
+    "answer": "Inđônêxia.",
+    "difficulty": 1
+  },
+  {
+    "question": "Năm 1945, ở Đông Nam Á, quốc gia nào sau đây đã tuyên bố độc lập?",
+    "options": ["In-đô-nê-xi-a.", "Cam-pu-chia.", "Phi-lip-pin.", "Mã Lai."],
+    "answer": "In-đô-nê-xi-a.",
+    "difficulty": 1
+  },
+  {
+    "question": "Năm 1975, nhân dân ba nước Đông Dương hoàn thành cuộc đấu tranh lật đổ ách thống trị của",
+    "options": ["thực dân Pháp.", "đế quốc Mĩ.", "thực dân Anh.", "thực dân Hà Lan."],
+    "answer": "đế quốc Mĩ.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nhận xét nào sau đây là đúng về phong trào đấu tranh giành độc lập ở Đông Nam Á giai đoạn 1945 – 1975?",
+    "options": ["Phong trào kháng chiến chống phát xít Nhật diễn ra mạnh mẽ", "Hai khuynh hướng cách mạng phong kiến và tư sản song song tồn tại", "Khuynh hướng vô sản thắng thế tuyệt đối ở tất cả các nước", "Hầu hết các nước hoàn thành cuộc đấu tranh giành độc lập"],
+    "answer": "Hầu hết các nước hoàn thành cuộc đấu tranh giành độc lập",
+    "difficulty": 1
+  },
+  {
+    "question": "Mục tiêu hàng đầu trong các phong trào đấu tranh của khu vực Đông Nam   Á sau Chiến tranh thế giới thứ hai là",
+    "options": ["giành độc lập dân tộc.", "đòi quyền tự do kinh doanh.", "đòi các quyền dân chủ, bình đẳng", "đòi quyền tự quyết dân tộc."],
+    "answer": "giành độc lập dân tộc.",
+    "difficulty": 1
+  },
+  {
+    "question": "Thắng lợi của nhân dân ba nước Đông Dương trong cuộc kháng chiến  chống Mĩ (1954 - 1975) đã",
+    "options": ["góp phần giải trừ chủ nghĩa thực dân trên thế giới.", "xóa bỏ trật tự \"hai cực\", \"hai phe\" sau nhiều thập kỉ.", "bảo vệ vững chắc thành quả cách mạng tháng Tám (1945).", "đánh dấu thất bại hoàn toàn của chủ nghĩa thực dân mới"],
+    "answer": " góp phần giải trừ chủ nghĩa thực dân trên thế giới ",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những cuộc khởi nghĩa tiêu biểu của nhân dân In – đô – nê – xi – a chống lại thực dân xâm lược cuối thế kỉ XIX là",
+    "options": ["Khởi nghĩa của La – pu – la – pu", "Khởi nghĩa của nhà vua Nô – rô – đôm", "Khởi nghĩa của Hô – xê Ri – đan", "Khởi nghĩa của Hoàng tử Đi – pô – nê – gô - rô"],
+    "answer": "Khởi nghĩa của Hoàng tử Đi – pô – nê – gô - rô",
+    "difficulty": 1
+  },
+  {
+    "question": "Từ cuối thế kỉ XIX, nhân dân Đông Nam Á      đã chuyển từ đấu tranh chống xâm lược sang đấu tranh",
+    "options": ["chống chế độ phân biệt chủng tộc.", "chống chế độ độc tài quân sự.", "chống phát xít, bảo vệ hòa bình", "chống thực dân giành độc lập."],
+    "answer": "chống thực dân giành độc lập.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây phản ánh đúng đặc điểm của phong trào đấu tranh giải phóng dân tộc ở Đông Nam Á sau chiến tranh thế giới thứ hai?",
+    "options": ["Phát triển đồng thời theo hai khuynh hướng tư sản và vô sản", "Khuynh hướng tư sản giành được thắng lợi ở tất cả các nước", "Khuynh hướng vô sản giành được thắng lợi ở tất cả các nước", "Đấu tranh bằng phương pháp hòa bình, bất hợp tác là chủ yếu"],
+    "answer": "Phát triển đồng thời theo hai khuynh hướng tư sản và vô sản",
+    "difficulty": 1
+  },
+  {
+    "question": "Từ năm 1945 đến 1954, nhân dân ba nước Đông Dương đấu tranh chống kẻ thù chung là",
+    "options": ["thực dân Pháp", "đế quốc Mĩ", "thực dân Anh", "phát xít Nhật"],
+    "answer": "thực dân Pháp",
+    "difficulty": 1
+  },
+  {
+    "question": "Tận dụng thời cơ Nhật đầu hàng Đồng minh không điều kiện (8/1945), quốc gia nào sau đây ở Đông Nam Á đã nổi dậy giành chính quyền và tuyên bố độc lập?",
+    "options": ["Lào.", "Phi-líp-pin.", "Thái Lan.", "Cam-pu-chia."],
+    "answer": "Lào.",
+    "difficulty": 1
+  },
+  {
+    "question": "Trong những năm cuối thế kỉ XIX - đầu thế kỉ XX, nhân dân Mi-an-ma nổi dậy đấu tranh chống lại ách cai trị của thực dân",
+    "options": ["Anh.", "Pháp.", "Tây Ban Nha.", "Hà Lan."],
+    "answer": "Anh.",
+    "difficulty": 1
+  },
+  {
+    "question": "Sau chiến tranh thế giới thứ hai, một số nước Đông Nam Á bắt đầu quá trình tái thiết đất nước nhằm mục đích nào sau đây?",
+    "options": ["Khắc phục hậu quả chiến tranh", "Xây dựng chủ nghĩa xã hội", "Xây dựng mô hình kinh tế tập trung", "Xóa bỏ chế độ phong kiến"],
+    "answer": "Khắc phục hậu quả chiến tranh",
+    "difficulty": 1
+  },
+  {
+    "question": "Thời kì đầu sau khi độc lập, để xây dựng và phát triển đất nước, nhóm các nước sáng lập ASEAN đã thực hiện  chính sách",
+    "options": ["công nghiệp hóa hướng tới xuất khẩu.", "công nghiệp hóa thay thế nhập khẩu", "công nghiệp hóa xã hội chủ nghĩa.", "ưu tiên phát triển công nghiệp nặng"],
+    "answer": "công nghiệp hóa thay thế nhập khẩu",
+    "difficulty": 1
+  },
+  {
+    "question": "Sau khi tuyên bố độc lập (1984), Brunây đặc biệt chú trọng phát triển  ngành kinh tế nào sau đây?",
+    "options": ["Chế biến dầu mỏ.", "Nông nghiệp.", "Điện hạt nhân.", "Công nghiệp vũ trụ."],
+    "answer": "Chế biến dầu mỏ.",
+    "difficulty": 1
+  },
+  {
+    "question": "Trong những năm 70 của thế kỉ XX, nhóm 5 nước sáng lập ASEAN đã  thực hiện chính sách kinh tế nào sau đây?",
+    "options": ["Công nghiệp hóa thay thế nhập khẩu.", "Công nghiệp hóa hướng tới xuất khẩu.", "Công nghiệp hóa xã hội chủ nghĩa.", "Xây dựng kinh tế kế hoạch hóa tập trung"],
+    "answer": "Công nghiệp hóa hướng tới xuất khẩu.",
+    "difficulty": 1
+  },
+  {
+    "question": "Cuối thế kỉ XIX - đầu thế kỉ XX, chính sách nào sau đây của chủ nghĩa thực dân là nguyên nhân sâu xa dẫn đến sự chia rẽ sâu sắc giữa các cộng đồng dân cư ở các nước Đông Nam Á?",
+    "options": ["Chính sách “chia để trị”.", "Chính sách ngu dân.", "Chính sách “Kinh tế chỉ huy”.", "Chính sách “Cướp ruộng”."],
+    "answer": "Chính sách “chia để trị”.",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những nhiệm vụ đặt ra cho các nước Đông Nam Á sau khi  giành độc lập là",
+    "options": ["tái thiết đất nước, khắc phục hậu quả chiến tranh.", "hợp tác, giúp đỡ nhau xây dựng chủ nghĩa xã hội", "liên minh quân sự chống lại các nước xã hội chủ nghĩa.", "nhanh chóng vươn lên phát triển kinh tế đứng đầu thế giới."],
+    "answer": "tái thiết đất nước, khắc phục hậu quả chiến tranh.",
+    "difficulty": 1
+  },
+  {
+    "question": "Trong quá trình thực hiện chiến lược công nghiệp hóa hướng tới xuất  khẩu, nhóm 5 nước sáng lập ASEAN đều",
+    "options": ["trở thành những con rồng kinh tế châu Á.", "trở thành những nước công nghiệp mới.", "có mậu dịch đối ngoại tăng trưởng mạnh.", "dẫn đầu thế giới về xuất khẩu gạo."],
+    "answer": "có mậu dịch đối ngoại tăng trưởng mạnh.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây phản ánh không đúng về chính sách công nghiệp hóa được nhóm 5 nước sáng lập ASEAN thực hiện trong những năm 60 của thế kỉ XX?",
+    "options": ["Tận dụng tốt nguồn vốn và công nghệ nước ngoài.", "Đẩy mạnh xuất khẩu, phát triển ngoại thương.", "Mở cửa kinh tế, thu hút vốn đầu tư nước ngoài.", "Từng bước giải quyết các vấn đề sắc tộc, tôn giáo."],
+    "answer": "Từng bước giải quyết các vấn đề sắc tộc, tôn giáo.",
+    "difficulty": 1
+  },
+  {
+    "question": "Các thành viên sáng lập tổ chức ASEAN (1967) gồm",
+    "options": ["Inđônêxia, Malaixia, Xingapo,Thái Lan, Brunây.", "Inđônêxia, Malaixia, Xingapo,Thái Lan, Philippin", "Inđônêxia, Malaixia, Xingapo,Thái Lan,Việt Nam.", "Inđônêxia, Malaixia, Xingapo, Thái Lan, Mianma"],
+    "answer": "Inđônêxia, Malaixia, Xingapo,Thái Lan, Philippin",
+    "difficulty": 1
+  },
+  {
+    "question": "Trong giai đoạn đầu sau khi giành được độc lập, nhóm các nước sáng lập ASEAN thực hiện chiến lược công nghiệp hóa thay thế nhập khẩu với mục tiêu",
+    "options": ["nhanh chóng xóa bỏ nghèo nàn, lạc hậu, xây dựng kinh tế tự chủ", "nhanh chóng phát triển công nghiệp nặng, hội nhập với thế giới", "phát triển công nghiệp hướng tới xuất khẩu, phát triển ngoại thương", "phát triển công nghiệp nhẹ, lấy thị trường bên ngoài làm chỗ dựa"],
+    "answer": "nhanh chóng xóa bỏ nghèo nàn, lạc hậu, xây dựng kinh tế tự chủ",
+    "difficulty": 1
+  },
+  {
+    "question": "Chính sách nô dịch, áp đặt văn hóa ngoại lai của thực dân phương Tây ở Đông Nam Á trong nhiều thế kỉ đã",
+    "options": ["làm cho các giá trị văn hóa truyền thống ở Đông Nam Á dần bị biến mất hoàn toàn", "khiến văn hóa, giáo dục các nước Đông Nam Á phát triển mạnh mẽ theo hương Tây hóa", "ảnh hưởng tiêu cực đến việc bảo vệ, phát huy giá trị văn hóa truyền thống Đông Nam Á", "dẫn đến sự chia rẽ sâu sắc giữa các cộng đồng dân cư Đông Nam Á về sắc tộc, tôn giáo"],
+    "answer": "ảnh hưởng tiêu cực đến việc bảo vệ, phát huy giá trị văn hóa truyền thống Đông Nam Á",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây không phải là tác động tích cực trong chính sách cai trị của thực dân phương Tây đối với khu vực Đông Nam Á?",
+    "options": ["du nhập nền sản xuất công nghiệp .", "gắn kết khu vực với thị trường thế giới.", "thúc đẩy phát triển một số yếu tố về văn hóa.", "các mâu thuẫn xã hội được giải quyết triệt để."],
+    "answer": "các mâu thuẫn xã hội được giải quyết triệt để.",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những tác động tiêu cực từ chính sách cai trị của thực dân phương Tây đến khu vực Đông Nam Á là",
+    "options": ["kinh tế phát triển với tốc độ nhanh, quy mô lớn.", "làm chia rẽ sâu sắc khối đoàn kết dân tộc", "đặt cơ sở hình thành nền văn hóa truyền thống.", "giải quyết triệt để các mâu thuẫn trong xã hội."],
+    "answer": "làm chia rẽ sâu sắc khối đoàn kết dân tộc",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây là một trong những chính sách phát triển kinh tế của ba nước Việt Nam, Lào, Cam-pu-chia được thực hiện từ những năm 80 của thế kỉ XX?",
+    "options": ["Lựa chọn con đường phát triển đất nước theo hướng xã hội chủ nghĩa.", "Tiến hành công nghiệp hóa, từng bước chuyển sang nền kinh tế thị trường.", "Đẩy mạnh xây dựng nền kinh tế kế hoạch hóa tập trung, quan liêu, bao cấp.", "Cải cách đất nước một cách toàn diện, trong đó đổi mới chính trị là trọng tâm."],
+    "answer": "Tiến hành công nghiệp hóa, từng bước chuyển sang nền kinh tế thị trường.",
+    "difficulty": 1
+  },
+  {
+    "question": "Chính sách bóc lột của các nước thực dân phương Tây đã làm cho kinh tế các nước Đông Nam Á",
+    "options": ["lạc hậu.", "hội nhập quốc tế.", "phát triển mạnh mẽ.", "khủng hoảng thừa."],
+    "answer": "lạc hậu.",
+    "difficulty": 1
+  }
+],
+"k11_chude_4": [
+  {
+    "question": "Chiến tranh bảo vệ Tổ quốc có vai trò quan trọng",
+    "options": ["trong việc hình thành và nâng cao lòng tự hào dân tộc.", "trong việc hình thành và phát triển truyền thống yêu nước.", "đối với sự sinh tồn và phát triển của quốc gia, dân tộc", "khơi dậy và củng cố tinh thần đoàn kết, lòng tự hào dân tộc."],
+    "answer": "đối với sự sinh tồn và phát triển của quốc gia, dân tộc",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những cuộc kháng chiến thắng lợi tiêu biểu của dân tộc Việt Nam trước Cách mạng tháng Tám năm 1945 là",
+    "options": ["kháng chiến chống quân Nam Hán thế kỉ X", "kháng chiến chống quân Triệu thế kỉ II TCN", "kháng chiến chống quân Minh thế kỉ XV", "kháng chiến chống thực dân Pháp thế kỉ XIX"],
+    "answer": "kháng chiến chống quân Minh thế kỉ XV",
+    "difficulty": 1
+  },
+  {
+    "question": "Trận quyết chiến chiến lược trong cuộc kháng chiến chống quân xâm lược Nam Hán năm 938 diễn ra tại",
+    "options": ["sông Bạch Đằng.", "sông Như Nguyệt.", "bến Đông Bộ Đầu.", "cửa ải Hàm Tử"],
+    "answer": "sông Bạch Đằng.",
+    "difficulty": 1
+  },
+  {
+    "question": "Trận quyết chiến chiến lược trong cuộc kháng chiến chống quân xâm lược Tống thời Lý diễn ra tại",
+    "options": ["sông Bạch Đằng.", "sông Như Nguyệt.", "đồn Ngọc Hồi - Đống Đa.", "bến Đông Bộ Đầu."],
+    "answer": "sông Như Nguyệt.",
+    "difficulty": 1
+  },
+  {
+    "question": "Trận quyết chiến chiến lược trong cuộc kháng chiến chống quân xâm lược Thanh năm 1789 diễn ra tại",
+    "options": ["sông Bạch Đằng.", "sông Như Nguyệt.", "đồn Ngọc Hồi - Đống Đa.", "cửa ải Chi Lăng"],
+    "answer": "đồn Ngọc Hồi - Đống Đa.",
+    "difficulty": 1
+  },
+  {
+    "question": "Lãnh đạo cuộc kháng chiến chống quân Nam Hán xâm lược năm 938 là",
+    "options": ["Ngô Quyền.", "Trần Hưng Đạo.", "Lê Lợi.", "Quang Trung - Nguyễn Huệ."],
+    "answer": "Ngô Quyền.",
+    "difficulty": 1
+  },
+  {
+    "question": "Lãnh đạo cuộc kháng chiến chống quân xâm lược Xiêm và Thanh cuối thế  kỉ XVIII là",
+    "options": ["Ngô Quyền.", "Trần Hưng Đạo.", "Lê Lợi.", "Nguyễn Huệ - Quang Trung."],
+    "answer": "Nguyễn Huệ - Quang Trung.",
+    "difficulty": 1
+  },
+  {
+    "question": "Cuộc khởi nghĩa nào sau đây của quân dân Việt Nam có đặc điểm độc đáo: sự khởi đầu và kết thúc cuộc khởi nghĩa là một hội thề lịch sử?",
+    "options": ["Khởi nghĩa Mai Thúc Loan", "Khởi nghĩa Hai Bà Trưng", "Khởi nghĩa Lam Sơn", "Khởi nghĩa Bà Triệu"],
+    "answer": "Khởi nghĩa Lam Sơn",
+    "difficulty": 1
+  },
+  {
+    "question": "Dòng sông nào sau đây ba lần ghi danh quân dân Việt Nam chiến thắng quân xâm lược?",
+    "options": ["Sông Đà", "Sông Bạch Đằng", "Sông Hồng", "Sông Mê – công"],
+    "answer": "Sông Bạch Đằng",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những cuộc kháng chiến không thành công của dân tộc Việt  Nam trước cách mạng tháng Tám năm 1945 là",
+    "options": ["kháng chiến chống quân Thanh thế kỉ XVIII", "kháng chiến chống quân Tống thế kỉ XI", "kháng chiến chống thực dân Pháp thế kỉ XIX", "kháng chiến chống quân Nam Hán thế kỉ X"],
+    "answer": "kháng chiến chống thực dân Pháp thế kỉ XIX",
+    "difficulty": 1
+  },
+  {
+    "question": "Lãnh đạo cuộc kháng chiến chống quân Tống xâm lược năm 981 là",
+    "options": ["Lý Thường Kiệt.", "Lê Hoàn.", "Ngô Quyền.", "Trần Quốc Tuấn."],
+    "answer": "Lê Hoàn.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây lý giải không đúng về nhận định: “Với vị trí địa chiến lược quan trọng, trong nhiều thế kỉ, Việt Nam là quốc gia thường xuyên trở thành đối tượng nhòm nhó, can thiệp và xâm lược của các thế lực bên ngoài”?",
+    "options": ["Nằm trên tuyến đường giao thông, giao thương lâu đời và quan trọng giữa các nước lớn", "Là trung tâm kinh tế - tài chính duy nhất của thế giới, nhiều nước lớn muốn giao thương", "Là địa bàn tiền tiêu của Đông Nam Á từ phía bắc, cửa ngõ tiến vào bán đảo Trung Ấn", "Liền kề Trung Quốc, án ngữ biển Đông, là cầu nối giữa Đông Nam Á lục địa với hải đảo"],
+    "answer": "Là trung tâm kinh tế - tài chính duy nhất của thế giới, nhiều nước lớn muốn giao thương",
+    "difficulty": 1
+  },
+  {
+    "question": "Năm 1258, trong cuộc kháng chiến chống quân Mông Cổ xâm lược, quân dân nhà Trần đã giành thắng lợi vang dội tại",
+    "options": ["Đông Bộ Đầu.", "sông Bạch Đằng.", "Chi Lăng - Xương Giang.", "sông Như Nguyệt."],
+    "answer": "Đông Bộ Đầu.",
+    "difficulty": 1
+  },
+  {
+    "question": "Năm 1285, trong cuộc kháng chiến chống quân Nguyên xâm lược, quân dân nhà Trần đã tổ chức phản công và giành thắng lợi ở",
+    "options": ["cửa Hàm Tử", "sông Như Nguyệt.", "ải Chi Lăng.", "sông Bạch Đằng"],
+    "answer": "cửa Hàm Tử",
+    "difficulty": 1
+  },
+  {
+    "question": "“Tiền Ngô vương có thể lấy quân mới họp của nước Việt ta mà đánh tan được trăm vạn quân của Lưu Hoằng Tháo, mở nước xưng vương, làm cho người phương Bắc không dám lại sang nữa. Có thể nói là một lần nổi giận mà yên được dân, mưu giỏi mà đánh cũng giỏi vậy. Tuy chỉ xưng vương, chưa lên ngôi đế, đổi niên hiệu nhưng chính thống của nước Việt ta, ngõ hầu đã nối lại được” Đoạn thông tin trên nhắc đến ý nghĩa lịch sử của cuộc kháng chiến nào sau đây?",
+    "options": ["Kháng chiến chống quân Thanh 1789", "Kháng chiến chống quân Nguyên 1258", "Kháng chiến chống quân Xiêm 1785", "Kháng chiến chống quân Nam Hán 938"],
+    "answer": "Kháng chiến chống quân Nam Hán 938",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây là nguyên nhân chủ quan dẫn đến thắng lợi của các cuộc kháng chiến bảo vệ Tổ quốc của nhân dân Việt Nam trước cách mạng Tháng Tám 1945?",
+    "options": ["Mục đích kháng chiến của ta là chính nghĩa.", "Kẻ thù gặp khó khăn trong quá trình xâm lược", "Lực lượng quân sự của ta lớn mạnh hơn kẻ thù.", "Ta nhận được ủng hộ, giúp đỡ to lớn từ bên ngoài."],
+    "answer": "Mục đích kháng chiến của ta là chính nghĩa.",
+    "difficulty": 1
+  },
+  {
+    "question": "Những câu thơ sau của thượng tướng Trần Quang Khải gợi đến cuộc kháng chiến nào sau đây?",
+    "options": ["Kháng chiến chống quân Nguyên 1258", "Kháng chiến chống quân Nguyên 1285", "Kháng chiến chống quân Nguyên 1287 – 1288", "Kháng chiến chống quân Tống 1075 – 1077"],
+    "answer": "Kháng chiến chống quân Nguyên 1285",
+    "difficulty": 1
+  },
+  {
+    "question": "Trần Quốc Tuấn đã tổng kết nguyên nhân thắng lợi của cuộc kháng chiến chống quân Mông – Nguyên như sau: “vì vua tôi đồng tâm, anh em hòa mục, cả nước nhà góp sức, giặc phải bị bắt”. Nguyên nhân thắng lợi mà Trần Quốc Tuấn nhắc đến ở đây là",
+    "options": ["Lòng yêu nước và tinh thần đoàn kết của dân tộc", "Sự chỉ huy tài tình của các tướng lĩnh", "Những khó khăn của kẻ thù trong quá trình xâm lược", "Các cuộc kháng chiến của ta đều chính nghĩa"],
+    "answer": "Lòng yêu nước và tinh thần đoàn kết của dân tộc",
+    "difficulty": 1
+  },
+  {
+    "question": "Những cuộc kháng chiến nào của nhân dân ta đã ghi dấu chiến công lừng lẫy trên sông Bạch Đằng?",
+    "options": ["Kháng chiến chống quân Nam Hán (938), kháng chiến chống quân Tống (981), kháng chiến chống quân Mông - Nguyên (1287 - 1288)", "Kháng chiến chống quân Nam Hán (938), kháng chiến chống quân Tống (981), kháng chiến chống quân  Xiêm (1785)", "Kháng chiến chống quân Nam Hán (938), kháng chiến chống quân Xiêm (1785), kháng chiến chống quân Thanh (1789)", "Kháng chiến chống quân Nam Hán (938), kháng chiến chống quân Nguyên (1285), kháng chiến chống quân Thanh (1789)"],
+    "answer": "Kháng chiến chống quân Nam Hán (938), kháng chiến chống quân Tống (981), kháng chiến chống quân Mông - Nguyên (1287 - 1288)",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây phản ánh đúng ý nghĩa của chiến thắng Bạch Đằng năm 938?",
+    "options": ["Lật đổ ách đô hộ của nhà Đường, mở ra thời đại độc lập, tự chủ của dân tộc.", "Đánh bại hoàn toàn tham vọng bành trướng của các triều đại phong kiến phương Bắc.", "Đánh bại hoàn toàn tham vọng bành trướng và ý chí xâm lược của quân Nam Hán.", "Mở đầu thời kì đấu tranh chống ách đô hộ của nhân dân ta thời Bắc thuộc."],
+    "answer": "Lật đổ ách đô hộ của nhà Đường, mở ra thời đại độc lập, tự chủ của dân tộc.",
+    "difficulty": 1
+  }
+],
+"k11_chude_5": [
+  {
+    "question": "Nhằm tăng cường sức mạnh quân sự để đối phó với cuộc xâm lược của nhà Minh cuối thế kỉ XIV, Hồ Quý Ly đã tiến hành",
+    "options": ["cải cách văn hoá, xã hội, giáo dục.", "xây dựng toà thành Tây Đô kiên cố.", "buộc vua Trần nhường ngôi cho mình.", "ban hành chính sách hạn điền, hạn nô."],
+    "answer": "xây dựng toà thành Tây Đô kiên cố.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nửa sau thế kỉ XIV, cuộc khởi nghĩa nông dân nào sau đây đã diễn chống lại nhà Trần?",
+    "options": ["Khởi nghĩa Ngô Bệ (Hải Dương).", "Khởi nghĩa Phan Bá Vành (Thái Bình).", "Khởi nghĩa Yên Thế (Bắc Giang).", "Khởi nghĩa Lam Sơn (Thanh Hoá)."],
+    "answer": "Khởi nghĩa Ngô Bệ (Hải Dương).",
+    "difficulty": 1
+  },
+  {
+    "question": "Năm 1400, Hồ Quý Ly buộc vua Trần nhường ngôi và lập ra triều đại",
+    "options": ["nhà Lê sơ.", "nhà Nguyễn.", "nhà Hồ.", "nhà Lý."],
+    "answer": "nhà Hồ.",
+    "difficulty": 1
+  },
+  {
+    "question": "Sau khi lên ngôi và lập ra nhà Hồ, Hồ Quý Ly đã tiếp tục",
+    "options": ["tổ chức kháng chiến chống quân Xiêm.", "tổ chức kháng chiến chống quân Thanh", "mở rộng lãnh thổ về phía Nam.", "tiến hành cuộc cải cách sâu rộng."],
+    "answer": "tiến hành cuộc cải cách sâu rộng.",
+    "difficulty": 1
+  },
+  {
+    "question": "Công cuộc cải cách của Hồ Quý Ly và triều đại nhà Hồ không bao gồm lĩnh vực nào sau đây?",
+    "options": ["Văn hoá - giáo dục.", "Chính trị - quân sự.", "Kinh tế - xã hội.", "Thể thao - du lịch."],
+    "answer": "Thể thao - du lịch.",
+    "difficulty": 1
+  },
+  {
+    "question": "Cuộc cải cách của Hồ Quý Ly tiến hành trong bối cảnh lịch sử nào sau đây?",
+    "options": ["Nước Đại Việt lâm vào khủng hoảng trầm trọng.", "Nhà Trần đang trong giai đoạn phát triển thịnh đạt.", "Giặc Tống sang xâm lược nước ta lần thứ nhất.", "Chế độ phong kiến Việt Nam phát triển đỉnh cao."],
+    "answer": "Nước Đại Việt lâm vào khủng hoảng trầm trọng.",
+    "difficulty": 1
+  },
+  {
+    "question": "Về kinh tế - xã hội, nhằm hạn chế sự phát triển của chế độ sở hữu ruộng đất lớn trong các điền trang, thái ấp của quý tộc, Hồ Quý Ly đã",
+    "options": ["cho phát hành tiền giấy.", "ban hành chính sách hạn điền.", "cải cách chế độ giáo dục.", "thống nhất đơn vị đo lường."],
+    "answer": "ban hành chính sách hạn điền.",
+    "difficulty": 1
+  },
+  {
+    "question": "Trong cải cách của Hồ Quý Ly, việc quy định số lượng gia nô được sở hữu của các vương hầu, quý tộc, quan lại được gọi là",
+    "options": ["phép hạn gia nô.", "chính sách hạn điền.", "chính sách quân điền.", "bình quân gia nô."],
+    "answer": "phép hạn gia nô.",
+    "difficulty": 1
+  },
+  {
+    "question": "Xây dựng nhiều thành luỹ kiên cố, chế tạo súng thần cơ, đóng thuyền chiến là nội dung cải cách của Hồ Quý Ly và triều Hồ về",
+    "options": ["kinh tế.", "văn hoá.", "quân sự.", "xã hội."],
+    "answer": "quân sự.",
+    "difficulty": 1
+  },
+  {
+    "question": "Hạn chế sự phát triển của Phật giáo, chấn chỉnh lại chế độ thi cử, đề cao chữ Nôm là nội dung cải cách của Hồ Quý Ly và triều Hồ về",
+    "options": ["kinh tế, xã hội.", "văn hoá, giáo dục.", "chính trị, quân sự.", "hành chính, pháp luật."],
+    "answer": "văn hoá, giáo dục.",
+    "difficulty": 1
+  },
+  {
+    "question": "Cuộc cải cách của Hồ Quý Ly và triều Hồ đã đề cao tư tưởng, tôn giáo nào sau đây?",
+    "options": ["Phật giáo.", "Đạo giáo.", "Nho giáo.", "Thiên chúa giáo."],
+    "answer": "Nho giáo.",
+    "difficulty": 1
+  },
+  {
+    "question": "Trong cải cách về văn hoá, Hồ Quý Ly khuyến khích và đề cao chữ viết nào sau đây?",
+    "options": ["Chữ Nôm.", "Chữ Hán.", "Chữ Latinh.", "Chữ Quốc ngữ."],
+    "answer": "Chữ Nôm.",
+    "difficulty": 1
+  },
+
+  {
+    "question": "Cuộc cải cách của vua Lê Thánh Tông được tiến hành trong bối cảnh lịch sử nào sau đây?",
+    "options": ["Nội bộ triều đình có nhiều mâu thuẫn, biến động.", "Nền kinh tế sa sút, nạn đói diễn ra thường xuyên", "Đất nước đứng trước nguy cơ bị nhà Minh xâm lược", "Chế độ phong kiến lâm vào khủng hoảng trầm trọng"],
+    "answer": "Nội bộ triều đình có nhiều mâu thuẫn, biến động.",
+    "difficulty": 1
+  },
+  {
+    "question": "Công cuộc cải cách của Lê Thánh Tông được tiến hành trên mọi lĩnh vực, nhưng tập trung chủ yếu vào lĩnh vực",
+    "options": ["kinh tế.", "giáo dục.", "hành chính.", "văn hóa."],
+    "answer": "hành chính.",
+    "difficulty": 1
+  },
+  {
+    "question": "Để quản lý đất nước, vua Lê Thánh Tông đã cho ban hành bộ luật nào sau đây?",
+    "options": ["Hình thư", "Quốc triều hình luật.", "Hình luật.", "Hoàng Việt luật lệ."],
+    "answer": "Quốc triều hình luật.",
+    "difficulty": 1
+  },
+  {
+    "question": "Trong lĩnh vực văn hóa, Lê Thánh Tông đặc biệt đề cao hệ tư tưởng",
+    "options": ["Phật giáo", "Đạo giáo", "Nho giáo", "Thiên chúa giáo"],
+    "answer": "Nho giáo",
+    "difficulty": 1
+  },
+  {
+    "question": "Ban cấp ruộng đất ruộng đất cho quý tộc, quan lại cao cấp từ nhất phẩm đến tứ phẩm là nội dung chủ yếu của chính sách cải cách nào sau đây của vua Lê Thánh Tông?",
+    "options": ["Quân điền", "Hạn điền", "Hạn nô", "Lộc điền"],
+    "answer": "Lộc điền",
+    "difficulty": 1
+  },
+  {
+    "question": "Ruộng đất công ở các làng xã thời Lê Thánh Tông được phân chia theo chế độ nào sau đây?",
+    "options": ["Điền trang.", "Lộc điền.", "Quân điền.", "Hạn điền"],
+    "answer": "Quân điền.",
+    "difficulty": 1
+  },
+  {
+    "question": "Dưới thời vua Lê Thánh Tông, hệ thống cơ quan phụ trách đạo thừa tuyên có tên gọi là",
+    "options": ["Tam ty", "Lục bộ", "Lục khoa", "Thông chính ty"],
+    "answer": "Tam ty",
+    "difficulty": 1
+  },
+  {
+    "question": "Năm 1471, vua Lê Thánh Tông cho lập thêm đạo thừa tuyên thứ 13 có tên gọi là",
+    "options": ["Hà Nội.", "Phú Xuân.", "Quảng Nam.", "Tây Đô."],
+    "answer": "Quảng Nam.",
+    "difficulty": 1
+  },
+  {
+    "question": "Trong cuộc cải cách thế kỉ XV, dưới đạo thừa tuyên, vua Lê Thánh Tông thiết lập hệ thống",
+    "options": ["phủ, huyện/châu, xã.", "tỉnh/thành phố, huyện, xã", "lộ, trấn, phủ, huyện/châu", "tỉnh, phủ, huyện, slàng."],
+    "answer": "phủ, huyện/châu, xã.",
+    "difficulty": 1
+  },
+  {
+    "question": "Dưới thời vua Lê Thánh Tông, hệ thống quan lại được tuyển chọn chủ yếu thông qua",
+    "options": ["dòng dõi tôn thất", "tiến cử", "giáo dục – khoa cử", "đề cử"],
+    "answer": "giáo dục – khoa cử",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây phản ảnh đúng mục đích cải cách của vua Lê Thánh Tông?",
+    "options": ["Tăng cường quyền lực của hoàng đế và củng cố bộ máy nhà nước", "Giải quyết tình trạng khủng hoảng trầm trọng của đất nước bấy giờ", "Biến nước ta trở thành cường quốc lớn mạnh hàng đầu trong khu vực.", "Tăng cường tiềm lực đất nước chuẩn bị đối phó với giặc ngoại xâm"],
+    "answer": "Tăng cường quyền lực của hoàng đế và củng cố bộ máy nhà nước",
+    "difficulty": 1
+  },
+  {
+    "question": "Để tập trung quyền lực vào nhà vua, Lê Thánh Tông đã",
+    "options": ["Bãi bỏ nhiều cơ quan, chức quan cũ", "Chú trọng đổi mới giáo dục khoa cử", "Ban hành chính sách hạn điền và hạn nô", "Coi trọng bảo vệ quyền lợi phụ nữ, trẻ em"],
+    "answer": "Bãi bỏ nhiều cơ quan, chức quan cũ",
+    "difficulty": 1
+  },
+  {
+    "question": "“Đây là một bộ luật đầy đủ… gồm hơn 700 điều, quy định khá đầy đủ tội danh và hình phạt liên quan đến hầu hết các hoạt động xã hội, bảo vệ quyền hành của giai cấp thống trị, một số quyền lợi chân chính của nhân dân và an ninh đất nước”. Nhận xét trên đề cập đến bộ luật nào sau đây?",
+    "options": ["Hình luật.", "Hình thư.", "Quốc triều hình luật.", "Hoàng Việt luật lệ."],
+    "answer": "Quốc triều hình luật.",
+    "difficulty": 1
+  },
+  {
+    "question": "Năm 1460, sau khi lên ngôi, vua Lê Thánh Tông đã tiến hành",
+    "options": ["cuộc cải cách trên nhiều lĩnh vực.", "mở cuộc tiến công sang Trung Quốc.", "công cuộc thống nhất đất nước.", "khuyến khích phát triển ngoại thương."],
+    "answer": "cuộc cải cách trên nhiều lĩnh vực.",
+    "difficulty": 1
+  },
+  {
+    "question": "Một trong những điểm mới và tiến bộ của bộ luật Quốc triều hình luật là",
+    "options": ["đề cao quyền tự do, dân chủ của nhân dân.", "bảo vệ tuyệt đối quyền và lợi ích của vua.", "bảo vệ quyền và lợi ích của quân cấm binh.", "bảo vệ quyền lợi và địa vị của người phụ nữ."],
+    "answer": "bảo vệ quyền lợi và địa vị của người phụ nữ.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây phản ánh đúng về chức năng của Lục bộ dưới thời vua Lê Thánh Tông?",
+    "options": ["Cơ quan giúp việc cho Lục Tự, Lục khoa", "Theo dõi, giám sát hoạt động của Lục khoa.", "Cơ quan cao cấp chủ chốt trong triều đình.", "Phụ trách hoạt động quân sự của nhà nước."],
+    "answer": "Cơ quan cao cấp chủ chốt trong triều đình.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây không phải là cải cách hành chính ở cấp trung ương của vua Lê Thánh Tông?",
+    "options": ["Chia đất nước thành 12 đạo thừa tuyên và phủ Trung Đô.", "Xóa bỏ hầu hết các chức quan đại thần có quyền lực lớn.", "Giữ lại một số ít quan đại thần cùng vua bàn việc khi cần.", "Tổ chức hoàn thiện cơ cấu, chức năng của Lục Bộ, Lục khoa"],
+    "answer": "Chia đất nước thành 12 đạo thừa tuyên và phủ Trung Đô.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây phản ánh đúng ý nghĩa cải cách của vua Lê Thánh Tông thế kỉ XV?",
+    "options": ["Nâng cao tiềm lực quốc gia, đẩy lùi nguy cơ ngoại xâm cận kề", "Đưa đất nước thoát khỏi tình trạng khủng hoảng trầm trọng", "Góp phần ổn định và phát triển kinh tế, văn hóa, xã hội Đại Việt", "Hoàn thành thống nhất đất nước về mặt lãnh thổ và hành chính"],
+    "answer": "Góp phần ổn định và phát triển kinh tế, văn hóa, xã hội Đại Việt",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây không phải là cải cách của vua Lê Thánh Tông trên lĩnh vực hành chính?",
+    "options": ["Thành lập Lục bộ đảm nhiệm công việc chủ yếu của quốc gia", "Tăng cường chế độ kiểm tra, giám sát lẫn nhau giữa các cơ quan", "Chia cả nước từ 5 đạo thành 12 đạo thừa tuyên và phủ Trung Đô", "Đề cao Nho giáo, đưa Nho giáo trở thành hệ tư tưởng độc tôn"],
+    "answer": "Đề cao Nho giáo, đưa Nho giáo trở thành hệ tư tưởng độc tôn",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây là cải cách của vua Lê Thánh Tông trên lĩnh vực văn hóa – giáo dục?",
+    "options": ["Quy định chặt chẽ chế độ khoa cử", "Thành lập Lục khoa giám sát Lục bộ", "Ban hành chế độ lộc điền và quân điền", "Hạn chế quyền lực của vương hầu, quý tộc"],
+    "answer": "Quy định chặt chẽ chế độ khoa cử",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây là cải cách của vua Lê Thánh Tông trên lĩnh vực quân đội, quốc phòng?",
+    "options": ["Bãi bỏ hầu hết các chức quan đại thần có quyền lực lớn", "Chú trọng xây dựng đội ngũ quan lại có phẩm chất tốt", "Chú trọng hoàn thiện hệ thống pháp luật quản lý đất nước", "Tổ chức các kì thi khảo võ nghệ để tuyển chọn tướng sĩ"],
+    "answer": "Tổ chức các kì thi khảo võ nghệ để tuyển chọn tướng sĩ",
+    "difficulty": 1
+  }
+],
+"k11_chude_6": [
+  {
+    "question": "Biển Đông là vùng biển thuộc",
+    "options": ["Ấn Độ Dương.", "Thái Bình Dương.", "Đại Tây Dương.", "Địa Trung Hải."],
+    "answer": "Thái Bình Dương.",
+    "difficulty": 1
+  },
+  {
+    "question": "Về vị trí địa lý, biển Đông được coi là cầu nối giữa Thái Bình Dương và",
+    "options": ["Bắc Băng Dương.", "Ấn Độ Dương.", "Đại Tây Dương.", "Địa Trung Hải."],
+    "answer": "Ấn Độ Dương.",
+    "difficulty": 1
+  },
+  {
+    "question": "Biển Đông là vùng biển chung của 9 quốc gia ở châu Á, trong đó có",
+    "options": ["Trung Quốc", "Lào", "Ấn Độ", "Nhật Bản"],
+    "answer": "Trung Quốc",
+    "difficulty": 1
+  },
+  {
+    "question": "Phía tây nam của biển Đông nối với biển An – đa – man của Ấn Độ Dương thông qua eo biển",
+    "options": ["La – li – man – tan", "Ma – lắc – ca", "Lu – dông", "Đài Loan"],
+    "answer": "Ma – lắc – ca",
+    "difficulty": 1
+  },
+  {
+    "question": "Tuyến đường vận tải quốc tế qua Biển Đông được coi là nhộn nhịp thứ 2  trên thế giới chỉ sau biển",
+    "options": ["Địa Trung Hải", "Hoa Đông.", "Caribê.", "Gia - va."],
+    "answer": "Địa Trung Hải",
+    "difficulty": 1
+  },
+  {
+    "question": "Eo biển Ma-lắc-ca là điểm điều tiết giao thông quan trọng bậc nhất ở châu lục nào sau đây?",
+    "options": ["Châu Âu.", "Châu Mĩ.", "Châu Phi.", "Châu Á."],
+    "answer": "Châu Á.",
+    "difficulty": 1
+  },
+  {
+    "question": "Biển Đông là một trong những biển lớn và là đường vận chuyển huyết mạch của khu vực",
+    "options": ["châu Á - Thái Bình Dương.", "Bắc Mĩ và eo biển Đan Mạch.", "châu Âu và mũi Hảo Vọng.", "châu Phi và châu Nam Cực."],
+    "answer": "châu Á - Thái Bình Dương.",
+    "difficulty": 1
+  },
+  {
+    "question": "Biển Đông có ảnh hưởng trực tiếp tới cuộc sống của người dân ở một số nước thuộc khu vực nào sau đây?",
+    "options": ["Châu Phi.", "Châu Mĩ.", "Châu Âu.", "Châu Á"],
+    "answer": "Châu Á",
+    "difficulty": 1
+  },
+  {
+    "question": "Biển Đông là vùng biển chung của 9 quốc gia ở châu Á, trong đó có",
+    "options": ["Ma – lai – xi - a", "Mĩ", "Liên bang Nga", "Mi – an - ma"],
+    "answer": "Ma – lai – xi - a",
+    "difficulty": 1
+  },
+  {
+    "question": "Các cảng biển lớn trên Biển Đông có vai trò nào sau đây?",
+    "options": ["Điểm trung chuyển của tàu thuyền.", "Nơi khai thác và chế biến dầu khí.", "Điểm tập trung phát triển du lịch.", "Nơi giải quyết các vấn đề xã hội."],
+    "answer": "Điểm trung chuyển của tàu thuyền.",
+    "difficulty": 1
+  },
+  {
+    "question": "Eo biển Ma – lắc – ca là điểm điều tiết giao thông đường biển quan trọng, kết nối nhiều nước châu Á, trong đó có 3 nước đông dân của thế giới là In – đô – nê – xi – a, Trung Quốc và",
+    "options": ["Ai Cập", "Liên bang Nga", "Ấn Độ", "Mông Cổ"],
+    "answer": "Ấn Độ",
+    "difficulty": 1
+  },
+  {
+    "question": "Vùng biển nào sau đây là tuyến đường di chuyển ngắn nhất nối Thái Bình Dương và Ấn Độ Dương?",
+    "options": ["Biển Địa Trung Hải.", "Biển Đông.", "Biển Đỏ.", "Biển Đen."],
+    "answer": "Biển Đông.",
+    "difficulty": 1
+  },
+  {
+    "question": "Trong lịch sử, Biển Đông được coi là tuyến đường thiết yếu trong giao thông, giao thương, di cư,…giữa",
+    "options": ["Trung Quốc và Nhật Bản", "Trung Quốc và Đông Á", "Ấn Độ và Nam Á", "Ấn Độ và Trung Quốc"],
+    "answer": "Ấn Độ và Trung Quốc",
+    "difficulty": 1
+  },
+  {
+    "question": "Các quốc gia ở khu vực nào sau đây có nền kinh tế gắn trực tiếp với con đường thương mại, hệ thống cảng biển và tài nguyên trên Biển Đông?",
+    "options": ["Đông Bắc Á và Tây Âu", "Đông Bắc Á và Đông Nam Á", "Đông Nam Á và Nam Á", "Nam Á và Tây Á"],
+    "answer": "Đông Nam Á và Nam Á",
+    "difficulty": 1
+  },
+  {
+    "question": "Ở Biển Đông, nguồn tài nguyên thiên nhiên nào sau đây có trữ lượng vào loại lớn nhất thế giới?",
+    "options": ["Muối biển.", "Băng cháy.", "Dầu khí.", "Quặng sắt."],
+    "answer": "Dầu khí.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây không phản ánh đúng vai trò quan trọng của Biển Đông về mặt kinh tế?",
+    "options": ["Biển Đông là nơi diễn ra quá trình giao thoa của nhiều nền văn hóa lớn", "Biển Đông là tuyến đường vận tải hàng hải nhộn nhịp thứ hai thế giới", "Các nước Đông Nam Á ven biển hưởng lợi trực tiếp về kinh tế từ biển Đông", "Các nước ven biển Đông có hoạt động khai thác hải sản và dầu khí sôi động"],
+    "answer": "Biển Đông là nơi diễn ra quá trình giao thoa của nhiều nền văn hóa lớn",
+    "difficulty": 1
+  },
+  {
+    "question": "Ngành kinh tế nào sau đây của Biển Đông được đẩy mạnh nhờ hệ sinh vật đa dạng dưới đáy biển và cảnh quan thiên nhiên tươi đẹp?",
+    "options": ["Du lịch biển.", "Nuôi trồng thủy, hải sản.", "Khai thác khoáng sản.", "Đánh bắt cá."],
+    "answer": "Du lịch biển.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nguồn tài nguyên khoáng sản đa dạng  trên biển Đông là điều kiện thuận lợi để các nước",
+    "options": ["kiểm soát, đảm bảo an ninh giao thông trên biển.", "xây dựng cơ sở hậu cần, kỹ thuật, phục vụ quân sự.", "phát triển hoạt động kinh tế có tầm chiến lược.", "xây dựng các trạm thông tin, trạm dừng chân."],
+    "answer": "phát triển hoạt động kinh tế có tầm chiến lược.",
+    "difficulty": 1
+  },
+  {
+    "question": "Quần đảo Hoàng Sa và quần đảo Trường Sa thuộc chủ quyền của quốc gia nào sau đây?",
+    "options": ["Trung Quốc.", "Hàn Quốc.", "Việt Nam.", "Nhật Bản."],
+    "answer": "Việt Nam.",
+    "difficulty": 1
+  },
+
+  {
+    "question": "Khu vực nào của Việt Nam không giáp với Biển Đông?",
+    "options": ["Tây Bắc.", "Đông Bắc.", "Tây Nam.", "Đông Nam."],
+    "answer": "Tây Bắc.",
+    "difficulty": 1
+  },
+  {
+    "question": "Bờ biển nước ta dài khoảng 3260 km, kéo dài từ",
+    "options": ["tỉnh Quảng Ninh đến tỉnh Kiên Giang.", "tỉnh Quảng Ninh đến tỉnh An Giang", "tỉnh Thái Bình đến tỉnh Cà Mau.", "tỉnh Nam định đến tỉnh Bình Thuận."],
+    "answer": "tỉnh Quảng Ninh đến tỉnh Kiên Giang.",
+    "difficulty": 1
+  },
+  {
+    "question": "Nội dung nào sau đây phản ánh đúng tầm quan trọng của Biển Đông về  quốc phòng, an ninh đối với Việt Nam?",
+    "options": ["Tạo điều kiện thuận lợi phát triển kinh tế biển đa dạng", "Là cửa ngõ, tuyến phòng thủ bảo vệ đất liền từ xa.", "Là con đường giao thương giữa các vùng trong cả nước.", "Tạo thuận lợi cho Việt Nam phát triển thương mại hàng hải"],
+    "answer": "Là cửa ngõ, tuyến phòng thủ bảo vệ đất liền từ xa.",
+    "difficulty": 1
+  },
+  {
+    "question": "Biển Đông nước ta góp phần quan trọng vào việc phát triển các ngành kinh tế trọng điểm, ngoại trừ",
+    "options": ["nông nghiệp trồng lúa nước.", "thương mại hàng hải.", "nuôi trồng thủy sản.", "du lịch - dịch vụ."],
+    "answer": "nông nghiệp trồng lúa nước.",
+    "difficulty": 1
+  },
+  {
+    "question": "Về quốc phòng, an ninh, tầm quan trọng của Biển Đông đối với Việt Nam được thể hiện ở điểm nào sau đây?",
+    "options": ["Là nơi có trữ lượng dầu khí lớn nhất thế giới.", "Là nơi có nguồn tài nguyên sinh vật đa dạng.", "Là khu vực tập trung các tuyến đường chiến lược.", "Là tuyến phòng thủ từ phía đông của đất nước."],
+    "answer": "Là tuyến phòng thủ từ phía đông của đất nước.",
+    "difficulty": 1
+  }
+]
 }
