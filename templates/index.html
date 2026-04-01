@@ -59,7 +59,7 @@
             const chatbox = document.getElementById("chatbox");
             const msg = document.createElement("div");
             msg.classList.add("message", sender);
-            msg.textContent = message;
+            msg.innerHTML = message.replace(/\n/g, "<br>");
             chatbox.appendChild(msg);
             chatbox.scrollTop = chatbox.scrollHeight;
         }

@@ -164,9 +164,9 @@ def build_prompt(topic, context_data, user_input, is_first_message=False):
     context_summary = context_data[:1500] if context_data else ""
     
     if topic == "tam_li":
-        intro = "Chào bạn, tôi là trợ lý AI Tâm An chuyên gia về lĩnh vực tâm lí.\n\n" if is_first_message else ""
+        intro = "Chào bạn, tôi là trợ lý AI Tâm An chuyên gia về lĩnh vực tâm lý.\n\n" if is_first_message else ""
         return (
-            f"tôi là trợ lý AI Tâm An chuyên về lĩnh vực tâm lí.\n"
+            f"tôi là trợ lý AI Tâm An chuyên về lĩnh vực tâm lý.\n"
             f"Dữ liệu tham khảo:\n{context_summary}\n\n"
             f"QUY TẮC BẮT BUỘC:\n"
             f"- Gõ đúng chính tả, ĐẦY ĐỦ DẤU TIẾNG VIỆT.\n"
@@ -194,6 +194,7 @@ def build_prompt(topic, context_data, user_input, is_first_message=False):
             f"- Dùng dữ liệu nếu có, không thì dùng kiến thức chung\n"
             f"- KHÔNG nói 'xin lỗi, không biết'\n"
             f"- Trò chuyện tự nhiên, không rập khuôn\n\n"
+            f"- Câu đầu tiên: giới thiệu. Từ câu 2 trở đi: không cần giới thiệu lại\n\n"
             f"{intro}Câu hỏi: {user_input}\n"
             f"Trả lời: (nhớ xuống dòng rõ ràng)"
         )
@@ -210,18 +211,20 @@ def build_prompt(topic, context_data, user_input, is_first_message=False):
             f"- Dùng dữ liệu nếu có, không thì đưa ra lời khuyên từ kiến thức chung\n"
             f"- KHÔNG từ chối trả lời\n"
             f"- Trò chuyện tự nhiên\n\n"
+            f"- Câu đầu tiên: giới thiệu. Từ câu 2 trở đi: không cần giới thiệu lại\n\n"
             f"{intro}Câu hỏi: {user_input}\n"
             f"Trả lời: (viết văn xuôi tự nhiên, xuống dòng các ý)"
         )
     else:
-        intro = "Chào bạn, tôi là trợ lý AI của cô Tâm An.\n\n" if is_first_message else ""
+        intro = "Chào bạn, tôi là trợ lý AI - chuyên gia tâm lý.\n\n" if is_first_message else ""
         return (
-            f"Bạn là trợ lý AI thân thiện.\n"
+            f"Bạn là trợ lý AI thân thiện, chuyên hỗ trợ tư vấn tâm lý.\n"
             f"Dữ liệu tham khảo:\n{context_summary}\n\n"
             f"QUY TẮC:\n"
             f"- Trả lời ngắn gọn nhưng đầy đủ kiến thức, tự nhiên, thân thiện\n"
             f"- Dùng cả dữ liệu và kiến thức chung\n"
             f"- KHÔNG từ chối hay xin lỗi khi không có dữ liệu\n\n"
+            f"- Câu đầu tiên: giới thiệu. Từ câu 2 trở đi: không cần giới thiệu lại\n\n"
             f"{intro}Câu hỏi: {user_input}\n"
             f"Trả lời:"
         )
@@ -720,52 +723,65 @@ def chatbot_page():
 def chat_stream():
     data = request.get_json()
     user_message = data.get("message", "").strip()
-    
+
     if not user_message:
         return jsonify({"error": "Không có tin nhắn"}), 400
+
+    def format_text(text):
+        """Format lại toàn bộ câu trả lời cho dễ đọc"""
+    # 1. Chỉ bắt 1. 2. 3.
+    text = re.sub(r'(?<!\n)(?<!\d)(\d{1,2}\.)', r'\n\n\1', text)
+
+    # 2. Không xuống dòng nếu là số năm như 2018.
+    text = re.sub(r'(?<!\d)([.!?])\s+', r'\1\n\n', text)
+
+    # 3. Clean markdown
+    text = re.sub(r'#{1,6}\s*', '', text)
+    text = text.replace('**', '')
+    return text.strip()
     
     def generate():
         try:
+            # ====== SESSION ======
             if 'chat_history' not in session:
                 session['chat_history'] = []
-            
+
             chat_history = session['chat_history']
-            
+
+            # ====== INTRO ======
             is_first = len(chat_history) == 0
             intro = "Chào bạn, tôi là trợ lý AI của cô Phạm Hằng về lịch sử.\n\n" if is_first else ""
-            
+
+            # ====== CONTEXT ======
             context = ""
             if len(chat_history) > 0:
-                recent_history = chat_history[-6:]
+                recent = chat_history[-6:]
                 context = "Lịch sử hội thoại:\n"
-                for i in range(0, len(recent_history), 2):
-                    if i+1 < len(recent_history):
-                        context += f"Người dùng: {recent_history[i]}\nTrợ lý: {recent_history[i+1]}\n"
+                for i in range(0, len(recent), 2):
+                    if i + 1 < len(recent):
+                        context += f"Người dùng: {recent[i]}\nTrợ lý: {recent[i+1]}\n"
                 context += "\n"
-            
+
+            # ====== PROMPT ======
             prompt = f"""
-Bạn là trợ lý AI thông minh của cô Phạm Hằng, giáo viên dạy học môn lịch sử, có kiến thức chuyên môn sâu rộng, kiến thức lịch sử chính xác.
-Dữ liệu tham khảo (ưu tiên nếu liên quan):
-{custom_data[:1500]}
+Bạn là trợ lý AI thông minh của cô Phạm Hằng, giáo viên dạy học môn lịch sử, có trình độ thạc sĩ trở lên, kiến thức chuyên môn sâu rộng, kiến thức lịch sử chính xác, hỗ trợ giải đáp câu hỏi về Lịch sử, kiến thức để học sinh học tập, kiến thức tham gia kỳ thi tốt nghiệp THPT
+Bạn trả lời các câu hỏi một cách ngắn gọn, dễ hiểu, khoa học, lập luận chặt chẽ, logic và chuẩn kiến thức của chương trình giáo dục phổ thông 2018. Trình bày thành các đoạn, các ý xuống dòng cho học sinh dễ đọc, dễ nhìn.
+
+YÊU CẦU TRÌNH BÀY:
+- Chỉ ghi là kỳ thi Tốt nghiệp THPT, nếu ghi năm phải đúng năm hiện tại
+- Viết ngắn gọn, rõ ràng
+- Chia đoạn hợp lý
+- Mỗi ý cách nhau 1 dòng trống
+- Không viết 1 đoạn dài
+- Xuống dòng sau mỗi ý quan trọng
 
 {context}
-QUY TẮC BẮT BUỘC:
-- Viết đúng chính tả, ĐẦY ĐỦ DẤU TIẾNG VIỆT.
-- Phân chia đoạn văn thành các đoạn nhỏ rõ ràng, nhớ xuống dòng giữa các ý.
-- Ưu tiên dùng dữ liệu trên nếu câu hỏi liên quan
-- Nếu không có trong dữ liệu, TỰ TIN trả lời bằng kiến thức tổng quát của bạn nhưng phải đảm bảo đúng chương trình giáo dục phổ thông 2018
-- TUYỆT ĐỐI KHÔNG nói "xin lỗi, không có dữ liệu" hay "nằm ngoài phạm vi kiến thức"
-- Trả lời tự nhiên, thân thiện như một cuộc trò chuyện thực tế
-- Nếu hỏi tiếp về câu trước, hãy dựa vào lịch sử hội thoại để trả lời liền mạch
-- Nếu họ dùng tiếng Việt thì trả lời bằng tiếng Việt
-- Chỉ giới thiệu ở câu đầu tiên, từ câu 2 trở đi trò chuyện bình thường không giới thiệu lại nữa
-- KHÔNG dùng markdown format (###, ***, **, -, •)
-- Trả lời dạng văn xuôi tự nhiên, xuống dòng thành các đoạn logic, dễ nhìn.
+{intro}Câu hỏi: {user_message}
 
-{intro}Câu hỏi hiện tại: {user_message}
 Trả lời:
 """
-            
+
+            # ====== CALL MODEL ======
             response = get_model('lichsu').generate_content(
                 prompt,
                 stream=True,
@@ -775,38 +791,39 @@ Trả lời:
                     "max_output_tokens": 1024,
                 }
             )
-            
-            chat_history.append(user_message)
+
+            # ====== STREAM ======
             full_response = ""
-            
+            chat_history.append(user_message)
+
             for chunk in response:
                 if chunk.text:
-                    clean_text = chunk.text
-                    clean_text = re.sub(r'#{1,5}\s?', '', clean_text)
-                    clean_text = clean_text.replace('**', '')
-                    clean_text = clean_text.replace('* ', '\n- ')
-                    clean_text = clean_text.replace('• ', '\n- ')
-                    
-                    full_response += clean_text
-                    data = json.dumps({"text": clean_text}, ensure_ascii=False)
+                    full_response += chunk.text
+
+                    # stream text thô (không format)
+                    data = json.dumps({"text": chunk.text}, ensure_ascii=False)
                     yield f"data: {data}\n\n"
-            
-            # Xử lý xuống dòng trước số thứ tự sau khi có full text
-            full_response = re.sub(r'(?<!\n)(\d+\.)', r'\n\n\1', full_response)
-            chat_history.append(full_response)
-            
+
+            # ====== FORMAT SAU CÙNG ======
+            formatted = format_text(full_response)
+
+            chat_history.append(formatted)
+
+            # Giữ tối đa 20 lượt
             if len(chat_history) > 20:
                 chat_history = chat_history[-20:]
-            
+
             session['chat_history'] = chat_history
             session.modified = True
-            
+
+            # gửi bản đã format (optional)
+            yield f"data: {json.dumps({'formatted': formatted}, ensure_ascii=False)}\n\n"
+
             yield f"data: {json.dumps({'done': True})}\n\n"
-            
+
         except Exception as e:
-            error_msg = f"Lỗi: {str(e)}"
-            yield f"data: {json.dumps({'error': error_msg}, ensure_ascii=False)}\n\n"
-    
+            yield f"data: {json.dumps({'error': str(e)}, ensure_ascii=False)}\n\n"
+
     return Response(
         stream_with_context(generate()),
         mimetype='text/event-stream',
@@ -816,7 +833,6 @@ Trả lời:
             'Connection': 'keep-alive'
         }
     )
-
 @app.route("/chat", methods=["POST"])
 def chat():
     user_message = request.json.get("message", "")
@@ -826,7 +842,7 @@ def chat():
     
     chat_history = session['chat_history']
     is_first = len(chat_history) == 0
-    intro = "Chào bạn, tôi là trợ lý AI của cô Phạm Hằng về lịch sử.\n\n" if is_first else ""
+    intro = "Chào bạn, tôi là trợ lý AI của cô Phạm Hằng - giáo viên dạy môn Lịch sử.\n\n" if is_first else ""
     
     context = ""
     if len(chat_history) > 0:
@@ -838,7 +854,8 @@ def chat():
         context += "\n"
     
     prompt = f"""
-Bạn là trợ lý AI thông minh của cô Phạm Hằng, giáo viên dạy môn lịch sử, có kiến thức chuyên môn sâu rộng.
+Bạn là trợ lý AI thông minh của cô Phạm Hằng, giáo viên dạy học môn lịch sử, có trình độ thạc sĩ trở lên, kiến thức chuyên môn sâu rộng, kiến thức lịch sử chính xác, hỗ trợ giải đáp câu hỏi về Lịch sử, kiến thức để học sinh học tập, kiến thức tham gia kỳ thi tốt nghiệp THPT
+Bạn trả lời các câu hỏi một cách ngắn gọn, dễ hiểu, khoa học, lập luận chặt chẽ, logic và chuẩn kiến thức của chương trình giáo dục phổ thông 2018. Trình bày thành các đoạn, các ý xuống dòng cho học sinh dễ đọc, dễ nhìn. Chỉ ghi là kỳ thi Tốt nghiệp THPT, nếu ghi năm phải đúng năm hiện tại
 Dữ liệu tham khảo (ưu tiên nếu liên quan):
 {custom_data[:1500]}
 
@@ -1339,7 +1356,6 @@ Em đánh giá như thế nào về cuộc cải cách của vua Lê Thánh Tôn
 - Các chính sách kinh tế đã góp phần khẳng định quyền sở hữu tối cao của Nhà nước tạo nền tảng cho kinh tế nông nghiệp phát triển. 0,25 điểm
 - Chính sách giáo dục, khoa cử đã đào tạo được hệ thống quan lại trí thức có tài, đủ năng lực quản lí đất nước. 0,25 điểm
 
-
 Câu 2 (2 điểm): Trình bày một số biện pháp cải cách hành chính của vua Minh Mạng. Theo em, những bài học kinh nghiệm nào từ cuộc cải cách của vua Minh Mạng có thể áp dụng vào việc xây dựng nền hành chính Việt Nam hiện đại? 
 Trình bày một số biện pháp cải cách hành chính của vua Minh Mạng (1,5 điểm)
 ♦ Ở trung ương:
@@ -1559,17 +1575,17 @@ def dich_vu():
     # Dữ liệu các cơ sở y tế
     co_so_y_te = [
         {
-            'ten': 'Công ty CP Tham vấn, Nghiên cứu và Tâm lý học Cuộc sống - SHARE',
-            'dia_chi': '31 Ngõ 84 Trần Quang Diệu, Quang Trung, Đống Đa, Hà Nội',
-            'dien_thoai': '024 22116989',
-            'website': 'tuvantamly.com.vn',
-            'loai': 'Tư vấn tâm lý'
+            'ten': 'Bệnh viện Sức khỏe Tâm thần Bắc Ninh số 1',
+            'dia_chi': 'số 166, đường Thân Khuê, phường Đa Mai, tỉnh Bắc Ninh',
+            'dien_thoai': '0204.3854608',
+            'website': 'https://bvsktamthanbacninh1.com/',
+            'loai': 'Bệnh viện tâm thần'
         },
         {
-            'ten': 'Bệnh viện Tâm thần ban ngày Mai Hương',
-            'dia_chi': '4 Hồng Mai, Bạch Mai, Hai Bà Trưng, Hà Nội',
-            'dien_thoai': '024 3627 5762',
-            'website': 'http://www.maihuong.gov.vn/',
+            'ten': 'Bệnh viện Sức khỏe tâm thần Bắc Ninh số 2',
+            'dia_chi': 'đường Trần Bá Linh, Phường Vũ Ninh, Bắc Ninh',
+            'dien_thoai': '02223.825515',
+            'website': 'https://www.bacninh.gov.vn/web/bvsktt',
             'loai': 'Bệnh viện tâm thần'
         },
         {
