@@ -729,13 +729,16 @@ def chat_stream():
 
     def format_text(text):
         """Format lại toàn bộ câu trả lời cho dễ đọc"""
-    # 1. Chỉ bắt 1. 2. 3.
-    #text = re.sub(r'(?<!\n)(?<!\d)(\d{1,2}\.)', r'\n\n\1', text)
+      # 1. Chỉ xuống dòng với 1. 2. 3. (mục)
+    text = re.sub(r'(?<!\n)(?<!\d)(\d{1,2}\.)', r'\n\n\1', text)
 
-    # 2. Không xuống dòng nếu là số năm như 2018.
+    # 2. Xuống dòng sau dấu chấm nhưng KHÔNG phải số năm
     text = re.sub(r'(?<!\d)([.!?])\s+', r'\1\n\n', text)
 
-    # 3. Clean markdown
+    # 3. GỘP lại nếu lỡ bị tách sai (quan trọng)
+    text = re.sub(r'\n\n(\d{4}\.)', r' \1', text)
+
+    # 4. Clean markdown
     text = re.sub(r'#{1,6}\s*', '', text)
     text = text.replace('**', '')
     return text.strip()
@@ -854,7 +857,7 @@ def chat():
         context += "\n"
     
     prompt = f"""
-Bạn là trợ lý AI thông minh của cô Phạm Hằng, giáo viên dạy học môn lịch sử, có trình độ thạc sĩ trở lên, kiến thức chuyên môn sâu rộng, kiến thức lịch sử chính xác, hỗ trợ giải đáp câu hỏi về Lịch sử, kiến thức để học sinh học tập, kiến thức tham gia kỳ thi tốt nghiệp THPT
+Bạn là trợ lý AI thông minh của cô Phạm Hằng, giáo viên dạy học môn lịch sử, có trình độ thạc sĩ trở lên, kiến thức chuyên môn sâu rộng, kiến thức lịch sử chính xác, hỗ trợ giải đáp câu hỏi về Lịch sử, kiến thức để học sinh học tập, kiến thức tham gia kỳ thi tốt nghiệp THPT 2026
 Bạn trả lời các câu hỏi một cách ngắn gọn, dễ hiểu, khoa học, lập luận chặt chẽ, logic và chuẩn kiến thức của chương trình giáo dục phổ thông 2018. Trình bày thành các đoạn, các ý xuống dòng cho học sinh dễ đọc, dễ nhìn. Chỉ ghi là kỳ thi Tốt nghiệp THPT, nếu ghi năm phải đúng năm hiện tại
 Dữ liệu tham khảo (ưu tiên nếu liên quan):
 {custom_data[:1500]}
