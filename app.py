@@ -79,25 +79,43 @@ class _FakeResponse:
 def generate_with_retry(prompt_or_parts, feature=None, max_retries=None):
     """
     Gọi OpenRouter AI với tự động retry khi bị lỗi quota.
-    Hỗ trợ prompt dạng string hoặc list (text-only).
+    Hỗ trợ prompt dạng:
+      - string: gửi thẳng
+      - list: có thể chứa str và PIL.Image (vision)
+    Ảnh PIL được encode base64 JPEG → gửi dạng image_url (OpenAI vision format).
     """
     if max_retries is None:
         max_retries = max(len(OPENROUTER_KEYS), 3)
 
-    # Xây dựng nội dung prompt
+    # Xây dựng message content hỗ trợ multimodal vision
     if isinstance(prompt_or_parts, list):
-        # Lọc chỉ lấy phần text (bỏ qua đối tượng PIL.Image nếu có)
-        text_parts = [p for p in prompt_or_parts if isinstance(p, str)]
-        prompt_text = "\n".join(text_parts)
+        content_parts = []
+        for part in prompt_or_parts:
+            # Kiểm tra PIL Image
+            try:
+                from PIL import Image as _PILImage
+                if isinstance(part, _PILImage.Image):
+                    import io as _io
+                    buf = _io.BytesIO()
+                    part.save(buf, format="JPEG", quality=85)
+                    b64 = base64.b64encode(buf.getvalue()).decode("utf-8")
+                    content_parts.append({
+                        "type": "image_url",
+                        "image_url": {"url": f"data:image/jpeg;base64,{b64}"}
+                    })
+                    continue
+            except ImportError:
+                pass
+            if isinstance(part, str):
+                content_parts.append({"type": "text", "text": part})
+        message_content = content_parts if content_parts else [{"type": "text", "text": ""}]
     else:
-        prompt_text = str(prompt_or_parts)
+        message_content = [{"type": "text", "text": str(prompt_or_parts)}]
 
     last_error = None
-    tried = set()
 
     for attempt in range(max_retries):
         key = _get_openrouter_key()
-        tried.add(key)
         try:
             client = openai.OpenAI(
                 api_key=key,
@@ -105,7 +123,7 @@ def generate_with_retry(prompt_or_parts, feature=None, max_retries=None):
             )
             resp = client.chat.completions.create(
                 model=OPENROUTER_MODEL,
-                messages=[{"role": "user", "content": prompt_text}],
+                messages=[{"role": "user", "content": message_content}],
                 max_tokens=2048,
             )
             result_text = resp.choices[0].message.content or ""
@@ -1208,16 +1226,24 @@ def upload_image():
         if not image or image.filename == '':
             return render_template('upload_image.html', feedback="⚠ Không có ảnh được chọn.")
 
-        # FIX: thêm timestamp tránh trùng tên file
         import time
         safe_filename = secure_filename(f"{int(time.time())}_{image.filename}")
         image_path = os.path.join(app.config['UPLOAD_FOLDER'], safe_filename).replace('\\', '/')
         image.save(image_path)
 
         try:
+            # 1. OCR (Trích xuất văn bản từ ảnh)
+            ocr_text = extract_text_from_image(image_path)
+            
+            # 2. Mở ảnh cho Vision
             img = Image.open(image_path)
-            prompt = generate_grading_prompt()
-            response = generate_with_retry([img, prompt], feature='lichsu')
+            
+            # 3. Tạo prompt kết hợp
+            base_prompt = generate_grading_prompt()
+            prompt_with_ocr = f"{base_prompt}\n\n[DỮ LIỆU OCR TỪ ẢNH - THAM KHẢO]:\n{ocr_text}"
+            
+            # 4. Gọi AI multimodal
+            response = generate_with_retry([img, prompt_with_ocr], feature='lichsu')
             ai_feedback = response.text
             ai_feedback = format_feedback_html(ai_feedback)
 
@@ -1300,16 +1326,23 @@ def upload_image2():
         if not image or image.filename == '':
             return render_template('upload_image2.html', feedback="⚠ Không có ảnh được chọn.")
 
-        # FIX: thêm timestamp tránh trùng tên file
         import time
         safe_filename = secure_filename(f"{int(time.time())}_{image.filename}")
         image_path = os.path.join(app.config['UPLOAD_FOLDER'], safe_filename).replace('\\', '/')
         image.save(image_path)
 
         try:
+            # 1. OCR
+            ocr_text = extract_text_from_image(image_path)
+            
+            # 2. Vision
             img = Image.open(image_path)
-            prompt = generate_grading_prompt2()
-            response = generate_with_retry([img, prompt], feature='lichsu')
+            
+            # 3. Prompt
+            base_prompt = generate_grading_prompt2()
+            prompt_with_ocr = f"{base_prompt}\n\n[DỮ LIỆU OCR TỪ ẢNH - THAM KHẢO]:\n{ocr_text}"
+            
+            response = generate_with_retry([img, prompt_with_ocr], feature='lichsu')
             ai_feedback = response.text
             ai_feedback = format_feedback_html(ai_feedback)
 
@@ -1406,16 +1439,23 @@ def upload_image3():
         if not image or image.filename == '':
             return render_template('upload_image3.html', feedback="⚠ Không có ảnh được chọn.")
 
-        # FIX: thêm timestamp tránh trùng tên file
         import time
         safe_filename = secure_filename(f"{int(time.time())}_{image.filename}")
         image_path = os.path.join(app.config['UPLOAD_FOLDER'], safe_filename).replace('\\', '/')
         image.save(image_path)
 
         try:
+            # 1. OCR
+            ocr_text = extract_text_from_image(image_path)
+            
+            # 2. Vision
             img = Image.open(image_path)
-            prompt = generate_grading_prompt3()
-            response = generate_with_retry([img, prompt], feature='lichsu')
+            
+            # 3. Prompt
+            base_prompt = generate_grading_prompt3()
+            prompt_with_ocr = f"{base_prompt}\n\n[DỮ LIỆU OCR TỪ ẢNH - THAM KHẢO]:\n{ocr_text}"
+            
+            response = generate_with_retry([img, prompt_with_ocr], feature='lichsu')
             ai_feedback = response.text
             ai_feedback = format_feedback_html(ai_feedback)
 
@@ -1686,17 +1726,22 @@ def auto_grade_essay_with_ai(exam, essay_answer, image_path=None):
         print(f"[AI GRADE] image_path: {image_path}")
 
         if image_path and os.path.exists(image_path):
-            import PIL.Image as PILImage
-            img = PILImage.open(image_path)
+            # 1. OCR
+            ocr_text = extract_text_from_image(image_path)
+            
+            # 2. Vision
+            img = Image.open(image_path)
+            
             has_text = bool(essay_answer and essay_answer.strip() and essay_answer.strip() != 'None')
             text_part = f"\nBài làm bằng chữ (nếu có): {essay_answer}" if has_text else "\nHọc sinh KHÔNG viết gì bằng chữ, chỉ nộp ảnh bên dưới."
+            ocr_part = f"\n[VĂN BẢN OCR TỪ ẢNH]:\n{ocr_text}"
 
             prompt = f"""Bạn là giáo viên lịch sử chấm bài thi tự luận.
 
 Đề bài: {de_bai}
 
 Tiêu chí chấm: {tieu_chi}
-{text_part}
+{text_part}{ocr_part}
 
 Học sinh đã nộp bài làm viết tay trong ảnh đính kèm. Hãy đọc kỹ ảnh và chấm điểm theo thang điểm 3. trình bày ngắn gọn, xúc tích, chính xác và khoa học.
 
@@ -1711,7 +1756,7 @@ Chỉ trả về JSON thuần, không giải thích thêm:
 }}
 
 Chỉ trả về JSON."""
-            print(f"[AI GRADE] Gọi AI với ảnh...")
+            print(f"[AI GRADE] Gọi AI với ảnh + OCR + Vision...")
             response = generate_with_retry([img, prompt], feature='lichsu')
         else:
             prompt = f"""Bạn là giáo viên lịch sử chấm bài thi tự luận, có kiến thức chuyên môn sâu, trình bày ngắn gọn, dễ hiểu, chính xác và khoa học.
@@ -1812,18 +1857,23 @@ def auto_grade_mixed_essay_with_ai(question, grading_criteria, essay_answer, ima
     """Chấm từng câu tự luận trong đề hỗn hợp"""
     try:
         if image_path and os.path.exists(image_path):
-            import PIL.Image as PILImage
-            img = PILImage.open(image_path)
+            # 1. OCR
+            ocr_text = extract_text_from_image(image_path)
+            
+            # 2. Vision
+            img = Image.open(image_path)
+            
             has_text = bool(essay_answer and essay_answer.strip() and essay_answer.strip() != 'None')
             text_part = f"\nBài làm bằng chữ (nếu có): {essay_answer}" if has_text else "\nHọc sinh KHÔNG viết gì bằng chữ, CHẤM DUY NHẤT BẰNG ẢNH BÊN DƯỚI."
+            ocr_part = f"\n[VĂN BẢN OCR TỪ ẢNH]:\n{ocr_text}"
 
             prompt = f"""Bạn là giáo viên lịch sử chấm bài. cách trả lời của bạn đảm bảo phải chính xác, ngắn gọn, cụ thể và khoa học.
 
 Câu hỏi: {question}
 
-Tiêu chí: {grading_criteria}{text_part}
+Tiêu chí: {grading_criteria}{text_part}{ocr_part}
 
-Học sinh đã nộp bài làm viết tay trong ảnh đính kèm. Hãy chấm điểm theo thang điểm {max_score}. cách nhận xét của bạn đảm bảo phải chính xác, ngắn gọn, cụ thể và khoa học.
+Học sinh đã nộp bài làm viết tay trong ảnh đính kèm. Hãy đọc kỹ ảnh và chấm điểm theo thang điểm {max_score}. cách nhận xét của bạn đảm bảo phải chính xác, ngắn gọn, cụ thể và khoa học.
 
 
 Trả về JSON (KHÔNG DÙNG # VÀ **):
