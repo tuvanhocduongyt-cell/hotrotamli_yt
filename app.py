@@ -41,105 +41,85 @@ timestamp = datetime.now(vn_timezone).strftime("%Y-%m-%d %H:%M:%S")
 
 load_dotenv()  # Load từ file .env
 
-# API key handling (support multiple categories and rotation)
-# use GOOGLE_API_KEYS_LICHSU for history-exam/chat features (two keys as requested)
-# use GOOGLE_API_KEYS_GENERAL or fallback GOOGLE_API_KEYS for everything else
-
-lic_keys_env = os.getenv("GOOGLE_API_KEYS_LICHSU")
-general_keys_env = os.getenv("GOOGLE_API_KEYS_GENERAL")
-all_keys_env = os.getenv("GOOGLE_API_KEYS")
-single = os.getenv("GOOGLE_API_KEY")
-
-LICHSU_KEYS = [k.strip() for k in lic_keys_env.split(",")] if lic_keys_env else []
-GENERAL_KEYS = [k.strip() for k in general_keys_env.split(",")] if general_keys_env else []
-if all_keys_env:
-    GENERAL_KEYS.extend([k.strip() for k in all_keys_env.split(",") if k.strip()])
-if single:
-    GENERAL_KEYS.append(single)
-
-# make sure at least one key exists in general list
-if not GENERAL_KEYS and not LICHSU_KEYS:
-    raise ValueError("Không tìm thấy khóa API trong GOOGLE_API_KEYS*, GOOGLE_API_KEYS hoặc GOOGLE_API_KEY")
-
 # ============================================================
-# API KEY ROTATION: Round-Robin + Auto-retry khi bị 429
+# OPENROUTER API KEY ROTATION
 # ============================================================
 import threading
 import time as _time
 
-# Bộ đếm riêng cho mỗi pool key (thread-safe)
-_general_counter_lock = threading.Lock()
-_lichsu_counter_lock  = threading.Lock()
-_general_counter = 0
-_lichsu_counter  = 0
+_keys_env = os.getenv("OPENROUTER_API_KEYS")
+if _keys_env:
+    OPENROUTER_KEYS = [k.strip() for k in _keys_env.split(",") if k.strip()]
+else:
+    _single = os.getenv("OPENROUTER_API_KEY")
+    OPENROUTER_KEYS = [_single] if _single else []
 
-def get_api_key(feature=None):
-    """Round-Robin: lần lượt xoay vòng qua từng key thay vì random."""
-    global _general_counter, _lichsu_counter
-    if feature == 'lichsu' and LICHSU_KEYS:
-        with _lichsu_counter_lock:
-            key = LICHSU_KEYS[_lichsu_counter % len(LICHSU_KEYS)]
-            _lichsu_counter += 1
-        return key
-    keys = GENERAL_KEYS if GENERAL_KEYS else LICHSU_KEYS
-    with _general_counter_lock:
-        key = keys[_general_counter % len(keys)]
-        _general_counter += 1
+if not OPENROUTER_KEYS:
+    raise ValueError("Không tìm thấy khóa API trong OPENROUTER_API_KEYS hoặc OPENROUTER_API_KEY")
+
+_or_counter = 0
+_or_lock = threading.Lock()
+
+OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+OPENROUTER_MODEL = "google/gemini-2.0-flash-001"
+
+def _get_openrouter_key():
+    """Round-Robin qua danh sách key OpenRouter."""
+    global _or_counter
+    with _or_lock:
+        key = OPENROUTER_KEYS[_or_counter % len(OPENROUTER_KEYS)]
+        _or_counter += 1
     return key
 
-def _get_next_key(feature=None, exclude_key=None):
-    """Lấy key tiếp theo trong pool, bỏ qua key đang bị lỗi."""
-    pool = (LICHSU_KEYS if (feature == 'lichsu' and LICHSU_KEYS) else GENERAL_KEYS) or LICHSU_KEYS
-    candidates = [k for k in pool if k != exclude_key]
-    if not candidates:
-        candidates = pool  # không còn lựa chọn, dùng lại key cũ
-    return random.choice(candidates)
-
-def get_model(feature=None):
-    """Trả về model với key đã được chọn theo Round-Robin."""
-    key = get_api_key(feature)
-    client = openai.Client(api_key=key)
-    return client.models.generate_content
+class _FakeResponse:
+    """Wrapper để tương thích với code cũ dùng response.text"""
+    def __init__(self, text):
+        self.text = text
 
 def generate_with_retry(prompt_or_parts, feature=None, max_retries=None):
     """
-    Gọi Gemini AI với tự động retry khi bị 429 (quota exceeded).
-    - Thử tối đa len(key_pool) lần, mỗi lần dùng key khác.
-    - Nếu tất cả key đều hết quota → raise exception.
+    Gọi OpenRouter AI với tự động retry khi bị lỗi quota.
+    Hỗ trợ prompt dạng string hoặc list (text-only).
     """
-    pool = (LICHSU_KEYS if (feature == 'lichsu' and LICHSU_KEYS) else GENERAL_KEYS) or LICHSU_KEYS
     if max_retries is None:
-        max_retries = len(pool)
+        max_retries = max(len(OPENROUTER_KEYS), 3)
 
-    tried_keys = set()
+    # Xây dựng nội dung prompt
+    if isinstance(prompt_or_parts, list):
+        # Lọc chỉ lấy phần text (bỏ qua đối tượng PIL.Image nếu có)
+        text_parts = [p for p in prompt_or_parts if isinstance(p, str)]
+        prompt_text = "\n".join(text_parts)
+    else:
+        prompt_text = str(prompt_or_parts)
+
     last_error = None
+    tried = set()
 
     for attempt in range(max_retries):
-        # Chọn key chưa thử
-        available = [k for k in pool if k not in tried_keys]
-        if not available:
-            available = pool  # quay lại từ đầu nếu đã thử hết
-        key = available[0]
-        tried_keys.add(key)
-
+        key = _get_openrouter_key()
+        tried.add(key)
         try:
-            openai.configure(api_key=key)
-            model = openai.GenerativeModel("models/gemini-flash-latest")
-            if isinstance(prompt_or_parts, list):
-                return model.generate_content(prompt_or_parts)
-            else:
-                return model.generate_content(prompt_or_parts)
+            client = openai.OpenAI(
+                api_key=key,
+                base_url=OPENROUTER_BASE_URL,
+            )
+            resp = client.chat.completions.create(
+                model=OPENROUTER_MODEL,
+                messages=[{"role": "user", "content": prompt_text}],
+                max_tokens=2048,
+            )
+            result_text = resp.choices[0].message.content or ""
+            return _FakeResponse(result_text)
         except Exception as e:
             last_error = e
             err_str = str(e)
-            if '429' in err_str or 'quota' in err_str.lower():
-                print(f"[KEY ROTATE] Key ...{key[-6:]} hết quota (attempt {attempt+1}/{max_retries}), thử key khác...")
-                _time.sleep(1)  # nhỏ để tránh bursty
+            if '429' in err_str or 'quota' in err_str.lower() or 'rate' in err_str.lower():
+                print(f"[OR ROTATE] Key ...{key[-6:]} bị giới hạn (attempt {attempt+1}/{max_retries}), thử key khác...")
+                _time.sleep(1)
                 continue
-            # Lỗi khác (network, 400...) → không retry
             raise
 
-    print(f"[KEY ROTATE] Tất cả {max_retries} key đều hết quota!")
+    print(f"[OR ROTATE] Tất cả {max_retries} lần thử đều thất bại!")
     raise last_error
 
 app.config['UPLOAD_FOLDER'] = 'uploads'
@@ -784,28 +764,19 @@ YÊU CẦU TRÌNH BÀY:
 Trả lời:
 """
 
-            # ====== CALL MODEL ======
-            response = get_model('lichsu').generate_content(
-                prompt,
-                stream=True,
-                generation_config={
-                    "temperature": 0.7,
-                    "top_p": 0.95,
-                    "max_output_tokens": 1024,
-                }
-            )
+            # ====== CALL MODEL (OpenRouter - non-streaming) ======
+            response = generate_with_retry(prompt, feature='lichsu')
+            # Simulate streaming by yielding the full response at once
+            _stream_text = response.text
 
             # ====== STREAM ======
             full_response = ""
             chat_history.append(user_message)
 
-            for chunk in response:
-                if chunk.text:
-                    full_response += chunk.text
-
-                    # stream text thô (không format)
-                    data = json.dumps({"text": chunk.text}, ensure_ascii=False)
-                    yield f"data: {data}\n\n"
+            full_response = _stream_text
+            # Yield toàn bộ nội dung một lần (OpenRouter không hỗ trợ streaming)
+            data = json.dumps({"text": full_response}, ensure_ascii=False)
+            yield f"data: {data}\n\n"
 
             # ====== FORMAT SAU CÙNG ======
             formatted = format_text(full_response)
@@ -881,7 +852,7 @@ Trả lời:
     """
     
     response = generate_with_retry(prompt, feature='lichsu')
-    reply_text = response.text
+    reply_text = response.text or ""
     # Xóa markdown, nhưng chuyển list sao cho có xuống dòng
     reply_text = re.sub(r'#{1,5}\s?', '', reply_text)
     reply_text = reply_text.replace('**', '')
@@ -985,7 +956,7 @@ Người dùng hỏi: {user_message}
 """
     try:
         resp = generate_with_retry(prompt)
-        text_reply = resp.text.strip()
+        text_reply = (resp.text or "").strip()
         
         # Lọc markdown nhưng bảo tồn dòng
         text_reply = re.sub(r'#{1,5}\s?', '', text_reply)
@@ -994,14 +965,14 @@ Người dùng hỏi: {user_message}
         text_reply = text_reply.replace('• ', '- ')
         
     except Exception as e:
-        print("Lỗi khi gọi Gemini:", e)
+        print("Lỗi khi gọi OpenRouter:", e)
         text_reply = "Xin lỗi, hiện tại tôi không thể trả lời ngay. Bạn thử lại sau nhé."
 
     if contains_english(text_reply):
         try:
             follow_prompt = prompt + "\n\nBạn đã sử dụng từ tiếng Anh, hãy trả lời lại hoàn toàn bằng tiếng Việt."
             resp2 = generate_with_retry(follow_prompt)
-            text_reply = resp2.text.strip()
+            text_reply = (resp2.text or "").strip()
             
             # Format lại lần nữa sau khi retry
             text_reply = text_reply.replace('**', '')
@@ -1009,7 +980,7 @@ Người dùng hỏi: {user_message}
             text_reply = text_reply.replace('###', '')
             
         except Exception as e:
-            print("Lỗi follow-up Gemini:", e)
+            print("Lỗi follow-up OpenRouter:", e)
 
     audio_filename = None
     try:
@@ -2248,10 +2219,9 @@ def parse_docx_strictly(text):
 
 def repair_question_with_ai(block_text, q_type):
     """
-    Sử dụng Gemini để sửa một block câu hỏi bị lỗi cấu trúc.
+    Sử dụng OpenRouter để sửa một block câu hỏi bị lỗi cấu trúc.
     """
-    # generate_with_retry handles key selection automatically
-    if not GENERAL_KEYS and not LICHSU_KEYS: return None
+    if not OPENROUTER_KEYS: return None
     
     prompt = f"""Bạn là chuyên gia bóc tách đề thi. Tôi có một câu hỏi bị lỗi định dạng khi bóc tách bằng thuật toán.
 Hãy bóc tách câu hỏi này sang định dạng JSON chính xác.

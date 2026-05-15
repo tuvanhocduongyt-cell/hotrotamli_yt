@@ -17,16 +17,20 @@ else:
 if not API_KEYS:
     raise ValueError("Không tìm thấy OPENROUTER_API_KEY hoặc OPENROUTER_API_KEYS trong environment")
 
-# helper to rotate
+OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+OPENROUTER_MODEL = "google/gemini-2.0-flash-001"
 
 def get_api_key():
     return random.choice(API_KEYS)
 
 def analyze_text_with_openrouter(text):
-    openai.api_key = get_api_key()
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
-        messages=[{"role": "user", "content": text}]
+    client = openai.OpenAI(
+        api_key=get_api_key(),
+        base_url=OPENROUTER_BASE_URL,
     )
-    return response["choices"][0]["message"]["content"]
-
+    response = client.chat.completions.create(
+        model=OPENROUTER_MODEL,
+        messages=[{"role": "user", "content": text}],
+        max_tokens=2048,
+    )
+    return response.choices[0].message.content or ""

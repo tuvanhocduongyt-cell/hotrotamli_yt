@@ -7,7 +7,7 @@ PyPDF2
 pytesseract
 Pillow
 gunicorn
-dotenv
+python-dotenv
 mammoth
 python-docx
 openpyxl
