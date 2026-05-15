@@ -18,7 +18,7 @@ if not API_KEYS:
     raise ValueError("Không tìm thấy OPENROUTER_API_KEY hoặc OPENROUTER_API_KEYS trong environment")
 
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
-OPENROUTER_MODEL = "google/gemini-2.0-flash-001"
+OPENROUTER_MODEL = "google/gemini-2.5-flash"
 
 def get_api_key():
     return random.choice(API_KEYS)
@@ -34,3 +34,4 @@ def analyze_text_with_openrouter(text):
         max_tokens=2048,
     )
     return response.choices[0].message.content or ""
+#######

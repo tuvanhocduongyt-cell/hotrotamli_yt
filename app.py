@@ -61,7 +61,7 @@ _or_counter = 0
 _or_lock = threading.Lock()
 
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
-OPENROUTER_MODEL = "google/gemini-2.0-flash-001"
+OPENROUTER_MODEL = "google/gemini-2.5-flash"
 
 def _get_openrouter_key():
     """Round-Robin qua danh sách key OpenRouter."""

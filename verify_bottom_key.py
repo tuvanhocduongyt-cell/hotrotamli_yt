@@ -63,3 +63,4 @@ if __name__ == "__main__":
         text = f.read()
     result = parse_docx_strictly(text)
     print(json.dumps(result, indent=2))
+###########
