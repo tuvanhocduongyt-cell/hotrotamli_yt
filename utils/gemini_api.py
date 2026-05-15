@@ -1,7 +1,7 @@
 import os
 import random
 from dotenv import load_dotenv
-import google.generativeai as genai
+from google import genai
 
 # ensure .env is loaded in case the importer didn't load it yet
 load_dotenv()
@@ -24,12 +24,14 @@ def get_api_key():
 
 
 def get_model():
-    genai.configure(api_key=get_api_key())
     return genai.GenerativeModel("models/gemini-flash-latest")
 
 
 def analyze_text_with_gemini(text):
-    model = get_model()
-    response = model.generate_content(f"Đây là bài làm của học sinh:\n{text}\nHãy nhận xét và đề xuất cải thiện.")
+    client = genai.Client(api_key=os.environ["GOOGLE_API_KEY"])
+    response = client.models.generate_content(
+        model="gemini-2.5-flash",
+        contents=[{"role": "user", "text": text}]
+    )
     return response.text
 

@@ -98,8 +98,8 @@ def _get_next_key(feature=None, exclude_key=None):
 def get_model(feature=None):
     """Trả về model với key đã được chọn theo Round-Robin."""
     key = get_api_key(feature)
-    genai.configure(api_key=key)
-    return genai.GenerativeModel("models/gemini-flash-latest")
+    client = genai.Client(api_key=key)
+    return client.models.generate_content
 
 def generate_with_retry(prompt_or_parts, feature=None, max_retries=None):
     """
@@ -856,8 +856,7 @@ def chat():
                 context += f"Người dùng: {recent_history[i]}\nTrợ lý: {recent_history[i+1]}\n"
         context += "\n"
     
-    prompt = f"""
-Bạn là trợ lý AI thông minh của cô Phạm Hằng, giáo viên dạy học môn lịch sử, có trình độ thạc sĩ trở lên, kiến thức chuyên môn sâu rộng, kiến thức lịch sử chính xác, hỗ trợ giải đáp câu hỏi về Lịch sử, kiến thức để học sinh học tập, kiến thức tham gia kỳ thi tốt nghiệp THPT 2026
+    prompt = f"""Bạn là trợ lý AI thông minh của cô Phạm Hằng, giáo viên dạy học môn lịch sử, có trình độ thạc sĩ trở lên, kiến thức chuyên môn sâu rộng, kiến thức lịch sử chính xác, hỗ trợ giải đáp câu hỏi về Lịch sử, kiến thức để học sinh học tập, kiến thức tham gia kỳ thi tốt nghiệp THPT 2026
 Bạn trả lời các câu hỏi một cách ngắn gọn, dễ hiểu, khoa học, lập luận chặt chẽ, logic và chuẩn kiến thức của chương trình giáo dục phổ thông 2018. Trình bày thành các đoạn, các ý xuống dòng cho học sinh dễ đọc, dễ nhìn. Chỉ ghi là kỳ thi Tốt nghiệp THPT, nếu ghi năm phải đúng năm hiện tại
 Dữ liệu tham khảo (ưu tiên nếu liên quan):
 {custom_data[:1500]}
@@ -1211,8 +1210,7 @@ YÊU CẦU CHẤM BÀI:
 **CÂU 2 ([X]/1.5 điểm):**
 - Tiêu chí 1 (0.5đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
 - Tiêu chí 2 (0.5đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
-- Tiêu chí 3 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
-- Tiêu chí 4 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+- Tiêu chí 3 (0.5đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
 
 
 ❌ LỖI SAI CẦN SỬA (nếu có):
@@ -1369,7 +1367,7 @@ Trình bày một số biện pháp cải cách hành chính của vua Minh Mạ
 - Chia cả nước thành 30 tỉnh và phủ Thừa Thiên. Đứng đầu tỉnh là Tổng đốc, Tuần phủ. Tổng đốc thường là người phụ trách hai tỉnh, trực tiếp cai trị một tỉnh. Tỉnh còn lại do Tuần phủ đứng đầu, đặt dưới sự kiêm quản của Tổng đốc. 0,25 điểm
 - Đối với vùng dân tộc thiểu số: Vua cho đổi các động, sách thành xã như vùng đồng bằng, đồng thời bãi bỏ chế độ cai trị của các tù trưởng địa phương, bổ dụng quan lại của triều đình đến cai trị trực tiếp. 0,25 điểm
 - Về bộ máy quan lại: Vua Minh Mạng cũng cải tổ chế độ hồi tỵ bằng việc mở rộng phạm vi, đối tượng áp dụng và bổ sung những quy định mới rất nghiêm ngặt. 0,25 điểm
-	
+    
 *Một số bài học kinh nghiệm từ cuộc cải cách của vua Minh Mạng có thể áp dụng vào việc xây dựng nền hành chính Việt Nam: (0,5 điểm)
 (HS nêu được 2 bài học đúng trong các bài học dưới đây thì cho điểm tối đa )
 + Thống nhất đơn vị hành chính địa phương trong cả nước;
@@ -1759,7 +1757,9 @@ Chỉ trả về JSON thuần, không giải thích thêm:
   "missing_knowledge": "<kiến thức còn thiếu>",
   "improvement_areas": "<dạng bài cần luyện thêm>",
   "suggestions": "<lời khuyên cụ thể cho học sinh>"
-}}"""
+}}
+
+Chỉ trả về JSON."""
             print(f"[AI GRADE] Gọi AI với text...")
             response = generate_with_retry(prompt, feature='lichsu')
 
@@ -2248,8 +2248,7 @@ def repair_question_with_ai(block_text, q_type):
     # generate_with_retry handles key selection automatically
     if not GENERAL_KEYS and not LICHSU_KEYS: return None
     
-    prompt = f"""
-Bạn là chuyên gia bóc tách đề thi. Tôi có một câu hỏi bị lỗi định dạng khi bóc tách bằng thuật toán.
+    prompt = f"""Bạn là chuyên gia bóc tách đề thi. Tôi có một câu hỏi bị lỗi định dạng khi bóc tách bằng thuật toán.
 Hãy bóc tách câu hỏi này sang định dạng JSON chính xác.
 
 Loại câu hỏi: {q_type} (MCQ: Trắc nghiệm, TF: Đúng/Sai)
@@ -3088,7 +3087,8 @@ def adjust_score(submission_index):
     
     if submission_index >= len(submissions):
         flash("Không tìm thấy bài nộp", "error")
-        return redirect(url_for('dashboard_teacher'))
+        target_dashboard = 'dashboard_student' if session.get('exam_role') == 'student' else 'dashboard_teacher'
+        return redirect(url_for(target_dashboard))
     
     submission = submissions[submission_index]
     
