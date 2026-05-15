@@ -1,6 +1,5 @@
 Flask
-google-genai
-google-generativeai
+openai
 pytz
 reportlab
 google-cloud-texttospeech

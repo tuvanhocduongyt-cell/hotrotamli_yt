@@ -19,13 +19,13 @@ from reportlab.lib.pagesizes import A4
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from dotenv import load_dotenv
-import google.generativeai as genai
+import openai
 import PyPDF2
 import pytz
 
 from google.cloud import texttospeech
 from utils.ocr import extract_text_from_image
-from utils.gemini_api import analyze_text_with_gemini
+from utils.gemini_api import analyze_text_with_openrouter
 from datetime import datetime, timezone
 
 from docx import Document
@@ -98,7 +98,7 @@ def _get_next_key(feature=None, exclude_key=None):
 def get_model(feature=None):
     """Trả về model với key đã được chọn theo Round-Robin."""
     key = get_api_key(feature)
-    client = genai.Client(api_key=key)
+    client = openai.Client(api_key=key)
     return client.models.generate_content
 
 def generate_with_retry(prompt_or_parts, feature=None, max_retries=None):
@@ -123,8 +123,8 @@ def generate_with_retry(prompt_or_parts, feature=None, max_retries=None):
         tried_keys.add(key)
 
         try:
-            genai.configure(api_key=key)
-            model = genai.GenerativeModel("models/gemini-flash-latest")
+            openai.configure(api_key=key)
+            model = openai.GenerativeModel("models/gemini-flash-latest")
             if isinstance(prompt_or_parts, list):
                 return model.generate_content(prompt_or_parts)
             else:
@@ -1301,7 +1301,10 @@ YÊU CẦU CHẤM BÀI:
 - Tiêu chí 1 (0.5đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
 - Tiêu chí 2 (0.5đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
 - Tiêu chí 3 (0.5đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
-
+- Tiêu chí 4 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+- Tiêu chí 5 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+- Tiêu chí 6 (0.25đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
+- Tiêu chí 7 (0.5đ): [ĐẠT/CHƯA ĐẠT] - [Nhận xét cụ thể]
 
 ❌ LỖI SAI CẦN SỬA (nếu có):
 - "Trích nguyên văn lỗi trong bài" → Sửa: [giải thích đúng]
@@ -1734,7 +1737,9 @@ Chỉ trả về JSON thuần, không giải thích thêm:
   "missing_knowledge": "<kiến thức còn thiếu>",
   "improvement_areas": "<dạng bài cần luyện thêm>",
   "suggestions": "<lời khuyên cụ thể cho học sinh>"
-}}"""
+}}
+
+Chỉ trả về JSON."""
             print(f"[AI GRADE] Gọi AI với ảnh...")
             response = generate_with_retry([img, prompt], feature='lichsu')
         else:
