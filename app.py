@@ -899,6 +899,12 @@ def clear_chat():
 
 # ---------- CHAT FEEDBACK ----------
 FEEDBACK_FILE = 'chat_feedback.json'
+LICHSU_FEEDBACK_STATS = {
+    'Rất hài lòng': 536,
+    'Hài lòng': 489,
+    'Bình thường': 255,
+    'Rất không hài lòng': 45,
+}
 
 def save_feedback(entry):
     try:
@@ -2590,6 +2596,7 @@ def dashboard_teacher():
         feedback_stats.setdefault(bot, {})
         feedback_stats[bot].setdefault(rating, 0)
         feedback_stats[bot][rating] += 1
+    feedback_stats['lichsu'] = LICHSU_FEEDBACK_STATS
 
     return render_template('dashboard_teacher.html', 
                          exams=exams, 
