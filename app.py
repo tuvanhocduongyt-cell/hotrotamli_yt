@@ -62,11 +62,8 @@ else:
     _single = os.getenv("OPENROUTER_API_KEY")
     OPENROUTER_KEYS = [_single] if _single else []
 
-if GEMINI_KEYS and not OPENROUTER_KEYS:
-    OPENROUTER_KEYS = GEMINI_KEYS
-
-if not OPENROUTER_KEYS:
-    raise ValueError("Không tìm thấy khóa API trong OPENROUTER_API_KEYS hoặc OPENROUTER_API_KEY")
+if not GEMINI_KEYS and not OPENROUTER_KEYS:
+    raise ValueError("Không tìm thấy GEMINI_API_KEY/GOOGLE_API_KEY hoặc OPENROUTER_API_KEY")
 
 _gemini_counter = 0
 _gemini_lock = threading.Lock()
@@ -150,6 +147,8 @@ def _generate_with_gemini(prompt_or_parts, max_retries=None):
                 for candidate in data.get("candidates", [])
                 for part in candidate.get("content", {}).get("parts", [])
             )
+            if not result_text.strip():
+                raise RuntimeError(f"Gemini khong tra ve text: {json.dumps(data, ensure_ascii=False)[:500]}")
             return _FakeResponse(result_text)
         except urllib.error.HTTPError as e:
             last_error = e
@@ -175,7 +174,12 @@ def generate_with_retry(prompt_or_parts, feature=None, max_retries=None):
     Ảnh PIL được encode base64 JPEG → gửi dạng image_url (OpenAI vision format).
     """
     if GEMINI_KEYS:
-        return _generate_with_gemini(prompt_or_parts, max_retries=max_retries)
+        try:
+            return _generate_with_gemini(prompt_or_parts, max_retries=max_retries)
+        except Exception as gemini_error:
+            if not OPENROUTER_KEYS:
+                raise
+            print(f"[GEMINI FALLBACK] Gemini loi, thu OpenRouter: {gemini_error}")
 
     if max_retries is None:
         max_retries = max(len(OPENROUTER_KEYS), 3)
@@ -332,8 +336,12 @@ def tam_li_chat():
             is_first = session.get(f'first_message_{topic}', True)
             
             prompt = build_prompt(topic, context_data, user_input, is_first_message=is_first)
-            response = generate_with_retry(prompt)
-            response_text = response.text
+            try:
+                response = generate_with_retry(prompt)
+                response_text = response.text
+            except Exception as e:
+                print(f"[TAM_LI_CHAT] Loi goi AI: {e}")
+                response_text = "Xin lỗi, hiện tại trợ lý chưa thể trả lời. Vui lòng kiểm tra GEMINI_API_KEY hoặc thử lại sau."
             
             # ✅ KHÔNG DÙNG REPLACE NẾU DÍNH LIỀN
             # Xóa các markdown block header nhưng giữ lại line break
@@ -821,18 +829,18 @@ def chat_stream():
     def format_text(text):
         """Format lại toàn bộ câu trả lời cho dễ đọc"""
       # 1. Chỉ xuống dòng với 1. 2. 3. (mục)
-    text = re.sub(r'(?<!\n)(?<!\d)(\d{1,2}\.)', r'\n\n\1', text)
+        text = re.sub(r'(?<!\n)(?<!\d)(\d{1,2}\.)', r'\n\n\1', text)
 
     # 2. Xuống dòng sau dấu chấm nhưng KHÔNG phải số năm
-    text = re.sub(r'(?<!\d)([.!?])\s+', r'\1\n\n', text)
+        text = re.sub(r'(?<!\d)([.!?])\s+', r'\1\n\n', text)
 
     # 3. GỘP lại nếu lỡ bị tách sai (quan trọng)
-    text = re.sub(r'\n\n(\d{4}\.)', r' \1', text)
+        text = re.sub(r'\n\n(\d{4}\.)', r' \1', text)
 
     # 4. Clean markdown
-    text = re.sub(r'#{1,6}\s*', '', text)
-    text = text.replace('**', '')
-    return text.strip()
+        text = re.sub(r'#{1,6}\s*', '', text)
+        text = text.replace('**', '')
+        return text.strip()
     
     def generate():
         try:
@@ -962,8 +970,15 @@ QUY TẮC BẮT BUỘC:
 Trả lời:
     """
     
-    response = generate_with_retry(prompt, feature='lichsu')
-    reply_text = response.text or ""
+    try:
+        response = generate_with_retry(prompt, feature='lichsu')
+        reply_text = response.text or ""
+    except Exception as e:
+        print(f"[CHAT] Loi goi AI: {e}")
+        return jsonify({
+            "reply": "Xin lỗi, hiện tại bot chưa thể trả lời. Vui lòng kiểm tra GEMINI_API_KEY hoặc thử lại sau.",
+            "error": str(e),
+        }), 503
     # Xóa markdown, nhưng chuyển list sao cho có xuống dòng
     reply_text = re.sub(r'#{1,5}\s?', '', reply_text)
     reply_text = reply_text.replace('**', '')
@@ -1082,7 +1097,7 @@ Người dùng hỏi: {user_message}
         text_reply = text_reply.replace('• ', '- ')
         
     except Exception as e:
-        print("Lỗi khi gọi OpenRouter:", e)
+        print(f"[CHAT_TAM_AN] Loi goi AI: {e}")
         text_reply = "Xin lỗi, hiện tại tôi không thể trả lời ngay. Bạn thử lại sau nhé."
 
     if contains_english(text_reply):
@@ -1097,7 +1112,7 @@ Người dùng hỏi: {user_message}
             text_reply = text_reply.replace('###', '')
             
         except Exception as e:
-            print("Lỗi follow-up OpenRouter:", e)
+            print(f"[CHAT_TAM_AN] Loi goi AI follow-up: {e}")
 
     audio_filename = None
     try:
@@ -1125,7 +1140,7 @@ Người dùng hỏi: {user_message}
         with open(audio_path, "wb") as f:
             f.write(tts_response.audio_content)
     except Exception as e:
-        print("Lỗi Google TTS:", e)
+        print(f"[CHAT_TAM_AN] Loi Google TTS: {e}")
         audio_filename = None
 
     result = {"reply": text_reply}
@@ -2370,7 +2385,7 @@ def repair_question_with_ai(block_text, q_type):
     """
     Sử dụng OpenRouter để sửa một block câu hỏi bị lỗi cấu trúc.
     """
-    if not OPENROUTER_KEYS: return None
+    if not GEMINI_KEYS and not OPENROUTER_KEYS: return None
     
     prompt = f"""Bạn là chuyên gia bóc tách đề thi. Tôi có một câu hỏi bị lỗi định dạng khi bóc tách bằng thuật toán.
 Hãy bóc tách câu hỏi này sang định dạng JSON chính xác.
