@@ -71,6 +71,12 @@ Sau khi đã có dữ liệu mới trên Supabase, không quay lại bản JSON 
 
 ## Render
 
+Start Command: `gunicorn --config gunicorn.conf.py app:app`.
+File cấu hình dùng `gthread` và không preload ứng dụng để giữ SSL chuẩn của Python.
+Nếu dịch vụ cũ có `-k gevent`, `--worker-class gevent`, `--preload` hoặc biến
+`GUNICORN_CMD_ARGS` chứa các tùy chọn đó, bỏ chúng khi chuyển sang cấu hình này.
+Render có thể giữ Start Command cũ dù Procfile đã đổi; cần cập nhật trong Settings.
+
 Sau khi di chuyển và kiểm tra xong, đưa code mới lên Render và đặt các biến sau trong **Environment**:
 
 ```dotenv
