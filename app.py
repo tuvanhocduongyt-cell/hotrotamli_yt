@@ -6,6 +6,8 @@ import random
 import base64
 import string
 import csv
+import urllib.error
+import urllib.request
 import openpyxl
 from PIL import Image
 from datetime import datetime
@@ -25,7 +27,6 @@ import pytz
 
 from google.cloud import texttospeech
 from utils.ocr import extract_text_from_image
-from utils.gemini_api import analyze_text_with_openrouter
 from datetime import datetime, timezone
 
 from docx import Document
@@ -47,6 +48,13 @@ load_dotenv()  # Load từ file .env
 import threading
 import time as _time
 
+_gemini_keys_env = os.getenv("GEMINI_API_KEYS")
+if _gemini_keys_env:
+    GEMINI_KEYS = [k.strip() for k in _gemini_keys_env.split(",") if k.strip()]
+else:
+    _gemini_single = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
+    GEMINI_KEYS = [_gemini_single] if _gemini_single else []
+
 _keys_env = os.getenv("OPENROUTER_API_KEYS")
 if _keys_env:
     OPENROUTER_KEYS = [k.strip() for k in _keys_env.split(",") if k.strip()]
@@ -54,14 +62,29 @@ else:
     _single = os.getenv("OPENROUTER_API_KEY")
     OPENROUTER_KEYS = [_single] if _single else []
 
+if GEMINI_KEYS and not OPENROUTER_KEYS:
+    OPENROUTER_KEYS = GEMINI_KEYS
+
 if not OPENROUTER_KEYS:
     raise ValueError("Không tìm thấy khóa API trong OPENROUTER_API_KEYS hoặc OPENROUTER_API_KEY")
 
+_gemini_counter = 0
+_gemini_lock = threading.Lock()
 _or_counter = 0
 _or_lock = threading.Lock()
 
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta"
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 OPENROUTER_MODEL = "google/gemini-2.5-flash"
+
+def _get_gemini_key():
+    """Round-Robin qua danh sach key Gemini."""
+    global _gemini_counter
+    with _gemini_lock:
+        key = GEMINI_KEYS[_gemini_counter % len(GEMINI_KEYS)]
+        _gemini_counter += 1
+    return key
 
 def _get_openrouter_key():
     """Round-Robin qua danh sách key OpenRouter."""
@@ -76,6 +99,73 @@ class _FakeResponse:
     def __init__(self, text):
         self.text = text
 
+def _build_gemini_parts(prompt_or_parts):
+    if not isinstance(prompt_or_parts, list):
+        return [{"text": str(prompt_or_parts)}]
+
+    parts = []
+    for part in prompt_or_parts:
+        try:
+            from PIL import Image as _PILImage
+            if isinstance(part, _PILImage.Image):
+                import io as _io
+                buf = _io.BytesIO()
+                part.save(buf, format="JPEG", quality=85)
+                parts.append({
+                    "inline_data": {
+                        "mime_type": "image/jpeg",
+                        "data": base64.b64encode(buf.getvalue()).decode("utf-8"),
+                    }
+                })
+                continue
+        except ImportError:
+            pass
+        if isinstance(part, str):
+            parts.append({"text": part})
+    return parts or [{"text": ""}]
+
+def _generate_with_gemini(prompt_or_parts, max_retries=None):
+    if max_retries is None:
+        max_retries = max(len(GEMINI_KEYS), 3)
+
+    body = json.dumps({
+        "contents": [{"role": "user", "parts": _build_gemini_parts(prompt_or_parts)}],
+        "generationConfig": {"maxOutputTokens": 2048},
+    }).encode("utf-8")
+    last_error = None
+
+    for attempt in range(max_retries):
+        key = _get_gemini_key()
+        try:
+            req = urllib.request.Request(
+                f"{GEMINI_BASE_URL}/models/{GEMINI_MODEL}:generateContent",
+                data=body,
+                headers={"Content-Type": "application/json", "x-goog-api-key": key},
+                method="POST",
+            )
+            with urllib.request.urlopen(req, timeout=90) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+            result_text = "".join(
+                part.get("text", "")
+                for candidate in data.get("candidates", [])
+                for part in candidate.get("content", {}).get("parts", [])
+            )
+            return _FakeResponse(result_text)
+        except urllib.error.HTTPError as e:
+            last_error = e
+            err_body = e.read().decode("utf-8", errors="ignore")
+            if e.code == 429 or "quota" in err_body.lower() or "rate" in err_body.lower():
+                print(f"[GEMINI ROTATE] Key ...{key[-6:]} bi gioi han (attempt {attempt+1}/{max_retries}), thu key khac...")
+                _time.sleep(1)
+                continue
+            raise RuntimeError(f"Gemini API error {e.code}: {err_body}") from e
+        except Exception as e:
+            last_error = e
+            raise
+
+    print(f"[GEMINI ROTATE] Tat ca {max_retries} lan thu deu that bai!")
+    raise last_error
+
 def generate_with_retry(prompt_or_parts, feature=None, max_retries=None):
     """
     Gọi OpenRouter AI với tự động retry khi bị lỗi quota.
@@ -84,6 +174,9 @@ def generate_with_retry(prompt_or_parts, feature=None, max_retries=None):
       - list: có thể chứa str và PIL.Image (vision)
     Ảnh PIL được encode base64 JPEG → gửi dạng image_url (OpenAI vision format).
     """
+    if GEMINI_KEYS:
+        return _generate_with_gemini(prompt_or_parts, max_retries=max_retries)
+
     if max_retries is None:
         max_retries = max(len(OPENROUTER_KEYS), 3)
 
