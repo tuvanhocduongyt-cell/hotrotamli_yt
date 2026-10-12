@@ -416,8 +416,10 @@
         {{ 'Diem cua ban' if session.exam_role == 'student' else 'Diem cua hoc sinh' }}
         {% if submission.teacher_adjusted %}
         <span class="status-badge status-teacher">✓ Giáo viên đã điều chỉnh</span>
-        {% elif submission.ai_graded %}
+        {% elif submission.ai_graded and submission.score is not none %}
         <span class="status-badge status-ai">🤖 AI đã chấm</span>
+        {% else %}
+        <span class="status-badge">Chưa chấm xong</span>
         {% endif %}
     </p>
 </div>
@@ -429,13 +431,18 @@
     <p><strong>Điểm AI gốc:</strong> {{ submission.get('original_ai_score', submission.score) }}</p>
     <p><strong>Điểm sau điều chỉnh:</strong> {{ submission.score }}</p>
 </div>
-{% elif submission.ai_graded %}
+{% elif submission.ai_graded and submission.score is not none %}
 <div class="grading-status">
     <h4 style="color: #1976d2; margin-top: 0;">🤖 Bài đã được AI tự động chấm</h4>
     <p>AI đã phân tích và chấm điểm ngay sau khi bạn nộp bài.</p>
     {% if session.exam_role == 'teacher' %}
     <p style="color: #f57c00;"><strong>Lưu ý:</strong> Bạn có thể điều chỉnh điểm bên dưới nếu cần.</p>
     {% endif %}
+</div>
+{% else %}
+<div class="grading-status">
+    <h4 style="margin-top: 0;">Bài đã nộp, chưa chấm xong</h4>
+    <p>AI chưa chấm được đầy đủ bài làm. Bài nộp vẫn được lưu; vui lòng liên hệ giáo viên để chấm lại.</p>
 </div>
 {% endif %}
 
@@ -531,8 +538,10 @@
     <p style="text-align: center; color: #666; margin-bottom: 20px;">
         {% if submission.teacher_adjusted %}
         Bạn đã điều chỉnh điểm cho bài này. Bạn có thể thay đổi lại nếu cần.
-        {% else %}
+        {% elif submission.score is not none %}
         AI đã chấm điểm: <strong>{{ submission.score }}</strong>. Bạn có thể giữ nguyên hoặc điều chỉnh.
+        {% else %}
+        AI chưa chấm xong. Giáo viên có thể chấm bài và nhập điểm bên dưới.
         {% endif %}
     </p>
 
@@ -540,8 +549,8 @@
         <div class="form-group">
             <label>Điểm mới (0-10):</label>
             <input type="number" name="teacher_score" min="0" max="10" step="0.1"
-                value="{{ submission.teacher_score if submission.teacher_adjusted else submission.score }}" required>
-            <small style="color: #666;">Điểm AI: {{ submission.score }}</small>
+                value="{{ submission.score if submission.score is not none else '' }}" required>
+            <small style="color: #666;">Điểm AI: {{ submission.get('original_ai_score', submission.score) if submission.get('original_ai_score', submission.score) is not none else 'Chưa có' }}</small>
         </div>
 
         <div class="form-group">
@@ -682,7 +691,7 @@
             {% if submission.essay_ai_feedback and submission.essay_ai_feedback[i] %}
             <div class="essay-feedback-box">
                 <h4 style="color: #2196F3; margin-top: 0;">🤖 Nhận xét AI cho câu này</h4>
-                <p><strong>Điểm:</strong> {{ submission.essay_ai_feedback[i].score }}/{{
+                <p><strong>Điểm:</strong> {{ submission.essay_ai_feedback[i].score if submission.essay_ai_feedback[i].score is not none else 'Chưa chấm' }}/{{
                     submission.essay_ai_feedback[i].get('max_score', 10) }}</p>
                 <p style="line-height: 1.8; margin-top: 10px;">{{ submission.essay_ai_feedback[i].analysis or
                     submission.essay_ai_feedback[i].feedback or 'Không có nhận xét chi tiết.' }}</p>

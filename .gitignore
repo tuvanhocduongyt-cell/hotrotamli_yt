@@ -1,6 +1,12 @@
 # Environment variables
 .env
 .env.local
+.env.*
+!.env.example
+.migration-backups/
+.data-cache/
+drafts.json
+datatm/
 
 
 

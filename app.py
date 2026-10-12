@@ -1,19 +1,18 @@
 import os
 import io
 import json
+import math
+import mimetypes
 import re
 import random
-import base64
 import string
 import csv
-import urllib.error
-import urllib.request
 import openpyxl
 from PIL import Image
 from datetime import datetime
 from flask import send_file, send_from_directory, Response, stream_with_context
 from werkzeug.utils import secure_filename
-from flask import Flask, render_template, request, jsonify, session, redirect, url_for, flash, current_app
+from flask import Flask, render_template, request, jsonify, session, redirect, url_for, flash, current_app, abort
 
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet
@@ -21,12 +20,12 @@ from reportlab.lib.pagesizes import A4
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from dotenv import load_dotenv
-import openai
 import PyPDF2
 import pytz
 
 from google.cloud import texttospeech
 from utils.ocr import extract_text_from_image
+from utils.data_store import DataStore, DocumentMapping, StorageError, ConcurrentWriteError
 from datetime import datetime, timezone
 
 from docx import Document
@@ -40,207 +39,39 @@ app.secret_key = "phuonganh2403"
 vn_timezone = pytz.timezone('Asia/Ho_Chi_Minh')
 timestamp = datetime.now(vn_timezone).strftime("%Y-%m-%d %H:%M:%S")
 
-load_dotenv()  # Load từ file .env
+load_dotenv(os.path.join(os.path.dirname(__file__), ".env"), encoding="utf-8-sig")
 
-# ============================================================
-# OPENROUTER API KEY ROTATION
-# ============================================================
-import threading
-import time as _time
-
-_gemini_keys_env = os.getenv("GEMINI_API_KEYS")
-if _gemini_keys_env:
-    GEMINI_KEYS = [k.strip() for k in _gemini_keys_env.split(",") if k.strip()]
-else:
-    _gemini_single = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
-    GEMINI_KEYS = [_gemini_single] if _gemini_single else []
-
-_keys_env = os.getenv("OPENROUTER_API_KEYS")
-if _keys_env:
-    OPENROUTER_KEYS = [k.strip() for k in _keys_env.split(",") if k.strip()]
-else:
-    _single = os.getenv("OPENROUTER_API_KEY")
-    OPENROUTER_KEYS = [_single] if _single else []
-
-if not GEMINI_KEYS and not OPENROUTER_KEYS:
-    raise ValueError("Không tìm thấy GEMINI_API_KEY/GOOGLE_API_KEY hoặc OPENROUTER_API_KEY")
-
-_gemini_counter = 0
-_gemini_lock = threading.Lock()
-_or_counter = 0
-_or_lock = threading.Lock()
-
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
-GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta"
-OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
-OPENROUTER_MODEL = "google/gemini-2.5-flash"
-
-def _get_gemini_key():
-    """Round-Robin qua danh sach key Gemini."""
-    global _gemini_counter
-    with _gemini_lock:
-        key = GEMINI_KEYS[_gemini_counter % len(GEMINI_KEYS)]
-        _gemini_counter += 1
-    return key
-
-def _get_openrouter_key():
-    """Round-Robin qua danh sách key OpenRouter."""
-    global _or_counter
-    with _or_lock:
-        key = OPENROUTER_KEYS[_or_counter % len(OPENROUTER_KEYS)]
-        _or_counter += 1
-    return key
-
-class _FakeResponse:
-    """Wrapper để tương thích với code cũ dùng response.text"""
-    def __init__(self, text):
-        self.text = text
-
-def _build_gemini_parts(prompt_or_parts):
-    if not isinstance(prompt_or_parts, list):
-        return [{"text": str(prompt_or_parts)}]
-
-    parts = []
-    for part in prompt_or_parts:
-        try:
-            from PIL import Image as _PILImage
-            if isinstance(part, _PILImage.Image):
-                import io as _io
-                buf = _io.BytesIO()
-                part.save(buf, format="JPEG", quality=85)
-                parts.append({
-                    "inline_data": {
-                        "mime_type": "image/jpeg",
-                        "data": base64.b64encode(buf.getvalue()).decode("utf-8"),
-                    }
-                })
-                continue
-        except ImportError:
-            pass
-        if isinstance(part, str):
-            parts.append({"text": part})
-    return parts or [{"text": ""}]
-
-def _generate_with_gemini(prompt_or_parts, max_retries=None):
-    if max_retries is None:
-        max_retries = max(len(GEMINI_KEYS), 3)
-
-    body = json.dumps({
-        "contents": [{"role": "user", "parts": _build_gemini_parts(prompt_or_parts)}],
-        "generationConfig": {"maxOutputTokens": 2048},
-    }).encode("utf-8")
-    last_error = None
-
-    for attempt in range(max_retries):
-        key = _get_gemini_key()
-        try:
-            req = urllib.request.Request(
-                f"{GEMINI_BASE_URL}/models/{GEMINI_MODEL}:generateContent",
-                data=body,
-                headers={"Content-Type": "application/json", "x-goog-api-key": key},
-                method="POST",
-            )
-            with urllib.request.urlopen(req, timeout=90) as resp:
-                data = json.loads(resp.read().decode("utf-8"))
-            result_text = "".join(
-                part.get("text", "")
-                for candidate in data.get("candidates", [])
-                for part in candidate.get("content", {}).get("parts", [])
-            )
-            if not result_text.strip():
-                raise RuntimeError(f"Gemini khong tra ve text: {json.dumps(data, ensure_ascii=False)[:500]}")
-            return _FakeResponse(result_text)
-        except urllib.error.HTTPError as e:
-            last_error = e
-            err_body = e.read().decode("utf-8", errors="ignore")
-            if e.code == 429 or "quota" in err_body.lower() or "rate" in err_body.lower():
-                print(f"[GEMINI ROTATE] Key ...{key[-6:]} bi gioi han (attempt {attempt+1}/{max_retries}), thu key khac...")
-                _time.sleep(1)
-                continue
-            raise RuntimeError(f"Gemini API error {e.code}: {err_body}") from e
-        except Exception as e:
-            last_error = e
-            raise
-
-    print(f"[GEMINI ROTATE] Tat ca {max_retries} lan thu deu that bai!")
-    raise last_error
-
-def generate_with_retry(prompt_or_parts, feature=None, max_retries=None):
-    """
-    Gọi OpenRouter AI với tự động retry khi bị lỗi quota.
-    Hỗ trợ prompt dạng:
-      - string: gửi thẳng
-      - list: có thể chứa str và PIL.Image (vision)
-    Ảnh PIL được encode base64 JPEG → gửi dạng image_url (OpenAI vision format).
-    """
-    if GEMINI_KEYS:
-        try:
-            return _generate_with_gemini(prompt_or_parts, max_retries=max_retries)
-        except Exception as gemini_error:
-            if not OPENROUTER_KEYS:
-                raise
-            print(f"[GEMINI FALLBACK] Gemini loi, thu OpenRouter: {gemini_error}")
-
-    if max_retries is None:
-        max_retries = max(len(OPENROUTER_KEYS), 3)
-
-    # Xây dựng message content hỗ trợ multimodal vision
-    if isinstance(prompt_or_parts, list):
-        content_parts = []
-        for part in prompt_or_parts:
-            # Kiểm tra PIL Image
-            try:
-                from PIL import Image as _PILImage
-                if isinstance(part, _PILImage.Image):
-                    import io as _io
-                    buf = _io.BytesIO()
-                    part.save(buf, format="JPEG", quality=85)
-                    b64 = base64.b64encode(buf.getvalue()).decode("utf-8")
-                    content_parts.append({
-                        "type": "image_url",
-                        "image_url": {"url": f"data:image/jpeg;base64,{b64}"}
-                    })
-                    continue
-            except ImportError:
-                pass
-            if isinstance(part, str):
-                content_parts.append({"type": "text", "text": part})
-        message_content = content_parts if content_parts else [{"type": "text", "text": ""}]
-    else:
-        message_content = [{"type": "text", "text": str(prompt_or_parts)}]
-
-    last_error = None
-
-    for attempt in range(max_retries):
-        key = _get_openrouter_key()
-        try:
-            client = openai.OpenAI(
-                api_key=key,
-                base_url=OPENROUTER_BASE_URL,
-            )
-            resp = client.chat.completions.create(
-                model=OPENROUTER_MODEL,
-                messages=[{"role": "user", "content": message_content}],
-                max_tokens=2048,
-            )
-            result_text = resp.choices[0].message.content or ""
-            return _FakeResponse(result_text)
-        except Exception as e:
-            last_error = e
-            err_str = str(e)
-            if '429' in err_str or 'quota' in err_str.lower() or 'rate' in err_str.lower():
-                print(f"[OR ROTATE] Key ...{key[-6:]} bị giới hạn (attempt {attempt+1}/{max_retries}), thử key khác...")
-                _time.sleep(1)
-                continue
-            raise
-
-    print(f"[OR ROTATE] Tất cả {max_retries} lần thử đều thất bại!")
-    raise last_error
+from utils.gemini_api import (
+    GEMINI_KEYS, OPENROUTER_KEYS, generate_with_retry,
+)
 
 app.config['UPLOAD_FOLDER'] = 'uploads'
+storage = DataStore()
+
+
+@app.errorhandler(ConcurrentWriteError)
+def concurrent_write_error(error):
+    return jsonify(error=str(error)), 409
+
+
+@app.errorhandler(StorageError)
+def storage_error(error):
+    app.logger.error('Persistence error: %s', error)
+    return jsonify(error='Không thể lưu/đọc dữ liệu lúc này. Vui lòng thử lại; dữ liệu chưa được ghi đè.'), 503
+
+
+def stored_file_response(folder, filename, as_attachment=False):
+    if filename != os.path.basename(filename) or '\\' in filename:
+        abort(404)
+    try:
+        content = storage.read_asset(os.path.join(folder, filename))
+    except FileNotFoundError:
+        abort(404)
+    return send_file(io.BytesIO(content), download_name=filename, as_attachment=as_attachment,
+                     mimetype=mimetypes.guess_type(filename)[0] or 'application/octet-stream')
 
 # key is a UUID token, value is exam data dict
-TEMP_EXAMS = {}
+TEMP_EXAMS = DocumentMapping(storage, 'drafts.json')
 
 def load_context(topic):
     file_map = {
@@ -250,8 +81,7 @@ def load_context(topic):
     }
     file_path = file_map.get(topic, "data_tam_li.txt")
     try:
-        with open(file_path, "r", encoding="utf-8") as f:
-            return f.read()
+        return storage.read_text(file_path)
     except FileNotFoundError:
         return "Không tìm thấy dữ liệu phù hợp."
 #// 
@@ -371,26 +201,25 @@ def tam_li_chat():
 def read_pdf(file_path):
     text = ""
     try:
-        with open(file_path, "rb") as f:
+        with io.BytesIO(storage.read_asset(file_path)) as f:
             reader = PyPDF2.PdfReader(f)
             for page in reader.pages:
                 text += page.extract_text() + "\n"
+    except StorageError:
+        raise
     except Exception as e:
         print(f"Lỗi đọc PDF {file_path}: {e}")
     return text
 
 custom_data = ""
 
-if os.path.exists("data.txt"):
-    with open("data.txt", "r", encoding="utf-8") as f:
-        custom_data += f.read() + "\n"
-        
-pdf_folder = "data"
-if os.path.exists(pdf_folder):
-    for file_name in os.listdir(pdf_folder):
-        if file_name.lower().endswith(".pdf"):
-            file_path = os.path.join(pdf_folder, file_name)
-            custom_data += read_pdf(file_path) + "\n"
+try:
+    custom_data += storage.read_text('data.txt') + '\n'
+except FileNotFoundError:
+    pass
+for file_path in storage.list_assets('data'):
+    if file_path.lower().endswith('.pdf'):
+        custom_data += read_pdf(file_path) + '\n'
 
 docs_list = [
     {
@@ -682,14 +511,10 @@ def holland_test():
 
 USERS_FILE = 'users.json'
 def load_users():
-    if not os.path.exists(USERS_FILE):
-        return {}
-    with open(USERS_FILE, 'r', encoding='utf-8') as f:
-        return json.load(f)
+    return storage.load_document(USERS_FILE, {})
 
 def save_users(data):
-    with open(USERS_FILE, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    storage.save_document(USERS_FILE, data)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -883,7 +708,7 @@ YÊU CẦU TRÌNH BÀY:
 Trả lời:
 """
 
-            # ====== CALL MODEL (OpenRouter - non-streaming) ======
+            # ====== CALL MODEL ======
             response = generate_with_retry(prompt, feature='lichsu')
             # Simulate streaming by yielding the full response at once
             _stream_text = response.text
@@ -893,7 +718,7 @@ Trả lời:
             chat_history.append(user_message)
 
             full_response = _stream_text
-            # Yield toàn bộ nội dung một lần (OpenRouter không hỗ trợ streaming)
+            # Gửi toàn bộ nội dung qua một sự kiện SSE.
             data = json.dumps({"text": full_response}, ensure_ascii=False)
             yield f"data: {data}\n\n"
 
@@ -1015,17 +840,7 @@ LICHSU_FEEDBACK_STATS = {
 }
 
 def save_feedback(entry):
-    try:
-        if os.path.exists(FEEDBACK_FILE):
-            with open(FEEDBACK_FILE, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-        else:
-            data = []
-    except Exception:
-        data = []
-    data.append(entry)
-    with open(FEEDBACK_FILE, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    storage.append_document(FEEDBACK_FILE, entry)
 
 @app.route('/chat_feedback', methods=['POST'])
 def chat_feedback():
@@ -1050,8 +865,7 @@ os.makedirs(AUDIO_DIR, exist_ok=True)
 
 def load_user_data():
     try:
-        with open("data.txt", "r", encoding="utf-8") as f:
-            return f.read()
+        return storage.read_text('data.txt')
     except FileNotFoundError:
         return ""
 ###############################################
@@ -1064,7 +878,7 @@ def contains_english(text):
 
 @app.route("/replies/<path:filename>")
 def serve_reply_audio(filename):
-    return send_from_directory(AUDIO_DIR, filename, as_attachment=False)
+    return stored_file_response(AUDIO_DIR, filename)
 
 @app.route("/chat_tam_an", methods=["POST"])
 def chat_tam_an():
@@ -1137,8 +951,7 @@ Người dùng hỏi: {user_message}
 
         audio_filename = random_filename()
         audio_path = os.path.join(AUDIO_DIR, audio_filename)
-        with open(audio_path, "wb") as f:
-            f.write(tts_response.audio_content)
+        storage.write_asset(audio_path, tts_response.audio_content)
     except Exception as e:
         print(f"[CHAT_TAM_AN] Loi Google TTS: {e}")
         audio_filename = None
@@ -1152,8 +965,7 @@ Người dùng hỏi: {user_message}
     return jsonify(result)
 ####################################################
 def load_exam(de_id):
-    with open('exam_data.json', 'r', encoding='utf-8') as f:
-        data = json.load(f)
+    data = storage.load_document('exam_data.json', {})
     return data.get(de_id)
 ###########################################################3
 @app.route('/index_td')
@@ -1343,14 +1155,15 @@ def upload_image():
         import time
         safe_filename = secure_filename(f"{int(time.time())}_{image.filename}")
         image_path = os.path.join(app.config['UPLOAD_FOLDER'], safe_filename).replace('\\', '/')
-        image.save(image_path)
+        storage.save_upload(image, image_path)
 
         try:
             # 1. OCR (Trích xuất văn bản từ ảnh)
             ocr_text = extract_text_from_image(image_path)
             
             # 2. Mở ảnh cho Vision
-            img = Image.open(image_path)
+            with Image.open(image_path) as source_image:
+                img = source_image.copy()
             
             # 3. Tạo prompt kết hợp
             base_prompt = generate_grading_prompt()
@@ -1443,14 +1256,15 @@ def upload_image2():
         import time
         safe_filename = secure_filename(f"{int(time.time())}_{image.filename}")
         image_path = os.path.join(app.config['UPLOAD_FOLDER'], safe_filename).replace('\\', '/')
-        image.save(image_path)
+        storage.save_upload(image, image_path)
 
         try:
             # 1. OCR
             ocr_text = extract_text_from_image(image_path)
             
             # 2. Vision
-            img = Image.open(image_path)
+            with Image.open(image_path) as source_image:
+                img = source_image.copy()
             
             # 3. Prompt
             base_prompt = generate_grading_prompt2()
@@ -1556,14 +1370,15 @@ def upload_image3():
         import time
         safe_filename = secure_filename(f"{int(time.time())}_{image.filename}")
         image_path = os.path.join(app.config['UPLOAD_FOLDER'], safe_filename).replace('\\', '/')
-        image.save(image_path)
+        storage.save_upload(image, image_path)
 
         try:
             # 1. OCR
             ocr_text = extract_text_from_image(image_path)
             
             # 2. Vision
-            img = Image.open(image_path)
+            with Image.open(image_path) as source_image:
+                img = source_image.copy()
             
             # 3. Prompt
             base_prompt = generate_grading_prompt3()
@@ -1627,8 +1442,7 @@ def game():
 def get_questions_quiz():
     import random
     bai = session.get("bai", "bai_1")
-    with open("questions.json", "r", encoding="utf-8") as f:
-        data = json.load(f)
+    data = storage.load_document('questions.json', {})
     questions = data.get(bai, [])
     random.shuffle(questions)
     for q in questions:
@@ -1646,36 +1460,29 @@ def submit_score():
     if not bai:
         return jsonify({"status": "error", "message": "No bai found"})
 
-    if not os.path.exists("scores.json"):
-        with open("scores.json", "w", encoding="utf-8") as f:
-            json.dump([], f)
+    scores = storage.load_document('scores.json', [])
+    # FIX: dùng vn_timezone thay vì datetime.now() không có timezone
+    now = datetime.now(vn_timezone).strftime("%d/%m/%Y %H:%M")
 
-    with open("scores.json", "r+", encoding="utf-8") as f:
-        scores = json.load(f)
-        # FIX: dùng vn_timezone thay vì datetime.now() không có timezone
-        now = datetime.now(vn_timezone).strftime("%d/%m/%Y %H:%M")
+    existing = next((s for s in scores if s["nickname"] == nickname and s.get("bai") == bai), None)
 
-        existing = next((s for s in scores if s["nickname"] == nickname and s.get("bai") == bai), None)
+    if existing:
+        if score > existing["score"]:
+            existing["score"] = score
+            existing["time"] = now
+    else:
+        scores.append({
+            "nickname": nickname,
+            "score": score,
+            "time": now,
+            "bai": bai
+        })
+    filtered = [s for s in scores if s.get("bai") == bai]
+    top50 = sorted(filtered, key=lambda x: x["score"], reverse=True)[:50]
+    others = [s for s in scores if s.get("bai") != bai]
+    final_scores = others + top50
 
-        if existing:
-            if score > existing["score"]:
-                existing["score"] = score
-                existing["time"] = now
-        else:
-            scores.append({
-                "nickname": nickname,
-                "score": score,
-                "time": now,
-                "bai": bai
-            })
-        filtered = [s for s in scores if s.get("bai") == bai]
-        top50 = sorted(filtered, key=lambda x: x["score"], reverse=True)[:50]
-        others = [s for s in scores if s.get("bai") != bai]
-        final_scores = others + top50
-
-        f.seek(0)
-        json.dump(final_scores, f, ensure_ascii=False, indent=2)
-        f.truncate()
+    storage.save_document('scores.json', final_scores)
 
     return jsonify({"status": "ok"})
 @app.route("/leaderboard")
@@ -1685,14 +1492,9 @@ def leaderboard():
     if not bai:
         bai = "bai_1"
 
-    if not os.path.exists("scores.json"):
-        top5 = []
-    else:
-        with open("scores.json", "r", encoding="utf-8") as f:
-            scores = json.load(f)
-
-        filtered = [s for s in scores if s.get("bai") == bai]
-        top5 = sorted(filtered, key=lambda x: x["score"], reverse=True)[:5]
+    scores = storage.load_document('scores.json', [])
+    filtered = [s for s in scores if s.get('bai') == bai]
+    top5 = sorted(filtered, key=lambda x: x['score'], reverse=True)[:5]
 
     return render_template("leaderboard.html", players=top5, bai=bai)
 
@@ -1765,59 +1567,36 @@ MATERIALS_DATA_FILE = 'materials_data.json'
 
 # Các hàm helper cho exam system
 def load_exam_teachers():
-    if not os.path.exists(EXAM_TEACHERS_FILE):
-        return {}
-    with open(EXAM_TEACHERS_FILE, 'r', encoding='utf-8') as f:
-        return json.load(f)
+    return storage.load_document(EXAM_TEACHERS_FILE, {})
 
 def save_exam_teachers(data):
-    with open(EXAM_TEACHERS_FILE, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    storage.save_document(EXAM_TEACHERS_FILE, data)
 
 def load_exam_students():
-    if not os.path.exists(EXAM_STUDENTS_FILE):
-        return {}
-    with open(EXAM_STUDENTS_FILE, 'r', encoding='utf-8') as f:
-        return json.load(f)
+    return storage.load_document(EXAM_STUDENTS_FILE, {})
 
 def save_exam_students(data):
-    with open(EXAM_STUDENTS_FILE, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    storage.save_document(EXAM_STUDENTS_FILE, data)
 
 def load_exams_data():
-    if not os.path.exists(EXAMS_DATA_FILE):
-        return {}
-    with open(EXAMS_DATA_FILE, 'r', encoding='utf-8') as f:
-        return json.load(f)
+    return storage.load_document(EXAMS_DATA_FILE, {})
 
 def save_exams_data(data):
-    with open(EXAMS_DATA_FILE, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    storage.save_document(EXAMS_DATA_FILE, data)
 
 def load_exam_submissions():
-    if not os.path.exists(EXAM_SUBMISSIONS_FILE):
-        return []
-    with open(EXAM_SUBMISSIONS_FILE, 'r', encoding='utf-8') as f:
-        return json.load(f)
+    return storage.load_document(EXAM_SUBMISSIONS_FILE, [])
 
 def save_exam_submissions(data):
-    with open(EXAM_SUBMISSIONS_FILE, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    storage.save_document(EXAM_SUBMISSIONS_FILE, data)
 
 def load_materials_data():
-    if not os.path.exists(MATERIALS_DATA_FILE):
-        return []
-    with open(MATERIALS_DATA_FILE, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-        # Đảm bảo luôn trả về list
-        if isinstance(data, dict):
-            return []
-        return data if isinstance(data, list) else []
+    data = storage.load_document(MATERIALS_DATA_FILE, [])
+    return data if isinstance(data, list) else []
 
 
 def save_materials_data(data):
-    with open(MATERIALS_DATA_FILE, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    storage.save_document(MATERIALS_DATA_FILE, data)
 
 def read_word_file(file_path):
     try:
@@ -1839,12 +1618,14 @@ def auto_grade_essay_with_ai(exam, essay_answer, image_path=None):
         print(f"[AI GRADE] essay_answer: '{essay_answer[:100] if essay_answer else 'TRỐNG'}'")
         print(f"[AI GRADE] image_path: {image_path}")
 
-        if image_path and os.path.exists(image_path):
+        if image_path and storage.asset_exists(image_path):
+            image_path = storage.local_asset(image_path)
             # 1. OCR
             ocr_text = extract_text_from_image(image_path)
             
             # 2. Vision
-            img = Image.open(image_path)
+            with Image.open(image_path) as source_image:
+                img = source_image.copy()
             
             has_text = bool(essay_answer and essay_answer.strip() and essay_answer.strip() != 'None')
             text_part = f"\nBài làm bằng chữ (nếu có): {essay_answer}" if has_text else "\nHọc sinh KHÔNG viết gì bằng chữ, chỉ nộp ảnh bên dưới."
@@ -1871,7 +1652,7 @@ Chỉ trả về JSON thuần, không giải thích thêm:
 
 Chỉ trả về JSON."""
             print(f"[AI GRADE] Gọi AI với ảnh + OCR + Vision...")
-            response = generate_with_retry([img, prompt], feature='lichsu')
+            response = generate_with_retry([img, prompt], feature='lichsu', response_mime_type="application/json")
         else:
             prompt = f"""Bạn là giáo viên lịch sử chấm bài thi tự luận, có kiến thức chuyên môn sâu, trình bày ngắn gọn, dễ hiểu, chính xác và khoa học.
 
@@ -1896,7 +1677,7 @@ Chỉ trả về JSON thuần, không giải thích thêm:
 
 Chỉ trả về JSON."""
             print(f"[AI GRADE] Gọi AI với text...")
-            response = generate_with_retry(prompt, feature='lichsu')
+            response = generate_with_retry(prompt, feature='lichsu', response_mime_type="application/json")
 
         raw_text = response.text.strip()
         print(f"[AI GRADE] Raw response: {raw_text[:300]}")
@@ -1909,7 +1690,11 @@ Chỉ trả về JSON."""
             clean_text = clean_text.split("```")[1].split("```")[0].strip()
 
         result = json.loads(clean_text)
-        print(f"[AI GRADE] Score: {result.get('score')} / 10")
+        score = float(result['score'])
+        if not math.isfinite(score) or not 0 <= score <= 3:
+            raise ValueError("Invalid AI essay score")
+        result['score'] = round(score, 2)
+        print(f"[AI GRADE] Score: {result['score']} / 3")
         return result
 
     except json.JSONDecodeError as e:
@@ -1957,7 +1742,7 @@ Trả về JSON (KHÔNG DÙNG # VÀ **), viết đầy đủ dấu tiếng Việ
 
 Chỉ trả về JSON."""
 
-        response = generate_with_retry(prompt, feature='lichsu')
+        response = generate_with_retry(prompt, feature='lichsu', response_mime_type="application/json")
         text = response.text.strip()
         text = text.replace('```json', '').replace('```', '').strip()
         result = json.loads(text)
@@ -1970,12 +1755,14 @@ Chỉ trả về JSON."""
 def auto_grade_mixed_essay_with_ai(question, grading_criteria, essay_answer, image_path=None, max_score=3):
     """Chấm từng câu tự luận trong đề hỗn hợp"""
     try:
-        if image_path and os.path.exists(image_path):
+        if image_path and storage.asset_exists(image_path):
+            image_path = storage.local_asset(image_path)
             # 1. OCR
             ocr_text = extract_text_from_image(image_path)
             
             # 2. Vision
-            img = Image.open(image_path)
+            with Image.open(image_path) as source_image:
+                img = source_image.copy()
             
             has_text = bool(essay_answer and essay_answer.strip() and essay_answer.strip() != 'None')
             text_part = f"\nBài làm bằng chữ (nếu có): {essay_answer}" if has_text else "\nHọc sinh KHÔNG viết gì bằng chữ, CHẤM DUY NHẤT BẰNG ẢNH BÊN DƯỚI."
@@ -1998,7 +1785,7 @@ Trả về JSON (KHÔNG DÙNG # VÀ **):
 }}
 
 Chỉ trả về JSON."""
-            response = generate_with_retry([img, prompt], feature='lichsu')
+            response = generate_with_retry([img, prompt], feature='lichsu', response_mime_type="application/json")
         else:
             prompt = f"""Bạn là giáo viên lịch sử chấm bài. cách nhận xét của bạn đảm bảo phải chính xác, ngắn gọn, cụ thể và khoa học.
 
@@ -2018,13 +1805,15 @@ Trả về JSON (KHÔNG DÙNG # VÀ **):
 }}
 
 Chỉ trả về JSON."""
-            response = generate_with_retry(prompt, feature='lichsu')
+            response = generate_with_retry(prompt, feature='lichsu', response_mime_type="application/json")
 
         text = response.text.strip()
         text = text.replace('```json', '').replace('```', '').strip()
         result = json.loads(text)
 
-        score = float(result.get('score', 0))
+        score = float(result['score'])
+        if not math.isfinite(score):
+            raise ValueError("Invalid AI essay score")
         result['score'] = round(min(max(score, 0), max_score), 2)
         result['max_score'] = max_score
 
@@ -2383,7 +2172,7 @@ def parse_docx_strictly(text):
 
 def repair_question_with_ai(block_text, q_type):
     """
-    Sử dụng OpenRouter để sửa một block câu hỏi bị lỗi cấu trúc.
+    Sử dụng AI để sửa một block câu hỏi bị lỗi cấu trúc.
     """
     if not GEMINI_KEYS and not OPENROUTER_KEYS: return None
     
@@ -2405,7 +2194,7 @@ LƯU Ý:
 - Nếu là TF, trả về đủ 4 statements.
 """
     try:
-        response = generate_with_retry(prompt)
+        response = generate_with_retry(prompt, response_mime_type="application/json")
         text = response.text.strip()
         if "```json" in text:
             text = text.split("```json")[1].split("```")[0].strip()
@@ -2523,7 +2312,7 @@ def upload_material():
         if file and file.filename:
             filename = secure_filename(file.filename)
             file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-            file.save(file_path)
+            storage.save_upload(file, file_path)
             
             materials.append({
                 'id': len(materials) + 1,
@@ -2641,17 +2430,17 @@ def delete_exam(exam_id):
             # Xóa ảnh đã upload (nếu có)
             for key in ['image_path']:
                 path = sub.get(key)
-                if path and os.path.exists(path):
+                if path and storage.asset_exists(path):
                     try:
-                        os.remove(path)
+                        storage.delete_asset(path)
                     except Exception:
                         pass
             # Xóa ảnh essay trong đề hỗn hợp
             for ea in sub.get('answers', {}).get('essay', []):
                 path = ea.get('image_path') if isinstance(ea, dict) else None
-                if path and os.path.exists(path):
+                if path and storage.asset_exists(path):
                     try:
-                        os.remove(path)
+                        storage.delete_asset(path)
                     except Exception:
                         pass
         else:
@@ -2688,13 +2477,7 @@ def dashboard_teacher():
     }
 
     # load chatbot feedback statistics
-    feedback_list = []
-    try:
-        if os.path.exists(FEEDBACK_FILE):
-            with open(FEEDBACK_FILE, 'r', encoding='utf-8') as f:
-                feedback_list = json.load(f)
-    except Exception:
-        feedback_list = []
+    feedback_list = storage.load_document(FEEDBACK_FILE, [])
 
     # compute counts per bot and rating
     feedback_stats = {}
@@ -2810,7 +2593,7 @@ def create_exam():
             
             # Lưu temp file
             file_path = os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(word_file.filename))
-            word_file.save(file_path)
+            storage.save_upload(word_file, file_path)
             text_content = read_word_file(file_path)
             
             if not text_content:
@@ -2862,7 +2645,7 @@ def create_exam():
             if not token or token not in TEMP_EXAMS:
                 flash("❌ Dữ liệu tạm thời không hợp lệ. Vui lòng tạo lại đề.", "error")
                 return redirect(url_for('create_exam'))
-            temp_data = TEMP_EXAMS.pop(token)
+            temp_data = TEMP_EXAMS[token]
             exam_id = datetime.now(vn_timezone).strftime("%Y%m%d%H%M%S")
             
             exams = load_exams_data()
@@ -2880,6 +2663,10 @@ def create_exam():
                 'general_grading_criteria': temp_data['general_grading_criteria']
             }
             save_exams_data(exams)
+            try:
+                del TEMP_EXAMS[token]
+            except StorageError:
+                app.logger.warning('Exam saved; draft cleanup will need to be retried.')
             
             flash(f"✅ Tạo đề thi thành công! ({temp_data['mc_count']} trắc nghiệm + {temp_data['tf_count']} đúng/sai)", "success")
             return redirect(url_for('dashboard_teacher'))
@@ -2969,7 +2756,7 @@ Trả về JSON (KHÔNG DÙNG # VÀ **), viết đầy đủ dấu tiếng Việ
 
 Chỉ trả về JSON."""
 
-        response = generate_with_retry(prompt, feature='lichsu')
+        response = generate_with_retry(prompt, feature='lichsu', response_mime_type="application/json")
         text = response.text.strip()
         text = text.replace('```json', '').replace('```', '').strip()
         result = json.loads(text)
@@ -3107,6 +2894,7 @@ def do_exam(exam_id):
             # XỬ LÝ TỰ LUẬN - CHẤM AI NGAY
             # ============================================
             essay_ai_feedback = []
+            grading_complete = True
             if essay_questions and exam['type'] == 'mixed':
                 essay_answers = []
                 total_essay_score = 0
@@ -3124,7 +2912,7 @@ def do_exam(exam_id):
                         timestamp = int(time.time())
                         image_filename = secure_filename(f"{exam_id}_{username}_{i}_{timestamp}_{image_file.filename}")
                         image_path = os.path.join(app.config['UPLOAD_FOLDER'], image_filename)
-                        image_file.save(image_path)
+                        storage.save_upload(image_file, image_path)
                     
                     essay_answers.append({
                         'text': essay_answer,
@@ -3144,8 +2932,9 @@ def do_exam(exam_id):
                         essay_ai_feedback.append(ai_result)
                         total_essay_score += ai_result['score']
                     else:
+                        grading_complete = False
                         essay_ai_feedback.append({
-                            'score': 0,
+                            'score': None,
                             'max_score': score_per_essay,
                             'analysis': 'AI không thể chấm được bài',
                             'suggestions': 'Cần giáo viên xem xét và chấm lại'
@@ -3162,9 +2951,10 @@ def do_exam(exam_id):
                 'student': username,
                 'submitted_at': datetime.now(vn_timezone).strftime("%Y-%m-%d %H:%M:%S"),
                 'answers': answers,
-                'score': round(score, 2),
+                'score': round(score, 2) if grading_complete else None,
+                'partial_score': round(score, 2),
                 'type': exam['type'],
-                'ai_graded': True,
+                'ai_graded': grading_complete,
                 'essay_ai_feedback': essay_ai_feedback if essay_questions else None,
                 'mc_ai_feedback': mc_feedback,
                 'tf_ai_feedback': tf_feedback,
@@ -3186,7 +2976,7 @@ def do_exam(exam_id):
                 timestamp = int(time.time())
                 image_filename = secure_filename(f"{exam_id}_{username}_{timestamp}_{image_file.filename}")
                 image_path = os.path.join(app.config['UPLOAD_FOLDER'], image_filename)
-                image_file.save(image_path)
+                storage.save_upload(image_file, image_path)
             
             ai_feedback = auto_grade_essay_with_ai(exam, essay_answer, image_path)
             
@@ -3198,7 +2988,7 @@ def do_exam(exam_id):
                 'image_path': image_path,
                 'score': ai_feedback['score'] if ai_feedback else None,
                 'type': 'essay',
-                'ai_graded': True,
+                'ai_graded': ai_feedback is not None,
                 'ai_feedback': ai_feedback,
                 'teacher_adjusted': False,
                 'teacher_score': None,
@@ -3208,10 +2998,8 @@ def do_exam(exam_id):
         # ============================================
         # LƯU VÀ CHUYỂN HƯỚNG
         # ============================================
-        submissions.append(submission)
-        save_exam_submissions(submissions)
-        
-        return redirect(url_for('view_submission', submission_index=len(submissions)-1))
+        submission_index = storage.append_document(EXAM_SUBMISSIONS_FILE, submission)
+        return redirect(url_for('view_submission', submission_index=submission_index))
     
     # GET REQUEST - HIỂN THỊ ĐỀ THI
     return render_template('do_exam.html', exam=exam, exam_id=exam_id)
@@ -3273,13 +3061,13 @@ def adjust_score(submission_index):
 @app.route('/uploads/<path:filename>')
 def serve_upload(filename):
     """Serve file ảnh bài làm học sinh"""
-    return send_from_directory(app.config['UPLOAD_FOLDER'], os.path.basename(filename))
+    return stored_file_response(app.config['UPLOAD_FOLDER'], os.path.basename(filename))
 @app.route('/download_material/<filename>')
 def download_material(filename):
     if 'exam_username' not in session:
         return redirect(url_for('login_exam'))
     
-    return send_from_directory(app.config['UPLOAD_FOLDER'], filename, as_attachment=True)
+    return stored_file_response(app.config['UPLOAD_FOLDER'], filename, as_attachment=True)
 
 @app.route('/exam_statistics')
 def exam_statistics():

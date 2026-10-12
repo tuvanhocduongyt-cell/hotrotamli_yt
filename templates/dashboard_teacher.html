@@ -413,12 +413,12 @@
 
 <!-- CẬP NHẬT: DANH SÁCH BÀI NỘP - Hiển thị tất cả bài có tự luận -->
 <div style="margin-bottom: 30px;">
-  <h3 style="color: #00796b;">🤖 BÀI NỘP ĐÃ ĐƯỢC AI CHẤM</h3>
+  <h3 style="color: #00796b;">🤖 BÀI NỘP VÀ KẾT QUẢ CHẤM</h3>
   <p style="color: #666; font-size: 14px; margin-bottom: 15px;">
-    📌 AI đã tự động chấm tất cả bài tự luận. Bạn có thể xem và điều chỉnh điểm nếu cần.
+    📌 Xem kết quả AI và các bài chưa chấm xong. Giáo viên có thể chấm hoặc điều chỉnh điểm.
   </p>
 
-  {% set ai_graded_submissions = submissions|selectattr('ai_graded', 'equalto', True)|list %}
+  {% set ai_graded_submissions = submissions %}
 
   {% if ai_graded_submissions %}
   <table style="width: 100%; border-collapse: collapse;">
@@ -454,7 +454,7 @@
         </td>
         <td style="padding: 12px; border: 1px solid #ddd;">
           <strong style="color: #1976d2; font-size: 16px;">
-            {{ submission.score }} điểm
+            {{ submission.score ~ ' điểm' if submission.score is not none else 'Chưa chấm xong' }}
           </strong>
         </td>
         <td style="padding: 12px; border: 1px solid #ddd;">
@@ -462,10 +462,12 @@
           <span class="status-badge status-teacher-adjusted">
             ✓ GV đã điều chỉnh
           </span>
-          {% else %}
+          {% elif submission.ai_graded and submission.score is not none %}
           <span class="status-badge status-ai-graded">
             🤖 AI đã chấm
           </span>
+          {% else %}
+          <span class="status-badge">Chưa chấm xong</span>
           {% endif %}
         </td>
         <td style="padding: 12px; border: 1px solid #ddd;">
