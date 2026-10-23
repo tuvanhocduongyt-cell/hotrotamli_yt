@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Rèn tư duy phản biện{% endblock %} · Lịch sử 11</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='learning.css') }}">
+  <script src="{{ url_for('static', filename='learning.js') }}" defer></script>
+</head>
+<body data-csrf="{{ session.get('learning_csrf', '') }}">
+<header class="site-header"><a class="brand" href="{{ url_for('learning.home') }}"><span class="brand-mark">✦</span> Lịch sử <b>11</b><small>HỌC CÁCH ĐẶT CÂU HỎI</small></a>
+  <nav aria-label="Điều hướng chính">
+    <a href="{{ url_for('learning.home', mode='task') }}">Nhiệm vụ học tập</a>
+    <a href="{{ url_for('learning.home', mode='prompt') }}">Prompt phản biện</a>
+    <a href="{{ url_for('learning.portfolio') }}">Hồ sơ tiến bộ</a>
+  </nav>
+  <a class="account" href="{{ url_for('dashboard_teacher' if session['exam_role'] == 'teacher' else 'dashboard_student') }}">{{ session['exam_username'] }} ↗</a>
+</header>
+<main class="shell">{% block content %}{% endblock %}</main>
+<footer>Kiểm chứng bằng chứng · Cân nhắc góc nhìn · Tự điều chỉnh kết luận</footer>
+{% block scripts %}{% endblock %}
+</body></html>

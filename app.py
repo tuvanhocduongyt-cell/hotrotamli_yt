@@ -218,7 +218,7 @@ try:
 except FileNotFoundError:
     pass
 for file_path in storage.list_assets('data'):
-    if file_path.lower().endswith('.pdf'):
+    if file_path.lower().endswith('.pdf') and '/history11/' not in file_path.replace('\\', '/'):
         custom_data += read_pdf(file_path) + '\n'
 
 docs_list = [
@@ -3191,5 +3191,8 @@ def logout_exam():
 def enumerate_filter(iterable, start=0):
     return enumerate(iterable, start)
 ###
+from utils.history_learning import register_learning
+register_learning(app, lambda: storage, lambda *args, **kwargs: generate_with_retry(*args, **kwargs))
+
 if __name__ == '__main__':
     app.run(debug=True, threaded=True)

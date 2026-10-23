@@ -12,7 +12,8 @@ Mở http://127.0.0.1:5000. File `.env` đặt cùng thư mục với `app.py`:
 
 ```dotenv
 GEMINI_API_KEY=your-key-here
-GEMINI_MODEL=gemini-3.8-flash
+GEMINI_MODEL=gemini-3.5-flash
+GEMINI_FALLBACK_MODELS=gemini-3.1-flash-lite
 ```
 
 Một hoặc nhiều khóa đều có thể đặt trong cùng biến:
@@ -32,6 +33,7 @@ Nếu đặt nhiều tên biến, ưu tiên `GEMINI_API_KEYS`, rồi `GEMINI_API
 Khởi động lại server sau khi sửa `.env`; trên Render cần cập nhật Environment và khởi động/deploy lại dịch vụ.
 Ngày 12/10/2026, các khóa mới trả 404 với `gemini-2.5-flash`: Google thông báo model này không còn cấp cho người dùng mới.
 `gemini-3.8-flash` đã được kiểm tra tạo câu trả lời thành công với cả bốn khóa trong cấu hình local.
+Ngày 24/10/2026, kiểm tra lại gặp lỗi 503/timeout ở `gemini-3.8-flash`; cấu hình hiện tại dùng `gemini-3.5-flash`, dự phòng `gemini-3.1-flash-lite` khi lỗi dịch vụ/kết nối. Xem phần cập nhật [Lịch sử 11](HISTORY11_UPDATE.md).
 Gemini được ưu tiên; OpenRouter chỉ dùng dự phòng nếu cấu hình riêng khóa OpenRouter.
 Không đưa `.env` lên Git; file này đã có trong `.gitignore`.
 

@@ -4,6 +4,11 @@
 {% block title %}Trang hoc sinh{% endblock %}
 
 {% block content %}
+<div style="display:flex;gap:18px;flex-wrap:wrap;margin-bottom:24px;padding:16px;background:#f0f5ff;border-radius:10px">
+  <a href="{{ url_for('learning.home', mode='task') }}">✦ Nhiệm vụ học tập</a>
+  <a href="{{ url_for('learning.home', mode='prompt') }}">✎ Prompt phản biện</a>
+  <a href="{{ url_for('learning.portfolio') }}">↗ Hồ sơ tiến bộ</a>
+</div>
 <style>
   .grade-tabs {
     display: flex;

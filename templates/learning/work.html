@@ -1,0 +1,32 @@
+{% extends 'learning/base.html' %}
+{% block title %}{{ task.title }}{% endblock %}
+{% block content %}
+<a class="back-link" href="{{ url_for('learning.home', mode=task.mode) }}">← Danh sách {{ 'tình huống' if task.mode == 'prompt' else 'nhiệm vụ' }}</a>
+<section class="work-heading"><div><span class="eyebrow">{{ 'PROMPT PHẢN BIỆN' if task.mode == 'prompt' else 'NHIỆM VỤ HỌC TẬP' }} · BÀI {{ task.lesson }}</span><h1>{{ task.title }}</h1><p>{{ task.objective }}</p></div><div class="score-bubble"><strong id="score-value">{{ latest.feedback.score if latest and latest.feedback else '—' }}</strong><span>/ 10 · AI gợi ý</span></div></section>
+<div class="workspace">
+  <div class="writing-column">
+    <section class="panel situation"><div class="section-heading"><h2>{{ 'Tình huống' if task.mode == 'prompt' else 'Đề bài' }}</h2><span class="pill">SGK Lịch sử 11</span></div><p class="preserve">{{ task.situation }}</p><details class="instructions"><summary>Yêu cầu thực hiện</summary><p class="preserve">{{ task.instructions }}</p></details>
+      <div class="source-links"><strong>Đọc nguồn trước khi viết</strong>{% for ref in task.sources %}<a href="{{ url_for('learning.source_page', book=ref.book, page=ref.page) }}" target="_blank" rel="noopener">{{ ref.label }} ↗</a>{% endfor %}</div>
+    </section>
+    <section class="panel editor-panel"><div class="section-heading"><h2>{{ 'Viết prompt của em' if task.mode == 'prompt' else 'Bài làm của em' }}</h2><span class="muted" id="word-count"></span></div>
+      {% if task.mode == 'prompt' %}<p class="hint">Xác định điểm cần kiểm chứng → yêu cầu căn cứ → xem xét phản bác → kết luận lại.</p>{% endif %}
+      <label class="sr-only" for="writing">{{ 'Prompt' if task.mode == 'prompt' else 'Bài làm' }}</label>
+      <textarea id="writing" maxlength="18000" placeholder="{{ 'Em muốn AI kiểm tra lại điều gì? Hãy tự xây dựng yêu cầu của em…' if task.mode == 'prompt' else 'Nêu nhận định của em, đưa căn cứ từ SGK, cân nhắc phản bác và viết kết luận…' }}">{{ draft }}</textarea>
+      <div class="editor-footer"><span class="muted">Bản nháp chỉ được lưu khi em bấm Lưu nháp.</span><div class="actions"><button class="button secondary" id="save-draft" type="button">Lưu nháp</button><button class="button primary" id="analyze" type="button">{{ 'Phân tích prompt' if task.mode == 'prompt' else 'Nộp bài & nhận xét' }}</button></div></div>
+      <p id="work-status" role="status" class="status"></p>
+      <button id="retry-ai" class="button secondary" type="button" hidden>Chấm lại bài đã lưu</button>
+    </section>
+    <section class="panel chat-panel"><div class="section-heading"><h2>✦ AI hỗ trợ suy nghĩ</h2><span class="muted">Gợi mở để em tự viết</span></div><p class="hint">Đặt câu hỏi về căn cứ hoặc một góc nhìn khác.</p><label class="sr-only" for="ai-question">Câu hỏi cho AI</label><div class="chat-input"><input id="ai-question" maxlength="1500" placeholder="Em nên kiểm chứng nhận định này thế nào?"><button type="button" id="ask-ai" class="button secondary">Hỏi AI ↗</button></div><p class="preserve" id="ai-reply" role="status"></p></section>
+  </div>
+  <aside class="guide-column">
+    <section class="panel guide"><h2>{{ 'Một prompt phản biện tốt cần có' if task.mode == 'prompt' else 'Gợi ý cách lập luận' }}</h2>
+      {% for title, desc in [('Vai trò / Nhận định', 'Xác định vai trò phù hợp cho AI hoặc nhận định cần phân tích.'), ('Kiểm chứng', 'Yêu cầu hoặc đưa căn cứ, đối chiếu trực tiếp với tài liệu đã cho.'), ('Phản biện', 'Xem xét góc nhìn khác, khả năng sai và điểm chưa chắc chắn.'), ('Kết luận lại', 'Nêu mức độ chắc chắn; điều chỉnh kết luận khi chưa đủ bằng chứng.')] %}
+      <div class="guide-step"><span>{{ loop.index }}</span><div><h3>{{ title }}</h3><p>{{ desc }}</p></div></div>{% endfor %}
+      {% if task.mode == 'prompt' %}<div class="structure"><strong>Cấu trúc prompt của em</strong><small>Gợi ý theo từ khóa, chưa phải nhận xét AI</small><div id="structure-checks"></div></div>{% endif %}
+    </section>
+    <section class="panel feedback-panel"><div class="section-heading"><h2>✦ Nhận xét của AI</h2><span class="pill">4 tiêu chí</span></div><p class="hint">Điểm là gợi ý của AI theo cùng rubric; giáo viên xem lại. Đọc nhận xét rồi thử viết lại.</p><div id="feedback"><p class="muted">{{ 'Bài đã lưu, đang chờ AI nhận xét.' if latest and not latest.feedback else 'Phân tích bài để nhận gợi ý theo từng tiêu chí.' }}</p></div><p id="score-delta" class="delta"></p></section>
+    <a class="portfolio-link" href="{{ url_for('learning.portfolio') }}">Xem các lần viết trong hồ sơ tiến bộ →</a>
+  </aside>
+</div>
+{% endblock %}
+{% block scripts %}<script id="work-data" type="application/json">{{ {'taskId': task.id, 'mode': task.mode, 'role': session['exam_role'], 'latest': latest}|tojson }}</script>{% endblock %}

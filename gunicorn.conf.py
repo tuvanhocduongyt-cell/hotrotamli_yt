@@ -5,5 +5,5 @@ bind = '0.0.0.0:' + os.environ.get('PORT', '5000')
 worker_class = 'gthread'
 workers = 2
 threads = 4
-timeout = 120
+timeout = 240
 preload_app = False

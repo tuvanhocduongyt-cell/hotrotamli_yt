@@ -1,0 +1,169 @@
+{
+  "371d8610c82e4d20aa2aacaa1abcf9dd": {
+    "id": "371d8610c82e4d20aa2aacaa1abcf9dd",
+    "mode": "task",
+    "title": "??nh gi? th?nh t?u c?i c?ch ? m? c?a c?a Trung Qu?c",
+    "lesson": "4",
+    "sources": [
+      {
+        "book": "sgk",
+        "page": 28,
+        "label": "SGK Lịch sử 11 – Kết nối tri thức · trang PDF 28"
+      },
+      {
+        "book": "sgk",
+        "page": 29,
+        "label": "SGK Lịch sử 11 – Kết nối tri thức · trang PDF 29"
+      }
+    ],
+    "objective": "Đánh giá tính chính xác của nhận định trên bằng cách phân tích các thành tựu đa chiều của Trung Quốc trong SGK, phân biệt giữa thành tựu đạt được và giới hạn phạm vi thông tin được cung cấp trong bài học.",
+    "situation": "Có ý kiến cho rằng: 'Thành tựu cải cách – mở cửa của Trung Quốc từ năm 1978 chỉ đơn thuần là sự tăng trưởng kinh tế thể hiện qua các con số GDP, chưa mang lại sự phát triển toàn diện trên các lĩnh vực khác.'",
+    "created_at": "2026-10-23T19:33:48.423628+00:00",
+    "created_by": "YT.PhamThiHang",
+    "instructions": "1. Nêu rõ quan điểm của em (đồng ý, không đồng ý hoặc đồng ý một phần) đối với nhận định trên.\n2. Phân tích và đưa ra bằng chứng từ SGK (trang PDF 28, 29) để chứng minh thành tựu của Trung Quốc không chỉ ở kinh tế (GDP, tốc độ tăng trưởng, quy mô) mà còn ở khoa học - công nghệ, văn hoá - giáo dục và giải quyết các vấn đề xã hội.\n3. Phản biện và nêu rõ giới hạn: Chỉ ra sự khác biệt giữa các thành tựu được nêu trong SGK với các mặt hạn chế/thách thức (lưu ý SGK chỉ tập trung trình bày thành tựu, học sinh không tự suy diễn hoặc bịa đặt số liệu ngoài SGK).\n4. Đưa ra kết luận tổng kết đánh giá của em."
+  },
+  "8a0bc00be2c244b39c07983286db5ed6": {
+    "id": "8a0bc00be2c244b39c07983286db5ed6",
+    "mode": "prompt",
+    "model": "gemini-3.5-flash",
+    "title": "Ki?m ch?ng nh?n ??nh c?a AI v? c?i c?ch Trung Qu?c",
+    "lesson": "4",
+    "sources": [
+      {
+        "book": "sgk",
+        "page": 28,
+        "label": "SGK Lịch sử 11 – Kết nối tri thức · trang PDF 28"
+      },
+      {
+        "book": "sgk",
+        "page": 29,
+        "label": "SGK Lịch sử 11 – Kết nối tri thức · trang PDF 29"
+      }
+    ],
+    "objective": "Phát hiện tính tuyệt đối hóa trong nhận định lịch sử; sử dụng dữ kiện chuẩn xác từ SGK Lịch sử 11 – Kết nối tri thức (trang PDF 28, 29) để đối chứng, phản biện và đưa ra kết luận khách quan.",
+    "situation": "Một công cụ AI đưa ra nhận định sau (đây là phát biểu giả định để phân tích, không phải trích dẫn SGK): \"Công cuộc cải cách – mở cửa từ năm 1978 đã giúp Trung Quốc giải quyết hoàn toàn mọi vấn đề xã hội, đưa đất nước trở thành nền kinh tế hoàn hảo về mọi mặt và vượt trội tuyệt đối so với toàn bộ thế giới ở tất cả các chỉ số.\"",
+    "created_at": "2026-10-23T19:36:03.329952+00:00",
+    "created_by": "YT.PhamThiHang",
+    "instructions": "Học sinh không sử dụng câu lệnh viết sẵn. Em hãy tự đóng vai người kiểm định và tự soạn thảo chuỗi prompt (câu lệnh) gửi cho AI nhằm: (1) Yêu cầu AI trích dẫn đúng các số liệu và thành tựu thực tế của Trung Quốc về kinh tế, khoa học - công nghệ, giáo dục, xã hội theo SGK Lịch sử 11 – Kết nối tri thức (trang PDF 28, 29); (2) Đưa ra lập luận phản biện chỉ ra điểm tuyệt đối hóa nghiêng lệch trong nhận định giả định; (3) Yêu cầu AI chỉnh sửa lại nhận định cho đúng bản chất và chuẩn xác lịch sử."
+  },
+  "bf2d9a4f0ce042fda1a566dd03e21eef": {
+    "id": "bf2d9a4f0ce042fda1a566dd03e21eef",
+    "mode": "task",
+    "title": "C?i c?ch L? Th?nh T?ng: th?nh t?u v? gi?i h?n",
+    "lesson": "10",
+    "sources": [
+      {
+        "book": "sgk",
+        "page": 65,
+        "label": "SGK Lịch sử 11 – Kết nối tri thức · trang PDF 65"
+      },
+      {
+        "book": "sgk",
+        "page": 66,
+        "label": "SGK Lịch sử 11 – Kết nối tri thức · trang PDF 66"
+      },
+      {
+        "book": "sgk",
+        "page": 67,
+        "label": "SGK Lịch sử 11 – Kết nối tri thức · trang PDF 67"
+      },
+      {
+        "book": "sgk",
+        "page": 68,
+        "label": "SGK Lịch sử 11 – Kết nối tri thức · trang PDF 68"
+      },
+      {
+        "book": "sgk",
+        "page": 69,
+        "label": "SGK Lịch sử 11 – Kết nối tri thức · trang PDF 69"
+      }
+    ],
+    "objective": "Học sinh vận dụng tư duy phản biện để đánh giá tính đúng/sai của nhận định, phân tích cả mặt tích cực lẫn giới hạn của cuộc cải cách dựa trên bằng chứng lịch sử trong SGK.",
+    "situation": "Có ý kiến nhận định rằng: 'Cuộc cải cách của vua Lê Thánh Tông ở thế kỉ XV đã xây dựng một bộ máy nhà nước hoàn hảo tuyệt đối, giải quyết dứt điểm mọi mầm mống mâu thuẫn và không còn bất kỳ hạn chế nào.' Tuy nhiên, một góc nhìn khác lại cho rằng dù đạt nhiều kết quả đỉnh cao, cuộc cải cách vẫn mang những giới hạn lịch sử nhất định của chế độ quân chủ chuyên chế tập quyền.",
+    "created_at": "2026-10-23T19:33:59.171408+00:00",
+    "created_by": "YT.PhamThiHang",
+    "instructions": "1. Nêu rõ quan điểm của em đối với nhận định trên (đồng ý, phản đối hoặc đồng ý một phần).\n2. Đưa ra các bằng chứng cụ thể từ SGK (về tổ chức bộ máy hành chính, pháp luật, quân đội, kinh tế, giáo dục - khoa cử) để chứng minh cho ý nghĩa và thành tựu của cuộc cải cách.\n3. Phân tích góc nhìn khác về những điểm giới hạn hoặc phạm vi tác động của các chính sách này dựa trên bối cảnh lịch sử được đề cập trong bài.\n4. Tổng hợp và đưa ra kết luận đánh giá khách quan, có trích dẫn nguồn từ SGK Lịch sử 11 – Kết nối tri thức (ghi rõ số trang PDF từ 65 đến 69)."
+  },
+  "c7b8f537c5594418aeb0afce8ab0476e": {
+    "id": "c7b8f537c5594418aeb0afce8ab0476e",
+    "mode": "task",
+    "model": "gemini-3.5-flash",
+    "title": "C?i c?ch h?nh ch?nh c?a Minh M?ng: nh?n t? hai ph?a",
+    "lesson": "11",
+    "sources": [
+      {
+        "book": "sgk",
+        "page": 70,
+        "label": "SGK Lịch sử 11 – Kết nối tri thức · trang PDF 70"
+      },
+      {
+        "book": "sgk",
+        "page": 72,
+        "label": "SGK Lịch sử 11 – Kết nối tri thức · trang PDF 72"
+      },
+      {
+        "book": "sgk",
+        "page": 73,
+        "label": "SGK Lịch sử 11 – Kết nối tri thức · trang PDF 73"
+      }
+    ],
+    "objective": "Phân tích cải cách hành chính của Minh Mạng từ hai góc nhìn.",
+    "situation": "Có ý kiến cho rằng: 'Cuộc cải cách của Minh Mạng chỉ nhằm tập trung tuyệt đối quyền lực vào tay hoàng đế và làm tăng tính chuyên chế.' Lại có quan điểm cho rằng: 'Đây là bước tiến lớn giúp hoàn thiện bộ máy hành chính nhà nước, thống nhất đất nước và nâng cao hiệu quả quản lý.'",
+    "created_at": "2026-10-23T19:35:48.776638+00:00",
+    "created_by": "YT.PhamThiHang",
+    "instructions": "1. Trích dẫn các bằng chứng từ SGK Lịch sử 11 - Kết nối tri thức (trang PDF 70, 72, 73) để làm rõ cả hai khía cạnh: sự tập trung quyền lực tuyệt đối ở trung ương và tính hiệu quả, gọn nhẹ, thống nhất của bộ máy hành chính từ trung ương đến địa phương.\n2. Lập luận phân tích hai góc nhìn trên, chỉ ra tính hợp lý và hạn chế của từng nhận định.\n3. Trình bày giới hạn của hoàn cảnh lịch sử lúc bấy giờ và đưa ra kết luận đánh giá của em."
+  },
+  "d74f23aaf869480499b39fb801488b09": {
+    "id": "d74f23aaf869480499b39fb801488b09",
+    "mode": "prompt",
+    "model": "gemini-3.1-flash-lite",
+    "title": "Ph?n bi?n nh?n ??nh v? cu?c c?i c?ch H? Qu? Ly",
+    "lesson": "9",
+    "sources": [
+      {
+        "book": "sgk",
+        "page": 61,
+        "label": "SGK Lịch sử 11 – Kết nối tri thức · trang PDF 61"
+      },
+      {
+        "book": "sgk",
+        "page": 62,
+        "label": "SGK Lịch sử 11 – Kết nối tri thức · trang PDF 62"
+      },
+      {
+        "book": "sgk",
+        "page": 63,
+        "label": "SGK Lịch sử 11 – Kết nối tri thức · trang PDF 63"
+      },
+      {
+        "book": "sgk",
+        "page": 64,
+        "label": "SGK Lịch sử 11 – Kết nối tri thức · trang PDF 64"
+      }
+    ],
+    "objective": "HS thực hiện phản biện tính tuyệt đối hóa trong kết quả cải cách dựa trên tư liệu SGK.",
+    "situation": "Phát biểu giả định: 'Cuộc cải cách của Hồ Quý Ly đã thành công toàn diện, giải quyết triệt để mọi mâu thuẫn xã hội và đưa đất nước thoát khỏi hoàn toàn nguy cơ ngoại xâm.'",
+    "created_at": "2026-10-23T19:37:05.887444+00:00",
+    "created_by": "YT.PhamThiHang",
+    "instructions": "HS tự xây dựng chuỗi prompt để yêu cầu AI: 1. Đối chiếu phát biểu giả định với nội dung kết quả thực tế trong SGK. 2. Đưa ra các bằng chứng về hạn chế của cải cách. 3. Phân tích vì sao không thể coi kết quả là tuyệt đối. 4. Yêu cầu AI điều chỉnh lại nhận định dựa trên căn cứ đã phân tích."
+  },
+  "ece34175442d440198d21a9af8e19332": {
+    "id": "ece34175442d440198d21a9af8e19332",
+    "mode": "prompt",
+    "model": "gemini-3.5-flash",
+    "title": "Ki?m ch?ng nguy?n nh?n th?ng l?i c?a c?c cu?c kh?ng chi?n",
+    "lesson": "7",
+    "sources": [
+      {
+        "book": "sgk",
+        "page": 48,
+        "label": "SGK Lịch sử 11 – Kết nối tri thức · trang PDF 48"
+      }
+    ],
+    "objective": "Kiểm chứng nhận định cho rằng chỉ có một nguyên nhân dẫn đến thắng lợi trong chiến tranh bảo vệ Tổ quốc, từ đó giúp học sinh hiểu rõ tính toàn diện và đa dạng của các nguyên nhân thắng lợi dựa trên SGK Lịch sử 11 – Kết nối tri thức.",
+    "situation": "Giả định một hệ thống AI đưa ra nhận định sau (đây là phát biểu giả định của AI, không phải văn bản trích từ SGK): 'Thắng lợi của các cuộc kháng chiến chống ngoại xâm trong lịch sử Việt Nam duy nhất xuất phát từ sự lãnh đạo tài tình của các tướng lĩnh xuất sắc.'",
+    "created_at": "2026-10-23T19:36:16.668490+00:00",
+    "created_by": "YT.PhamThiHang",
+    "instructions": "Học sinh không dùng prompt viết sẵn mà tự soạn thảo một câu lệnh (prompt) gửi cho AI. Prompt này phải yêu cầu AI kiểm chứng nhận định trên bằng cách: cung cấp căn cứ lịch sử cụ thể từ SGK Lịch sử 11 – Kết nối tri thức (trang PDF 48), chỉ ra sự chưa đầy đủ khi chỉ xét một nguyên nhân đơn lẻ, thực hiện phản biện và điều chỉnh kết luận theo hướng tổng hợp đầy đủ các nguyên nhân chủ quan lẫn khách quan."
+  }
+}

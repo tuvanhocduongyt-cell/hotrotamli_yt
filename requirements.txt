@@ -12,3 +12,4 @@ mammoth
 python-docx
 openpyxl
 gevent>=24.10.1
+PyMuPDF>=1.24,<2

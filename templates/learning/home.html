@@ -1,0 +1,34 @@
+{% extends 'learning/base.html' %}
+{% block content %}
+{% set mode = 'prompt' if request.args.get('mode') == 'prompt' else 'task' %}
+<section class="hero">
+  <div><span class="eyebrow">LỊCH SỬ 11 · KẾT NỐI TRI THỨC</span>
+    <h1>{{ 'Prompt phản biện' if mode == 'prompt' else 'Nhiệm vụ học tập' }}</h1>
+    <p>{{ 'Hãy biến AI từ người trả lời thành đối tượng để em chất vấn, kiểm chứng và phản biện.' if mode == 'prompt' else 'Lập luận bằng bằng chứng. Nhìn từ nhiều phía. Tự viết kết luận của em.' }}</p>
+    <div class="hero-tags"><span>✓ Bám sát SGK</span><span>✓ Phản hồi theo 4 tiêu chí</span><span>✓ Lưu từng lần cải thiện</span></div>
+  </div><div class="hero-symbol" aria-hidden="true">{{ '“ ? ”' if mode == 'prompt' else '✦' }}<small>HỎI SÂU · HIỂU KỸ</small></div>
+</section>
+{% if session['exam_role'] == 'teacher' %}
+<details class="panel create-panel" {% if not tasks %}open{% endif %}>
+  <summary><strong>＋ Tạo {{ 'tình huống prompt' if mode == 'prompt' else 'nhiệm vụ' }} bằng AI từ SGK</strong><span>Chọn bài học và trọng tâm</span></summary>
+  <form id="create-task" data-mode="{{ mode }}" class="create-form">
+    <label>Bài học<select name="lesson">{% for id, title, start, end in lessons %}<option value="{{ id }}">Bài {{ id }} · {{ title }}</option>{% endfor %}</select></label>
+    <label>Trọng tâm cần rèn <span class="muted">(không bắt buộc)</span><input name="focus" maxlength="500" placeholder="Ví dụ: kiểm chứng một nhận định, đối chiếu hai góc nhìn…"></label>
+    <button class="button primary" type="submit">✦ Tạo từ trang sách</button>
+    <p role="status" class="status" id="create-status"></p>
+  </form>
+</details>
+{% endif %}
+<div class="list-toolbar"><div class="tabs"><a class="{{ 'active' if mode == 'task' }}" href="{{ url_for('learning.home', mode='task') }}">Nhiệm vụ học tập</a><a class="{{ 'active' if mode == 'prompt' }}" href="{{ url_for('learning.home', mode='prompt') }}">Prompt phản biện</a></div><span class="muted">Chọn một bài để bắt đầu</span></div>
+<section class="task-grid" aria-label="Danh sách nhiệm vụ">
+{% for id, task in tasks.items() if task.mode == mode %}
+<a class="task-card" href="{{ url_for('learning.work', task_id=id) }}">
+  <div class="card-top"><span class="task-icon">{{ '✎' if mode == 'prompt' else '▤' }}</span><span class="pill">Bài {{ task.lesson }}</span></div>
+  <h2>{{ task.title }}</h2><p>{{ task.objective }}</p>
+  <div class="card-bottom"><span>{{ 'Viết prompt' if mode == 'prompt' else 'Tự luận' }} · 4 tiêu chí</span><strong>Mở bài →</strong></div>
+</a>
+{% else %}
+<div class="empty panel"><span class="empty-icon">✦</span><h2>Chưa có {{ 'tình huống' if mode == 'prompt' else 'nhiệm vụ' }}</h2><p>{{ 'Chọn bài học ở trên để AI tạo nội dung từ trang SGK gốc.' if session['exam_role'] == 'teacher' else 'Giáo viên sẽ thêm bài học tại đây. Các bài em làm sẽ được lưu trong hồ sơ tiến bộ.' }}</p></div>
+{% endfor %}
+</section>
+{% endblock %}

@@ -43,7 +43,9 @@ _gemini_cooldowns = {}
 _or_counter = 0
 _or_lock = threading.Lock()
 
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.5-flash")
+GEMINI_FALLBACK_MODELS = [m.strip() for m in os.getenv('GEMINI_FALLBACK_MODELS', '').split(',')
+                          if m.strip() and m.strip() != GEMINI_MODEL]
 GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta"
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 OPENROUTER_MODEL = "google/gemini-2.5-flash"
@@ -92,8 +94,9 @@ def _get_openrouter_key():
 
 class _FakeResponse:
     """Wrapper để tương thích với code cũ dùng response.text"""
-    def __init__(self, text):
+    def __init__(self, text, model=None):
         self.text = text
+        self.model = model
 
 def _build_gemini_parts(prompt_or_parts):
     if not isinstance(prompt_or_parts, list):
@@ -120,7 +123,8 @@ def _build_gemini_parts(prompt_or_parts):
             parts.append({"text": part})
     return parts or [{"text": ""}]
 
-def _generate_with_gemini(prompt_or_parts, max_retries=None, response_mime_type=None):
+def _generate_with_gemini(prompt_or_parts, max_retries=None, response_mime_type=None, model=None):
+    model = model or GEMINI_MODEL
     if max_retries is None:
         max_retries = max(len(GEMINI_KEYS), 3)
     if max_retries < 1:
@@ -144,7 +148,7 @@ def _generate_with_gemini(prompt_or_parts, max_retries=None, response_mime_type=
             _time.sleep(wait)
         try:
             req = urllib.request.Request(
-                f"{GEMINI_BASE_URL}/models/{GEMINI_MODEL}:generateContent",
+                f"{GEMINI_BASE_URL}/models/{model}:generateContent",
                 data=body,
                 headers={"Content-Type": "application/json", "x-goog-api-key": key},
                 method="POST",
@@ -166,7 +170,7 @@ def _generate_with_gemini(prompt_or_parts, max_retries=None, response_mime_type=
                 raise RuntimeError(f"Gemini returned no text: {reason}")
             with _gemini_lock:
                 _gemini_cooldowns.pop(key, None)
-            return _FakeResponse(result_text)
+            return _FakeResponse(result_text, model=model)
         except urllib.error.HTTPError as e:
             err_body = e.read().decode("utf-8", errors="ignore")
             for secret in GEMINI_KEYS:
@@ -202,7 +206,21 @@ def generate_with_retry(prompt_or_parts, feature=None, max_retries=None, respons
     """
     if GEMINI_KEYS:
         try:
-            return _generate_with_gemini(prompt_or_parts, max_retries=max_retries, response_mime_type=response_mime_type)
+            models = [GEMINI_MODEL] + GEMINI_FALLBACK_MODELS
+            for model_index, model in enumerate(models):
+                try:
+                    return _generate_with_gemini(prompt_or_parts, max_retries=max_retries,
+                                                 response_mime_type=response_mime_type, model=model)
+                except RuntimeError as error:
+                    # Model capacity/transport errors can be model-specific. Quota,
+                    # authentication and invalid output must retain their semantics.
+                    transient = any(marker in str(error) for marker in (
+                        'Gemini API error 500:', 'Gemini API error 502:',
+                        'Gemini API error 503:', 'Gemini API error 504:',
+                        'Gemini connection timed out'))
+                    if not transient or model_index == len(models) - 1:
+                        raise
+                    print('[GEMINI FALLBACK] Model temporarily unavailable; trying configured fallback model.')
         except Exception as gemini_error:
             if not OPENROUTER_KEYS:
                 raise
@@ -253,7 +271,7 @@ def generate_with_retry(prompt_or_parts, feature=None, max_retries=None, respons
                    if response_mime_type == "application/json" else {}),
             )
             result_text = resp.choices[0].message.content or ""
-            return _FakeResponse(result_text)
+            return _FakeResponse(result_text, model=OPENROUTER_MODEL)
         except Exception as e:
             last_error = e
             err_str = str(e)

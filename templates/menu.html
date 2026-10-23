@@ -81,6 +81,14 @@
 
     <div class="menu-container">
         <div class="menu-card">
+            <a href="{{ url_for('learning.home', mode='task') }}">✦ Nhiệm vụ học tập</a>
+            <p>Lịch sử 11 · Lập luận bằng bằng chứng</p>
+        </div>
+        <div class="menu-card">
+            <a href="{{ url_for('learning.home', mode='prompt') }}">✎ Prompt phản biện</a>
+            <p>Chất vấn, kiểm chứng và phản biện AI</p>
+        </div>
+        <div class="menu-card">
             <img src="{{ url_for('static', filename='images/tamli.jpg') }}" alt="Chatbot" class="logo">
             <a href="/tro_chuyen_tam_li_cung_tro_ly_ai_pham_hang">Chatbot tâm lí ảo</a>
         </div>

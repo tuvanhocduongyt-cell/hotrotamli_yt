@@ -1,0 +1,20 @@
+{% extends 'learning/base.html' %}
+{% block title %}Hồ sơ tiến bộ{% endblock %}
+{% block content %}
+<section class="hero compact"><div><span class="eyebrow">LƯU VẾT QUÁ TRÌNH HỌC</span><h1>Hồ sơ tiến bộ</h1><p>Xem lại bài viết, nhận xét và cách lập luận thay đổi qua từng lần sửa.</p></div><div class="hero-symbol" aria-hidden="true">↗</div></section>
+{% if session['exam_role'] == 'teacher' %}<form class="filter-row" method="get"><label>Lọc theo tài khoản học sinh<input name="student" value="{{ request.args.get('student', '') }}" placeholder="Nhập đúng tài khoản"></label><button class="button secondary">Lọc hồ sơ</button><a href="{{ url_for('learning.portfolio') }}">Tất cả</a></form>{% endif %}
+<p class="hint">So sánh các lần làm cùng một bài, cùng rubric 4 tiêu chí (mỗi tiêu chí tối đa 2,5 điểm). Chênh lệch điểm AI cần được đọc cùng bài viết và nhận xét của giáo viên.</p>
+{% for group in groups %}
+{% set task = tasks.get(group.task_id) %}
+<section class="panel progress-group"><div class="section-heading"><div><span class="eyebrow">{{ group.student }}</span><h2>{{ task.title if task else 'Bài học đã lưu' }}</h2></div><span class="pill">{{ group.attempts|length }} lần viết{% if group.delta is not none %} · {{ '%+.2f'|format(group.delta) }} điểm{% endif %}</span></div>
+  <div class="timeline">{% for attempt in group.attempts %}<details class="attempt" {% if loop.last %}open{% endif %}><summary><span>Lần {{ loop.index }} <small>{{ attempt.created_at|learning_time }} · giờ Việt Nam</small></span><strong>{{ (attempt.feedback.score|string + '/10') if attempt.feedback else 'Chờ nhận xét AI' }} <span aria-hidden="true">⌄</span></strong></summary>
+    <h3>Bài viết đã nộp</h3><p class="preserve writing-snapshot">{{ attempt.text }}</p>
+    {% if attempt.feedback %}<div class="criteria-grid">{% for c in attempt.feedback.criteria %}<div><strong>{{ c.label }}</strong><span class="level {{ 'met' if c.level == 'Đạt' else 'partial' if c.level == 'Chưa rõ' else 'missing' }}">{{ c.level }} · {{ c.score }}/2,5</span><p>{{ c.comment }}</p></div>{% endfor %}</div><h3>Điểm cần cải thiện</h3><p class="preserve">{{ attempt.feedback.improvements }}</p><h3>Gợi ý viết lại</h3><p class="preserve">{{ attempt.feedback.rewrite_hint }}</p>{% endif %}
+    {% if attempt.review %}<div class="teacher-note"><strong>Nhận xét giáo viên · {{ attempt.review.actor }}</strong><p class="preserve">{{ attempt.review.comment }}</p></div>{% endif %}
+    {% if session['exam_role'] == 'teacher' %}<form class="teacher-review" data-attempt="{{ attempt.id }}"><label>Thêm nhận xét giáo viên<textarea name="comment" maxlength="3000" required placeholder="Nhận xét về căn cứ, lập luận và sự tiến bộ…"></textarea></label><button class="button secondary">Lưu nhận xét</button><p class="status" role="status"></p></form>{% endif %}
+  </details>{% endfor %}</div>
+  {% if group.chats %}<details class="attempt"><summary><strong>Lịch sử hỏi AI · {{ group.chats|length }} lượt</strong></summary>{% for chat in group.chats %}<h3>{{ chat.question }}</h3><p class="preserve">{{ chat.reply }}</p><details class="instructions"><summary>Bài viết tại thời điểm hỏi · {{ chat.created_at|learning_time }} · giờ Việt Nam</summary><p class="preserve">{{ chat.text }}</p></details>{% endfor %}</details>{% endif %}
+  {% if task %}<a class="portfolio-link" href="{{ url_for('learning.work', task_id=group.task_id) }}">Mở bài và thử viết lại →</a>{% endif %}
+</section>
+{% else %}<section class="panel empty"><span class="empty-icon">↗</span><h2>Hành trình bắt đầu từ một bài viết</h2><p>Khi nộp bài hoặc phân tích prompt, em sẽ thấy từng lần viết và nhận xét ở đây.</p><a class="button primary" href="{{ url_for('learning.home') }}">Chọn nhiệm vụ</a></section>{% endfor %}
+{% endblock %}
